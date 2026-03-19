@@ -82,6 +82,20 @@
 숫자와 원천 데이터는 인터넷의 추적 가능한 공식/claim-level source에서만 가져온다.
 source url, verified date, source tier 없이 숫자를 만들거나 추정하지 않는다.
 
+현재 단계 해석:
+
+- public-water decision path는 alpha
+- private-well은 guide layer가 먼저 있고 typed result layer는 아직 덜 끝났다
+- final visual design은 잠정 상태이며, data breadth / decision coverage / trust publication layer 이후에 잠근다
+
+따라서 작업 순서가 애매하면 아래를 우선한다.
+
+1. source and data breadth
+2. decision coverage
+3. trust publication surfaces
+4. entry pages
+5. final design polish
+
 작업 중 항상 스스로에게 묻는다.
 
 - 이 결과가 사용자의 다음 행동을 더 명확하게 만드는가?

@@ -222,6 +222,33 @@
 
 초기엔 coverage보다 core logic가 먼저다.
 
+## 7.1 2026-03-19 phase reset
+
+현재 저장소는 이미 `표면 UI`가 일부 앞서간 상태다.
+
+이 자체가 문제는 아니지만, 앞으로의 우선순위를 착각하게 만들 수 있다.
+
+현재 상태는 이렇게 정의한다.
+
+- public-water decision alpha
+- private-well guidance beta
+- final visual system not locked
+
+따라서 앞으로의 순서는 아래처럼 다시 고정한다.
+
+1. data breadth
+2. decision coverage
+3. trust publication layer
+4. entry-page cluster
+5. final design system
+6. controlled expansion
+
+핵심 규칙:
+
+- 디자인 완성도는 중요하지만 현재 병목은 아니다.
+- 최종 디자인은 실제 엔진 breadth와 trust surface가 안정된 뒤 잠근다.
+- 지금 단계에서 시각 polish가 로직 breadth를 앞서가면 다시 흔들린다.
+
 ---
 
 # 8. 기술 앵커

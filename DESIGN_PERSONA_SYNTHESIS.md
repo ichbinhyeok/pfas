@@ -1,5 +1,11 @@
 # PFAS Design Persona Synthesis
 
+Status:
+
+- provisional direction only
+- not the final visual lock
+- final system should be revisited only after broader engine coverage and trust publication surfaces exist
+
 This anchor exists because "premium startup" by itself keeps collapsing into the same polite fintech look.
 
 The current interface is consistent, but too familiar:
