@@ -73,6 +73,41 @@
                         </ul>
                     </section>
                 @endif
+
+                <section class="card">
+                    <p class="card__label">Quick benchmark check</p>
+                    <h2 class="section__title">Run a seeded state comparison</h2>
+                    <form class="select-cluster" method="get" action="/private-well-result/${guidance.stateCode()}">
+                        <label class="select-field">
+                            <span class="select-field__label">Analyte code</span>
+                            <input type="text" name="analyteCode" value="PFOA">
+                        </label>
+                        <label class="select-field">
+                            <span class="select-field__label">Measured value</span>
+                            <input type="number" step="0.01" min="0" name="value" value="12">
+                        </label>
+                        <label class="select-field">
+                            <span class="select-field__label">Unit</span>
+                            <select name="unit">
+                                <option value="ppt" selected="selected">ppt</option>
+                                <option value="ppb">ppb</option>
+                                <option value="ng/L">ng/L</option>
+                                <option value="ug/L">ug/L</option>
+                            </select>
+                        </label>
+                        <label class="select-field">
+                            <span class="select-field__label">Current filter</span>
+                            <select name="currentFilterStatus">
+                                <option value="NONE" selected="selected">No current filter</option>
+                                <option value="CERTIFIED_POU">Certified point-of-use</option>
+                                <option value="UNCERTIFIED">Uncertified or unclear</option>
+                            </select>
+                        </label>
+                        <div class="button-row">
+                            <button class="button button--primary" type="submit">Run state comparison</button>
+                        </div>
+                    </form>
+                </section>
             </div>
 
             <aside class="stack">

@@ -10,6 +10,9 @@
 @param ActionBenchmarkRelation benchmarkRelation
 @param ActionCurrentFilterStatus currentFilterStatus
 @param boolean wholeHouseConsidered
+@param String analyteCode
+@param java.math.BigDecimal value
+@param String unit
 
 @template.layout.base(
     pageTitle = guidance.stateCode() + " private-well PFAS result",
@@ -30,7 +33,11 @@
             <div class="button-row">
                 <a class="button button--secondary" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
                 <a class="button button--secondary" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
-                <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                @if (result.benchmarkEvaluation() != null)
+                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                @else
+                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                @endif
             </div>
         </div>
 
@@ -121,6 +128,19 @@
                                 </article>
                             @endfor
                         </div>
+                    </section>
+                @endif
+
+                @if (result.benchmarkEvaluation() != null)
+                    <section class="card">
+                        <p class="card__label">Benchmark check used for this route</p>
+                        <ul class="list">
+                            <li>Analyte: ${result.benchmarkEvaluation().analyteCode()}</li>
+                            <li>Measured value: ${result.benchmarkEvaluation().inputValue()} ${result.benchmarkEvaluation().inputUnit()}</li>
+                            <li>Normalized value: ${result.benchmarkEvaluation().normalizedValuePpt()} ppt</li>
+                            <li>Matched line: ${result.benchmarkEvaluation().matchedReferenceLabel()} (${result.benchmarkEvaluation().matchedReferenceDisplay()})</li>
+                            <li>Note: ${result.benchmarkEvaluation().note()}</li>
+                        </ul>
                     </section>
                 @endif
 

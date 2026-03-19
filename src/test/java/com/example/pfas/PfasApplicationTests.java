@@ -23,6 +23,7 @@ import com.example.pfas.decision.PublicWaterDecisionStatus;
 import com.example.pfas.decision.PublicWaterNextActionCode;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.observation.UtilityObservationService;
+import com.example.pfas.privatewell.PrivateWellBenchmarkEvaluatorService;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.readiness.ExpansionReadinessStatus;
 import com.example.pfas.result.PrivateWellResultService;
@@ -62,6 +63,9 @@ class PfasApplicationTests {
 
 	@Autowired
 	private ExpansionReadinessService expansionReadinessService;
+
+	@Autowired
+	private PrivateWellBenchmarkEvaluatorService privateWellBenchmarkEvaluatorService;
 
 	@Autowired
 	private PublicWaterDecisionService publicWaterDecisionService;
@@ -307,6 +311,16 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void evaluatesPrivateWellMeasurementAgainstStateProfile() {
+		var evaluation = privateWellBenchmarkEvaluatorService.evaluate("MI", "PFOA", new java.math.BigDecimal("12"), "ppt").orElseThrow();
+
+		assertThat(evaluation.stateCode()).isEqualTo("MI");
+		assertThat(evaluation.benchmarkRelation()).isEqualTo(ActionBenchmarkRelation.ABOVE_REFERENCE);
+		assertThat(evaluation.matchedReferenceLabel()).isEqualTo("Michigan MCL for PFOA");
+		assertThat(evaluation.normalizedValuePpt()).isEqualByComparingTo("12");
+	}
+
+	@Test
 	void buildsExpansionReadinessReport() {
 		var report = expansionReadinessService.getReport();
 
@@ -453,6 +467,21 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsInternalPrivateWellResultFromMeasurement() throws Exception {
+		mockMvc.perform(
+			get("/internal/results/private-well/MI")
+				.param("analyteCode", "PFOA")
+				.param("value", "12")
+				.param("unit", "ppt")
+				.param("currentFilterStatus", "NONE")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"benchmark_evaluation\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"matched_reference_label\":\"Michigan MCL for PFOA\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"benchmark_relation\":\"above_reference\"")));
+	}
+
+	@Test
 	void rendersPrivateWellResultPage() throws Exception {
 		mockMvc.perform(
 			get("/private-well-result/MI")
@@ -463,6 +492,20 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open state next steps and evaluate certified point-of-use")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan PFAS drinking-water MCLs used with other private-well factors")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well interpretation")));
+	}
+
+	@Test
+	void rendersPrivateWellResultPageFromMeasurement() throws Exception {
+		mockMvc.perform(
+			get("/private-well-result/MI")
+				.param("analyteCode", "PFOA")
+				.param("value", "12")
+				.param("unit", "ppt")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Benchmark check used for this route")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Normalized value: 12")));
 	}
 
 	@Test
@@ -479,6 +522,27 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":6")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":2")));
+	}
+
+	@Test
+	void returnsPrivateWellBenchmarkEvaluation() throws Exception {
+		mockMvc.perform(
+			get("/internal/private-well-benchmark-evaluation/WA")
+				.param("analyteCode", "PFOA")
+				.param("value", "5")
+				.param("unit", "ppt")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"matched_reference_label\":\"Washington SAL for PFOA\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"benchmark_relation\":\"ABOVE_REFERENCE\"")));
+	}
+
+	@Test
+	void returnsExpansionCandidates() throws Exception {
+		mockMvc.perform(get("/internal/expansion/candidates"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/private-well/MI")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/public-water-system/7360058")));
 	}
 
 	@Test

@@ -19,6 +19,7 @@ public record WaterDecisionResult(
 	@JsonProperty("best_fit_options") List<BestFitOption> bestFitOptions,
 	@JsonProperty("when_to_escalate") List<String> whenToEscalate,
 	@JsonProperty("reference_context") ReferenceContext referenceContext,
+	@JsonProperty("benchmark_evaluation") BenchmarkEvaluation benchmarkEvaluation,
 	@JsonProperty("sources") List<ResultSource> sources,
 	@JsonProperty("meta") ResultMeta meta
 ) {

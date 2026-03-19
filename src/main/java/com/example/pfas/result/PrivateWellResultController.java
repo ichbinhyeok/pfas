@@ -1,5 +1,7 @@
 package com.example.pfas.result;
 
+import java.math.BigDecimal;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,8 +28,22 @@ public class PrivateWellResultController {
 		@PathVariable String stateCode,
 		@RequestParam(defaultValue = "UNKNOWN") ActionBenchmarkRelation benchmarkRelation,
 		@RequestParam(defaultValue = "NONE") ActionCurrentFilterStatus currentFilterStatus,
+		@RequestParam(required = false) String analyteCode,
+		@RequestParam(required = false) BigDecimal value,
+		@RequestParam(defaultValue = "ppt") String unit,
 		@RequestParam(defaultValue = "false") boolean wholeHouseConsidered
 	) {
+		if (analyteCode != null && value != null) {
+			return privateWellResultService.getFromMeasurement(
+				stateCode.toUpperCase(),
+				analyteCode,
+				value,
+				unit,
+				currentFilterStatus,
+				wholeHouseConsidered
+			).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		}
+
 		return privateWellResultService.get(
 			stateCode.toUpperCase(),
 			benchmarkRelation,
