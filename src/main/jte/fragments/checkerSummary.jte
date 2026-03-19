@@ -1,7 +1,8 @@
 @import com.example.pfas.checker.ActionCheckerSelection
 @import com.example.pfas.checker.ActionCheckerRecommendation
 @import com.example.pfas.checker.ActionWaterSource
-@import com.example.pfas.checker.ActionDirectDataStatus
+@import static com.example.pfas.web.PresentationText.directDataLabel
+@import static com.example.pfas.web.PresentationText.waterSourceLabel
 @param ActionCheckerSelection selection
 @param ActionCheckerRecommendation recommendation
 
@@ -15,27 +16,11 @@
         <div class="summary-facts">
             <div class="summary-fact">
                 <span class="summary-fact__label">Source</span>
-                <span class="summary-fact__value">
-                    @if(selection.waterSource() == ActionWaterSource.PUBLIC_WATER)
-                        Public water
-                    @else
-                        Private well
-                    @endif
-                </span>
+                <span class="summary-fact__value">${waterSourceLabel(selection.waterSource())}</span>
             </div>
             <div class="summary-fact">
                 <span class="summary-fact__label">Direct data</span>
-                <span class="summary-fact__value">
-                    @if(selection.directData() == ActionDirectDataStatus.NONE)
-                        Not yet available
-                    @else
-                        @if(selection.directData() == ActionDirectDataStatus.UTILITY_DOCUMENT)
-                        Utility document
-                        @else
-                        Private-well test
-                        @endif
-                    @endif
-                </span>
+                <span class="summary-fact__value">${directDataLabel(selection.directData())}</span>
             </div>
             <div class="summary-fact">
                 <span class="summary-fact__label">Escalation</span>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PFAS Decision Engine">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d4666"/>
+      <stop offset="100%" stop-color="#15344d"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="none" stroke="rgba(255,255,255,0.18)"/>
+  <path d="M18 20h15c7.2 0 11.5 3.8 11.5 9.8 0 5.6-4 9.2-10.6 9.8l9.7 13.4H33.1l-8.8-12.6h-2.8V53H18V20zm3.5 3.1v14.2h10.3c5.4 0 8.8-2.5 8.8-7.1 0-4.6-3.3-7.1-8.8-7.1H21.5z" fill="#f7f4ec"/>
+  <path d="M47.5 17.5L17.2 47.8" stroke="#c69b4c" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+</svg>

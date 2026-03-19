@@ -6,6 +6,7 @@
 @import com.example.pfas.checker.ActionShoppingIntent
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
+@import static com.example.pfas.web.PresentationText.waterSourceLabel
 @param List<StateGuidance> states
 @param List<PublicWaterSystem> systems
 @param ActionCheckerSelection selection
@@ -32,7 +33,7 @@
         <div class="case-strip">
             <article class="case-chip">
                 <span class="case-chip__label">Source type</span>
-                <span class="case-chip__value">${selection.waterSource()}</span>
+                <span class="case-chip__value">${waterSourceLabel(selection.waterSource())}</span>
             </article>
             <article class="case-chip">
                 <span class="case-chip__label">State code</span>

@@ -1,4 +1,6 @@
 @import com.example.pfas.water.PublicWaterSystem
+@import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
+@import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param java.util.List<PublicWaterSystem> systems
 
 @template.layout.base(
@@ -130,10 +132,10 @@
                     <h3 class="card__title">${system.pwsName()}</h3>
                     <div class="card__meta-row">
                         <span class="chip">PWSID ${system.pwsid()}</span>
-                        <span class="chip">${system.systemType()}</span>
+                        <span class="chip">${systemTypeLabel(system.systemType())}</span>
                     </div>
                     <p class="card__copy">
-                        PWSID ${system.pwsid()} / ${system.systemType()} / ${system.sourceWaterType()}
+                        PWSID ${system.pwsid()} / ${systemTypeLabel(system.systemType())} / ${sourceWaterTypeLabel(system.sourceWaterType())}
                     </p>
                     <div class="chip-row">
                         <span class="chip">Official utility source</span>

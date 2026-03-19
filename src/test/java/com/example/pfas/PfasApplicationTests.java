@@ -277,7 +277,7 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/public-water/PA1510001"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Review utility updates and add certified point-of-use only if you want extra margin")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment breakdown")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")));
 	}
 
