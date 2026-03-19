@@ -2314,6 +2314,441 @@
         "third-party listing replacement"
       ],
       "notes": "Aquasana performance data for AQ-CWM2 stating WQA tested and certified claims including PFOA and PFOS reduction."
+    },
+    {
+      "source_id": "bermuda-water-home",
+      "organization": "Bermuda Water Company",
+      "title": "Bermuda Water Company",
+      "url": "https://www.myutility.us/bermudawateraz",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "AZ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Bermuda Water Company homepage used for utility identity and service-area context."
+    },
+    {
+      "source_id": "bermuda-water-quality-reports",
+      "organization": "Bermuda Water Company",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/bermudawater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "AZ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Bermuda Water report index used to locate the 2024 CCR and the separate 2023 PFAS notice."
+    },
+    {
+      "source_id": "bermuda-water-2024-water-quality-report",
+      "organization": "Bermuda Water Company",
+      "title": "Annual Water Quality Report 2024 Bermuda Water CCR 023",
+      "url": "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2924/bermuda-water-24ccr-023.pdf?sfvrsn=13b43f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "AZ",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Bermuda Water CCR confirming PWS ID AZ0408063, groundwater source context, and Lake Mohave Basin well profile."
+    },
+    {
+      "source_id": "bermuda-water-pfas-2023-report",
+      "organization": "Bermuda Water Company",
+      "title": "PFAS Results 2023 Bermuda Water Company",
+      "url": "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2023/az-pfas.pdf?sfvrsn=9ade3a5b_4",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "AZ",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2023-09-30",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Bermuda Water PFAS report showing 2023 average values for PFOA, PFOS, PFHxS, PFNA, PFBS, and PFHpA."
+    },
+    {
+      "source_id": "prairie-path-water-home",
+      "organization": "Prairie Path Water Company",
+      "title": "Prairie Path Water",
+      "url": "https://www.myutility.us/prairiepathwater",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Prairie Path Water homepage used for Apple Canyon system identity and service-area context."
+    },
+    {
+      "source_id": "prairie-path-water-quality-reports",
+      "organization": "Prairie Path Water Company",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/prairiepathwater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Prairie Path Water report index used to locate Apple Canyon utility PDFs."
+    },
+    {
+      "source_id": "apple-canyon-2024-water-quality-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Apple Canyon CCR 518",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2024/applecanyon-24ccr-518.pdf?sfvrsn=57ba3f5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Apple Canyon CCR confirming PWS ID IL0855150 and groundwater supply from the St. Peter Sandstone and Trenton aquifers."
+    },
+    {
+      "source_id": "apple-canyon-pfas-2023-report",
+      "organization": "Prairie Path Water Company",
+      "title": "PFAS Results 2023 Apple Canyon Water System",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2023/apple-canyon-pfas-2023-518.pdf?sfvrsn=f05f3b5b_6",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2023-12-31",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Apple Canyon PFAS report showing non-detect results across the mapped PFAS analytes in 2023."
+    },
+    {
+      "source_id": "great-basin-water-home",
+      "organization": "Great Basin Water",
+      "title": "Great Basin Water",
+      "url": "https://www.myutility.us/greatbasinwater",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Great Basin Water homepage used for Calvada Meadows system identity and service-area context."
+    },
+    {
+      "source_id": "great-basin-water-quality-reports",
+      "organization": "Great Basin Water",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/greatbasinwater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Great Basin Water report index used to locate Calvada Meadows utility PDFs."
+    },
+    {
+      "source_id": "calvada-meadows-2024-water-quality-report",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Calvada Meadows CCR 443CM 891",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2024/calvadameadows-24ccr-443cm(891).pdf?sfvrsn=7df43c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Calvada Meadows CCR confirming PWS ID NV0000408 and groundwater service supplied from wells in the Pahrump Water Basin."
+    },
+    {
+      "source_id": "calvada-meadows-pfas-2023-report",
+      "organization": "Great Basin Water",
+      "title": "PFAS Results 2023 Calvada Meadows",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2023/pahrump-(cv-meadows).pdf?sfvrsn=82de3a5b_4",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": "2023-12-31",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Calvada Meadows PFAS report showing non-detect results across the mapped PFAS analytes in 2023."
+    },
+    {
+      "source_id": "aquatru-water-purifiers-collection",
+      "organization": "AquaTru",
+      "title": "Water Purifiers Collection",
+      "url": "https://aquatruwater.com/collections/water-purifiers",
+      "source_kind": "vendor_collection_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product lineup discovery"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru water purifiers collection used to capture the current Carafe system price."
+    },
+    {
+      "source_id": "aquatru-carafe-product",
+      "organization": "AquaTru",
+      "title": "AquaTru Carafe Countertop Reverse Osmosis Water Purifier",
+      "url": "https://aquatruwater.com/carafe-countertop",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru Carafe product page with certification FAQ language and product context."
+    },
+    {
+      "source_id": "aquatru-carafe-filters-collection",
+      "organization": "AquaTru",
+      "title": "Carafe Filters Collection",
+      "url": "https://aquatruwater.com/collections/carafe-filters",
+      "source_kind": "vendor_collection_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "component price extraction"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru Carafe filters collection listing current prices for the pre-carbon, RO, and VOC filters."
+    },
+    {
+      "source_id": "aquatru-carafe-performance-pdf",
+      "organization": "AquaTru",
+      "title": "AquaTru Carafe Performance Data Sheet",
+      "url": "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2Fa28540ac49eb42febf1ee1620b121d0c?alt=media&token=8431d19c-4dfc-47d2-b8a9-1f91959efa88&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "replacement cadence and capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Carafe performance sheet states IAPMO R&T certification to NSF ANSI 42, 53, 58, 372, and 401 with direct PFOA and PFOS reduction claims."
+    },
+    {
+      "source_id": "aquatru-under-sink-product",
+      "organization": "AquaTru",
+      "title": "AquaTru Under Sink Reverse Osmosis Water Purifier",
+      "url": "https://aquatruwater.com/products/under-sink-reverse-osmosis-water-purifier",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru Under Sink product page showing current price and certification FAQ language."
+    },
+    {
+      "source_id": "aquatru-under-sink-performance-pdf",
+      "organization": "AquaTru",
+      "title": "AquaTru Under Sink Performance Data Sheet",
+      "url": "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2F80191a6922d4449caa45f6d1993369c8?alt=media&token=db97305d-f128-4565-bff3-e8a47f06eaeb&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "replacement cadence and capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Under Sink performance sheet states IAPMO R&T certification to NSF ANSI 42, 53, 58, 372, and 401 with direct PFOA and PFOS reduction claims."
+    },
+    {
+      "source_id": "aq-optimh2o-ro-product",
+      "organization": "Aquasana",
+      "title": "OptimH2O Reverse Osmosis + Claryum",
+      "url": "https://www.aquasana.com/under-sink-water-filters/optimh2o-reverse-osmosis-plus-claryum/chrome-100236381.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Official Aquasana OptimH2O Reverse Osmosis plus Claryum product page showing current price and PFAS marketing context."
+    },
+    {
+      "source_id": "aq-optimh2o-ro-performance-pdf",
+      "organization": "Aquasana",
+      "title": "AQ-RO-3 Install and Performance Data",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw40a02204/PDF/AQ-RO-3_Install.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:15:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "replacement cadence and capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "OptimH2O Reverse Osmosis plus Claryum install and performance sheet describes certification to NSF ANSI 42, 53, 58, 401, and P473 with direct PFOA and PFOS claim support."
     }
   ]
 }

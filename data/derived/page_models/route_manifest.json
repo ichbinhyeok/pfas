@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T04:34:38.640655900+09:00",
-  "route_count" : 23,
+  "generated_at" : "2026-03-20T05:29:17.983121600+09:00",
+  "route_count" : 26,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -121,6 +121,19 @@
     "keywords" : [ "College Utilities Corporation", "AK", "AK2310900", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "AZ0408063",
+    "display_label" : "Bermuda Water Company PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/AZ0408063",
+    "supporting_path" : "/public-water-system/AZ0408063",
+    "api_path" : "/internal/results/public-water/AZ0408063",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Bermuda Water Company", "AZ", "AZ0408063", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3590069",
     "display_label" : "Bear Lake Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -132,6 +145,19 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "IL0855150",
+    "display_label" : "Apple Canyon Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IL0855150",
+    "supporting_path" : "/public-water-system/IL0855150",
+    "api_path" : "/internal/results/public-water/IL0855150",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Apple Canyon Water System", "IL", "IL0855150", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "MD0120011",
@@ -184,6 +210,19 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NV0000408",
+    "display_label" : "Calvada Meadows Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NV0000408",
+    "supporting_path" : "/public-water-system/NV0000408",
+    "api_path" : "/internal/results/public-water/NV0000408",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Calvada Meadows Water System", "NV", "NV0000408", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "PA1510001",

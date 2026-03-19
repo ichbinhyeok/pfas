@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T05:29:19.949132100+09:00",
-  "model_id" : "public_water:NJ1914002",
+  "generated_at" : "2026-03-20T05:29:19.778997200+09:00",
+  "model_id" : "public_water:IL0855150",
   "route_type" : "public_water",
-  "route_key" : "NJ1914002",
+  "route_key" : "IL0855150",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NJ1914002",
+  "render_path" : "/public-water/IL0855150",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
   "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "NJ1914002",
-      "pwsName" : "Montague Water Company",
-      "stateCode" : "NJ",
+      "pwsid" : "IL0855150",
+      "pwsName" : "Apple Canyon Water System",
+      "stateCode" : "IL",
       "systemType" : "community",
       "populationServed" : "",
       "sourceWaterType" : "groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/new-jersey",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
-      "serviceAreaNotes" : "Montague Water Company community groundwater system with five wells and a separate 2023 PFAS report showing non-detects across mapped analytes",
+      "utilityWebsiteUrl" : "https://www.myutility.us/prairiepathwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2024/applecanyon-24ccr-518.pdf?sfvrsn=57ba3f5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2023/apple-canyon-pfas-2023-518.pdf?sfvrsn=f05f3b5b_6",
+      "serviceAreaNotes" : "Prairie Path Water community groundwater system with separate 2023 PFAS reporting and 2024 CCR source context for Apple Canyon",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "new-jersey-water-home", "new-jersey-water-quality-reports", "montague-2024-water-quality-report", "montague-pfas-2023-report" ]
+      "sourceIds" : [ "prairie-path-water-home", "prairie-path-water-quality-reports", "apple-canyon-2024-water-quality-report", "apple-canyon-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NJ1914002",
+      "result_id" : "public-water:IL0855150",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T05:29:19.946524700+09:00",
+      "generated_at" : "2026-03-20T05:29:19.776481300+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
@@ -76,28 +76,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "montague-2024-water-quality-report",
-        "organization" : "Montague Water Company",
-        "title" : "Annual Water Quality Report 2025 Montague CCR 268",
-        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+        "source_id" : "apple-canyon-2024-water-quality-report",
+        "organization" : "Prairie Path Water Company",
+        "title" : "Annual Water Quality Report 2024 Apple Canyon CCR 518",
+        "url" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2024/applecanyon-24ccr-518.pdf?sfvrsn=57ba3f5b_6",
         "trust_tier" : 2
       }, {
-        "source_id" : "montague-pfas-2023-report",
-        "organization" : "Montague Water Company",
-        "title" : "PFAS Results 2023 Montague Water Company",
-        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+        "source_id" : "apple-canyon-pfas-2023-report",
+        "organization" : "Prairie Path Water Company",
+        "title" : "PFAS Results 2023 Apple Canyon Water System",
+        "url" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2023/apple-canyon-pfas-2023-518.pdf?sfvrsn=f05f3b5b_6",
         "trust_tier" : 2
       }, {
-        "source_id" : "new-jersey-water-home",
-        "organization" : "Montague Water Company",
-        "title" : "Montague Water",
-        "url" : "https://www.myutility.us/new-jersey",
+        "source_id" : "prairie-path-water-home",
+        "organization" : "Prairie Path Water Company",
+        "title" : "Prairie Path Water",
+        "url" : "https://www.myutility.us/prairiepathwater",
         "trust_tier" : 2
       }, {
-        "source_id" : "new-jersey-water-quality-reports",
-        "organization" : "Montague Water Company",
+        "source_id" : "prairie-path-water-quality-reports",
+        "organization" : "Prairie Path Water Company",
         "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/new-jersey/water-safety/water-quality-reports",
+        "url" : "https://www.myutility.us/prairiepathwater/water-safety/water-quality-reports",
         "trust_tier" : 2
       } ],
       "meta" : {
@@ -108,9 +108,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NJ1914002",
+      "input_id" : "public_water:IL0855150",
       "route_type" : "public_water",
-      "route_key" : "NJ1914002",
+      "route_key" : "IL0855150",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -118,12 +118,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NJ1914002",
+      "pwsid" : "IL0855150",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/NJ1914002",
-      "secondary_path" : "/internal/results/public-water/NJ1914002",
+      "primary_path" : "/public-water/IL0855150",
+      "secondary_path" : "/internal/results/public-water/IL0855150",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NJ1914002"
+    "supporting_path" : "/public-water-system/IL0855150"
   }
 }

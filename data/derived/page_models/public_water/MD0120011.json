@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T04:34:39.751869200+09:00",
+  "generated_at" : "2026-03-20T05:29:19.813084900+09:00",
   "model_id" : "public_water:MD0120011",
   "route_type" : "public_water",
   "route_key" : "MD0120011",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:MD0120011",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T04:34:39.742110500+09:00",
+      "generated_at" : "2026-03-20T05:29:19.796598900+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -45,10 +45,10 @@
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
       "annual_cost_maintenance" : {
-        "range_low_usd" : 146.98,
+        "range_low_usd" : 110.83,
         "range_high_usd" : 280.00,
         "maintenance_burden" : "high",
-        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet primary replacement cadence: every 12 months.", "AquaTru Classic Classic pre/carbon filter: every 6 months.", "AquaTru Classic Classic reverse osmosis filter: every 12 months.", "AquaTru Classic Classic VOC carbon filter: every 6 months.", "Aquasana Claryum 2-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow primary replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect primary replacement cadence: every 6 months.", "Aquasana Clean Water Machine primary replacement cadence: every 6 months.", "Aquasana SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block replacements: every 6 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow membrane replacement: every 12 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow remineralizer replacement: every 6 months." ],
+        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet primary replacement cadence: every 12 months.", "AquaTru Carafe Carafe pre/carbon filter: every 6 months.", "AquaTru Carafe Carafe reverse osmosis filter: every 24 months.", "AquaTru Carafe Carafe VOC carbon filter: every 12 months.", "AquaTru Classic Classic pre/carbon filter: every 6 months.", "AquaTru Classic Classic reverse osmosis filter: every 12 months.", "AquaTru Classic Classic VOC carbon filter: every 6 months.", "Aquasana Claryum 2-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow primary replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect primary replacement cadence: every 6 months.", "Aquasana Clean Water Machine primary replacement cadence: every 6 months.", "Aquasana SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block replacements: every 6 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow membrane replacement: every 12 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow remineralizer replacement: every 6 months." ],
         "notes" : [ "Annual maintenance annualizes normalized replacement media pricing by cadence and adds any normalized recurring membrane or service inputs." ]
       },
       "certification_checklist" : [ {
@@ -68,6 +68,13 @@
         "source_id" : "amway-espring-100186-cartridge"
       } ],
       "best_fit_options" : [ {
+        "option_code" : "AQUATRU_CARAFE",
+        "label" : "AquaTru Carafe",
+        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
+        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "cost_profile" : "medium",
+        "maintenance_burden" : "high"
+      }, {
         "option_code" : "AQUASANA_AQ_CWM2",
         "label" : "Aquasana Clean Water Machine",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
@@ -77,13 +84,6 @@
       }, {
         "option_code" : "AQUASANA_AQ_6200",
         "label" : "Aquasana Claryum 2-Stage",
-        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
-        "cost_profile" : "low",
-        "maintenance_burden" : "high"
-      }, {
-        "option_code" : "AQUASANA_AQ_MF_1",
-        "label" : "Aquasana Claryum Direct Connect",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
         "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
         "cost_profile" : "low",
@@ -229,6 +229,18 @@
         "url" : "https://www.aquasana.com/water-filter-replacements/countertop-water-filter-replacements/new-cwm-lead-filter-replacement-2-pack-100350840.html",
         "trust_tier" : 4
       }, {
+        "source_id" : "aq-optimh2o-ro-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-RO-3 Install and Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw40a02204/PDF/AQ-RO-3_Install.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-optimh2o-ro-product",
+        "organization" : "Aquasana",
+        "title" : "OptimH2O Reverse Osmosis + Claryum",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/optimh2o-reverse-osmosis-plus-claryum/chrome-100236381.html",
+        "trust_tier" : 4
+      }, {
         "source_id" : "aq-smartflow-ro-carbon-replacements",
         "organization" : "Aquasana",
         "title" : "SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block Replacements",
@@ -259,6 +271,24 @@
         "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-remineralizer-replacement-100368975.html",
         "trust_tier" : 4
       }, {
+        "source_id" : "aquatru-carafe-filters-collection",
+        "organization" : "AquaTru",
+        "title" : "Carafe Filters Collection",
+        "url" : "https://aquatruwater.com/collections/carafe-filters",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-carafe-performance-pdf",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Carafe Performance Data Sheet",
+        "url" : "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2Fa28540ac49eb42febf1ee1620b121d0c?alt=media&token=8431d19c-4dfc-47d2-b8a9-1f91959efa88&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-carafe-product",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Carafe Countertop Reverse Osmosis Water Purifier",
+        "url" : "https://aquatruwater.com/carafe-countertop",
+        "trust_tier" : 4
+      }, {
         "source_id" : "aquatru-classic-filters-collection",
         "organization" : "AquaTru",
         "title" : "Classic Filters Collection",
@@ -275,6 +305,24 @@
         "organization" : "AquaTru",
         "title" : "AquaTru Classic",
         "url" : "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-under-sink-performance-pdf",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Under Sink Performance Data Sheet",
+        "url" : "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2F80191a6922d4449caa45f6d1993369c8?alt=media&token=db97305d-f128-4565-bff3-e8a47f06eaeb&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-under-sink-product",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Under Sink Reverse Osmosis Water Purifier",
+        "url" : "https://aquatruwater.com/products/under-sink-reverse-osmosis-water-purifier",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-water-purifiers-collection",
+        "organization" : "AquaTru",
+        "title" : "Water Purifiers Collection",
+        "url" : "https://aquatruwater.com/collections/water-purifiers",
         "trust_tier" : 4
       } ],
       "meta" : {

@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T05:29:19.915420200+09:00",
-  "model_id" : "public_water:NC0353101",
+  "generated_at" : "2026-03-20T05:29:19.684720800+09:00",
+  "model_id" : "public_water:AZ0408063",
   "route_type" : "public_water",
-  "route_key" : "NC0353101",
+  "route_key" : "AZ0408063",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NC0353101",
+  "render_path" : "/public-water/AZ0408063",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "NC0353101",
-      "pwsName" : "Carolina Trace Water System",
-      "stateCode" : "NC",
+      "pwsid" : "AZ0408063",
+      "pwsName" : "Bermuda Water Company",
+      "stateCode" : "AZ",
       "systemType" : "community",
-      "populationServed" : "4200",
-      "sourceWaterType" : "surface_water",
-      "utilityWebsiteUrl" : "https://www.myutility.us/carolinawater",
-      "ccrUrl" : "https://www.myutility.us/NC/CCR24/049.pdf",
-      "pfasNoticeUrl" : "https://www.myutility.us/NC/CCR24/049.pdf",
-      "serviceAreaNotes" : "Carolina Water Service of North Carolina system using TriRiver Waters Sanford Water Filtration Facility finished water context",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/bermudawateraz",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2924/bermuda-water-24ccr-023.pdf?sfvrsn=13b43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2023/az-pfas.pdf?sfvrsn=9ade3a5b_4",
+      "serviceAreaNotes" : "Bermuda Water Company community groundwater system in the Lake Mohave Basin with a separate 2023 PFAS notice and 2024 CCR profile",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "carolina-trace-2024-water-quality-report" ]
+      "sourceIds" : [ "bermuda-water-home", "bermuda-water-quality-reports", "bermuda-water-2024-water-quality-report", "bermuda-water-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NC0353101",
+      "result_id" : "public-water:AZ0408063",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T05:29:19.900560100+09:00",
+      "generated_at" : "2026-03-20T05:29:19.662843700+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
-        "title" : "Review utility response and consider certified point-of-use filtration",
-        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
+        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
+        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
+        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 2 above selected benchmark, 2 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 124.99,
         "range_high_usd" : 1299.00,
@@ -97,22 +97,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "carolina-trace-2024-water-quality-report",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Annual Water Quality Report 2024 Carolina Trace CCR 049",
-        "url" : "https://www.myutility.us/NC/CCR24/049.pdf",
+        "source_id" : "bermuda-water-2024-water-quality-report",
+        "organization" : "Bermuda Water Company",
+        "title" : "Annual Water Quality Report 2024 Bermuda Water CCR 023",
+        "url" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2924/bermuda-water-24ccr-023.pdf?sfvrsn=13b43f5b_4",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-home",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Carolina Water Service of North Carolina",
-        "url" : "https://www.myutility.us/carolinawater",
+        "source_id" : "bermuda-water-home",
+        "organization" : "Bermuda Water Company",
+        "title" : "Bermuda Water Company",
+        "url" : "https://www.myutility.us/bermudawateraz",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-quality-reports",
-        "organization" : "Carolina Water Service of North Carolina",
+        "source_id" : "bermuda-water-pfas-2023-report",
+        "organization" : "Bermuda Water Company",
+        "title" : "PFAS Results 2023 Bermuda Water Company",
+        "url" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2023/az-pfas.pdf?sfvrsn=9ade3a5b_4",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "bermuda-water-quality-reports",
+        "organization" : "Bermuda Water Company",
         "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
+        "url" : "https://www.myutility.us/bermudawater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -327,28 +333,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "above_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
+        "benchmark_relation" : "below_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NC0353101",
+      "input_id" : "public_water:AZ0408063",
       "route_type" : "public_water",
-      "route_key" : "NC0353101",
+      "route_key" : "AZ0408063",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "ABOVE_REFERENCE",
+      "benchmark_relation" : "BELOW_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NC0353101",
-      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
-      "primary_path" : "/public-water/NC0353101",
-      "secondary_path" : "/guides/under-sink-vs-whole-house",
-      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+      "pwsid" : "AZ0408063",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/AZ0408063",
+      "secondary_path" : "/internal/results/public-water/AZ0408063",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NC0353101"
+    "supporting_path" : "/public-water-system/AZ0408063"
   }
 }

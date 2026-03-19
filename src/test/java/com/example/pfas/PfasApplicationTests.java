@@ -117,13 +117,19 @@ class PfasApplicationTests {
 				"golden-heart-2025-water-quality-report",
 				"alaska-dww-college-utilities-monitoring-summary",
 				"college-utilities-2025-water-quality-report",
+				"bermuda-water-pfas-2023-report",
+				"apple-canyon-pfas-2023-report",
+				"calvada-meadows-pfas-2023-report",
 				"new-jersey-water-home",
 				"montague-pfas-2023-report",
 				"sunshine-water-home",
 				"bear-lake-pfas-2023-report",
 				"aquatru-classic-product",
+				"aquatru-carafe-product",
+				"aquatru-under-sink-product",
 				"aq-claryum-3-stage-product",
-				"aq-clean-water-machine-product"
+				"aq-clean-water-machine-product",
+				"aq-optimh2o-ro-product"
 			);
 	}
 
@@ -157,18 +163,34 @@ class PfasApplicationTests {
 		var systems = publicWaterSystemService.getAll();
 		var goldenHeart = publicWaterSystemService.getByPwsid("AK2310730").orElseThrow();
 		var collegeUtilities = publicWaterSystemService.getByPwsid("AK2310900").orElseThrow();
+		var bermuda = publicWaterSystemService.getByPwsid("AZ0408063").orElseThrow();
 		var bearLake = publicWaterSystemService.getByPwsid("FL3590069").orElseThrow();
+		var appleCanyon = publicWaterSystemService.getByPwsid("IL0855150").orElseThrow();
 		var greenRidge = publicWaterSystemService.getByPwsid("MD0120011").orElseThrow();
 		var montague = publicWaterSystemService.getByPwsid("NJ1914002").orElseThrow();
+		var calvadaMeadows = publicWaterSystemService.getByPwsid("NV0000408").orElseThrow();
 		var abington = publicWaterSystemService.getByPwsid("NC0234191").orElseThrow();
 		var carolinaTrace = publicWaterSystemService.getByPwsid("NC0353101").orElseThrow();
 		var phila = publicWaterSystemService.getByPwsid("PA1510001").orElseThrow();
 		var lancaster = publicWaterSystemService.getByPwsid("7360058").orElseThrow();
 
-		assertThat(systems).hasSize(9);
+		assertThat(systems).hasSize(12);
 		assertThat(systems)
 			.extracting(system -> system.pwsid())
-			.containsExactly("AK2310900", "AK2310730", "FL3590069", "MD0120011", "NC0234191", "NC0353101", "NJ1914002", "7360058", "PA1510001");
+			.contains(
+				"AK2310900",
+				"AK2310730",
+				"AZ0408063",
+				"FL3590069",
+				"IL0855150",
+				"MD0120011",
+				"NC0234191",
+				"NC0353101",
+				"NJ1914002",
+				"NV0000408",
+				"7360058",
+				"PA1510001"
+			);
 		assertThat(goldenHeart.sourceIds())
 			.contains(
 				"alaska-water-home",
@@ -183,12 +205,26 @@ class PfasApplicationTests {
 				"alaska-dww-college-utilities-monitoring-summary",
 				"college-utilities-2025-water-quality-report"
 			);
+		assertThat(bermuda.sourceIds())
+			.contains(
+				"bermuda-water-home",
+				"bermuda-water-quality-reports",
+				"bermuda-water-2024-water-quality-report",
+				"bermuda-water-pfas-2023-report"
+			);
 		assertThat(bearLake.sourceIds())
 			.contains(
 				"sunshine-water-home",
 				"sunshine-water-quality-reports",
 				"bear-lake-2024-water-quality-report",
 				"bear-lake-pfas-2023-report"
+			);
+		assertThat(appleCanyon.sourceIds())
+			.contains(
+				"prairie-path-water-home",
+				"prairie-path-water-quality-reports",
+				"apple-canyon-2024-water-quality-report",
+				"apple-canyon-pfas-2023-report"
 			);
 		assertThat(greenRidge.sourceIds())
 			.contains(
@@ -202,6 +238,13 @@ class PfasApplicationTests {
 				"new-jersey-water-quality-reports",
 				"montague-2024-water-quality-report",
 				"montague-pfas-2023-report"
+			);
+		assertThat(calvadaMeadows.sourceIds())
+			.contains(
+				"great-basin-water-home",
+				"great-basin-water-quality-reports",
+				"calvada-meadows-2024-water-quality-report",
+				"calvada-meadows-pfas-2023-report"
 			);
 		assertThat(abington.sourceIds())
 			.contains(
@@ -233,9 +276,12 @@ class PfasApplicationTests {
 	void loadsSeededUtilityObservations() {
 		var goldenHeartObservations = utilityObservationService.getByPwsid("AK2310730");
 		var collegeUtilitiesObservations = utilityObservationService.getByPwsid("AK2310900");
+		var bermudaObservations = utilityObservationService.getByPwsid("AZ0408063");
 		var bearLakeObservations = utilityObservationService.getByPwsid("FL3590069");
+		var appleCanyonObservations = utilityObservationService.getByPwsid("IL0855150");
 		var greenRidgeObservations = utilityObservationService.getByPwsid("MD0120011");
 		var montagueObservations = utilityObservationService.getByPwsid("NJ1914002");
+		var calvadaObservations = utilityObservationService.getByPwsid("NV0000408");
 		var abingtonObservations = utilityObservationService.getByPwsid("NC0234191");
 		var carolinaTraceObservations = utilityObservationService.getByPwsid("NC0353101");
 		var philaObservations = utilityObservationService.getByPwsid("PA1510001");
@@ -243,9 +289,12 @@ class PfasApplicationTests {
 
 		assertThat(goldenHeartObservations).hasSize(4);
 		assertThat(collegeUtilitiesObservations).hasSize(4);
+		assertThat(bermudaObservations).hasSize(4);
 		assertThat(bearLakeObservations).hasSize(5);
+		assertThat(appleCanyonObservations).hasSize(5);
 		assertThat(greenRidgeObservations).hasSize(5);
 		assertThat(montagueObservations).hasSize(5);
+		assertThat(calvadaObservations).hasSize(5);
 		assertThat(abingtonObservations).hasSize(5);
 		assertThat(carolinaTraceObservations).hasSize(4);
 		assertThat(philaObservations).hasSize(6);
@@ -274,6 +323,22 @@ class PfasApplicationTests {
 				assertThat(observation.benchmarkId()).isEqualTo("us_pfoa_mcl_2024");
 				assertThat(observation.sourceIds()).contains("bear-lake-pfas-2023-report");
 			});
+		assertThat(bermudaObservations)
+			.filteredOn(observation -> observation.observationId().equals("bermuda-water-pfoa-average-2023"))
+			.singleElement()
+			.satisfies(observation -> {
+				assertThat(observation.value()).isEqualByComparingTo("0.3");
+				assertThat(observation.benchmarkId()).isEqualTo("us_pfoa_mcl_2024");
+				assertThat(observation.sourceIds()).contains("bermuda-water-pfas-2023-report");
+			});
+		assertThat(appleCanyonObservations)
+			.filteredOn(observation -> observation.observationId().equals("apple-canyon-pfoa-nd-2023"))
+			.singleElement()
+			.satisfies(observation -> {
+				assertThat(observation.value()).isEqualByComparingTo("0");
+				assertThat(observation.benchmarkId()).isEqualTo("us_pfoa_mcl_2024");
+				assertThat(observation.sourceIds()).contains("apple-canyon-pfas-2023-report");
+			});
 		assertThat(greenRidgeObservations)
 			.filteredOn(observation -> observation.observationId().equals("green-ridge-pfoa-average-2024"))
 			.singleElement()
@@ -289,6 +354,14 @@ class PfasApplicationTests {
 				assertThat(observation.value()).isEqualByComparingTo("0");
 				assertThat(observation.benchmarkId()).isEqualTo("us_pfoa_mcl_2024");
 				assertThat(observation.sourceIds()).contains("montague-pfas-2023-report");
+			});
+		assertThat(calvadaObservations)
+			.filteredOn(observation -> observation.observationId().equals("calvada-meadows-pfoa-nd-2023"))
+			.singleElement()
+			.satisfies(observation -> {
+				assertThat(observation.value()).isEqualByComparingTo("0");
+				assertThat(observation.benchmarkId()).isEqualTo("us_pfoa_mcl_2024");
+				assertThat(observation.sourceIds()).contains("calvada-meadows-pfas-2023-report");
 			});
 		assertThat(abingtonObservations)
 			.filteredOn(observation -> observation.observationId().equals("abington-pfoa-average-2024"))
@@ -328,9 +401,12 @@ class PfasApplicationTests {
 	void loadsSeededCertificationClaims() {
 		var eSpringClaims = certificationClaimService.getByListingRecordId("122941C");
 		var aquaTruClaims = certificationClaimService.getByListingRecordId("AT2000-AT2050");
+		var aquaTruCarafeClaims = certificationClaimService.getByListingRecordId("AT100-AT140");
+		var aquaTruUnderSinkClaims = certificationClaimService.getByListingRecordId("ATU100");
 		var aqCwm2Claims = certificationClaimService.getByListingRecordId("AQ-CWM2");
 		var aq6200Claims = certificationClaimService.getByListingRecordId("AQ-6200");
 		var aq6300Claims = certificationClaimService.getByListingRecordId("AQ-6300");
+		var aqRo3Claims = certificationClaimService.getByListingRecordId("AQ-RO-3");
 
 		assertThat(eSpringClaims).hasSize(3);
 		assertThat(eSpringClaims)
@@ -341,6 +417,12 @@ class PfasApplicationTests {
 		assertThat(aquaTruClaims)
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
+		assertThat(aquaTruCarafeClaims)
+			.extracting(claim -> claim.claimName())
+			.containsExactly("PFOA Reduction", "PFOS Reduction");
+		assertThat(aquaTruUnderSinkClaims)
+			.extracting(claim -> claim.claimName())
+			.containsExactly("PFOA Reduction", "PFOS Reduction");
 		assertThat(aqCwm2Claims)
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
@@ -348,6 +430,9 @@ class PfasApplicationTests {
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
 		assertThat(aq6300Claims)
+			.extracting(claim -> claim.claimName())
+			.containsExactly("PFOA Reduction", "PFOS Reduction");
+		assertThat(aqRo3Claims)
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
 	}
@@ -369,53 +454,74 @@ class PfasApplicationTests {
 	@Test
 	void loadsSeededFilterCatalog() {
 		var items = filterCatalogService.getAll();
+		var aquaTruCarafe = filterCatalogService.getByProductId("aquatru-carafe").orElseThrow();
 		var aquaTruClassic = filterCatalogService.getByProductId("aquatru-classic").orElseThrow();
+		var aquaTruUnderSink = filterCatalogService.getByProductId("aquatru-under-sink").orElseThrow();
 		var cleanWaterMachine = filterCatalogService.getByProductId("aquasana-aq-cwm2").orElseThrow();
+		var aq6200 = filterCatalogService.getByProductId("aquasana-aq-6200").orElseThrow();
+		var aq6300 = filterCatalogService.getByProductId("aquasana-aq-6300").orElseThrow();
+		var aq6300m = filterCatalogService.getByProductId("aquasana-aq-6300m").orElseThrow();
+		var aqMf1 = filterCatalogService.getByProductId("aquasana-aq-mf-1").orElseThrow();
+		var optimH2o = filterCatalogService.getByProductId("aquasana-aq-ro-3").orElseThrow();
 		var smartFlow = filterCatalogService.getByProductId("aquasana-aq-sfro2").orElseThrow();
 
-		assertThat(items).hasSize(8);
+		assertThat(items).hasSize(11);
 		assertThat(items)
 			.extracting(item -> item.productId())
-			.containsExactly(
+			.contains(
 				"espring-122941",
+				"aquatru-carafe",
 				"aquatru-classic",
+				"aquatru-under-sink",
+				"aquasana-aq-cwm2",
 				"aquasana-aq-6200",
 				"aquasana-aq-6300",
 				"aquasana-aq-6300m",
 				"aquasana-aq-mf-1",
-				"aquasana-aq-cwm2",
+				"aquasana-aq-ro-3",
 				"aquasana-aq-sfro2"
 			);
 		assertThat(items.get(0).listingRecordId()).isEqualTo("122941C");
 		assertThat(items.get(0).upfrontCostUsd()).isEqualByComparingTo("1299.00");
 		assertThat(items.get(0).replacementCostUsd()).isEqualByComparingTo("280.00");
+		assertThat(aquaTruCarafe.listingRecordId()).isEqualTo("AT100-AT140");
+		assertThat(aquaTruCarafe.upfrontCostUsd()).isEqualByComparingTo("375.00");
+		assertThat(aquaTruCarafe.replacementCostUsd()).isNull();
+		assertThat(aquaTruCarafe.recurringCostComponents()).hasSize(3);
+		assertThat(aquaTruCarafe.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
 		assertThat(aquaTruClassic.listingRecordId()).isEqualTo("AT2000-AT2050");
 		assertThat(aquaTruClassic.upfrontCostUsd()).isEqualByComparingTo("475.00");
 		assertThat(aquaTruClassic.replacementCostUsd()).isNull();
 		assertThat(aquaTruClassic.recurringCostComponents()).hasSize(3);
 		assertThat(aquaTruClassic.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
-		assertThat(items.get(2).listingRecordId()).isEqualTo("AQ-6200");
-		assertThat(items.get(2).upfrontCostUsd()).isEqualByComparingTo("162.49");
-		assertThat(items.get(2).replacementCostUsd()).isEqualByComparingTo("73.99");
-		assertThat(items.get(2).claimNames()).contains("PFOA Reduction", "PFOS Reduction");
-		assertThat(items.get(3).listingRecordId()).isEqualTo("AQ-6300");
-		assertThat(items.get(3).upfrontCostUsd()).isEqualByComparingTo("174.99");
-		assertThat(items.get(3).replacementCostUsd()).isEqualByComparingTo("83.99");
-		assertThat(items.get(3).claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aquaTruUnderSink.listingRecordId()).isEqualTo("ATU100");
+		assertThat(aquaTruUnderSink.upfrontCostUsd()).isEqualByComparingTo("375.00");
+		assertThat(aquaTruUnderSink.replacementCostUsd()).isNull();
+		assertThat(aquaTruUnderSink.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
 		assertThat(items.get(0).claimNames())
 			.contains("PFOA Reduction", "PFOS Reduction", "Total PFAS Reduction");
-		assertThat(items.get(4).listingRecordId()).isEqualTo("AQ-6300M");
-		assertThat(items.get(4).upfrontCostUsd()).isEqualByComparingTo("224.99");
-		assertThat(items.get(4).replacementCostUsd()).isEqualByComparingTo("91.99");
-		assertThat(items.get(4).claimNames()).contains("PFOA Reduction", "PFOS Reduction");
-		assertThat(items.get(5).upfrontCostUsd()).isEqualByComparingTo("124.99");
-		assertThat(items.get(5).replacementCostUsd()).isEqualByComparingTo("78.19");
-		assertThat(items.get(5).claimNames()).contains("PFOA Reduction", "PFOS Reduction");
-		assertThat(items.get(6).listingRecordId()).isEqualTo("AQ-CWM2");
-		assertThat(items.get(6).upfrontCostUsd()).isEqualByComparingTo("279.99");
-		assertThat(items.get(6).replacementCostUsd()).isEqualByComparingTo("73.49");
-		assertThat(items.get(6).claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aq6200.listingRecordId()).isEqualTo("AQ-6200");
+		assertThat(aq6200.upfrontCostUsd()).isEqualByComparingTo("162.49");
+		assertThat(aq6200.replacementCostUsd()).isEqualByComparingTo("73.99");
+		assertThat(aq6200.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aq6300.listingRecordId()).isEqualTo("AQ-6300");
+		assertThat(aq6300.upfrontCostUsd()).isEqualByComparingTo("174.99");
+		assertThat(aq6300.replacementCostUsd()).isEqualByComparingTo("83.99");
+		assertThat(aq6300.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aq6300m.listingRecordId()).isEqualTo("AQ-6300M");
+		assertThat(aq6300m.upfrontCostUsd()).isEqualByComparingTo("224.99");
+		assertThat(aq6300m.replacementCostUsd()).isEqualByComparingTo("91.99");
+		assertThat(aq6300m.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aqMf1.upfrontCostUsd()).isEqualByComparingTo("124.99");
+		assertThat(aqMf1.replacementCostUsd()).isEqualByComparingTo("78.19");
+		assertThat(aqMf1.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(cleanWaterMachine.listingRecordId()).isEqualTo("AQ-CWM2");
+		assertThat(cleanWaterMachine.upfrontCostUsd()).isEqualByComparingTo("279.99");
+		assertThat(cleanWaterMachine.replacementCostUsd()).isEqualByComparingTo("73.49");
 		assertThat(cleanWaterMachine.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(optimH2o.listingRecordId()).isEqualTo("AQ-RO-3");
+		assertThat(optimH2o.upfrontCostUsd()).isEqualByComparingTo("224.99");
+		assertThat(optimH2o.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
 		assertThat(smartFlow.listingRecordId()).isEqualTo("AQ-SFRO2");
 		assertThat(smartFlow.upfrontCostUsd()).isEqualByComparingTo("224.99");
 		assertThat(smartFlow.replacementCostUsd()).isNull();
@@ -465,18 +571,19 @@ class PfasApplicationTests {
 		assertThat(result.nextAction().code()).isEqualTo("REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU");
 		assertThat(result.initialCost().rangeLowUsd()).isEqualByComparingTo("124.99");
 		assertThat(result.initialCost().rangeHighUsd()).isEqualByComparingTo("1299.00");
-		assertThat(result.annualCostMaintenance().rangeLowUsd()).isEqualByComparingTo("146.98");
+		assertThat(result.annualCostMaintenance().rangeLowUsd()).isEqualByComparingTo("110.83");
 		assertThat(result.annualCostMaintenance().rangeHighUsd()).isEqualByComparingTo("280.00");
 		assertThat(result.certificationChecklist()).hasSize(3);
 		assertThat(result.bestFitOptions())
 			.extracting(option -> option.optionCode())
-			.containsExactly("AQUASANA_AQ_CWM2", "AQUASANA_AQ_6200", "AQUASANA_AQ_MF_1");
+			.containsExactly("AQUATRU_CARAFE", "AQUASANA_AQ_CWM2", "AQUASANA_AQ_6200");
 		assertThat(result.sources())
 			.extracting(source -> source.sourceId())
 			.contains(
 				"pa-pfas-mcl-rule",
 				"nsf-espring-listing-053",
 				"amway-espring-122941-product",
+				"aquatru-carafe-product",
 				"aq-clean-water-machine-product",
 				"aq-claryum-2-stage-product",
 				"aq-claryum-3-stage-product",
@@ -543,7 +650,7 @@ class PfasApplicationTests {
 
 		assertThat(report.readyStateRoutes()).isEqualTo(8);
 		assertThat(report.blockedStateRoutes()).isZero();
-		assertThat(report.readyPublicWaterRoutes()).isEqualTo(9);
+		assertThat(report.readyPublicWaterRoutes()).isEqualTo(12);
 		assertThat(report.blockedPublicWaterRoutes()).isZero();
 		assertThat(report.items())
 			.filteredOn(item -> item.routeType().equals("state_guidance"))
@@ -816,7 +923,10 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/internal/readiness/report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":8")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":9")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":12")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_key\":\"AZ0408063\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_key\":\"IL0855150\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_key\":\"NV0000408\"")));
 	}
 
 	@Test
@@ -859,12 +969,15 @@ class PfasApplicationTests {
 	void returnsDerivedRouteManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":23")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":26")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310900\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AZ0408063\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/FL3590069\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/IL0855150\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/MD0120011\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/NJ1914002\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/NV0000408\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/private-well/MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/NC0234191\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/7360058\"")))
@@ -875,13 +988,16 @@ class PfasApplicationTests {
 	void returnsDerivedSearchIndexSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":23")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":26")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310900\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AZ0408063\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:FL3590069\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:IL0855150\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:MD0120011\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:NJ1914002\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:NV0000408\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:NC0234191\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:read-your-ccr\"")));
@@ -891,16 +1007,19 @@ class PfasApplicationTests {
 	void returnsDerivedDecisionInputSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/decision-inputs"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":17")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":20")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"state_code\":\"MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"pwsid\":null")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"recommended_route_code\":\"PRIVATE_WELL_TEST_FIRST\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:AK2310900\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:AZ0408063\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:FL3590069\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:IL0855150\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:MD0120011\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:NJ1914002\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:NV0000408\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:NC0234191\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"recommended_route_code\":\"PUBLIC_WATER_INTERPRET_DIRECT_DATA\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:7360058\"")))
@@ -912,12 +1031,15 @@ class PfasApplicationTests {
 	void returnsDerivedPageGenerationManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":23")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":26")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310730.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310900.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AZ0408063.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/FL3590069.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/IL0855150.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/MD0120011.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/NJ1914002.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/NV0000408.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/NC0234191.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/7360058.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/state_guidance/MI.json\"")))
@@ -948,16 +1070,19 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":40")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":46")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/sitemap.xml\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310900\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AZ0408063\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/FL3590069\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/IL0855150\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/MD0120011\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/NJ1914002\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/NV0000408\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/NC0234191\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/read-your-ccr/index.html\"")))
@@ -979,9 +1104,26 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/guides/read-your-ccr</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/AZ0408063</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/FL3590069</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/IL0855150</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/NJ1914002</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/NV0000408</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/7360058</loc>")));
+	}
+
+	@Test
+	void returnsFreshnessQualityReport() throws Exception {
+		mockMvc.perform(get("/internal/quality/freshness-report"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_source_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":26")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_indexable_route_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unresolved_readiness_route_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"noindex_candidate_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_sources\":[]")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_findings\":[]")));
 	}
 
 	@Test

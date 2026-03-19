@@ -39,3 +39,17 @@ montague-pfos-nd-2023,NJ1914002,PFOS,Perfluorooctane sulfonate,statewide_pfas_re
 montague-pfhxs-nd-2023,NJ1914002,PFHxS,Perfluorohexanesulfonic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfhxs_mcl_2024,montague-pfas-2023-report
 montague-pfna-nd-2023,NJ1914002,PFNA,Perfluorononanoic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfna_mcl_2024,montague-pfas-2023-report
 montague-hfpoda-nd-2023,NJ1914002,HFPO-DA,HFPO-DA (GenX),statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_hfpoda_mcl_2024,montague-pfas-2023-report
+apple-canyon-pfoa-nd-2023,IL0855150,PFOA,Perfluorooctanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfoa_mcl_2024,apple-canyon-pfas-2023-report
+apple-canyon-pfos-nd-2023,IL0855150,PFOS,Perfluorooctane sulfonate,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfos_mcl_2024,apple-canyon-pfas-2023-report
+apple-canyon-pfhxs-nd-2023,IL0855150,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,apple-canyon-pfas-2023-report
+apple-canyon-pfna-nd-2023,IL0855150,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,apple-canyon-pfas-2023-report
+apple-canyon-hfpoda-nd-2023,IL0855150,HFPO-DA,HFPO-DA (GenX),separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_hfpoda_mcl_2024,apple-canyon-pfas-2023-report
+bermuda-water-pfoa-average-2023,AZ0408063,PFOA,Perfluorooctanoic acid,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0.3,ppt,reported,,us_pfoa_mcl_2024,bermuda-water-pfas-2023-report
+bermuda-water-pfos-average-2023,AZ0408063,PFOS,Perfluorooctane sulfonate,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0.23,ppt,reported,,us_pfos_mcl_2024,bermuda-water-pfas-2023-report
+bermuda-water-pfhxs-average-2023,AZ0408063,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0.31,ppt,reported,,us_pfhxs_mcl_2024,bermuda-water-pfas-2023-report
+bermuda-water-pfna-nd-2023,AZ0408063,PFNA,Perfluorononanoic acid,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,bermuda-water-pfas-2023-report
+calvada-meadows-pfoa-nd-2023,NV0000408,PFOA,Perfluorooctanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfoa_mcl_2024,calvada-meadows-pfas-2023-report
+calvada-meadows-pfos-nd-2023,NV0000408,PFOS,Perfluorooctane sulfonate,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfos_mcl_2024,calvada-meadows-pfas-2023-report
+calvada-meadows-pfhxs-nd-2023,NV0000408,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,calvada-meadows-pfas-2023-report
+calvada-meadows-pfna-nd-2023,NV0000408,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,calvada-meadows-pfas-2023-report
+calvada-meadows-hfpoda-nd-2023,NV0000408,HFPO-DA,HFPO-DA (GenX),separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_hfpoda_mcl_2024,calvada-meadows-pfas-2023-report
