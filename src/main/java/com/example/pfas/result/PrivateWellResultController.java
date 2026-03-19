@@ -28,11 +28,21 @@ public class PrivateWellResultController {
 		@PathVariable String stateCode,
 		@RequestParam(defaultValue = "UNKNOWN") ActionBenchmarkRelation benchmarkRelation,
 		@RequestParam(defaultValue = "NONE") ActionCurrentFilterStatus currentFilterStatus,
+		@RequestParam(required = false) String batchInput,
 		@RequestParam(required = false) String analyteCode,
 		@RequestParam(required = false) BigDecimal value,
 		@RequestParam(defaultValue = "ppt") String unit,
 		@RequestParam(defaultValue = "false") boolean wholeHouseConsidered
 	) {
+		if (batchInput != null && !batchInput.isBlank()) {
+			return privateWellResultService.getFromBatchMeasurement(
+				stateCode.toUpperCase(),
+				batchInput,
+				currentFilterStatus,
+				wholeHouseConsidered
+			).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		}
+
 		if (analyteCode != null && value != null) {
 			return privateWellResultService.getFromMeasurement(
 				stateCode.toUpperCase(),

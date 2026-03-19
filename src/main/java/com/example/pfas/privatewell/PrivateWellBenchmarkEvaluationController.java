@@ -30,4 +30,13 @@ public class PrivateWellBenchmarkEvaluationController {
 		return service.evaluate(stateCode, analyteCode, value, unit)
 			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
 	}
+
+	@GetMapping("/{stateCode}/batch")
+	public PrivateWellBenchmarkBatchEvaluation getBatch(
+		@PathVariable String stateCode,
+		@RequestParam String batchInput
+	) {
+		return service.evaluateBatch(stateCode, batchInput)
+			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+	}
 }

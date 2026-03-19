@@ -13,6 +13,7 @@ import com.example.pfas.checker.ActionBenchmarkRelation;
 import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.filter.FilterCatalogItem;
 import com.example.pfas.filter.FilterCatalogService;
+import com.example.pfas.privatewell.PrivateWellBenchmarkBatchEvaluation;
 import com.example.pfas.privatewell.PrivateWellBenchmarkEvaluation;
 import com.example.pfas.privatewell.PrivateWellBenchmarkEvaluatorService;
 import com.example.pfas.source.SourceDocument;
@@ -52,7 +53,7 @@ public class PrivateWellResultService {
 		boolean wholeHouseConsidered
 	) {
 		return stateGuidanceService.getByStateCode(stateCode)
-			.map(guidance -> toResult(guidance, benchmarkRelation, currentFilterStatus, wholeHouseConsidered, null));
+			.map(guidance -> toResult(guidance, benchmarkRelation, currentFilterStatus, wholeHouseConsidered, null, null));
 	}
 
 	public Optional<WaterDecisionResult> getFromMeasurement(
@@ -70,7 +71,26 @@ public class PrivateWellResultService {
 					evaluation.benchmarkRelation(),
 					currentFilterStatus,
 					wholeHouseConsidered,
-					evaluation
+					evaluation,
+					null
+				)));
+	}
+
+	public Optional<WaterDecisionResult> getFromBatchMeasurement(
+		String stateCode,
+		String batchInput,
+		ActionCurrentFilterStatus currentFilterStatus,
+		boolean wholeHouseConsidered
+	) {
+		return stateGuidanceService.getByStateCode(stateCode)
+			.flatMap(guidance -> privateWellBenchmarkEvaluatorService.evaluateBatch(guidance.stateCode(), batchInput)
+				.map(batchEvaluation -> toResult(
+					guidance,
+					batchEvaluation.aggregateRelation(),
+					currentFilterStatus,
+					wholeHouseConsidered,
+					null,
+					batchEvaluation
 				)));
 	}
 
@@ -79,7 +99,8 @@ public class PrivateWellResultService {
 		ActionBenchmarkRelation benchmarkRelation,
 		ActionCurrentFilterStatus currentFilterStatus,
 		boolean wholeHouseConsidered,
-		PrivateWellBenchmarkEvaluation evaluation
+		PrivateWellBenchmarkEvaluation evaluation,
+		PrivateWellBenchmarkBatchEvaluation batchEvaluation
 	) {
 		var profile = stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null);
 		var options = benchmarkRelation == ActionBenchmarkRelation.ABOVE_REFERENCE
@@ -102,6 +123,7 @@ public class PrivateWellResultService {
 			whenToEscalate(guidance, benchmarkRelation, wholeHouseConsidered),
 			buildReferenceContext(guidance, profile),
 			buildBenchmarkEvaluation(evaluation),
+			buildBenchmarkBatchEvaluation(batchEvaluation),
 			resolveSources(guidance, profile, options),
 			new ResultMeta(
 				"private_well",
@@ -355,6 +377,32 @@ public class PrivateWellResultService {
 			evaluation.comparisonMode(),
 			evaluation.benchmarkRelation().name().toLowerCase(),
 			evaluation.note()
+		);
+	}
+
+	private BenchmarkBatchEvaluation buildBenchmarkBatchEvaluation(PrivateWellBenchmarkBatchEvaluation batchEvaluation) {
+		if (batchEvaluation == null) {
+			return null;
+		}
+
+		return new BenchmarkBatchEvaluation(
+			batchEvaluation.aggregateRelation().name().toLowerCase(),
+			batchEvaluation.aggregateSummary(),
+			batchEvaluation.comparableLineCount(),
+			batchEvaluation.notComparableLineCount(),
+			batchEvaluation.lineEvaluations().stream()
+				.map(evaluation -> new BenchmarkEvaluation(
+					evaluation.analyteCode(),
+					evaluation.inputValue(),
+					evaluation.inputUnit(),
+					evaluation.normalizedValuePpt(),
+					evaluation.matchedReferenceLabel(),
+					evaluation.matchedReferenceDisplay(),
+					evaluation.comparisonMode(),
+					evaluation.benchmarkRelation().name().toLowerCase(),
+					evaluation.note()
+				))
+				.toList()
 		);
 	}
 

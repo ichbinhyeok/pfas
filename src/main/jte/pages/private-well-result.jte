@@ -10,6 +10,8 @@
 @param ActionBenchmarkRelation benchmarkRelation
 @param ActionCurrentFilterStatus currentFilterStatus
 @param boolean wholeHouseConsidered
+@param String batchInput
+@param String encodedBatchInput
 @param String analyteCode
 @param java.math.BigDecimal value
 @param String unit
@@ -33,10 +35,14 @@
             <div class="button-row">
                 <a class="button button--secondary" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
                 <a class="button button--secondary" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
-                @if (result.benchmarkEvaluation() != null)
-                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                @if (result.benchmarkBatchEvaluation() != null && encodedBatchInput != null)
+                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?batchInput=${encodedBatchInput}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
                 @else
-                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                    @if (result.benchmarkEvaluation() != null)
+                        <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                    @else
+                        <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                    @endif
                 @endif
             </div>
         </div>
@@ -141,6 +147,30 @@
                             <li>Matched line: ${result.benchmarkEvaluation().matchedReferenceLabel()} (${result.benchmarkEvaluation().matchedReferenceDisplay()})</li>
                             <li>Note: ${result.benchmarkEvaluation().note()}</li>
                         </ul>
+                    </section>
+                @endif
+
+                @if (result.benchmarkBatchEvaluation() != null)
+                    <section class="card">
+                        <p class="card__label">Batch benchmark check used for this route</p>
+                        <ul class="list">
+                            <li>Aggregate relation: ${result.benchmarkBatchEvaluation().aggregateRelation()}</li>
+                            <li>${result.benchmarkBatchEvaluation().aggregateSummary()}</li>
+                            <li>Comparable lines: ${result.benchmarkBatchEvaluation().comparableLineCount()}</li>
+                            <li>Not comparable lines: ${result.benchmarkBatchEvaluation().notComparableLineCount()}</li>
+                        </ul>
+                        <div class="assessment-grid">
+                            @for (var line : result.benchmarkBatchEvaluation().lineEvaluations())
+                                <article class="assessment">
+                                    <div class="assessment__top">
+                                        <div class="assessment__name">${line.analyteCode()}</div>
+                                        <span class="badge badge--info">${line.benchmarkRelation()}</span>
+                                    </div>
+                                    <div class="assessment__meta">${line.inputValue()} ${line.inputUnit()} vs ${line.matchedReferenceLabel()} (${line.matchedReferenceDisplay()})</div>
+                                    <div class="assessment__meta">${line.note()}</div>
+                                </article>
+                            @endfor
+                        </div>
                     </section>
                 @endif
 

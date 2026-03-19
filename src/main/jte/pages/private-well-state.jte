@@ -108,6 +108,28 @@
                         </div>
                     </form>
                 </section>
+
+                <section class="card">
+                    <p class="card__label">Batch benchmark check</p>
+                    <h2 class="section__title">Compare multiple PFAS lines at once</h2>
+                    <form class="stack" method="get" action="/private-well-result/${guidance.stateCode()}">
+                        <label class="select-field">
+                            <span class="select-field__label">Batch input</span>
+                            <textarea name="batchInput" rows="4">PFOA=12ppt;PFOS=3ppt</textarea>
+                        </label>
+                        <label class="select-field">
+                            <span class="select-field__label">Current filter</span>
+                            <select name="currentFilterStatus">
+                                <option value="NONE" selected="selected">No current filter</option>
+                                <option value="CERTIFIED_POU">Certified point-of-use</option>
+                                <option value="UNCERTIFIED">Uncertified or unclear</option>
+                            </select>
+                        </label>
+                        <div class="button-row">
+                            <button class="button button--secondary" type="submit">Run batch comparison</button>
+                        </div>
+                    </form>
+                </section>
             </div>
 
             <aside class="stack">

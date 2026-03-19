@@ -1,6 +1,8 @@
 package com.example.pfas.web;
 
 import java.math.BigDecimal;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 
@@ -165,6 +167,7 @@ public class PublicPagesController {
 		@PathVariable String stateCode,
 		@RequestParam(defaultValue = "UNKNOWN") ActionBenchmarkRelation benchmarkRelation,
 		@RequestParam(defaultValue = "NONE") ActionCurrentFilterStatus currentFilterStatus,
+		@RequestParam(required = false) String batchInput,
 		@RequestParam(required = false) String analyteCode,
 		@RequestParam(required = false) BigDecimal value,
 		@RequestParam(defaultValue = "ppt") String unit,
@@ -173,7 +176,10 @@ public class PublicPagesController {
 	) {
 		var guidance = stateGuidanceService.getByStateCode(stateCode.toUpperCase())
 			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown state_code: " + stateCode));
-		var result = analyteCode != null && value != null
+		var result = batchInput != null && !batchInput.isBlank()
+			? privateWellResultService.getFromBatchMeasurement(guidance.stateCode(), batchInput, currentFilterStatus, wholeHouseConsidered)
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode))
+			: analyteCode != null && value != null
 			? privateWellResultService.getFromMeasurement(guidance.stateCode(), analyteCode, value, unit, currentFilterStatus, wholeHouseConsidered)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode))
 			: privateWellResultService.get(guidance.stateCode(), benchmarkRelation, currentFilterStatus, wholeHouseConsidered)
@@ -181,11 +187,15 @@ public class PublicPagesController {
 
 		model.addAttribute("guidance", guidance);
 		model.addAttribute("result", result);
-		model.addAttribute("benchmarkRelation", result.benchmarkEvaluation() != null
-			? ActionBenchmarkRelation.valueOf(result.benchmarkEvaluation().benchmarkRelation().toUpperCase())
-			: benchmarkRelation);
+		model.addAttribute("benchmarkRelation", result.benchmarkBatchEvaluation() != null
+			? ActionBenchmarkRelation.valueOf(result.benchmarkBatchEvaluation().aggregateRelation().toUpperCase())
+			: result.benchmarkEvaluation() != null
+				? ActionBenchmarkRelation.valueOf(result.benchmarkEvaluation().benchmarkRelation().toUpperCase())
+				: benchmarkRelation);
 		model.addAttribute("currentFilterStatus", currentFilterStatus);
 		model.addAttribute("wholeHouseConsidered", wholeHouseConsidered);
+		model.addAttribute("batchInput", batchInput);
+		model.addAttribute("encodedBatchInput", batchInput == null ? null : URLEncoder.encode(batchInput, StandardCharsets.UTF_8));
 		model.addAttribute("analyteCode", analyteCode);
 		model.addAttribute("value", value);
 		model.addAttribute("unit", unit);

@@ -321,6 +321,17 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void evaluatesPrivateWellBatchAgainstStateProfile() {
+		var batch = privateWellBenchmarkEvaluatorService.evaluateBatch("MI", "PFOA=12ppt;PFOS=3ppt").orElseThrow();
+		var maBatch = privateWellBenchmarkEvaluatorService.evaluateBatch("MA", "PFAS6=18ppt").orElseThrow();
+
+		assertThat(batch.aggregateRelation()).isEqualTo(ActionBenchmarkRelation.MIXED);
+		assertThat(batch.lineEvaluations()).hasSize(2);
+		assertThat(maBatch.aggregateRelation()).isEqualTo(ActionBenchmarkRelation.BELOW_REFERENCE);
+		assertThat(maBatch.lineEvaluations().get(0).matchedReferenceLabel()).isEqualTo("PFAS6 maximum contaminant level");
+	}
+
+	@Test
 	void buildsExpansionReadinessReport() {
 		var report = expansionReadinessService.getReport();
 
@@ -482,6 +493,19 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsInternalPrivateWellResultFromBatchMeasurement() throws Exception {
+		mockMvc.perform(
+			get("/internal/results/private-well/MI")
+				.param("batchInput", "PFOA=12ppt;PFOS=3ppt")
+				.param("currentFilterStatus", "NONE")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"benchmark_batch_evaluation\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"aggregate_relation\":\"mixed\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"line_evaluations\"")));
+	}
+
+	@Test
 	void rendersPrivateWellResultPage() throws Exception {
 		mockMvc.perform(
 			get("/private-well-result/MI")
@@ -506,6 +530,19 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Benchmark check used for this route")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Normalized value: 12")));
+	}
+
+	@Test
+	void rendersPrivateWellResultPageFromBatchMeasurement() throws Exception {
+		mockMvc.perform(
+			get("/private-well-result/MI")
+				.param("batchInput", "PFOA=12ppt;PFOS=3ppt")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Batch benchmark check used for this route")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Aggregate relation: mixed")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFOA")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFOS")));
 	}
 
 	@Test
@@ -535,6 +572,17 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"matched_reference_label\":\"Washington SAL for PFOA\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"benchmark_relation\":\"ABOVE_REFERENCE\"")));
+	}
+
+	@Test
+	void returnsPrivateWellBatchBenchmarkEvaluation() throws Exception {
+		mockMvc.perform(
+			get("/internal/private-well-benchmark-evaluation/MA/batch")
+				.param("batchInput", "PFAS6=18ppt")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"aggregate_relation\":\"BELOW_REFERENCE\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"matched_reference_label\":\"PFAS6 maximum contaminant level\"")));
 	}
 
 	@Test
