@@ -23,10 +23,13 @@ import com.example.pfas.decision.PublicWaterDecisionStatus;
 import com.example.pfas.decision.PublicWaterNextActionCode;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.observation.UtilityObservationService;
+import com.example.pfas.readiness.ExpansionReadinessService;
+import com.example.pfas.readiness.ExpansionReadinessStatus;
 import com.example.pfas.result.PrivateWellResultService;
 import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
+import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @SpringBootTest(properties = "pfas.data.root=./data")
@@ -55,6 +58,12 @@ class PfasApplicationTests {
 	private FilterCatalogService filterCatalogService;
 
 	@Autowired
+	private StateBenchmarkProfileService stateBenchmarkProfileService;
+
+	@Autowired
+	private ExpansionReadinessService expansionReadinessService;
+
+	@Autowired
 	private PublicWaterDecisionService publicWaterDecisionService;
 
 	@Autowired
@@ -77,7 +86,7 @@ class PfasApplicationTests {
 	void loadsSeededSourceRegistry() {
 		var documents = sourceRegistryService.getAllDocuments();
 
-		assertThat(documents).hasSizeGreaterThanOrEqualTo(20);
+		assertThat(documents).hasSizeGreaterThanOrEqualTo(25);
 		assertThat(documents)
 			.extracting(document -> document.sourceId())
 			.contains(
@@ -88,7 +97,12 @@ class PfasApplicationTests {
 				"lancaster-pfoa-notice-2025",
 				"ma-private-wells",
 				"wa-pfas-drinking-water",
-				"ca-pfas-waterboards"
+				"ca-pfas-waterboards",
+				"mi-pfas-mcls",
+				"mn-pfas-values",
+				"ny-water-supplier-factsheet-mcls",
+				"wa-pfas-group-a-support",
+				"ca-pfas-timeline"
 			);
 	}
 
@@ -100,6 +114,21 @@ class PfasApplicationTests {
 		assertThat(states)
 			.extracting(state -> state.stateCode())
 			.containsExactly("CA", "MA", "MI", "MN", "NY", "WA");
+	}
+
+	@Test
+	void loadsSeededStateBenchmarkProfiles() {
+		var profiles = stateBenchmarkProfileService.getAll();
+		var washington = stateBenchmarkProfileService.getByStateCode("WA").orElseThrow();
+
+		assertThat(profiles).hasSize(6);
+		assertThat(profiles)
+			.extracting(profile -> profile.stateCode())
+			.containsExactly("CA", "MA", "MI", "MN", "NY", "WA");
+		assertThat(washington.primaryReferenceLabel()).contains("Washington");
+		assertThat(washington.benchmarks())
+			.extracting(line -> line.benchmarkDisplay())
+			.contains("4 ppt", "10 ppt");
 	}
 
 	@Test
@@ -268,8 +297,26 @@ class PfasApplicationTests {
 		assertThat(result.resultId()).startsWith("private-well:MI");
 		assertThat(result.nextAction().code()).isEqualTo("EVALUATE_CERTIFIED_POU_FILTER_AND_STATE_NEXT_STEPS");
 		assertThat(result.bestFitOptions()).isNotEmpty();
+		assertThat(result.referenceContext()).isNotNull();
+		assertThat(result.referenceContext().primaryReferenceLabel()).contains("Michigan");
+		assertThat(result.referenceContext().benchmarkLines())
+			.extracting(line -> line.benchmarkDisplay())
+			.contains("8 ppt", "16 ppt");
 		assertThat(result.meta().waterSourceType()).isEqualTo("private_well");
 		assertThat(result.meta().benchmarkRelation()).isEqualTo("above_reference");
+	}
+
+	@Test
+	void buildsExpansionReadinessReport() {
+		var report = expansionReadinessService.getReport();
+
+		assertThat(report.readyStateRoutes()).isEqualTo(6);
+		assertThat(report.blockedStateRoutes()).isZero();
+		assertThat(report.readyPublicWaterRoutes()).isEqualTo(2);
+		assertThat(report.blockedPublicWaterRoutes()).isZero();
+		assertThat(report.items())
+			.filteredOn(item -> item.routeType().equals("state_guidance"))
+			.allSatisfy(item -> assertThat(item.status()).isEqualTo(ExpansionReadinessStatus.READY));
 	}
 
 	@Test
@@ -332,6 +379,8 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan Department of Environment, Great Lakes, and Energy")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Test first, then interpret against state guidance.")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("State reference context")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well state guide")));
 	}
 
@@ -399,6 +448,7 @@ class PfasApplicationTests {
 		)
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("EVALUATE_CERTIFIED_POU_FILTER_AND_STATE_NEXT_STEPS")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"reference_context\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"water_source_type\":\"private_well\"")));
 	}
 
@@ -411,7 +461,24 @@ class PfasApplicationTests {
 		)
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open state next steps and evaluate certified point-of-use")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan PFAS drinking-water MCLs used with other private-well factors")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well interpretation")));
+	}
+
+	@Test
+	void returnsStateBenchmarkProfiles() throws Exception {
+		mockMvc.perform(get("/internal/state-benchmark-profiles/NY"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("New York PFOA and PFOS MCLs")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("10 ppt")));
+	}
+
+	@Test
+	void returnsReadinessReport() throws Exception {
+		mockMvc.perform(get("/internal/readiness/report"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":6")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":2")));
 	}
 
 	@Test

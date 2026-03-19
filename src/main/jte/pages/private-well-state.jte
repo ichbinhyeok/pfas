@@ -1,7 +1,9 @@
 @import java.util.List
 @import com.example.pfas.state.StateGuidance
+@import com.example.pfas.stateprofile.StateBenchmarkProfile
 @import com.example.pfas.source.SourceDocument
 @param StateGuidance guidance
+@param StateBenchmarkProfile profile
 @param List<SourceDocument> sources
 
 @template.layout.base(
@@ -58,6 +60,19 @@
                         <li>${guidance.benchmarkNotes()}</li>
                     </ul>
                 </section>
+
+                @if (profile != null)
+                    <section class="card">
+                        <p class="card__label">State reference context</p>
+                        <h2 class="section__title">${profile.primaryReferenceLabel()}</h2>
+                        <p class="checker-block__hint">${profile.summary()}</p>
+                        <ul class="list">
+                            @for (var line : profile.benchmarks())
+                                <li>${line.label()}: ${line.benchmarkDisplay()} (${line.note()})</li>
+                            @endfor
+                        </ul>
+                    </section>
+                @endif
             </div>
 
             <aside class="stack">

@@ -1,0 +1,244 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-19T23:55:00+09:00",
+  "profiles": [
+    {
+      "state_code": "CA",
+      "profile_kind": "notification_response_levels",
+      "primary_reference_label": "California notification and response levels",
+      "comparability_mode": "advisory_not_mcl",
+      "summary": "California currently uses notification and response levels for several PFAS as health-based decision context. They are useful for private-well interpretation but are not enforceable private-well compliance standards.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "PFOA notification level",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "notification_level",
+          "applicability": "state_advisory",
+          "note": "Current response level is 10 ppt."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "PFOS notification level",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "notification_level",
+          "applicability": "state_advisory",
+          "note": "Current response level is 40 ppt."
+        },
+        {
+          "contaminant_code": "PFHxS",
+          "label": "PFHxS notification level",
+          "benchmark_display": "3 ppt",
+          "unit": "ppt",
+          "benchmark_type": "notification_level",
+          "applicability": "state_advisory",
+          "note": "Current response level is 10 ppt."
+        },
+        {
+          "contaminant_code": "PFHxA",
+          "label": "PFHxA notification level",
+          "benchmark_display": "1 ppb",
+          "unit": "ppb",
+          "benchmark_type": "notification_level",
+          "applicability": "state_advisory",
+          "note": "Current response level is 10 ppb."
+        }
+      ],
+      "private_well_use_note": "Use California notification and response levels as advisory decision context. Do not present them as private-well compliance findings or as a substitute for California lab and follow-up guidance.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "ca-pfas-timeline",
+        "ca-pfas-waterboards",
+        "ca-pfas-order-faqs"
+      ]
+    },
+    {
+      "state_code": "MA",
+      "profile_kind": "pfas6_mmcl",
+      "primary_reference_label": "Massachusetts PFAS6 MMCL",
+      "comparability_mode": "sum_of_six_not_direct_single_analyte_equivalence",
+      "summary": "Massachusetts uses a PFAS6 framework for public-water standards. For private wells, that makes the state route useful, but single-analyte well results should not be casually translated into a PFAS6 determination without the full analyte set.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFAS6",
+          "label": "PFAS6 maximum contaminant level",
+          "benchmark_display": "20 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mmcl",
+          "applicability": "sum_of_pfas",
+          "note": "PFAS6 refers to six PFAS combined in Massachusetts drinking-water regulation."
+        }
+      ],
+      "private_well_use_note": "Use Massachusetts PFAS6 language carefully. It is helpful for state context, but private-well interpretation still needs the full analyte picture and state lab guidance.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "ma-private-wells",
+        "ma-pfas-public-drinking-water-factsheet"
+      ]
+    },
+    {
+      "state_code": "MI",
+      "profile_kind": "state_mcls_used_for_private_well_context",
+      "primary_reference_label": "Michigan PFAS drinking-water MCLs used with other private-well factors",
+      "comparability_mode": "state_context_numeric_partial",
+      "summary": "Michigan states that private residential wells are not regulated under the Safe Drinking Water Act, but Michigan uses its PFAS MCLs along with other factors when evaluating private residential well results.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "Michigan MCL for PFOA",
+          "benchmark_display": "8 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "public_water_standard_used_as_private_well_context",
+          "note": "Useful reference context for private-well interpretation in Michigan."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "Michigan MCL for PFOS",
+          "benchmark_display": "16 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "public_water_standard_used_as_private_well_context",
+          "note": "Useful reference context for private-well interpretation in Michigan."
+        },
+        {
+          "contaminant_code": "PFNA",
+          "label": "Michigan MCL for PFNA",
+          "benchmark_display": "6 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "public_water_standard_used_as_private_well_context",
+          "note": "Michigan publishes seven PFAS MCLs."
+        }
+      ],
+      "private_well_use_note": "Michigan lets its public-water MCLs inform private-well evaluation, but private wells are still not regulated public-water systems. Keep the output reference-based.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "mi-pfas-mcls",
+        "mi-pfas-residential-well-faq"
+      ]
+    },
+    {
+      "state_code": "MN",
+      "profile_kind": "state_guidance_transition_with_federal_context",
+      "primary_reference_label": "Minnesota health-based guidance and federal PFAS context",
+      "comparability_mode": "state_guidance_transition",
+      "summary": "Minnesota has been revising PFAS health-based guidance and explicitly points to both state risk-assessment work and current federal PFAS drinking-water standards. For Sharp v1, Minnesota should be treated as a state-guidance-first route rather than a simple single-number benchmark state.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA_PFOS",
+          "label": "Federal context currently referenced by Minnesota",
+          "benchmark_display": "4 ppt / 4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "federal_context",
+          "applicability": "state_guidance_transition",
+          "note": "Use as context only; Minnesota guidance should still be read directly before acting."
+        }
+      ],
+      "private_well_use_note": "Minnesota results should be anchored in current MDH guidance and lab context before a household treats a single benchmark line as definitive.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "mn-pfas-private-wells",
+        "mn-pfas-values",
+        "epa-pfas-npdwr-implementation"
+      ]
+    },
+    {
+      "state_code": "NY",
+      "profile_kind": "state_mcls",
+      "primary_reference_label": "New York PFOA and PFOS MCLs",
+      "comparability_mode": "state_mcl_numeric_direct_for_covered_analytes",
+      "summary": "New York still requires water systems to meet its state MCLs for PFOA and PFOS until 2029 even after EPA's newer federal PFAS rule. That makes New York a comparatively clear state for PFOA and PFOS private-well context.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "New York MCL for PFOA",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfoa",
+          "note": "New York water systems remain on the 10 ppt state MCL until 2029."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "New York MCL for PFOS",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfos",
+          "note": "New York water systems remain on the 10 ppt state MCL until 2029."
+        }
+      ],
+      "private_well_use_note": "New York gives a fairly direct PFOA/PFOS reference context, but private wells are still owner-managed and should route through state lab and follow-up guidance.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "ny-water-supplier-factsheet-mcls",
+        "ny-pfas-private-wells-pdf",
+        "ny-elap"
+      ]
+    },
+    {
+      "state_code": "WA",
+      "profile_kind": "state_action_levels_aligned_to_federal_mcls",
+      "primary_reference_label": "Washington PFAS state action levels aligned to federal MCLs",
+      "comparability_mode": "state_action_level_numeric_with_transition_notes",
+      "summary": "Washington historically used PFAS state action levels and, effective January 15, 2026, aligned those SAL values with the federal PFAS MCL values while maintaining state monitoring and trigger logic.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "Washington SAL for PFOA",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_action_level",
+          "applicability": "direct_for_pfoa",
+          "note": "Aligned to federal MCL effective 2026-01-15."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "Washington SAL for PFOS",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_action_level",
+          "applicability": "direct_for_pfos",
+          "note": "Aligned to federal MCL effective 2026-01-15."
+        },
+        {
+          "contaminant_code": "PFHxS",
+          "label": "Washington SAL for PFHxS",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_action_level",
+          "applicability": "state_transition_context",
+          "note": "Federal MCL is scheduled at 4 ppt in 2029, but current state SAL is 10 ppt."
+        },
+        {
+          "contaminant_code": "PFNA",
+          "label": "Washington SAL for PFNA",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_action_level",
+          "applicability": "direct_for_pfna",
+          "note": "Aligned state action level remains 10 ppt."
+        },
+        {
+          "contaminant_code": "HFPO-DA",
+          "label": "Washington SAL for HFPO-DA",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_action_level",
+          "applicability": "direct_for_hfpo_da",
+          "note": "Added as part of Washington's PFAS transition to the federal structure."
+        }
+      ],
+      "private_well_use_note": "Washington private-well interpretation can borrow the current SAL context, but the output should still emphasize state guidance and accredited-lab follow-up rather than imply a public-water compliance result.",
+      "last_verified_date": "2026-03-19",
+      "source_ids": [
+        "wa-pfas-group-a-support",
+        "wa-pfas-drinking-water",
+        "wa-pfas-state-action-levels"
+      ]
+    }
+  ]
+}

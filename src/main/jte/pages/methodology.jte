@@ -3,6 +3,10 @@
 @param int publicWaterCount
 @param int filterCount
 @param int guideCount
+@param int readyStateCount
+@param int blockedStateCount
+@param int readyPublicWaterCount
+@param int blockedPublicWaterCount
 
 @template.layout.base(
     pageTitle = "PFAS methodology",
@@ -42,6 +46,11 @@
                 <span class="meta-tile__label">Public-water dossiers</span>
                 <span class="meta-tile__value">${publicWaterCount}</span>
                 <span class="meta-tile__copy">Seeded public-water systems with direct context.</span>
+            </article>
+            <article class="meta-tile">
+                <span class="meta-tile__label">Readiness</span>
+                <span class="meta-tile__value">${readyStateCount + readyPublicWaterCount}</span>
+                <span class="meta-tile__copy">Routes currently marked ready for controlled expansion.</span>
             </article>
         </div>
 
@@ -87,6 +96,7 @@
                         <li>Routes public water and private well households differently.</li>
                         <li>Prefers direct official evidence over indirect hints.</li>
                         <li>Keeps certification, cost, and maintenance visible before a product feels like a fit.</li>
+                        <li>Uses programmatic readiness checks before state or utility coverage is treated as expansion-ready.</li>
                     </ul>
                 </section>
 
@@ -108,6 +118,15 @@
                         <li>${publicWaterCount} public-water dossiers</li>
                         <li>${filterCount} filter models in the catalog</li>
                         <li>${guideCount} high-intent entry guides</li>
+                    </ul>
+                </section>
+
+                <section class="rail-card">
+                    <h2 class="rail-card__title">Readiness ledger</h2>
+                    <ul class="list">
+                        <li>${readyStateCount} state routes ready / ${blockedStateCount} state routes still blocked</li>
+                        <li>${readyPublicWaterCount} public-water routes ready / ${blockedPublicWaterCount} public-water routes still blocked</li>
+                        <li>Readiness requires source resolution, verification dates, and the correct state or utility evidence layer.</li>
                     </ul>
                 </section>
             </aside>

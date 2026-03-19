@@ -20,6 +20,7 @@ import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
+import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @Controller
@@ -33,6 +34,7 @@ public class PublicPagesController {
 	private final SourceRegistryService sourceRegistryService;
 	private final ActionCheckerService actionCheckerService;
 	private final GuidePageService guidePageService;
+	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 
 	public PublicPagesController(
 		PublicWaterSystemService publicWaterSystemService,
@@ -42,7 +44,8 @@ public class PublicPagesController {
 		PrivateWellResultService privateWellResultService,
 		SourceRegistryService sourceRegistryService,
 		ActionCheckerService actionCheckerService,
-		GuidePageService guidePageService
+		GuidePageService guidePageService,
+		StateBenchmarkProfileService stateBenchmarkProfileService
 	) {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.stateGuidanceService = stateGuidanceService;
@@ -52,6 +55,7 @@ public class PublicPagesController {
 		this.sourceRegistryService = sourceRegistryService;
 		this.actionCheckerService = actionCheckerService;
 		this.guidePageService = guidePageService;
+		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 	}
 
 	@GetMapping("/")
@@ -150,6 +154,7 @@ public class PublicPagesController {
 			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown state_code: " + stateCode));
 
 		model.addAttribute("guidance", guidance);
+		model.addAttribute("profile", stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null));
 		model.addAttribute("sources", resolveSources(guidance.sourceIds()));
 		return "pages/private-well-state";
 	}

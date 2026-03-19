@@ -2,8 +2,10 @@ package com.example.pfas.result;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public record WaterDecisionResult(
 	@JsonProperty("result_id") String resultId,
 	@JsonProperty("schema_version") String schemaVersion,
@@ -16,6 +18,7 @@ public record WaterDecisionResult(
 	@JsonProperty("certification_checklist") List<CertificationChecklistItem> certificationChecklist,
 	@JsonProperty("best_fit_options") List<BestFitOption> bestFitOptions,
 	@JsonProperty("when_to_escalate") List<String> whenToEscalate,
+	@JsonProperty("reference_context") ReferenceContext referenceContext,
 	@JsonProperty("sources") List<ResultSource> sources,
 	@JsonProperty("meta") ResultMeta meta
 ) {

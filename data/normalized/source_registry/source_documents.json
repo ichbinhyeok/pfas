@@ -471,6 +471,27 @@
       "notes": "Includes official Michigan FAQ on how private well users can test for PFAS."
     },
     {
+      "source_id": "mi-pfas-mcls",
+      "organization": "Michigan PFAS Action Response Team",
+      "title": "Maximum Contaminant Levels (MCLs)",
+      "url": "https://www.michigan.gov/pfasresponse/drinking-water/mcl",
+      "source_kind": "state_benchmark_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state benchmark context",
+        "private well interpretation note"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "Michigan states that private residential wells are not regulated but that Michigan uses the MCLs along with other factors when evaluating private residential well results."
+    },
+    {
       "source_id": "mn-pfas-private-wells",
       "organization": "Minnesota Department of Health",
       "title": "Per- and Polyfluoroalkyl Substances (PFAS) and Private Wells",
@@ -536,6 +557,27 @@
       "notes": "Includes Minnesota contacts for PFAS private well testing and filtration inquiries."
     },
     {
+      "source_id": "mn-pfas-values",
+      "organization": "Minnesota Department of Health",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS) Values",
+      "url": "https://www.health.state.mn.us/communities/environment/water/pfasvalues.html",
+      "source_kind": "state_benchmark_page",
+      "trust_tier": 2,
+      "jurisdiction": "MN",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state guidance transition context",
+        "health-based value context"
+      ],
+      "disallowed_uses": [
+        "single-line private well compliance determination"
+      ],
+      "notes": "Minnesota PFAS values page reflects ongoing state health-based guidance work and should be used with direct MDH private-well guidance."
+    },
+    {
       "source_id": "ny-dec-pfas",
       "organization": "New York State Department of Environmental Conservation",
       "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
@@ -579,6 +621,27 @@
         "legal compliance determination"
       ],
       "notes": "Search-visible NY DOH PDF states public water standards are used as guidelines to recommend actions for private wells."
+    },
+    {
+      "source_id": "ny-water-supplier-factsheet-mcls",
+      "organization": "New York State Department of Health",
+      "title": "Water Supplier Fact Sheet on New PFAS MCLs",
+      "url": "https://www.health.ny.gov/environmental/water/drinking/docs/water_supplier_fact_sheet_new_mcls.pdf",
+      "source_kind": "state_benchmark_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NY",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state benchmark context",
+        "federal-vs-state timing notes"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "New York states that systems must still meet the state 10 ppt MCLs for PFOA and PFOS until 2029."
     },
     {
       "source_id": "ny-elap",
@@ -907,6 +970,27 @@
       "notes": "Washington PFAS action-level document used as state benchmark context only."
     },
     {
+      "source_id": "wa-pfas-group-a-support",
+      "organization": "Washington State Department of Health",
+      "title": "PFAS in Drinking Water—Group A Public Water System Information and Support",
+      "url": "https://doh.wa.gov/community-and-environment/drinking-water/contaminants/pfas-drinking-water",
+      "source_kind": "state_benchmark_page",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "effective_date": "2026-01-15",
+      "allowed_uses": [
+        "current state PFAS rule context",
+        "state action level transition notes"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "Washington states that SAL values were aligned to the federal MCL values effective January 15, 2026 while keeping state monitoring and trigger logic in place."
+    },
+    {
       "source_id": "ca-pfas-waterboards",
       "organization": "California State Water Resources Control Board",
       "title": "PFAS",
@@ -968,6 +1052,27 @@
         "private well legal compliance determination"
       ],
       "notes": "California PFAS FAQ PDF used as a sampling and response context note."
+    },
+    {
+      "source_id": "ca-pfas-timeline",
+      "organization": "California State Water Resources Control Board",
+      "title": "CA PFAS Timeline",
+      "url": "https://www.waterboards.ca.gov/pfas/ca_pfas_timeline.html",
+      "source_kind": "state_benchmark_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": "2026-01-29",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "effective_date": "2025-10-29",
+      "allowed_uses": [
+        "current California PFAS benchmark context",
+        "notification and response level extraction"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "California timeline page lists current notification and response levels issued on 2025-10-29."
     },
     {
       "source_id": "lancaster-water-home",

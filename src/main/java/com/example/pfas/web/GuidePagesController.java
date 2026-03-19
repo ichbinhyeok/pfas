@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.pfas.filter.FilterCatalogService;
+import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
@@ -23,19 +24,22 @@ public class GuidePagesController {
 	private final StateGuidanceService stateGuidanceService;
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final FilterCatalogService filterCatalogService;
+	private final ExpansionReadinessService expansionReadinessService;
 
 	public GuidePagesController(
 		GuidePageService guidePageService,
 		SourceRegistryService sourceRegistryService,
 		StateGuidanceService stateGuidanceService,
 		PublicWaterSystemService publicWaterSystemService,
-		FilterCatalogService filterCatalogService
+		FilterCatalogService filterCatalogService,
+		ExpansionReadinessService expansionReadinessService
 	) {
 		this.guidePageService = guidePageService;
 		this.sourceRegistryService = sourceRegistryService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.filterCatalogService = filterCatalogService;
+		this.expansionReadinessService = expansionReadinessService;
 	}
 
 	@GetMapping("/guides/{slug}")
@@ -66,11 +70,16 @@ public class GuidePagesController {
 	}
 
 	private void addCounts(Model model) {
+		var readiness = expansionReadinessService.getReport();
 		model.addAttribute("sourceCount", sourceRegistryService.getAllDocuments().size());
 		model.addAttribute("stateCount", stateGuidanceService.getAll().size());
 		model.addAttribute("publicWaterCount", publicWaterSystemService.getAll().size());
 		model.addAttribute("filterCount", filterCatalogService.getAll().size());
 		model.addAttribute("guideCount", guidePageService.getAll().size());
+		model.addAttribute("readyStateCount", readiness.readyStateRoutes());
+		model.addAttribute("blockedStateCount", readiness.blockedStateRoutes());
+		model.addAttribute("readyPublicWaterCount", readiness.readyPublicWaterRoutes());
+		model.addAttribute("blockedPublicWaterCount", readiness.blockedPublicWaterRoutes());
 	}
 
 	private List<SourceDocument> filterByTier(List<SourceDocument> documents, int trustTier) {

@@ -17,20 +17,25 @@ import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidance;
 import com.example.pfas.state.StateGuidanceService;
+import com.example.pfas.stateprofile.StateBenchmarkProfile;
+import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 
 @Service
 public class PrivateWellResultService {
 
 	private final StateGuidanceService stateGuidanceService;
+	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final FilterCatalogService filterCatalogService;
 	private final SourceRegistryService sourceRegistryService;
 
 	public PrivateWellResultService(
 		StateGuidanceService stateGuidanceService,
+		StateBenchmarkProfileService stateBenchmarkProfileService,
 		FilterCatalogService filterCatalogService,
 		SourceRegistryService sourceRegistryService
 	) {
 		this.stateGuidanceService = stateGuidanceService;
+		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.filterCatalogService = filterCatalogService;
 		this.sourceRegistryService = sourceRegistryService;
 	}
@@ -51,6 +56,7 @@ public class PrivateWellResultService {
 		ActionCurrentFilterStatus currentFilterStatus,
 		boolean wholeHouseConsidered
 	) {
+		var profile = stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null);
 		var options = benchmarkRelation == ActionBenchmarkRelation.ABOVE_REFERENCE
 			|| benchmarkRelation == ActionBenchmarkRelation.MIXED
 			|| currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED
@@ -61,15 +67,16 @@ public class PrivateWellResultService {
 			"private-well:" + guidance.stateCode() + ":" + benchmarkRelation.name(),
 			"v1",
 			OffsetDateTime.now().toString(),
-			nextAction(guidance, benchmarkRelation, currentFilterStatus),
-			whyThis(guidance, benchmarkRelation, currentFilterStatus),
-			whatThisDoesNotTellYou(guidance),
+			nextAction(guidance, profile, benchmarkRelation, currentFilterStatus),
+			whyThis(guidance, profile, benchmarkRelation, currentFilterStatus),
+			whatThisDoesNotTellYou(guidance, profile),
 			buildInitialCost(options),
 			buildAnnualCost(options),
 			certificationChecklist(),
 			bestFitOptions(options),
 			whenToEscalate(guidance, benchmarkRelation, wholeHouseConsidered),
-			resolveSources(guidance, options),
+			buildReferenceContext(guidance, profile),
+			resolveSources(guidance, profile, options),
 			new ResultMeta(
 				"private_well",
 				benchmarkRelation.name().toLowerCase(),
@@ -81,14 +88,16 @@ public class PrivateWellResultService {
 
 	private NextAction nextAction(
 		StateGuidance guidance,
+		StateBenchmarkProfile profile,
 		ActionBenchmarkRelation benchmarkRelation,
 		ActionCurrentFilterStatus currentFilterStatus
 	) {
+		var primaryReferenceLabel = profile != null ? profile.primaryReferenceLabel() : guidance.stateCode() + " state guidance";
 		if (currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED) {
 			return new NextAction(
 				"VERIFY_OR_REPLACE_WITH_CERTIFIED_OPTION",
 				"Verify or replace the current filter with a certified point-of-use option",
-				"The current household filter is not confirmed as certified for PFAS reduction, so certification and replacement cadence should be checked before relying on it.",
+				"The current household filter is not confirmed as certified for PFAS reduction, so certification and replacement cadence should be checked before relying on it against " + primaryReferenceLabel + ".",
 				"medium",
 				"Private-well interpretation stays reference-based and state-guided."
 			);
@@ -98,7 +107,7 @@ public class PrivateWellResultService {
 			case ABOVE_REFERENCE, MIXED -> new NextAction(
 				"EVALUATE_CERTIFIED_POU_FILTER_AND_STATE_NEXT_STEPS",
 				"Open state next steps and evaluate certified point-of-use",
-				"The result is above the selected reference, so the next step is state-guided interpretation plus a certified ingestion-focused treatment option rather than a generic shopping flow.",
+				"The result is above the selected reference context, so the next step is state-guided interpretation plus a certified ingestion-focused treatment option rather than a generic shopping flow.",
 				"high",
 				"Private-well above-reference results are action signals, not legal compliance findings."
 			);
@@ -121,24 +130,40 @@ public class PrivateWellResultService {
 
 	private List<String> whyThis(
 		StateGuidance guidance,
+		StateBenchmarkProfile profile,
 		ActionBenchmarkRelation benchmarkRelation,
 		ActionCurrentFilterStatus currentFilterStatus
 	) {
 		var filterLine = currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED
 			? "The current filter status is uncertified, so certification verification becomes a first-order action."
 			: "Any treatment path should stay certification-first and state-guided.";
+		var referenceLine = profile == null
+			? "State-specific benchmark context is still limited, so the route leans on direct agency guidance before any benchmark claim."
+			: profile.primaryReferenceLabel() + " is the current " + guidance.stateCode() + " reference layer for this route.";
+		var comparabilityLine = profile == null
+			? "Benchmark relation is currently " + benchmarkRelation.name().toLowerCase().replace('_', ' ') + "."
+			: "Benchmark relation is currently "
+				+ benchmarkRelation.name().toLowerCase().replace('_', ' ')
+				+ " under a "
+				+ profile.comparabilityMode().replace('_', ' ')
+				+ " comparison mode.";
 
 		return List.of(
 			"Private well results are interpreted against " + guidance.stateCode() + " state guidance, not as public-water compliance findings.",
-			"Benchmark relation is currently " + benchmarkRelation.name().toLowerCase().replace('_', ' ') + ".",
+			referenceLine,
+			comparabilityLine,
 			filterLine
 		);
 	}
 
-	private List<String> whatThisDoesNotTellYou(StateGuidance guidance) {
+	private List<String> whatThisDoesNotTellYou(StateGuidance guidance, StateBenchmarkProfile profile) {
+		var profileLimit = profile == null
+			? "It does not establish a state benchmark profile where the current evidence layer is still sparse."
+			: "It does not turn " + profile.primaryReferenceLabel() + " into a direct legal compliance label for a private well.";
 		return List.of(
 			"This is not a legal compliance determination for a private well.",
 			"It does not replace state lab guidance, local health input, or sample-method review.",
+			profileLimit,
 			"It does not prove a health outcome or define a universal retesting cadence beyond current " + guidance.stateCode() + " guidance."
 		);
 	}
@@ -262,8 +287,38 @@ public class PrivateWellResultService {
 		);
 	}
 
-	private List<ResultSource> resolveSources(StateGuidance guidance, List<FilterCatalogItem> options) {
+	private ReferenceContext buildReferenceContext(StateGuidance guidance, StateBenchmarkProfile profile) {
+		if (profile == null) {
+			return null;
+		}
+
+		return new ReferenceContext(
+			guidance.stateCode(),
+			profile.profileKind(),
+			profile.primaryReferenceLabel(),
+			profile.comparabilityMode(),
+			profile.summary(),
+			profile.privateWellUseNote(),
+			profile.benchmarks().stream()
+				.map(line -> new ReferenceBenchmarkLine(
+					line.contaminantCode(),
+					line.label(),
+					line.benchmarkDisplay(),
+					line.unit(),
+					line.benchmarkType(),
+					line.applicability(),
+					line.note()
+				))
+				.toList(),
+			profile.lastVerifiedDate()
+		);
+	}
+
+	private List<ResultSource> resolveSources(StateGuidance guidance, StateBenchmarkProfile profile, List<FilterCatalogItem> options) {
 		var sourceIds = new LinkedHashSet<String>(guidance.sourceIds());
+		if (profile != null) {
+			sourceIds.addAll(profile.sourceIds());
+		}
 		sourceIds.add("epa-pfas-private-wells");
 		sourceIds.add("epa-certified-pfas-filter-guidance");
 		options.forEach(option -> sourceIds.addAll(option.sourceIds()));

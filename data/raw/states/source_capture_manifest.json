@@ -42,6 +42,19 @@
       "notes": "Michigan FAQ includes official instructions for owners who want to test their own wells."
     },
     {
+      "raw_source_id": "raw-mi-pfas-mcls-20260319",
+      "source_id": "mi-pfas-mcls",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "url": "https://www.michigan.gov/pfasresponse/drinking-water/mcl",
+      "organization": "Michigan PFAS Action Response Team",
+      "title": "Maximum Contaminant Levels (MCLs)",
+      "content_type": "text/html",
+      "jurisdiction": "MI",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Current Michigan PFAS drinking-water MCL page with explicit private-residential-well interpretation note."
+    },
+    {
       "raw_source_id": "raw-mn-pfas-private-wells-20260319",
       "source_id": "mn-pfas-private-wells",
       "retrieved_at": "2026-03-19T18:20:00+09:00",
@@ -81,6 +94,19 @@
       "notes": "Minnesota state contact route for PFAS private well result interpretation."
     },
     {
+      "raw_source_id": "raw-mn-pfas-values-20260319",
+      "source_id": "mn-pfas-values",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "url": "https://www.health.state.mn.us/communities/environment/water/pfasvalues.html",
+      "organization": "Minnesota Department of Health",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS) Values",
+      "content_type": "text/html",
+      "jurisdiction": "MN",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Minnesota PFAS values page used for current state-guidance transition context."
+    },
+    {
       "raw_source_id": "raw-ny-dec-pfas-20260319",
       "source_id": "ny-dec-pfas",
       "retrieved_at": "2026-03-19T18:20:00+09:00",
@@ -105,6 +131,19 @@
       "source_family": "state_official",
       "checksum_or_snapshot_id": null,
       "notes": "NY DOH PDF for PFAS private wells and action guidance."
+    },
+    {
+      "raw_source_id": "raw-ny-water-supplier-factsheet-mcls-20260319",
+      "source_id": "ny-water-supplier-factsheet-mcls",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "url": "https://www.health.ny.gov/environmental/water/drinking/docs/water_supplier_fact_sheet_new_mcls.pdf",
+      "organization": "New York State Department of Health",
+      "title": "Water Supplier Fact Sheet on New PFAS MCLs",
+      "content_type": "application/pdf",
+      "jurisdiction": "NY",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Current NY DOH fact sheet explaining that the 10 ppt state MCLs remain in place until 2029."
     },
     {
       "raw_source_id": "raw-ny-elap-20260319",
@@ -185,6 +224,19 @@
       "notes": "Washington accredited laboratory search route."
     },
     {
+      "raw_source_id": "raw-wa-pfas-group-a-support-20260319",
+      "source_id": "wa-pfas-group-a-support",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "url": "https://doh.wa.gov/community-and-environment/drinking-water/contaminants/pfas-drinking-water",
+      "organization": "Washington State Department of Health",
+      "title": "PFAS in Drinking Water—Group A Public Water System Information and Support",
+      "content_type": "text/html",
+      "jurisdiction": "WA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Current Washington PFAS page confirming SAL alignment to federal MCL values effective 2026-01-15."
+    },
+    {
       "raw_source_id": "raw-ca-pfas-waterboards-20260319",
       "source_id": "ca-pfas-waterboards",
       "retrieved_at": "2026-03-19T22:10:00+09:00",
@@ -209,6 +261,19 @@
       "source_family": "state_official",
       "checksum_or_snapshot_id": null,
       "notes": "California accredited laboratory lookup route."
+    },
+    {
+      "raw_source_id": "raw-ca-pfas-timeline-20260319",
+      "source_id": "ca-pfas-timeline",
+      "retrieved_at": "2026-03-19T23:55:00+09:00",
+      "url": "https://www.waterboards.ca.gov/pfas/ca_pfas_timeline.html",
+      "organization": "California State Water Resources Control Board",
+      "title": "CA PFAS Timeline",
+      "content_type": "text/html",
+      "jurisdiction": "CA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "California timeline page used to extract current notification and response levels issued in late 2025."
     }
   ]
 }

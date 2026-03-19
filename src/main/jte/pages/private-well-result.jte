@@ -147,6 +147,18 @@
                     </ul>
                 </section>
 
+                @if (result.referenceContext() != null)
+                    <section class="rail-card">
+                        <h2 class="rail-card__title">${result.referenceContext().primaryReferenceLabel()}</h2>
+                        <p class="checker-block__hint">${result.referenceContext().summary()}</p>
+                        <ul class="list">
+                            @for (var line : result.referenceContext().benchmarkLines())
+                                <li>${line.label()}: ${line.benchmarkDisplay()} (${line.note()})</li>
+                            @endfor
+                        </ul>
+                    </section>
+                @endif
+
                 <section class="rail-card">
                     <h2 class="rail-card__title">Certification checklist</h2>
                     <ul class="list">
