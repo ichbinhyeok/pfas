@@ -34,6 +34,11 @@ public class PublicPagesController {
 		return "pages/home";
 	}
 
+	@GetMapping("/checker")
+	public String checker() {
+		return "pages/action-checker";
+	}
+
 	@GetMapping("/public-water/{pwsid}")
 	public String publicWaterResult(@PathVariable String pwsid, Model model) {
 		var system = publicWaterSystemService.getByPwsid(pwsid)

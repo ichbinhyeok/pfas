@@ -19,8 +19,8 @@
                     state guidance, and claim-level filter listings into a user-facing next step.
                 </p>
                 <div class="hero__actions">
-                    <a class="button button--primary" href="/public-water/PA1510001">Open seeded public-water result</a>
-                    <a class="button button--secondary" href="/internal/results/public-water/PA1510001">Inspect typed result JSON</a>
+                    <a class="button button--primary" href="/checker">Open Action Checker</a>
+                    <a class="button button--secondary" href="/public-water/PA1510001">Open seeded public-water result</a>
                 </div>
             </div>
             <aside class="hero__panel">
@@ -30,6 +30,11 @@
                     Source registry, benchmark registry, utility observations, certification claims, cost models, and typed
                     public-water result outputs are wired together.
                 </p>
+                <div class="chip-row">
+                    <span class="chip">File-based data pipeline</span>
+                    <span class="chip">Typed result schema</span>
+                    <span class="chip">SSR premium UI</span>
+                </div>
             </aside>
         </div>
     </div>

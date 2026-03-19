@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${pageTitle}</title>
     <meta name="description" content="${pageDescription}">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
             </a>
             <nav class="nav" aria-label="Primary">
                 <a class="nav__link" href="/">Home</a>
+                <a class="nav__link" href="/checker">Action Checker</a>
                 <a class="nav__link" href="/public-water/PA1510001">Seeded Result</a>
                 <a class="nav__link" href="/internal/results/public-water/PA1510001">Result JSON</a>
             </nav>

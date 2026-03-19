@@ -199,6 +199,15 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void rendersActionCheckerPage() throws Exception {
+		mockMvc.perform(get("/checker"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker shell")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the user")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision first")));
+	}
+
+	@Test
 	void rendersPublicWaterResultPage() throws Exception {
 		mockMvc.perform(get("/public-water/PA1510001"))
 			.andExpect(status().isOk())
