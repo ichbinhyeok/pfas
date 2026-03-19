@@ -11,6 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.example.pfas.checker.ActionCheckerRouteCode;
+import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.benchmark.BenchmarkService;
 import com.example.pfas.certification.CertificationClaimService;
 import com.example.pfas.decision.PublicWaterDecisionRuleId;
@@ -54,6 +56,9 @@ class PfasApplicationTests {
 
 	@Autowired
 	private PublicWaterResultService publicWaterResultService;
+
+	@Autowired
+	private ActionCheckerService actionCheckerService;
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -191,6 +196,23 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void buildsPrivateWellTestFirstRecommendation() {
+		var selection = actionCheckerService.normalize(
+			"private_well",
+			"none",
+			"none",
+			true,
+			"MI",
+			null
+		);
+		var recommendation = actionCheckerService.evaluate(selection);
+
+		assertThat(recommendation.routeCode()).isEqualTo(ActionCheckerRouteCode.PRIVATE_WELL_TEST_FIRST);
+		assertThat(recommendation.primaryHref()).isEqualTo("/private-well/MI");
+		assertThat(recommendation.wholeHouseGuardrail()).isTrue();
+	}
+
+	@Test
 	void rendersHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
@@ -202,9 +224,52 @@ class PfasApplicationTests {
 	void rendersActionCheckerPage() throws Exception {
 		mockMvc.perform(get("/checker"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker shell")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the user")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision first")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Server-backed routing")));
+	}
+
+	@Test
+	void rendersCheckerSummaryFragment() throws Exception {
+		mockMvc.perform(
+			get("/checker/panel")
+				.param("waterSource", "PRIVATE_WELL")
+				.param("directData", "NONE")
+				.param("stateCode", "MI")
+				.param("wholeHouseConsidered", "true")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Test the private well before comparing filters")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Whole-house guardrail")));
+	}
+
+	@Test
+	void rendersPrivateWellStatePage() throws Exception {
+		mockMvc.perform(get("/private-well/MI"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan Department of Environment, Great Lakes, and Energy")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Test first, then interpret against state guidance.")));
+	}
+
+	@Test
+	void rendersPublicWaterSystemPage() throws Exception {
+		mockMvc.perform(get("/public-water-system/PA1510001"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Use direct utility data before comparing filters.")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")));
+	}
+
+	@Test
+	void returnsInternalActionCheckerRecommendation() throws Exception {
+		mockMvc.perform(
+			get("/internal/action-checker/recommendation")
+				.param("waterSource", "PUBLIC_WATER")
+				.param("directData", "NONE")
+				.param("pwsid", "PA1510001")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PUBLIC_WATER_UTILITY_FIRST")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/public-water-system/PA1510001")));
 	}
 
 	@Test
