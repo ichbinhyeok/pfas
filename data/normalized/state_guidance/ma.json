@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "MA",
+  "agency_name": "Massachusetts Department of Environmental Protection",
+  "agency_url": "https://www.mass.gov/orgs/massachusetts-department-of-environmental-protection",
+  "private_well_guidance_url": "https://www.mass.gov/info-details/private-wells",
+  "pfas_guidance_url": "https://www.mass.gov/doc/per-and-polyfluoroalkyl-substances-pfas-in-public-drinking-water-supplies-questions-and-answers-for-public-water-systems/download",
+  "certified_lab_lookup_url": "https://www.mass.gov/doc/private-drinking-water-testing-and-the-use-of-massdep-certified-laboratories-0/download",
+  "sampling_guidance_url": "https://www.mass.gov/info-details/private-wells",
+  "repeat_testing_guidance": "Massachusetts notes private well owners should decide on repeat testing with local board of health and MassDEP-certified laboratory context, especially in industrial or densely developed areas.",
+  "benchmark_notes": "Massachusetts private wells are not regulated like public water systems. PFAS results should be interpreted as reference-based action signals with local health and MassDEP context, not as legal compliance findings.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "ma-private-wells",
+    "ma-private-drinking-water-certified-labs",
+    "ma-pfas-public-drinking-water-factsheet"
+  ]
+}

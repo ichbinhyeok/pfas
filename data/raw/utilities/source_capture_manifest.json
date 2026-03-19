@@ -40,6 +40,45 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official utility PFAS program and monitoring page."
+    },
+    {
+      "raw_source_id": "raw-lancaster-water-home-20260319",
+      "source_id": "lancaster-water-home",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://water.cityoflancasterpa.gov/",
+      "organization": "City of Lancaster Water Department",
+      "title": "City of Lancaster Water Department",
+      "content_type": "text/html",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Lancaster water utility homepage."
+    },
+    {
+      "raw_source_id": "raw-lancaster-2024-water-quality-report-20260319",
+      "source_id": "lancaster-2024-water-quality-report",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://water.cityoflancasterpa.gov/wp-content/uploads/2024-Water-Quality-Report.pdf",
+      "organization": "City of Lancaster Water Department",
+      "title": "2024 Water Quality Report",
+      "content_type": "application/pdf",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Lancaster utility report identifying PWSID 7360058 and PFAS monitoring context."
+    },
+    {
+      "raw_source_id": "raw-lancaster-pfoa-notice-2025-20260319",
+      "source_id": "lancaster-pfoa-notice-2025",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://water.cityoflancasterpa.gov/wp-content/uploads/PFOA-Notice-Aug-2025-ES.pdf",
+      "organization": "City of Lancaster Water Department",
+      "title": "PFOA Notice - August 2025",
+      "content_type": "application/pdf",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Lancaster utility notice reporting a 15 ng/L running annual average for PFOA at the Conestoga treatment plant."
     }
   ]
 }

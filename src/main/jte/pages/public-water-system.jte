@@ -25,6 +25,8 @@
             </div>
         </div>
 
+        @template.fragments.publicationStrip(lastVerified = system.lastVerifiedDate(), scopeLabel = "Public-water utility context")
+
         <div class="result-grid">
             <div class="stack">
                 <section class="card card--hero">

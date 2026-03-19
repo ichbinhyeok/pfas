@@ -29,8 +29,9 @@
             <nav class="nav" aria-label="Primary">
                 <a class="nav__link" href="/">Home</a>
                 <a class="nav__link" href="/checker">Action Checker</a>
-                <a class="nav__link" href="/public-water/PA1510001">Seeded Result</a>
-                <a class="nav__link" href="/internal/results/public-water/PA1510001">Result JSON</a>
+                <a class="nav__link" href="/guides/public-water-vs-private-well">Guides</a>
+                <a class="nav__link" href="/methodology">Methodology</a>
+                <a class="nav__link" href="/source-policy">Source Policy</a>
             </nav>
         </div>
     </header>
@@ -38,8 +39,13 @@
         ${content}
     </main>
     <footer class="footer">
-        <div class="shell">
-            This interface renders normalized PFAS decision outputs. It does not label any household safe or unsafe.
+        <div class="shell footer__inner">
+            <span>This interface renders normalized PFAS decision outputs. It does not label any household safe or unsafe.</span>
+            <div class="footer__links">
+                <a href="/methodology">Methodology</a>
+                <a href="/source-policy">Source policy</a>
+                <a href="/checker">Action Checker</a>
+            </div>
         </div>
     </footer>
 </body>

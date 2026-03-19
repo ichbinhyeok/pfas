@@ -19,6 +19,9 @@ public class ActionCheckerController {
 	public ActionCheckerResponse recommendation(
 		@RequestParam(required = false) String waterSource,
 		@RequestParam(required = false) String directData,
+		@RequestParam(required = false) String indirectData,
+		@RequestParam(required = false) String benchmarkRelation,
+		@RequestParam(required = false) String currentFilterStatus,
 		@RequestParam(required = false) String shoppingIntent,
 		@RequestParam(required = false) Boolean wholeHouseConsidered,
 		@RequestParam(required = false) String stateCode,
@@ -27,6 +30,9 @@ public class ActionCheckerController {
 		var selection = actionCheckerService.normalize(
 			waterSource,
 			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
 			shoppingIntent,
 			wholeHouseConsidered,
 			stateCode,

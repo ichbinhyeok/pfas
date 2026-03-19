@@ -27,6 +27,45 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official cartridge page showing replacement price and annual replacement cadence."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-direct-connect-product-20260319",
+      "source_id": "aq-claryum-direct-connect-product",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-direct-connect-100329886.html",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Aquasana product page showing price and PFAS certification claims."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-direct-connect-replacement-20260319",
+      "source_id": "aq-claryum-direct-connect-replacement",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-direct-connect-replacement-cartridge-100329887.html",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect Replacement Cartridge",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Aquasana replacement cartridge page showing current replacement pricing."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-direct-connect-install-pdf-20260319",
+      "source_id": "aq-claryum-direct-connect-install-pdf",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://cdn.aquasana.com/assets/AQ-MF-1_Install.pdf",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect Install and Performance Data Sheet",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Aquasana performance sheet with IAPMO certification language and PFAS reduction data."
     }
   ]
 }

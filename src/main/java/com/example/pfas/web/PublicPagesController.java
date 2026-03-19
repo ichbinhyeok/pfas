@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.example.pfas.checker.ActionBenchmarkRelation;
+import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.decision.PublicWaterDecisionService;
+import com.example.pfas.result.PrivateWellResultService;
 import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
@@ -26,28 +29,35 @@ public class PublicPagesController {
 	private final StateGuidanceService stateGuidanceService;
 	private final PublicWaterDecisionService publicWaterDecisionService;
 	private final PublicWaterResultService publicWaterResultService;
+	private final PrivateWellResultService privateWellResultService;
 	private final SourceRegistryService sourceRegistryService;
 	private final ActionCheckerService actionCheckerService;
+	private final GuidePageService guidePageService;
 
 	public PublicPagesController(
 		PublicWaterSystemService publicWaterSystemService,
 		StateGuidanceService stateGuidanceService,
 		PublicWaterDecisionService publicWaterDecisionService,
 		PublicWaterResultService publicWaterResultService,
+		PrivateWellResultService privateWellResultService,
 		SourceRegistryService sourceRegistryService,
-		ActionCheckerService actionCheckerService
+		ActionCheckerService actionCheckerService,
+		GuidePageService guidePageService
 	) {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.publicWaterDecisionService = publicWaterDecisionService;
 		this.publicWaterResultService = publicWaterResultService;
+		this.privateWellResultService = privateWellResultService;
 		this.sourceRegistryService = sourceRegistryService;
 		this.actionCheckerService = actionCheckerService;
+		this.guidePageService = guidePageService;
 	}
 
 	@GetMapping("/")
 	public String home(Model model) {
 		model.addAttribute("systems", publicWaterSystemService.getAll());
+		model.addAttribute("guides", guidePageService.getAll());
 		return "pages/home";
 	}
 
@@ -55,6 +65,9 @@ public class PublicPagesController {
 	public String checker(
 		@RequestParam(required = false) String waterSource,
 		@RequestParam(required = false) String directData,
+		@RequestParam(required = false) String indirectData,
+		@RequestParam(required = false) String benchmarkRelation,
+		@RequestParam(required = false) String currentFilterStatus,
 		@RequestParam(required = false) String shoppingIntent,
 		@RequestParam(required = false) Boolean wholeHouseConsidered,
 		@RequestParam(required = false) String stateCode,
@@ -65,6 +78,9 @@ public class PublicPagesController {
 			model,
 			waterSource,
 			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
 			shoppingIntent,
 			wholeHouseConsidered,
 			stateCode,
@@ -78,6 +94,9 @@ public class PublicPagesController {
 	public String checkerPanel(
 		@RequestParam(required = false) String waterSource,
 		@RequestParam(required = false) String directData,
+		@RequestParam(required = false) String indirectData,
+		@RequestParam(required = false) String benchmarkRelation,
+		@RequestParam(required = false) String currentFilterStatus,
 		@RequestParam(required = false) String shoppingIntent,
 		@RequestParam(required = false) Boolean wholeHouseConsidered,
 		@RequestParam(required = false) String stateCode,
@@ -88,6 +107,9 @@ public class PublicPagesController {
 			model,
 			waterSource,
 			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
 			shoppingIntent,
 			wholeHouseConsidered,
 			stateCode,
@@ -132,10 +154,34 @@ public class PublicPagesController {
 		return "pages/private-well-state";
 	}
 
+	@GetMapping("/private-well-result/{stateCode}")
+	public String privateWellResult(
+		@PathVariable String stateCode,
+		@RequestParam(defaultValue = "UNKNOWN") ActionBenchmarkRelation benchmarkRelation,
+		@RequestParam(defaultValue = "NONE") ActionCurrentFilterStatus currentFilterStatus,
+		@RequestParam(defaultValue = "false") boolean wholeHouseConsidered,
+		Model model
+	) {
+		var guidance = stateGuidanceService.getByStateCode(stateCode.toUpperCase())
+			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown state_code: " + stateCode));
+		var result = privateWellResultService.get(guidance.stateCode(), benchmarkRelation, currentFilterStatus, wholeHouseConsidered)
+			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode));
+
+		model.addAttribute("guidance", guidance);
+		model.addAttribute("result", result);
+		model.addAttribute("benchmarkRelation", benchmarkRelation);
+		model.addAttribute("currentFilterStatus", currentFilterStatus);
+		model.addAttribute("wholeHouseConsidered", wholeHouseConsidered);
+		return "pages/private-well-result";
+	}
+
 	private void populateCheckerModel(
 		Model model,
 		String waterSource,
 		String directData,
+		String indirectData,
+		String benchmarkRelation,
+		String currentFilterStatus,
 		String shoppingIntent,
 		Boolean wholeHouseConsidered,
 		String stateCode,
@@ -144,6 +190,9 @@ public class PublicPagesController {
 		var selection = actionCheckerService.normalize(
 			waterSource,
 			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
 			shoppingIntent,
 			wholeHouseConsidered,
 			stateCode,

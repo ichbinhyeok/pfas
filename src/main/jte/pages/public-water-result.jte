@@ -32,6 +32,8 @@
             </div>
         </div>
 
+        @template.fragments.publicationStrip(lastVerified = system.lastVerifiedDate(), scopeLabel = "Public-water interpretation")
+
         <div class="dossier-strip">
             <article class="dossier-cell">
                 <span class="dossier-cell__label">Utility record</span>

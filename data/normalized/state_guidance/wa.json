@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "WA",
+  "agency_name": "Washington State Department of Health",
+  "agency_url": "https://doh.wa.gov/",
+  "private_well_guidance_url": "https://doh.wa.gov/community-and-environment/contaminants/pfas",
+  "pfas_guidance_url": "https://doh.wa.gov/community-and-environment/contaminants/pfas",
+  "certified_lab_lookup_url": "https://fortress.wa.gov/doh/elap/ELAPSearch.aspx",
+  "sampling_guidance_url": "https://doh.wa.gov/community-and-environment/contaminants/pfas",
+  "repeat_testing_guidance": "Washington guidance should drive repeat testing and follow-up timing. No universal Sharp v1 cadence is assumed beyond current state health context and lab guidance.",
+  "benchmark_notes": "Washington uses state PFAS action-level and drinking-water context for interpretation. Private well PFAS results remain reference-based and should not be framed as household compliance determinations.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "wa-pfas-drinking-water",
+    "wa-elap-search",
+    "wa-pfas-state-action-levels"
+  ]
+}

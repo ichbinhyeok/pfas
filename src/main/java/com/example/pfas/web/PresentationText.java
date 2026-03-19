@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
 
+import com.example.pfas.checker.ActionBenchmarkRelation;
+import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.checker.ActionDirectDataStatus;
+import com.example.pfas.checker.ActionIndirectDataStatus;
 import com.example.pfas.checker.ActionWaterSource;
 import com.example.pfas.decision.BenchmarkComparisonStatus;
 
@@ -30,7 +33,39 @@ public final class PresentationText {
 		return switch (directDataStatus) {
 			case NONE -> "Not yet available";
 			case UTILITY_DOCUMENT -> "Utility document";
+			case OFFICIAL_NOTICE -> "Official notice";
 			case PRIVATE_WELL_TEST -> "Private-well test";
+		};
+	}
+
+	public static String indirectDataLabel(ActionIndirectDataStatus indirectDataStatus) {
+		if (indirectDataStatus == null) {
+			return "None";
+		}
+		return switch (indirectDataStatus) {
+			case NONE -> "None";
+			case UCMR_ONLY -> "UCMR only";
+			case PFAS_ANALYTIC_TOOL_ONLY -> "PFAS analytic tool only";
+			case ZIP_HINT_ONLY -> "ZIP hint only";
+		};
+	}
+
+	public static String benchmarkRelationLabel(ActionBenchmarkRelation benchmarkRelation) {
+		if (benchmarkRelation == null) {
+			return "Unknown";
+		}
+		return benchmarkRelationLabel(benchmarkRelation.name().toLowerCase(Locale.US));
+	}
+
+	public static String currentFilterStatusLabel(ActionCurrentFilterStatus currentFilterStatus) {
+		if (currentFilterStatus == null) {
+			return "Not set";
+		}
+		return switch (currentFilterStatus) {
+			case NONE -> "No current filter";
+			case CERTIFIED -> "Certified filter";
+			case UNCERTIFIED -> "Uncertified filter";
+			case UNKNOWN -> "Filter status unknown";
 		};
 	}
 

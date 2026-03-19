@@ -777,6 +777,328 @@
         "proof of claim without listing verification"
       ],
       "notes": "Official vendor cartridge page for item 100186 showing replacement price and annual or 1320 gallon replacement cadence."
+    },
+    {
+      "source_id": "ma-private-wells",
+      "organization": "Massachusetts Department of Environmental Protection",
+      "title": "Private Wells",
+      "url": "https://www.mass.gov/info-details/private-wells",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "private well ownership context",
+        "state follow-up guidance",
+        "sampling route"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "Massachusetts state private-well page describing owner responsibilities and private well testing context."
+    },
+    {
+      "source_id": "ma-private-drinking-water-certified-labs",
+      "organization": "Massachusetts Department of Environmental Protection",
+      "title": "Private Drinking Water Testing and the Use of MassDEP-Certified Laboratories",
+      "url": "https://www.mass.gov/doc/private-drinking-water-testing-and-the-use-of-massdep-certified-laboratories-0/download",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "certified lab guidance",
+        "private well sample handling",
+        "repeat-testing context"
+      ],
+      "disallowed_uses": [
+        "standalone PFAS benchmark interpretation"
+      ],
+      "notes": "MassDEP PDF describing the use of state-certified laboratories for private drinking water samples."
+    },
+    {
+      "source_id": "ma-pfas-public-drinking-water-factsheet",
+      "organization": "Massachusetts Department of Environmental Protection",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS) in Public Drinking Water Supplies",
+      "url": "https://www.mass.gov/doc/per-and-polyfluoroalkyl-substances-pfas-in-public-drinking-water-supplies-questions-and-answers-for-public-water-systems/download",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS context",
+        "reference benchmark context"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "Massachusetts PFAS factsheet used here as state PFAS context, not as a private-well compliance source."
+    },
+    {
+      "source_id": "wa-pfas-drinking-water",
+      "organization": "Washington State Department of Health",
+      "title": "PFAS in Drinking Water",
+      "url": "https://doh.wa.gov/community-and-environment/contaminants/pfas",
+      "source_kind": "state_pfas_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS context",
+        "private well action guidance",
+        "state referral layer"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "Washington Department of Health PFAS page used for state-specific drinking-water and follow-up context."
+    },
+    {
+      "source_id": "wa-elap-search",
+      "organization": "Washington State Environmental Laboratory Accreditation Program",
+      "title": "ELAP Search",
+      "url": "https://fortress.wa.gov/doh/elap/ELAPSearch.aspx",
+      "source_kind": "state_lab_lookup",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state-accredited lab lookup"
+      ],
+      "disallowed_uses": [
+        "PFAS result interpretation without state guidance"
+      ],
+      "notes": "Washington accredited laboratory search route for water testing."
+    },
+    {
+      "source_id": "wa-pfas-state-action-levels",
+      "organization": "Washington State Department of Health",
+      "title": "State Action Levels for PFAS in Group A Public Water Supplies",
+      "url": "https://doh.wa.gov/sites/default/files/2022-02/PFAS_Approach2settingSALs_Adopt.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": "2022-02-01",
+      "last_updated_date": "2022-02-01",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": "2022-02-01",
+      "allowed_uses": [
+        "state benchmark context",
+        "reference notes"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "Washington PFAS action-level document used as state benchmark context only."
+    },
+    {
+      "source_id": "ca-pfas-waterboards",
+      "organization": "California State Water Resources Control Board",
+      "title": "PFAS",
+      "url": "https://www.waterboards.ca.gov/pfas/",
+      "source_kind": "state_pfas_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS context",
+        "notification and response context",
+        "state referral layer"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "California Water Boards PFAS page used for state-level PFAS context."
+    },
+    {
+      "source_id": "ca-elap-labs",
+      "organization": "California State Water Resources Control Board",
+      "title": "Environmental Laboratory Accreditation Program",
+      "url": "https://www.waterboards.ca.gov/drinking_water/certlic/labs/",
+      "source_kind": "state_lab_lookup",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state-accredited lab lookup"
+      ],
+      "disallowed_uses": [
+        "PFAS result interpretation without state guidance"
+      ],
+      "notes": "California laboratory accreditation page used for official lab lookup context."
+    },
+    {
+      "source_id": "ca-pfas-order-faqs",
+      "organization": "California State Water Resources Control Board",
+      "title": "PFAS Sampling Orders Frequently Asked Questions",
+      "url": "https://www.waterboards.ca.gov/pfas/docs/pfas_order_faqs042919.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": "2019-04-29",
+      "last_updated_date": "2019-04-29",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": "2019-04-29",
+      "allowed_uses": [
+        "sampling context",
+        "state PFAS response context"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "California PFAS FAQ PDF used as a sampling and response context note."
+    },
+    {
+      "source_id": "lancaster-water-home",
+      "organization": "City of Lancaster Water Department",
+      "title": "City of Lancaster Water Department",
+      "url": "https://water.cityoflancasterpa.gov/",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official City of Lancaster water utility homepage."
+    },
+    {
+      "source_id": "lancaster-2024-water-quality-report",
+      "organization": "City of Lancaster Water Department",
+      "title": "2024 Water Quality Report",
+      "url": "https://water.cityoflancasterpa.gov/wp-content/uploads/2024-Water-Quality-Report.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "reported PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Lancaster 2024 water quality report identifies PWSID 7360058 and plant-level PFAS context."
+    },
+    {
+      "source_id": "lancaster-pfoa-notice-2025",
+      "organization": "City of Lancaster Water Department",
+      "title": "PFOA Notice - August 2025",
+      "url": "https://water.cityoflancasterpa.gov/wp-content/uploads/PFOA-Notice-Aug-2025-ES.pdf",
+      "source_kind": "utility_public_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": "2025-08-01",
+      "last_updated_date": "2025-08-01",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": "2025-08-01",
+      "allowed_uses": [
+        "direct utility notice",
+        "running annual average extraction",
+        "above-benchmark public-water case"
+      ],
+      "disallowed_uses": [
+        "systemwide household safety determination"
+      ],
+      "notes": "Utility notice states a running annual average PFOA value of 15 ng/L against a 14 ng/L DEP MCL for Conestoga finished water."
+    },
+    {
+      "source_id": "aq-claryum-direct-connect-product",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-direct-connect-100329886.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana official product page for Claryum Direct Connect showing discounted upfront price and PFAS certification marketing language."
+    },
+    {
+      "source_id": "aq-claryum-direct-connect-replacement",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect Replacement Cartridge",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-direct-connect-replacement-cartridge-100329887.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana official replacement page for the Claryum Direct Connect cartridge."
+    },
+    {
+      "source_id": "aq-claryum-direct-connect-install-pdf",
+      "organization": "Aquasana",
+      "title": "Claryum Direct Connect Install and Performance Data Sheet",
+      "url": "https://cdn.aquasana.com/assets/AQ-MF-1_Install.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Performance sheet states the system is tested and certified by IAPMO R&T against NSF ANSI 42, 53, and 401 and shows PFOA PFOS reduction performance."
     }
   ]
 }

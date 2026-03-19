@@ -1,11 +1,17 @@
 @import java.util.List
+@import com.example.pfas.checker.ActionBenchmarkRelation
 @import com.example.pfas.checker.ActionCheckerSelection
 @import com.example.pfas.checker.ActionCheckerRecommendation
+@import com.example.pfas.checker.ActionCurrentFilterStatus
 @import com.example.pfas.checker.ActionWaterSource
 @import com.example.pfas.checker.ActionDirectDataStatus
+@import com.example.pfas.checker.ActionIndirectDataStatus
 @import com.example.pfas.checker.ActionShoppingIntent
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
+@import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
+@import static com.example.pfas.web.PresentationText.currentFilterStatusLabel
+@import static com.example.pfas.web.PresentationText.indirectDataLabel
 @import static com.example.pfas.web.PresentationText.waterSourceLabel
 @param List<StateGuidance> states
 @param List<PublicWaterSystem> systems
@@ -36,12 +42,12 @@
                 <span class="case-chip__value">${waterSourceLabel(selection.waterSource())}</span>
             </article>
             <article class="case-chip">
-                <span class="case-chip__label">State code</span>
-                <span class="case-chip__value">${selection.stateCode()}</span>
+                <span class="case-chip__label">Benchmark relation</span>
+                <span class="case-chip__value">${benchmarkRelationLabel(selection.benchmarkRelation())}</span>
             </article>
             <article class="case-chip">
-                <span class="case-chip__label">Seeded record</span>
-                <span class="case-chip__value">${selection.pwsid()}</span>
+                <span class="case-chip__label">Filter status</span>
+                <span class="case-chip__value">${currentFilterStatusLabel(selection.currentFilterStatus())}</span>
             </article>
         </div>
 
@@ -75,11 +81,47 @@
                     <span class="option-card__copy">A direct system document exists and should be interpreted before shopping.</span>
                 </label>
                 <label class="option-card">
+                    <input class="option-card__input" type="radio" name="directData" value="OFFICIAL_NOTICE" checked="${selection.directData() == ActionDirectDataStatus.OFFICIAL_NOTICE}">
+                    <span class="option-card__title">Official notice</span>
+                    <span class="option-card__copy">A utility or regulator has already issued a direct PFAS notice for the system.</span>
+                </label>
+                <label class="option-card">
                     <input class="option-card__input" type="radio" name="directData" value="PRIVATE_WELL_TEST" checked="${selection.directData() == ActionDirectDataStatus.PRIVATE_WELL_TEST}">
                     <span class="option-card__title">Private-well test</span>
                     <span class="option-card__copy">A well test exists and should be interpreted against state-specific guidance.</span>
                 </label>
             </div>
+        </div>
+
+        <div class="checker-block">
+            <p class="checker-block__label">Secondary signal and state model</p>
+            <div class="select-cluster select-cluster--three">
+                <label class="select-field">
+                    <span class="select-field__label">Indirect data</span>
+                    <select name="indirectData">
+                        @for(var value : ActionIndirectDataStatus.values())
+                            <option value="${value.name()}" selected="${value == selection.indirectData()}">${indirectDataLabel(value)}</option>
+                        @endfor
+                    </select>
+                </label>
+                <label class="select-field">
+                    <span class="select-field__label">Benchmark relation</span>
+                    <select name="benchmarkRelation">
+                        @for(var value : ActionBenchmarkRelation.values())
+                            <option value="${value.name()}" selected="${value == selection.benchmarkRelation()}">${benchmarkRelationLabel(value)}</option>
+                        @endfor
+                    </select>
+                </label>
+                <label class="select-field">
+                    <span class="select-field__label">Current filter</span>
+                    <select name="currentFilterStatus">
+                        @for(var value : ActionCurrentFilterStatus.values())
+                            <option value="${value.name()}" selected="${value == selection.currentFilterStatus()}">${currentFilterStatusLabel(value)}</option>
+                        @endfor
+                    </select>
+                </label>
+            </div>
+            <p class="checker-block__hint">These three fields let the checker follow the real decision table instead of a simplified demo path.</p>
         </div>
 
         <div class="checker-block">

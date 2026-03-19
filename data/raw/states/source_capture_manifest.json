@@ -131,6 +131,84 @@
       "source_family": "state_official",
       "checksum_or_snapshot_id": null,
       "notes": "Pennsylvania DEP page documenting 14 ppt PFOA and 18 ppt PFOS MCLs."
+    },
+    {
+      "raw_source_id": "raw-ma-private-wells-20260319",
+      "source_id": "ma-private-wells",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.mass.gov/info-details/private-wells",
+      "organization": "Massachusetts Department of Environmental Protection",
+      "title": "Private Wells",
+      "content_type": "text/html",
+      "jurisdiction": "MA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Massachusetts private well guidance and owner-responsibility page."
+    },
+    {
+      "raw_source_id": "raw-ma-private-certified-labs-20260319",
+      "source_id": "ma-private-drinking-water-certified-labs",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.mass.gov/doc/private-drinking-water-testing-and-the-use-of-massdep-certified-laboratories-0/download",
+      "organization": "Massachusetts Department of Environmental Protection",
+      "title": "Private Drinking Water Testing and the Use of MassDEP-Certified Laboratories",
+      "content_type": "application/pdf",
+      "jurisdiction": "MA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Massachusetts PDF about certified laboratories for private drinking water."
+    },
+    {
+      "raw_source_id": "raw-wa-pfas-drinking-water-20260319",
+      "source_id": "wa-pfas-drinking-water",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://doh.wa.gov/community-and-environment/contaminants/pfas",
+      "organization": "Washington State Department of Health",
+      "title": "PFAS in Drinking Water",
+      "content_type": "text/html",
+      "jurisdiction": "WA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Washington PFAS drinking water guidance and state action context."
+    },
+    {
+      "raw_source_id": "raw-wa-elap-search-20260319",
+      "source_id": "wa-elap-search",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://fortress.wa.gov/doh/elap/ELAPSearch.aspx",
+      "organization": "Washington State Environmental Laboratory Accreditation Program",
+      "title": "ELAP Search",
+      "content_type": "text/html",
+      "jurisdiction": "WA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Washington accredited laboratory search route."
+    },
+    {
+      "raw_source_id": "raw-ca-pfas-waterboards-20260319",
+      "source_id": "ca-pfas-waterboards",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.waterboards.ca.gov/pfas/",
+      "organization": "California State Water Resources Control Board",
+      "title": "PFAS",
+      "content_type": "text/html",
+      "jurisdiction": "CA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "California Water Boards PFAS context page."
+    },
+    {
+      "raw_source_id": "raw-ca-elap-labs-20260319",
+      "source_id": "ca-elap-labs",
+      "retrieved_at": "2026-03-19T22:10:00+09:00",
+      "url": "https://www.waterboards.ca.gov/drinking_water/certlic/labs/",
+      "organization": "California State Water Resources Control Board",
+      "title": "Environmental Laboratory Accreditation Program",
+      "content_type": "text/html",
+      "jurisdiction": "CA",
+      "source_family": "state_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "California accredited laboratory lookup route."
     }
   ]
 }

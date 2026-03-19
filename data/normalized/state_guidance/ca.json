@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "CA",
+  "agency_name": "California State Water Resources Control Board",
+  "agency_url": "https://www.waterboards.ca.gov/",
+  "private_well_guidance_url": "https://www.waterboards.ca.gov/pfas/",
+  "pfas_guidance_url": "https://www.waterboards.ca.gov/pfas/",
+  "certified_lab_lookup_url": "https://www.waterboards.ca.gov/drinking_water/certlic/labs/",
+  "sampling_guidance_url": "https://www.waterboards.ca.gov/pfas/docs/pfas_order_faqs042919.pdf",
+  "repeat_testing_guidance": "California follow-up timing depends on state notification and response-level context, current advisory materials, and laboratory guidance rather than a universal private-well cadence.",
+  "benchmark_notes": "California PFAS interpretation often uses notification and response levels alongside local investigation context. Private well readings should be treated as reference-based action signals, not legal compliance labels.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "ca-pfas-waterboards",
+    "ca-elap-labs",
+    "ca-pfas-order-faqs"
+  ]
+}

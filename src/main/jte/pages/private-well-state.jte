@@ -25,6 +25,8 @@
             </div>
         </div>
 
+        @template.fragments.publicationStrip(lastVerified = guidance.lastVerifiedDate(), scopeLabel = "Private-well state guide")
+
         <div class="result-grid">
             <div class="stack">
                 <section class="card card--hero">

@@ -1,7 +1,10 @@
+@import com.example.pfas.checker.ActionBenchmarkRelation
 @import com.example.pfas.checker.ActionCheckerSelection
 @import com.example.pfas.checker.ActionCheckerRecommendation
-@import com.example.pfas.checker.ActionWaterSource
+@import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
+@import static com.example.pfas.web.PresentationText.currentFilterStatusLabel
 @import static com.example.pfas.web.PresentationText.directDataLabel
+@import static com.example.pfas.web.PresentationText.indirectDataLabel
 @import static com.example.pfas.web.PresentationText.waterSourceLabel
 @param ActionCheckerSelection selection
 @param ActionCheckerRecommendation recommendation
@@ -23,14 +26,20 @@
                 <span class="summary-fact__value">${directDataLabel(selection.directData())}</span>
             </div>
             <div class="summary-fact">
+                <span class="summary-fact__label">Indirect data</span>
+                <span class="summary-fact__value">${indirectDataLabel(selection.indirectData())}</span>
+            </div>
+            <div class="summary-fact">
+                <span class="summary-fact__label">Benchmark relation</span>
+                <span class="summary-fact__value">${benchmarkRelationLabel(selection.benchmarkRelation())}</span>
+            </div>
+            <div class="summary-fact">
+                <span class="summary-fact__label">Current filter</span>
+                <span class="summary-fact__value">${currentFilterStatusLabel(selection.currentFilterStatus())}</span>
+            </div>
+            <div class="summary-fact">
                 <span class="summary-fact__label">Escalation</span>
-                <span class="summary-fact__value">
-                    @if(selection.wholeHouseConsidered())
-                        Whole-house guarded
-                    @else
-                        Point-of-use first
-                    @endif
-                </span>
+                <span class="summary-fact__value">${selection.wholeHouseConsidered() ? "Whole-house guarded" : "Point-of-use first"}</span>
             </div>
         </div>
     </div>

@@ -686,6 +686,10 @@ img {
 	gap: 12px;
 }
 
+.select-cluster--three {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .select-field {
 	display: grid;
 	gap: 8px;
@@ -1050,6 +1054,29 @@ img {
 	border-top: 1px solid rgba(23, 34, 53, 0.08);
 }
 
+.footer__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+}
+
+.footer__links {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+.footer__links a {
+	color: var(--text-secondary);
+	font-weight: 600;
+}
+
+.publication-strip {
+	margin-top: 0;
+}
+
 @media (max-width: 980px) {
 	.hero__grid,
 	.result-grid,
@@ -1073,7 +1100,8 @@ img {
 
 	.topbar__inner,
 	.result-header,
-	.section__header {
+	.section__header,
+	.footer__inner {
 		align-items: start;
 		flex-direction: column;
 	}

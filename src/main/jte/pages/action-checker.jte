@@ -48,6 +48,7 @@
 
 <section class="section">
     <div class="shell">
+        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Routing interface")
         <div class="dossier-strip dossier-strip--compact">
             <article class="dossier-cell">
                 <span class="dossier-cell__label">Step 01</span>

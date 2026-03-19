@@ -1,7 +1,9 @@
 @import com.example.pfas.water.PublicWaterSystem
+@import com.example.pfas.web.GuidePage
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param java.util.List<PublicWaterSystem> systems
+@param java.util.List<GuidePage> guides
 
 @template.layout.base(
     pageTitle = "PFAS Decision Engine",
@@ -22,7 +24,7 @@
                 </p>
                 <div class="hero__actions">
                     <a class="button button--primary" href="/checker">Open Action Checker</a>
-                    <a class="button button--secondary" href="/public-water/PA1510001">Open seeded public-water result</a>
+                    <a class="button button--secondary" href="/methodology">Open methodology</a>
                 </div>
                 <div class="meta-grid">
                     <article class="meta-tile">
@@ -83,6 +85,12 @@
 
 <section class="section">
     <div class="shell">
+        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Decision engine homepage")
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell">
         <div class="section__header">
             <div>
                 <p class="section__label">Interpretation method</p>
@@ -112,6 +120,35 @@
                     <p class="ledger-item__copy">Point-of-use stays first. Whole-house remains a separate, justified escalation.</p>
                 </div>
             </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell">
+        <div class="section__header">
+            <div>
+                <p class="section__label">Entry pages</p>
+                <h2 class="section__title">High-intent guides before scaled expansion</h2>
+                <p class="section__copy">These pages are meant to solve real routing questions before any broad coverage play opens.</p>
+            </div>
+        </div>
+        <div class="systems-grid">
+            @for (var guide : guides)
+                <article class="card">
+                    <p class="card__label">${guide.eyebrow()}</p>
+                    <h3 class="card__title">${guide.title()}</h3>
+                    <p class="card__copy">${guide.lede()}</p>
+                    <div class="chip-row">
+                        <span class="chip">Last verified ${guide.lastVerifiedDate()}</span>
+                        <span class="chip">Decision-intent</span>
+                    </div>
+                    <div class="button-row">
+                        <a class="button button--primary" href="/guides/${guide.slug()}">Open guide</a>
+                        <a class="button button--secondary" href="${guide.primaryHref()}">${guide.primaryLabel()}</a>
+                    </div>
+                </article>
+            @endfor
         </div>
     </div>
 </section>
