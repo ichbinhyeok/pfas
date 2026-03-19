@@ -688,6 +688,18 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsStaticExportManifest() throws Exception {
+		mockMvc.perform(get("/internal/derived/static-export-manifest"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":22")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/7360058\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/read-your-ccr/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")));
+	}
+
+	@Test
 	void rendersGuidePage() throws Exception {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())

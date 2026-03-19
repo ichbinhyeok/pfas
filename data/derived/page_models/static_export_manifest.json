@@ -1,0 +1,138 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:16:36.365768700+09:00",
+  "item_count" : 22,
+  "items" : [ {
+    "path" : "/",
+    "output_path" : "index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "fixed_page"
+  }, {
+    "path" : "/checker",
+    "output_path" : "checker/index.html",
+    "content_kind" : "html",
+    "indexable" : false,
+    "source_kind" : "fixed_page"
+  }, {
+    "path" : "/methodology",
+    "output_path" : "methodology/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "fixed_page"
+  }, {
+    "path" : "/source-policy",
+    "output_path" : "source-policy/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "fixed_page"
+  }, {
+    "path" : "/css/app.css",
+    "output_path" : "css/app.css",
+    "content_kind" : "asset",
+    "indexable" : false,
+    "source_kind" : "asset"
+  }, {
+    "path" : "/favicon.svg",
+    "output_path" : "favicon.svg",
+    "content_kind" : "asset",
+    "indexable" : false,
+    "source_kind" : "asset"
+  }, {
+    "path" : "/guides/nsf-53-vs-58-pfas",
+    "output_path" : "guides/nsf-53-vs-58-pfas/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/guides/pfas-filter-annual-cost",
+    "output_path" : "guides/pfas-filter-annual-cost/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/guides/public-water-vs-private-well",
+    "output_path" : "guides/public-water-vs-private-well/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/guides/read-your-ccr",
+    "output_path" : "guides/read-your-ccr/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/guides/test-first-vs-filter-first",
+    "output_path" : "guides/test-first-vs-filter-first/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/guides/under-sink-vs-whole-house",
+    "output_path" : "guides/under-sink-vs-whole-house/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/public-water/7360058",
+    "output_path" : "public-water/7360058/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/public-water/PA1510001",
+    "output_path" : "public-water/PA1510001/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/CA",
+    "output_path" : "private-well/CA/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/MA",
+    "output_path" : "private-well/MA/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/MI",
+    "output_path" : "private-well/MI/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/MN",
+    "output_path" : "private-well/MN/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/NY",
+    "output_path" : "private-well/NY/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/private-well/WA",
+    "output_path" : "private-well/WA/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model"
+  }, {
+    "path" : "/public-water-system/7360058",
+    "output_path" : "public-water-system/7360058/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "public_water_support_page"
+  }, {
+    "path" : "/public-water-system/PA1510001",
+    "output_path" : "public-water-system/PA1510001/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "public_water_support_page"
+  } ]
+}
