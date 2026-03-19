@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:33.139856800+09:00",
+  "generated_at" : "2026-03-20T00:56:53.528766100+09:00",
   "document_count" : 14,
   "documents" : [ {
     "document_id" : "guide:nsf-53-vs-58-pfas",
@@ -8,10 +8,10 @@
     "route_key" : "nsf-53-vs-58-pfas",
     "url" : "/guides/nsf-53-vs-58-pfas",
     "title" : "NSF 53 vs 58 is not enough by itself for PFAS decisions",
-    "summary" : "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit.",
+    "summary" : "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit. A product should only open if the exact model has direct PFAS claim support and the maintenance burden still makes sense for the household.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 4,
     "keywords" : [ "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:pfas-filter-annual-cost",
@@ -19,10 +19,10 @@
     "route_key" : "pfas-filter-annual-cost",
     "url" : "/guides/pfas-filter-annual-cost",
     "title" : "PFAS filter annual cost matters because maintenance changes the real decision",
-    "summary" : "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
+    "summary" : "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable. Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 4,
     "keywords" : [ "pfas filter annual cost", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:public-water-vs-private-well",
@@ -30,10 +30,10 @@
     "route_key" : "public-water-vs-private-well",
     "url" : "/guides/public-water-vs-private-well",
     "title" : "Public water vs private well is the first split, not a small detail",
-    "summary" : "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
+    "summary" : "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance. Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 3,
     "keywords" : [ "public water vs private well", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:read-your-ccr",
@@ -41,10 +41,10 @@
     "route_key" : "read-your-ccr",
     "url" : "/guides/read-your-ccr",
     "title" : "How to read your CCR or utility report without turning it into a false household verdict",
-    "summary" : "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
+    "summary" : "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists. Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 5,
     "keywords" : [ "read your ccr", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:test-first-vs-filter-first",
@@ -52,10 +52,10 @@
     "route_key" : "test-first-vs-filter-first",
     "url" : "/guides/test-first-vs-filter-first",
     "title" : "Test first vs filter first is mostly a question about evidence quality",
-    "summary" : "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
+    "summary" : "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists. Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 3,
     "keywords" : [ "test first vs filter first", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:under-sink-vs-whole-house",
@@ -63,10 +63,10 @@
     "route_key" : "under-sink-vs-whole-house",
     "url" : "/guides/under-sink-vs-whole-house",
     "title" : "Under-sink vs whole-house should start with purpose, not fear",
-    "summary" : "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
+    "summary" : "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified. Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
     "last_verified_date" : "2026-03-19",
     "indexable" : true,
-    "source_count" : 0,
+    "source_count" : 4,
     "keywords" : [ "under sink vs whole house", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "public_water:7360058",

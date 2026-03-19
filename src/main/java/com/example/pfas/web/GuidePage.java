@@ -12,6 +12,8 @@ public record GuidePage(
 	List<String> whyThis,
 	List<String> whatThisDoesNotTellYou,
 	List<String> checklist,
+	List<String> evidenceHighlights,
+	List<String> sourceIds,
 	String primaryHref,
 	String primaryLabel,
 	String secondaryHref,

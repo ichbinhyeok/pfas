@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:33.371321+09:00",
+  "generated_at" : "2026-03-20T00:56:53.697787700+09:00",
   "model_id" : "guide:public-water-vs-private-well",
   "route_type" : "guide",
   "route_key" : "public-water-vs-private-well",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-19",
-  "source_count" : 0,
+  "source_count" : 3,
   "payload" : {
     "guide" : {
       "slug" : "public-water-vs-private-well",
@@ -21,6 +21,8 @@
       "whyThis" : [ "Public water has utility and regulator records that can act as direct evidence.", "Private wells are owner-managed and need a test-first route.", "The same PFAS question becomes a different next action depending on source type." ],
       "whatThisDoesNotTellYou" : [ "This split does not tell you whether the water is safe or unsafe.", "It does not replace a direct utility document or a direct well test.", "It does not justify whole-house by itself." ],
       "checklist" : [ "Identify the water source first.", "If public water, open the utility path.", "If private well, open the state-guided testing path." ],
+      "evidenceHighlights" : [ "EPA CCR guidance establishes public-water reporting as a direct-evidence path.", "EPA private-well guidance keeps testing owner-driven and state-guided.", "The first split is evidence system, not product category." ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-private-wells", "epa-pfas-private-wells" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/test-first-vs-filter-first",

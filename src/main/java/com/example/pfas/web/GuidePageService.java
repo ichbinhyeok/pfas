@@ -36,6 +36,16 @@ public class GuidePageService {
 					"If public water, open the utility path.",
 					"If private well, open the state-guided testing path."
 				),
+				List.of(
+					"EPA CCR guidance establishes public-water reporting as a direct-evidence path.",
+					"EPA private-well guidance keeps testing owner-driven and state-guided.",
+					"The first split is evidence system, not product category."
+				),
+				List.of(
+					"epa-ccr-consumer-info",
+					"epa-private-wells",
+					"epa-pfas-private-wells"
+				),
 				"/checker",
 				"Open Action Checker",
 				"/guides/test-first-vs-filter-first",
@@ -64,6 +74,16 @@ public class GuidePageService {
 					"Public water without direct records: start with the utility.",
 					"Private well without a test: start with state-guided testing.",
 					"Only then compare certified point-of-use."
+				),
+				List.of(
+					"EPA private-well guidance keeps direct testing ahead of shopping.",
+					"EPA filter guidance supports certification-first product review, not product-first routing.",
+					"CCR context is the public-water equivalent of a test-first branch."
+				),
+				List.of(
+					"epa-ccr-consumer-info",
+					"epa-pfas-private-wells",
+					"epa-certified-pfas-filter-guidance"
 				),
 				"/checker",
 				"Open Action Checker",
@@ -94,6 +114,18 @@ public class GuidePageService {
 					"Check the report date.",
 					"Open any newer PFAS notice or utility PFAS page."
 				),
+				List.of(
+					"EPA says community water systems deliver annual CCRs by July 1, but newer PFAS notices can still outrank an older report.",
+					"Philadelphia and Lancaster show how a CCR and a newer PFAS page or notice need to be read together.",
+					"The CCR is a routing layer into the direct utility record, not a household verdict."
+				),
+				List.of(
+					"epa-ccr-consumer-info",
+					"phila-2024-water-quality-report",
+					"phila-pfas-management",
+					"lancaster-2024-water-quality-report",
+					"lancaster-pfoa-notice-2025"
+				),
 				"/public-water-system/PA1510001",
 				"Open seeded utility context",
 				"/checker",
@@ -122,6 +154,17 @@ public class GuidePageService {
 					"Check the exact model.",
 					"Check the PFAS claim language.",
 					"Check replacement cadence and annual ownership cost."
+				),
+				List.of(
+					"EPA filter guidance says current certification should not be treated as automatic proof of every current EPA benchmark.",
+					"NSF listing directories and PFAS guidance pages support claim-level verification over badge-only reading.",
+					"Model-specific listing records matter more than broad standard shorthand."
+				),
+				List.of(
+					"epa-certified-pfas-filter-guidance",
+					"nsf-pfas-drinking-water-article",
+					"nsf-dwtu-listings",
+					"nsf-espring-listing-053"
 				),
 				"/source-policy",
 				"Open source policy",
@@ -152,6 +195,17 @@ public class GuidePageService {
 					"Compare against certified point-of-use first.",
 					"Only then review whole-house as an escalation."
 				),
+				List.of(
+					"EPA filter guidance centers certified point-of-use for ingestion-focused PFAS reduction.",
+					"EPA fact-sheet framing and model data sheets keep maintenance and install burden visible.",
+					"Whole-house becomes a justified escalation only after a broader household objective is explicit."
+				),
+				List.of(
+					"epa-certified-pfas-filter-guidance",
+					"epa-water-filter-fact-sheet-2024-04",
+					"aq-claryum-direct-connect-install-pdf",
+					"amway-espring-122941-product"
+				),
 				"/checker",
 				"Open Action Checker",
 				"/guides/pfas-filter-annual-cost",
@@ -180,6 +234,17 @@ public class GuidePageService {
 					"Check replacement cadence.",
 					"Check annual cartridge cost.",
 					"Compare burden before upgrading the treatment class."
+				),
+				List.of(
+					"EPA filter guidance supports comparing upkeep and replacement burden, not just upfront price.",
+					"Aquasana and Amway product records provide model-specific cadence and replacement pricing inputs.",
+					"Annual ownership belongs beside the interpretation result because maintenance changes product fit."
+				),
+				List.of(
+					"epa-certified-pfas-filter-guidance",
+					"aq-claryum-direct-connect-product",
+					"aq-claryum-direct-connect-replacement",
+					"amway-espring-100186-cartridge"
 				),
 				"/checker",
 				"Open Action Checker",

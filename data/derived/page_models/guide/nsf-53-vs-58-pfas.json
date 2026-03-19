@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:33.371321+09:00",
+  "generated_at" : "2026-03-20T00:56:53.696789700+09:00",
   "model_id" : "guide:nsf-53-vs-58-pfas",
   "route_type" : "guide",
   "route_key" : "nsf-53-vs-58-pfas",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-19",
-  "source_count" : 0,
+  "source_count" : 4,
   "payload" : {
     "guide" : {
       "slug" : "nsf-53-vs-58-pfas",
@@ -21,6 +21,8 @@
       "whyThis" : [ "Standard numbers without claim scope can be misleading.", "Claim-level support matters more than broad category language.", "Replacement burden can matter as much as the upfront badge." ],
       "whatThisDoesNotTellYou" : [ "This guide does not make one standard universally better for everyone.", "It does not replace model-specific listing verification.", "It does not mean certification equals every current regulatory benchmark." ],
       "checklist" : [ "Check the exact model.", "Check the PFAS claim language.", "Check replacement cadence and annual ownership cost." ],
+      "evidenceHighlights" : [ "EPA filter guidance says current certification should not be treated as automatic proof of every current EPA benchmark.", "NSF listing directories and PFAS guidance pages support claim-level verification over badge-only reading.", "Model-specific listing records matter more than broad standard shorthand." ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-pfas-drinking-water-article", "nsf-dwtu-listings", "nsf-espring-listing-053" ],
       "primaryHref" : "/source-policy",
       "primaryLabel" : "Open source policy",
       "secondaryHref" : "/checker",

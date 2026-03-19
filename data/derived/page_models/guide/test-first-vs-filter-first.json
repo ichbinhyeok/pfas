@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:33.371321+09:00",
+  "generated_at" : "2026-03-20T00:56:53.697787700+09:00",
   "model_id" : "guide:test-first-vs-filter-first",
   "route_type" : "guide",
   "route_key" : "test-first-vs-filter-first",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-19",
-  "source_count" : 0,
+  "source_count" : 3,
   "payload" : {
     "guide" : {
       "slug" : "test-first-vs-filter-first",
@@ -21,6 +21,8 @@
       "whyThis" : [ "Direct evidence changes what kind of product is even appropriate.", "Testing and interpretation help avoid overbuying.", "Certification is meaningful only after the household path is defined." ],
       "whatThisDoesNotTellYou" : [ "This does not mean nobody should ever buy a filter before testing.", "It does mean the project should not normalize product-first advice as the baseline.", "It does not prove a future benchmark relation without direct data." ],
       "checklist" : [ "Public water without direct records: start with the utility.", "Private well without a test: start with state-guided testing.", "Only then compare certified point-of-use." ],
+      "evidenceHighlights" : [ "EPA private-well guidance keeps direct testing ahead of shopping.", "EPA filter guidance supports certification-first product review, not product-first routing.", "CCR context is the public-water equivalent of a test-first branch." ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",

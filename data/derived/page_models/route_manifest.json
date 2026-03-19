@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:32.933509600+09:00",
+  "generated_at" : "2026-03-20T00:56:53.362436900+09:00",
   "route_count" : 14,
   "routes" : [ {
     "route_type" : "guide",
@@ -12,7 +12,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
   }, {
@@ -25,7 +25,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "pfas filter annual cost", "PFAS", "water", "decision guide" ]
   }, {
@@ -38,7 +38,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 3,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "public water vs private well", "PFAS", "water", "decision guide" ]
   }, {
@@ -51,7 +51,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 5,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "read your ccr", "PFAS", "water", "decision guide" ]
   }, {
@@ -64,7 +64,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 3,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "test first vs filter first", "PFAS", "water", "decision guide" ]
   }, {
@@ -77,7 +77,7 @@
     "api_path" : null,
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
-    "source_count" : 0,
+    "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "under sink vs whole house", "PFAS", "water", "decision guide" ]
   }, {

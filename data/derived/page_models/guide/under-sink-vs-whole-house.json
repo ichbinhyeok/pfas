@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:30:33.371321+09:00",
+  "generated_at" : "2026-03-20T00:56:53.697787700+09:00",
   "model_id" : "guide:under-sink-vs-whole-house",
   "route_type" : "guide",
   "route_key" : "under-sink-vs-whole-house",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-19",
-  "source_count" : 0,
+  "source_count" : 4,
   "payload" : {
     "guide" : {
       "slug" : "under-sink-vs-whole-house",
@@ -21,6 +21,8 @@
       "whyThis" : [ "Whole-house systems have higher ownership and maintenance consequences.", "Many households are really solving for ingestion-focused use.", "The project should not turn uncertainty into a whole-home upsell." ],
       "whatThisDoesNotTellYou" : [ "This guide does not say whole-house is never appropriate.", "It says whole-house needs a stronger justification than product-first fear.", "It does not replace current utility or state guidance." ],
       "checklist" : [ "Define the household objective.", "Compare against certified point-of-use first.", "Only then review whole-house as an escalation." ],
+      "evidenceHighlights" : [ "EPA filter guidance centers certified point-of-use for ingestion-focused PFAS reduction.", "EPA fact-sheet framing and model data sheets keep maintenance and install burden visible.", "Whole-house becomes a justified escalation only after a broader household objective is explicit." ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-water-filter-fact-sheet-2024-04", "aq-claryum-direct-connect-install-pdf", "amway-espring-122941-product" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",

@@ -46,9 +46,15 @@ public class GuidePagesController {
 	public String guide(@PathVariable String slug, Model model) {
 		var page = guidePageService.getBySlug(slug)
 			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown guide slug: " + slug));
+		var guideSources = page.sourceIds().stream()
+			.map(sourceRegistryService::getDocument)
+			.flatMap(java.util.Optional::stream)
+			.sorted(java.util.Comparator.comparingInt(SourceDocument::trustTier).thenComparing(SourceDocument::organization))
+			.toList();
 
 		model.addAttribute("page", page);
 		model.addAttribute("allGuides", guidePageService.getAll());
+		model.addAttribute("guideSources", guideSources);
 		return "pages/guide-page";
 	}
 

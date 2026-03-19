@@ -731,7 +731,11 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public water vs private well is the first split, not a small detail")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-intent guide")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-intent guide")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("How this guide was built")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("CCR Information for Consumers")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in Private Wells")));
 	}
 
 	@Test

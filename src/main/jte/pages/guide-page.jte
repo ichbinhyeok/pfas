@@ -1,8 +1,10 @@
 @import java.util.List
+@import com.example.pfas.source.SourceDocument
 @import com.example.pfas.web.GuidePage
 @param String siteBaseUrl
 @param GuidePage page
 @param List<GuidePage> allGuides
+@param List<SourceDocument> guideSources
 
 @template.layout.base(
     pageTitle = page.title(),
@@ -25,6 +27,29 @@
         </div>
 
         @template.fragments.publicationStrip(lastVerified = page.lastVerifiedDate(), scopeLabel = "Decision-intent guide")
+
+        <div class="dossier-strip">
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Guide type</span>
+                <span class="dossier-cell__value">Manual decision guide</span>
+                <span class="dossier-cell__copy">Curated for high-intent PFAS routing questions.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Evidence basis</span>
+                <span class="dossier-cell__value">${guideSources.size()} linked source records</span>
+                <span class="dossier-cell__copy">Official guidance, utility documents, listings, or product records.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Guide posture</span>
+                <span class="dossier-cell__value">Action-first</span>
+                <span class="dossier-cell__copy">No safe/unsafe claim. No reviewer fiction. No generic roundup logic.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Verification</span>
+                <span class="dossier-cell__value">${page.lastVerifiedDate()}</span>
+                <span class="dossier-cell__copy">Guide copy is tied to the linked source set below.</span>
+            </article>
+        </div>
 
         <div class="result-grid">
             <div class="stack">
@@ -54,6 +79,15 @@
                         @endfor
                     </ul>
                 </section>
+
+                <section class="card">
+                    <p class="card__label">How this guide was built</p>
+                    <ul class="list">
+                        <li>Manual editorial synthesis over linked official and listing records.</li>
+                        <li>Routing logic stays aligned with the engine's decision table and source policy.</li>
+                        <li>Commercial records are used only for product, cost, or maintenance context, not household risk truth.</li>
+                    </ul>
+                </section>
             </div>
 
             <aside class="stack">
@@ -64,6 +98,28 @@
                             <li>${item}</li>
                         @endfor
                     </ul>
+                </section>
+
+                <section class="rail-card">
+                    <h2 class="rail-card__title">Evidence basis</h2>
+                    <ul class="list">
+                        @for(var item : page.evidenceHighlights())
+                            <li>${item}</li>
+                        @endfor
+                    </ul>
+                </section>
+
+                <section class="rail-card">
+                    <h2 class="rail-card__title">Primary source ledger</h2>
+                    <div class="source-list">
+                        @for(var source : guideSources)
+                            <a class="source-item" href="${source.url()}">
+                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                <div class="source-item__title">${source.title()}</div>
+                                <div class="source-item__url">${source.url()}</div>
+                            </a>
+                        @endfor
+                    </div>
                 </section>
 
                 <section class="rail-card">

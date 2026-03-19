@@ -230,7 +230,7 @@ public class DerivedArtifactService {
 			null,
 			true,
 			page.lastVerifiedDate(),
-			0,
+			page.sourceIds().size(),
 			"curated_guide",
 			guideKeywords(page)
 		);
@@ -243,10 +243,10 @@ public class DerivedArtifactService {
 			page.slug(),
 			"/guides/" + page.slug(),
 			page.title(),
-			page.lede(),
+			page.lede() + " " + page.nextActionSummary(),
 			page.lastVerifiedDate(),
 			true,
-			0,
+			page.sourceIds().size(),
 			guideKeywords(page)
 		);
 	}
@@ -405,7 +405,7 @@ public class DerivedArtifactService {
 			"static_file_seed",
 			true,
 			page.lastVerifiedDate(),
-			0,
+			page.sourceIds().size(),
 			new GuidePageModelPayload(page)
 		);
 	}
