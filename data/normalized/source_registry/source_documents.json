@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T18:05:00+09:00",
+  "generated_at": "2026-03-20T19:20:00+09:00",
   "documents": [
     {
       "source_id": "epa-pfas-npdwr-implementation",
@@ -1944,6 +1944,224 @@
         "third-party listing replacement"
       ],
       "notes": "SmartFlow performance data states WQA tested and certified claims including PFOA and PFOS reduction."
+    },
+    {
+      "source_id": "sunshine-water-home",
+      "organization": "Sunshine Water Services",
+      "title": "Sunshine Water Services",
+      "url": "https://www.myutility.us/sunshinewater",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Sunshine Water Services utility homepage."
+    },
+    {
+      "source_id": "sunshine-water-quality-reports",
+      "organization": "Sunshine Water Services",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Sunshine Water Services report index used to locate Bear Lake system-specific PDFs."
+    },
+    {
+      "source_id": "bear-lake-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Bear Lake CCR 015",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/bear-lake/2024/bearlake-24ccr-015.pdf?sfvrsn=ffb43f5b_8",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Bear Lake CCR showing PWS ID FL3590069, Sunshine Water Services ownership, and groundwater system context."
+    },
+    {
+      "source_id": "bear-lake-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Bear Lake",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/bear-lake/2023/bear-lake-pfas-2023.pdf?sfvrsn=a0173b5b_2",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": "2023-12-19",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Bear Lake PFAS report with 2023 average values for PFOA, PFOS, PFHxS, PFNA, and HFPO-DA."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-product",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-3-stage/brushed-nickel-100391689.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana product page for Claryum 3-Stage showing current discounted price, PFAS claim language, and six-month replacement guidance."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-replacement",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage Filter Replacements",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-filter-replacements-100236384.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official replacement page for the Claryum 3-Stage cartridges showing current replacement pricing and six-month cadence."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-performance-pdf",
+      "organization": "Aquasana",
+      "title": "AQ-6300 Performance Data",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw9c1b6a70/PDF/AQ-6300_Performance_Data.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Aquasana performance data for AQ-6300 stating WQA tested and certified claims including PFOA and PFOS reduction."
+    },
+    {
+      "source_id": "aq-clean-water-machine-product",
+      "organization": "Aquasana",
+      "title": "Clean Water Machine",
+      "url": "https://www.aquasana.com/countertop-water-filters/clean-water-machine/black-100348638.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana product page for Clean Water Machine showing current discounted price and WQA certification language."
+    },
+    {
+      "source_id": "aq-clean-water-machine-replacement",
+      "organization": "Aquasana",
+      "title": "Clean Water Machine Filter Replacement 2-Pack",
+      "url": "https://www.aquasana.com/water-filter-replacements/countertop-water-filter-replacements/new-cwm-lead-filter-replacement-2-pack-100350840.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official replacement page for the Clean Water Machine cartridges showing current replacement pricing and six-month cadence."
+    },
+    {
+      "source_id": "aq-clean-water-machine-performance-pdf",
+      "organization": "Aquasana",
+      "title": "AQ-CWM2 Performance Data",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw432c7ce8/PDF/AQ-CWM2_Performance_Data.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Aquasana performance data for AQ-CWM2 stating WQA tested and certified claims including PFOA and PFOS reduction."
     }
   ]
 }

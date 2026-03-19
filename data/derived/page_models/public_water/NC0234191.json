@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T03:36:09.163754300+09:00",
+  "generated_at" : "2026-03-20T04:09:32.210262500+09:00",
   "model_id" : "public_water:NC0234191",
   "route_type" : "public_water",
   "route_key" : "NC0234191",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:NC0234191",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T03:36:09.155376800+09:00",
+      "generated_at" : "2026-03-20T04:09:32.202192900+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -45,10 +45,10 @@
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
       "annual_cost_maintenance" : {
-        "range_low_usd" : 147.98,
+        "range_low_usd" : 146.98,
         "range_high_usd" : 280.00,
         "maintenance_burden" : "high",
-        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet primary replacement cadence: every 12 months.", "Aquasana Claryum 2-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow primary replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect primary replacement cadence: every 6 months.", "Aquasana SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block replacements: every 6 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow membrane replacement: every 12 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow remineralizer replacement: every 6 months." ],
+        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet primary replacement cadence: every 12 months.", "Aquasana Claryum 2-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow primary replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect primary replacement cadence: every 6 months.", "Aquasana Clean Water Machine primary replacement cadence: every 6 months.", "Aquasana SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block replacements: every 6 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow membrane replacement: every 12 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow remineralizer replacement: every 6 months." ],
         "notes" : [ "Annual maintenance annualizes normalized replacement media pricing by cadence and adds any normalized recurring membrane or service inputs." ]
       },
       "certification_checklist" : [ {
@@ -68,6 +68,13 @@
         "source_id" : "amway-espring-100186-cartridge"
       } ],
       "best_fit_options" : [ {
+        "option_code" : "AQUASANA_AQ_CWM2",
+        "label" : "Aquasana Clean Water Machine",
+        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
+        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "cost_profile" : "low",
+        "maintenance_burden" : "high"
+      }, {
         "option_code" : "AQUASANA_AQ_6200",
         "label" : "Aquasana Claryum 2-Stage",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
@@ -77,13 +84,6 @@
       }, {
         "option_code" : "AQUASANA_AQ_MF_1",
         "label" : "Aquasana Claryum Direct Connect",
-        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
-        "cost_profile" : "low",
-        "maintenance_burden" : "high"
-      }, {
-        "option_code" : "AQUASANA_AQ_6300M",
-        "label" : "Aquasana Claryum 3-Stage Max Flow",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
         "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
         "cost_profile" : "low",
@@ -175,6 +175,24 @@
         "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-max-flow-filter-replacements-100236367.html",
         "trust_tier" : 4
       }, {
+        "source_id" : "aq-claryum-3-stage-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-6300 Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw9c1b6a70/PDF/AQ-6300_Performance_Data.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-3-stage-product",
+        "organization" : "Aquasana",
+        "title" : "Claryum 3-Stage",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/claryum-3-stage/brushed-nickel-100391689.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-3-stage-replacement",
+        "organization" : "Aquasana",
+        "title" : "Claryum 3-Stage Filter Replacements",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-filter-replacements-100236384.html",
+        "trust_tier" : 4
+      }, {
         "source_id" : "aq-claryum-direct-connect-install-pdf",
         "organization" : "Aquasana",
         "title" : "Claryum Direct Connect Install and Performance Data Sheet",
@@ -191,6 +209,24 @@
         "organization" : "Aquasana",
         "title" : "Claryum Direct Connect Replacement Cartridge",
         "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-direct-connect-replacement-cartridge-100329887.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-clean-water-machine-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-CWM2 Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw432c7ce8/PDF/AQ-CWM2_Performance_Data.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-clean-water-machine-product",
+        "organization" : "Aquasana",
+        "title" : "Clean Water Machine",
+        "url" : "https://www.aquasana.com/countertop-water-filters/clean-water-machine/black-100348638.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-clean-water-machine-replacement",
+        "organization" : "Aquasana",
+        "title" : "Clean Water Machine Filter Replacement 2-Pack",
+        "url" : "https://www.aquasana.com/water-filter-replacements/countertop-water-filter-replacements/new-cwm-lead-filter-replacement-2-pack-100350840.html",
         "trust_tier" : 4
       }, {
         "source_id" : "aq-smartflow-ro-carbon-replacements",

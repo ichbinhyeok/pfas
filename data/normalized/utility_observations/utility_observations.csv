@@ -29,3 +29,8 @@ carolina-trace-pfoa-amount-detected-2024,NC0353101,PFOA,Perfluorooctanoic acid,s
 carolina-trace-pfos-amount-detected-2024,NC0353101,PFOS,Perfluorooctane sulfonate,system_amount_detected_2024,2024-01-01,2024-12-31,,10.75,ppt,reported,,us_pfos_mcl_2024,carolina-trace-2024-water-quality-report
 carolina-trace-pfhxs-amount-detected-2024,NC0353101,PFHxS,Perfluorohexanesulfonic acid,system_amount_detected_2024,2024-01-01,2024-12-31,,1.78,ppt,reported,,us_pfhxs_mcl_2024,carolina-trace-2024-water-quality-report
 carolina-trace-pfna-amount-detected-2024,NC0353101,PFNA,Perfluorononanoic acid,system_amount_detected_2024,2024-01-01,2024-12-31,,0.11,ppt,reported,,us_pfna_mcl_2024,carolina-trace-2024-water-quality-report
+bear-lake-pfoa-average-2023,FL3590069,PFOA,Perfluorooctanoic acid,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,3.25,ppt,reported,,us_pfoa_mcl_2024,bear-lake-pfas-2023-report
+bear-lake-pfos-average-2023,FL3590069,PFOS,Perfluorooctane sulfonate,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,2.9,ppt,reported,,us_pfos_mcl_2024,bear-lake-pfas-2023-report
+bear-lake-pfhxs-average-2023,FL3590069,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,3.1,ppt,reported,,us_pfhxs_mcl_2024,bear-lake-pfas-2023-report
+bear-lake-pfna-average-2023,FL3590069,PFNA,Perfluorononanoic acid,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,0,ppt,not_detected,,us_pfna_mcl_2024,bear-lake-pfas-2023-report
+bear-lake-hfpoda-average-2023,FL3590069,HFPO-DA,HFPO-DA (GenX),separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,0,ppt,not_detected,,us_hfpoda_mcl_2024,bear-lake-pfas-2023-report

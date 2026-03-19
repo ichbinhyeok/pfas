@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T18:05:00+09:00",
+  "generated_at": "2026-03-20T19:20:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-alaska-water-home-20260320",
@@ -248,6 +248,58 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Green Ridge 2024 report with PWS ID MD0120011 and March 2024 PFAS results."
+    },
+    {
+      "raw_source_id": "raw-sunshine-water-home-20260320",
+      "source_id": "sunshine-water-home",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.myutility.us/sunshinewater",
+      "organization": "Sunshine Water Services",
+      "title": "Sunshine Water Services",
+      "content_type": "text/html",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Sunshine Water Services homepage."
+    },
+    {
+      "raw_source_id": "raw-sunshine-water-quality-reports-20260320",
+      "source_id": "sunshine-water-quality-reports",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "organization": "Sunshine Water Services",
+      "title": "Water Quality Reports",
+      "content_type": "text/html",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Sunshine Water Services report index used to locate Bear Lake reports."
+    },
+    {
+      "raw_source_id": "raw-bear-lake-2024-water-quality-report-20260320",
+      "source_id": "bear-lake-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/bear-lake/2024/bearlake-24ccr-015.pdf?sfvrsn=ffb43f5b_8",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Bear Lake CCR 015",
+      "content_type": "application/pdf",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Bear Lake CCR PDF with PWS ID FL3590069, groundwater source context, and 2024 system profile details."
+    },
+    {
+      "raw_source_id": "raw-bear-lake-pfas-2023-report-20260320",
+      "source_id": "bear-lake-pfas-2023-report",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/bear-lake/2023/bear-lake-pfas-2023.pdf?sfvrsn=a0173b5b_2",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Bear Lake",
+      "content_type": "application/pdf",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Bear Lake PFAS report with 2023 average values for PFOA, PFOS, PFHxS, PFNA, and HFPO-DA."
     }
   ]
 }

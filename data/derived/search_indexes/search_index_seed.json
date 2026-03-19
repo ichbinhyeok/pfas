@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T03:36:08.347226300+09:00",
-  "document_count" : 21,
+  "generated_at" : "2026-03-20T04:09:31.293574400+09:00",
+  "document_count" : 22,
   "documents" : [ {
     "document_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
@@ -101,6 +101,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "College Utilities Corporation", "AK", "AK2310900", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL3590069",
+    "route_type" : "public_water",
+    "route_key" : "FL3590069",
+    "url" : "/public-water/FL3590069",
+    "title" : "Bear Lake Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Bear Lake Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:MD0120011",
     "route_type" : "public_water",

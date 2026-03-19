@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T14:15:00+09:00",
+  "generated_at": "2026-03-20T19:20:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-amway-espring-122941-product-20260319",
@@ -209,6 +209,84 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "SmartFlow performance data sheet with WQA certification language and PFOA/PFOS claim context."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-3-stage-product-20260320",
+      "source_id": "aq-claryum-3-stage-product",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-3-stage/brushed-nickel-100391689.html",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official product page showing current price, PFAS marketing statement, and six-month replacement guidance."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-3-stage-replacement-20260320",
+      "source_id": "aq-claryum-3-stage-replacement",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-filter-replacements-100236384.html",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage Filter Replacements",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official replacement page showing current cartridge pricing and six-month cadence."
+    },
+    {
+      "raw_source_id": "raw-aq-claryum-3-stage-performance-pdf-20260320",
+      "source_id": "aq-claryum-3-stage-performance-pdf",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw9c1b6a70/PDF/AQ-6300_Performance_Data.pdf",
+      "organization": "Aquasana",
+      "title": "AQ-6300 Performance Data",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Aquasana performance data sheet with WQA certification language and PFOA/PFOS claim context."
+    },
+    {
+      "raw_source_id": "raw-aq-clean-water-machine-product-20260320",
+      "source_id": "aq-clean-water-machine-product",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/countertop-water-filters/clean-water-machine/black-100348638.html",
+      "organization": "Aquasana",
+      "title": "Clean Water Machine",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Clean Water Machine product page showing current price and WQA certification statement."
+    },
+    {
+      "raw_source_id": "raw-aq-clean-water-machine-replacement-20260320",
+      "source_id": "aq-clean-water-machine-replacement",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/water-filter-replacements/countertop-water-filter-replacements/new-cwm-lead-filter-replacement-2-pack-100350840.html",
+      "organization": "Aquasana",
+      "title": "Clean Water Machine Filter Replacement 2-Pack",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official replacement page showing current cartridge pricing and six-month cadence."
+    },
+    {
+      "raw_source_id": "raw-aq-clean-water-machine-performance-pdf-20260320",
+      "source_id": "aq-clean-water-machine-performance-pdf",
+      "retrieved_at": "2026-03-20T19:20:00+09:00",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw432c7ce8/PDF/AQ-CWM2_Performance_Data.pdf",
+      "organization": "Aquasana",
+      "title": "AQ-CWM2 Performance Data",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Aquasana performance data sheet with WQA certification language and PFOA/PFOS claim context."
     }
   ]
 }
