@@ -42,8 +42,12 @@ public class ActionCheckerService {
 		var normalizedBenchmarkRelation = parseEnum(benchmarkRelation, ActionBenchmarkRelation.class, ActionBenchmarkRelation.UNKNOWN);
 		var normalizedCurrentFilterStatus = parseEnum(currentFilterStatus, ActionCurrentFilterStatus.class, ActionCurrentFilterStatus.NONE);
 		var normalizedShoppingIntent = parseEnum(shoppingIntent, ActionShoppingIntent.class, ActionShoppingIntent.NONE);
-		var normalizedStateCode = resolveStateCode(stateCode);
-		var normalizedPwsid = resolvePwsid(pwsid);
+		var normalizedStateCode = normalizedWaterSource == ActionWaterSource.PRIVATE_WELL
+			? resolveStateCode(stateCode)
+			: null;
+		var normalizedPwsid = normalizedWaterSource == ActionWaterSource.PUBLIC_WATER
+			? resolvePwsid(pwsid)
+			: null;
 
 		if (normalizedWaterSource == ActionWaterSource.PUBLIC_WATER
 			&& normalizedDirectData == ActionDirectDataStatus.PRIVATE_WELL_TEST) {
@@ -62,11 +66,11 @@ public class ActionCheckerService {
 
 		if (normalizedWaterSource == ActionWaterSource.PRIVATE_WELL) {
 			normalizedIndirectData = ActionIndirectDataStatus.NONE;
-			normalizedPwsid = resolvePwsid(null);
+			normalizedPwsid = null;
 		}
 
 		if (normalizedWaterSource == ActionWaterSource.PUBLIC_WATER) {
-			normalizedStateCode = resolveStateCode(null);
+			normalizedStateCode = null;
 		}
 
 		return new ActionCheckerSelection(

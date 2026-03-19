@@ -10,9 +10,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.data.PfasDataProperties;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.readiness.ExpansionReadinessStatus;
+import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.water.PublicWaterSystemService;
 import com.example.pfas.web.GuidePage;
@@ -29,6 +31,8 @@ public class DerivedArtifactService {
 	private final GuidePageService guidePageService;
 	private final StateGuidanceService stateGuidanceService;
 	private final PublicWaterSystemService publicWaterSystemService;
+	private final PublicWaterResultService publicWaterResultService;
+	private final ActionCheckerService actionCheckerService;
 	private final PfasDataProperties dataProperties;
 
 	public DerivedArtifactService(
@@ -36,12 +40,16 @@ public class DerivedArtifactService {
 		GuidePageService guidePageService,
 		StateGuidanceService stateGuidanceService,
 		PublicWaterSystemService publicWaterSystemService,
+		PublicWaterResultService publicWaterResultService,
+		ActionCheckerService actionCheckerService,
 		PfasDataProperties dataProperties
 	) {
 		this.expansionReadinessService = expansionReadinessService;
 		this.guidePageService = guidePageService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.publicWaterSystemService = publicWaterSystemService;
+		this.publicWaterResultService = publicWaterResultService;
+		this.actionCheckerService = actionCheckerService;
 		this.dataProperties = dataProperties;
 	}
 
@@ -81,9 +89,21 @@ public class DerivedArtifactService {
 		return new SearchIndexSeedFile(SCHEMA_VERSION, generatedAt, documents.size(), List.copyOf(documents));
 	}
 
+	public DecisionInputSeedFile buildDecisionInputSeed() {
+		var generatedAt = OffsetDateTime.now().toString();
+		var inputs = expansionReadinessService.getReport().items().stream()
+			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
+			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
+			.map(this::toDecisionInputSeed)
+			.toList();
+
+		return new DecisionInputSeedFile(SCHEMA_VERSION, generatedAt, inputs.size(), inputs);
+	}
+
 	public DerivedArtifactSyncReport sync() {
 		var manifest = buildRouteManifest();
 		var searchIndex = buildSearchIndexSeed();
+		var decisionInputs = buildDecisionInputSeed();
 		var root = Path.of(dataProperties.root()).normalize();
 		var outputs = new ArrayList<DerivedArtifactOutput>();
 
@@ -99,6 +119,13 @@ public class DerivedArtifactService {
 			"search_index_seed",
 			root.resolve("derived/search_indexes/search_index_seed.json").toString().replace('\\', '/'),
 			searchIndex.documentCount()
+		));
+
+		writeJson(root.resolve("derived/decision_inputs/decision_input_seed.json"), decisionInputs);
+		outputs.add(new DerivedArtifactOutput(
+			"decision_input_seed",
+			root.resolve("derived/decision_inputs/decision_input_seed.json").toString().replace('\\', '/'),
+			decisionInputs.inputCount()
 		));
 
 		return new DerivedArtifactSyncReport(SCHEMA_VERSION, OffsetDateTime.now().toString(), List.copyOf(outputs));
@@ -215,6 +242,76 @@ public class DerivedArtifactService {
 				))
 				.orElseThrow(() -> new IllegalStateException("Missing public water system for ready document: " + item.routeKey()));
 			default -> throw new IllegalStateException("Unsupported ready document type: " + item.routeType());
+		};
+	}
+
+	private DecisionInputSeed toDecisionInputSeed(com.example.pfas.readiness.ExpansionReadinessItem item) {
+		return switch (item.routeType()) {
+			case "state_guidance" -> {
+				var selection = actionCheckerService.normalize(
+					"private_well",
+					"none",
+					"none",
+					"unknown",
+					"none",
+					"none",
+					false,
+					item.routeKey(),
+					null
+				);
+				var recommendation = actionCheckerService.evaluate(selection);
+				yield new DecisionInputSeed(
+					"state_guidance:" + item.routeKey(),
+					item.routeType(),
+					item.routeKey(),
+					selection.waterSource().name(),
+					selection.directData().name(),
+					selection.indirectData().name(),
+					selection.benchmarkRelation().name(),
+					selection.currentFilterStatus().name(),
+					selection.wholeHouseConsidered(),
+					selection.stateCode(),
+					selection.pwsid(),
+					recommendation.routeCode().name(),
+					recommendation.primaryHref(),
+					recommendation.secondaryHref(),
+					recommendation.summary()
+				);
+			}
+			case "public_water" -> {
+				var result = publicWaterResultService.getByPwsid(item.routeKey())
+					.orElseThrow(() -> new IllegalStateException("Missing public water result for ready route: " + item.routeKey()));
+				var selection = actionCheckerService.normalize(
+					"public_water",
+					"utility_document",
+					"none",
+					result.meta().benchmarkRelation(),
+					"none",
+					"none",
+					false,
+					null,
+					item.routeKey()
+				);
+				var recommendation = actionCheckerService.evaluate(selection);
+				yield new DecisionInputSeed(
+					"public_water:" + item.routeKey(),
+					item.routeType(),
+					item.routeKey(),
+					selection.waterSource().name(),
+					selection.directData().name(),
+					selection.indirectData().name(),
+					selection.benchmarkRelation().name(),
+					selection.currentFilterStatus().name(),
+					selection.wholeHouseConsidered(),
+					selection.stateCode(),
+					selection.pwsid(),
+					recommendation.routeCode().name(),
+					recommendation.primaryHref(),
+					recommendation.secondaryHref(),
+					recommendation.summary()
+				);
+			}
+			default -> throw new IllegalStateException("Unsupported decision input route type: " + item.routeType());
 		};
 	}
 

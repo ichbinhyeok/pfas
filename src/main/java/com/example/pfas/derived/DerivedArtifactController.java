@@ -25,6 +25,11 @@ public class DerivedArtifactController {
 		return service.buildSearchIndexSeed();
 	}
 
+	@GetMapping("/decision-inputs")
+	public DecisionInputSeedFile decisionInputs() {
+		return service.buildDecisionInputSeed();
+	}
+
 	@PostMapping("/sync")
 	public DerivedArtifactSyncReport sync() {
 		return service.sync();

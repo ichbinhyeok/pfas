@@ -362,6 +362,36 @@ class PfasApplicationTests {
 		assertThat(recommendation.routeCode()).isEqualTo(ActionCheckerRouteCode.PRIVATE_WELL_TEST_FIRST);
 		assertThat(recommendation.primaryHref()).isEqualTo("/private-well/MI");
 		assertThat(recommendation.wholeHouseGuardrail()).isFalse();
+		assertThat(selection.pwsid()).isNull();
+	}
+
+	@Test
+	void clearsIrrelevantCheckerDimensions() {
+		var privateWellSelection = actionCheckerService.normalize(
+			"private_well",
+			"none",
+			"none",
+			"unknown",
+			"none",
+			"none",
+			false,
+			"MI",
+			null
+		);
+		var publicWaterSelection = actionCheckerService.normalize(
+			"public_water",
+			"utility_document",
+			"none",
+			"below_reference",
+			"none",
+			"none",
+			false,
+			null,
+			"7360058"
+		);
+
+		assertThat(privateWellSelection.pwsid()).isNull();
+		assertThat(publicWaterSelection.stateCode()).isNull();
 	}
 
 	@Test
@@ -611,6 +641,20 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:read-your-ccr\"")));
+	}
+
+	@Test
+	void returnsDerivedDecisionInputSeed() throws Exception {
+		mockMvc.perform(get("/internal/derived/decision-inputs"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":8")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"state_guidance:MI\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"state_code\":\"MI\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"pwsid\":null")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"recommended_route_code\":\"PRIVATE_WELL_TEST_FIRST\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"public_water:7360058\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"state_code\":null")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"recommended_route_code\":\"PUBLIC_WATER_CERTIFIED_POU_EVALUATION\"")));
 	}
 
 	@Test
