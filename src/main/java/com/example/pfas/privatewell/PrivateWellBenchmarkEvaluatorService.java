@@ -104,9 +104,9 @@ public class PrivateWellBenchmarkEvaluatorService {
 	}
 
 	private PrivateWellBenchmarkEvaluation evaluateAgainstProfile(StateBenchmarkProfile profile, String analyteCode, BigDecimal inputValue, String inputUnit) {
-		var normalizedAnalyte = analyteCode.trim().toUpperCase(Locale.ROOT);
+		var normalizedAnalyte = normalizeAnalyteCode(analyteCode);
 		var matchedLine = profile.benchmarks().stream()
-			.filter(line -> normalizedAnalyte.equals(line.contaminantCode()))
+			.filter(line -> normalizedAnalyte.equals(normalizeAnalyteCode(line.contaminantCode())))
 			.findFirst()
 			.orElse(null);
 
@@ -237,5 +237,9 @@ public class PrivateWellBenchmarkEvaluatorService {
 			+ " below, "
 			+ notComparableCount
 			+ " not comparable.";
+	}
+
+	private String normalizeAnalyteCode(String analyteCode) {
+		return analyteCode == null ? "" : analyteCode.trim().toUpperCase(Locale.ROOT);
 	}
 }

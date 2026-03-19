@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:56:53.558139200+09:00",
-  "input_count" : 8,
+  "generated_at" : "2026-03-20T01:34:02.771451600+09:00",
+  "input_count" : 10,
   "inputs" : [ {
     "input_id" : "public_water:7360058",
     "route_type" : "public_water",
@@ -67,6 +67,22 @@
     "secondary_path" : "/guides/test-first-vs-filter-first",
     "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
   }, {
+    "input_id" : "state_guidance:ME",
+    "route_type" : "state_guidance",
+    "route_key" : "ME",
+    "water_source" : "PRIVATE_WELL",
+    "direct_data_status" : "NONE",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "UNKNOWN",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : "ME",
+    "pwsid" : null,
+    "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+    "primary_path" : "/private-well/ME",
+    "secondary_path" : "/guides/test-first-vs-filter-first",
+    "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+  }, {
     "input_id" : "state_guidance:MI",
     "route_type" : "state_guidance",
     "route_key" : "MI",
@@ -112,6 +128,22 @@
     "pwsid" : null,
     "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
     "primary_path" : "/private-well/NY",
+    "secondary_path" : "/guides/test-first-vs-filter-first",
+    "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+  }, {
+    "input_id" : "state_guidance:VT",
+    "route_type" : "state_guidance",
+    "route_key" : "VT",
+    "water_source" : "PRIVATE_WELL",
+    "direct_data_status" : "NONE",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "UNKNOWN",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : "VT",
+    "pwsid" : null,
+    "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+    "primary_path" : "/private-well/VT",
     "secondary_path" : "/guides/test-first-vs-filter-first",
     "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
   }, {

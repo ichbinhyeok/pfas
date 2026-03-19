@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T00:56:53.362436900+09:00",
-  "route_count" : 14,
+  "generated_at" : "2026-03-20T01:34:02.540759700+09:00",
+  "route_count" : 16,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -134,6 +134,19 @@
     "keywords" : [ "MA", "private well", "PFAS", "certified lab", "state guidance" ]
   }, {
     "route_type" : "state_guidance",
+    "route_key" : "ME",
+    "display_label" : "ME private-well PFAS guide",
+    "template_kind" : "private_well_state_page",
+    "primary_path" : "/private-well/ME",
+    "supporting_path" : "/private-well-result/ME?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false",
+    "api_path" : "/internal/results/private-well/ME?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "state_guidance_ready",
+    "keywords" : [ "ME", "private well", "PFAS", "certified lab", "state guidance" ]
+  }, {
+    "route_type" : "state_guidance",
     "route_key" : "MI",
     "display_label" : "MI private-well PFAS guide",
     "template_kind" : "private_well_state_page",
@@ -171,6 +184,19 @@
     "source_count" : 3,
     "readiness_basis" : "state_guidance_ready",
     "keywords" : [ "NY", "private well", "PFAS", "certified lab", "state guidance" ]
+  }, {
+    "route_type" : "state_guidance",
+    "route_key" : "VT",
+    "display_label" : "VT private-well PFAS guide",
+    "template_kind" : "private_well_state_page",
+    "primary_path" : "/private-well/VT",
+    "supporting_path" : "/private-well-result/VT?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false",
+    "api_path" : "/internal/results/private-well/VT?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "state_guidance_ready",
+    "keywords" : [ "VT", "private well", "PFAS", "certified lab", "state guidance" ]
   }, {
     "route_type" : "state_guidance",
     "route_key" : "WA",

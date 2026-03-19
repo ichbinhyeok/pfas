@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-19T23:55:00+09:00",
+  "generated_at": "2026-03-20T01:45:00+09:00",
   "profiles": [
     {
       "state_code": "CA",
@@ -76,6 +76,31 @@
       "source_ids": [
         "ma-private-wells",
         "ma-pfas-public-drinking-water-factsheet"
+      ]
+    },
+    {
+      "state_code": "ME",
+      "profile_kind": "pfas6_interim_state_standard",
+      "primary_reference_label": "Maine interim PFAS6 drinking-water standard",
+      "comparability_mode": "sum_of_six_not_direct_single_analyte_equivalence",
+      "summary": "Maine uses an interim drinking-water standard of 20 ng/L for the sum of six PFAS. That is strong state context for private wells, but the safest Sharp v1 interpretation still treats it as a PFAS6 reference route unless a full PFAS6 result is available.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFAS6",
+          "label": "Maine interim PFAS6 standard",
+          "benchmark_display": "20 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_interim_standard",
+          "applicability": "sum_of_pfas",
+          "note": "Maine's interim standard covers PFOA, PFOS, PFNA, PFHpA, PFHxS, and PFDA alone or in combination."
+        }
+      ],
+      "private_well_use_note": "Use Maine's PFAS6 standard as a reference-based route. If a private-well result is above 20 ng/L for PFAS6, Maine CDC materials point households toward reducing consumption, bottled water, and treatment follow-up without presenting a private-well compliance verdict.",
+      "last_verified_date": "2026-03-20",
+      "source_ids": [
+        "me-pfas-well-water",
+        "me-pfas-well-results-pdf",
+        "me-pfas-public-water-systems"
       ]
     },
     {
@@ -177,6 +202,76 @@
         "ny-water-supplier-factsheet-mcls",
         "ny-pfas-private-wells-pdf",
         "ny-elap"
+      ]
+    },
+    {
+      "state_code": "VT",
+      "profile_kind": "state_mcls_with_grouped_hazard_index",
+      "primary_reference_label": "Vermont regulated PFAS MCLs",
+      "comparability_mode": "state_mcl_numeric_with_grouped_mix_context",
+      "summary": "Vermont publishes direct numeric MCLs for several PFAS and a grouped hazard-index MCL for mixtures that include PFHxS, PFNA, HFPO-DA, and PFBS. That gives Vermont strong private-well reference context while still requiring treatment and sampling guidance to stay in view.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "Vermont MCL for PFOA",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfoa",
+          "note": "Vermont lists a 4 ppt MCL for PFOA."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "Vermont MCL for PFOS",
+          "benchmark_display": "4 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfos",
+          "note": "Vermont lists a 4 ppt MCL for PFOS."
+        },
+        {
+          "contaminant_code": "PFNA",
+          "label": "Vermont MCL for PFNA",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfna",
+          "note": "Vermont lists a 10 ppt MCL for PFNA."
+        },
+        {
+          "contaminant_code": "PFHXS",
+          "label": "Vermont MCL for PFHxS",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfhxs",
+          "note": "Vermont lists a 10 ppt MCL for PFHxS."
+        },
+        {
+          "contaminant_code": "HFPO-DA",
+          "label": "Vermont MCL for HFPO-DA",
+          "benchmark_display": "10 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_hfpo_da",
+          "note": "Vermont lists a 10 ppt MCL for HFPO-DA."
+        },
+        {
+          "contaminant_code": "PFAS_HI",
+          "label": "Vermont grouped PFAS hazard index MCL",
+          "benchmark_display": "Hazard index 1",
+          "unit": "hazard_index",
+          "benchmark_type": "state_grouped_mcl",
+          "applicability": "mixture_context_only",
+          "note": "Applies to mixtures containing two or more of PFHxS, PFNA, HFPO-DA, and PFBS."
+        }
+      ],
+      "private_well_use_note": "Vermont gives direct numeric context for several PFAS, but the household route should still emphasize test-first sampling, pretreatment checks, and the cost difference between point-of-use and whole-home treatment.",
+      "last_verified_date": "2026-03-20",
+      "source_ids": [
+        "vt-pfas-drinking-water",
+        "vt-treating-pfas-drinking-water",
+        "vt-how-test-drinking-water"
       ]
     },
     {

@@ -1,0 +1,66 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T01:34:02.973039200+09:00",
+  "model_id" : "state_guidance:ME",
+  "route_type" : "state_guidance",
+  "route_key" : "ME",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/ME",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "ME",
+      "agency_name" : "Maine Center for Disease Control & Prevention",
+      "agency_url" : "https://www.maine.gov/dhhs/mecdc/",
+      "private_well_guidance_url" : "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/drinking-water-safety/private-well-water",
+      "pfas_guidance_url" : "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/pfas-in-maine/pfas-and-well-water",
+      "certified_lab_lookup_url" : "https://www.maine.gov/dhhs/mecdc/services/business-services/laboratory-accreditation",
+      "sampling_guidance_url" : "https://www.maine.gov/dhhs/mecdc/environmental-health/dwp/cet/documents/PFAS_Sampling_Guidance_01102023.pdf",
+      "repeat_testing_guidance" : "Maine recommends using accredited laboratories and reading PFAS well results against the current PFAS6 state standard context before choosing treatment. Follow-up timing should stay tied to Maine CDC or DEP guidance rather than a universal Sharp v1 cadence.",
+      "benchmark_notes" : "Maine private-well PFAS interpretation is reference-based. The state context centers on an interim 20 ng/L standard for the sum of six PFAS and on practical follow-up steps like bottled water, treatment, and state contact, not on a private-well compliance finding.",
+      "last_verified_date" : "2026-03-20",
+      "source_ids" : [ "me-private-well-water", "me-pfas-well-water", "me-pfas-well-results-pdf", "me-laboratory-accreditation" ]
+    },
+    "profile" : {
+      "state_code" : "ME",
+      "profile_kind" : "pfas6_interim_state_standard",
+      "primary_reference_label" : "Maine interim PFAS6 drinking-water standard",
+      "comparability_mode" : "sum_of_six_not_direct_single_analyte_equivalence",
+      "summary" : "Maine uses an interim drinking-water standard of 20 ng/L for the sum of six PFAS. That is strong state context for private wells, but the safest Sharp v1 interpretation still treats it as a PFAS6 reference route unless a full PFAS6 result is available.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFAS6",
+        "label" : "Maine interim PFAS6 standard",
+        "benchmark_display" : "20 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_interim_standard",
+        "applicability" : "sum_of_pfas",
+        "note" : "Maine's interim standard covers PFOA, PFOS, PFNA, PFHpA, PFHxS, and PFDA alone or in combination."
+      } ],
+      "private_well_use_note" : "Use Maine's PFAS6 standard as a reference-based route. If a private-well result is above 20 ng/L for PFAS6, Maine CDC materials point households toward reducing consumption, bottled water, and treatment follow-up without presenting a private-well compliance verdict.",
+      "last_verified_date" : "2026-03-20",
+      "source_ids" : [ "me-pfas-well-water", "me-pfas-well-results-pdf", "me-pfas-public-water-systems" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:ME",
+      "route_type" : "state_guidance",
+      "route_key" : "ME",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "ME",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/ME",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/ME?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

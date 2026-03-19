@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "state_code": "ME",
+  "agency_name": "Maine Center for Disease Control & Prevention",
+  "agency_url": "https://www.maine.gov/dhhs/mecdc/",
+  "private_well_guidance_url": "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/drinking-water-safety/private-well-water",
+  "pfas_guidance_url": "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/pfas-in-maine/pfas-and-well-water",
+  "certified_lab_lookup_url": "https://www.maine.gov/dhhs/mecdc/services/business-services/laboratory-accreditation",
+  "sampling_guidance_url": "https://www.maine.gov/dhhs/mecdc/environmental-health/dwp/cet/documents/PFAS_Sampling_Guidance_01102023.pdf",
+  "repeat_testing_guidance": "Maine recommends using accredited laboratories and reading PFAS well results against the current PFAS6 state standard context before choosing treatment. Follow-up timing should stay tied to Maine CDC or DEP guidance rather than a universal Sharp v1 cadence.",
+  "benchmark_notes": "Maine private-well PFAS interpretation is reference-based. The state context centers on an interim 20 ng/L standard for the sum of six PFAS and on practical follow-up steps like bottled water, treatment, and state contact, not on a private-well compliance finding.",
+  "last_verified_date": "2026-03-20",
+  "source_ids": [
+    "me-private-well-water",
+    "me-pfas-well-water",
+    "me-pfas-well-results-pdf",
+    "me-laboratory-accreditation"
+  ]
+}

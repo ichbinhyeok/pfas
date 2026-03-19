@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-19T17:10:00+09:00",
+  "generated_at": "2026-03-20T01:45:00+09:00",
   "documents": [
     {
       "source_id": "epa-pfas-npdwr-implementation",
@@ -905,6 +905,224 @@
         "private well legal compliance determination"
       ],
       "notes": "Massachusetts PFAS factsheet used here as state PFAS context, not as a private-well compliance source."
+    },
+    {
+      "source_id": "me-private-well-water",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "Private Well Water",
+      "url": "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/drinking-water-safety/private-well-water",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "private well ownership context",
+        "testing responsibility",
+        "state follow-up route"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "Current Maine CDC private-well guidance page used for owner-responsibility and follow-up context."
+    },
+    {
+      "source_id": "me-pfas-well-water",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "PFAS and Well Water",
+      "url": "https://www.maine.gov/dhhs/mecdc/healthy-living/health-and-safety/pfas-in-maine/pfas-and-well-water",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS private well guidance",
+        "state referral layer",
+        "PFAS6 interpretation context"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "Maine CDC PFAS and well water page used for current state context and owner-directed next steps."
+    },
+    {
+      "source_id": "me-pfas-well-results-pdf",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "PFAS Testing in Private Wells: Understanding Your Results",
+      "url": "https://www.maine.gov/dhhs/mecdc/sites/maine.gov.dhhs.mecdc/files/ME%20CDC_PFAS_wells_0.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state benchmark context",
+        "bottled water follow-up",
+        "treatment route context"
+      ],
+      "disallowed_uses": [
+        "medical diagnosis",
+        "private well legal compliance determination"
+      ],
+      "notes": "Maine CDC fact sheet says DEP follows an interim 20 ng/L PFAS6 standard and points households above that level toward bottled water and treatment follow-up."
+    },
+    {
+      "source_id": "me-laboratory-accreditation",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "Laboratory Accreditation",
+      "url": "https://www.maine.gov/dhhs/mecdc/services/business-services/laboratory-accreditation",
+      "source_kind": "state_lab_lookup_page",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state-accredited lab lookup",
+        "lab accreditation explanation"
+      ],
+      "disallowed_uses": [
+        "PFAS result interpretation without state guidance"
+      ],
+      "notes": "Current Maine laboratory accreditation page linking the accredited PFAS laboratories PDF."
+    },
+    {
+      "source_id": "me-pfas-labs-updated",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "Accredited PFAS Laboratories",
+      "url": "https://www.maine.gov/dhhs/mecdc/sites/maine.gov.dhhs.mecdc/files/dwp/PFASLabs_UPDATED.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": "2025-03-05",
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": "2025-03-05",
+      "allowed_uses": [
+        "state-accredited PFAS lab lookup",
+        "testing logistics"
+      ],
+      "disallowed_uses": [
+        "PFAS result interpretation without state guidance"
+      ],
+      "notes": "Maine Laboratory Accreditation Program PDF listing accredited PFAS laboratories and warning that accreditation status can change."
+    },
+    {
+      "source_id": "me-pfas-public-water-systems",
+      "organization": "Maine Center for Disease Control & Prevention",
+      "title": "PFAS in Public Water Systems",
+      "url": "https://www.maine.gov/dhhs/mecdc/environmental-health/dwp/consumers/PFASinPublicWaterSystems.shtml",
+      "source_kind": "state_benchmark_page",
+      "trust_tier": 2,
+      "jurisdiction": "ME",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS6 standard context",
+        "public water transition context"
+      ],
+      "disallowed_uses": [
+        "private well compliance determination"
+      ],
+      "notes": "Maine CDC public-water PFAS page used as state-standard context for the interim PFAS6 framework."
+    },
+    {
+      "source_id": "vt-pfas-drinking-water",
+      "organization": "Vermont Department of Health",
+      "title": "Perfluoroalkyl and Polyfluoroalkyl Substances (PFAS) in Drinking Water",
+      "url": "https://www.healthvermont.gov/environment/drinking-water/perfluoroalkyl-and-polyfluoroalkyl-substances-pfas-drinking-water",
+      "source_kind": "state_pfas_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "VT",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS benchmark context",
+        "private well PFAS guidance",
+        "state referral layer"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "Vermont PFAS page lists current regulated PFAS MCLs and a grouped hazard-index MCL for certain PFAS mixtures."
+    },
+    {
+      "source_id": "vt-treating-pfas-drinking-water",
+      "organization": "Vermont Department of Health",
+      "title": "Treating for PFAS in Drinking Water",
+      "url": "https://www.healthvermont.gov/environment/drinking-water/treating-pfas-drinking-water",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "VT",
+      "published_date": null,
+      "last_updated_date": "2025-08-29",
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": "2025-08-29",
+      "allowed_uses": [
+        "state treatment guidance",
+        "test-before-treatment rule",
+        "POU versus whole-home context"
+      ],
+      "disallowed_uses": [
+        "vendor endorsement",
+        "private well compliance determination"
+      ],
+      "notes": "Vermont treatment guidance says private wells and springs should be tested before installing PFAS treatment and keeps maintenance burden visible."
+    },
+    {
+      "source_id": "vt-how-test-drinking-water",
+      "organization": "Vermont Department of Health",
+      "title": "How to Test Your Drinking Water",
+      "url": "https://www.healthvermont.gov/environment/drinking-water/how-test-your-drinking-water",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "VT",
+      "published_date": null,
+      "last_updated_date": "2026-03-11",
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": "2026-03-11",
+      "allowed_uses": [
+        "state sampling route",
+        "homeowners testing package context",
+        "private well testing logistics"
+      ],
+      "disallowed_uses": [
+        "PFAS benchmark substitution without the PFAS page"
+      ],
+      "notes": "Vermont sampling page anchors the Homeowners Testing Package and current drinking-water testing workflow."
+    },
+    {
+      "source_id": "vt-certified-drinking-water-labs",
+      "organization": "Vermont Department of Health",
+      "title": "Laboratories Certified for Drinking Water Analysis",
+      "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/PHL_DW-Certified-Labs.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "VT",
+      "published_date": "2025-12-02",
+      "last_updated_date": "2025-12-02",
+      "retrieved_at": "2026-03-20T01:45:00+09:00",
+      "effective_date": "2025-12-02",
+      "allowed_uses": [
+        "state-certified PFAS lab lookup",
+        "testing logistics"
+      ],
+      "disallowed_uses": [
+        "PFAS result interpretation without state guidance"
+      ],
+      "notes": "Vermont lab PDF lists certified drinking-water laboratories and notes that some private-sample laboratories may not accept private PFAS samples."
     },
     {
       "source_id": "wa-pfas-drinking-water",

@@ -106,8 +106,10 @@ class PfasApplicationTests {
 				"wa-pfas-drinking-water",
 				"ca-pfas-waterboards",
 				"mi-pfas-mcls",
+				"me-pfas-well-results-pdf",
 				"mn-pfas-values",
 				"ny-water-supplier-factsheet-mcls",
+				"vt-pfas-drinking-water",
 				"wa-pfas-group-a-support",
 				"ca-pfas-timeline"
 			);
@@ -117,10 +119,10 @@ class PfasApplicationTests {
 	void loadsSeededStateGuidance() {
 		var states = stateGuidanceService.getAll();
 
-		assertThat(states).hasSize(6);
+		assertThat(states).hasSize(8);
 		assertThat(states)
 			.extracting(state -> state.stateCode())
-			.containsExactly("CA", "MA", "MI", "MN", "NY", "WA");
+			.containsExactly("CA", "MA", "ME", "MI", "MN", "NY", "VT", "WA");
 	}
 
 	@Test
@@ -128,10 +130,10 @@ class PfasApplicationTests {
 		var profiles = stateBenchmarkProfileService.getAll();
 		var washington = stateBenchmarkProfileService.getByStateCode("WA").orElseThrow();
 
-		assertThat(profiles).hasSize(6);
+		assertThat(profiles).hasSize(8);
 		assertThat(profiles)
 			.extracting(profile -> profile.stateCode())
-			.containsExactly("CA", "MA", "MI", "MN", "NY", "WA");
+			.containsExactly("CA", "MA", "ME", "MI", "MN", "NY", "VT", "WA");
 		assertThat(washington.primaryReferenceLabel()).contains("Washington");
 		assertThat(washington.benchmarks())
 			.extracting(line -> line.benchmarkDisplay())
@@ -338,7 +340,7 @@ class PfasApplicationTests {
 	void buildsExpansionReadinessReport() {
 		var report = expansionReadinessService.getReport();
 
-		assertThat(report.readyStateRoutes()).isEqualTo(6);
+		assertThat(report.readyStateRoutes()).isEqualTo(8);
 		assertThat(report.blockedStateRoutes()).isZero();
 		assertThat(report.readyPublicWaterRoutes()).isEqualTo(2);
 		assertThat(report.blockedPublicWaterRoutes()).isZero();
@@ -443,6 +445,16 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Test first, then interpret against state guidance.")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("State reference context")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well state guide")));
+	}
+
+	@Test
+	void rendersVermontPrivateWellStatePage() throws Exception {
+		mockMvc.perform(get("/private-well/VT"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Vermont Department of Health")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("How to Test Your Drinking Water")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Vermont MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well state guide")));
 	}
 
@@ -591,10 +603,18 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsMaineStateBenchmarkProfile() throws Exception {
+		mockMvc.perform(get("/internal/state-benchmark-profiles/ME"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Maine interim PFAS6 drinking-water standard")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("20 ppt")));
+	}
+
+	@Test
 	void returnsReadinessReport() throws Exception {
 		mockMvc.perform(get("/internal/readiness/report"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":6")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":8")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":2")));
 	}
 
@@ -634,7 +654,7 @@ class PfasApplicationTests {
 	void returnsDerivedRouteManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":16")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/private-well/MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/read-your-ccr\"")));
@@ -644,7 +664,7 @@ class PfasApplicationTests {
 	void returnsDerivedSearchIndexSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":16")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:read-your-ccr\"")));
@@ -654,7 +674,7 @@ class PfasApplicationTests {
 	void returnsDerivedDecisionInputSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/decision-inputs"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":8")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":10")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"state_code\":\"MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"pwsid\":null")))
@@ -668,7 +688,7 @@ class PfasApplicationTests {
 	void returnsDerivedPageGenerationManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":16")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/7360058.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/state_guidance/MI.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/read-your-ccr.json\"")));
@@ -698,7 +718,7 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":24")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":26")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
