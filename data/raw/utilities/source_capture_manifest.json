@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T19:20:00+09:00",
+  "generated_at": "2026-03-20T21:35:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-alaska-water-home-20260320",
@@ -248,6 +248,58 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Green Ridge 2024 report with PWS ID MD0120011 and March 2024 PFAS results."
+    },
+    {
+      "raw_source_id": "raw-new-jersey-water-home-20260320",
+      "source_id": "new-jersey-water-home",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://www.myutility.us/new-jersey",
+      "organization": "Montague Water Company",
+      "title": "Montague Water",
+      "content_type": "text/html",
+      "jurisdiction": "NJ",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Montague Water homepage section."
+    },
+    {
+      "raw_source_id": "raw-new-jersey-water-quality-reports-20260320",
+      "source_id": "new-jersey-water-quality-reports",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://www.myutility.us/new-jersey/water-safety/water-quality-reports",
+      "organization": "Montague Water Company",
+      "title": "Water Quality Reports",
+      "content_type": "text/html",
+      "jurisdiction": "NJ",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Montague Water report index stating PFAS reporting moved into annual CCRs from 2024 forward."
+    },
+    {
+      "raw_source_id": "raw-montague-2024-water-quality-report-20260320",
+      "source_id": "montague-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+      "organization": "Montague Water Company",
+      "title": "Annual Water Quality Report 2025 Montague CCR 268",
+      "content_type": "application/pdf",
+      "jurisdiction": "NJ",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Montague CCR PDF confirming PWS ID NJ1914002, five wells, and 795 service connections."
+    },
+    {
+      "raw_source_id": "raw-montague-pfas-2023-report-20260320",
+      "source_id": "montague-pfas-2023-report",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+      "organization": "Montague Water Company",
+      "title": "PFAS Results 2023 Montague Water Company",
+      "content_type": "application/pdf",
+      "jurisdiction": "NJ",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Montague PFAS report with 2Q and 3Q 2023 non-detect results across the mapped PFAS analytes."
     },
     {
       "raw_source_id": "raw-sunshine-water-home-20260320",

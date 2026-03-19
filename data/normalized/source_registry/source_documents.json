@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T19:20:00+09:00",
+  "generated_at": "2026-03-20T21:35:00+09:00",
   "documents": [
     {
       "source_id": "epa-pfas-npdwr-implementation",
@@ -1946,6 +1946,92 @@
       "notes": "SmartFlow performance data states WQA tested and certified claims including PFOA and PFOS reduction."
     },
     {
+      "source_id": "new-jersey-water-home",
+      "organization": "Montague Water Company",
+      "title": "Montague Water",
+      "url": "https://www.myutility.us/new-jersey",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Montague Water site section used for system identity and route context."
+    },
+    {
+      "source_id": "new-jersey-water-quality-reports",
+      "organization": "Montague Water Company",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/new-jersey/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Montague Water report index stating PFAS moved into annual water quality reports from 2024 forward."
+    },
+    {
+      "source_id": "montague-2024-water-quality-report",
+      "organization": "Montague Water Company",
+      "title": "Annual Water Quality Report 2025 Montague CCR 268",
+      "url": "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Montague CCR confirming PWS ID NJ1914002, five groundwater wells, and 795 service connections."
+    },
+    {
+      "source_id": "montague-pfas-2023-report",
+      "organization": "Montague Water Company",
+      "title": "PFAS Results 2023 Montague Water Company",
+      "url": "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": "2023-09-30",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Montague PFAS report showing non-detect results across mapped PFAS analytes during 2Q and 3Q 2023 sampling."
+    },
+    {
       "source_id": "sunshine-water-home",
       "organization": "Sunshine Water Services",
       "title": "Sunshine Water Services",
@@ -2118,6 +2204,72 @@
         "third-party claim proof without supporting documentation"
       ],
       "notes": "Aquasana product page for Clean Water Machine showing current discounted price and WQA certification language."
+    },
+    {
+      "source_id": "aquatru-classic-product",
+      "organization": "AquaTru",
+      "title": "AquaTru Classic",
+      "url": "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru Classic product page showing current price and FAQ language linking to the performance data sheet."
+    },
+    {
+      "source_id": "aquatru-classic-filters-collection",
+      "organization": "AquaTru",
+      "title": "Classic Filters Collection",
+      "url": "https://aquatruwater.com/collections/classic-filters",
+      "source_kind": "vendor_collection_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "component price extraction"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official AquaTru Classic filters collection listing current prices for the pre/carbon, RO, and VOC cartridges."
+    },
+    {
+      "source_id": "aquatru-classic-performance-pdf",
+      "organization": "AquaTru",
+      "title": "Classic Connect Updated Performance Data Sheet",
+      "url": "https://shop.aquatruwater.com/wp-content/uploads/2025/01/Classic-Connect-Updated-PDS.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "replacement cadence and capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Performance sheet states IAPMO R&T certification to NSF ANSI 42, 53, 58, 372, and 401 and gives Classic filter replacement cadence guidance."
     },
     {
       "source_id": "aq-clean-water-machine-replacement",

@@ -34,3 +34,8 @@ bear-lake-pfos-average-2023,FL3590069,PFOS,Perfluorooctane sulfonate,separate_pf
 bear-lake-pfhxs-average-2023,FL3590069,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,3.1,ppt,reported,,us_pfhxs_mcl_2024,bear-lake-pfas-2023-report
 bear-lake-pfna-average-2023,FL3590069,PFNA,Perfluorononanoic acid,separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,0,ppt,not_detected,,us_pfna_mcl_2024,bear-lake-pfas-2023-report
 bear-lake-hfpoda-average-2023,FL3590069,HFPO-DA,HFPO-DA (GenX),separate_pfas_report_average_2023,2023-12-19,2023-12-19,2023-12-19,0,ppt,not_detected,,us_hfpoda_mcl_2024,bear-lake-pfas-2023-report
+montague-pfoa-nd-2023,NJ1914002,PFOA,Perfluorooctanoic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfoa_mcl_2024,montague-pfas-2023-report
+montague-pfos-nd-2023,NJ1914002,PFOS,Perfluorooctane sulfonate,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfos_mcl_2024,montague-pfas-2023-report
+montague-pfhxs-nd-2023,NJ1914002,PFHxS,Perfluorohexanesulfonic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfhxs_mcl_2024,montague-pfas-2023-report
+montague-pfna-nd-2023,NJ1914002,PFNA,Perfluorononanoic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfna_mcl_2024,montague-pfas-2023-report
+montague-hfpoda-nd-2023,NJ1914002,HFPO-DA,HFPO-DA (GenX),statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_hfpoda_mcl_2024,montague-pfas-2023-report

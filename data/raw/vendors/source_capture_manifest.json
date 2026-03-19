@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T19:20:00+09:00",
+  "generated_at": "2026-03-20T21:35:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-amway-espring-122941-product-20260319",
@@ -209,6 +209,45 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "SmartFlow performance data sheet with WQA certification language and PFOA/PFOS claim context."
+    },
+    {
+      "raw_source_id": "raw-aquatru-classic-product-20260320",
+      "source_id": "aquatru-classic-product",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+      "organization": "AquaTru",
+      "title": "AquaTru Classic",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official AquaTru Classic product page showing current price and certification FAQ language."
+    },
+    {
+      "raw_source_id": "raw-aquatru-classic-filters-collection-20260320",
+      "source_id": "aquatru-classic-filters-collection",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://aquatruwater.com/collections/classic-filters",
+      "organization": "AquaTru",
+      "title": "Classic Filters Collection",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official AquaTru collection page used to capture Classic replacement filter component pricing."
+    },
+    {
+      "raw_source_id": "raw-aquatru-classic-performance-pdf-20260320",
+      "source_id": "aquatru-classic-performance-pdf",
+      "retrieved_at": "2026-03-20T21:35:00+09:00",
+      "url": "https://shop.aquatruwater.com/wp-content/uploads/2025/01/Classic-Connect-Updated-PDS.pdf",
+      "organization": "AquaTru",
+      "title": "Classic Connect Updated Performance Data Sheet",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official performance data sheet describing IAPMO R&T certification scope, PFAS reduction, and Classic filter replacement cadence."
     },
     {
       "raw_source_id": "raw-aq-claryum-3-stage-product-20260320",

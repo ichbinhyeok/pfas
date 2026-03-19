@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T04:09:31.293574400+09:00",
-  "document_count" : 22,
+  "generated_at" : "2026-03-20T04:34:38.896546100+09:00",
+  "document_count" : 23,
   "documents" : [ {
     "document_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
@@ -145,6 +145,17 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "Carolina Trace Water System", "NC", "NC0353101", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:NJ1914002",
+    "route_type" : "public_water",
+    "route_key" : "NJ1914002",
+    "url" : "/public-water/NJ1914002",
+    "title" : "Montague Water Company PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Montague Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:PA1510001",
     "route_type" : "public_water",

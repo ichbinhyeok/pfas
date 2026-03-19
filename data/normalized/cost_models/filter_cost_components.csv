@@ -1,4 +1,7 @@
 product_id,component_code,component_label,component_type,component_cost_usd,component_cadence_months,price_observed_at,price_source_url,source_ids
+aquatru-classic,pre-carbon,Classic pre/carbon filter,primary_media,24.95,6,2026-03-20,https://aquatruwater.com/collections/classic-filters,aquatru-classic-filters-collection
+aquatru-classic,reverse-osmosis-membrane,Classic reverse osmosis filter,membrane,51.95,12,2026-03-20,https://aquatruwater.com/collections/classic-filters,aquatru-classic-filters-collection
+aquatru-classic,voc-carbon,Classic VOC carbon filter,post_media,34.95,6,2026-03-20,https://aquatruwater.com/collections/classic-filters,aquatru-classic-filters-collection
 aquasana-aq-sfro2,carbon-block-pair,Carbon Block and Advanced Carbon Block replacements,primary_media,78.19,6,2026-03-20,https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-filter-replacements-100368688.html,aq-smartflow-ro-carbon-replacements
 aquasana-aq-sfro2,membrane,SmartFlow membrane replacement,membrane,53.54,12,2026-03-20,https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-membrane-replacement-100368702.html,aq-smartflow-ro-membrane-replacement
 aquasana-aq-sfro2,remineralizer,SmartFlow remineralizer replacement,remineralizer,26.77,6,2026-03-20,https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-remineralizer-replacement-100368975.html,aq-smartflow-ro-remineralizer-replacement

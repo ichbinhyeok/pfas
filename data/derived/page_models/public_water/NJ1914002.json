@@ -1,0 +1,129 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T04:34:39.832065900+09:00",
+  "model_id" : "public_water:NJ1914002",
+  "route_type" : "public_water",
+  "route_key" : "NJ1914002",
+  "template_kind" : "public_water_result_page",
+  "render_path" : "/public-water/NJ1914002",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "NJ1914002",
+      "pwsName" : "Montague Water Company",
+      "stateCode" : "NJ",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/new-jersey",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+      "serviceAreaNotes" : "Montague Water Company community groundwater system with five wells and a separate 2023 PFAS report showing non-detects across mapped analytes",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "new-jersey-water-home", "new-jersey-water-quality-reports", "montague-2024-water-quality-report", "montague-pfas-2023-report" ]
+    },
+    "result" : {
+      "result_id" : "public-water:NJ1914002",
+      "schema_version" : "v1",
+      "generated_at" : "2026-03-20T04:34:39.829323500+09:00",
+      "next_action" : {
+        "code" : "KEEP_MONITORING_UTILITY_UPDATES",
+        "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
+        "summary" : "The current normalized utility observations are below the selected benchmark, so there is no immediate escalation from this data alone.",
+        "confidence" : "high",
+        "scope_note" : "Public water utility interpretation; not a household tap test result."
+      },
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a household tap test.", "Future utility updates can change the picture.", "Do not convert this into a blanket safe or unsafe claim." ],
+      "initial_cost" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "confidence" : "low",
+        "notes" : [ "No normalized upfront cost is available for the current option set." ]
+      },
+      "annual_cost_maintenance" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "maintenance_burden" : "unknown",
+        "cadence_notes" : [ ],
+        "notes" : [ "No normalized annual replacement cost is available for the current option set." ]
+      },
+      "certification_checklist" : [ {
+        "label" : "Claim-level listing for the specific PFAS you care about",
+        "required" : true,
+        "detail" : "Verify the listing record names the PFAS reduction claim directly instead of inferring from a product category.",
+        "source_id" : "nsf-dwtu-listings"
+      }, {
+        "label" : "Match the certification standard to the actual claim",
+        "required" : true,
+        "detail" : "Use NSF ANSI 53 or an equivalent claim-level listing only when the record explicitly carries the reduction claim.",
+        "source_id" : "epa-certified-pfas-filter-guidance"
+      }, {
+        "label" : "Check replacement cadence and cartridge capacity before buying",
+        "required" : true,
+        "detail" : "Cost and maintenance burden change materially if cadence is annual vs more frequent.",
+        "source_id" : "amway-espring-100186-cartridge"
+      } ],
+      "best_fit_options" : [ ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
+      "sources" : [ {
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "montague-2024-water-quality-report",
+        "organization" : "Montague Water Company",
+        "title" : "Annual Water Quality Report 2025 Montague CCR 268",
+        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "montague-pfas-2023-report",
+        "organization" : "Montague Water Company",
+        "title" : "PFAS Results 2023 Montague Water Company",
+        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "new-jersey-water-home",
+        "organization" : "Montague Water Company",
+        "title" : "Montague Water",
+        "url" : "https://www.myutility.us/new-jersey",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "new-jersey-water-quality-reports",
+        "organization" : "Montague Water Company",
+        "title" : "Water Quality Reports",
+        "url" : "https://www.myutility.us/new-jersey/water-safety/water-quality-reports",
+        "trust_tier" : 2
+      } ],
+      "meta" : {
+        "water_source_type" : "public_water",
+        "benchmark_relation" : "unknown",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR",
+        "manual_review_required" : false
+      }
+    },
+    "decision_input" : {
+      "input_id" : "public_water:NJ1914002",
+      "route_type" : "public_water",
+      "route_key" : "NJ1914002",
+      "water_source" : "PUBLIC_WATER",
+      "direct_data_status" : "UTILITY_DOCUMENT",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : null,
+      "pwsid" : "NJ1914002",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/NJ1914002",
+      "secondary_path" : "/internal/results/public-water/NJ1914002",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+    },
+    "supporting_path" : "/public-water-system/NJ1914002"
+  }
+}
