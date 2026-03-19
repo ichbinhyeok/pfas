@@ -1,4 +1,9 @@
 observation_id,pwsid,contaminant_code,contaminant_label,sample_context,period_start,period_end,sample_date,value,unit,result_flag,minimum_reporting_level,benchmark_id,source_ids
+green-ridge-pfoa-average-2024,MD0120011,PFOA,Perfluorooctanoic acid,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,2.28,ppt,reported,,us_pfoa_mcl_2024,green-ridge-2024-water-quality-report
+green-ridge-pfos-average-2024,MD0120011,PFOS,Perfluorooctane sulfonate,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,1.7,ppt,reported,,us_pfos_mcl_2024,green-ridge-2024-water-quality-report
+green-ridge-pfhxs-average-2024,MD0120011,PFHxS,Perfluorohexanesulfonic acid,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,1.37,ppt,reported,,us_pfhxs_mcl_2024,green-ridge-2024-water-quality-report
+green-ridge-pfna-average-2024,MD0120011,PFNA,Perfluorononanoic acid,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,0,ppt,not_detected,,us_pfna_mcl_2024,green-ridge-2024-water-quality-report
+green-ridge-hfpoda-average-2024,MD0120011,HFPO-DA,HFPO-DA (GenX),system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,0,ppt,not_detected,,us_hfpoda_mcl_2024,green-ridge-2024-water-quality-report
 phila-baxter-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,baxter_running_annual_average,,,,0,ppt,counted_as_zero_under_regulatory_rule,,pa_pfoa_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
 phila-baxter-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,baxter_running_annual_average,,,,0,ppt,counted_as_zero_under_regulatory_rule,,pa_pfos_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
 phila-belmont-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,belmont_running_annual_average,,,,5.6,ppt,reported,,pa_pfoa_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule

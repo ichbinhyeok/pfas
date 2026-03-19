@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T11:45:00+09:00",
+  "generated_at": "2026-03-20T14:15:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-phila-pwd-home-20260319",
@@ -131,6 +131,45 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Carolina Trace CCR PDF with PWS ID NC0353101 and 2024 PFAS amount-detected values."
+    },
+    {
+      "raw_source_id": "raw-maryland-water-home-20260320",
+      "source_id": "maryland-water-home",
+      "retrieved_at": "2026-03-20T14:15:00+09:00",
+      "url": "https://www.myutility.us/maryland",
+      "organization": "Maryland Water Service",
+      "title": "Maryland Water Service",
+      "content_type": "text/html",
+      "jurisdiction": "MD",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Maryland Water Service homepage."
+    },
+    {
+      "raw_source_id": "raw-maryland-water-quality-reports-20260320",
+      "source_id": "maryland-water-quality-reports",
+      "retrieved_at": "2026-03-20T14:15:00+09:00",
+      "url": "https://www.myutility.us/maryland/water-safety/water-quality-reports",
+      "organization": "Maryland Water Service",
+      "title": "Maryland Water Quality Reports",
+      "content_type": "text/html",
+      "jurisdiction": "MD",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Maryland Water Service report index used to locate Green Ridge report files."
+    },
+    {
+      "raw_source_id": "raw-green-ridge-2024-water-quality-report-20260320",
+      "source_id": "green-ridge-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T14:15:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/maryland/water-quality-reports/green-ridge/2024/greenridge-24ccr-145.pdf?sfvrsn=7ff53c5b_4",
+      "organization": "Green Ridge Utilities Inc.",
+      "title": "Annual Water Quality Report 2024",
+      "content_type": "application/pdf",
+      "jurisdiction": "MD",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Green Ridge 2024 report with PWS ID MD0120011 and March 2024 PFAS results."
     }
   ]
 }

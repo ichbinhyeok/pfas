@@ -21,6 +21,7 @@ public record FilterCatalogItem(
 	BigDecimal replacementCostUsd,
 	BigDecimal membraneCostUsd,
 	BigDecimal serviceCostUsd,
+	List<RecurringCostComponent> recurringCostComponents,
 	String priceObservedAt,
 	String costConfidence,
 	List<String> sourceIds

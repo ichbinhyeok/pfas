@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:19:42.151933100+09:00",
-  "route_count" : 18,
+  "generated_at" : "2026-03-20T02:40:03.528278500+09:00",
+  "route_count" : 19,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -93,6 +93,19 @@
     "source_count" : 3,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "City of Lancaster Water Department", "PA", "7360058", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "MD0120011",
+    "display_label" : "Green Ridge Utilities Inc. PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/MD0120011",
+    "supporting_path" : "/public-water-system/MD0120011",
+    "api_path" : "/internal/results/public-water/MD0120011",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Green Ridge Utilities Inc.", "MD", "MD0120011", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "NC0234191",

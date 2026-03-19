@@ -19,15 +19,18 @@ public class FilterCatalogService {
 
 	private final FilterProductRepository filterProductRepository;
 	private final FilterCostRepository filterCostRepository;
+	private final FilterCostComponentRepository filterCostComponentRepository;
 	private final CertificationClaimService certificationClaimService;
 
 	public FilterCatalogService(
 		FilterProductRepository filterProductRepository,
 		FilterCostRepository filterCostRepository,
+		FilterCostComponentRepository filterCostComponentRepository,
 		CertificationClaimService certificationClaimService
 	) {
 		this.filterProductRepository = filterProductRepository;
 		this.filterCostRepository = filterCostRepository;
+		this.filterCostComponentRepository = filterCostComponentRepository;
 		this.certificationClaimService = certificationClaimService;
 	}
 
@@ -55,6 +58,7 @@ public class FilterCatalogService {
 
 	private FilterCatalogItem toCatalogItem(FilterProduct product) {
 		var cost = filterCostRepository.findByProductId(product.productId()).orElse(null);
+		var recurringCostComponents = filterCostComponentRepository.findByProductId(product.productId());
 		var claims = certificationClaimService.getByListingRecordId(product.listingRecordId());
 
 		Set<String> sourceIds = new LinkedHashSet<>(product.sourceIds());
@@ -70,6 +74,7 @@ public class FilterCatalogService {
 		if (cost != null) {
 			sourceIds.addAll(cost.sourceIds());
 		}
+		recurringCostComponents.forEach(component -> sourceIds.addAll(component.sourceIds()));
 
 		return new FilterCatalogItem(
 			product.productId(),
@@ -89,6 +94,7 @@ public class FilterCatalogService {
 			cost != null ? cost.replacementCostUsd() : null,
 			cost != null ? cost.membraneCostUsd() : null,
 			cost != null ? cost.serviceCostUsd() : null,
+			List.copyOf(recurringCostComponents),
 			cost != null ? cost.priceObservedAt() : null,
 			cost != null ? cost.costConfidence() : null,
 			List.copyOf(sourceIds)

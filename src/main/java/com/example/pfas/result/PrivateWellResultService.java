@@ -247,8 +247,7 @@ public class PrivateWellResultService {
 			.toList();
 
 		var cadenceNotes = options.stream()
-			.filter(option -> option.replacementCadenceMonths() != null)
-			.map(option -> option.brand() + " " + option.model() + " replacement cadence: every " + option.replacementCadenceMonths() + " months.")
+			.flatMap(option -> cadenceNotes(option).stream())
 			.toList();
 
 		if (costs.isEmpty()) {
@@ -463,7 +462,7 @@ public class PrivateWellResultService {
 
 	private String maintenanceBurden(List<FilterCatalogItem> options) {
 		var cadence = options.stream()
-			.map(FilterCatalogItem::replacementCadenceMonths)
+			.flatMap(option -> cadenceValues(option).stream())
 			.filter(value -> value != null)
 			.min(Integer::compareTo)
 			.orElse(null);
@@ -505,8 +504,37 @@ public class PrivateWellResultService {
 		if (option.serviceCostUsd() != null) {
 			total = sumOrValue(total, option.serviceCostUsd());
 		}
+		for (var component : option.recurringCostComponents()) {
+			if (component.componentCostUsd() != null && component.cadenceMonths() != null && component.cadenceMonths() > 0) {
+				total = sumOrValue(total, annualize(component.componentCostUsd(), component.cadenceMonths()));
+			}
+		}
 
 		return total;
+	}
+
+	private List<String> cadenceNotes(FilterCatalogItem option) {
+		var notes = new java.util.ArrayList<String>();
+		if (option.replacementCadenceMonths() != null) {
+			notes.add(option.brand() + " " + option.model() + " primary replacement cadence: every " + option.replacementCadenceMonths() + " months.");
+		}
+		option.recurringCostComponents().stream()
+			.filter(component -> component.cadenceMonths() != null)
+			.map(component -> option.brand() + " " + option.model() + " " + component.componentLabel() + ": every " + component.cadenceMonths() + " months.")
+			.forEach(notes::add);
+		return List.copyOf(notes);
+	}
+
+	private List<Integer> cadenceValues(FilterCatalogItem option) {
+		var values = new java.util.ArrayList<Integer>();
+		if (option.replacementCadenceMonths() != null) {
+			values.add(option.replacementCadenceMonths());
+		}
+		option.recurringCostComponents().stream()
+			.map(com.example.pfas.filter.RecurringCostComponent::cadenceMonths)
+			.filter(value -> value != null)
+			.forEach(values::add);
+		return List.copyOf(values);
 	}
 
 	private BigDecimal annualize(BigDecimal cost, int cadenceMonths) {

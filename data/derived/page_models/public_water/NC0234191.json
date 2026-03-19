@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:19:42.688295400+09:00",
+  "generated_at" : "2026-03-20T02:40:04.311258900+09:00",
   "model_id" : "public_water:NC0234191",
   "route_type" : "public_water",
   "route_key" : "NC0234191",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:NC0234191",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T02:19:42.683030300+09:00",
+      "generated_at" : "2026-03-20T02:40:04.304569900+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -48,7 +48,7 @@
         "range_low_usd" : 147.98,
         "range_high_usd" : 280.00,
         "maintenance_burden" : "high",
-        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet replacement cadence: every 12 months.", "Aquasana Claryum 2-Stage replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect replacement cadence: every 6 months." ],
+        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet primary replacement cadence: every 12 months.", "Aquasana Claryum 2-Stage primary replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow primary replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect primary replacement cadence: every 6 months.", "Aquasana SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block replacements: every 6 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow membrane replacement: every 12 months.", "Aquasana SmartFlow Reverse Osmosis SmartFlow remineralizer replacement: every 6 months." ],
         "notes" : [ "Annual maintenance annualizes normalized replacement media pricing by cadence and adds any normalized recurring membrane or service inputs." ]
       },
       "certification_checklist" : [ {
@@ -191,6 +191,36 @@
         "organization" : "Aquasana",
         "title" : "Claryum Direct Connect Replacement Cartridge",
         "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-direct-connect-replacement-cartridge-100329887.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-smartflow-ro-carbon-replacements",
+        "organization" : "Aquasana",
+        "title" : "SmartFlow Reverse Osmosis Carbon Block and Advanced Carbon Block Replacements",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-filter-replacements-100368688.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-smartflow-ro-membrane-replacement",
+        "organization" : "Aquasana",
+        "title" : "SmartFlow Reverse Osmosis Membrane Replacement",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-membrane-replacement-100368702.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-smartflow-ro-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-SFRO2 Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dwce98d716/PDF/AQ-SFRO2_Performance_Data.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-smartflow-ro-product",
+        "organization" : "Aquasana",
+        "title" : "SmartFlow Reverse Osmosis",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/smart-flow-reverse-osmosis/chrome-100385796.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-smartflow-ro-remineralizer-replacement",
+        "organization" : "Aquasana",
+        "title" : "SmartFlow Reverse Osmosis Remineralizer Replacement",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/smart-flow-reverse-osmosis-remineralizer-replacement-100368975.html",
         "trust_tier" : 4
       } ],
       "meta" : {
