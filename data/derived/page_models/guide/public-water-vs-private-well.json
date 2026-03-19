@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:public-water-vs-private-well",
+  "route_type" : "guide",
+  "route_key" : "public-water-vs-private-well",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/public-water-vs-private-well",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "public-water-vs-private-well",
+      "eyebrow" : "High-intent guide",
+      "title" : "Public water vs private well is the first split, not a small detail",
+      "lede" : "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
+      "nextActionTitle" : "Split the household path before comparing filters",
+      "nextActionSummary" : "Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
+      "whyThis" : [ "Public water has utility and regulator records that can act as direct evidence.", "Private wells are owner-managed and need a test-first route.", "The same PFAS question becomes a different next action depending on source type." ],
+      "whatThisDoesNotTellYou" : [ "This split does not tell you whether the water is safe or unsafe.", "It does not replace a direct utility document or a direct well test.", "It does not justify whole-house by itself." ],
+      "checklist" : [ "Identify the water source first.", "If public water, open the utility path.", "If private well, open the state-guided testing path." ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/test-first-vs-filter-first",
+      "secondaryLabel" : "Read test-first logic",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.818003500+09:00",
+  "model_id" : "state_guidance:MN",
+  "route_type" : "state_guidance",
+  "route_key" : "MN",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/MN",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "MN",
+      "agency_name" : "Minnesota Department of Health",
+      "agency_url" : "https://www.health.state.mn.us/",
+      "private_well_guidance_url" : "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+      "pfas_guidance_url" : "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+      "certified_lab_lookup_url" : "https://www.health.state.mn.us/communities/environment/mnelap/index.html",
+      "sampling_guidance_url" : "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+      "repeat_testing_guidance" : "Minnesota does not recommend every private well be tested for PFAS. Testing depends on whether the well is in an environmental investigation area and on state guidance for accredited-lab sampling.",
+      "benchmark_notes" : "Minnesota uses MDH health-based guidance values and state investigation context. Third-party results are not the same as state-issued well advisories.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "mn-pfas-private-wells", "mn-accredited-labs", "mn-pfas-private-well-contacts" ]
+    },
+    "profile" : {
+      "state_code" : "MN",
+      "profile_kind" : "state_guidance_transition_with_federal_context",
+      "primary_reference_label" : "Minnesota health-based guidance and federal PFAS context",
+      "comparability_mode" : "state_guidance_transition",
+      "summary" : "Minnesota has been revising PFAS health-based guidance and explicitly points to both state risk-assessment work and current federal PFAS drinking-water standards. For Sharp v1, Minnesota should be treated as a state-guidance-first route rather than a simple single-number benchmark state.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFOA_PFOS",
+        "label" : "Federal context currently referenced by Minnesota",
+        "benchmark_display" : "4 ppt / 4 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "federal_context",
+        "applicability" : "state_guidance_transition",
+        "note" : "Use as context only; Minnesota guidance should still be read directly before acting."
+      } ],
+      "private_well_use_note" : "Minnesota results should be anchored in current MDH guidance and lab context before a household treats a single benchmark line as definitive.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "mn-pfas-private-wells", "mn-pfas-values", "epa-pfas-npdwr-implementation" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:MN",
+      "route_type" : "state_guidance",
+      "route_key" : "MN",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "MN",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/MN",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/MN?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

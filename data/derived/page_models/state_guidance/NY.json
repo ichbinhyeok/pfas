@@ -1,0 +1,74 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.821133+09:00",
+  "model_id" : "state_guidance:NY",
+  "route_type" : "state_guidance",
+  "route_key" : "NY",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/NY",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "NY",
+      "agency_name" : "New York State Department of Health / New York State Department of Environmental Conservation",
+      "agency_url" : "https://dec.ny.gov/environmental-protection/per-and-polyfluoroalkyl-substances-pfas",
+      "private_well_guidance_url" : "https://www.health.ny.gov/environmental/water/drinking/docs/pfasandprivatewells.pdf",
+      "pfas_guidance_url" : "https://dec.ny.gov/environmental-protection/per-and-polyfluoroalkyl-substances-pfas",
+      "certified_lab_lookup_url" : "https://www.wadsworth.org/regulatory/elap",
+      "sampling_guidance_url" : "https://www.health.ny.gov/environmental/water/drinking/docs/pfasandprivatewells.pdf",
+      "repeat_testing_guidance" : "Use New York private well testing guidance and local health department advice. Do not infer a universal PFAS retest cadence beyond official New York well-testing materials.",
+      "benchmark_notes" : "New York public water systems use state drinking water standards for PFOA and PFOS. For private wells, those standards are used as guidelines to recommend actions and are not legal compliance determinations.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "ny-dec-pfas", "ny-pfas-private-wells-pdf", "ny-elap" ]
+    },
+    "profile" : {
+      "state_code" : "NY",
+      "profile_kind" : "state_mcls",
+      "primary_reference_label" : "New York PFOA and PFOS MCLs",
+      "comparability_mode" : "state_mcl_numeric_direct_for_covered_analytes",
+      "summary" : "New York still requires water systems to meet its state MCLs for PFOA and PFOS until 2029 even after EPA's newer federal PFAS rule. That makes New York a comparatively clear state for PFOA and PFOS private-well context.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFOA",
+        "label" : "New York MCL for PFOA",
+        "benchmark_display" : "10 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "direct_for_pfoa",
+        "note" : "New York water systems remain on the 10 ppt state MCL until 2029."
+      }, {
+        "contaminant_code" : "PFOS",
+        "label" : "New York MCL for PFOS",
+        "benchmark_display" : "10 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "direct_for_pfos",
+        "note" : "New York water systems remain on the 10 ppt state MCL until 2029."
+      } ],
+      "private_well_use_note" : "New York gives a fairly direct PFOA/PFOS reference context, but private wells are still owner-managed and should route through state lab and follow-up guidance.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "ny-water-supplier-factsheet-mcls", "ny-pfas-private-wells-pdf", "ny-elap" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:NY",
+      "route_type" : "state_guidance",
+      "route_key" : "NY",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "NY",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/NY",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/NY?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

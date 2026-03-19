@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:test-first-vs-filter-first",
+  "route_type" : "guide",
+  "route_key" : "test-first-vs-filter-first",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/test-first-vs-filter-first",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "test-first-vs-filter-first",
+      "eyebrow" : "High-intent guide",
+      "title" : "Test first vs filter first is mostly a question about evidence quality",
+      "lede" : "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
+      "nextActionTitle" : "Open the direct-evidence path before the shopping path",
+      "nextActionSummary" : "Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
+      "whyThis" : [ "Direct evidence changes what kind of product is even appropriate.", "Testing and interpretation help avoid overbuying.", "Certification is meaningful only after the household path is defined." ],
+      "whatThisDoesNotTellYou" : [ "This does not mean nobody should ever buy a filter before testing.", "It does mean the project should not normalize product-first advice as the baseline.", "It does not prove a future benchmark relation without direct data." ],
+      "checklist" : [ "Public water without direct records: start with the utility.", "Private well without a test: start with state-guided testing.", "Only then compare certified point-of-use." ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/pfas-filter-annual-cost",
+      "secondaryLabel" : "Review cost tradeoffs",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}

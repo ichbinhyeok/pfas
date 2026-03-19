@@ -14,8 +14,10 @@ import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.data.PfasDataProperties;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.readiness.ExpansionReadinessStatus;
+import com.example.pfas.result.PrivateWellResultService;
 import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.state.StateGuidanceService;
+import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 import com.example.pfas.water.PublicWaterSystemService;
 import com.example.pfas.web.GuidePage;
 import com.example.pfas.web.GuidePageService;
@@ -30,8 +32,10 @@ public class DerivedArtifactService {
 	private final ExpansionReadinessService expansionReadinessService;
 	private final GuidePageService guidePageService;
 	private final StateGuidanceService stateGuidanceService;
+	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final PublicWaterResultService publicWaterResultService;
+	private final PrivateWellResultService privateWellResultService;
 	private final ActionCheckerService actionCheckerService;
 	private final PfasDataProperties dataProperties;
 
@@ -39,16 +43,20 @@ public class DerivedArtifactService {
 		ExpansionReadinessService expansionReadinessService,
 		GuidePageService guidePageService,
 		StateGuidanceService stateGuidanceService,
+		StateBenchmarkProfileService stateBenchmarkProfileService,
 		PublicWaterSystemService publicWaterSystemService,
 		PublicWaterResultService publicWaterResultService,
+		PrivateWellResultService privateWellResultService,
 		ActionCheckerService actionCheckerService,
 		PfasDataProperties dataProperties
 	) {
 		this.expansionReadinessService = expansionReadinessService;
 		this.guidePageService = guidePageService;
 		this.stateGuidanceService = stateGuidanceService;
+		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.publicWaterResultService = publicWaterResultService;
+		this.privateWellResultService = privateWellResultService;
 		this.actionCheckerService = actionCheckerService;
 		this.dataProperties = dataProperties;
 	}
@@ -100,10 +108,66 @@ public class DerivedArtifactService {
 		return new DecisionInputSeedFile(SCHEMA_VERSION, generatedAt, inputs.size(), inputs);
 	}
 
+	public PageGenerationManifestFile buildPageGenerationManifest() {
+		var generatedAt = OffsetDateTime.now().toString();
+		var items = buildPageModels().stream()
+			.map(model -> new PageGenerationManifestItem(
+				model.modelId(),
+				model.routeType(),
+				model.routeKey(),
+				model.templateKind(),
+				pageModelPath(model.routeType(), model.routeKey()),
+				model.renderPath(),
+				model.generationMode(),
+				model.indexable(),
+				model.lastVerifiedDate(),
+				model.sourceCount()
+			))
+			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
+			.toList();
+
+		return new PageGenerationManifestFile(SCHEMA_VERSION, generatedAt, items.size(), items);
+	}
+
+	public List<GeneratedPageModelFile> buildPageModels() {
+		var models = new ArrayList<GeneratedPageModelFile>();
+
+		guidePageService.getAll().stream()
+			.sorted(Comparator.comparing(GuidePage::slug))
+			.map(this::toGuidePageModel)
+			.forEach(models::add);
+
+		expansionReadinessService.getReport().items().stream()
+			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
+			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
+			.map(this::toReadyPageModel)
+			.forEach(models::add);
+
+		return List.copyOf(models);
+	}
+
+	public GeneratedPageModelFile buildPageModel(String routeType, String routeKey) {
+		if ("guide".equals(routeType)) {
+			return guidePageService.getBySlug(routeKey)
+				.map(this::toGuidePageModel)
+				.orElseThrow(() -> new IllegalStateException("Unknown guide page model: " + routeKey));
+		}
+
+		return expansionReadinessService.getReport().items().stream()
+			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
+			.filter(item -> item.routeType().equals(routeType))
+			.filter(item -> item.routeKey().equalsIgnoreCase(routeKey))
+			.findFirst()
+			.map(this::toReadyPageModel)
+			.orElseThrow(() -> new IllegalStateException("Unknown derived page model: " + routeType + ":" + routeKey));
+	}
+
 	public DerivedArtifactSyncReport sync() {
 		var manifest = buildRouteManifest();
 		var searchIndex = buildSearchIndexSeed();
 		var decisionInputs = buildDecisionInputSeed();
+		var pageGenerationManifest = buildPageGenerationManifest();
+		var pageModels = buildPageModels();
 		var root = Path.of(dataProperties.root()).normalize();
 		var outputs = new ArrayList<DerivedArtifactOutput>();
 
@@ -126,6 +190,20 @@ public class DerivedArtifactService {
 			"decision_input_seed",
 			root.resolve("derived/decision_inputs/decision_input_seed.json").toString().replace('\\', '/'),
 			decisionInputs.inputCount()
+		));
+
+		writeJson(root.resolve("derived/page_models/page_generation_manifest.json"), pageGenerationManifest);
+		outputs.add(new DerivedArtifactOutput(
+			"page_generation_manifest",
+			root.resolve("derived/page_models/page_generation_manifest.json").toString().replace('\\', '/'),
+			pageGenerationManifest.modelCount()
+		));
+
+		pageModels.forEach(model -> writeJson(root.resolve(pageModelPath(model.routeType(), model.routeKey())), model));
+		outputs.add(new DerivedArtifactOutput(
+			"page_models",
+			root.resolve("derived/page_models").toString().replace('\\', '/'),
+			pageModels.size()
 		));
 
 		return new DerivedArtifactSyncReport(SCHEMA_VERSION, OffsetDateTime.now().toString(), List.copyOf(outputs));
@@ -313,6 +391,76 @@ public class DerivedArtifactService {
 			}
 			default -> throw new IllegalStateException("Unsupported decision input route type: " + item.routeType());
 		};
+	}
+
+	private GeneratedPageModelFile toGuidePageModel(GuidePage page) {
+		return new GeneratedPageModelFile(
+			SCHEMA_VERSION,
+			OffsetDateTime.now().toString(),
+			"guide:" + page.slug(),
+			"guide",
+			page.slug(),
+			"guide_page",
+			"/guides/" + page.slug(),
+			"static_file_seed",
+			true,
+			page.lastVerifiedDate(),
+			0,
+			new GuidePageModelPayload(page)
+		);
+	}
+
+	private GeneratedPageModelFile toReadyPageModel(com.example.pfas.readiness.ExpansionReadinessItem item) {
+		return switch (item.routeType()) {
+			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
+				.map(guidance -> new GeneratedPageModelFile(
+					SCHEMA_VERSION,
+					OffsetDateTime.now().toString(),
+					"state_guidance:" + guidance.stateCode(),
+					item.routeType(),
+					guidance.stateCode(),
+					"private_well_state_page",
+					"/private-well/" + guidance.stateCode(),
+					"static_file_seed",
+					true,
+					item.lastVerifiedDate(),
+					item.sourceCount(),
+					new StateGuidePageModelPayload(
+						guidance,
+						stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null),
+						toDecisionInputSeed(item),
+						"/private-well-result/" + guidance.stateCode() + "?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+					)
+				))
+				.orElseThrow(() -> new IllegalStateException("Missing state guidance for page model: " + item.routeKey()));
+			case "public_water" -> publicWaterSystemService.getByPwsid(item.routeKey())
+				.flatMap(system -> publicWaterResultService.getByPwsid(system.pwsid())
+					.map(result -> new GeneratedPageModelFile(
+						SCHEMA_VERSION,
+						OffsetDateTime.now().toString(),
+						"public_water:" + system.pwsid(),
+						item.routeType(),
+						system.pwsid(),
+						"public_water_result_page",
+						"/public-water/" + system.pwsid(),
+						"static_file_seed",
+						true,
+						item.lastVerifiedDate(),
+						item.sourceCount(),
+						new PublicWaterPageModelPayload(
+							system,
+							result,
+							toDecisionInputSeed(item),
+							"/public-water-system/" + system.pwsid()
+						)
+					)))
+				.orElseThrow(() -> new IllegalStateException("Missing public water model inputs for: " + item.routeKey()));
+			default -> throw new IllegalStateException("Unsupported page model route type: " + item.routeType());
+		};
+	}
+
+	private String pageModelPath(String routeType, String routeKey) {
+		return "derived/page_models/" + routeType + "/" + routeKey + ".json";
 	}
 
 	private List<String> guideKeywords(GuidePage page) {

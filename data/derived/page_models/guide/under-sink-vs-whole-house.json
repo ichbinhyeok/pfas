@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:under-sink-vs-whole-house",
+  "route_type" : "guide",
+  "route_key" : "under-sink-vs-whole-house",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/under-sink-vs-whole-house",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "under-sink-vs-whole-house",
+      "eyebrow" : "High-intent guide",
+      "title" : "Under-sink vs whole-house should start with purpose, not fear",
+      "lede" : "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
+      "nextActionTitle" : "Keep point-of-use first unless the household goal clearly exceeds drinking and cooking water",
+      "nextActionSummary" : "Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
+      "whyThis" : [ "Whole-house systems have higher ownership and maintenance consequences.", "Many households are really solving for ingestion-focused use.", "The project should not turn uncertainty into a whole-home upsell." ],
+      "whatThisDoesNotTellYou" : [ "This guide does not say whole-house is never appropriate.", "It says whole-house needs a stronger justification than product-first fear.", "It does not replace current utility or state guidance." ],
+      "checklist" : [ "Define the household objective.", "Compare against certified point-of-use first.", "Only then review whole-house as an escalation." ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/pfas-filter-annual-cost",
+      "secondaryLabel" : "Review annual cost",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.645645200+09:00",
+  "model_count" : 14,
+  "models" : [ {
+    "model_id" : "guide:nsf-53-vs-58-pfas",
+    "route_type" : "guide",
+    "route_key" : "nsf-53-vs-58-pfas",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/nsf-53-vs-58-pfas.json",
+    "render_path" : "/guides/nsf-53-vs-58-pfas",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "guide:pfas-filter-annual-cost",
+    "route_type" : "guide",
+    "route_key" : "pfas-filter-annual-cost",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/pfas-filter-annual-cost.json",
+    "render_path" : "/guides/pfas-filter-annual-cost",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "guide:public-water-vs-private-well",
+    "route_type" : "guide",
+    "route_key" : "public-water-vs-private-well",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/public-water-vs-private-well.json",
+    "render_path" : "/guides/public-water-vs-private-well",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "guide:read-your-ccr",
+    "route_type" : "guide",
+    "route_key" : "read-your-ccr",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/read-your-ccr.json",
+    "render_path" : "/guides/read-your-ccr",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "guide:test-first-vs-filter-first",
+    "route_type" : "guide",
+    "route_key" : "test-first-vs-filter-first",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/test-first-vs-filter-first.json",
+    "render_path" : "/guides/test-first-vs-filter-first",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "guide:under-sink-vs-whole-house",
+    "route_type" : "guide",
+    "route_key" : "under-sink-vs-whole-house",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/under-sink-vs-whole-house.json",
+    "render_path" : "/guides/under-sink-vs-whole-house",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 0
+  }, {
+    "model_id" : "public_water:7360058",
+    "route_type" : "public_water",
+    "route_key" : "7360058",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/7360058.json",
+    "render_path" : "/public-water/7360058",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "public_water:PA1510001",
+    "route_type" : "public_water",
+    "route_key" : "PA1510001",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/PA1510001.json",
+    "render_path" : "/public-water/PA1510001",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:CA",
+    "route_type" : "state_guidance",
+    "route_key" : "CA",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/CA.json",
+    "render_path" : "/private-well/CA",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:MA",
+    "route_type" : "state_guidance",
+    "route_key" : "MA",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/MA.json",
+    "render_path" : "/private-well/MA",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:MI",
+    "route_type" : "state_guidance",
+    "route_key" : "MI",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/MI.json",
+    "render_path" : "/private-well/MI",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:MN",
+    "route_type" : "state_guidance",
+    "route_key" : "MN",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/MN.json",
+    "render_path" : "/private-well/MN",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:NY",
+    "route_type" : "state_guidance",
+    "route_key" : "NY",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/NY.json",
+    "render_path" : "/private-well/NY",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "state_guidance:WA",
+    "route_type" : "state_guidance",
+    "route_key" : "WA",
+    "template_kind" : "private_well_state_page",
+    "model_path" : "derived/page_models/state_guidance/WA.json",
+    "render_path" : "/private-well/WA",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  } ]
+}

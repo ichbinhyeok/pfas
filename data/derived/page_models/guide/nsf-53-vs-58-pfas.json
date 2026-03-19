@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:nsf-53-vs-58-pfas",
+  "route_type" : "guide",
+  "route_key" : "nsf-53-vs-58-pfas",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/nsf-53-vs-58-pfas",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "nsf-53-vs-58-pfas",
+      "eyebrow" : "High-intent guide",
+      "title" : "NSF 53 vs 58 is not enough by itself for PFAS decisions",
+      "lede" : "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit.",
+      "nextActionTitle" : "Read the claim before reading the badge",
+      "nextActionSummary" : "A product should only open if the exact model has direct PFAS claim support and the maintenance burden still makes sense for the household.",
+      "whyThis" : [ "Standard numbers without claim scope can be misleading.", "Claim-level support matters more than broad category language.", "Replacement burden can matter as much as the upfront badge." ],
+      "whatThisDoesNotTellYou" : [ "This guide does not make one standard universally better for everyone.", "It does not replace model-specific listing verification.", "It does not mean certification equals every current regulatory benchmark." ],
+      "checklist" : [ "Check the exact model.", "Check the PFAS claim language.", "Check replacement cadence and annual ownership cost." ],
+      "primaryHref" : "/source-policy",
+      "primaryLabel" : "Open source policy",
+      "secondaryHref" : "/checker",
+      "secondaryLabel" : "Open Action Checker",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}

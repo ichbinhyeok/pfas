@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:pfas-filter-annual-cost",
+  "route_type" : "guide",
+  "route_key" : "pfas-filter-annual-cost",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/pfas-filter-annual-cost",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "pfas-filter-annual-cost",
+      "eyebrow" : "High-intent guide",
+      "title" : "PFAS filter annual cost matters because maintenance changes the real decision",
+      "lede" : "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
+      "nextActionTitle" : "Read annual ownership before treating a product as a fit",
+      "nextActionSummary" : "Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
+      "whyThis" : [ "A low upfront price can still create a high maintenance burden.", "Annual cost changes whether a product is realistic for the household.", "Cost transparency helps block unnecessary escalation." ],
+      "whatThisDoesNotTellYou" : [ "This guide does not replace direct evidence about whether treatment is warranted.", "It does not assume one household usage pattern for everyone.", "It does not make price more important than certification or fit." ],
+      "checklist" : [ "Check replacement cadence.", "Check annual cartridge cost.", "Compare burden before upgrading the treatment class." ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/public-water/PA1510001",
+      "secondaryLabel" : "Open seeded result",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}

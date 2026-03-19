@@ -1,0 +1,66 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.811479100+09:00",
+  "model_id" : "state_guidance:MA",
+  "route_type" : "state_guidance",
+  "route_key" : "MA",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/MA",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "MA",
+      "agency_name" : "Massachusetts Department of Environmental Protection",
+      "agency_url" : "https://www.mass.gov/orgs/massachusetts-department-of-environmental-protection",
+      "private_well_guidance_url" : "https://www.mass.gov/info-details/private-wells",
+      "pfas_guidance_url" : "https://www.mass.gov/doc/per-and-polyfluoroalkyl-substances-pfas-in-public-drinking-water-supplies-questions-and-answers-for-public-water-systems/download",
+      "certified_lab_lookup_url" : "https://www.mass.gov/doc/private-drinking-water-testing-and-the-use-of-massdep-certified-laboratories-0/download",
+      "sampling_guidance_url" : "https://www.mass.gov/info-details/private-wells",
+      "repeat_testing_guidance" : "Massachusetts notes private well owners should decide on repeat testing with local board of health and MassDEP-certified laboratory context, especially in industrial or densely developed areas.",
+      "benchmark_notes" : "Massachusetts private wells are not regulated like public water systems. PFAS results should be interpreted as reference-based action signals with local health and MassDEP context, not as legal compliance findings.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "ma-private-wells", "ma-private-drinking-water-certified-labs", "ma-pfas-public-drinking-water-factsheet" ]
+    },
+    "profile" : {
+      "state_code" : "MA",
+      "profile_kind" : "pfas6_mmcl",
+      "primary_reference_label" : "Massachusetts PFAS6 MMCL",
+      "comparability_mode" : "sum_of_six_not_direct_single_analyte_equivalence",
+      "summary" : "Massachusetts uses a PFAS6 framework for public-water standards. For private wells, that makes the state route useful, but single-analyte well results should not be casually translated into a PFAS6 determination without the full analyte set.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFAS6",
+        "label" : "PFAS6 maximum contaminant level",
+        "benchmark_display" : "20 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mmcl",
+        "applicability" : "sum_of_pfas",
+        "note" : "PFAS6 refers to six PFAS combined in Massachusetts drinking-water regulation."
+      } ],
+      "private_well_use_note" : "Use Massachusetts PFAS6 language carefully. It is helpful for state context, but private-well interpretation still needs the full analyte picture and state lab guidance.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "ma-private-wells", "ma-pfas-public-drinking-water-factsheet" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:MA",
+      "route_type" : "state_guidance",
+      "route_key" : "MA",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "MA",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/MA",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/MA?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

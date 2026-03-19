@@ -30,6 +30,19 @@ public class DerivedArtifactController {
 		return service.buildDecisionInputSeed();
 	}
 
+	@GetMapping("/page-generation-manifest")
+	public PageGenerationManifestFile pageGenerationManifest() {
+		return service.buildPageGenerationManifest();
+	}
+
+	@GetMapping("/page-models/{routeType}/{routeKey}")
+	public GeneratedPageModelFile pageModel(
+		@org.springframework.web.bind.annotation.PathVariable String routeType,
+		@org.springframework.web.bind.annotation.PathVariable String routeKey
+	) {
+		return service.buildPageModel(routeType, routeKey);
+	}
+
 	@PostMapping("/sync")
 	public DerivedArtifactSyncReport sync() {
 		return service.sync();

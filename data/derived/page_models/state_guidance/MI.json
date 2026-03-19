@@ -1,0 +1,82 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.814004+09:00",
+  "model_id" : "state_guidance:MI",
+  "route_type" : "state_guidance",
+  "route_key" : "MI",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/MI",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "MI",
+      "agency_name" : "Michigan Department of Environment, Great Lakes, and Energy / Michigan PFAS Action Response Team",
+      "agency_url" : "https://www.michigan.gov/pfasresponse",
+      "private_well_guidance_url" : "https://www.michigan.gov/egle/about/organization/drinking-water-and-environmental-health/water-well-construction/private-well-testing",
+      "pfas_guidance_url" : "https://www.michigan.gov/pfasresponse/faq/categories/pfas-and-residential-well-water",
+      "certified_lab_lookup_url" : "https://www.michigan.gov/pfasresponse/drinking-water/laboratories",
+      "sampling_guidance_url" : "https://www.michigan.gov/pfasresponse/faq/categories/pfas-and-residential-well-water",
+      "repeat_testing_guidance" : "No single statewide PFAS retesting cadence is fixed in Sharp v1. Use EGLE or local health investigation context and official Michigan advice for follow-up timing.",
+      "benchmark_notes" : "Michigan uses state drinking water standards and official investigation context. Private well interpretation remains reference-based and should not be framed as legal compliance.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "mi-private-well-testing", "mi-pfas-home-testing-labs", "mi-pfas-residential-well-faq" ]
+    },
+    "profile" : {
+      "state_code" : "MI",
+      "profile_kind" : "state_mcls_used_for_private_well_context",
+      "primary_reference_label" : "Michigan PFAS drinking-water MCLs used with other private-well factors",
+      "comparability_mode" : "state_context_numeric_partial",
+      "summary" : "Michigan states that private residential wells are not regulated under the Safe Drinking Water Act, but Michigan uses its PFAS MCLs along with other factors when evaluating private residential well results.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFOA",
+        "label" : "Michigan MCL for PFOA",
+        "benchmark_display" : "8 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "public_water_standard_used_as_private_well_context",
+        "note" : "Useful reference context for private-well interpretation in Michigan."
+      }, {
+        "contaminant_code" : "PFOS",
+        "label" : "Michigan MCL for PFOS",
+        "benchmark_display" : "16 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "public_water_standard_used_as_private_well_context",
+        "note" : "Useful reference context for private-well interpretation in Michigan."
+      }, {
+        "contaminant_code" : "PFNA",
+        "label" : "Michigan MCL for PFNA",
+        "benchmark_display" : "6 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "public_water_standard_used_as_private_well_context",
+        "note" : "Michigan publishes seven PFAS MCLs."
+      } ],
+      "private_well_use_note" : "Michigan lets its public-water MCLs inform private-well evaluation, but private wells are still not regulated public-water systems. Keep the output reference-based.",
+      "last_verified_date" : "2026-03-19",
+      "source_ids" : [ "mi-pfas-mcls", "mi-pfas-residential-well-faq" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:MI",
+      "route_type" : "state_guidance",
+      "route_key" : "MI",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "MI",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/MI",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/MI?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

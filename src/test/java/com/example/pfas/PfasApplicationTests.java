@@ -658,6 +658,36 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsDerivedPageGenerationManifest() throws Exception {
+		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/7360058.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/state_guidance/MI.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/read-your-ccr.json\"")));
+	}
+
+	@Test
+	void returnsDerivedPublicWaterPageModel() throws Exception {
+		mockMvc.perform(get("/internal/derived/page-models/public_water/7360058"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_id\":\"public_water:7360058\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"template_kind\":\"public_water_result_page\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"decision_input\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"next_action\"")));
+	}
+
+	@Test
+	void returnsDerivedStateGuidePageModel() throws Exception {
+		mockMvc.perform(get("/internal/derived/page-models/state_guidance/MI"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_id\":\"state_guidance:MI\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"template_kind\":\"private_well_state_page\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"entry_decision_input\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"sample_result_path\":\"/private-well-result/MI?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false\"")));
+	}
+
+	@Test
 	void rendersGuidePage() throws Exception {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())

@@ -1,0 +1,179 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.795477700+09:00",
+  "model_id" : "public_water:PA1510001",
+  "route_type" : "public_water",
+  "route_key" : "PA1510001",
+  "template_kind" : "public_water_result_page",
+  "render_path" : "/public-water/PA1510001",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "PA1510001",
+      "pwsName" : "Philadelphia Water Department",
+      "stateCode" : "PA",
+      "systemType" : "community",
+      "populationServed" : "1600000",
+      "sourceWaterType" : "surface_water",
+      "utilityWebsiteUrl" : "https://water.phila.gov/",
+      "ccrUrl" : "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
+      "pfasNoticeUrl" : "https://water.phila.gov/sustainability/watershed-protection/pfas/",
+      "serviceAreaNotes" : "Philadelphia and nearby wholesale service areas",
+      "lastVerifiedDate" : "2026-03-19",
+      "sourceIds" : [ "phila-pwd-home", "phila-2024-water-quality-report", "phila-pfas-management" ]
+    },
+    "result" : {
+      "result_id" : "public-water:PA1510001",
+      "schema_version" : "v1",
+      "generated_at" : "2026-03-20T00:05:37.787555600+09:00",
+      "next_action" : {
+        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
+        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
+        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
+        "confidence" : "high",
+        "scope_note" : "Public water utility interpretation; not a household tap test result."
+      },
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 4 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
+      "initial_cost" : {
+        "range_low_usd" : 124.99,
+        "range_high_usd" : 1299.00,
+        "confidence" : "medium",
+        "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
+      },
+      "annual_cost_maintenance" : {
+        "range_low_usd" : 78.19,
+        "range_high_usd" : 280.00,
+        "maintenance_burden" : "high",
+        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet replacement cadence: every 12 months.", "Aquasana Claryum Direct Connect replacement cadence: every 6 months." ],
+        "notes" : [ "Annual maintenance reflects normalized replacement media pricing, not total household ownership cost." ]
+      },
+      "certification_checklist" : [ {
+        "label" : "Claim-level listing for the specific PFAS you care about",
+        "required" : true,
+        "detail" : "Verify the listing record names the PFAS reduction claim directly instead of inferring from a product category.",
+        "source_id" : "nsf-dwtu-listings"
+      }, {
+        "label" : "Match the certification standard to the actual claim",
+        "required" : true,
+        "detail" : "Use NSF ANSI 53 or an equivalent claim-level listing only when the record explicitly carries the reduction claim.",
+        "source_id" : "epa-certified-pfas-filter-guidance"
+      }, {
+        "label" : "Check replacement cadence and cartridge capacity before buying",
+        "required" : true,
+        "detail" : "Cost and maintenance burden change materially if cadence is annual vs more frequent.",
+        "source_id" : "amway-espring-100186-cartridge"
+      } ],
+      "best_fit_options" : [ {
+        "option_code" : "ESPRING_122941",
+        "label" : "Amway eSpring Under the Counter Unit with Aux Faucet",
+        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
+        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "cost_profile" : "high",
+        "maintenance_burden" : "medium"
+      }, {
+        "option_code" : "AQUASANA_AQ_MF_1",
+        "label" : "Aquasana Claryum Direct Connect",
+        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
+        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "cost_profile" : "low",
+        "maintenance_burden" : "high"
+      } ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
+      "sources" : [ {
+        "source_id" : "pa-pfas-mcl-rule",
+        "organization" : "Pennsylvania Department of Environmental Protection",
+        "title" : "PFAS MCL Rule",
+        "url" : "https://www.pa.gov/agencies/dep/programs-and-services/water/bureau-of-safe-drinking-water/drinking-water-management/drinking-water-regulations/pfas-mcl-rule",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "phila-2024-water-quality-report",
+        "organization" : "Philadelphia Water Department",
+        "title" : "2024 Drinking Water Quality Report",
+        "url" : "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "phila-pfas-management",
+        "organization" : "Philadelphia Water Department",
+        "title" : "PFAS Management",
+        "url" : "https://water.phila.gov/sustainability/watershed-protection/pfas/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "phila-pwd-home",
+        "organization" : "Philadelphia Water Department",
+        "title" : "Philadelphia Water Department",
+        "url" : "https://water.phila.gov/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "nsf-dwtu-listings",
+        "organization" : "NSF",
+        "title" : "Certified Drinking Water Treatment Units Listings",
+        "url" : "https://info.nsf.org/Certified/DWTU/",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "nsf-espring-listing-053",
+        "organization" : "NSF",
+        "title" : "NSF DWTU Listing Search - eSpring Standard 53",
+        "url" : "https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=053&TradeName=espring&hdModlStd=ModlStd&submit3=Search",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "amway-espring-100186-cartridge",
+        "organization" : "Amway",
+        "title" : "eSpring UV Water Purifier Replacement Filter Cartridge With UV Technology",
+        "url" : "https://www.amway.com/en_US/eSpring%E2%84%A2-UV-Water-Purifier-Replacement-Filter-Cartridge-With-UV-Technology-p-100186",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "amway-espring-122941-product",
+        "organization" : "Amway",
+        "title" : "eSpring Under the Counter Unit with Aux Faucet",
+        "url" : "https://www.amway.com/en_US/eSpring-Under-the-Counter-with-Aux-Faucet-p-122941",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-direct-connect-install-pdf",
+        "organization" : "Aquasana",
+        "title" : "Claryum Direct Connect Install and Performance Data Sheet",
+        "url" : "https://cdn.aquasana.com/assets/AQ-MF-1_Install.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-direct-connect-product",
+        "organization" : "Aquasana",
+        "title" : "Claryum Direct Connect",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/claryum-direct-connect-100329886.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-direct-connect-replacement",
+        "organization" : "Aquasana",
+        "title" : "Claryum Direct Connect Replacement Cartridge",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-direct-connect-replacement-cartridge-100329887.html",
+        "trust_tier" : 4
+      } ],
+      "meta" : {
+        "water_source_type" : "public_water",
+        "benchmark_relation" : "below_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
+        "manual_review_required" : false
+      }
+    },
+    "decision_input" : {
+      "input_id" : "public_water:PA1510001",
+      "route_type" : "public_water",
+      "route_key" : "PA1510001",
+      "water_source" : "PUBLIC_WATER",
+      "direct_data_status" : "UTILITY_DOCUMENT",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "BELOW_REFERENCE",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : null,
+      "pwsid" : "PA1510001",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/PA1510001",
+      "secondary_path" : "/internal/results/public-water/PA1510001",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+    },
+    "supporting_path" : "/public-water-system/PA1510001"
+  }
+}

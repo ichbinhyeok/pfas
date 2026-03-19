@@ -1,0 +1,31 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T00:05:37.744607300+09:00",
+  "model_id" : "guide:read-your-ccr",
+  "route_type" : "guide",
+  "route_key" : "read-your-ccr",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/read-your-ccr",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 0,
+  "payload" : {
+    "guide" : {
+      "slug" : "read-your-ccr",
+      "eyebrow" : "High-intent guide",
+      "title" : "How to read your CCR or utility report without turning it into a false household verdict",
+      "lede" : "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
+      "nextActionTitle" : "Use the CCR to find the next direct utility layer",
+      "nextActionSummary" : "Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
+      "whyThis" : [ "The CCR tells you what system you are actually on.", "It can point you to more current utility PFAS pages or notices.", "It prevents ZIP-based guessing from outranking direct system evidence." ],
+      "whatThisDoesNotTellYou" : [ "A CCR alone is not a household tap test.", "It may not reflect the newest PFAS notice or running annual average.", "It should not be converted into safe or unsafe language." ],
+      "checklist" : [ "Find the system name and PWSID.", "Check the report date.", "Open any newer PFAS notice or utility PFAS page." ],
+      "primaryHref" : "/public-water-system/PA1510001",
+      "primaryLabel" : "Open seeded utility context",
+      "secondaryHref" : "/checker",
+      "secondaryLabel" : "Open Action Checker",
+      "lastVerifiedDate" : "2026-03-19"
+    }
+  }
+}
