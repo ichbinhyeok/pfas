@@ -594,6 +594,26 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void returnsDerivedRouteManifest() throws Exception {
+		mockMvc.perform(get("/internal/derived/route-manifest"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/private-well/MI\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/7360058\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/read-your-ccr\"")));
+	}
+
+	@Test
+	void returnsDerivedSearchIndexSeed() throws Exception {
+		mockMvc.perform(get("/internal/derived/search-index"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":14")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:7360058\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:read-your-ccr\"")));
+	}
+
+	@Test
 	void rendersGuidePage() throws Exception {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())
