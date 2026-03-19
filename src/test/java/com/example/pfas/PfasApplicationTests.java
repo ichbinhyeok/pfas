@@ -1,10 +1,15 @@
 package com.example.pfas;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.pfas.benchmark.BenchmarkService;
 import com.example.pfas.certification.CertificationClaimService;
@@ -20,6 +25,7 @@ import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @SpringBootTest(properties = "pfas.data.root=./data")
+@AutoConfigureMockMvc
 class PfasApplicationTests {
 
 	@Autowired
@@ -48,6 +54,9 @@ class PfasApplicationTests {
 
 	@Autowired
 	private PublicWaterResultService publicWaterResultService;
+
+	@Autowired
+	private MockMvc mockMvc;
 
 	@Test
 	void contextLoads() {
@@ -179,6 +188,23 @@ class PfasApplicationTests {
 			.contains("pa-pfas-mcl-rule", "nsf-espring-listing-053", "amway-espring-122941-product");
 		assertThat(result.meta().waterSourceType()).isEqualTo("public_water");
 		assertThat(result.meta().benchmarkRelation()).isEqualTo("below_reference");
+	}
+
+	@Test
+	void rendersHomePage() throws Exception {
+		mockMvc.perform(get("/"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official data in,")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")));
+	}
+
+	@Test
+	void rendersPublicWaterResultPage() throws Exception {
+		mockMvc.perform(get("/public-water/PA1510001"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Review utility updates and add certified point-of-use only if you want extra margin")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment breakdown")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")));
 	}
 
 }

@@ -10,6 +10,7 @@ public record ContaminantAssessment(
 	BigDecimal value,
 	String unit,
 	String benchmarkId,
+	String benchmarkLabel,
 	String benchmarkType,
 	BigDecimal benchmarkValue,
 	String benchmarkUnit,

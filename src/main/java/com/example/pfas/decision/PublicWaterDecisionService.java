@@ -156,6 +156,7 @@ public class PublicWaterDecisionService {
 			value,
 			observation.unit(),
 			observation.benchmarkId(),
+			benchmark != null ? benchmark.benchmarkLabel() : "",
 			benchmark != null ? benchmark.benchmarkKind() : "",
 			benchmarkValue,
 			benchmark != null ? benchmark.unit() : "",
