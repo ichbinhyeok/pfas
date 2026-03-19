@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T01:34:02.862718400+09:00",
-  "model_count" : 16,
+  "generated_at" : "2026-03-20T02:19:42.528495100+09:00",
+  "model_count" : 18,
   "models" : [ {
     "model_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
@@ -78,6 +78,28 @@
     "generation_mode" : "static_file_seed",
     "indexable" : true,
     "last_verified_date" : "2026-03-19",
+    "source_count" : 3
+  }, {
+    "model_id" : "public_water:NC0234191",
+    "route_type" : "public_water",
+    "route_key" : "NC0234191",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/NC0234191.json",
+    "render_path" : "/public-water/NC0234191",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
+    "model_id" : "public_water:NC0353101",
+    "route_type" : "public_water",
+    "route_key" : "NC0353101",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/NC0353101.json",
+    "render_path" : "/public-water/NC0353101",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
     "source_count" : 3
   }, {
     "model_id" : "public_water:PA1510001",

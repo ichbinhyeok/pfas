@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T01:34:02.771451600+09:00",
-  "input_count" : 10,
+  "generated_at" : "2026-03-20T02:19:42.419071800+09:00",
+  "input_count" : 12,
   "inputs" : [ {
     "input_id" : "public_water:7360058",
     "route_type" : "public_water",
@@ -16,6 +16,38 @@
     "pwsid" : "7360058",
     "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
     "primary_path" : "/public-water/7360058",
+    "secondary_path" : "/guides/under-sink-vs-whole-house",
+    "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+  }, {
+    "input_id" : "public_water:NC0234191",
+    "route_type" : "public_water",
+    "route_key" : "NC0234191",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "BELOW_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NC0234191",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/NC0234191",
+    "secondary_path" : "/internal/results/public-water/NC0234191",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
+    "input_id" : "public_water:NC0353101",
+    "route_type" : "public_water",
+    "route_key" : "NC0353101",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "ABOVE_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NC0353101",
+    "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
+    "primary_path" : "/public-water/NC0353101",
     "secondary_path" : "/guides/under-sink-vs-whole-house",
     "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
   }, {

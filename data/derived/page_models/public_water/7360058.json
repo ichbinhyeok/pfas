@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T01:34:02.949138700+09:00",
+  "generated_at" : "2026-03-20T02:19:42.670309300+09:00",
   "model_id" : "public_water:7360058",
   "route_type" : "public_water",
   "route_key" : "7360058",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:7360058",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T01:34:02.944090300+09:00",
+      "generated_at" : "2026-03-20T02:19:42.665028400+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
         "title" : "Review utility response and consider certified point-of-use filtration",
@@ -45,11 +45,11 @@
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
       "annual_cost_maintenance" : {
-        "range_low_usd" : 78.19,
+        "range_low_usd" : 147.98,
         "range_high_usd" : 280.00,
         "maintenance_burden" : "high",
-        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet replacement cadence: every 12 months.", "Aquasana Claryum Direct Connect replacement cadence: every 6 months." ],
-        "notes" : [ "Annual maintenance reflects normalized replacement media pricing, not total household ownership cost." ]
+        "cadence_notes" : [ "Amway eSpring Under the Counter Unit with Aux Faucet replacement cadence: every 12 months.", "Aquasana Claryum 2-Stage replacement cadence: every 6 months.", "Aquasana Claryum 3-Stage Max Flow replacement cadence: every 6 months.", "Aquasana Claryum Direct Connect replacement cadence: every 6 months." ],
+        "notes" : [ "Annual maintenance annualizes normalized replacement media pricing by cadence and adds any normalized recurring membrane or service inputs." ]
       },
       "certification_checklist" : [ {
         "label" : "Claim-level listing for the specific PFAS you care about",
@@ -68,15 +68,22 @@
         "source_id" : "amway-espring-100186-cartridge"
       } ],
       "best_fit_options" : [ {
-        "option_code" : "ESPRING_122941",
-        "label" : "Amway eSpring Under the Counter Unit with Aux Faucet",
+        "option_code" : "AQUASANA_AQ_6200",
+        "label" : "Aquasana Claryum 2-Stage",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
         "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
-        "cost_profile" : "high",
-        "maintenance_burden" : "medium"
+        "cost_profile" : "low",
+        "maintenance_burden" : "high"
       }, {
         "option_code" : "AQUASANA_AQ_MF_1",
         "label" : "Aquasana Claryum Direct Connect",
+        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
+        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "cost_profile" : "low",
+        "maintenance_burden" : "high"
+      }, {
+        "option_code" : "AQUASANA_AQ_6300M",
+        "label" : "Aquasana Claryum 3-Stage Max Flow",
         "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
         "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
         "cost_profile" : "low",
@@ -130,6 +137,42 @@
         "organization" : "Amway",
         "title" : "eSpring Under the Counter Unit with Aux Faucet",
         "url" : "https://www.amway.com/en_US/eSpring-Under-the-Counter-with-Aux-Faucet-p-122941",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-2-stage-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-6200 Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw3c142e0f/PDF/AQ-6200_Performance_Data.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-2-stage-product",
+        "organization" : "Aquasana",
+        "title" : "Claryum 2-Stage",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/claryum-2-stage/chrome-100236320.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-2-stage-replacement",
+        "organization" : "Aquasana",
+        "title" : "Claryum 2-Stage Filter Replacements",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-2-stage-filter-replacements-100236330.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-3-stage-max-flow-performance-pdf",
+        "organization" : "Aquasana",
+        "title" : "AQ-6300M Performance Data",
+        "url" : "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw38b1c36f/PDF/AQ-6300M_Performance_Data.pdf",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-3-stage-max-flow-product",
+        "organization" : "Aquasana",
+        "title" : "Claryum 3-Stage Max Flow",
+        "url" : "https://www.aquasana.com/under-sink-water-filters/claryum-3-stage-max-flow-AQ_6300M_M.html",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aq-claryum-3-stage-max-flow-replacement",
+        "organization" : "Aquasana",
+        "title" : "Claryum 3-Stage Max Flow Filter Replacements",
+        "url" : "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-max-flow-filter-replacements-100236367.html",
         "trust_tier" : 4
       }, {
         "source_id" : "aq-claryum-direct-connect-install-pdf",

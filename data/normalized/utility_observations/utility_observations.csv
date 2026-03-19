@@ -7,3 +7,12 @@ phila-queenlane-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,queen_lane_runnin
 phila-queenlane-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,queen_lane_running_annual_average,,,,4.6,ppt,reported,,pa_pfos_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
 lancaster-conestoga-pfoa-raa-2025q3,7360058,PFOA,Perfluorooctanoic acid,conestoga_running_annual_average_2025_q3,2024-10-01,2025-07-11,2025-07-11,15,ppt,reported,,pa_pfoa_mcl_2023,lancaster-pfoa-notice-2025|pa-pfas-mcl-rule
 lancaster-susquehanna-pfoa-2025q3,7360058,PFOA,Perfluorooctanoic acid,susquehanna_finished_water_2025_q3,2025-07-11,2025-07-11,2025-07-11,0,ppt,not_detected,,pa_pfoa_mcl_2023,lancaster-pfoa-notice-2025|pa-pfas-mcl-rule
+abington-pfoa-average-2024,NC0234191,PFOA,Perfluorooctanoic acid,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,1.32,ppt,reported,,us_pfoa_mcl_2024,abington-2024-water-quality-report
+abington-pfos-average-2024,NC0234191,PFOS,Perfluorooctane sulfonate,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,1.43,ppt,reported,,us_pfos_mcl_2024,abington-2024-water-quality-report
+abington-pfhxs-average-2024,NC0234191,PFHxS,Perfluorohexanesulfonic acid,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,1.37,ppt,reported,,us_pfhxs_mcl_2024,abington-2024-water-quality-report
+abington-pfna-average-2024,NC0234191,PFNA,Perfluorononanoic acid,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,0,ppt,not_detected,,us_pfna_mcl_2024,abington-2024-water-quality-report
+abington-hfpoda-average-2024,NC0234191,HFPO-DA,HFPO-DA (GenX),system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,0,ppt,not_detected,,us_hfpoda_mcl_2024,abington-2024-water-quality-report
+carolina-trace-pfoa-amount-detected-2024,NC0353101,PFOA,Perfluorooctanoic acid,system_amount_detected_2024,2024-01-01,2024-12-31,,4.79,ppt,reported,,us_pfoa_mcl_2024,carolina-trace-2024-water-quality-report
+carolina-trace-pfos-amount-detected-2024,NC0353101,PFOS,Perfluorooctane sulfonate,system_amount_detected_2024,2024-01-01,2024-12-31,,10.75,ppt,reported,,us_pfos_mcl_2024,carolina-trace-2024-water-quality-report
+carolina-trace-pfhxs-amount-detected-2024,NC0353101,PFHxS,Perfluorohexanesulfonic acid,system_amount_detected_2024,2024-01-01,2024-12-31,,1.78,ppt,reported,,us_pfhxs_mcl_2024,carolina-trace-2024-water-quality-report
+carolina-trace-pfna-amount-detected-2024,NC0353101,PFNA,Perfluorononanoic acid,system_amount_detected_2024,2024-01-01,2024-12-31,,0.11,ppt,reported,,us_pfna_mcl_2024,carolina-trace-2024-water-quality-report

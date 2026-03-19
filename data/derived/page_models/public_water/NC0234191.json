@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:19:42.722047100+09:00",
-  "model_id" : "public_water:PA1510001",
+  "generated_at" : "2026-03-20T02:19:42.688295400+09:00",
+  "model_id" : "public_water:NC0234191",
   "route_type" : "public_water",
-  "route_key" : "PA1510001",
+  "route_key" : "NC0234191",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/PA1510001",
+  "render_path" : "/public-water/NC0234191",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "PA1510001",
-      "pwsName" : "Philadelphia Water Department",
-      "stateCode" : "PA",
+      "pwsid" : "NC0234191",
+      "pwsName" : "Abington Water System",
+      "stateCode" : "NC",
       "systemType" : "community",
-      "populationServed" : "1600000",
+      "populationServed" : "2485",
       "sourceWaterType" : "surface_water",
-      "utilityWebsiteUrl" : "https://water.phila.gov/",
-      "ccrUrl" : "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
-      "pfasNoticeUrl" : "https://water.phila.gov/sustainability/watershed-protection/pfas/",
-      "serviceAreaNotes" : "Philadelphia and nearby wholesale service areas",
-      "lastVerifiedDate" : "2026-03-19",
-      "sourceIds" : [ "phila-pwd-home", "phila-2024-water-quality-report", "phila-pfas-management" ]
+      "utilityWebsiteUrl" : "https://www.myutility.us/carolinawater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+      "serviceAreaNotes" : "Carolina Water Service of North Carolina system reporting 2024 PFAS results from February and May sampling",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "abington-2024-water-quality-report" ]
     },
     "result" : {
-      "result_id" : "public-water:PA1510001",
+      "result_id" : "public-water:NC0234191",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T02:19:42.717538900+09:00",
+      "generated_at" : "2026-03-20T02:19:42.683030300+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -36,7 +36,7 @@
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 4 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
       "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 124.99,
@@ -91,28 +91,28 @@
       } ],
       "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
       "sources" : [ {
-        "source_id" : "pa-pfas-mcl-rule",
-        "organization" : "Pennsylvania Department of Environmental Protection",
-        "title" : "PFAS MCL Rule",
-        "url" : "https://www.pa.gov/agencies/dep/programs-and-services/water/bureau-of-safe-drinking-water/drinking-water-management/drinking-water-regulations/pfas-mcl-rule",
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "abington-2024-water-quality-report",
+        "organization" : "Carolina Water Service of North Carolina",
+        "title" : "Annual Water Quality Report 2024 Abington CCR 002",
+        "url" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
         "trust_tier" : 2
       }, {
-        "source_id" : "phila-2024-water-quality-report",
-        "organization" : "Philadelphia Water Department",
-        "title" : "2024 Drinking Water Quality Report",
-        "url" : "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
+        "source_id" : "carolina-water-home",
+        "organization" : "Carolina Water Service of North Carolina",
+        "title" : "Carolina Water Service of North Carolina",
+        "url" : "https://www.myutility.us/carolinawater",
         "trust_tier" : 2
       }, {
-        "source_id" : "phila-pfas-management",
-        "organization" : "Philadelphia Water Department",
-        "title" : "PFAS Management",
-        "url" : "https://water.phila.gov/sustainability/watershed-protection/pfas/",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "phila-pwd-home",
-        "organization" : "Philadelphia Water Department",
-        "title" : "Philadelphia Water Department",
-        "url" : "https://water.phila.gov/",
+        "source_id" : "carolina-water-quality-reports",
+        "organization" : "Carolina Water Service of North Carolina",
+        "title" : "Water Quality Reports",
+        "url" : "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -201,9 +201,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:PA1510001",
+      "input_id" : "public_water:NC0234191",
       "route_type" : "public_water",
-      "route_key" : "PA1510001",
+      "route_key" : "NC0234191",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -211,12 +211,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "PA1510001",
+      "pwsid" : "NC0234191",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/PA1510001",
-      "secondary_path" : "/internal/results/public-water/PA1510001",
+      "primary_path" : "/public-water/NC0234191",
+      "secondary_path" : "/internal/results/public-water/NC0234191",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/PA1510001"
+    "supporting_path" : "/public-water-system/NC0234191"
   }
 }

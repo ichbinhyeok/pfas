@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T01:45:00+09:00",
+  "generated_at": "2026-03-20T11:45:00+09:00",
   "documents": [
     {
       "source_id": "epa-pfas-npdwr-implementation",
@@ -1422,6 +1422,224 @@
         "third-party listing replacement"
       ],
       "notes": "Performance sheet states the system is tested and certified by IAPMO R&T against NSF ANSI 42, 53, and 401 and shows PFOA PFOS reduction performance."
+    },
+    {
+      "source_id": "carolina-water-home",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Carolina Water Service of North Carolina",
+      "url": "https://www.myutility.us/carolinawater",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "NC",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Carolina Water Service of North Carolina utility homepage."
+    },
+    {
+      "source_id": "carolina-water-quality-reports",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Water Quality Reports",
+      "url": "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "NC",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Carolina Water Service report index used to locate system-specific CCR PDFs."
+    },
+    {
+      "source_id": "abington-2024-water-quality-report",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Annual Water Quality Report 2024 Abington CCR 002",
+      "url": "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NC",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Abington CCR showing PWS ID NC0234191 and direct PFAS values from February and May 2024 sampling."
+    },
+    {
+      "source_id": "carolina-trace-2024-water-quality-report",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Annual Water Quality Report 2024 Carolina Trace CCR 049",
+      "url": "https://www.myutility.us/NC/CCR24/049.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NC",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Carolina Trace CCR showing PWS ID NC0353101 and 2024 PFAS amount-detected values."
+    },
+    {
+      "source_id": "aq-claryum-2-stage-product",
+      "organization": "Aquasana",
+      "title": "Claryum 2-Stage",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-2-stage/chrome-100236320.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana product page for Claryum 2-Stage showing current discounted price, PFAS marketing statement, and six-month replacement guidance."
+    },
+    {
+      "source_id": "aq-claryum-2-stage-replacement",
+      "organization": "Aquasana",
+      "title": "Claryum 2-Stage Filter Replacements",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-2-stage-filter-replacements-100236330.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official replacement page for the Claryum 2-Stage cartridge set showing current replacement pricing and six-month cadence."
+    },
+    {
+      "source_id": "aq-claryum-2-stage-performance-pdf",
+      "organization": "Aquasana",
+      "title": "AQ-6200 Performance Data",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw3c142e0f/PDF/AQ-6200_Performance_Data.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Aquasana performance data for AQ-6200 stating WQA tested and certified claims including PFOA and PFOS reduction."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-max-flow-product",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage Max Flow",
+      "url": "https://www.aquasana.com/under-sink-water-filters/claryum-3-stage-max-flow-AQ_6300M_M.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "vendor certification statement"
+      ],
+      "disallowed_uses": [
+        "third-party claim proof without supporting documentation"
+      ],
+      "notes": "Aquasana product page for Claryum 3-Stage Max Flow showing current discounted price, PFAS claim language, and six-month replacement guidance."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-max-flow-replacement",
+      "organization": "Aquasana",
+      "title": "Claryum 3-Stage Max Flow Filter Replacements",
+      "url": "https://www.aquasana.com/water-filter-replacements/under-sink-water-filter-replacements/claryum-3-stage-max-flow-filter-replacements-100236367.html",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official replacement page for the Claryum 3-Stage Max Flow cartridges showing current replacement pricing and six-month cadence."
+    },
+    {
+      "source_id": "aq-claryum-3-stage-max-flow-performance-pdf",
+      "organization": "Aquasana",
+      "title": "AQ-6300M Performance Data",
+      "url": "https://www.aquasana.com/on/demandware.static/-/Sites-aquasana-Library/default/dw38b1c36f/PDF/AQ-6300M_Performance_Data.pdf",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction",
+        "capacity context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "Aquasana performance data for AQ-6300M stating WQA tested and certified claims including PFOA and PFOS reduction."
     }
   ]
 }

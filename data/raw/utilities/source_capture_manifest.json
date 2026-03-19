@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-19T18:20:00+09:00",
+  "generated_at": "2026-03-20T11:45:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-phila-pwd-home-20260319",
@@ -79,6 +79,58 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Lancaster utility notice reporting a 15 ng/L running annual average for PFOA at the Conestoga treatment plant."
+    },
+    {
+      "raw_source_id": "raw-carolina-water-home-20260320",
+      "source_id": "carolina-water-home",
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "url": "https://www.myutility.us/carolinawater",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Carolina Water Service of North Carolina",
+      "content_type": "text/html",
+      "jurisdiction": "NC",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Carolina Water Service of North Carolina utility homepage."
+    },
+    {
+      "raw_source_id": "raw-carolina-water-quality-reports-20260320",
+      "source_id": "carolina-water-quality-reports",
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "url": "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Water Quality Reports",
+      "content_type": "text/html",
+      "jurisdiction": "NC",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Carolina Water Service report index used to locate system-specific CCR files."
+    },
+    {
+      "raw_source_id": "raw-abington-2024-water-quality-report-20260320",
+      "source_id": "abington-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Annual Water Quality Report 2024 Abington CCR 002",
+      "content_type": "application/pdf",
+      "jurisdiction": "NC",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Abington CCR PDF with PWS ID NC0234191 and 2024 PFAS values."
+    },
+    {
+      "raw_source_id": "raw-carolina-trace-2024-water-quality-report-20260320",
+      "source_id": "carolina-trace-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T11:45:00+09:00",
+      "url": "https://www.myutility.us/NC/CCR24/049.pdf",
+      "organization": "Carolina Water Service of North Carolina",
+      "title": "Annual Water Quality Report 2024 Carolina Trace CCR 049",
+      "content_type": "application/pdf",
+      "jurisdiction": "NC",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Carolina Trace CCR PDF with PWS ID NC0353101 and 2024 PFAS amount-detected values."
     }
   ]
 }

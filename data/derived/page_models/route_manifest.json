@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T01:34:02.540759700+09:00",
-  "route_count" : 16,
+  "generated_at" : "2026-03-20T02:19:42.151933100+09:00",
+  "route_count" : 18,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -93,6 +93,32 @@
     "source_count" : 3,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "City of Lancaster Water Department", "PA", "7360058", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NC0234191",
+    "display_label" : "Abington Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NC0234191",
+    "supporting_path" : "/public-water-system/NC0234191",
+    "api_path" : "/internal/results/public-water/NC0234191",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Abington Water System", "NC", "NC0234191", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NC0353101",
+    "display_label" : "Carolina Trace Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NC0353101",
+    "supporting_path" : "/public-water-system/NC0353101",
+    "api_path" : "/internal/results/public-water/NC0353101",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Carolina Trace Water System", "NC", "NC0353101", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "PA1510001",

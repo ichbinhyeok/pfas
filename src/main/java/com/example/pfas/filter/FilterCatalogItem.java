@@ -19,6 +19,8 @@ public record FilterCatalogItem(
 	Integer replacementCapacityGallons,
 	BigDecimal upfrontCostUsd,
 	BigDecimal replacementCostUsd,
+	BigDecimal membraneCostUsd,
+	BigDecimal serviceCostUsd,
 	String priceObservedAt,
 	String costConfidence,
 	List<String> sourceIds

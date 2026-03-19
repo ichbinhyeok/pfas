@@ -87,6 +87,8 @@ public class FilterCatalogService {
 			product.replacementCapacityGallons(),
 			cost != null ? cost.upfrontCostUsd() : null,
 			cost != null ? cost.replacementCostUsd() : null,
+			cost != null ? cost.membraneCostUsd() : null,
+			cost != null ? cost.serviceCostUsd() : null,
 			cost != null ? cost.priceObservedAt() : null,
 			cost != null ? cost.costConfidence() : null,
 			List.copyOf(sourceIds)

@@ -1,6 +1,7 @@
 package com.example.pfas.result;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.OffsetDateTime;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
@@ -109,7 +110,7 @@ public class PublicWaterResultService {
 
 	private AnnualCostMaintenance buildAnnualCost(List<FilterCatalogItem> options, PublicWaterDecisionContext decision) {
 		var costs = options.stream()
-			.map(FilterCatalogItem::replacementCostUsd)
+			.map(this::annualizedMaintenanceCost)
 			.filter(cost -> cost != null)
 			.toList();
 
@@ -133,7 +134,7 @@ public class PublicWaterResultService {
 			costs.stream().max(Comparator.naturalOrder()).orElse(BigDecimal.ZERO),
 			maintenanceBurden(options),
 			cadenceNotes,
-			List.of("Annual maintenance reflects normalized replacement media pricing, not total household ownership cost.")
+			List.of("Annual maintenance annualizes normalized replacement media pricing by cadence and adds any normalized recurring membrane or service inputs.")
 		);
 	}
 
@@ -162,6 +163,11 @@ public class PublicWaterResultService {
 
 	private List<BestFitOption> bestFitOptions(List<FilterCatalogItem> options) {
 		return options.stream()
+			.sorted(Comparator
+				.comparing(this::annualizedMaintenanceCost, Comparator.nullsLast(Comparator.naturalOrder()))
+				.thenComparing(FilterCatalogItem::upfrontCostUsd, Comparator.nullsLast(Comparator.naturalOrder()))
+				.thenComparing(FilterCatalogItem::brand)
+				.thenComparing(FilterCatalogItem::model))
 			.limit(3)
 			.map(option -> new BestFitOption(
 				option.productId().toUpperCase().replace('-', '_'),
@@ -280,5 +286,30 @@ public class PublicWaterResultService {
 			return "medium";
 		}
 		return "low";
+	}
+
+	private BigDecimal annualizedMaintenanceCost(FilterCatalogItem option) {
+		BigDecimal total = null;
+
+		if (option.replacementCostUsd() != null && option.replacementCadenceMonths() != null && option.replacementCadenceMonths() > 0) {
+			total = annualize(option.replacementCostUsd(), option.replacementCadenceMonths());
+		}
+		if (option.membraneCostUsd() != null) {
+			total = sumOrValue(total, option.membraneCostUsd());
+		}
+		if (option.serviceCostUsd() != null) {
+			total = sumOrValue(total, option.serviceCostUsd());
+		}
+
+		return total;
+	}
+
+	private BigDecimal annualize(BigDecimal cost, int cadenceMonths) {
+		return cost.multiply(BigDecimal.valueOf(12))
+			.divide(BigDecimal.valueOf(cadenceMonths), 2, RoundingMode.HALF_UP);
+	}
+
+	private BigDecimal sumOrValue(BigDecimal current, BigDecimal value) {
+		return current == null ? value : current.add(value);
 	}
 }
