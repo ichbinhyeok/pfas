@@ -72,10 +72,7 @@ public class UtilityObservationRepository {
 			CsvSupport.value(values, headerMap, "unit"),
 			CsvSupport.value(values, headerMap, "result_flag"),
 			CsvSupport.parseBigDecimal(CsvSupport.value(values, headerMap, "minimum_reporting_level")),
-			CsvSupport.value(values, headerMap, "benchmark_type"),
-			CsvSupport.parseBigDecimal(CsvSupport.value(values, headerMap, "benchmark_value")),
-			CsvSupport.value(values, headerMap, "benchmark_unit"),
-			CsvSupport.value(values, headerMap, "benchmark_source_id"),
+			CsvSupport.value(values, headerMap, "benchmark_id"),
 			CsvSupport.parsePipeSeparatedList(CsvSupport.value(values, headerMap, "source_ids"))
 		);
 	}

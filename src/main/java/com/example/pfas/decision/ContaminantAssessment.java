@@ -9,11 +9,13 @@ public record ContaminantAssessment(
 	String sampleContext,
 	BigDecimal value,
 	String unit,
+	String benchmarkId,
 	String benchmarkType,
 	BigDecimal benchmarkValue,
 	String benchmarkUnit,
 	String benchmarkSourceId,
+	String benchmarkReferenceStatus,
 	BigDecimal ratioToBenchmark,
-	String comparisonStatus
+	BenchmarkComparisonStatus comparisonStatus
 ) {
 }

@@ -6,7 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.pfas.benchmark.BenchmarkService;
 import com.example.pfas.certification.CertificationClaimService;
+import com.example.pfas.decision.PublicWaterDecisionRuleId;
+import com.example.pfas.decision.PublicWaterDecisionStatus;
+import com.example.pfas.decision.PublicWaterNextActionCode;
 import com.example.pfas.decision.PublicWaterDecisionService;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.observation.UtilityObservationService;
@@ -31,6 +35,9 @@ class PfasApplicationTests {
 
 	@Autowired
 	private CertificationClaimService certificationClaimService;
+
+	@Autowired
+	private BenchmarkService benchmarkService;
 
 	@Autowired
 	private FilterCatalogService filterCatalogService;
@@ -91,7 +98,7 @@ class PfasApplicationTests {
 			.singleElement()
 			.satisfies(observation -> {
 				assertThat(observation.value()).isEqualByComparingTo("6.8");
-				assertThat(observation.benchmarkValue()).isEqualByComparingTo("14");
+				assertThat(observation.benchmarkId()).isEqualTo("pa_pfoa_mcl_2023");
 				assertThat(observation.sourceIds()).contains("phila-pfas-management", "pa-pfas-mcl-rule");
 			});
 	}
@@ -106,6 +113,20 @@ class PfasApplicationTests {
 			.containsExactly("PFOA Reduction", "PFOS Reduction", "Total PFAS Reduction");
 		assertThat(eSpringClaims.get(2).coveredPfas())
 			.contains("PFOA", "PFOS", "PFBS");
+	}
+
+	@Test
+	void loadsSeededBenchmarks() {
+		var benchmarks = benchmarkService.getAll();
+
+		assertThat(benchmarks).hasSizeGreaterThanOrEqualTo(7);
+		assertThat(benchmarkService.getByBenchmarkId("pa_pfoa_mcl_2023")).isPresent();
+		assertThat(benchmarkService.getByBenchmarkId("us_pfoa_mcl_2024"))
+			.get()
+			.satisfies(record -> {
+				assertThat(record.benchmarkValue()).isEqualByComparingTo("4");
+				assertThat(record.referenceStatus()).isEqualTo("active_for_pfoa_pfos_only_after_2025_05_14");
+			});
 	}
 
 	@Test
@@ -125,9 +146,12 @@ class PfasApplicationTests {
 	void buildsPublicWaterDecisionContext() {
 		var decision = publicWaterDecisionService.getByPwsid("PA1510001").orElseThrow();
 
-		assertThat(decision.decisionStatus()).isEqualTo("present_below_selected_benchmark");
-		assertThat(decision.nextActionCode()).isEqualTo("review_utility_updates_and_optionally_add_certified_pou");
+		assertThat(decision.decisionStatus()).isEqualTo(PublicWaterDecisionStatus.PRESENT_BELOW_SELECTED_BENCHMARK);
+		assertThat(decision.nextActionCode()).isEqualTo(PublicWaterNextActionCode.REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU);
+		assertThat(decision.decisionRuleId()).isEqualTo(PublicWaterDecisionRuleId.PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU);
+		assertThat(decision.manualReviewRequired()).isFalse();
 		assertThat(decision.assessments()).hasSize(6);
+		assertThat(decision.assessments().get(0).benchmarkId()).isNotBlank();
 		assertThat(decision.certifiedPouOptions())
 			.extracting(item -> item.productId())
 			.contains("espring-122941");

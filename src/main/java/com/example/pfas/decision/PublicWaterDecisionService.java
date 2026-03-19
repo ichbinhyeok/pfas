@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.example.pfas.benchmark.BenchmarkService;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.observation.UtilityObservation;
 import com.example.pfas.observation.UtilityObservationService;
@@ -22,15 +23,18 @@ public class PublicWaterDecisionService {
 			.thenComparing(ContaminantAssessment::sampleContext)
 			.thenComparing(ContaminantAssessment::contaminantCode);
 
+	private final BenchmarkService benchmarkService;
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final UtilityObservationService utilityObservationService;
 	private final FilterCatalogService filterCatalogService;
 
 	public PublicWaterDecisionService(
+		BenchmarkService benchmarkService,
 		PublicWaterSystemService publicWaterSystemService,
 		UtilityObservationService utilityObservationService,
 		FilterCatalogService filterCatalogService
 	) {
+		this.benchmarkService = benchmarkService;
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.utilityObservationService = utilityObservationService;
 		this.filterCatalogService = filterCatalogService;
@@ -47,10 +51,12 @@ public class PublicWaterDecisionService {
 				system.pwsid(),
 				system.pwsName(),
 				system.stateCode(),
-				"no_direct_observations",
-				"find_direct_utility_or_test_data",
+				PublicWaterDecisionStatus.NO_DIRECT_OBSERVATIONS,
+				PublicWaterNextActionCode.FIND_DIRECT_UTILITY_OR_TEST_DATA,
+				PublicWaterDecisionRuleId.PUBLIC_WATER_NO_DIRECT_OBSERVATIONS,
 				"Find direct utility PFAS data before escalating",
 				"No normalized PFAS observations are available for this system yet, so the correct next step is to locate a current utility report or certified test result.",
+				false,
 				List.of(
 					"This is not a household tap test result.",
 					"ZIP or city-level inference is not used here.",
@@ -66,8 +72,9 @@ public class PublicWaterDecisionService {
 			.sorted(ASSESSMENT_ORDER)
 			.toList();
 
-		var hasAbove = assessments.stream().anyMatch(assessment -> assessment.comparisonStatus().equals("above_selected_benchmark"));
-		var hasReviewBand = assessments.stream().anyMatch(assessment -> assessment.comparisonStatus().equals("present_below_selected_benchmark"));
+		var hasAbove = assessments.stream().anyMatch(assessment -> assessment.comparisonStatus() == BenchmarkComparisonStatus.ABOVE_SELECTED_BENCHMARK);
+		var hasReviewBand = assessments.stream().anyMatch(assessment -> assessment.comparisonStatus() == BenchmarkComparisonStatus.PRESENT_BELOW_SELECTED_BENCHMARK);
+		var hasInsufficientBenchmark = assessments.stream().anyMatch(assessment -> assessment.comparisonStatus() == BenchmarkComparisonStatus.INSUFFICIENT_BENCHMARK);
 
 		var certifiedOptions = filterCatalogService.getForPfasCoverage(List.of("PFOA", "PFOS"));
 
@@ -76,12 +83,14 @@ public class PublicWaterDecisionService {
 				system.pwsid(),
 				system.pwsName(),
 				system.stateCode(),
-				"above_selected_benchmark",
-				"review_utility_notice_and_consider_certified_pou",
+				PublicWaterDecisionStatus.ABOVE_SELECTED_BENCHMARK,
+				PublicWaterNextActionCode.REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU,
+				PublicWaterDecisionRuleId.PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE,
 				"Review utility response and consider certified point-of-use filtration",
 				"At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
+				hasInsufficientBenchmark,
 				List.of(
-					"Benchmark selection here is the benchmark attached to each normalized observation, not a universal federal safety finding.",
+					"Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.",
 					"This is a utility-level signal and does not replace a household tap test.",
 					"Whole-house escalation is not the default recommendation from this endpoint."
 				),
@@ -95,10 +104,12 @@ public class PublicWaterDecisionService {
 				system.pwsid(),
 				system.pwsName(),
 				system.stateCode(),
-				"present_below_selected_benchmark",
-				"review_utility_updates_and_optionally_add_certified_pou",
+				PublicWaterDecisionStatus.PRESENT_BELOW_SELECTED_BENCHMARK,
+				PublicWaterNextActionCode.REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU,
+				PublicWaterDecisionRuleId.PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU,
 				"Review utility updates and add certified point-of-use only if you want extra margin",
 				"PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
+				hasInsufficientBenchmark,
 				List.of(
 					"This is not a safe or unsafe label.",
 					"Observation values may reflect running annual averages or utility-specific reporting context.",
@@ -113,10 +124,12 @@ public class PublicWaterDecisionService {
 			system.pwsid(),
 			system.pwsName(),
 			system.stateCode(),
-			"reported_below_selected_benchmark",
-			"keep_monitoring_utility_updates",
+			PublicWaterDecisionStatus.REPORTED_BELOW_SELECTED_BENCHMARK,
+			PublicWaterNextActionCode.KEEP_MONITORING_UTILITY_UPDATES,
+			PublicWaterDecisionRuleId.PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR,
 			"Keep monitoring utility updates; no immediate escalation from current normalized data",
 			"The current normalized utility observations are below the selected benchmark, so there is no immediate escalation from this data alone.",
+			hasInsufficientBenchmark,
 			List.of(
 				"This is not a household tap test.",
 				"Future utility updates can change the picture.",
@@ -128,7 +141,8 @@ public class PublicWaterDecisionService {
 	}
 
 	private ContaminantAssessment toAssessment(UtilityObservation observation) {
-		var benchmarkValue = observation.benchmarkValue();
+		var benchmark = benchmarkService.getByBenchmarkId(observation.benchmarkId()).orElse(null);
+		var benchmarkValue = benchmark != null ? benchmark.benchmarkValue() : null;
 		var value = observation.value();
 		var ratio = benchmarkValue != null && value != null && benchmarkValue.signum() > 0
 			? value.divide(benchmarkValue, 4, RoundingMode.HALF_UP)
@@ -141,25 +155,27 @@ public class PublicWaterDecisionService {
 			observation.sampleContext(),
 			value,
 			observation.unit(),
-			observation.benchmarkType(),
+			observation.benchmarkId(),
+			benchmark != null ? benchmark.benchmarkKind() : "",
 			benchmarkValue,
-			observation.benchmarkUnit(),
-			observation.benchmarkSourceId(),
+			benchmark != null ? benchmark.unit() : "",
+			benchmark != null ? benchmark.primarySourceId() : "",
+			benchmark != null ? benchmark.referenceStatus() : "",
 			ratio,
 			comparisonStatus(value, benchmarkValue)
 		);
 	}
 
-	private String comparisonStatus(BigDecimal value, BigDecimal benchmarkValue) {
+	private BenchmarkComparisonStatus comparisonStatus(BigDecimal value, BigDecimal benchmarkValue) {
 		if (value == null || benchmarkValue == null || benchmarkValue.signum() <= 0) {
-			return "insufficient_benchmark";
+			return BenchmarkComparisonStatus.INSUFFICIENT_BENCHMARK;
 		}
 		if (value.compareTo(benchmarkValue) > 0) {
-			return "above_selected_benchmark";
+			return BenchmarkComparisonStatus.ABOVE_SELECTED_BENCHMARK;
 		}
 		if (value.signum() == 0) {
-			return "non_detect_or_zero_reported";
+			return BenchmarkComparisonStatus.NON_DETECT_OR_ZERO_REPORTED;
 		}
-		return "present_below_selected_benchmark";
+		return BenchmarkComparisonStatus.PRESENT_BELOW_SELECTED_BENCHMARK;
 	}
 }

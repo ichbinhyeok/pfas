@@ -50,6 +50,29 @@
       "notes": "Use as a date-sensitive annotation source for current PFAS rule status."
     },
     {
+      "source_id": "epa-pfas-rule-overview",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
+      "url": "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+      "source_kind": "federal_regulation_overview_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": "2024-04-10",
+      "last_updated_date": "2025-12-04",
+      "retrieved_at": "2026-03-19T20:45:00+09:00",
+      "effective_date": "2024-04-10",
+      "allowed_uses": [
+        "federal benchmark registry",
+        "rule summary",
+        "mcl comparison basis"
+      ],
+      "disallowed_uses": [
+        "household safe or unsafe determination",
+        "private well legal compliance determination"
+      ],
+      "notes": "EPA summary page lists the final 2024 PFAS NPDWR benchmark values and notes compliance is determined by running annual averages at the sampling point."
+    },
+    {
       "source_id": "epa-ucmr5-main",
       "organization": "U.S. Environmental Protection Agency",
       "title": "Fifth Unregulated Contaminant Monitoring Rule",

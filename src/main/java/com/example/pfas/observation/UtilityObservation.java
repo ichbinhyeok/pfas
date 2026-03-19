@@ -16,10 +16,7 @@ public record UtilityObservation(
 	String unit,
 	String resultFlag,
 	BigDecimal minimumReportingLevel,
-	String benchmarkType,
-	BigDecimal benchmarkValue,
-	String benchmarkUnit,
-	String benchmarkSourceId,
+	String benchmarkId,
 	List<String> sourceIds
 ) {
 }

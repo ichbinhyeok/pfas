@@ -1,0 +1,8 @@
+package com.example.pfas.decision;
+
+public enum BenchmarkComparisonStatus {
+	INSUFFICIENT_BENCHMARK,
+	ABOVE_SELECTED_BENCHMARK,
+	NON_DETECT_OR_ZERO_REPORTED,
+	PRESENT_BELOW_SELECTED_BENCHMARK
+}

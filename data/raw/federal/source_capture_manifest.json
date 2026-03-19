@@ -29,6 +29,19 @@
       "notes": "Use to annotate current PFAS rule status after 2025-05-14."
     },
     {
+      "raw_source_id": "raw-epa-pfas-rule-overview-20260319",
+      "source_id": "epa-pfas-rule-overview",
+      "retrieved_at": "2026-03-19T20:45:00+09:00",
+      "url": "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "federal_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "EPA rule overview page listing final PFAS NPDWR benchmark values and comparison basis."
+    },
+    {
       "raw_source_id": "raw-epa-ucmr5-main-20260319",
       "source_id": "epa-ucmr5-main",
       "retrieved_at": "2026-03-19T17:10:00+09:00",

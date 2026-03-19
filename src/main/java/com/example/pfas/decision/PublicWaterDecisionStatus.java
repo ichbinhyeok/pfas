@@ -1,0 +1,8 @@
+package com.example.pfas.decision;
+
+public enum PublicWaterDecisionStatus {
+	NO_DIRECT_OBSERVATIONS,
+	ABOVE_SELECTED_BENCHMARK,
+	PRESENT_BELOW_SELECTED_BENCHMARK,
+	REPORTED_BELOW_SELECTED_BENCHMARK
+}
