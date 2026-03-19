@@ -7,6 +7,7 @@
 @import static com.example.pfas.web.PresentationText.confidenceLabel
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
+@param String siteBaseUrl
 @param PublicWaterSystem system
 @param PublicWaterDecisionContext decision
 @param WaterDecisionResult result
@@ -14,6 +15,8 @@
 @template.layout.base(
     pageTitle = system.pwsName() + " PFAS Result",
     pageDescription = "Rendered PFAS decision result for " + system.pwsName() + " using normalized utility and benchmark data.",
+    pageCanonicalUrl = siteBaseUrl + "/public-water/" + system.pwsid(),
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">

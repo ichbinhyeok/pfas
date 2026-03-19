@@ -2,6 +2,7 @@
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.stateprofile.StateBenchmarkProfile
 @import com.example.pfas.source.SourceDocument
+@param String siteBaseUrl
 @param StateGuidance guidance
 @param StateBenchmarkProfile profile
 @param List<SourceDocument> sources
@@ -9,6 +10,8 @@
 @template.layout.base(
     pageTitle = guidance.stateCode() + " private-well PFAS guide",
     pageDescription = "State-backed private-well PFAS routing page for " + guidance.stateCode() + ".",
+    pageCanonicalUrl = siteBaseUrl + "/private-well/" + guidance.stateCode(),
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">

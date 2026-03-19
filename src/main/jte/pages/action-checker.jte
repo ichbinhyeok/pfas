@@ -6,6 +6,7 @@
 @import com.example.pfas.checker.ActionShoppingIntent
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
+@param String siteBaseUrl
 @param List<StateGuidance> states
 @param List<PublicWaterSystem> systems
 @param ActionCheckerSelection selection
@@ -14,6 +15,8 @@
 @template.layout.base(
     pageTitle = "PFAS Action Checker",
     pageDescription = "Server-backed PFAS action checker that routes users by direct data status before any product comparison.",
+    pageCanonicalUrl = siteBaseUrl + "/checker",
+    pageIndexable = false,
     content = @`
 <section class="hero checker-hero">
     <div class="shell">

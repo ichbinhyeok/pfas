@@ -1,11 +1,14 @@
 @import java.util.List
 @import com.example.pfas.web.GuidePage
+@param String siteBaseUrl
 @param GuidePage page
 @param List<GuidePage> allGuides
 
 @template.layout.base(
     pageTitle = page.title(),
     pageDescription = page.lede(),
+    pageCanonicalUrl = siteBaseUrl + "/guides/" + page.slug(),
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">

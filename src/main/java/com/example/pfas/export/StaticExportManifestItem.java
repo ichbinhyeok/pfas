@@ -7,6 +7,7 @@ public record StaticExportManifestItem(
 	@JsonProperty("output_path") String outputPath,
 	@JsonProperty("content_kind") String contentKind,
 	@JsonProperty("indexable") boolean indexable,
-	@JsonProperty("source_kind") String sourceKind
+	@JsonProperty("source_kind") String sourceKind,
+	@JsonProperty("last_verified_date") String lastVerifiedDate
 ) {
 }

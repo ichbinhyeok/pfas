@@ -1,12 +1,15 @@
 @import java.util.List
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.water.PublicWaterSystem
+@param String siteBaseUrl
 @param PublicWaterSystem system
 @param List<SourceDocument> sources
 
 @template.layout.base(
     pageTitle = system.pwsName() + " utility context",
     pageDescription = "Utility-context page for " + system.pwsName() + " before result interpretation.",
+    pageCanonicalUrl = siteBaseUrl + "/public-water-system/" + system.pwsid(),
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">

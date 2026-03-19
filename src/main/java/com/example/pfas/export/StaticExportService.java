@@ -39,14 +39,17 @@ public class StaticExportService {
 		var generatedAt = OffsetDateTime.now().toString();
 		var items = new LinkedHashMap<String, StaticExportManifestItem>();
 
-		addFixedItem(items, "/", true, "fixed_page");
-		addFixedItem(items, "/checker", false, "fixed_page");
-		addFixedItem(items, "/methodology", true, "fixed_page");
-		addFixedItem(items, "/source-policy", true, "fixed_page");
-		addFixedItem(items, "/css/app.css", false, "asset");
-		addFixedItem(items, "/favicon.svg", false, "asset");
+		addFixedItem(items, "/", true, "fixed_page", null);
+		addFixedItem(items, "/checker", false, "fixed_page", null);
+		addFixedItem(items, "/methodology", true, "fixed_page", null);
+		addFixedItem(items, "/source-policy", true, "fixed_page", null);
+		addFixedItem(items, "/robots.txt", true, "seo_surface", null);
+		addFixedItem(items, "/sitemap.xml", true, "seo_surface", null);
+		addFixedItem(items, "/css/app.css", false, "asset", null);
+		addFixedItem(items, "/favicon.svg", false, "asset", null);
 
-		derivedArtifactService.buildPageGenerationManifest().models().forEach(model ->
+		var pageGenerationManifest = derivedArtifactService.buildPageGenerationManifest();
+		pageGenerationManifest.models().forEach(model ->
 			items.putIfAbsent(
 				model.renderPath(),
 				new StaticExportManifestItem(
@@ -54,12 +57,13 @@ public class StaticExportService {
 					toOutputPath(model.renderPath()),
 					"html",
 					model.indexable(),
-					"generated_page_model"
+					"generated_page_model",
+					model.lastVerifiedDate()
 				)
 			)
 		);
 
-		derivedArtifactService.buildPageGenerationManifest().models().stream()
+		pageGenerationManifest.models().stream()
 			.filter(model -> "public_water".equals(model.routeType()))
 			.forEach(model -> items.putIfAbsent(
 				"/public-water-system/" + model.routeKey(),
@@ -68,7 +72,8 @@ public class StaticExportService {
 					toOutputPath("/public-water-system/" + model.routeKey()),
 					"html",
 					true,
-					"public_water_support_page"
+					"public_water_support_page",
+					model.lastVerifiedDate()
 				)
 			));
 
@@ -85,6 +90,7 @@ public class StaticExportService {
 
 		var client = HttpClient.newHttpClient();
 		manifest.items().forEach(item -> fetchAndWrite(client, baseUrl, root, item));
+		writeNoJekyll(root);
 
 		return new StaticExportReport(
 			SCHEMA_VERSION,
@@ -131,12 +137,30 @@ public class StaticExportService {
 		LinkedHashMap<String, StaticExportManifestItem> items,
 		String path,
 		boolean indexable,
-		String sourceKind
+		String sourceKind,
+		String lastVerifiedDate
 	) {
 		items.putIfAbsent(
 			path,
-			new StaticExportManifestItem(path, toOutputPath(path), path.contains(".") ? "asset" : "html", indexable, sourceKind)
+			new StaticExportManifestItem(
+				path,
+				toOutputPath(path),
+				path.contains(".") ? "asset" : "html",
+				indexable,
+				sourceKind,
+				lastVerifiedDate
+			)
 		);
+	}
+
+	private void writeNoJekyll(Path outputRoot) {
+		try {
+			Files.createDirectories(outputRoot);
+			Files.writeString(outputRoot.resolve(".nojekyll"), "");
+		}
+		catch (IOException exception) {
+			throw new IllegalStateException("Failed to write .nojekyll", exception);
+		}
 	}
 
 	private String toOutputPath(String path) {

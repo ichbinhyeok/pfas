@@ -2,12 +2,15 @@
 @import com.example.pfas.web.GuidePage
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
+@param String siteBaseUrl
 @param java.util.List<PublicWaterSystem> systems
 @param java.util.List<GuidePage> guides
 
 @template.layout.base(
     pageTitle = "PFAS Decision Engine",
     pageDescription = "Official-data-first PFAS decision interface for public water and private well workflows.",
+    pageCanonicalUrl = siteBaseUrl + "/",
+    pageIndexable = true,
     content = @`
 <section class="hero">
     <div class="shell">

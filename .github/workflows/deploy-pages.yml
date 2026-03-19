@@ -1,0 +1,72 @@
+name: Deploy Static Export
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Resolve site base URL
+        shell: bash
+        run: |
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER_LOWER="$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
+          if [ -n "${{ vars.PFAS_SITE_BASE_URL }}" ]; then
+            BASE_URL="${{ vars.PFAS_SITE_BASE_URL }}"
+          elif [ "$REPO_NAME" = "$OWNER_LOWER.github.io" ]; then
+            BASE_URL="https://$REPO_NAME"
+          else
+            BASE_URL="https://${{ github.repository_owner }}.github.io/$REPO_NAME"
+          fi
+          echo "PFAS_SITE_BASE_URL=$BASE_URL" >> "$GITHUB_ENV"
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Export static site
+        run: ./gradlew exportStaticSite
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/static-export
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

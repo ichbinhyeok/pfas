@@ -7,10 +7,13 @@
 @param int blockedStateCount
 @param int readyPublicWaterCount
 @param int blockedPublicWaterCount
+@param String siteBaseUrl
 
 @template.layout.base(
     pageTitle = "PFAS methodology",
     pageDescription = "Methodology for source handling, normalization, decision rules, and result generation.",
+    pageCanonicalUrl = siteBaseUrl + "/methodology",
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">

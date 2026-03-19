@@ -33,7 +33,10 @@ import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 import com.example.pfas.water.PublicWaterSystemService;
 
-@SpringBootTest(properties = "pfas.data.root=./data")
+@SpringBootTest(properties = {
+	"pfas.data.root=./data",
+	"pfas.site.base-url=https://pfas.example.test"
+})
 @AutoConfigureMockMvc
 class PfasApplicationTests {
 
@@ -400,7 +403,9 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official records,")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("High-intent guides before scaled expansion")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("High-intent guides before scaled expansion")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/\">")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"index, follow\">")));
 	}
 
 	@Test
@@ -409,7 +414,9 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the household")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Server-backed routing")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Server-backed routing")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/checker\">")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"noindex, nofollow\">")));
 	}
 
 	@Test
@@ -691,12 +698,32 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":22")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":24")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/sitemap.xml\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/read-your-ccr/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")));
+	}
+
+	@Test
+	void returnsRobotsTxt() throws Exception {
+		mockMvc.perform(get("/robots.txt"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Disallow: /internal/")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Disallow: /checker")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Sitemap: https://pfas.example.test/sitemap.xml")));
+	}
+
+	@Test
+	void returnsSitemapXml() throws Exception {
+		mockMvc.perform(get("/sitemap.xml"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/guides/read-your-ccr</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/public-water/7360058</loc>")));
 	}
 
 	@Test

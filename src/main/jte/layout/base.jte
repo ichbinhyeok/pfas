@@ -1,5 +1,7 @@
 @param String pageTitle
 @param String pageDescription
+@param String pageCanonicalUrl
+@param boolean pageIndexable
 @param gg.jte.Content content
 
 <!doctype html>
@@ -9,6 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${pageTitle}</title>
     <meta name="description" content="${pageDescription}">
+    <link rel="canonical" href="${pageCanonicalUrl}">
+    @if (pageIndexable)
+        <meta name="robots" content="index, follow">
+    @else
+        <meta name="robots" content="noindex, nofollow">
+    @endif
     <meta name="theme-color" content="#152235">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

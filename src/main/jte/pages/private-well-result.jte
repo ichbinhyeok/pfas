@@ -5,6 +5,7 @@
 @import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
 @import static com.example.pfas.web.PresentationText.currentFilterStatusLabel
 @import static com.example.pfas.web.PresentationText.confidenceLabel
+@param String siteBaseUrl
 @param StateGuidance guidance
 @param WaterDecisionResult result
 @param ActionBenchmarkRelation benchmarkRelation
@@ -19,6 +20,8 @@
 @template.layout.base(
     pageTitle = guidance.stateCode() + " private-well PFAS result",
     pageDescription = "State-guided private-well PFAS interpretation result for " + guidance.stateCode() + ".",
+    pageCanonicalUrl = siteBaseUrl + "/private-well/" + guidance.stateCode(),
+    pageIndexable = false,
     content = @`
 <section class="result-shell">
     <div class="shell">

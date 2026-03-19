@@ -1,5 +1,6 @@
 @import java.util.List
 @import com.example.pfas.source.SourceDocument
+@param String siteBaseUrl
 @param int sourceCount
 @param int stateCount
 @param int publicWaterCount
@@ -13,6 +14,8 @@
 @template.layout.base(
     pageTitle = "PFAS source policy",
     pageDescription = "Source tiers and trust policy for the PFAS decision engine.",
+    pageCanonicalUrl = siteBaseUrl + "/source-policy",
+    pageIndexable = true,
     content = @`
 <section class="result-shell">
     <div class="shell">
