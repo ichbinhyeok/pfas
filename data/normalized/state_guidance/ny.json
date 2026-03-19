@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "NY",
+  "agency_name": "New York State Department of Health / New York State Department of Environmental Conservation",
+  "agency_url": "https://dec.ny.gov/environmental-protection/per-and-polyfluoroalkyl-substances-pfas",
+  "private_well_guidance_url": "https://www.health.ny.gov/environmental/water/drinking/docs/pfasandprivatewells.pdf",
+  "pfas_guidance_url": "https://dec.ny.gov/environmental-protection/per-and-polyfluoroalkyl-substances-pfas",
+  "certified_lab_lookup_url": "https://www.wadsworth.org/regulatory/elap",
+  "sampling_guidance_url": "https://www.health.ny.gov/environmental/water/drinking/docs/pfasandprivatewells.pdf",
+  "repeat_testing_guidance": "Use New York private well testing guidance and local health department advice. Do not infer a universal PFAS retest cadence beyond official New York well-testing materials.",
+  "benchmark_notes": "New York public water systems use state drinking water standards for PFOA and PFOS. For private wells, those standards are used as guidelines to recommend actions and are not legal compliance determinations.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "ny-dec-pfas",
+    "ny-pfas-private-wells-pdf",
+    "ny-elap"
+  ]
+}

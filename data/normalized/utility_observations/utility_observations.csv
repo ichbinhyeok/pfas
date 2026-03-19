@@ -1,0 +1,7 @@
+observation_id,pwsid,contaminant_code,contaminant_label,sample_context,period_start,period_end,sample_date,value,unit,result_flag,minimum_reporting_level,benchmark_type,benchmark_value,benchmark_unit,benchmark_source_id,source_ids
+phila-baxter-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,baxter_running_annual_average,,,,0,ppt,counted_as_zero_under_regulatory_rule,,state_mcl,14,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule
+phila-baxter-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,baxter_running_annual_average,,,,0,ppt,counted_as_zero_under_regulatory_rule,,state_mcl,18,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule
+phila-belmont-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,belmont_running_annual_average,,,,5.6,ppt,reported,,state_mcl,14,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule
+phila-belmont-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,belmont_running_annual_average,,,,2.4,ppt,reported,,state_mcl,18,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule
+phila-queenlane-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,queen_lane_running_annual_average,,,,6.8,ppt,reported,,state_mcl,14,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule
+phila-queenlane-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,queen_lane_running_annual_average,,,,4.6,ppt,reported,,state_mcl,18,ppt,pa-pfas-mcl-rule,phila-pfas-management|pa-pfas-mcl-rule

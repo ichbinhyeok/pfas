@@ -1,0 +1,110 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-19T17:10:00+09:00",
+  "captures": [
+    {
+      "raw_source_id": "raw-nsf-pfas-article-20260319",
+      "source_id": "nsf-pfas-drinking-water-article",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://www.nsf.org/consumer-resources/articles/pfas-drinking-water",
+      "organization": "NSF",
+      "title": "PFAS in Drinking Water",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Context article for PFAS certification interpretation."
+    },
+    {
+      "raw_source_id": "raw-nsf-dwtu-listings-20260319",
+      "source_id": "nsf-dwtu-listings",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://info.nsf.org/Certified/DWTU/",
+      "organization": "NSF",
+      "title": "Certified Drinking Water Treatment Units Listings",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Primary claim-level listing directory for Sharp v1."
+    },
+    {
+      "raw_source_id": "raw-wqa-gold-seal-20260319",
+      "source_id": "wqa-gold-seal-products",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://find.wqa.org/find-products",
+      "organization": "Water Quality Association",
+      "title": "Find WQA Certified Products",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Secondary certification directory referenced by EPA."
+    },
+    {
+      "raw_source_id": "raw-ul-product-iq-20260319",
+      "source_id": "ul-product-iq",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://productiq.ulprospector.com/",
+      "organization": "UL Solutions",
+      "title": "UL Product iQ",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Secondary certification directory referenced by EPA."
+    },
+    {
+      "raw_source_id": "raw-iapmo-product-listings-20260319",
+      "source_id": "iapmo-rt-product-listings",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://pld.iapmo.org/",
+      "organization": "IAPMO R&T",
+      "title": "IAPMO R&T Product Listing Directory",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Secondary certification directory referenced by EPA."
+    },
+    {
+      "raw_source_id": "raw-csa-group-product-listing-20260319",
+      "source_id": "csa-group-product-listing",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "url": "https://www.csagroup.org/testing-certification/product-listing/",
+      "organization": "CSA Group",
+      "title": "CSA Group Product Listing",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Secondary certification directory referenced by EPA."
+    },
+    {
+      "raw_source_id": "raw-nsf-espring-listing-053-20260319",
+      "source_id": "nsf-espring-listing-053",
+      "retrieved_at": "2026-03-19T19:05:00+09:00",
+      "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?TradeName=eSpring&hdModlStd=ModlStd",
+      "organization": "NSF",
+      "title": "NSF DWTU Listing Search - eSpring Standard 53",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Listing includes PFOA Reduction PFOS Reduction and Total PFAS Reduction for eSpring 122941 series under NSF ANSI 53."
+    },
+    {
+      "raw_source_id": "raw-nsf-carbon-block-cb-as-listing-053-20260319",
+      "source_id": "nsf-carbon-block-cb-as-listing-053",
+      "retrieved_at": "2026-03-19T19:05:00+09:00",
+      "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?ProductFunction=053%7CTurbidity+Reduction",
+      "organization": "NSF",
+      "title": "NSF DWTU Listing Search - Carbon Block Technology CB-AS",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "certification_listing",
+      "checksum_or_snapshot_id": null,
+      "notes": "Listing page includes CB-AS with PFOA Reduction and PFOS Reduction under NSF ANSI 53."
+    }
+  ]
+}

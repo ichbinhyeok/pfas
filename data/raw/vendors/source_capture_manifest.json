@@ -1,0 +1,32 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-19T20:10:00+09:00",
+  "captures": [
+    {
+      "raw_source_id": "raw-amway-espring-122941-product-20260319",
+      "source_id": "amway-espring-122941-product",
+      "retrieved_at": "2026-03-19T20:10:00+09:00",
+      "url": "https://www.amway.com/en_US/eSpring-Under-the-Counter-with-Aux-Faucet-p-122941",
+      "organization": "Amway",
+      "title": "eSpring Under the Counter Unit with Aux Faucet",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official product page showing item 122941, upfront price, filter model 122943Z, and 1320 gallon annual cartridge capacity."
+    },
+    {
+      "raw_source_id": "raw-amway-espring-100186-cartridge-20260319",
+      "source_id": "amway-espring-100186-cartridge",
+      "retrieved_at": "2026-03-19T20:10:00+09:00",
+      "url": "https://www.amway.com/en_US/eSpring%E2%84%A2-UV-Water-Purifier-Replacement-Filter-Cartridge-With-UV-Technology-p-100186",
+      "organization": "Amway",
+      "title": "eSpring UV Water Purifier Replacement Filter Cartridge With UV Technology",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official cartridge page showing replacement price and annual replacement cadence."
+    }
+  ]
+}

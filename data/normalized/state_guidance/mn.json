@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "MN",
+  "agency_name": "Minnesota Department of Health",
+  "agency_url": "https://www.health.state.mn.us/",
+  "private_well_guidance_url": "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+  "pfas_guidance_url": "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+  "certified_lab_lookup_url": "https://www.health.state.mn.us/communities/environment/mnelap/index.html",
+  "sampling_guidance_url": "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+  "repeat_testing_guidance": "Minnesota does not recommend every private well be tested for PFAS. Testing depends on whether the well is in an environmental investigation area and on state guidance for accredited-lab sampling.",
+  "benchmark_notes": "Minnesota uses MDH health-based guidance values and state investigation context. Third-party results are not the same as state-issued well advisories.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "mn-pfas-private-wells",
+    "mn-accredited-labs",
+    "mn-pfas-private-well-contacts"
+  ]
+}

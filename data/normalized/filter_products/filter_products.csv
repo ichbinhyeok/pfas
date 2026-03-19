@@ -1,0 +1,2 @@
+product_id,brand,model,filter_type,installation_type,cert_body,standard_code,listing_record_id,claim_scope,covered_pfas,listing_url,replacement_cadence_months,replacement_capacity_gallons,last_verified_date,source_ids
+espring-122941,Amway,eSpring Under the Counter Unit with Aux Faucet,carbon_block_uv,under_sink_aux_faucet,NSF,053,122941C,pfoa_pfos_and_total_pfas,PFOA|PFOS|PFHpA|PFHxS|PFNA|PFBS|PFDA,https://www.amway.com/en_US/eSpring-Under-the-Counter-with-Aux-Faucet-p-122941,12,1320,2026-03-19,nsf-espring-listing-053|amway-espring-122941-product

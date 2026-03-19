@@ -1,0 +1,759 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-19T17:10:00+09:00",
+  "documents": [
+    {
+      "source_id": "epa-pfas-npdwr-implementation",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS) NPDWR Implementation",
+      "url": "https://www.epa.gov/dwreginfo/pfas-rule-implementation",
+      "source_kind": "federal_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": "2025-09-30",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2025-09-30",
+      "allowed_uses": [
+        "benchmark context",
+        "implementation status",
+        "date-sensitive regulatory notes",
+        "public water compliance context"
+      ],
+      "disallowed_uses": [
+        "personal household exposure determination",
+        "private well legal compliance determination"
+      ],
+      "notes": "Tracks current implementation context, including the 2025-05-14 policy direction on PFOA/PFOS and reconsideration of other PFAS."
+    },
+    {
+      "source_id": "epa-pfas-newsrelease-2025-05-14",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "EPA Announces It Will Keep Maximum Contaminant Levels for PFOA, PFOS",
+      "url": "https://www.epa.gov/newsreleases/epa-announces-it-will-keep-maximum-contaminant-levels-pfoa-pfos",
+      "source_kind": "federal_news_release",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": "2025-05-14",
+      "last_updated_date": "2025-05-14",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2025-05-14",
+      "allowed_uses": [
+        "regulatory timeline note",
+        "reconsideration note",
+        "compliance extension context"
+      ],
+      "disallowed_uses": [
+        "household decision without direct water data",
+        "benchmark substitution for utility or test data"
+      ],
+      "notes": "Use as a date-sensitive annotation source for current PFAS rule status."
+    },
+    {
+      "source_id": "epa-ucmr5-main",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Fifth Unregulated Contaminant Monitoring Rule",
+      "url": "https://www.epa.gov/dwucmr/fifth-unregulated-contaminant-monitoring-rule",
+      "source_kind": "federal_program_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "ucmr interpretation context",
+        "monitoring scope",
+        "screening caveat"
+      ],
+      "disallowed_uses": [
+        "compliance determination from ucmr-only results",
+        "safe or unsafe household determination"
+      ],
+      "notes": "Use to explain what UCMR 5 is and what it does not establish."
+    },
+    {
+      "source_id": "epa-ucmr-occurrence-data",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Occurrence Data from the Unregulated Contaminant Monitoring Rule",
+      "url": "https://www.epa.gov/dwucmr/occurrence-data-unregulated-contaminant-monitoring-rule",
+      "source_kind": "federal_occurrence_data_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "screening context",
+        "occurrence context",
+        "utility discovery aid"
+      ],
+      "disallowed_uses": [
+        "standalone compliance determination",
+        "zip-based exposure determination"
+      ],
+      "notes": "Useful for screening and discovery, not for direct compliance or safety claims."
+    },
+    {
+      "source_id": "epa-ccr-consumer-info",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "CCR Information for Consumers",
+      "url": "https://www.epa.gov/ccr/ccr-information-consumers",
+      "source_kind": "federal_consumer_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": "2025-11-21",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2025-11-21",
+      "allowed_uses": [
+        "ccr explanation",
+        "annual report timing",
+        "ccr search guidance"
+      ],
+      "disallowed_uses": [
+        "utility mapping without direct utility documentation"
+      ],
+      "notes": "EPA states that community water systems must deliver annual drinking water quality reports by July 1."
+    },
+    {
+      "source_id": "epa-private-wells",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Private Drinking Water Wells",
+      "url": "https://www.epa.gov/privatewells",
+      "source_kind": "federal_consumer_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "private well ownership context",
+        "testing responsibility",
+        "state program discovery"
+      ],
+      "disallowed_uses": [
+        "state-specific well action without state source"
+      ],
+      "notes": "Use for well-owner responsibility and basic testing context."
+    },
+    {
+      "source_id": "epa-pfas-private-wells",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "PFAS in Private Wells",
+      "url": "https://www.epa.gov/cleanups/pfas-private-wells",
+      "source_kind": "federal_consumer_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "test-first guidance",
+        "state-certified lab guidance",
+        "alternate water guidance",
+        "certified filter context"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination",
+        "health diagnosis"
+      ],
+      "notes": "EPA directs private-well users toward state agencies, state-certified labs, and certified in-home treatment."
+    },
+    {
+      "source_id": "epa-certified-pfas-filter-guidance",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Identifying Drinking Water Filters Certified to Reduce PFAS",
+      "url": "https://www.epa.gov/water-research/identifying-drinking-water-filters-certified-reduce-pfas",
+      "source_kind": "federal_consumer_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": "2025-11-18",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2025-11-18",
+      "allowed_uses": [
+        "pou filter class guidance",
+        "cost range context",
+        "certification interpretation",
+        "certification body directory references"
+      ],
+      "disallowed_uses": [
+        "certification equals full compliance claim",
+        "vendor endorsement"
+      ],
+      "notes": "EPA states current PFAS filter certification standards do not yet indicate reduction down to the levels EPA has set in its drinking water standard."
+    },
+    {
+      "source_id": "epa-water-filter-fact-sheet-2024-04",
+      "organization": "U.S. Environmental Protection Agency",
+      "title": "Water Filter Fact Sheet",
+      "url": "https://www.epa.gov/system/files/documents/2024-04/water-filter-fact-sheet.pdf",
+      "source_kind": "federal_fact_sheet_pdf",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": "2024-04-01",
+      "last_updated_date": "2024-04-01",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2024-04-01",
+      "allowed_uses": [
+        "consumer-facing filter guidance",
+        "secondary backup for filter type explanations"
+      ],
+      "disallowed_uses": [
+        "standalone product recommendation without listing verification"
+      ],
+      "notes": "PDF companion to EPA filter guidance; date inferred from file path and publication context."
+    },
+    {
+      "source_id": "atsdr-testing-for-pfas",
+      "organization": "Agency for Toxic Substances and Disease Registry",
+      "title": "Testing for PFAS",
+      "url": "https://www.atsdr.cdc.gov/pfas/blood-testing/index.html",
+      "source_kind": "federal_health_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": "2024-11-12",
+      "last_updated_date": "2024-11-12",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2024-11-12",
+      "allowed_uses": [
+        "out-of-scope guardrail",
+        "blood testing limitation note"
+      ],
+      "disallowed_uses": [
+        "clinical recommendation engine",
+        "treatment recommendation"
+      ],
+      "notes": "ATSDR states a blood test for PFAS will not identify a current or future health problem or provide information on treatment."
+    },
+    {
+      "source_id": "atsdr-pfas-clinician-overview-2024",
+      "organization": "Agency for Toxic Substances and Disease Registry",
+      "title": "PFAS Information for Clinicians – 2024",
+      "url": "https://www.atsdr.cdc.gov/pfas/hcp/clinical-overview/index.html",
+      "source_kind": "federal_health_guidance_page",
+      "trust_tier": 1,
+      "jurisdiction": "US",
+      "published_date": "2024-11-11",
+      "last_updated_date": "2024-11-11",
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": "2024-11-11",
+      "allowed_uses": [
+        "clinical limitation note",
+        "out-of-scope health interpretation boundary"
+      ],
+      "disallowed_uses": [
+        "medical diagnosis",
+        "screening or treatment recommendation"
+      ],
+      "notes": "ATSDR states PFAS blood testing results do not provide information for treatment or predict future health problems."
+    },
+    {
+      "source_id": "nsf-pfas-drinking-water-article",
+      "organization": "NSF",
+      "title": "PFAS in Drinking Water",
+      "url": "https://www.nsf.org/consumer-resources/articles/pfas-drinking-water",
+      "source_kind": "certification_guidance_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "certification explanation",
+        "claim interpretation backup"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "public water compliance determination"
+      ],
+      "notes": "Use as certification-context support, not as a truth layer for exposure or compliance."
+    },
+    {
+      "source_id": "nsf-dwtu-listings",
+      "organization": "NSF",
+      "title": "Certified Drinking Water Treatment Units Listings",
+      "url": "https://info.nsf.org/Certified/DWTU/",
+      "source_kind": "certification_listing_directory",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "listing verification",
+        "claim-level extraction",
+        "standard code verification"
+      ],
+      "disallowed_uses": [
+        "claim inference without record-level verification"
+      ],
+      "notes": "Primary Sharp v1 certification directory for claim-level extraction."
+    },
+    {
+      "source_id": "wqa-gold-seal-products",
+      "organization": "Water Quality Association",
+      "title": "Find WQA Certified Products",
+      "url": "https://find.wqa.org/find-products",
+      "source_kind": "certification_listing_directory",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "secondary listing verification",
+        "claim directory discovery"
+      ],
+      "disallowed_uses": [
+        "truth layer for exposure or compliance"
+      ],
+      "notes": "Referenced by EPA as an additional certification directory."
+    },
+    {
+      "source_id": "ul-product-iq",
+      "organization": "UL Solutions",
+      "title": "UL Product iQ",
+      "url": "https://productiq.ulprospector.com/",
+      "source_kind": "certification_listing_directory",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "secondary listing verification",
+        "claim directory discovery"
+      ],
+      "disallowed_uses": [
+        "truth layer for exposure or compliance"
+      ],
+      "notes": "Referenced by EPA as an additional certification directory."
+    },
+    {
+      "source_id": "iapmo-rt-product-listings",
+      "organization": "IAPMO R&T",
+      "title": "IAPMO R&T Product Listing Directory",
+      "url": "https://pld.iapmo.org/",
+      "source_kind": "certification_listing_directory",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "secondary listing verification",
+        "claim directory discovery"
+      ],
+      "disallowed_uses": [
+        "truth layer for exposure or compliance"
+      ],
+      "notes": "Referenced by EPA as an additional certification directory."
+    },
+    {
+      "source_id": "csa-group-product-listing",
+      "organization": "CSA Group",
+      "title": "CSA Group Product Listing",
+      "url": "https://www.csagroup.org/testing-certification/product-listing/",
+      "source_kind": "certification_listing_directory",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T17:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "secondary listing verification",
+        "claim directory discovery"
+      ],
+      "disallowed_uses": [
+        "truth layer for exposure or compliance"
+      ],
+      "notes": "Referenced by EPA as an additional certification directory."
+    },
+    {
+      "source_id": "mi-private-well-testing",
+      "organization": "State of Michigan",
+      "title": "Private Well Testing",
+      "url": "https://www.michigan.gov/egle/about/organization/drinking-water-and-environmental-health/water-well-construction/private-well-testing",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state private well guidance",
+        "sampling context",
+        "testing path"
+      ],
+      "disallowed_uses": [
+        "legal compliance determination",
+        "zip-based system mapping"
+      ],
+      "notes": "State guidance page for private well testing workflow."
+    },
+    {
+      "source_id": "mi-pfas-home-testing-labs",
+      "organization": "Michigan PFAS Action Response Team",
+      "title": "PFAS Testing Laboratories",
+      "url": "https://www.michigan.gov/pfasresponse/drinking-water/laboratories",
+      "source_kind": "state_lab_lookup_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "certified lab lookup",
+        "testing logistics"
+      ],
+      "disallowed_uses": [
+        "exposure or health determination"
+      ],
+      "notes": "Michigan PFAS testing laboratory list for home/private well sampling."
+    },
+    {
+      "source_id": "mi-pfas-residential-well-faq",
+      "organization": "Michigan PFAS Action Response Team",
+      "title": "FAQ: PFAS and Residential Well Water Testing and Results",
+      "url": "https://www.michigan.gov/pfasresponse/faq/categories/pfas-and-residential-well-water",
+      "source_kind": "state_faq_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "well testing FAQ",
+        "lab list reference",
+        "sampling pathway"
+      ],
+      "disallowed_uses": [
+        "medical diagnosis",
+        "safe or unsafe household determination"
+      ],
+      "notes": "Includes official Michigan FAQ on how private well users can test for PFAS."
+    },
+    {
+      "source_id": "mn-pfas-private-wells",
+      "organization": "Minnesota Department of Health",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS) and Private Wells",
+      "url": "https://www.health.state.mn.us/communities/environment/water/wells/waterquality/pfas.html",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "MN",
+      "published_date": null,
+      "last_updated_date": "2024-10-21",
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": "2024-10-21",
+      "allowed_uses": [
+        "state PFAS private well guidance",
+        "health-based guidance note",
+        "treatment context"
+      ],
+      "disallowed_uses": [
+        "universal testing recommendation",
+        "legal compliance determination"
+      ],
+      "notes": "Minnesota states it does not recommend that every private well is tested for PFAS and points users to investigation context and home treatment options."
+    },
+    {
+      "source_id": "mn-accredited-labs",
+      "organization": "Minnesota Department of Health",
+      "title": "Minnesota Department of Health Environmental Laboratory Accreditation Program (MNELAP)",
+      "url": "https://www.health.state.mn.us/communities/environment/mnelap/index.html",
+      "source_kind": "state_lab_lookup_page",
+      "trust_tier": 2,
+      "jurisdiction": "MN",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "accredited lab lookup",
+        "laboratory accreditation context"
+      ],
+      "disallowed_uses": [
+        "health interpretation"
+      ],
+      "notes": "MNELAP provides accredited laboratory search capability for drinking water testing."
+    },
+    {
+      "source_id": "mn-pfas-private-well-contacts",
+      "organization": "Minnesota Department of Health",
+      "title": "Site Assessment and Consultation Unit Contacts",
+      "url": "https://www.health.state.mn.us/communities/environment/hazardous/contact.html",
+      "source_kind": "state_contact_page",
+      "trust_tier": 2,
+      "jurisdiction": "MN",
+      "published_date": null,
+      "last_updated_date": "2024-09-27",
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": "2024-09-27",
+      "allowed_uses": [
+        "state contact route",
+        "private well PFAS inquiry routing"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution"
+      ],
+      "notes": "Includes Minnesota contacts for PFAS private well testing and filtration inquiries."
+    },
+    {
+      "source_id": "ny-dec-pfas",
+      "organization": "New York State Department of Environmental Conservation",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
+      "url": "https://dec.ny.gov/environmental-protection/per-and-polyfluoroalkyl-substances-pfas",
+      "source_kind": "state_pfas_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "NY",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state PFAS context",
+        "state public drinking water standards note",
+        "private well guidance discovery"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "DEC page links to drinking water standards and reducing PFAS in private wells guidance."
+    },
+    {
+      "source_id": "ny-pfas-private-wells-pdf",
+      "organization": "New York State Department of Health",
+      "title": "PFAS in Private Wells",
+      "url": "https://www.health.ny.gov/environmental/water/drinking/docs/pfasandprivatewells.pdf",
+      "source_kind": "state_private_well_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NY",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "private well PFAS guidance",
+        "reference-based action note",
+        "treatment context"
+      ],
+      "disallowed_uses": [
+        "health diagnosis",
+        "legal compliance determination"
+      ],
+      "notes": "Search-visible NY DOH PDF states public water standards are used as guidelines to recommend actions for private wells."
+    },
+    {
+      "source_id": "ny-elap",
+      "organization": "New York State Department of Health, Wadsworth Center",
+      "title": "Environmental Laboratory Approval Program",
+      "url": "https://www.wadsworth.org/regulatory/elap",
+      "source_kind": "state_lab_lookup_page",
+      "trust_tier": 2,
+      "jurisdiction": "NY",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "accredited lab lookup",
+        "laboratory certification context"
+      ],
+      "disallowed_uses": [
+        "health interpretation"
+      ],
+      "notes": "ELAP search tool provides current accreditation information for New York environmental labs."
+    },
+    {
+      "source_id": "phila-pwd-home",
+      "organization": "Philadelphia Water Department",
+      "title": "Philadelphia Water Department",
+      "url": "https://water.phila.gov/",
+      "source_kind": "utility_homepage",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official utility identity",
+        "utility contact context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report data"
+      ],
+      "notes": "Official Philadelphia Water Department homepage."
+    },
+    {
+      "source_id": "phila-2024-water-quality-report",
+      "organization": "Philadelphia Water Department",
+      "title": "2024 Drinking Water Quality Report",
+      "url": "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
+      "source_kind": "utility_ccr_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "utility report interpretation",
+        "pwsid verification",
+        "direct utility benchmark context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "2024 report page identifies PWD Public Water System ID #PA1510001 and includes PFAS treatment planning context."
+    },
+    {
+      "source_id": "phila-pfas-management",
+      "organization": "Philadelphia Water Department",
+      "title": "PFAS Management",
+      "url": "https://water.phila.gov/sustainability/watershed-protection/pfas/",
+      "source_kind": "utility_pfas_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility PFAS program context",
+        "local caveat",
+        "treatment planning note"
+      ],
+      "disallowed_uses": [
+        "household-level determination without report context"
+      ],
+      "notes": "Official utility page describing PFAS monitoring and management work."
+    },
+    {
+      "source_id": "pa-pfas-mcl-rule",
+      "organization": "Pennsylvania Department of Environmental Protection",
+      "title": "PFAS MCL Rule",
+      "url": "https://www.pa.gov/agencies/dep/programs-and-services/water/bureau-of-safe-drinking-water/drinking-water-management/drinking-water-regulations/pfas-mcl-rule",
+      "source_kind": "state_drinking_water_regulation_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": "2023-01-14",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T19:05:00+09:00",
+      "effective_date": "2023-01-14",
+      "allowed_uses": [
+        "state mcl benchmark",
+        "monitoring schedule context",
+        "public water compliance context"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "Pennsylvania established MCLs of 14 ppt for PFOA and 18 ppt for PFOS in January 2023."
+    },
+    {
+      "source_id": "nsf-espring-listing-053",
+      "organization": "NSF",
+      "title": "NSF DWTU Listing Search - eSpring Standard 53",
+      "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=053&TradeName=espring&hdModlStd=ModlStd&submit3=Search",
+      "source_kind": "certification_listing_search_result",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T19:05:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level certification extraction",
+        "listing verification",
+        "pfas claim scope extraction"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "household outcome determination"
+      ],
+      "notes": "Listing shows eSpring models with PFOA Reduction, PFOS Reduction, and Total PFAS Reduction claims under NSF/ANSI 53."
+    },
+    {
+      "source_id": "nsf-carbon-block-cb-as-listing-053",
+      "organization": "NSF",
+      "title": "NSF DWTU Listing Search - Carbon Block Technology CB-AS",
+      "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?ProductFunction=053%7CTurbidity+Reduction",
+      "source_kind": "certification_listing_search_result",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T19:05:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "claim-level certification extraction",
+        "listing verification"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "household outcome determination"
+      ],
+      "notes": "Search result includes Carbon Block Technology CB-AS with PFOA Reduction and PFOS Reduction claims under NSF/ANSI 53."
+    },
+    {
+      "source_id": "amway-espring-122941-product",
+      "organization": "Amway",
+      "title": "eSpring Under the Counter Unit with Aux Faucet",
+      "url": "https://www.amway.com/en_US/eSpring-Under-the-Counter-with-Aux-Faucet-p-122941",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T20:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "installation type",
+        "replacement cadence and capacity"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "product superiority claim without certification context"
+      ],
+      "notes": "Official vendor product page for item 122941 with upfront price and product configuration details."
+    },
+    {
+      "source_id": "amway-espring-100186-cartridge",
+      "organization": "Amway",
+      "title": "eSpring UV Water Purifier Replacement Filter Cartridge With UV Technology",
+      "url": "https://www.amway.com/en_US/eSpring%E2%84%A2-UV-Water-Purifier-Replacement-Filter-Cartridge-With-UV-Technology-p-100186",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-19T20:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement price",
+        "replacement cadence and capacity"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "proof of claim without listing verification"
+      ],
+      "notes": "Official vendor cartridge page for item 100186 showing replacement price and annual or 1320 gallon replacement cadence."
+    }
+  ]
+}

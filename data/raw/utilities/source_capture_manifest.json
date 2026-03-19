@@ -1,0 +1,45 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-19T18:20:00+09:00",
+  "captures": [
+    {
+      "raw_source_id": "raw-phila-pwd-home-20260319",
+      "source_id": "phila-pwd-home",
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "url": "https://water.phila.gov/",
+      "organization": "Philadelphia Water Department",
+      "title": "Philadelphia Water Department",
+      "content_type": "text/html",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official utility home page."
+    },
+    {
+      "raw_source_id": "raw-phila-2024-water-quality-report-20260319",
+      "source_id": "phila-2024-water-quality-report",
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "url": "https://water.phila.gov/drops/2024-drinking-water-quality-report/",
+      "organization": "Philadelphia Water Department",
+      "title": "2024 Drinking Water Quality Report",
+      "content_type": "text/html",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official annual water quality report page with PWSID and direct water report context."
+    },
+    {
+      "raw_source_id": "raw-phila-pfas-management-20260319",
+      "source_id": "phila-pfas-management",
+      "retrieved_at": "2026-03-19T18:20:00+09:00",
+      "url": "https://water.phila.gov/sustainability/watershed-protection/pfas/",
+      "organization": "Philadelphia Water Department",
+      "title": "PFAS Management",
+      "content_type": "text/html",
+      "jurisdiction": "PA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official utility PFAS program and monitoring page."
+    }
+  ]
+}

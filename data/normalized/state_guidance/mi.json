@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "state_code": "MI",
+  "agency_name": "Michigan Department of Environment, Great Lakes, and Energy / Michigan PFAS Action Response Team",
+  "agency_url": "https://www.michigan.gov/pfasresponse",
+  "private_well_guidance_url": "https://www.michigan.gov/egle/about/organization/drinking-water-and-environmental-health/water-well-construction/private-well-testing",
+  "pfas_guidance_url": "https://www.michigan.gov/pfasresponse/faq/categories/pfas-and-residential-well-water",
+  "certified_lab_lookup_url": "https://www.michigan.gov/pfasresponse/drinking-water/laboratories",
+  "sampling_guidance_url": "https://www.michigan.gov/pfasresponse/faq/categories/pfas-and-residential-well-water",
+  "repeat_testing_guidance": "No single statewide PFAS retesting cadence is fixed in Sharp v1. Use EGLE or local health investigation context and official Michigan advice for follow-up timing.",
+  "benchmark_notes": "Michigan uses state drinking water standards and official investigation context. Private well interpretation remains reference-based and should not be framed as legal compliance.",
+  "last_verified_date": "2026-03-19",
+  "source_ids": [
+    "mi-private-well-testing",
+    "mi-pfas-home-testing-labs",
+    "mi-pfas-residential-well-faq"
+  ]
+}
