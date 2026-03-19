@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T14:15:00+09:00",
+  "generated_at": "2026-03-20T18:05:00+09:00",
   "documents": [
     {
       "source_id": "epa-pfas-npdwr-implementation",
@@ -1727,6 +1727,51 @@
         "cross-system extrapolation"
       ],
       "notes": "Official Golden Heart Utilities water quality report showing AK2310730 and 2024 PFAS values including PFOA 3.8 ppt and PFOS 2.4 ppt."
+    },
+    {
+      "source_id": "alaska-dww-college-utilities-monitoring-summary",
+      "organization": "Alaska Department of Environmental Conservation",
+      "title": "Monitoring Summary for College Utilities Corporation",
+      "url": "https://dec.alaska.gov/DWW/MonSumm/310900.pdf",
+      "source_kind": "state_utility_registry_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": "2024-02-13",
+      "last_updated_date": "2024-02-13",
+      "retrieved_at": "2026-03-20T18:05:00+09:00",
+      "effective_date": "2024-02-13",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "population verification",
+        "source water verification"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Alaska DWW monitoring summary confirms AK2310900, community status, population 27000, and purchased groundwater supply context."
+    },
+    {
+      "source_id": "college-utilities-2025-water-quality-report",
+      "organization": "College Utilities Corporation",
+      "title": "2025 Annual Consumer Confidence Water Quality Report",
+      "url": "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T18:05:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official College Utilities report showing AK2310900 and 2024 PFAS values including PFOA 3.8 ppt, PFOS 2.4 ppt, PFHxS 6.4 ppt, and PFNA 0.46 ppt."
     },
     {
       "source_id": "maryland-water-home",

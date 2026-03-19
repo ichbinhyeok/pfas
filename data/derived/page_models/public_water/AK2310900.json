@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T03:36:09.163754300+09:00",
-  "model_id" : "public_water:NC0234191",
+  "generated_at" : "2026-03-20T03:36:09.109050800+09:00",
+  "model_id" : "public_water:AK2310900",
   "route_type" : "public_water",
-  "route_key" : "NC0234191",
+  "route_key" : "AK2310900",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NC0234191",
+  "render_path" : "/public-water/AK2310900",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "NC0234191",
-      "pwsName" : "Abington Water System",
-      "stateCode" : "NC",
+      "pwsid" : "AK2310900",
+      "pwsName" : "College Utilities Corporation",
+      "stateCode" : "AK",
       "systemType" : "community",
-      "populationServed" : "2485",
-      "sourceWaterType" : "surface_water",
-      "utilityWebsiteUrl" : "https://www.myutility.us/carolinawater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
-      "serviceAreaNotes" : "Carolina Water Service of North Carolina system reporting 2024 PFAS results from February and May sampling",
+      "populationServed" : "27000",
+      "sourceWaterType" : "purchased_groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/akwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
+      "serviceAreaNotes" : "Fairbanks-area community system with purchased groundwater supply and 2024 PFAS values reported in the 2025 utility water quality report",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "abington-2024-water-quality-report" ]
+      "sourceIds" : [ "alaska-water-home", "alaska-water-quality-reports", "alaska-dww-college-utilities-monitoring-summary", "college-utilities-2025-water-quality-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NC0234191",
+      "result_id" : "public-water:AK2310900",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T03:36:09.155376800+09:00",
+      "generated_at" : "2026-03-20T03:36:09.101042800+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -36,7 +36,7 @@
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 4 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
       "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 124.99,
@@ -97,22 +97,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "abington-2024-water-quality-report",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Annual Water Quality Report 2024 Abington CCR 002",
-        "url" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+        "source_id" : "alaska-dww-college-utilities-monitoring-summary",
+        "organization" : "Alaska Department of Environmental Conservation",
+        "title" : "Monitoring Summary for College Utilities Corporation",
+        "url" : "https://dec.alaska.gov/DWW/MonSumm/310900.pdf",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-home",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Carolina Water Service of North Carolina",
-        "url" : "https://www.myutility.us/carolinawater",
+        "source_id" : "alaska-water-home",
+        "organization" : "College & Golden Heart Utilities",
+        "title" : "College & Golden Heart Utilities | Home",
+        "url" : "https://www.myutility.us/akwater",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-quality-reports",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
+        "source_id" : "alaska-water-quality-reports",
+        "organization" : "College & Golden Heart Utilities",
+        "title" : "Water Safety | Water Quality Reports",
+        "url" : "https://www.myutility.us/akwater/water-safety/water-quality-reports",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "college-utilities-2025-water-quality-report",
+        "organization" : "College Utilities Corporation",
+        "title" : "2025 Annual Consumer Confidence Water Quality Report",
+        "url" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -231,9 +237,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NC0234191",
+      "input_id" : "public_water:AK2310900",
       "route_type" : "public_water",
-      "route_key" : "NC0234191",
+      "route_key" : "AK2310900",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -241,12 +247,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NC0234191",
+      "pwsid" : "AK2310900",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/NC0234191",
-      "secondary_path" : "/internal/results/public-water/NC0234191",
+      "primary_path" : "/public-water/AK2310900",
+      "secondary_path" : "/internal/results/public-water/AK2310900",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NC0234191"
+    "supporting_path" : "/public-water-system/AK2310900"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T03:19:19.014898800+09:00",
-  "document_count" : 20,
+  "generated_at" : "2026-03-20T03:36:08.347226300+09:00",
+  "document_count" : 21,
   "documents" : [ {
     "document_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
@@ -90,6 +90,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Golden Heart Utilities", "AK", "AK2310730", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:AK2310900",
+    "route_type" : "public_water",
+    "route_key" : "AK2310900",
+    "url" : "/public-water/AK2310900",
+    "title" : "College Utilities Corporation PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for College Utilities Corporation.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "College Utilities Corporation", "AK", "AK2310900", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:MD0120011",
     "route_type" : "public_water",
