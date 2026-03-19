@@ -21,12 +21,12 @@
         <div class="hero__grid">
             <div>
                 <h1 class="hero__title">
-                    Route the user
-                    <span class="hero__title-accent">before you sell anything.</span>
+                    Route the household
+                    <span class="hero__title-accent">like a controlled evidence workflow.</span>
                 </h1>
                 <p class="hero__lede">
-                    This screen is no longer a mock shell. The summary rail is rendered from server-side routing logic so the
-                    same rule set can back internal JSON, fragments, and full pages.
+                    This screen is meant to feel more like a routing dossier than a cheerful wizard. The right rail should read
+                    like the current interpretation stance, not a floating marketing card.
                 </p>
             </div>
             <aside class="hero__panel">
@@ -36,6 +36,11 @@
                     Public-water and private-well users are pushed toward direct official data first, then interpretation,
                     then optional certified point-of-use.
                 </p>
+                <ul class="hero__panel-list">
+                    <li>Input panel on the left.</li>
+                    <li>Routing position on the right.</li>
+                    <li>No product-first state.</li>
+                </ul>
             </aside>
         </div>
     </div>

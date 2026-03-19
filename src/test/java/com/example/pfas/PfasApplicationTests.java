@@ -216,7 +216,7 @@ class PfasApplicationTests {
 	void rendersHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official data in,")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official records,")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")));
 	}
 
@@ -225,7 +225,7 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/checker"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the user")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the household")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Server-backed routing")));
 	}
 

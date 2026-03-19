@@ -14,17 +14,35 @@
     <div class="shell">
         <div class="result-header">
             <div>
-                <span class="eyebrow">${system.stateCode()} public water system</span>
+                <span class="eyebrow">${system.stateCode()} public-water dossier</span>
                 <h1 class="result-header__title">${system.pwsName()}</h1>
                 <p class="hero__lede">
-                    PWSID ${system.pwsid()} / ${system.systemType()} / Generated from normalized utility observations,
-                    registry-backed benchmarks, and claim-level filter listings.
+                    Utility observations, registry-backed benchmarks, and certification records are rendered together as one
+                    interpretation output.
                 </p>
             </div>
             <div class="button-row">
                 <a class="button button--secondary" href="${system.ccrUrl()}">Open utility report</a>
                 <a class="button button--primary" href="/internal/results/public-water/${system.pwsid()}">Open result JSON</a>
             </div>
+        </div>
+
+        <div class="meta-grid">
+            <article class="meta-tile">
+                <span class="meta-tile__label">PWSID</span>
+                <span class="meta-tile__value">${system.pwsid()}</span>
+                <span class="meta-tile__copy">${system.systemType()} / ${system.sourceWaterType()}</span>
+            </article>
+            <article class="meta-tile">
+                <span class="meta-tile__label">Decision rule</span>
+                <span class="meta-tile__value">${result.meta().decisionRuleId()}</span>
+                <span class="meta-tile__copy">Benchmark relation ${result.meta().benchmarkRelation()}</span>
+            </article>
+            <article class="meta-tile">
+                <span class="meta-tile__label">Posture</span>
+                <span class="meta-tile__value">${result.nextAction().confidence()} confidence</span>
+                <span class="meta-tile__copy">Optional point-of-use remains the first escalation class.</span>
+            </article>
         </div>
 
         <div class="result-grid">

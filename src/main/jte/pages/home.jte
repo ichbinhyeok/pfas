@@ -7,34 +7,51 @@
     content = @`
 <section class="hero">
     <div class="shell">
-        <span class="eyebrow">Premium trust startup interface</span>
+        <span class="eyebrow">Utility-grade decision product</span>
         <div class="hero__grid">
             <div>
                 <h1 class="hero__title">
-                    Official data in,
-                    <span class="hero__title-accent">clear next action out.</span>
+                    Official records,
+                    <span class="hero__title-accent">interpreted like a civic dossier.</span>
                 </h1>
                 <p class="hero__lede">
-                    This project is not a PFAS content farm. It is a benchmark-aware decision product that turns utility data,
-                    state guidance, and claim-level filter listings into a user-facing next step.
+                    This should feel less like a glossy filter site and more like a premium interpretation engine built on
+                    public evidence, benchmark logic, and claim-level certification records.
                 </p>
                 <div class="hero__actions">
                     <a class="button button--primary" href="/checker">Open Action Checker</a>
                     <a class="button button--secondary" href="/public-water/PA1510001">Open seeded public-water result</a>
                 </div>
+                <div class="meta-grid">
+                    <article class="meta-tile">
+                        <span class="meta-tile__label">Evidence stack</span>
+                        <span class="meta-tile__value">Official sources only</span>
+                        <span class="meta-tile__copy">EPA, state guidance, utility documents, and listing records.</span>
+                    </article>
+                    <article class="meta-tile">
+                        <span class="meta-tile__label">Decision posture</span>
+                        <span class="meta-tile__value">Interpret first</span>
+                        <span class="meta-tile__copy">Direct data is reviewed before any comparison flow opens.</span>
+                    </article>
+                    <article class="meta-tile">
+                        <span class="meta-tile__label">Product bias</span>
+                        <span class="meta-tile__value">Constrained</span>
+                        <span class="meta-tile__copy">Point-of-use comes before whole-house escalation.</span>
+                    </article>
+                </div>
             </div>
             <aside class="hero__panel">
-                <p class="hero__panel-label">Current build state</p>
-                <div class="hero__panel-value">Sharp v1 backend</div>
+                <p class="hero__panel-label">Interface mode</p>
+                <div class="hero__panel-value">Civic dossier</div>
                 <p class="hero__panel-copy">
-                    Source registry, benchmark registry, utility observations, certification claims, cost models, and typed
-                    public-water result outputs are wired together.
+                    The visual direction is no longer generic premium SaaS. It is meant to read like a specialized public
+                    evidence console with editorial restraint.
                 </p>
-                <div class="chip-row">
-                    <span class="chip">File-based data pipeline</span>
-                    <span class="chip">Typed result schema</span>
-                    <span class="chip">SSR premium UI</span>
-                </div>
+                <ul class="hero__panel-list">
+                    <li>Less decorative softness, more structured authority.</li>
+                    <li>Stronger metadata, calmer surfaces, sharper type contrast.</li>
+                    <li>Consistency stays, but sameness is reduced.</li>
+                </ul>
             </aside>
         </div>
     </div>
@@ -45,8 +62,8 @@
         <div class="section__header">
             <div>
                 <p class="section__label">Seeded systems</p>
-                <h2 class="section__title">Current public-water view models</h2>
-                <p class="section__copy">These are the seeded systems currently available through the file-backed backend.</p>
+                <h2 class="section__title">Current public-water dossiers</h2>
+                <p class="section__copy">Seeded systems are rendered as evidence-backed routes, not generic location pages.</p>
             </div>
         </div>
         <div class="systems-grid">
