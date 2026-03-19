@@ -14,6 +14,7 @@ import com.example.pfas.decision.PublicWaterNextActionCode;
 import com.example.pfas.decision.PublicWaterDecisionService;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.observation.UtilityObservationService;
+import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.water.PublicWaterSystemService;
@@ -44,6 +45,9 @@ class PfasApplicationTests {
 
 	@Autowired
 	private PublicWaterDecisionService publicWaterDecisionService;
+
+	@Autowired
+	private PublicWaterResultService publicWaterResultService;
 
 	@Test
 	void contextLoads() {
@@ -155,6 +159,26 @@ class PfasApplicationTests {
 		assertThat(decision.certifiedPouOptions())
 			.extracting(item -> item.productId())
 			.contains("espring-122941");
+	}
+
+	@Test
+	void buildsTypedPublicWaterResult() {
+		var result = publicWaterResultService.getByPwsid("PA1510001").orElseThrow();
+
+		assertThat(result.resultId()).isEqualTo("public-water:PA1510001");
+		assertThat(result.schemaVersion()).isEqualTo("v1");
+		assertThat(result.nextAction().code()).isEqualTo("REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU");
+		assertThat(result.initialCost().rangeLowUsd()).isEqualByComparingTo("1299.00");
+		assertThat(result.annualCostMaintenance().rangeHighUsd()).isEqualByComparingTo("280.00");
+		assertThat(result.certificationChecklist()).hasSize(3);
+		assertThat(result.bestFitOptions())
+			.extracting(option -> option.optionCode())
+			.contains("ESPRING_122941");
+		assertThat(result.sources())
+			.extracting(source -> source.sourceId())
+			.contains("pa-pfas-mcl-rule", "nsf-espring-listing-053", "amway-espring-122941-product");
+		assertThat(result.meta().waterSourceType()).isEqualTo("public_water");
+		assertThat(result.meta().benchmarkRelation()).isEqualTo("below_reference");
 	}
 
 }
