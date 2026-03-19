@@ -8,6 +8,7 @@
 <aside class="checker-summary" id="checker-summary">
     <div class="checker-summary__top">
         <span class="eyebrow">${recommendation.tag()}</span>
+        <div class="route-code">${recommendation.routeCode()}</div>
         <h2 class="checker-summary__title">${recommendation.title()}</h2>
         <p class="checker-summary__copy">${recommendation.summary()}</p>
 
@@ -57,6 +58,14 @@
                     <li>${principle}</li>
                 @endfor
             </ul>
+        </div>
+
+        <div class="rail-card">
+            <h3 class="rail-card__title">Operating stance</h3>
+            <p class="checker-block__hint">
+                This summary is a routing position inside the engine. It is not a household grade, a compliance label, or a
+                product-first recommendation.
+            </p>
         </div>
 
         @if(recommendation.wholeHouseGuardrail())

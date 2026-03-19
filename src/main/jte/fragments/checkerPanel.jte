@@ -29,6 +29,21 @@
             </div>
         </div>
 
+        <div class="case-strip">
+            <article class="case-chip">
+                <span class="case-chip__label">Source type</span>
+                <span class="case-chip__value">${selection.waterSource()}</span>
+            </article>
+            <article class="case-chip">
+                <span class="case-chip__label">State code</span>
+                <span class="case-chip__value">${selection.stateCode()}</span>
+            </article>
+            <article class="case-chip">
+                <span class="case-chip__label">Seeded record</span>
+                <span class="case-chip__value">${selection.pwsid()}</span>
+            </article>
+        </div>
+
         <div class="checker-block">
             <p class="checker-block__label">Water source</p>
             <div class="option-grid option-grid--two">

@@ -39,6 +39,28 @@
                         <span class="meta-tile__copy">Point-of-use comes before whole-house escalation.</span>
                     </article>
                 </div>
+                <div class="dossier-strip">
+                    <article class="dossier-cell">
+                        <span class="dossier-cell__label">Federal</span>
+                        <span class="dossier-cell__value">Rule context</span>
+                        <span class="dossier-cell__copy">Regulatory status is interpreted, not dramatized.</span>
+                    </article>
+                    <article class="dossier-cell">
+                        <span class="dossier-cell__label">State</span>
+                        <span class="dossier-cell__value">Guidance layer</span>
+                        <span class="dossier-cell__copy">Private-well routing stays state-specific.</span>
+                    </article>
+                    <article class="dossier-cell">
+                        <span class="dossier-cell__label">Utility</span>
+                        <span class="dossier-cell__value">Direct record</span>
+                        <span class="dossier-cell__copy">Public-water flows begin with official system evidence.</span>
+                    </article>
+                    <article class="dossier-cell">
+                        <span class="dossier-cell__label">Listing</span>
+                        <span class="dossier-cell__value">Claim check</span>
+                        <span class="dossier-cell__copy">Products only appear when claim-level proof exists.</span>
+                    </article>
+                </div>
             </div>
             <aside class="hero__panel">
                 <p class="hero__panel-label">Interface mode</p>
@@ -61,6 +83,41 @@
     <div class="shell">
         <div class="section__header">
             <div>
+                <p class="section__label">Interpretation method</p>
+                <h2 class="section__title">How the engine reads a case</h2>
+                <p class="section__copy">The product should feel like a specialized reading room for public evidence.</p>
+            </div>
+        </div>
+        <div class="ledger-list">
+            <article class="ledger-item">
+                <span class="ledger-item__index">01</span>
+                <div>
+                    <h3 class="ledger-item__title">Collect the direct record</h3>
+                    <p class="ledger-item__copy">Utility documents, state guidance, or lab results outrank broad PFAS maps and vague geography.</p>
+                </div>
+            </article>
+            <article class="ledger-item">
+                <span class="ledger-item__index">02</span>
+                <div>
+                    <h3 class="ledger-item__title">Normalize against explicit benchmarks</h3>
+                    <p class="ledger-item__copy">Threshold language is registry-backed so the same rule can serve JSON, pages, and future comparisons.</p>
+                </div>
+            </article>
+            <article class="ledger-item">
+                <span class="ledger-item__index">03</span>
+                <div>
+                    <h3 class="ledger-item__title">Open a constrained product layer</h3>
+                    <p class="ledger-item__copy">Point-of-use stays first. Whole-house remains a separate, justified escalation.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell">
+        <div class="section__header">
+            <div>
                 <p class="section__label">Seeded systems</p>
                 <h2 class="section__title">Current public-water dossiers</h2>
                 <p class="section__copy">Seeded systems are rendered as evidence-backed routes, not generic location pages.</p>
@@ -71,6 +128,10 @@
                 <article class="card">
                     <p class="card__label">${system.stateCode()} public water</p>
                     <h3 class="card__title">${system.pwsName()}</h3>
+                    <div class="card__meta-row">
+                        <span class="chip">PWSID ${system.pwsid()}</span>
+                        <span class="chip">${system.systemType()}</span>
+                    </div>
                     <p class="card__copy">
                         PWSID ${system.pwsid()} / ${system.systemType()} / ${system.sourceWaterType()}
                     </p>

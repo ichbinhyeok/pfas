@@ -47,6 +47,28 @@
 </section>
 
 <section class="section">
+    <div class="shell">
+        <div class="dossier-strip dossier-strip--compact">
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Step 01</span>
+                <span class="dossier-cell__value">Collect input</span>
+                <span class="dossier-cell__copy">Source, direct data, and shopping posture.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Step 02</span>
+                <span class="dossier-cell__value">Normalize state</span>
+                <span class="dossier-cell__copy">Server rules remove invalid combinations.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Step 03</span>
+                <span class="dossier-cell__value">Route next action</span>
+                <span class="dossier-cell__copy">Interpretation opens before product comparison.</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
     @template.fragments.checkerPanel(
         states = states,
         systems = systems,
