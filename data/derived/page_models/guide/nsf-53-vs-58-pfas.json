@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:nsf-53-vs-58-pfas",
   "route_type" : "guide",
   "route_key" : "nsf-53-vs-58-pfas",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/nsf-53-vs-58-pfas",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 4,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open source policy",
       "secondaryHref" : "/checker",
       "secondaryLabel" : "Open Action Checker",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Badge shorthand is weaker than record-level verification",
+        "summary" : "Many shoppers collapse NSF 53 and 58 into a universal quality ranking. That is not how the engine should read certification.",
+        "paragraphs" : [ "The standard code is a useful clue about the product class and test method, but it is not a substitute for the exact claim, model identifier, and listing record. Two products can reference similar certification language while exposing very different PFAS-relevant claim detail and maintenance burden.", "The safest reading order is model first, claim second, badge third. That keeps the product layer tied to a verifiable listing record instead of broad shorthand that can be quoted without real claim granularity." ],
+        "bullets" : [ "Exact model beats category-level marketing.", "Claim scope beats shorthand badge talk.", "Directory record beats generic vendor copy." ]
+      }, {
+        "title" : "Why claim scope matters more for PFAS",
+        "summary" : "PFAS language often sounds broader than the actual listing record or certification explanation.",
+        "paragraphs" : [ "EPA already warns that current certification should not be treated as automatic proof that a device reduces PFAS to every current federal drinking-water benchmark. That makes claim-level reading mandatory, not optional.", "The right question is not whether a badge is impressive. It is whether the exact model has a traceable PFAS reduction claim, which compounds are named, which listing system carries the record, and what limits still apply." ],
+        "bullets" : [ "Do not turn certification into a blanket compliance claim.", "Do not infer PFAS coverage from brand-level marketing.", "Do not ignore the gap between listing scope and benchmark scope." ]
+      }, {
+        "title" : "Cost and cadence still decide fit",
+        "summary" : "A strong claim does not make a product the right fit if the ownership burden is mismatched to the household.",
+        "paragraphs" : [ "Once the claim is verified, the next filter question is economic and operational. Replacement cadence, component cost, and installation class can move a product from reasonable to unrealistic even when the certification layer looks good.", "That is why the guide keeps annual ownership and maintenance beside certification. The engine is trying to recommend a workable household action, not just the strongest-looking badge." ],
+        "bullets" : [ "Claim verification is necessary but not sufficient.", "Annual cost changes product fit.", "Maintenance burden matters as much as headline price." ]
+      } ]
     }
   }
 }

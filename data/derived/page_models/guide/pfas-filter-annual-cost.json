@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:pfas-filter-annual-cost",
   "route_type" : "guide",
   "route_key" : "pfas-filter-annual-cost",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/pfas-filter-annual-cost",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 4,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/public-water/PA1510001",
       "secondaryLabel" : "Open seeded result",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Upfront price is the easiest number to misuse",
+        "summary" : "Cheap-looking filters can become expensive when the maintenance rhythm is fast, while premium-looking systems can become tolerable if cadence is slower and the household fit is real.",
+        "paragraphs" : [ "The problem with headline price is that it strips the decision away from time. What matters to the household is not just what the system costs at checkout, but what the system asks for over a year of actual ownership.", "That is why the engine annualizes cartridge cadence and recurring components. It does not assume one universal usage model, but it does force the maintenance burden into the same frame as the interpretation result." ],
+        "bullets" : [ "Headline price alone is weak decision support.", "Cadence changes the real cost.", "Recurring components matter more on some RO systems." ]
+      }, {
+        "title" : "Annual ownership belongs beside interpretation",
+        "summary" : "Cost should not appear only after the user is emotionally committed to a product class.",
+        "paragraphs" : [ "If the household is still in a low-evidence state, annual ownership may be the strongest reason not to escalate prematurely. Showing annual cost early helps the product block unnecessary treatment upgrades and keeps the recommendation honest.", "When the evidence does justify a point-of-use system, annual cost still matters because it affects whether the likely fit is practical over time instead of merely plausible on paper." ],
+        "bullets" : [ "Interpretation first, but cost immediately after.", "Annual cost is part of product fit, not just commerce.", "Maintenance visibility reduces regret." ]
+      }, {
+        "title" : "How to read the number well",
+        "summary" : "Annual cost is not the winner-take-all metric. It is a constraint that has to be read with claim scope and maintenance class.",
+        "paragraphs" : [ "A low annual cost does not save a product with weak claim support, and a strong listing record does not make an unrealistic annual maintenance burden disappear. The project should keep those layers together.", "The best use of annual cost is to keep comparison grounded: what does this product ask for over a year, how often does the user have to intervene, and does that still make sense for the specific household route?" ],
+        "bullets" : [ "Read annual cost with certification.", "Read annual cost with cadence and burden.", "Do not let annual cost replace evidence about whether treatment is needed." ]
+      } ]
     }
   }
 }

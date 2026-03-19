@@ -8,6 +8,8 @@
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
 @param PublicWaterSystem system
 @param PublicWaterDecisionContext decision
 @param WaterDecisionResult result
@@ -35,7 +37,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = system.lastVerifiedDate(), scopeLabel = "Public-water interpretation")
+        @template.fragments.publicationStrip(
+            lastVerified = system.lastVerifiedDate(),
+            scopeLabel = "Public-water interpretation",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="dossier-strip">
             <article class="dossier-cell">

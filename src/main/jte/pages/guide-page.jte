@@ -1,7 +1,10 @@
 @import java.util.List
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.web.GuidePage
+@import com.example.pfas.web.GuideSection
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
 @param GuidePage page
 @param List<GuidePage> allGuides
 @param List<SourceDocument> guideSources
@@ -26,7 +29,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = page.lastVerifiedDate(), scopeLabel = "Decision-intent guide")
+        @template.fragments.publicationStrip(
+            lastVerified = page.lastVerifiedDate(),
+            scopeLabel = "Decision-intent guide",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="dossier-strip">
             <article class="dossier-cell">
@@ -62,6 +70,26 @@
                     <p class="next-action__summary">${page.nextActionSummary()}</p>
                 </section>
 
+                @for(var section : page.sections())
+                    <section class="card">
+                        <p class="card__label">Guide analysis</p>
+                        <h2 class="card__title">${section.title()}</h2>
+                        @if(section.summary() != null && !section.summary().isBlank())
+                            <p class="card__copy">${section.summary()}</p>
+                        @endif
+                        @for(var paragraph : section.paragraphs())
+                            <p class="card__copy">${paragraph}</p>
+                        @endfor
+                        @if(section.bullets() != null && !section.bullets().isEmpty())
+                            <ul class="list">
+                                @for(var bullet : section.bullets())
+                                    <li>${bullet}</li>
+                                @endfor
+                            </ul>
+                        @endif
+                    </section>
+                @endfor
+
                 <section class="card">
                     <p class="card__label">Why this</p>
                     <ul class="list">
@@ -86,6 +114,7 @@
                         <li>Manual editorial synthesis over linked official and listing records.</li>
                         <li>Routing logic stays aligned with the engine's decision table and source policy.</li>
                         <li>Commercial records are used only for product, cost, or maintenance context, not household risk truth.</li>
+                        <li>No external reviewer is claimed on this build.</li>
                     </ul>
                 </section>
             </div>

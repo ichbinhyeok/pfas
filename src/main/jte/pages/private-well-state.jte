@@ -3,6 +3,8 @@
 @import com.example.pfas.stateprofile.StateBenchmarkProfile
 @import com.example.pfas.source.SourceDocument
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
 @param StateGuidance guidance
 @param StateBenchmarkProfile profile
 @param List<SourceDocument> sources
@@ -30,7 +32,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = guidance.lastVerifiedDate(), scopeLabel = "Private-well state guide")
+        @template.fragments.publicationStrip(
+            lastVerified = guidance.lastVerifiedDate(),
+            scopeLabel = "Private-well state guide",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="result-grid">
             <div class="stack">

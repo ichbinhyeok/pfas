@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:03.831545200+09:00",
-  "input_count" : 13,
+  "generated_at" : "2026-03-20T03:19:19.105613100+09:00",
+  "input_count" : 14,
   "inputs" : [ {
     "input_id" : "public_water:7360058",
     "route_type" : "public_water",
@@ -18,6 +18,22 @@
     "primary_path" : "/public-water/7360058",
     "secondary_path" : "/guides/under-sink-vs-whole-house",
     "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+  }, {
+    "input_id" : "public_water:AK2310730",
+    "route_type" : "public_water",
+    "route_key" : "AK2310730",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "BELOW_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "AK2310730",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/AK2310730",
+    "secondary_path" : "/internal/results/public-water/AK2310730",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
   }, {
     "input_id" : "public_water:MD0120011",
     "route_type" : "public_water",

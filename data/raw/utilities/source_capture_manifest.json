@@ -3,6 +3,58 @@
   "generated_at": "2026-03-20T14:15:00+09:00",
   "captures": [
     {
+      "raw_source_id": "raw-alaska-water-home-20260320",
+      "source_id": "alaska-water-home",
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "url": "https://www.myutility.us/akwater",
+      "organization": "College & Golden Heart Utilities",
+      "title": "College & Golden Heart Utilities | Home",
+      "content_type": "text/html",
+      "jurisdiction": "AK",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Alaska utility homepage covering College Utilities and Golden Heart Utilities."
+    },
+    {
+      "raw_source_id": "raw-alaska-water-quality-reports-20260320",
+      "source_id": "alaska-water-quality-reports",
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "url": "https://www.myutility.us/akwater/water-safety/water-quality-reports",
+      "organization": "College & Golden Heart Utilities",
+      "title": "Water Safety | Water Quality Reports",
+      "content_type": "text/html",
+      "jurisdiction": "AK",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Alaska utility report index used to locate Golden Heart and College Utilities water quality reports."
+    },
+    {
+      "raw_source_id": "raw-alaska-dww-golden-heart-system-detail-20260320",
+      "source_id": "alaska-dww-golden-heart-system-detail",
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "url": "https://dec.alaska.gov/dww/JSP/WaterSystemFacility.jsp?tinwsf_is_number=45718&tinwsf_st_code=AK&tinwsys_is_number=3867&tinwsys_st_code=AK&wsf_id=DS001&wsf_name=DS+GOLDEN+HEART+UTILITIES",
+      "organization": "Alaska Department of Environmental Conservation",
+      "title": "DWW - Water System Facility Detail",
+      "content_type": "text/html",
+      "jurisdiction": "AK",
+      "source_family": "state_utility_registry",
+      "checksum_or_snapshot_id": null,
+      "notes": "Alaska Drinking Water Watch detail page confirming AK2310730, community status, county served, and groundwater source."
+    },
+    {
+      "raw_source_id": "raw-golden-heart-2025-water-quality-report-20260320",
+      "source_id": "golden-heart-2025-water-quality-report",
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "organization": "Golden Heart Utilities",
+      "title": "2025 Annual Consumer Confidence",
+      "content_type": "application/pdf",
+      "jurisdiction": "AK",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Golden Heart Utilities report with 2024 PFAS values and customer-facing system context."
+    },
+    {
       "raw_source_id": "raw-phila-pwd-home-20260319",
       "source_id": "phila-pwd-home",
       "retrieved_at": "2026-03-19T18:20:00+09:00",

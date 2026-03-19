@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:test-first-vs-filter-first",
   "route_type" : "guide",
   "route_key" : "test-first-vs-filter-first",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/test-first-vs-filter-first",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 3,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",
       "secondaryLabel" : "Review cost tradeoffs",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Filter-first advice feels decisive but often starts from missing evidence",
+        "summary" : "A product page can create the illusion of progress even when the household still does not know what record matters most.",
+        "paragraphs" : [ "For private wells, filter-first behavior often skips the only direct evidence the owner controls: a test. That makes it easy to overspend on treatment without understanding what is actually in the water or which state reference context applies.", "For public water, product-first advice often ignores a utility record that already tells the user whether a system notice exists, whether PFAS is being tracked publicly, and whether the decision should stay in an interpretation mode instead of a purchase mode." ],
+        "bullets" : [ "Shopping is not evidence.", "A filter class cannot substitute for a utility record or test result.", "Faster does not mean more trustworthy." ]
+      }, {
+        "title" : "What test-first means on each household path",
+        "summary" : "The phrase sounds universal, but the actual move depends on the water source.",
+        "paragraphs" : [ "On public water, test-first usually means utility-first. The user should read the system report, newer PFAS notice, or direct utility PFAS page before trying to infer anything from geography or product marketing.", "On private wells, test-first means exactly that: use the state-guided lab path, then interpret the result against the relevant state or reference framework before treating any product as justified." ],
+        "bullets" : [ "Public water test-first is usually utility-first.", "Private well test-first is literal owner-driven testing.", "In both cases, shopping opens after evidence." ]
+      }, {
+        "title" : "Why this improves product fit later",
+        "summary" : "The engine is not anti-product. It is anti-premature product certainty.",
+        "paragraphs" : [ "Direct evidence changes whether the likely fit is no filter, an optional certified point-of-use system, a stronger under-sink treatment class, or a broader household escalation. Without that evidence, the comparison set is often wrong before the first badge is even read.", "Once the route is anchored, certification, cadence, and annual cost become more meaningful because they are being compared against a defined household problem instead of a vague PFAS fear state." ],
+        "bullets" : [ "Evidence narrows the comparison set.", "Evidence makes certification review more useful.", "Evidence keeps cost tradeoffs honest." ]
+      } ]
     }
   }
 }

@@ -1,16 +1,18 @@
 @param String lastVerified
 @param String scopeLabel
+@param String editorialOwner
+@param String methodologyOwner
 
 <div class="dossier-strip dossier-strip--compact publication-strip">
     <article class="dossier-cell">
         <span class="dossier-cell__label">Editorial owner</span>
-        <span class="dossier-cell__value">PFAS Decision Engine</span>
-        <span class="dossier-cell__copy">Decision product and publication system.</span>
+        <span class="dossier-cell__value">${editorialOwner}</span>
+        <span class="dossier-cell__copy">No external reviewer claim is made on this build.</span>
     </article>
     <article class="dossier-cell">
-        <span class="dossier-cell__label">Methodology</span>
-        <span class="dossier-cell__value"><a href="/methodology">Open methodology</a></span>
-        <span class="dossier-cell__copy">Source handling, pipeline, and decision logic.</span>
+        <span class="dossier-cell__label">Methodology owner</span>
+        <span class="dossier-cell__value">${methodologyOwner}</span>
+        <span class="dossier-cell__copy"><a href="/methodology">Open methodology</a> for source handling, pipeline, and decision logic.</span>
     </article>
     <article class="dossier-cell">
         <span class="dossier-cell__label">Last verified</span>

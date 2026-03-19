@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:03.528278500+09:00",
-  "route_count" : 19,
+  "generated_at" : "2026-03-20T03:19:18.671309500+09:00",
+  "route_count" : 20,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -11,7 +11,7 @@
     "supporting_path" : "/source-policy",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
@@ -24,7 +24,7 @@
     "supporting_path" : "/checker",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "pfas filter annual cost", "PFAS", "water", "decision guide" ]
@@ -37,7 +37,7 @@
     "supporting_path" : "/checker",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 3,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "public water vs private well", "PFAS", "water", "decision guide" ]
@@ -50,7 +50,7 @@
     "supporting_path" : "/public-water-system/PA1510001",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 5,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "read your ccr", "PFAS", "water", "decision guide" ]
@@ -63,7 +63,7 @@
     "supporting_path" : "/checker",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 3,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "test first vs filter first", "PFAS", "water", "decision guide" ]
@@ -76,7 +76,7 @@
     "supporting_path" : "/checker",
     "api_path" : null,
     "indexable" : true,
-    "last_verified_date" : "2026-03-19",
+    "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "under sink vs whole house", "PFAS", "water", "decision guide" ]
@@ -93,6 +93,19 @@
     "source_count" : 3,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "City of Lancaster Water Department", "PA", "7360058", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "AK2310730",
+    "display_label" : "Golden Heart Utilities PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/AK2310730",
+    "supporting_path" : "/public-water-system/AK2310730",
+    "api_path" : "/internal/results/public-water/AK2310730",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Golden Heart Utilities", "AK", "AK2310730", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "MD0120011",

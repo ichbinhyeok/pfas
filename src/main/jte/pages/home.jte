@@ -3,6 +3,9 @@
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
+@param String siteLastVerifiedDate
 @param java.util.List<PublicWaterSystem> systems
 @param java.util.List<GuidePage> guides
 
@@ -88,7 +91,12 @@
 
 <section class="section">
     <div class="shell">
-        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Decision engine homepage")
+        @template.fragments.publicationStrip(
+            lastVerified = siteLastVerifiedDate,
+            scopeLabel = "Decision engine homepage",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
     </div>
 </section>
 

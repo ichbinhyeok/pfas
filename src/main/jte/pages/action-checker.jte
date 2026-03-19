@@ -7,6 +7,9 @@
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
+@param String siteLastVerifiedDate
 @param List<StateGuidance> states
 @param List<PublicWaterSystem> systems
 @param ActionCheckerSelection selection
@@ -51,7 +54,12 @@
 
 <section class="section">
     <div class="shell">
-        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Routing interface")
+        @template.fragments.publicationStrip(
+            lastVerified = siteLastVerifiedDate,
+            scopeLabel = "Routing interface",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
         <div class="dossier-strip dossier-strip--compact">
             <article class="dossier-cell">
                 <span class="dossier-cell__label">Step 01</span>

@@ -16,4 +16,19 @@ public class SiteMetadataAdvice {
 	public String siteBaseUrl() {
 		return siteMetadataService.siteBaseUrl();
 	}
+
+	@ModelAttribute("siteEditorialOwner")
+	public String siteEditorialOwner() {
+		return siteMetadataService.editorialOwner();
+	}
+
+	@ModelAttribute("siteMethodologyOwner")
+	public String siteMethodologyOwner() {
+		return siteMetadataService.methodologyOwner();
+	}
+
+	@ModelAttribute("siteLastVerifiedDate")
+	public String siteLastVerifiedDate() {
+		return siteMetadataService.siteLastVerifiedDate();
+	}
 }

@@ -36,6 +36,10 @@ public class SourceRegistryRepository {
 			.findFirst();
 	}
 
+	public Optional<String> findGeneratedAt() {
+		return Optional.ofNullable(readRegistry().generatedAt());
+	}
+
 	private SourceRegistryFile readRegistry() {
 		if (!Files.exists(sourceRegistryFile)) {
 			throw new IllegalStateException("Missing source registry file: " + sourceRegistryFile.toAbsolutePath());

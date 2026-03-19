@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:under-sink-vs-whole-house",
   "route_type" : "guide",
   "route_key" : "under-sink-vs-whole-house",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/under-sink-vs-whole-house",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 4,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",
       "secondaryLabel" : "Review annual cost",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Most households are solving for ingestion first",
+        "summary" : "PFAS treatment conversations get distorted when the product class becomes the question before the actual household objective is named.",
+        "paragraphs" : [ "If the household is mainly concerned about drinking and cooking water, certified point-of-use often deserves to stay visible as the first serious treatment class. That is the part of the home where ingestion is concentrated and where maintenance can remain constrained.", "Whole-house systems may still be justified in some cases, but the project should not let uncertainty alone create that escalation. The goal has to be broader than a vague desire to 'do something everywhere.'" ],
+        "bullets" : [ "Name the objective before naming the treatment class.", "Ingestion-focused goals keep point-of-use on the table.", "Whole-house is not the default response to uncertainty." ]
+      }, {
+        "title" : "Why whole-house needs a higher burden of proof",
+        "summary" : "The bigger system is not just a bigger version of the same decision. It changes cost, maintenance, and operational exposure.",
+        "paragraphs" : [ "Whole-house systems change installation burden, service burden, and long-term ownership cost in a way that a household cannot treat casually. That means the justification standard should be stricter than 'PFAS sounds serious.'", "The product layer should therefore ask whether the user has a clearly stated whole-home purpose, whether a certified point-of-use alternative already covers the core use case, and whether the maintenance burden is acceptable." ],
+        "bullets" : [ "Higher install burden.", "Higher maintenance burden.", "Higher risk of overbuying." ]
+      }, {
+        "title" : "How the engine should frame escalation",
+        "summary" : "Escalation should look deliberate, not emotional.",
+        "paragraphs" : [ "The result surface should first show whether certified point-of-use remains a likely fit. If it does, whole-house should be presented as a secondary review path with clearer justification thresholds, not as the default 'premium' option.", "That framing protects users from fear-driven upsell pressure and keeps the product aligned with the project promise: clear next action without unnecessary spend." ],
+        "bullets" : [ "Point-of-use first.", "Whole-house only with a broader stated purpose.", "Escalation requires explicit maintenance and cost acceptance." ]
+      } ]
     }
   }
 }

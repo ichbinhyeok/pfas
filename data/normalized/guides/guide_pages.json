@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "v1",
+  "generatedAt": "2026-03-20T16:20:00+09:00",
+  "guides": [
+    {
+      "slug": "public-water-vs-private-well",
+      "eyebrow": "High-intent guide",
+      "title": "Public water vs private well is the first split, not a small detail",
+      "lede": "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
+      "nextActionTitle": "Split the household path before comparing filters",
+      "nextActionSummary": "Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
+      "whyThis": [
+        "Public water has utility and regulator records that can act as direct evidence.",
+        "Private wells are owner-managed and need a test-first route.",
+        "The same PFAS question becomes a different next action depending on source type."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This split does not tell you whether the water is safe or unsafe.",
+        "It does not replace a direct utility document or a direct well test.",
+        "It does not justify whole-house by itself."
+      ],
+      "checklist": [
+        "Identify the water source first.",
+        "If public water, open the utility path.",
+        "If private well, open the state-guided testing path."
+      ],
+      "evidenceHighlights": [
+        "EPA CCR guidance establishes public-water reporting as a direct-evidence path.",
+        "EPA private-well guidance keeps testing owner-driven and state-guided.",
+        "The first split is evidence system, not product category."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-private-wells",
+        "epa-pfas-private-wells"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/test-first-vs-filter-first",
+      "secondaryLabel": "Read test-first logic",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Use source type as the first decision boundary",
+          "summary": "The first useful question is not which filter badge looks strongest. It is which evidence system governs the household.",
+          "paragraphs": [
+            "A public-water household has a utility, a system identifier, annual reporting obligations, and sometimes a newer PFAS notice that can be read directly. That means the fastest trustworthy path is usually utility-first, not shopping-first.",
+            "A private-well household has none of that public reporting infrastructure. The owner has to test, interpret, and then decide whether treatment is justified. That is why the same PFAS anxiety produces a different next action depending on the water source."
+          ],
+          "bullets": [
+            "Public water: utility report, PFAS notice, or direct utility page can act as evidence.",
+            "Private well: testing and state guidance are the evidence layer.",
+            "Do not collapse these into one generic PFAS checklist."
+          ]
+        },
+        {
+          "title": "Why mixing the two paths creates bad recommendations",
+          "summary": "Most weak PFAS content treats all households as if they are standing on the same evidence floor. They are not.",
+          "paragraphs": [
+            "When a private-well household is pushed into a CCR-style workflow, the user is sent to documents that do not apply to the property. That wastes time and can create false reassurance because the public-water document belongs to a different system entirely.",
+            "When a public-water household is told to behave like a private well owner from the start, the product often jumps straight to self-funded testing or broad filter comparison even though a utility record may already answer the first layer of the question."
+          ],
+          "bullets": [
+            "Wrong path for wells: irrelevant public-water reporting.",
+            "Wrong path for utilities: unnecessary test-first spending.",
+            "Wrong path for both: product comparison before evidence."
+          ]
+        },
+        {
+          "title": "What a good split actually unlocks",
+          "summary": "A correct split reduces both confusion and overspending because it narrows the next move to the right evidence source.",
+          "paragraphs": [
+            "For public water, the split points the user toward the exact system record, current notice, and benchmark context that can support a constrained interpretation. That often reveals whether the household is looking at a below-reference situation, an above-reference notice, or simply missing direct utility context.",
+            "For private wells, the split protects the user from false certainty and keeps the route grounded in state-specific testing, lab access, and interpretation guidance before a filter class is treated like a fit."
+          ],
+          "bullets": [
+            "The split determines what counts as direct evidence.",
+            "The split determines whether testing is optional or mandatory.",
+            "The split determines whether a product layer should open at all."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "test-first-vs-filter-first",
+      "eyebrow": "High-intent guide",
+      "title": "Test first vs filter first is mostly a question about evidence quality",
+      "lede": "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
+      "nextActionTitle": "Open the direct-evidence path before the shopping path",
+      "nextActionSummary": "Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
+      "whyThis": [
+        "Direct evidence changes what kind of product is even appropriate.",
+        "Testing and interpretation help avoid overbuying.",
+        "Certification is meaningful only after the household path is defined."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This does not mean nobody should ever buy a filter before testing.",
+        "It does mean the project should not normalize product-first advice as the baseline.",
+        "It does not prove a future benchmark relation without direct data."
+      ],
+      "checklist": [
+        "Public water without direct records: start with the utility.",
+        "Private well without a test: start with state-guided testing.",
+        "Only then compare certified point-of-use."
+      ],
+      "evidenceHighlights": [
+        "EPA private-well guidance keeps direct testing ahead of shopping.",
+        "EPA filter guidance supports certification-first product review, not product-first routing.",
+        "CCR context is the public-water equivalent of a test-first branch."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-pfas-private-wells",
+        "epa-certified-pfas-filter-guidance"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/pfas-filter-annual-cost",
+      "secondaryLabel": "Review cost tradeoffs",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Filter-first advice feels decisive but often starts from missing evidence",
+          "summary": "A product page can create the illusion of progress even when the household still does not know what record matters most.",
+          "paragraphs": [
+            "For private wells, filter-first behavior often skips the only direct evidence the owner controls: a test. That makes it easy to overspend on treatment without understanding what is actually in the water or which state reference context applies.",
+            "For public water, product-first advice often ignores a utility record that already tells the user whether a system notice exists, whether PFAS is being tracked publicly, and whether the decision should stay in an interpretation mode instead of a purchase mode."
+          ],
+          "bullets": [
+            "Shopping is not evidence.",
+            "A filter class cannot substitute for a utility record or test result.",
+            "Faster does not mean more trustworthy."
+          ]
+        },
+        {
+          "title": "What test-first means on each household path",
+          "summary": "The phrase sounds universal, but the actual move depends on the water source.",
+          "paragraphs": [
+            "On public water, test-first usually means utility-first. The user should read the system report, newer PFAS notice, or direct utility PFAS page before trying to infer anything from geography or product marketing.",
+            "On private wells, test-first means exactly that: use the state-guided lab path, then interpret the result against the relevant state or reference framework before treating any product as justified."
+          ],
+          "bullets": [
+            "Public water test-first is usually utility-first.",
+            "Private well test-first is literal owner-driven testing.",
+            "In both cases, shopping opens after evidence."
+          ]
+        },
+        {
+          "title": "Why this improves product fit later",
+          "summary": "The engine is not anti-product. It is anti-premature product certainty.",
+          "paragraphs": [
+            "Direct evidence changes whether the likely fit is no filter, an optional certified point-of-use system, a stronger under-sink treatment class, or a broader household escalation. Without that evidence, the comparison set is often wrong before the first badge is even read.",
+            "Once the route is anchored, certification, cadence, and annual cost become more meaningful because they are being compared against a defined household problem instead of a vague PFAS fear state."
+          ],
+          "bullets": [
+            "Evidence narrows the comparison set.",
+            "Evidence makes certification review more useful.",
+            "Evidence keeps cost tradeoffs honest."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "read-your-ccr",
+      "eyebrow": "High-intent guide",
+      "title": "How to read your CCR or utility report without turning it into a false household verdict",
+      "lede": "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
+      "nextActionTitle": "Use the CCR to find the next direct utility layer",
+      "nextActionSummary": "Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
+      "whyThis": [
+        "The CCR tells you what system you are actually on.",
+        "It can point you to more current utility PFAS pages or notices.",
+        "It prevents ZIP-based guessing from outranking direct system evidence."
+      ],
+      "whatThisDoesNotTellYou": [
+        "A CCR alone is not a household tap test.",
+        "It may not reflect the newest PFAS notice or running annual average.",
+        "It should not be converted into safe or unsafe language."
+      ],
+      "checklist": [
+        "Find the system name and PWSID.",
+        "Check the report date.",
+        "Open any newer PFAS notice or utility PFAS page."
+      ],
+      "evidenceHighlights": [
+        "EPA says community water systems deliver annual CCRs by July 1, but newer PFAS notices can still outrank an older report.",
+        "Philadelphia and Lancaster show how a CCR and a newer PFAS page or notice need to be read together.",
+        "The CCR is a routing layer into the direct utility record, not a household verdict."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "phila-2024-water-quality-report",
+        "phila-pfas-management",
+        "lancaster-2024-water-quality-report",
+        "lancaster-pfoa-notice-2025"
+      ],
+      "primaryHref": "/public-water-system/PA1510001",
+      "primaryLabel": "Open seeded utility context",
+      "secondaryHref": "/checker",
+      "secondaryLabel": "Open Action Checker",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Treat the CCR as a routing document, not a verdict",
+          "summary": "The CCR is useful because it identifies the system and its reporting frame. It is weak when readers expect it to answer every household question by itself.",
+          "paragraphs": [
+            "A strong CCR read starts with identity: system name, PWSID, source type, report year, and any treatment or compliance notes that indicate where the user should look next. That alone is enough to keep the project from guessing based on ZIP code or generic local chatter.",
+            "The weak read is to treat a CCR like a household seal of approval or a household warning label. The report is system-level and time-bound. It can be stale, incomplete for the newest PFAS cycle, or outranked by a newer utility notice."
+          ],
+          "bullets": [
+            "Read identity and timing before reading reassurance language.",
+            "Use the CCR to locate the system, not to close the case.",
+            "Ask whether a newer PFAS-specific page or notice exists."
+          ]
+        },
+        {
+          "title": "What to extract first",
+          "summary": "A useful CCR read has a strict order so the user does not get lost in table density.",
+          "paragraphs": [
+            "Start with the system name, PWSID, and whether the water source is groundwater, surface water, or a purchased blend. That tells the engine which utility context page or dossier should open next.",
+            "Then scan for PFAS references, treatment notes, report dates, and links to newer materials. In seeded utility cases like Philadelphia and Lancaster, the annual report matters less than the newer PFAS management page or notice when the user wants the current route."
+          ],
+          "bullets": [
+            "System name and PWSID.",
+            "Report year and publication date.",
+            "PFAS note, utility update, or treatment page."
+          ]
+        },
+        {
+          "title": "How the CCR fits into the broader engine",
+          "summary": "A CCR should move the user into a more specific utility layer, not into a generic shopping flow.",
+          "paragraphs": [
+            "Once the utility context is identified, the engine can compare direct observations to explicit benchmark records and show what that still does not tell the household. That is a much better basis for optional certified point-of-use review than a loose city-level PFAS headline.",
+            "This is why the guide treats the CCR as a route opener. It gives the project the exact system context needed to keep interpretation honest and to keep product comparison secondary."
+          ],
+          "bullets": [
+            "CCR -> utility dossier -> interpretation result.",
+            "Do not jump from CCR directly to a whole-house pitch.",
+            "Do not turn report tables into safe/unsafe language."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nsf-53-vs-58-pfas",
+      "eyebrow": "High-intent guide",
+      "title": "NSF 53 vs 58 is not enough by itself for PFAS decisions",
+      "lede": "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit.",
+      "nextActionTitle": "Read the claim before reading the badge",
+      "nextActionSummary": "A product should only open if the exact model has direct PFAS claim support and the maintenance burden still makes sense for the household.",
+      "whyThis": [
+        "Standard numbers without claim scope can be misleading.",
+        "Claim-level support matters more than broad category language.",
+        "Replacement burden can matter as much as the upfront badge."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This guide does not make one standard universally better for everyone.",
+        "It does not replace model-specific listing verification.",
+        "It does not mean certification equals every current regulatory benchmark."
+      ],
+      "checklist": [
+        "Check the exact model.",
+        "Check the PFAS claim language.",
+        "Check replacement cadence and annual ownership cost."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance says current certification should not be treated as automatic proof of every current EPA benchmark.",
+        "NSF listing directories and PFAS guidance pages support claim-level verification over badge-only reading.",
+        "Model-specific listing records matter more than broad standard shorthand."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "nsf-pfas-drinking-water-article",
+        "nsf-dwtu-listings",
+        "nsf-espring-listing-053"
+      ],
+      "primaryHref": "/source-policy",
+      "primaryLabel": "Open source policy",
+      "secondaryHref": "/checker",
+      "secondaryLabel": "Open Action Checker",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Badge shorthand is weaker than record-level verification",
+          "summary": "Many shoppers collapse NSF 53 and 58 into a universal quality ranking. That is not how the engine should read certification.",
+          "paragraphs": [
+            "The standard code is a useful clue about the product class and test method, but it is not a substitute for the exact claim, model identifier, and listing record. Two products can reference similar certification language while exposing very different PFAS-relevant claim detail and maintenance burden.",
+            "The safest reading order is model first, claim second, badge third. That keeps the product layer tied to a verifiable listing record instead of broad shorthand that can be quoted without real claim granularity."
+          ],
+          "bullets": [
+            "Exact model beats category-level marketing.",
+            "Claim scope beats shorthand badge talk.",
+            "Directory record beats generic vendor copy."
+          ]
+        },
+        {
+          "title": "Why claim scope matters more for PFAS",
+          "summary": "PFAS language often sounds broader than the actual listing record or certification explanation.",
+          "paragraphs": [
+            "EPA already warns that current certification should not be treated as automatic proof that a device reduces PFAS to every current federal drinking-water benchmark. That makes claim-level reading mandatory, not optional.",
+            "The right question is not whether a badge is impressive. It is whether the exact model has a traceable PFAS reduction claim, which compounds are named, which listing system carries the record, and what limits still apply."
+          ],
+          "bullets": [
+            "Do not turn certification into a blanket compliance claim.",
+            "Do not infer PFAS coverage from brand-level marketing.",
+            "Do not ignore the gap between listing scope and benchmark scope."
+          ]
+        },
+        {
+          "title": "Cost and cadence still decide fit",
+          "summary": "A strong claim does not make a product the right fit if the ownership burden is mismatched to the household.",
+          "paragraphs": [
+            "Once the claim is verified, the next filter question is economic and operational. Replacement cadence, component cost, and installation class can move a product from reasonable to unrealistic even when the certification layer looks good.",
+            "That is why the guide keeps annual ownership and maintenance beside certification. The engine is trying to recommend a workable household action, not just the strongest-looking badge."
+          ],
+          "bullets": [
+            "Claim verification is necessary but not sufficient.",
+            "Annual cost changes product fit.",
+            "Maintenance burden matters as much as headline price."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "under-sink-vs-whole-house",
+      "eyebrow": "High-intent guide",
+      "title": "Under-sink vs whole-house should start with purpose, not fear",
+      "lede": "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
+      "nextActionTitle": "Keep point-of-use first unless the household goal clearly exceeds drinking and cooking water",
+      "nextActionSummary": "Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
+      "whyThis": [
+        "Whole-house systems have higher ownership and maintenance consequences.",
+        "Many households are really solving for ingestion-focused use.",
+        "The project should not turn uncertainty into a whole-home upsell."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This guide does not say whole-house is never appropriate.",
+        "It says whole-house needs a stronger justification than product-first fear.",
+        "It does not replace current utility or state guidance."
+      ],
+      "checklist": [
+        "Define the household objective.",
+        "Compare against certified point-of-use first.",
+        "Only then review whole-house as an escalation."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance centers certified point-of-use for ingestion-focused PFAS reduction.",
+        "EPA fact-sheet framing and model data sheets keep maintenance and install burden visible.",
+        "Whole-house becomes a justified escalation only after a broader household objective is explicit."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "epa-water-filter-fact-sheet-2024-04",
+        "aq-claryum-direct-connect-install-pdf",
+        "amway-espring-122941-product"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/pfas-filter-annual-cost",
+      "secondaryLabel": "Review annual cost",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Most households are solving for ingestion first",
+          "summary": "PFAS treatment conversations get distorted when the product class becomes the question before the actual household objective is named.",
+          "paragraphs": [
+            "If the household is mainly concerned about drinking and cooking water, certified point-of-use often deserves to stay visible as the first serious treatment class. That is the part of the home where ingestion is concentrated and where maintenance can remain constrained.",
+            "Whole-house systems may still be justified in some cases, but the project should not let uncertainty alone create that escalation. The goal has to be broader than a vague desire to 'do something everywhere.'"
+          ],
+          "bullets": [
+            "Name the objective before naming the treatment class.",
+            "Ingestion-focused goals keep point-of-use on the table.",
+            "Whole-house is not the default response to uncertainty."
+          ]
+        },
+        {
+          "title": "Why whole-house needs a higher burden of proof",
+          "summary": "The bigger system is not just a bigger version of the same decision. It changes cost, maintenance, and operational exposure.",
+          "paragraphs": [
+            "Whole-house systems change installation burden, service burden, and long-term ownership cost in a way that a household cannot treat casually. That means the justification standard should be stricter than 'PFAS sounds serious.'",
+            "The product layer should therefore ask whether the user has a clearly stated whole-home purpose, whether a certified point-of-use alternative already covers the core use case, and whether the maintenance burden is acceptable."
+          ],
+          "bullets": [
+            "Higher install burden.",
+            "Higher maintenance burden.",
+            "Higher risk of overbuying."
+          ]
+        },
+        {
+          "title": "How the engine should frame escalation",
+          "summary": "Escalation should look deliberate, not emotional.",
+          "paragraphs": [
+            "The result surface should first show whether certified point-of-use remains a likely fit. If it does, whole-house should be presented as a secondary review path with clearer justification thresholds, not as the default 'premium' option.",
+            "That framing protects users from fear-driven upsell pressure and keeps the product aligned with the project promise: clear next action without unnecessary spend."
+          ],
+          "bullets": [
+            "Point-of-use first.",
+            "Whole-house only with a broader stated purpose.",
+            "Escalation requires explicit maintenance and cost acceptance."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pfas-filter-annual-cost",
+      "eyebrow": "High-intent guide",
+      "title": "PFAS filter annual cost matters because maintenance changes the real decision",
+      "lede": "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
+      "nextActionTitle": "Read annual ownership before treating a product as a fit",
+      "nextActionSummary": "Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
+      "whyThis": [
+        "A low upfront price can still create a high maintenance burden.",
+        "Annual cost changes whether a product is realistic for the household.",
+        "Cost transparency helps block unnecessary escalation."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This guide does not replace direct evidence about whether treatment is warranted.",
+        "It does not assume one household usage pattern for everyone.",
+        "It does not make price more important than certification or fit."
+      ],
+      "checklist": [
+        "Check replacement cadence.",
+        "Check annual cartridge cost.",
+        "Compare burden before upgrading the treatment class."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance supports comparing upkeep and replacement burden, not just upfront price.",
+        "Aquasana and Amway product records provide model-specific cadence and replacement pricing inputs.",
+        "Annual ownership belongs beside the interpretation result because maintenance changes product fit."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-direct-connect-replacement",
+        "amway-espring-100186-cartridge"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/public-water/PA1510001",
+      "secondaryLabel": "Open seeded result",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Upfront price is the easiest number to misuse",
+          "summary": "Cheap-looking filters can become expensive when the maintenance rhythm is fast, while premium-looking systems can become tolerable if cadence is slower and the household fit is real.",
+          "paragraphs": [
+            "The problem with headline price is that it strips the decision away from time. What matters to the household is not just what the system costs at checkout, but what the system asks for over a year of actual ownership.",
+            "That is why the engine annualizes cartridge cadence and recurring components. It does not assume one universal usage model, but it does force the maintenance burden into the same frame as the interpretation result."
+          ],
+          "bullets": [
+            "Headline price alone is weak decision support.",
+            "Cadence changes the real cost.",
+            "Recurring components matter more on some RO systems."
+          ]
+        },
+        {
+          "title": "Annual ownership belongs beside interpretation",
+          "summary": "Cost should not appear only after the user is emotionally committed to a product class.",
+          "paragraphs": [
+            "If the household is still in a low-evidence state, annual ownership may be the strongest reason not to escalate prematurely. Showing annual cost early helps the product block unnecessary treatment upgrades and keeps the recommendation honest.",
+            "When the evidence does justify a point-of-use system, annual cost still matters because it affects whether the likely fit is practical over time instead of merely plausible on paper."
+          ],
+          "bullets": [
+            "Interpretation first, but cost immediately after.",
+            "Annual cost is part of product fit, not just commerce.",
+            "Maintenance visibility reduces regret."
+          ]
+        },
+        {
+          "title": "How to read the number well",
+          "summary": "Annual cost is not the winner-take-all metric. It is a constraint that has to be read with claim scope and maintenance class.",
+          "paragraphs": [
+            "A low annual cost does not save a product with weak claim support, and a strong listing record does not make an unrealistic annual maintenance burden disappear. The project should keep those layers together.",
+            "The best use of annual cost is to keep comparison grounded: what does this product ask for over a year, how often does the user have to intervene, and does that still make sense for the specific household route?"
+          ],
+          "bullets": [
+            "Read annual cost with certification.",
+            "Read annual cost with cadence and burden.",
+            "Do not let annual cost replace evidence about whether treatment is needed."
+          ]
+        }
+      ]
+    }
+  ]
+}

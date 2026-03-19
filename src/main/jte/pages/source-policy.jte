@@ -10,6 +10,9 @@
 @param List<SourceDocument> tier2Sources
 @param List<SourceDocument> tier3Sources
 @param List<SourceDocument> tier4Sources
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
+@param String siteLastVerifiedDate
 
 @template.layout.base(
     pageTitle = "PFAS source policy",
@@ -34,7 +37,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Source discipline")
+        @template.fragments.publicationStrip(
+            lastVerified = siteLastVerifiedDate,
+            scopeLabel = "Source discipline",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="meta-grid">
             <article class="meta-tile">

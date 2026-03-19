@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:public-water-vs-private-well",
   "route_type" : "guide",
   "route_key" : "public-water-vs-private-well",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/public-water-vs-private-well",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 3,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open Action Checker",
       "secondaryHref" : "/guides/test-first-vs-filter-first",
       "secondaryLabel" : "Read test-first logic",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Use source type as the first decision boundary",
+        "summary" : "The first useful question is not which filter badge looks strongest. It is which evidence system governs the household.",
+        "paragraphs" : [ "A public-water household has a utility, a system identifier, annual reporting obligations, and sometimes a newer PFAS notice that can be read directly. That means the fastest trustworthy path is usually utility-first, not shopping-first.", "A private-well household has none of that public reporting infrastructure. The owner has to test, interpret, and then decide whether treatment is justified. That is why the same PFAS anxiety produces a different next action depending on the water source." ],
+        "bullets" : [ "Public water: utility report, PFAS notice, or direct utility page can act as evidence.", "Private well: testing and state guidance are the evidence layer.", "Do not collapse these into one generic PFAS checklist." ]
+      }, {
+        "title" : "Why mixing the two paths creates bad recommendations",
+        "summary" : "Most weak PFAS content treats all households as if they are standing on the same evidence floor. They are not.",
+        "paragraphs" : [ "When a private-well household is pushed into a CCR-style workflow, the user is sent to documents that do not apply to the property. That wastes time and can create false reassurance because the public-water document belongs to a different system entirely.", "When a public-water household is told to behave like a private well owner from the start, the product often jumps straight to self-funded testing or broad filter comparison even though a utility record may already answer the first layer of the question." ],
+        "bullets" : [ "Wrong path for wells: irrelevant public-water reporting.", "Wrong path for utilities: unnecessary test-first spending.", "Wrong path for both: product comparison before evidence." ]
+      }, {
+        "title" : "What a good split actually unlocks",
+        "summary" : "A correct split reduces both confusion and overspending because it narrows the next move to the right evidence source.",
+        "paragraphs" : [ "For public water, the split points the user toward the exact system record, current notice, and benchmark context that can support a constrained interpretation. That often reveals whether the household is looking at a below-reference situation, an above-reference notice, or simply missing direct utility context.", "For private wells, the split protects the user from false certainty and keeps the route grounded in state-specific testing, lab access, and interpretation guidance before a filter class is treated like a fit." ],
+        "bullets" : [ "The split determines what counts as direct evidence.", "The split determines whether testing is optional or mandatory.", "The split determines whether a product layer should open at all." ]
+      } ]
     }
   }
 }

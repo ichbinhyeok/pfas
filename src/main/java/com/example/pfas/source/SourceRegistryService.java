@@ -28,4 +28,8 @@ public class SourceRegistryService {
 	public Optional<SourceDocument> getDocument(String sourceId) {
 		return sourceRegistryRepository.findBySourceId(sourceId);
 	}
+
+	public Optional<String> registryGeneratedAt() {
+		return sourceRegistryRepository.findGeneratedAt();
+	}
 }

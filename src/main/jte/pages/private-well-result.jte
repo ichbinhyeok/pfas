@@ -6,6 +6,8 @@
 @import static com.example.pfas.web.PresentationText.currentFilterStatusLabel
 @import static com.example.pfas.web.PresentationText.confidenceLabel
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
 @param StateGuidance guidance
 @param WaterDecisionResult result
 @param ActionBenchmarkRelation benchmarkRelation
@@ -50,7 +52,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = guidance.lastVerifiedDate(), scopeLabel = "Private-well interpretation")
+        @template.fragments.publicationStrip(
+            lastVerified = guidance.lastVerifiedDate(),
+            scopeLabel = "Private-well interpretation",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="dossier-strip">
             <article class="dossier-cell">

@@ -2,6 +2,9 @@ package com.example.pfas.web;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public record GuidePage(
 	String slug,
 	String eyebrow,
@@ -18,6 +21,7 @@ public record GuidePage(
 	String primaryLabel,
 	String secondaryHref,
 	String secondaryLabel,
-	String lastVerifiedDate
+	String lastVerifiedDate,
+	List<GuideSection> sections
 ) {
 }

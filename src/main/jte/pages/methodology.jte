@@ -8,6 +8,9 @@
 @param int readyPublicWaterCount
 @param int blockedPublicWaterCount
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
+@param String siteLastVerifiedDate
 
 @template.layout.base(
     pageTitle = "PFAS methodology",
@@ -32,7 +35,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = "2026-03-19", scopeLabel = "Methodology and trust layer")
+        @template.fragments.publicationStrip(
+            lastVerified = siteLastVerifiedDate,
+            scopeLabel = "Methodology and trust layer",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="meta-grid">
             <article class="meta-tile">

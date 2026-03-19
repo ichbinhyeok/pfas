@@ -34,7 +34,7 @@ Conclusion:
 Claim:
 
 - Public-water interpretation is partially real now.
-- Private-well guidance exists, but private-well result logic is not yet implemented at the same level.
+- Private-well guidance and typed result logic both exist now, but breadth and benchmark coverage still trail the public-water path.
 - The current benchmark and cost layers are credible as seeds, not yet broad enough for a full Sharp v1 claim.
 
 Conclusion:
@@ -92,7 +92,7 @@ Conclusion:
 
 - The repo should explicitly label the current state as:
   - public-water decision alpha
-  - private-well guidance beta
+  - private-well decision beta
   - final visual system deferred
 
 ---
@@ -115,11 +115,11 @@ Conclusion:
 ## What exists only partially
 
 - private-well routing exists
-- private-well typed result output does not exist yet
+- private-well typed result output exists
 - action checker exists
-- action checker does not yet cover the full decision-table state space
-- result schema exists
-- result schema is not yet implemented across both public-water and private-well paths
+- action checker covers the core documented state space but still needs broader seeded coverage
+- result schema exists across both public-water and private-well paths
+- trust metadata and guide depth still lag the engine core
 
 ## What the docs require but the product does not yet fully have
 
@@ -129,8 +129,9 @@ Conclusion:
   - `current_filter_status`
 - trust publication layer:
   - methodology page
-  - byline or editorial owner
-  - reviewed by / last verified presentation on public pages
+  - editorial owner and methodology owner presentation without fake reviewer claims
+  - last verified presentation on all public pages
+  - source-ledger depth on guide pages
 - broader data coverage:
   - more state guidance
   - more public-water systems
@@ -185,9 +186,9 @@ Exit condition:
 
 Required:
 
-- implement private-well typed result outputs
-- implement missing decision-table inputs where justified
-- close the gap between the documented decision table and the actual routing logic
+- broaden private-well benchmark and analyte coverage
+- expand public-water utility breadth with official-source dossiers
+- keep closing the gap between the documented decision table and the actual routing logic
 
 Exit condition:
 
@@ -201,6 +202,7 @@ Required:
 - source policy page
 - publication metadata on public pages
 - last verified and ownership presentation
+- guide pages with source ledger depth and non-fiction trust blocks
 
 Exit condition:
 
@@ -235,10 +237,10 @@ Exit condition:
 The next implementation order should be:
 
 1. expand source and normalized seed coverage
-2. implement private-well result service
-3. align action checker inputs with the real decision table
-4. add methodology and publication metadata surfaces
-5. write the first high-intent content cluster
+2. deepen guide content and source-ledger presentation
+3. align action checker inputs with the real decision table as breadth increases
+4. harden methodology and publication metadata surfaces
+5. keep expanding the high-intent content cluster with file-backed guides
 6. return to final design only after the above is real
 
 ---
@@ -254,4 +256,4 @@ The next implementation order should be:
 
 # 7. One-sentence reset
 
-> The current UI is a provisional shell over a promising engine alpha; Sharp v1 requires broader data, fuller decision coverage, and a visible trust layer before final design is locked.
+> The current UI is a provisional shell over a promising engine alpha; Sharp v1 now has both public-water and private-well typed results, but it still requires broader data, deeper guides, and a more explicit trust layer before final design is locked.

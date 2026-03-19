@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.pfas.data.PfasDataProperties;
 import com.example.pfas.derived.DerivedArtifactService;
+import com.example.pfas.site.SiteMetadataService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
@@ -26,25 +27,29 @@ public class StaticExportService {
 
 	private final DerivedArtifactService derivedArtifactService;
 	private final PfasDataProperties dataProperties;
+	private final SiteMetadataService siteMetadataService;
 
 	public StaticExportService(
 		DerivedArtifactService derivedArtifactService,
-		PfasDataProperties dataProperties
+		PfasDataProperties dataProperties,
+		SiteMetadataService siteMetadataService
 	) {
 		this.derivedArtifactService = derivedArtifactService;
 		this.dataProperties = dataProperties;
+		this.siteMetadataService = siteMetadataService;
 	}
 
 	public StaticExportManifestFile buildManifest() {
 		var generatedAt = OffsetDateTime.now().toString();
+		var siteLastVerifiedDate = siteMetadataService.siteLastVerifiedDate();
 		var items = new LinkedHashMap<String, StaticExportManifestItem>();
 
-		addFixedItem(items, "/", true, "fixed_page", null);
-		addFixedItem(items, "/checker", false, "fixed_page", null);
-		addFixedItem(items, "/methodology", true, "fixed_page", null);
-		addFixedItem(items, "/source-policy", true, "fixed_page", null);
-		addFixedItem(items, "/robots.txt", true, "seo_surface", null);
-		addFixedItem(items, "/sitemap.xml", true, "seo_surface", null);
+		addFixedItem(items, "/", true, "fixed_page", siteLastVerifiedDate);
+		addFixedItem(items, "/checker", false, "fixed_page", siteLastVerifiedDate);
+		addFixedItem(items, "/methodology", true, "fixed_page", siteLastVerifiedDate);
+		addFixedItem(items, "/source-policy", true, "fixed_page", siteLastVerifiedDate);
+		addFixedItem(items, "/robots.txt", true, "seo_surface", siteLastVerifiedDate);
+		addFixedItem(items, "/sitemap.xml", true, "seo_surface", siteLastVerifiedDate);
 		addFixedItem(items, "/css/app.css", false, "asset", null);
 		addFixedItem(items, "/favicon.svg", false, "asset", null);
 

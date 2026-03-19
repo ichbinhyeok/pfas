@@ -1642,6 +1642,93 @@
       "notes": "Aquasana performance data for AQ-6300M stating WQA tested and certified claims including PFOA and PFOS reduction."
     },
     {
+      "source_id": "alaska-water-home",
+      "organization": "College & Golden Heart Utilities",
+      "title": "College & Golden Heart Utilities | Home",
+      "url": "https://www.myutility.us/akwater",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": "2025-05-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "effective_date": "2025-05-01",
+      "allowed_uses": [
+        "utility identity",
+        "service-area context",
+        "official navigation anchor"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Alaska utility homepage for Golden Heart Utilities and College Utilities."
+    },
+    {
+      "source_id": "alaska-water-quality-reports",
+      "organization": "College & Golden Heart Utilities",
+      "title": "Water Safety | Water Quality Reports",
+      "url": "https://www.myutility.us/akwater/water-safety/water-quality-reports",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Alaska utility report index used to locate Golden Heart and College Utilities water quality reports."
+    },
+    {
+      "source_id": "alaska-dww-golden-heart-system-detail",
+      "organization": "Alaska Department of Environmental Conservation",
+      "title": "DWW - Water System Facility Detail",
+      "url": "https://dec.alaska.gov/dww/JSP/WaterSystemFacility.jsp?tinwsf_is_number=45718&tinwsf_st_code=AK&tinwsys_is_number=3867&tinwsys_st_code=AK&wsf_id=DS001&wsf_name=DS+GOLDEN+HEART+UTILITIES",
+      "source_kind": "state_utility_registry_page",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Alaska Drinking Water Watch detail page confirming AK2310730, community status, and groundwater source."
+    },
+    {
+      "source_id": "golden-heart-2025-water-quality-report",
+      "organization": "Golden Heart Utilities",
+      "title": "2025 Annual Consumer Confidence",
+      "url": "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "AK",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T16:10:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Golden Heart Utilities water quality report showing AK2310730 and 2024 PFAS values including PFOA 3.8 ppt and PFOS 2.4 ppt."
+    },
+    {
       "source_id": "maryland-water-home",
       "organization": "Maryland Water Service",
       "title": "Maryland Water Service",

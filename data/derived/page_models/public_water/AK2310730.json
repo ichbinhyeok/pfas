@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T03:19:19.697156300+09:00",
-  "model_id" : "public_water:7360058",
+  "generated_at" : "2026-03-20T03:19:19.722407700+09:00",
+  "model_id" : "public_water:AK2310730",
   "route_type" : "public_water",
-  "route_key" : "7360058",
+  "route_key" : "AK2310730",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/7360058",
+  "render_path" : "/public-water/AK2310730",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
-  "source_count" : 3,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "7360058",
-      "pwsName" : "City of Lancaster Water Department",
-      "stateCode" : "PA",
+      "pwsid" : "AK2310730",
+      "pwsName" : "Golden Heart Utilities",
+      "stateCode" : "AK",
       "systemType" : "community",
-      "populationServed" : "65000",
-      "sourceWaterType" : "surface_water",
-      "utilityWebsiteUrl" : "https://water.cityoflancasterpa.gov/",
-      "ccrUrl" : "https://water.cityoflancasterpa.gov/wp-content/uploads/2024-Water-Quality-Report.pdf",
-      "pfasNoticeUrl" : "https://water.cityoflancasterpa.gov/wp-content/uploads/PFOA-Notice-Aug-2025-ES.pdf",
-      "serviceAreaNotes" : "City of Lancaster system with Conestoga and Susquehanna finished water treatment context",
-      "lastVerifiedDate" : "2026-03-19",
-      "sourceIds" : [ "lancaster-water-home", "lancaster-2024-water-quality-report", "lancaster-pfoa-notice-2025" ]
+      "populationServed" : "32324",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/akwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "serviceAreaNotes" : "Fairbanks-area community groundwater system with 2024 PFAS values reported in the 2025 utility water quality report",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "alaska-water-home", "alaska-water-quality-reports", "alaska-dww-golden-heart-system-detail", "golden-heart-2025-water-quality-report" ]
     },
     "result" : {
-      "result_id" : "public-water:7360058",
+      "result_id" : "public-water:AK2310730",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T03:19:19.690303200+09:00",
+      "generated_at" : "2026-03-20T03:19:19.713899600+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
-        "title" : "Review utility response and consider certified point-of-use filtration",
-        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
+        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
+        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
+        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 1 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 4 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 124.99,
         "range_high_usd" : 1299.00,
@@ -91,28 +91,34 @@
       } ],
       "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
       "sources" : [ {
-        "source_id" : "lancaster-2024-water-quality-report",
-        "organization" : "City of Lancaster Water Department",
-        "title" : "2024 Water Quality Report",
-        "url" : "https://water.cityoflancasterpa.gov/wp-content/uploads/2024-Water-Quality-Report.pdf",
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "alaska-dww-golden-heart-system-detail",
+        "organization" : "Alaska Department of Environmental Conservation",
+        "title" : "DWW - Water System Facility Detail",
+        "url" : "https://dec.alaska.gov/dww/JSP/WaterSystemFacility.jsp?tinwsf_is_number=45718&tinwsf_st_code=AK&tinwsys_is_number=3867&tinwsys_st_code=AK&wsf_id=DS001&wsf_name=DS+GOLDEN+HEART+UTILITIES",
         "trust_tier" : 2
       }, {
-        "source_id" : "lancaster-pfoa-notice-2025",
-        "organization" : "City of Lancaster Water Department",
-        "title" : "PFOA Notice - August 2025",
-        "url" : "https://water.cityoflancasterpa.gov/wp-content/uploads/PFOA-Notice-Aug-2025-ES.pdf",
+        "source_id" : "alaska-water-home",
+        "organization" : "College & Golden Heart Utilities",
+        "title" : "College & Golden Heart Utilities | Home",
+        "url" : "https://www.myutility.us/akwater",
         "trust_tier" : 2
       }, {
-        "source_id" : "lancaster-water-home",
-        "organization" : "City of Lancaster Water Department",
-        "title" : "City of Lancaster Water Department",
-        "url" : "https://water.cityoflancasterpa.gov/",
+        "source_id" : "alaska-water-quality-reports",
+        "organization" : "College & Golden Heart Utilities",
+        "title" : "Water Safety | Water Quality Reports",
+        "url" : "https://www.myutility.us/akwater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
-        "source_id" : "pa-pfas-mcl-rule",
-        "organization" : "Pennsylvania Department of Environmental Protection",
-        "title" : "PFAS MCL Rule",
-        "url" : "https://www.pa.gov/agencies/dep/programs-and-services/water/bureau-of-safe-drinking-water/drinking-water-management/drinking-water-regulations/pfas-mcl-rule",
+        "source_id" : "golden-heart-2025-water-quality-report",
+        "organization" : "Golden Heart Utilities",
+        "title" : "2025 Annual Consumer Confidence",
+        "url" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -225,28 +231,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "above_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
+        "benchmark_relation" : "below_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:7360058",
+      "input_id" : "public_water:AK2310730",
       "route_type" : "public_water",
-      "route_key" : "7360058",
+      "route_key" : "AK2310730",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "ABOVE_REFERENCE",
+      "benchmark_relation" : "BELOW_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "7360058",
-      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
-      "primary_path" : "/public-water/7360058",
-      "secondary_path" : "/guides/under-sink-vs-whole-house",
-      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+      "pwsid" : "AK2310730",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/AK2310730",
+      "secondary_path" : "/internal/results/public-water/AK2310730",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/7360058"
+    "supporting_path" : "/public-water-system/AK2310730"
   }
 }

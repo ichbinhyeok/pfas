@@ -231,7 +231,7 @@
 현재 상태는 이렇게 정의한다.
 
 - public-water decision alpha
-- private-well guidance beta
+- private-well decision beta
 - final visual system not locked
 
 따라서 앞으로의 순서는 아래처럼 다시 고정한다.

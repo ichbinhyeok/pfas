@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T02:40:04.218001700+09:00",
+  "generated_at" : "2026-03-20T03:19:19.656512800+09:00",
   "model_id" : "guide:read-your-ccr",
   "route_type" : "guide",
   "route_key" : "read-your-ccr",
@@ -8,7 +8,7 @@
   "render_path" : "/guides/read-your-ccr",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
-  "last_verified_date" : "2026-03-19",
+  "last_verified_date" : "2026-03-20",
   "source_count" : 5,
   "payload" : {
     "guide" : {
@@ -27,7 +27,23 @@
       "primaryLabel" : "Open seeded utility context",
       "secondaryHref" : "/checker",
       "secondaryLabel" : "Open Action Checker",
-      "lastVerifiedDate" : "2026-03-19"
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Treat the CCR as a routing document, not a verdict",
+        "summary" : "The CCR is useful because it identifies the system and its reporting frame. It is weak when readers expect it to answer every household question by itself.",
+        "paragraphs" : [ "A strong CCR read starts with identity: system name, PWSID, source type, report year, and any treatment or compliance notes that indicate where the user should look next. That alone is enough to keep the project from guessing based on ZIP code or generic local chatter.", "The weak read is to treat a CCR like a household seal of approval or a household warning label. The report is system-level and time-bound. It can be stale, incomplete for the newest PFAS cycle, or outranked by a newer utility notice." ],
+        "bullets" : [ "Read identity and timing before reading reassurance language.", "Use the CCR to locate the system, not to close the case.", "Ask whether a newer PFAS-specific page or notice exists." ]
+      }, {
+        "title" : "What to extract first",
+        "summary" : "A useful CCR read has a strict order so the user does not get lost in table density.",
+        "paragraphs" : [ "Start with the system name, PWSID, and whether the water source is groundwater, surface water, or a purchased blend. That tells the engine which utility context page or dossier should open next.", "Then scan for PFAS references, treatment notes, report dates, and links to newer materials. In seeded utility cases like Philadelphia and Lancaster, the annual report matters less than the newer PFAS management page or notice when the user wants the current route." ],
+        "bullets" : [ "System name and PWSID.", "Report year and publication date.", "PFAS note, utility update, or treatment page." ]
+      }, {
+        "title" : "How the CCR fits into the broader engine",
+        "summary" : "A CCR should move the user into a more specific utility layer, not into a generic shopping flow.",
+        "paragraphs" : [ "Once the utility context is identified, the engine can compare direct observations to explicit benchmark records and show what that still does not tell the household. That is a much better basis for optional certified point-of-use review than a loose city-level PFAS headline.", "This is why the guide treats the CCR as a route opener. It gives the project the exact system context needed to keep interpretation honest and to keep product comparison secondary." ],
+        "bullets" : [ "CCR -> utility dossier -> interpretation result.", "Do not jump from CCR directly to a whole-house pitch.", "Do not turn report tables into safe/unsafe language." ]
+      } ]
     }
   }
 }

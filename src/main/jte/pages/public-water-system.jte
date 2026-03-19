@@ -2,6 +2,8 @@
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.water.PublicWaterSystem
 @param String siteBaseUrl
+@param String siteEditorialOwner
+@param String siteMethodologyOwner
 @param PublicWaterSystem system
 @param List<SourceDocument> sources
 
@@ -28,7 +30,12 @@
             </div>
         </div>
 
-        @template.fragments.publicationStrip(lastVerified = system.lastVerifiedDate(), scopeLabel = "Public-water utility context")
+        @template.fragments.publicationStrip(
+            lastVerified = system.lastVerifiedDate(),
+            scopeLabel = "Public-water utility context",
+            editorialOwner = siteEditorialOwner,
+            methodologyOwner = siteMethodologyOwner
+        )
 
         <div class="result-grid">
             <div class="stack">
