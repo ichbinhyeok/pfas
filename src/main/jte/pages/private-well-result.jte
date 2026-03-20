@@ -25,224 +25,381 @@
     pageCanonicalUrl = siteBaseUrl + "/private-well/" + guidance.stateCode(),
     pageIndexable = false,
     content = @`
-<section class="result-shell">
+<section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="result-header">
-            <div>
-                <span class="eyebrow">${guidance.stateCode()} private-well dossier</span>
-                <h1 class="result-header__title">${guidance.agencyName()}</h1>
-                <p class="hero__lede">
-                    This result keeps private-well interpretation reference-based. State guidance, certified-lab context,
-                    and optional certified point-of-use treatment are rendered together without pretending a private well is a
-                    public-water compliance case.
-                </p>
-            </div>
-            <div class="button-row">
-                <a class="button button--secondary" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
-                <a class="button button--secondary" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
-                @if (result.benchmarkBatchEvaluation() != null && encodedBatchInput != null)
-                    <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?batchInput=${encodedBatchInput}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                @else
-                    @if (result.benchmarkEvaluation() != null)
-                        <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                    @else
-                        <a class="button button--primary" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                    @endif
-                @endif
-            </div>
-        </div>
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+            <div class="space-y-6">
+                <div class="space-y-4">
+                    <span class="badge badge-outline border-base-300 bg-base-100 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-base-content/58">${guidance.stateCode()} private-well dossier</span>
+                    <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-base-content sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
+                        ${guidance.agencyName()}
+                        <span class="font-serif font-medium text-secondary">with the state route kept in view.</span>
+                    </h1>
+                    <p class="max-w-3xl text-lg leading-8 text-base-content/72">
+                        This result keeps private-well interpretation reference-based. State guidance, certified-lab context,
+                        and optional certified point-of-use treatment are rendered together without pretending a private well is a
+                        public-water compliance case.
+                    </p>
+                </div>
 
+                <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
+                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
+                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                    @if (result.benchmarkBatchEvaluation() != null && encodedBatchInput != null)
+                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?batchInput=${encodedBatchInput}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                    @else
+                        @if (result.benchmarkEvaluation() != null)
+                            <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                        @else
+                            <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
+                        @endif
+                    @endif
+                </div>
+            </div>
+
+            <aside class="card border border-neutral/12 bg-neutral text-neutral-content shadow-[var(--shadow-panel)]">
+                <div class="card-body gap-5">
+                    <div class="space-y-2">
+                        <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Current docket</span>
+                        <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">The state reference stays attached to the route and the caveats.</h2>
+                    </div>
+                    <div class="overflow-hidden rounded-[1rem] border border-white/10 bg-white/4">
+                        <article class="px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Benchmark relation</strong><br>${benchmarkRelationLabel(benchmarkRelation)}</article>
+                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Current filter</strong><br>${currentFilterStatusLabel(currentFilterStatus)}</article>
+                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Whole-house considered</strong><br>${wholeHouseConsidered ? "yes" : "no"}</article>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="pt-10 md:pt-12">
+    <div class="shell">
         @template.fragments.publicationStrip(
             lastVerified = guidance.lastVerifiedDate(),
             scopeLabel = "Private-well interpretation",
             editorialOwner = siteEditorialOwner,
             methodologyOwner = siteMethodologyOwner
         )
+    </div>
+</section>
 
-        <div class="dossier-strip">
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">State route</span>
-                <span class="dossier-cell__value">${guidance.stateCode()}</span>
-                <span class="dossier-cell__copy">State-specific guide and lab pathway.</span>
+<section class="pt-14 md:pt-18">
+    <div class="shell">
+        <div class="grid gap-px overflow-hidden rounded-[1.25rem] border border-base-300/70 bg-base-300/70 shadow-[var(--shadow-soft)] xl:grid-cols-4">
+            <article class="bg-base-100/96 px-6 py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State route</div>
+                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.stateCode()}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">State-specific guide and lab pathway.</div>
             </article>
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Benchmark relation</span>
-                <span class="dossier-cell__value">${benchmarkRelationLabel(benchmarkRelation)}</span>
-                <span class="dossier-cell__copy">${result.meta().decisionRuleId()}</span>
+            <article class="bg-base-100/96 px-6 py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Benchmark relation</div>
+                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${benchmarkRelationLabel(benchmarkRelation)}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">${result.meta().decisionRuleId()}</div>
             </article>
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Current filter</span>
-                <span class="dossier-cell__value">${currentFilterStatusLabel(currentFilterStatus)}</span>
-                <span class="dossier-cell__copy">Whole-house considered: ${wholeHouseConsidered ? "yes" : "no"}</span>
+            <article class="bg-base-100/96 px-6 py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Current filter</div>
+                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${currentFilterStatusLabel(currentFilterStatus)}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">Whole-house considered: ${wholeHouseConsidered ? "yes" : "no"}</div>
             </article>
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Last verified</span>
-                <span class="dossier-cell__value">${guidance.lastVerifiedDate()}</span>
-                <span class="dossier-cell__copy">State guidance and source layer.</span>
+            <article class="bg-base-100/96 px-6 py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Last verified</div>
+                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.lastVerifiedDate()}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">State guidance and source layer.</div>
             </article>
         </div>
+    </div>
+</section>
 
-        <div class="result-grid">
-            <div class="stack">
-                <section class="card card--hero next-action">
-                    <span class="next-action__code">${result.nextAction().code()}</span>
-                    <div>
-                        <p class="card__label">Next action</p>
-                        <h2 class="next-action__title">${result.nextAction().title()}</h2>
+<section class="pt-14 md:pt-20">
+    <div class="shell">
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+            <div class="space-y-6">
+                <section class="overflow-hidden rounded-[1.35rem] border border-neutral/12 bg-neutral shadow-[var(--shadow-panel)]">
+                    <div class="grid gap-5 p-6 text-neutral-content md:p-7">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge border-0 bg-white text-neutral">${result.nextAction().code()}</span>
+                            <span class="badge border-0 bg-white/10 text-white/80">Confidence ${confidenceLabel(result.nextAction().confidence())}</span>
+                            <span class="badge border-0 bg-white/10 text-white/80">Rule ${result.meta().decisionRuleId()}</span>
+                        </div>
+                        <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-white">${result.nextAction().title()}</h2>
+                        <p class="max-w-3xl text-sm leading-7 text-white/70">${result.nextAction().summary()}</p>
+                        <div class="grid gap-px overflow-hidden rounded-[1rem] border border-white/10 bg-white/10 md:grid-cols-2">
+                            <article class="bg-white/[0.03] px-5 py-5">
+                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/54">Decision posture</div>
+                                <p class="mt-3 text-sm leading-7 text-white/72">Private-well logic stays reference-based. A state line and lab-ready context open before any shopping lane becomes active.</p>
+                            </article>
+                            <article class="bg-white/[0.03] px-5 py-5">
+                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/54">What remains guarded</div>
+                                <p class="mt-3 text-sm leading-7 text-white/72">Whole-house treatment still requires a separate ingestion-versus-whole-home justification, not just generalized concern.</p>
+                            </article>
+                        </div>
                     </div>
-                    <p class="next-action__summary">${result.nextAction().summary()}</p>
-                    <div class="card__meta-row">
-                        <span class="chip">Confidence ${confidenceLabel(result.nextAction().confidence())}</span>
-                        <span class="chip">Rule ${result.meta().decisionRuleId()}</span>
-                        <span class="chip">State ${guidance.stateCode()}</span>
+                </section>
+
+                <div class="grid gap-px overflow-hidden rounded-[1.15rem] border border-base-300/70 bg-base-300/70 lg:grid-cols-2">
+                    <section class="bg-base-100/96 px-6 py-5">
+                        <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Initial cost</span>
+                        <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-base-content">$${result.initialCost().rangeLowUsd()} - $${result.initialCost().rangeHighUsd()}</h2>
+                        <p class="mt-3 text-sm leading-7 text-base-content/68">${confidenceLabel(result.initialCost().confidence())} confidence / normalized vendor pricing</p>
+                    </section>
+                    <section class="bg-base-100/96 px-6 py-5">
+                        <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Annual maintenance</span>
+                        <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-base-content">$${result.annualCostMaintenance().rangeLowUsd()} - $${result.annualCostMaintenance().rangeHighUsd()}</h2>
+                        <p class="mt-3 text-sm leading-7 text-base-content/68">${confidenceLabel(result.annualCostMaintenance().maintenanceBurden())} maintenance burden</p>
+                    </section>
+                </div>
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-0 p-0">
+                        <div class="grid gap-px overflow-hidden rounded-[1.15rem] border-b border-base-300/70 bg-base-300/70 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+                            <div class="bg-base-100 px-6 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">What this means now</span>
+                                <div class="mt-4 grid gap-px overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-300/70">
+                                    <article class="bg-base-100 px-4 py-4">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">State route</div>
+                                        <p class="mt-2 text-sm leading-7 text-base-content/68">Private well results are interpreted against ${guidance.stateCode()} state guidance, not as public-water compliance findings.</p>
+                                    </article>
+                                    <article class="bg-base-100 px-4 py-4">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Reference posture</div>
+                                        <p class="mt-2 text-sm leading-7 text-base-content/68">Benchmark relation is ${benchmarkRelationLabel(benchmarkRelation).toLowerCase()} and remains attached to the state reference context.</p>
+                                    </article>
+                                    <article class="bg-base-100 px-4 py-4">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Treatment posture</div>
+                                        <p class="mt-2 text-sm leading-7 text-base-content/68">Any treatment path stays certification-first and state-guided before whole-house escalation is considered.</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="bg-base-200/32 px-6 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">What this does not tell you</span>
+                                <ul class="mt-4 space-y-3 text-sm leading-7 text-base-content/72">
+                                    @for (var item : result.whatThisDoesNotTellYou())
+                                        <li>${item}</li>
+                                    @endfor
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow rounded-none border-0 bg-base-100">
+                            <input type="checkbox">
+                            <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened (${result.whyThis().size()})</div>
+                            <div class="collapse-content">
+                                <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">
+                                    @for (var item : result.whyThis())
+                                        <li>${item}</li>
+                                    @endfor
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </section>
-
-                <section class="metric-grid">
-                    <article class="metric">
-                        <p class="card__label">Initial cost</p>
-                        <div class="metric__value">$${result.initialCost().rangeLowUsd()} - $${result.initialCost().rangeHighUsd()}</div>
-                        <p class="metric__meta">${confidenceLabel(result.initialCost().confidence())} confidence / normalized vendor pricing</p>
-                    </article>
-                    <article class="metric">
-                        <p class="card__label">Annual maintenance</p>
-                        <div class="metric__value">$${result.annualCostMaintenance().rangeLowUsd()} - $${result.annualCostMaintenance().rangeHighUsd()}</div>
-                        <p class="metric__meta">${confidenceLabel(result.annualCostMaintenance().maintenanceBurden())} maintenance burden</p>
-                    </article>
-                </section>
-
-                <section class="card">
-                    <p class="card__label">Why this</p>
-                    <ul class="list">
-                        @for (var item : result.whyThis())
-                            <li>${item}</li>
-                        @endfor
-                    </ul>
-                </section>
-
-                <section class="card">
-                    <p class="card__label">What this does not tell you</p>
-                    <ul class="list">
-                        @for (var item : result.whatThisDoesNotTellYou())
-                            <li>${item}</li>
-                        @endfor
-                    </ul>
                 </section>
 
                 @if(!result.bestFitOptions().isEmpty())
-                    <section class="card">
-                        <p class="card__label">Best-fit options</p>
-                        <div class="assessment-grid">
-                            @for (var option : result.bestFitOptions())
-                                <article class="assessment">
-                                    <div class="assessment__top">
-                                        <div class="assessment__name">${option.label()}</div>
-                                        <span class="badge badge--info">${option.costProfile()} cost</span>
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-0 p-0">
+                            <div class="border-b border-base-300/70 px-6 py-5">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Best-fit options</span>
+                                <h2 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-base-content">Best-fit options</h2>
+                                <p class="mt-3 max-w-2xl text-sm leading-7 text-base-content/66">These options reflect the state route and the current benchmark relation. They are not a generic product roundup.</p>
+                            </div>
+                            <div class="divide-y divide-base-300/70">
+                                @for (var option : result.bestFitOptions().subList(0, Math.min(result.bestFitOptions().size(), 2)))
+                                    <article class="grid gap-4 px-6 py-5 lg:grid-cols-[3rem_minmax(0,1fr)_12rem] lg:items-start">
+                                        <div class="text-[1.6rem] font-semibold tracking-[-0.04em] text-base-content/42">${result.bestFitOptions().indexOf(option) + 1}</div>
+                                        <div class="space-y-3">
+                                            <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">${option.label()}</h3>
+                                            <p class="text-sm leading-7 text-base-content/68">${option.fitReason()}</p>
+                                            <p class="text-sm leading-7 text-base-content/58">${option.notForEveryone()}</p>
+                                        </div>
+                                        <div class="rounded-[1rem] border border-base-300/70 bg-base-200/32 px-4 py-4">
+                                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Cost posture</div>
+                                            <div class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">${option.costProfile()} cost</div>
+                                            <div class="mt-2 text-sm leading-6 text-base-content/58">Apply only after the state route and maintenance fit are clear.</div>
+                                        </div>
+                                    </article>
+                                @endfor
+                            </div>
+                            @if(result.bestFitOptions().size() > 2)
+                                <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
+                                    <input type="checkbox">
+                                    <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More route-fit patterns (${result.bestFitOptions().size() - 2})</div>
+                                    <div class="collapse-content">
+                                        <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
+                                            @for (var option : result.bestFitOptions().subList(2, result.bestFitOptions().size()))
+                                                <article class="grid gap-4 px-5 py-5 ${option != result.bestFitOptions().get(2) ? "border-t border-base-300/70" : ""} lg:grid-cols-[3rem_minmax(0,1fr)_12rem] lg:items-start">
+                                                    <div class="text-[1.4rem] font-semibold tracking-[-0.04em] text-base-content/42">${result.bestFitOptions().indexOf(option) + 1}</div>
+                                                    <div class="space-y-3">
+                                                        <h3 class="text-lg font-semibold tracking-[-0.03em] text-base-content">${option.label()}</h3>
+                                                        <p class="text-sm leading-7 text-base-content/68">${option.fitReason()}</p>
+                                                        <p class="text-sm leading-7 text-base-content/58">${option.notForEveryone()}</p>
+                                                    </div>
+                                                    <div class="rounded-[1rem] border border-base-300/70 bg-base-200/32 px-4 py-4">
+                                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Cost posture</div>
+                                                        <div class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">${option.costProfile()} cost</div>
+                                                    </div>
+                                                </article>
+                                            @endfor
+                                        </div>
                                     </div>
-                                    <div class="assessment__meta">${option.fitReason()}</div>
-                                    <div class="assessment__meta">${option.notForEveryone()}</div>
-                                </article>
-                            @endfor
+                                </div>
+                            @endif
                         </div>
                     </section>
                 @endif
 
                 @if (result.benchmarkEvaluation() != null)
-                    <section class="card">
-                        <p class="card__label">Benchmark check used for this route</p>
-                        <ul class="list">
-                            <li>Analyte: ${result.benchmarkEvaluation().analyteCode()}</li>
-                            <li>Measured value: ${result.benchmarkEvaluation().inputValue()} ${result.benchmarkEvaluation().inputUnit()}</li>
-                            <li>Normalized value: ${result.benchmarkEvaluation().normalizedValuePpt()} ppt</li>
-                            <li>Matched line: ${result.benchmarkEvaluation().matchedReferenceLabel()} (${result.benchmarkEvaluation().matchedReferenceDisplay()})</li>
-                            <li>Note: ${result.benchmarkEvaluation().note()}</li>
-                        </ul>
-                    </section>
-                @endif
-
-                @if (result.benchmarkBatchEvaluation() != null)
-                    <section class="card">
-                        <p class="card__label">Batch benchmark check used for this route</p>
-                        <ul class="list">
-                            <li>Aggregate relation: ${result.benchmarkBatchEvaluation().aggregateRelation()}</li>
-                            <li>${result.benchmarkBatchEvaluation().aggregateSummary()}</li>
-                            <li>Comparable lines: ${result.benchmarkBatchEvaluation().comparableLineCount()}</li>
-                            <li>Not comparable lines: ${result.benchmarkBatchEvaluation().notComparableLineCount()}</li>
-                        </ul>
-                        <div class="assessment-grid">
-                            @for (var line : result.benchmarkBatchEvaluation().lineEvaluations())
-                                <article class="assessment">
-                                    <div class="assessment__top">
-                                        <div class="assessment__name">${line.analyteCode()}</div>
-                                        <span class="badge badge--info">${line.benchmarkRelation()}</span>
-                                    </div>
-                                    <div class="assessment__meta">${line.inputValue()} ${line.inputUnit()} vs ${line.matchedReferenceLabel()} (${line.matchedReferenceDisplay()})</div>
-                                    <div class="assessment__meta">${line.note()}</div>
-                                </article>
-                            @endfor
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <div class="space-y-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Benchmark check used for this route</span>
+                                <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Benchmark check used for this route</h2>
+                            </div>
+                            <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                                <li>Analyte: ${result.benchmarkEvaluation().analyteCode()}</li>
+                                <li>Measured value: ${result.benchmarkEvaluation().inputValue()} ${result.benchmarkEvaluation().inputUnit()}</li>
+                                <li>Normalized value: ${result.benchmarkEvaluation().normalizedValuePpt()} ppt</li>
+                                <li>Matched line: ${result.benchmarkEvaluation().matchedReferenceLabel()} (${result.benchmarkEvaluation().matchedReferenceDisplay()})</li>
+                                <li>Note: ${result.benchmarkEvaluation().note()}</li>
+                            </ul>
                         </div>
                     </section>
                 @endif
 
-                <section class="card">
-                    <p class="card__label">Primary source ledger</p>
-                    <div class="source-list">
-                        @for (var source : result.sources())
-                            <a class="source-item" href="${source.url()}">
-                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="source-item__title">${source.title()}</div>
-                                <div class="source-item__url">${source.url()}</div>
-                            </a>
-                        @endfor
+                @if (result.benchmarkBatchEvaluation() != null)
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <div class="space-y-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Batch benchmark check used for this route</span>
+                                <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Batch benchmark check used for this route</h2>
+                            </div>
+                            <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                                <li>Aggregate relation: ${result.benchmarkBatchEvaluation().aggregateRelation()}</li>
+                                <li>${result.benchmarkBatchEvaluation().aggregateSummary()}</li>
+                                <li>Comparable lines: ${result.benchmarkBatchEvaluation().comparableLineCount()}</li>
+                                <li>Not comparable lines: ${result.benchmarkBatchEvaluation().notComparableLineCount()}</li>
+                            </ul>
+                            <div class="grid gap-4 lg:grid-cols-2">
+                                @for (var line : result.benchmarkBatchEvaluation().lineEvaluations())
+                                    <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                        <div class="flex items-start justify-between gap-3">
+                                            <div class="space-y-2">
+                                                <h3 class="text-lg font-semibold tracking-[-0.02em] text-base-content">${line.analyteCode()}</h3>
+                                                <p class="text-sm leading-6 text-base-content/66">${line.inputValue()} ${line.inputUnit()} vs ${line.matchedReferenceLabel()} (${line.matchedReferenceDisplay()})</p>
+                                            </div>
+                                            <span class="badge badge-outline border-base-300 bg-base-100 text-base-content/58">${line.benchmarkRelation()}</span>
+                                        </div>
+                                        <p class="mt-4 text-sm leading-7 text-base-content/72">${line.note()}</p>
+                                    </article>
+                                @endfor
+                            </div>
+                        </div>
+                    </section>
+                @endif
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-0 p-0">
+                        <div class="border-b border-base-300/70 px-6 py-5">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Primary source ledger</span>
+                            <h2 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-base-content">Primary source ledger</h2>
+                            <p class="mt-3 max-w-2xl text-sm leading-7 text-base-content/66">The state route should be inspectable as a ledger. Each row opens the exact source supporting the interpretation.</p>
+                        </div>
+                        <div class="divide-y divide-base-300/70">
+                            @for (var source : result.sources().subList(0, Math.min(result.sources().size(), 2)))
+                                <a class="grid gap-4 px-6 py-5 transition duration-150 ease-out hover:bg-base-200/18 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start" href="${source.url()}">
+                                    <div>
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/60">${source.organization()}</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                        <div class="mt-2 break-all text-sm leading-6 text-base-content/56">${source.url()}</div>
+                                    </div>
+                                </a>
+                            @endfor
+                        </div>
+                        @if(result.sources().size() > 2)
+                            <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
+                                <input type="checkbox">
+                                <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More sources (${result.sources().size() - 2})</div>
+                                <div class="collapse-content">
+                                    <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
+                                        @for (var source : result.sources().subList(2, result.sources().size()))
+                                            <a class="grid gap-4 px-5 py-5 transition duration-150 ease-out hover:bg-base-200/18 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start ${source != result.sources().get(2) ? "border-t border-base-300/70" : ""}" href="${source.url()}">
+                                                <div>
+                                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()}</div>
+                                                    <div class="mt-2 text-sm leading-6 text-base-content/60">${source.organization()}</div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                                    <div class="mt-2 break-all text-sm leading-6 text-base-content/56">${source.url()}</div>
+                                                </div>
+                                            </a>
+                                        @endfor
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </section>
             </div>
 
-            <aside class="stack">
-                <section class="rail-card">
-                    <h2 class="rail-card__title">State context</h2>
-                    <ul class="list">
-                        <li>${guidance.repeatTestingGuidance()}</li>
-                        <li>${guidance.benchmarkNotes()}</li>
-                    </ul>
-                </section>
+            <aside class="xl:sticky xl:top-28">
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-0 p-0">
+                        <div class="border-b border-base-300/70 px-6 py-5">
+                            <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">State operating notes</h2>
+                            <p class="mt-3 text-sm leading-7 text-base-content/64">Keep the state logic, reference notes, and escalation posture in one operating panel instead of scattering them across separate cards.</p>
+                        </div>
+                        <section class="px-6 py-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-base-content/52">State context</h3>
+                            <ul class="mt-4 space-y-3 text-sm leading-7 text-base-content/72">
+                                <li>${guidance.repeatTestingGuidance()}</li>
+                                <li>${guidance.benchmarkNotes()}</li>
+                            </ul>
+                        </section>
 
-                @if (result.referenceContext() != null)
-                    <section class="rail-card">
-                        <h2 class="rail-card__title">${result.referenceContext().primaryReferenceLabel()}</h2>
-                        <p class="checker-block__hint">${result.referenceContext().summary()}</p>
-                        <ul class="list">
-                            @for (var line : result.referenceContext().benchmarkLines())
-                                <li>${line.label()}: ${line.benchmarkDisplay()} (${line.note()})</li>
-                            @endfor
-                        </ul>
-                    </section>
-                @endif
+                        @if (result.referenceContext() != null)
+                            <section class="border-t border-base-300/70 px-6 py-5">
+                                <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-base-content/52">${result.referenceContext().primaryReferenceLabel()}</h3>
+                                <p class="mt-4 text-sm leading-7 text-base-content/68">${result.referenceContext().summary()}</p>
+                                <ul class="mt-4 space-y-3 text-sm leading-7 text-base-content/72">
+                                    @for (var line : result.referenceContext().benchmarkLines())
+                                        <li>${line.label()}: ${line.benchmarkDisplay()} (${line.note()})</li>
+                                    @endfor
+                                </ul>
+                            </section>
+                        @endif
 
-                <section class="rail-card">
-                    <h2 class="rail-card__title">Certification checklist</h2>
-                    <ul class="list">
-                        @for (var item : result.certificationChecklist())
-                            <li>${item.label()} / ${item.detail()}</li>
-                        @endfor
-                    </ul>
-                </section>
-
-                <section class="rail-card">
-                    <h2 class="rail-card__title">Operating boundary</h2>
-                    <p class="checker-block__hint">
-                        This output is a private-well interpretation layer. It is not a public-water compliance label, not a
-                        medical statement, and not a whole-house-first recommendation.
-                    </p>
-                </section>
-
-                <section class="rail-card">
-                    <h2 class="rail-card__title">When to escalate</h2>
-                    <ul class="list">
-                        @for (var item : result.whenToEscalate())
-                            <li>${item}</li>
-                        @endfor
-                    </ul>
+                        <section class="border-t border-base-300/70 px-6 py-5">
+                            <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-base-content/52">Operating boundary</h3>
+                            <p class="mt-4 text-sm leading-7 text-base-content/72">
+                                This output is a private-well interpretation layer. It is not a public-water compliance label, not a
+                                medical statement, and not a whole-house-first recommendation.
+                            </p>
+                        </section>
+                        <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
+                            <input type="checkbox">
+                            <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Certification checklist</div>
+                            <div class="collapse-content">
+                                <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">
+                                    @for (var item : result.certificationChecklist())
+                                        <li>${item.label()} / ${item.detail()}</li>
+                                    @endfor
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
+                            <input type="checkbox">
+                            <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">When to escalate</div>
+                            <div class="collapse-content">
+                                <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">
+                                    @for (var item : result.whenToEscalate())
+                                        <li>${item}</li>
+                                    @endfor
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </aside>
         </div>

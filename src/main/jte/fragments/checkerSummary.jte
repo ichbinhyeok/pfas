@@ -8,69 +8,91 @@
 @param ActionCheckerSelection selection
 @param ActionCheckerRecommendation recommendation
 
-<aside class="xl:sticky xl:top-28" id="checker-summary">
-    <div class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-        <div class="border-b border-shell-border pb-6">
-            <span class="inline-flex rounded-full border border-teal-deep/14 bg-teal-tint/70 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-teal-deep">${recommendation.tag()}</span>
-            <p class="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">${recommendation.routeCode()}</p>
-            <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-slate-deep">${recommendation.title()}</h2>
-            <p class="mt-3 text-base leading-7 text-slate-muted">${recommendation.summary()}</p>
+<aside class="order-1 space-y-4 xl:order-2 xl:sticky xl:top-28" id="checker-summary">
+    <section class="card border border-neutral/12 bg-neutral text-neutral-content shadow-[var(--shadow-panel)]">
+        <div class="card-body gap-5 p-6">
+            <div class="space-y-3 border-b border-white/10 pb-5">
+                <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/80">${recommendation.tag()}</span>
+                <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/55">${recommendation.routeCode()}</p>
+                <h2 class="text-[2rem] font-semibold tracking-[-0.045em] text-white">${recommendation.title()}</h2>
+                <p class="text-base leading-7 text-white/72">${recommendation.summary()}</p>
+            </div>
+
+            <div class="rounded-[1rem] border border-white/10 bg-white/6 px-5 py-5">
+                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Next action now</span>
+                <p class="mt-3 text-lg font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</p>
+                <p class="mt-2 text-sm leading-6 text-white/68">The engine opens this path first. It is the least aggressive action supported by the current state.</p>
+            </div>
+
+            <div class="join join-vertical gap-3">
+                <a class="btn join-item h-11 rounded-full border-0 bg-white text-neutral px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-white/92" href="${recommendation.primaryHref()}">${recommendation.primaryLabel()}</a>
+                <a class="btn btn-outline join-item h-11 rounded-full border-white/14 bg-transparent px-5 text-sm font-semibold text-white shadow-none hover:-translate-y-px hover:bg-white/8" href="${recommendation.secondaryHref()}">${recommendation.secondaryLabel()}</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="space-y-3">
+        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+            <input type="checkbox">
+            <div class="collapse-title pr-12">
+                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">State in view</div>
+                <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${waterSourceLabel(selection.waterSource())} / ${directDataLabel(selection.directData())}</div>
+            </div>
+            <div class="collapse-content">
+                <dl class="space-y-3 text-sm">
+                    <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
+                        <dt class="text-base-content/58">Source</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${waterSourceLabel(selection.waterSource())}</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
+                        <dt class="text-base-content/58">Direct evidence</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${directDataLabel(selection.directData())}</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
+                        <dt class="text-base-content/58">Indirect context</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${indirectDataLabel(selection.indirectData())}</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
+                        <dt class="text-base-content/58">Benchmark relation</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${benchmarkRelationLabel(selection.benchmarkRelation())}</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
+                        <dt class="text-base-content/58">Current hardware</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${currentFilterStatusLabel(selection.currentFilterStatus())}</dd>
+                    </div>
+                    <div class="flex items-start justify-between gap-4">
+                        <dt class="text-base-content/58">Escalation posture</dt>
+                        <dd class="text-right font-semibold tracking-[-0.02em] text-base-content">${selection.wholeHouseConsidered() ? "Whole-house under guarded review" : "Point-of-use remains first"}</dd>
+                    </div>
+                </dl>
+            </div>
         </div>
 
-        <div class="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Source</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${waterSourceLabel(selection.waterSource())}</span>
-            </article>
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Direct data</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${directDataLabel(selection.directData())}</span>
-            </article>
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Indirect data</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${indirectDataLabel(selection.indirectData())}</span>
-            </article>
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Benchmark relation</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${benchmarkRelationLabel(selection.benchmarkRelation())}</span>
-            </article>
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Current filter</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${currentFilterStatusLabel(selection.currentFilterStatus())}</span>
-            </article>
-            <article class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Whole-house posture</span>
-                <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-slate-deep">${selection.wholeHouseConsidered() ? "Guarded review only" : "Point-of-use first"}</span>
-            </article>
+        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+            <input type="checkbox">
+            <div class="collapse-title pr-12">
+                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened</div>
+                <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${recommendation.principles().size()} routing principles are active</div>
+            </div>
+            <div class="collapse-content">
+                <ul class="space-y-3 text-sm leading-6 text-base-content/72">
+                    @for(var principle : recommendation.principles())
+                        <li>${principle}</li>
+                    @endfor
+                </ul>
+            </div>
         </div>
 
-        <div class="mt-6 rounded-[18px] border border-shell-border bg-ivory px-5 py-5">
-            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Why this route</span>
-            <ul class="mt-3 space-y-3 text-sm leading-6 text-slate-body">
-                @for(var principle : recommendation.principles())
-                    <li class="flex gap-3">
-                        <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                        <span>${principle}</span>
-                    </li>
-                @endfor
-            </ul>
-        </div>
-
-        <div class="mt-6 rounded-[18px] border border-shell-border bg-ivory px-5 py-5">
-            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">What this does not decide</span>
-            <p class="mt-3 text-sm leading-6 text-slate-muted">This is a routing posture inside the engine. It does not label the household safe or unsafe, and it does not replace direct utility, state, or lab interpretation.</p>
-        </div>
+        <article class="rounded-[1rem] border border-base-300/70 bg-base-100/92 px-5 py-5 shadow-[var(--shadow-soft)]">
+            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">What this does not confirm</span>
+            <p class="mt-3 text-sm leading-7 text-base-content/68">This route does not declare the household safe or unsafe. It does not replace utility interpretation, state guidance, or accredited lab review.</p>
+        </article>
 
         @if(recommendation.wholeHouseGuardrail())
-            <div class="mt-6 rounded-[18px] border border-brass/25 bg-[rgba(139,114,71,0.08)] px-5 py-5">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-brass">Whole-house guardrail</span>
-                <p class="mt-3 text-sm leading-6 text-slate-body">${recommendation.wholeHouseMessage()}</p>
-            </div>
+            <article class="rounded-[1rem] border border-accent/18 bg-accent/7 px-5 py-5 shadow-[var(--shadow-soft)]">
+                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent">Whole-house guardrail</span>
+                <p class="mt-3 text-sm leading-7 text-base-content/72">${recommendation.wholeHouseMessage()}</p>
+            </article>
         @endif
-
-        <div class="mt-6 space-y-3">
-            <a class="inline-flex w-full items-center justify-center rounded-full bg-teal-deep px-5 py-3 text-sm font-semibold text-white transition duration-150 ease-out hover:-translate-y-px hover:bg-slate-deep" href="${recommendation.primaryHref()}">${recommendation.primaryLabel()}</a>
-            <a class="inline-flex w-full items-center justify-center rounded-full border border-shell-border-strong bg-ivory px-5 py-3 text-sm font-semibold text-slate-deep transition duration-150 ease-out hover:-translate-y-px hover:border-slate-muted/30" href="${recommendation.secondaryHref()}">${recommendation.secondaryLabel()}</a>
-        </div>
     </div>
 </aside>

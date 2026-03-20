@@ -24,40 +24,39 @@
     pageIndexable = pageIndexable,
     content = @`
 <script type="application/ld+json">$unsafe{pageStructuredDataJson}</script>
-<section class="pt-12 md:pt-16">
+<section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.12fr)_23rem] xl:items-start">
-            <div class="space-y-5">
-                <span class="inline-flex rounded-full border border-shell-border bg-ivory-panel px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-slate-soft">${page.eyebrow()}</span>
-                <h1 class="max-w-4xl text-4xl font-semibold tracking-[-0.05em] text-slate-deep sm:text-5xl lg:text-[3.45rem] lg:leading-[1.04]">
-                    ${page.title()}
-                    <span class="font-serif font-medium text-mineral-blue">with the caveats still in view.</span>
-                </h1>
-                <p class="max-w-3xl text-lg leading-8 text-slate-body">${page.lede()}</p>
-                <div class="flex flex-wrap gap-3">
-                    <a class="inline-flex items-center justify-center rounded-full bg-teal-deep px-6 py-3 text-sm font-semibold text-white transition duration-150 ease-out hover:-translate-y-px hover:bg-slate-deep" href="${page.primaryHref()}">${page.primaryLabel()}</a>
-                    <a class="inline-flex items-center justify-center rounded-full border border-shell-border-strong bg-ivory-panel px-6 py-3 text-sm font-semibold text-slate-deep transition duration-150 ease-out hover:-translate-y-px hover:border-slate-muted/30" href="${page.secondaryHref()}">${page.secondaryLabel()}</a>
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+            <div class="space-y-6">
+                <div class="space-y-4">
+                    <span class="badge badge-outline border-base-300 bg-base-100 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-base-content/58">${page.eyebrow()}</span>
+                    <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-base-content sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
+                        ${page.title()}
+                        <span class="font-serif font-medium text-secondary">with the caveats still in view.</span>
+                    </h1>
+                    <p class="max-w-3xl text-lg leading-8 text-base-content/72">${page.lede()}</p>
+                </div>
+
+                <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
+                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="${page.primaryHref()}">${page.primaryLabel()}</a>
+                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${page.secondaryHref()}">${page.secondaryLabel()}</a>
                     @if(!relatedProducts.isEmpty())
-                        <a class="inline-flex items-center justify-center rounded-full border border-shell-border-strong bg-ivory-panel px-6 py-3 text-sm font-semibold text-slate-deep transition duration-150 ease-out hover:-translate-y-px hover:border-slate-muted/30" href="#guide-product-lane">Open comparison lane</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="#guide-product-lane">Open comparison lane</a>
                     @endif
                 </div>
             </div>
 
-            <aside class="rounded-[22px] border border-shell-border bg-ivory-panel px-6 py-6 shadow-quiet">
-                <span class="block text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-slate-soft">Guide posture</span>
-                <div class="mt-4 space-y-4">
-                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Search intent</span>
-                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">${page.queryIntent()}</p>
+            <aside class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-panel)]">
+                <div class="card-body gap-5">
+                    <div class="space-y-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Guide posture</span>
+                        <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">This page exists to resolve a next move, not to pad out an explainer.</h2>
                     </div>
-                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Evidence basis</span>
-                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">${guideSources.size()} linked records</p>
-                    </div>
-                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Verification</span>
-                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">${page.lastVerifiedDate()}</p>
-                    </div>
+                    <ul class="menu gap-2 rounded-[1rem] bg-base-200/55 p-3">
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Search intent</strong><br>${page.queryIntent()}</span></li>
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Evidence basis</strong><br>${guideSources.size()} linked records</span></li>
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Verification</strong><br>${page.lastVerifiedDate()}</span></li>
+                    </ul>
                 </div>
             </aside>
         </div>
@@ -75,153 +74,150 @@
     </div>
 </section>
 
-<section class="pt-14 md:pt-20">
+<section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-            <article class="rounded-[18px] border border-shell-border bg-ivory-panel px-5 py-5 shadow-quiet">
-                <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Guide type</span>
-                <h2 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-slate-deep">Manual decision guide</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-muted">Curated for high-intent PFAS routing questions.</p>
-            </article>
-            <article class="rounded-[18px] border border-shell-border bg-ivory-panel px-5 py-5 shadow-quiet">
-                <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Search intent</span>
-                <h2 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-slate-deep">${page.queryIntent()}</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-muted">Guide copy is tuned for decision-intent queries, not generic PFAS explainers.</p>
-            </article>
-            <article class="rounded-[18px] border border-shell-border bg-ivory-panel px-5 py-5 shadow-quiet">
-                <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Evidence basis</span>
-                <h2 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-slate-deep">${guideSources.size()} linked records</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-muted">Official guidance, utility documents, listings, or product records.</p>
-            </article>
-            <article class="rounded-[18px] border border-shell-border bg-ivory-panel px-5 py-5 shadow-quiet">
-                <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Guide posture</span>
-                <h2 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-slate-deep">Action-first</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-muted">No safe/unsafe claim. No reviewer fiction. No generic roundup logic.</p>
-            </article>
-            <article class="rounded-[18px] border border-shell-border bg-ivory-panel px-5 py-5 shadow-quiet">
-                <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Verification</span>
-                <h2 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-slate-deep">${page.lastVerifiedDate()}</h2>
-                <p class="mt-2 text-sm leading-6 text-slate-muted">Guide copy is tied to the linked source set below.</p>
-            </article>
+        <div class="stats stats-vertical gap-3 bg-transparent p-0 shadow-none xl:stats-horizontal">
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Guide type</div>
+                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Manual decision guide</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Curated for high-intent PFAS routing questions.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Search intent</div>
+                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${page.queryIntent()}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Guide copy is tuned for decision-intent queries, not generic PFAS explainers.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Evidence basis</div>
+                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guideSources.size()} linked records</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Official guidance, utility documents, listings, or product records.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Guide posture</div>
+                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Action-first</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">No safe or unsafe claim. No reviewer fiction. No generic roundup logic.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Verification</div>
+                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${page.lastVerifiedDate()}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Guide copy is tied to the linked source set below.</div>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="pt-14 md:pt-20">
     <div class="shell">
-        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.12fr)_23rem] xl:items-start">
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
             <div class="space-y-6">
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet md:p-8">
-                    <span class="inline-flex rounded-full border border-teal-deep/14 bg-teal-tint/70 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-teal-deep">Guide next action</span>
-                    <div class="mt-5 space-y-3">
-                        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Next action</p>
-                        <h2 class="max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-slate-deep md:text-[2.3rem]">${page.nextActionTitle()}</h2>
-                        <p class="max-w-3xl text-base leading-8 text-slate-body">${page.nextActionSummary()}</p>
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-panel)]">
+                    <div class="card-body gap-5">
+                        <div class="alert border border-base-300/70 bg-base-100 px-5 py-4 shadow-none">
+                            <div class="space-y-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Guide next action</span>
+                                <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">${page.nextActionTitle()}</h2>
+                                <p class="text-sm leading-7 text-base-content/68">${page.nextActionSummary()}</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 @if(!relatedProducts.isEmpty())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet md:p-8">
-                        <div class="grid gap-4 md:grid-cols-3">
-                            <article class="rounded-[18px] border border-shell-border bg-ivory px-5 py-5">
-                                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Linked certified options</span>
-                                <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${relatedProducts.size()}</h3>
-                                <p class="mt-2 text-sm leading-6 text-slate-muted">Curated products tied to this guide's decision intent.</p>
-                            </article>
-                            <article class="rounded-[18px] border border-shell-border bg-ivory px-5 py-5">
-                                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Live utility examples</span>
-                                <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${relatedSystemExamples.size()}</h3>
-                                <p class="mt-2 text-sm leading-6 text-slate-muted">Direct dossiers tied to the same question cluster.</p>
-                            </article>
-                            <article class="rounded-[18px] border border-shell-border bg-ivory px-5 py-5">
-                                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Commercial posture</span>
-                                <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">Evidence first</h3>
-                                <p class="mt-2 text-sm leading-6 text-slate-muted">The product layer opens only after the guide frames the route.</p>
-                            </article>
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Linked certified options</span>
+                                    <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${relatedProducts.size()}</h3>
+                                    <p class="mt-2 text-sm leading-6 text-base-content/66">Curated products tied to this guide's decision intent.</p>
+                                </article>
+                                <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Live utility examples</span>
+                                    <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${relatedSystemExamples.size()}</h3>
+                                    <p class="mt-2 text-sm leading-6 text-base-content/66">Direct dossiers tied to the same question cluster.</p>
+                                </article>
+                                <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Commercial posture</span>
+                                    <h3 class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">Evidence first</h3>
+                                    <p class="mt-2 text-sm leading-6 text-base-content/66">The product layer opens only after the guide frames the route.</p>
+                                </article>
+                            </div>
                         </div>
                     </section>
                 @endif
 
                 @for(var section : page.sections())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet md:p-8">
-                        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Guide analysis</p>
-                        <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-slate-deep">${section.title()}</h2>
-                        @if(section.summary() != null && !section.summary().isBlank())
-                            <p class="mt-4 text-base leading-8 text-slate-body">${section.summary()}</p>
-                        @endif
-                        @for(var paragraph : section.paragraphs())
-                            <p class="mt-4 text-base leading-8 text-slate-body">${paragraph}</p>
-                        @endfor
-                        @if(section.bullets() != null && !section.bullets().isEmpty())
-                            <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-body">
-                                @for(var bullet : section.bullets())
-                                    <li class="flex gap-3">
-                                        <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                                        <span>${bullet}</span>
-                                    </li>
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <div class="space-y-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Guide analysis</span>
+                                <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">${section.title()}</h2>
+                            </div>
+                            <div class="prose prose-dossier max-w-none">
+                                @if(section.summary() != null && !section.summary().isBlank())
+                                    <p>${section.summary()}</p>
+                                @endif
+                                @for(var paragraph : section.paragraphs())
+                                    <p>${paragraph}</p>
                                 @endfor
-                            </ul>
-                        @endif
+                                @if(section.bullets() != null && !section.bullets().isEmpty())
+                                    <ul>
+                                        @for(var bullet : section.bullets())
+                                            <li>${bullet}</li>
+                                        @endfor
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
                     </section>
                 @endfor
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Why this</p>
-                    <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                        @for(var item : page.whyThis())
-                            <li class="flex gap-3">
-                                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                                <span>${item}</span>
-                            </li>
-                        @endfor
-                    </ul>
-                </section>
+                <div class="grid gap-5 lg:grid-cols-2">
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Why this</span>
+                            <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                                @for(var item : page.whyThis())
+                                    <li>${item}</li>
+                                @endfor
+                            </ul>
+                        </div>
+                    </section>
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">What this does not tell you</p>
-                    <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                        @for(var item : page.whatThisDoesNotTellYou())
-                            <li class="flex gap-3">
-                                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[rgba(15,118,110,0.6)]"></span>
-                                <span>${item}</span>
-                            </li>
-                        @endfor
-                    </ul>
-                </section>
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">What this does not tell you</span>
+                            <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                                @for(var item : page.whatThisDoesNotTellYou())
+                                    <li>${item}</li>
+                                @endfor
+                            </ul>
+                        </div>
+                    </section>
+                </div>
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">How this guide was built</p>
-                    <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                        <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                            <span>Manual editorial synthesis over linked official and listing records.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                            <span>Routing logic stays aligned with the engine's decision table and source policy.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                            <span>Commercial records are used only for product, cost, or maintenance context, not household risk truth.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                            <span>No external reviewer is claimed on this build.</span>
-                        </li>
-                    </ul>
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-4">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">How this guide was built</span>
+                        <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                            <li>Manual editorial synthesis over linked official and listing records.</li>
+                            <li>Routing logic stays aligned with the engine's decision table and source policy.</li>
+                            <li>Commercial records are used only for product, cost, or maintenance context, not household risk truth.</li>
+                            <li>No external reviewer is claimed on this build.</li>
+                        </ul>
+                    </div>
                 </section>
 
                 @if(page.targetQueries() != null && !page.targetQueries().isEmpty())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                        <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">Query cluster</p>
-                        <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                            @for(var query : page.targetQueries())
-                                <li class="flex gap-3">
-                                    <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[rgba(15,118,110,0.6)]"></span>
-                                    <span>${query}</span>
-                                </li>
-                            @endfor
-                        </ul>
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Query cluster</span>
+                            <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                                @for(var query : page.targetQueries())
+                                    <li>${query}</li>
+                                @endfor
+                            </ul>
+                        </div>
                     </section>
                 @endif
 
@@ -238,92 +234,114 @@
             </div>
 
             <aside class="space-y-5 xl:sticky xl:top-28">
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Checklist</h2>
-                    <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                        @for(var item : page.checklist())
-                            <li class="flex gap-3">
-                                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-teal-deep"></span>
-                                <span>${item}</span>
-                            </li>
-                        @endfor
-                    </ul>
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-4">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Checklist</h2>
+                        <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                            @for(var item : page.checklist())
+                                <li>${item}</li>
+                            @endfor
+                        </ul>
+                    </div>
                 </section>
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Evidence basis</h2>
-                    <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-body">
-                        @for(var item : page.evidenceHighlights())
-                            <li class="flex gap-3">
-                                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[rgba(15,118,110,0.6)]"></span>
-                                <span>${item}</span>
-                            </li>
-                        @endfor
-                    </ul>
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-4">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Evidence basis</h2>
+                        <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                            @for(var item : page.evidenceHighlights())
+                                <li>${item}</li>
+                            @endfor
+                        </ul>
+                    </div>
                 </section>
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Primary source ledger</h2>
-                    <div class="mt-5 space-y-3">
-                        @for(var source : guideSources)
-                            <a class="block rounded-[18px] border border-shell-border bg-ivory px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-shell-border-strong" href="${source.url()}">
-                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${source.title()}</div>
-                                <div class="mt-2 break-all text-sm leading-6 text-slate-muted">${source.url()}</div>
-                            </a>
-                        @endfor
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Primary source ledger</h2>
+                        <div class="space-y-3">
+                            @for(var source : guideSources.subList(0, Math.min(guideSources.size(), 4)))
+                                <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                    <div class="mt-2 break-all text-sm leading-6 text-base-content/60">${source.url()}</div>
+                                </a>
+                            @endfor
+                        </div>
+                        @if(guideSources.size() > 4)
+                            <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
+                                <input type="checkbox">
+                                <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More sources (${guideSources.size() - 4})</div>
+                                <div class="collapse-content">
+                                    <div class="space-y-3 pt-2">
+                                        @for(var source : guideSources.subList(4, guideSources.size()))
+                                            <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                                <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                                <div class="mt-2 break-all text-sm leading-6 text-base-content/60">${source.url()}</div>
+                                            </a>
+                                        @endfor
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </section>
 
                 @if(!relatedSystemExamples.isEmpty())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Live utility examples</h2>
-                        <div class="mt-5 space-y-3">
-                            @for(var example : relatedSystemExamples)
-                                <a class="block rounded-[18px] border border-shell-border bg-ivory px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-shell-border-strong" href="/public-water/${example.system().pwsid()}">
-                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">${example.system().stateCode()} / ${example.system().pwsid()} / ${PresentationText.sourceWaterTypeLabel(example.system().sourceWaterType())}</div>
-                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${example.system().pwsName()}</div>
-                                    <div class="mt-2 text-sm leading-6 text-slate-muted">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} / ${example.result().nextAction().title()}</div>
-                                    <div class="mt-2 text-sm leading-6 text-slate-body">${example.result().whyThis().isEmpty() ? "Utility-backed decision example." : example.result().whyThis().get(0)}</div>
-                                </a>
-                            @endfor
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Live utility examples</h2>
+                            <div class="space-y-3">
+                                @for(var example : relatedSystemExamples)
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/public-water/${example.system().pwsid()}">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${example.system().stateCode()} / ${example.system().pwsid()} / ${PresentationText.sourceWaterTypeLabel(example.system().sourceWaterType())}</div>
+                                        <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${example.system().pwsName()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/60">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} / ${example.result().nextAction().title()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/72">${example.result().whyThis().isEmpty() ? "Utility-backed decision example." : example.result().whyThis().get(0)}</div>
+                                    </a>
+                                @endfor
+                            </div>
                         </div>
                     </section>
                 @endif
 
                 @if(!relatedProducts.isEmpty())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Linked certified option lanes</h2>
-                        <p class="mt-4 text-sm leading-7 text-slate-body">Use the comparison lane in the main column when you want a direct merchant path with upkeep and claim context side by side.</p>
-                    </section>
+                    <div class="alert border border-base-300/70 bg-base-100/92 px-5 py-4 shadow-[var(--shadow-soft)]">
+                        <span class="text-sm leading-7 text-base-content/74"><strong class="font-semibold text-base-content">Linked certified option lanes</strong> stay downstream from the guide thesis, the caveats, and the utility examples.</span>
+                    </div>
                 @endif
 
                 @if(!relatedComparePages.isEmpty())
-                    <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Dedicated compare pages</h2>
-                        <div class="mt-5 space-y-3">
-                            @for(var comparePage : relatedComparePages)
-                                <a class="block rounded-[18px] border border-shell-border bg-ivory px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-shell-border-strong" href="/compare/${comparePage.slug()}">
-                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">${comparePage.eyebrow()} / ${comparePage.queryIntent()}</div>
-                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${comparePage.title()}</div>
-                                    <div class="mt-2 text-sm leading-6 text-slate-muted">${comparePage.nextActionSummary()}</div>
-                                </a>
-                            @endfor
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Dedicated compare pages</h2>
+                            <div class="space-y-3">
+                                @for(var comparePage : relatedComparePages)
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/compare/${comparePage.slug()}">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${comparePage.eyebrow()} / ${comparePage.queryIntent()}</div>
+                                        <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${comparePage.title()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/60">${comparePage.nextActionSummary()}</div>
+                                    </a>
+                                @endfor
+                            </div>
                         </div>
                     </section>
                 @endif
 
-                <section class="rounded-[22px] border border-shell-border bg-ivory-panel p-6 shadow-quiet">
-                    <h2 class="text-xl font-semibold tracking-[-0.03em] text-slate-deep">Related guides</h2>
-                    <div class="mt-5 space-y-3">
-                        @for(var guide : allGuides)
-                            @if(!guide.slug().equals(page.slug()))
-                                <a class="block rounded-[18px] border border-shell-border bg-ivory px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-shell-border-strong" href="/guides/${guide.slug()}">
-                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">${guide.eyebrow()}</div>
-                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-slate-deep">${guide.title()}</div>
-                                </a>
-                            @endif
-                        @endfor
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Related guides</h2>
+                        <div class="space-y-3">
+                            @for(var guide : allGuides)
+                                @if(!guide.slug().equals(page.slug()))
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${guide.eyebrow()}</div>
+                                        <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${guide.title()}</div>
+                                    </a>
+                                @endif
+                            @endfor
+                        </div>
                     </div>
                 </section>
             </aside>

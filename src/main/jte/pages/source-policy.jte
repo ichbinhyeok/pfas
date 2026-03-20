@@ -20,133 +20,186 @@
     pageCanonicalUrl = siteBaseUrl + "/source-policy",
     pageIndexable = true,
     content = @`
-<section class="result-shell">
+<section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="result-header">
-            <div>
-                <span class="eyebrow">Source policy</span>
-                <h1 class="result-header__title">The project ranks sources before it ranks products</h1>
-                <p class="hero__lede">
-                    Direct official evidence sits at the top. Certification directories and vendor documents only open after
-                    the household path and benchmark context are already anchored.
-                </p>
-            </div>
-            <div class="button-row">
-                <a class="button button--primary" href="/methodology">Open methodology</a>
-                <a class="button button--secondary" href="/checker">Open Action Checker</a>
-            </div>
-        </div>
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.16fr)_23rem] xl:items-start">
+            <div class="space-y-6">
+                <div class="space-y-4">
+                    <span class="badge badge-outline border-base-300 bg-base-100 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-base-content/58">Source policy</span>
+                    <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-base-content sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
+                        The project ranks sources before it ranks products
+                        <span class="font-serif font-medium text-secondary">and keeps that order visible.</span>
+                    </h1>
+                    <p class="max-w-3xl text-lg leading-8 text-base-content/72">
+                        Direct official evidence sits at the top. Certification directories and vendor records only open after
+                        the household path, benchmark context, and source ownership are already anchored.
+                    </p>
+                </div>
 
+                <div class="join join-vertical gap-3 sm:join-horizontal">
+                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/methodology">Open methodology</a>
+                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/checker">Open Action Checker</a>
+                </div>
+            </div>
+
+            <aside class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-panel)]">
+                <div class="card-body gap-5">
+                    <div class="space-y-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Trust discipline</span>
+                        <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Evidence quality controls what can be said and what can be sold.</h2>
+                    </div>
+                    <ul class="menu gap-2 rounded-[1rem] bg-base-200/55 p-3">
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Tier 1 and 2</strong><br>Rule status, agency guidance, and route-specific utility evidence.</span></li>
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Tier 3</strong><br>Certification directories and listing systems used for claim scope.</span></li>
+                        <li><span class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-6 text-base-content/72"><strong class="font-semibold text-base-content">Tier 4</strong><br>Vendor records used only for model detail, price, and cadence.</span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="pt-10 md:pt-12">
+    <div class="shell">
         @template.fragments.publicationStrip(
             lastVerified = siteLastVerifiedDate,
             scopeLabel = "Source discipline",
             editorialOwner = siteEditorialOwner,
             methodologyOwner = siteMethodologyOwner
         )
+    </div>
+</section>
 
-        <div class="meta-grid">
-            <article class="meta-tile">
-                <span class="meta-tile__label">Tracked sources</span>
-                <span class="meta-tile__value">${sourceCount}</span>
-                <span class="meta-tile__copy">Registry-backed source documents.</span>
-            </article>
-            <article class="meta-tile">
-                <span class="meta-tile__label">State routes</span>
-                <span class="meta-tile__value">${stateCount}</span>
-                <span class="meta-tile__copy">State guidance seeds using official agency routes.</span>
-            </article>
-            <article class="meta-tile">
-                <span class="meta-tile__label">Seeded dossiers</span>
-                <span class="meta-tile__value">${publicWaterCount + filterCount}</span>
-                <span class="meta-tile__copy">Public-water and product records currently rendered.</span>
-            </article>
+<section class="pt-14 md:pt-18">
+    <div class="shell">
+        <div class="stats stats-vertical gap-3 bg-transparent p-0 shadow-none lg:stats-horizontal">
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Tracked sources</div>
+                <div class="stat-value mt-3 text-2xl font-semibold tracking-[-0.04em] text-base-content">${sourceCount}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Registry-backed source documents.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State routes</div>
+                <div class="stat-value mt-3 text-2xl font-semibold tracking-[-0.04em] text-base-content">${stateCount}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">State guidance seeds using official agency routes.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Seeded dossiers</div>
+                <div class="stat-value mt-3 text-2xl font-semibold tracking-[-0.04em] text-base-content">${publicWaterCount + filterCount}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Public-water and product records currently rendered.</div>
+            </div>
+            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Guides</div>
+                <div class="stat-value mt-3 text-2xl font-semibold tracking-[-0.04em] text-base-content">${guideCount}</div>
+                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Search-intent pages tied back to the same source ladder.</div>
+            </div>
         </div>
+    </div>
+</section>
 
-        <div class="result-grid">
-            <div class="stack">
-                <section class="card">
-                    <p class="card__label">Trust tiers</p>
-                    <div class="ledger-list ledger-list--compact">
-                        <article class="ledger-item ledger-item--compact">
-                            <span class="ledger-item__index">01</span>
-                            <div>
-                                <h3 class="ledger-item__title">Tier 1</h3>
-                                <p class="ledger-item__copy">Federal agencies for rule status, program context, and high-level filter guidance.</p>
-                            </div>
-                        </article>
-                        <article class="ledger-item ledger-item--compact">
-                            <span class="ledger-item__index">02</span>
-                            <div>
-                                <h3 class="ledger-item__title">Tier 2</h3>
-                                <p class="ledger-item__copy">State agencies and utility records for direct route-specific evidence.</p>
-                            </div>
-                        </article>
-                        <article class="ledger-item ledger-item--compact">
-                            <span class="ledger-item__index">03</span>
-                            <div>
-                                <h3 class="ledger-item__title">Tier 3</h3>
-                                <p class="ledger-item__copy">Certification directories and listing systems.</p>
-                            </div>
-                        </article>
-                        <article class="ledger-item ledger-item--compact">
-                            <span class="ledger-item__index">04</span>
-                            <div>
-                                <h3 class="ledger-item__title">Tier 4</h3>
-                                <p class="ledger-item__copy">Vendor pages for price, replacement cadence, and official model detail.</p>
-                            </div>
-                        </article>
+<section class="pt-14 md:pt-20">
+    <div class="shell">
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+            <div class="space-y-6">
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-panel)]">
+                    <div class="card-body gap-6">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Trust tiers</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Trust tiers</h2>
+                            <p class="max-w-3xl text-sm leading-7 text-base-content/64">Higher tiers constrain the decision posture. Lower tiers can add commercial or operational context, but they cannot override route evidence.</p>
+                        </div>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Tier 1</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Federal rule and program sources</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">Federal agencies for rule status, program context, and high-level filter guidance.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Tier 2</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">State and utility evidence</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">State agencies and utility records for direct route-specific evidence.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Tier 3</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Certification directories</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">Certification directories and listing systems.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Tier 4</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Vendor records</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">Vendor pages for price, replacement cadence, and official model detail.</p>
+                            </article>
+                        </div>
                     </div>
                 </section>
 
-                <section class="card">
-                    <p class="card__label">Tier 1 examples</p>
-                    <div class="source-list">
-                        @for(var source : tier1Sources)
-                            <a class="source-item" href="${source.url()}">
-                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="source-item__title">${source.title()}</div>
-                            </a>
-                        @endfor
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Tier 1 examples</span>
+                            <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Federal source examples</h2>
+                        </div>
+                        <div class="space-y-3">
+                            @for(var source : tier1Sources)
+                                <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                </a>
+                            @endfor
+                        </div>
                     </div>
                 </section>
 
-                <section class="card">
-                    <p class="card__label">Tier 2 examples</p>
-                    <div class="source-list">
-                        @for(var source : tier2Sources)
-                            <a class="source-item" href="${source.url()}">
-                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="source-item__title">${source.title()}</div>
-                            </a>
-                        @endfor
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Tier 2 examples</span>
+                            <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">State and utility source examples</h2>
+                        </div>
+                        <div class="space-y-3">
+                            @for(var source : tier2Sources)
+                                <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                    <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                </a>
+                            @endfor
+                        </div>
                     </div>
                 </section>
             </div>
 
-            <aside class="stack">
-                <section class="rail-card">
-                    <h2 class="rail-card__title">Tier 3 examples</h2>
-                    <div class="source-list">
-                        @for(var source : tier3Sources)
-                            <a class="source-item" href="${source.url()}">
-                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="source-item__title">${source.title()}</div>
-                            </a>
-                        @endfor
+            <aside class="space-y-5 xl:sticky xl:top-28">
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Tier 3 examples</h2>
+                        <div class="space-y-3">
+                            @for(var source : tier3Sources)
+                                <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                    <div class="mt-3 text-base font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                </a>
+                            @endfor
+                        </div>
                     </div>
                 </section>
 
-                <section class="rail-card">
-                    <h2 class="rail-card__title">Tier 4 examples</h2>
-                    <div class="source-list">
-                        @for(var source : tier4Sources)
-                            <a class="source-item" href="${source.url()}">
-                                <div class="source-item__meta">Tier ${source.trustTier()} / ${source.organization()}</div>
-                                <div class="source-item__title">${source.title()}</div>
-                            </a>
-                        @endfor
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-5">
+                        <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Tier 4 examples</h2>
+                        <div class="space-y-3">
+                            @for(var source : tier4Sources)
+                                <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${source.url()}">
+                                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()} / ${source.organization()}</div>
+                                    <div class="mt-3 text-base font-semibold tracking-[-0.02em] text-base-content">${source.title()}</div>
+                                </a>
+                            @endfor
+                        </div>
                     </div>
                 </section>
+
+                <div class="alert border border-base-300/70 bg-base-100/92 px-5 py-4 shadow-[var(--shadow-soft)]">
+                    <span class="text-sm leading-7 text-base-content/74">Lower-tier commercial records can add price or maintenance context. They do not change the route when higher-tier evidence says otherwise.</span>
+                </div>
             </aside>
         </div>
     </div>

@@ -69,6 +69,7 @@ public class PublicPagesController {
 	public String home(Model model) {
 		var checkerSelection = actionCheckerService.normalize(null, null, null, null, null, null, null, null, null);
 		model.addAttribute("systems", publicWaterSystemService.getAll());
+		model.addAttribute("states", stateGuidanceService.getAll());
 		model.addAttribute("guides", guidePageService.getAll());
 		model.addAttribute("checkerSelection", checkerSelection);
 		model.addAttribute("checkerRecommendation", actionCheckerService.evaluate(checkerSelection));

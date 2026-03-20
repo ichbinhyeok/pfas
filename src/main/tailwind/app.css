@@ -1,25 +1,102 @@
 @import "tailwindcss" source("../");
+@plugin "@tailwindcss/forms" {
+  strategy: "class";
+}
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes: false;
+  logs: false;
+}
 
 @theme {
   --font-sans: "Manrope", "Pretendard Variable", "Pretendard", "SUIT", sans-serif;
   --font-serif: "Newsreader", "Source Serif 4", serif;
 
-  --color-ivory: #f7f7f4;
-  --color-ivory-panel: #fdfcf8;
-  --color-ivory-muted: #f1f0ea;
-  --color-slate-deep: #17212b;
-  --color-slate-body: #30414f;
-  --color-slate-muted: #66737f;
-  --color-slate-soft: #8d98a1;
-  --color-teal-deep: #0f766e;
-  --color-teal-tint: #dff1ee;
-  --color-mineral-blue: #31576b;
-  --color-brass: #8b7247;
-  --color-shell-border: #0f172a0f;
-  --color-shell-border-strong: #0f172a1a;
+  --color-ink-strong: #111c25;
+  --color-ink-body: #4d5c68;
+  --color-ink-muted: #75828c;
+  --color-mineral-500: #5f7281;
+  --color-teal-600: #155e63;
+  --color-teal-700: #10474c;
+  --color-bronze-500: #816e5f;
+  --color-paper-50: #f4f6f8;
+  --color-paper-100: #ebeff3;
+  --color-paper-200: #dbe3ea;
+  --color-ivory: #f4f6f8;
+  --color-ivory-panel: #fbfcfd;
+  --color-ivory-muted: #ebeff3;
+  --color-slate-deep: #111c25;
+  --color-slate-body: #4d5c68;
+  --color-slate-muted: #75828c;
+  --color-slate-soft: #8a949d;
+  --color-teal-deep: #155e63;
+  --color-teal-tint: #dcebed;
+  --color-mineral-blue: #5f7281;
+  --color-brass: #816e5f;
+  --color-shell-border: rgba(23, 33, 43, 0.08);
+  --color-shell-border-strong: rgba(23, 33, 43, 0.14);
 
-  --shadow-quiet: 0 1px 2px rgba(15, 23, 42, 0.04), 0 16px 36px rgba(15, 23, 42, 0.06);
-  --shadow-float: 0 1px 2px rgba(15, 23, 42, 0.03), 0 10px 22px rgba(15, 23, 42, 0.05);
+  --shadow-panel: 0 1px 2px rgba(15, 23, 42, 0.03), 0 18px 38px rgba(15, 23, 42, 0.05);
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.02), 0 8px 20px rgba(15, 23, 42, 0.04);
+  --shadow-quiet: 0 1px 2px rgba(15, 23, 42, 0.04), 0 20px 42px rgba(15, 23, 42, 0.04);
+  --shadow-float: 0 1px 2px rgba(15, 23, 42, 0.03), 0 12px 24px rgba(15, 23, 42, 0.04);
+}
+
+:root,
+[data-theme="pfas"] {
+  color-scheme: light;
+  --color-base-100: #fbfcfd;
+  --color-base-200: #eef2f5;
+  --color-base-300: #dbe3ea;
+  --color-base-content: #111c25;
+  --color-primary: #155e63;
+  --color-primary-content: #f7fbfc;
+  --color-secondary: #5f7281;
+  --color-secondary-content: #f7fbfc;
+  --color-accent: #816e5f;
+  --color-accent-content: #fbf8f5;
+  --color-neutral: #13202a;
+  --color-neutral-content: #f5f8fa;
+  --color-info: #567a90;
+  --color-info-content: #f7fbfc;
+  --color-success: #4d6f5f;
+  --color-success-content: #f7fbfc;
+  --color-warning: #8f6a2d;
+  --color-warning-content: #fdf7eb;
+  --color-error: #9a5143;
+  --color-error-content: #fff7f5;
+  --radius-selector: 0.75rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@utility shell {
+  width: min(84rem, calc(100vw - 2.5rem));
+  margin-inline: auto;
+}
+
+@utility prose-dossier {
+  --tw-prose-body: #445260;
+  --tw-prose-headings: #17212b;
+  --tw-prose-lead: #445260;
+  --tw-prose-links: #245b61;
+  --tw-prose-bold: #17212b;
+  --tw-prose-counters: #717d87;
+  --tw-prose-bullets: rgb(36 91 97 / 0.5);
+  --tw-prose-hr: rgb(23 33 43 / 0.1);
+  --tw-prose-quotes: #17212b;
+  --tw-prose-quote-borders: rgb(36 91 97 / 0.18);
+  --tw-prose-captions: #717d87;
+  --tw-prose-code: #17212b;
+  --tw-prose-pre-code: #f7f5ef;
+  --tw-prose-pre-bg: #202b33;
+  --tw-prose-th-borders: rgb(23 33 43 / 0.12);
+  --tw-prose-td-borders: rgb(23 33 43 / 0.08);
 }
 
 @layer base {
@@ -28,11 +105,17 @@
   }
 
   body {
+    min-height: 100vh;
     letter-spacing: -0.01em;
+    background:
+      radial-gradient(circle at top, rgba(95, 114, 129, 0.08), transparent 26rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0)),
+      #f4f6f8;
+    color: #111c25;
   }
 
   ::selection {
-    background: rgba(15, 118, 110, 0.14);
-    color: #17212b;
+    background: rgba(21, 94, 99, 0.16);
+    color: #111c25;
   }
 }
