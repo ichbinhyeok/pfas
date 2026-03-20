@@ -54,7 +54,9 @@ public class StaticExportService {
 		addFixedItem(items, "/favicon.svg", false, "asset", null);
 
 		var pageGenerationManifest = derivedArtifactService.buildPageGenerationManifest();
-		pageGenerationManifest.models().forEach(model ->
+		pageGenerationManifest.models().stream()
+			.filter(StaticExportService::isIndexable)
+			.forEach(model ->
 			items.putIfAbsent(
 				model.renderPath(),
 				new StaticExportManifestItem(
@@ -65,10 +67,11 @@ public class StaticExportService {
 					"generated_page_model",
 					model.lastVerifiedDate()
 				)
-			)
-		);
+			))
+		;
 
 		pageGenerationManifest.models().stream()
+			.filter(StaticExportService::isIndexable)
 			.filter(model -> "public_water".equals(model.routeType()))
 			.forEach(model -> items.putIfAbsent(
 				"/public-water-system/" + model.routeKey(),
@@ -176,5 +179,9 @@ public class StaticExportService {
 			return path.substring(1);
 		}
 		return path.substring(1) + "/index.html";
+	}
+
+	private static boolean isIndexable(com.example.pfas.derived.PageGenerationManifestItem model) {
+		return model.indexable();
 	}
 }

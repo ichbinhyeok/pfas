@@ -430,6 +430,97 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official AQ-RO-3 install and performance data describing certification scope, PFAS reduction, and replacement cadence."
+    },
+    {
+      "raw_source_id": "raw-zerowater-all-products-collection-20260320",
+      "source_id": "zerowater-all-products-collection",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/collections/all-water-filter-products",
+      "organization": "ZeroWater",
+      "title": "All Water Filter Products",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater product collection used to capture current product handles and prices."
+    },
+    {
+      "raw_source_id": "raw-zerowater-performance-certification-20260320",
+      "source_id": "zerowater-performance-certification",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/pages/performance-certification",
+      "organization": "ZeroWater",
+      "title": "Performance Data Sheets & Certification",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater certification page linking the all-certified-devices performance sheet."
+    },
+    {
+      "raw_source_id": "raw-zerowater-certified-devices-performance-pdf-20260320",
+      "source_id": "zerowater-certified-devices-performance-pdf",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://cdn.shopify.com/s/files/1/0311/5499/5336/files/Performance_Data_Sheet_for_all_certified_devices_IAPMO_12-1-2023.pdf?v=1702410912",
+      "organization": "ZeroWater",
+      "title": "Performance Data Sheet for All Certified Devices IAPMO 12-1-2023",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater all-certified-devices performance sheet used for direct PFOA/PFOS claim extraction."
+    },
+    {
+      "raw_source_id": "raw-zerowater-7-cup-pitcher-product-20260320",
+      "source_id": "zerowater-7-cup-pitcher-product",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/products/7-cup-water-filter-pitcher",
+      "organization": "ZeroWater",
+      "title": "7 Cup Ready-Pour Pitcher",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater 7 Cup Ready-Pour Pitcher product page."
+    },
+    {
+      "raw_source_id": "raw-zerowater-23-cup-dispenser-product-20260320",
+      "source_id": "zerowater-23-cup-dispenser-product",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/products/zerowater-23-cup-dispenser",
+      "organization": "ZeroWater",
+      "title": "23 Cup 5-Stage Water Filter Dispenser",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater 23 Cup dispenser product page."
+    },
+    {
+      "raw_source_id": "raw-zerowater-5-gallon-cooler-product-20260320",
+      "source_id": "zerowater-5-gallon-cooler-product",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/products/filtered-water-cooler",
+      "organization": "ZeroWater",
+      "title": "5-Gallon Water Cooler Dispenser",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater 5-gallon dispenser product page."
+    },
+    {
+      "raw_source_id": "raw-zerowater-30-cup-dispenser-bundle-product-20260320",
+      "source_id": "zerowater-30-cup-dispenser-bundle-product",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.zerowater.com/products/subscription-bundle-offer-30-cup-water-filter-ready-pour-dispenser-2pk-filters",
+      "organization": "ZeroWater",
+      "title": "30 Cup Ready-Pour Dispenser + 2 Filters",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater 30 Cup Ready-Pour dispenser bundle page."
     }
   ]
 }

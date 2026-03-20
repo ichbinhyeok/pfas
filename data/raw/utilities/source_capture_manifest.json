@@ -508,6 +508,45 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official Calvada Meadows PFAS report showing non-detect results across the mapped PFAS analytes."
+    },
+    {
+      "raw_source_id": "raw-georgia-water-home-20260320",
+      "source_id": "georgia-water-home",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.mywater.us/georgia",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "Utilities, Inc. of Georgia",
+      "content_type": "text/html",
+      "jurisdiction": "GA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Utilities, Inc. of Georgia homepage used as the Alpine Terrace utility anchor."
+    },
+    {
+      "raw_source_id": "raw-alpine-terrace-2024-water-quality-report-20260320",
+      "source_id": "alpine-terrace-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/alpineterrace-24ccr-742dbad5fe5853362838a44ff0000903d3d.pdf?sfvrsn=a19e3d5b_4",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "Annual Water Quality Report 2024 Alpine Terrace CCR 742",
+      "content_type": "application/pdf",
+      "jurisdiction": "GA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Alpine Terrace CCR confirming PWS ID GA3110075 and source-water context."
+    },
+    {
+      "raw_source_id": "raw-alpine-terrace-pfas-2023-report-20260320",
+      "source_id": "alpine-terrace-pfas-2023-report",
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "url": "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/ga-pfas-2023-alpine-terace-742.pdf?sfvrsn=f39a3d5b_4",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "PFAS Results 2023 Alpine Terrace 742",
+      "content_type": "application/pdf",
+      "jurisdiction": "GA",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Alpine Terrace PFAS report with non-detect values across the mapped benchmark analytes."
     }
   ]
 }

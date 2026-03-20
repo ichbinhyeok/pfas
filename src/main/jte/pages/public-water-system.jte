@@ -6,12 +6,13 @@
 @param String siteMethodologyOwner
 @param PublicWaterSystem system
 @param List<SourceDocument> sources
+@param boolean pageIndexable
 
 @template.layout.base(
     pageTitle = system.pwsName() + " utility context",
     pageDescription = "Utility-context page for " + system.pwsName() + " before result interpretation.",
     pageCanonicalUrl = siteBaseUrl + "/public-water-system/" + system.pwsid(),
-    pageIndexable = true,
+    pageIndexable = pageIndexable,
     content = @`
 <section class="result-shell">
     <div class="shell">

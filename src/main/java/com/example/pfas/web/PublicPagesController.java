@@ -18,6 +18,7 @@ import com.example.pfas.checker.ActionBenchmarkRelation;
 import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.decision.PublicWaterDecisionService;
+import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.result.PrivateWellResultService;
 import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceDocument;
@@ -38,6 +39,7 @@ public class PublicPagesController {
 	private final ActionCheckerService actionCheckerService;
 	private final GuidePageService guidePageService;
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
+	private final RouteQualityGateService routeQualityGateService;
 
 	public PublicPagesController(
 		PublicWaterSystemService publicWaterSystemService,
@@ -48,7 +50,8 @@ public class PublicPagesController {
 		SourceRegistryService sourceRegistryService,
 		ActionCheckerService actionCheckerService,
 		GuidePageService guidePageService,
-		StateBenchmarkProfileService stateBenchmarkProfileService
+		StateBenchmarkProfileService stateBenchmarkProfileService,
+		RouteQualityGateService routeQualityGateService
 	) {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.stateGuidanceService = stateGuidanceService;
@@ -59,6 +62,7 @@ public class PublicPagesController {
 		this.actionCheckerService = actionCheckerService;
 		this.guidePageService = guidePageService;
 		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
+		this.routeQualityGateService = routeQualityGateService;
 	}
 
 	@GetMapping("/")
@@ -138,6 +142,7 @@ public class PublicPagesController {
 		model.addAttribute("system", system);
 		model.addAttribute("decision", decision);
 		model.addAttribute("result", result);
+		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water", system.pwsid()));
 		return "pages/public-water-result";
 	}
 
@@ -148,6 +153,7 @@ public class PublicPagesController {
 
 		model.addAttribute("system", system);
 		model.addAttribute("sources", resolveSources(system.sourceIds()));
+		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water", system.pwsid()));
 		return "pages/public-water-system";
 	}
 
@@ -159,6 +165,7 @@ public class PublicPagesController {
 		model.addAttribute("guidance", guidance);
 		model.addAttribute("profile", stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null));
 		model.addAttribute("sources", resolveSources(guidance.sourceIds()));
+		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("state_guidance", guidance.stateCode()));
 		return "pages/private-well-state";
 	}
 

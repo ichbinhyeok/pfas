@@ -2749,6 +2749,224 @@
         "third-party listing replacement"
       ],
       "notes": "OptimH2O Reverse Osmosis plus Claryum install and performance sheet describes certification to NSF ANSI 42, 53, 58, 401, and P473 with direct PFOA and PFOS claim support."
+    },
+    {
+      "source_id": "georgia-water-home",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "Utilities, Inc. of Georgia",
+      "url": "https://www.mywater.us/georgia",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "GA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Utilities, Inc. of Georgia homepage used as the utility anchor for Alpine Terrace."
+    },
+    {
+      "source_id": "alpine-terrace-2024-water-quality-report",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "Annual Water Quality Report 2024 Alpine Terrace CCR 742",
+      "url": "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/alpineterrace-24ccr-742dbad5fe5853362838a44ff0000903d3d.pdf?sfvrsn=a19e3d5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "GA",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "source water confirmation"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Alpine Terrace CCR confirming PWS ID GA3110075 and the single-well rock aquifer source profile."
+    },
+    {
+      "source_id": "alpine-terrace-pfas-2023-report",
+      "organization": "Utilities, Inc. of Georgia",
+      "title": "PFAS Results 2023 Alpine Terrace 742",
+      "url": "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/ga-pfas-2023-alpine-terace-742.pdf?sfvrsn=f39a3d5b_4",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "GA",
+      "published_date": "2023-11-16",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": "2023-11-16",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Alpine Terrace PFAS report showing non-detect values across the mapped benchmark analytes."
+    },
+    {
+      "source_id": "zerowater-all-products-collection",
+      "organization": "ZeroWater",
+      "title": "All Water Filter Products",
+      "url": "https://www.zerowater.com/collections/all-water-filter-products",
+      "source_kind": "vendor_collection_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "current product availability"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official ZeroWater all-products collection page used to confirm current product handles and storefront pricing."
+    },
+    {
+      "source_id": "zerowater-performance-certification",
+      "organization": "ZeroWater",
+      "title": "Performance Data Sheets & Certification",
+      "url": "https://www.zerowater.com/pages/performance-certification",
+      "source_kind": "vendor_certification_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "vendor certification directory",
+        "performance sheet navigation"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "ZeroWater certification page linking the current all-certified-devices performance sheet."
+    },
+    {
+      "source_id": "zerowater-certified-devices-performance-pdf",
+      "organization": "ZeroWater",
+      "title": "Performance Data Sheet for All Certified Devices IAPMO 12-1-2023",
+      "url": "https://cdn.shopify.com/s/files/1/0311/5499/5336/files/Performance_Data_Sheet_for_all_certified_devices_IAPMO_12-1-2023.pdf?v=1702410912",
+      "source_kind": "vendor_performance_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": "2023-12-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": "2023-12-01",
+      "allowed_uses": [
+        "claim-level PFAS reduction note",
+        "certification scope extraction"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution",
+        "third-party listing replacement"
+      ],
+      "notes": "ZeroWater all-certified-devices performance data sheet stating IAPMO R&T testing to NSF ANSI 42 and 53 with direct PFOA and PFOS reduction."
+    },
+    {
+      "source_id": "zerowater-7-cup-pitcher-product",
+      "organization": "ZeroWater",
+      "title": "7 Cup Ready-Pour Pitcher",
+      "url": "https://www.zerowater.com/products/7-cup-water-filter-pitcher",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product identity",
+        "installation type"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official ZeroWater 7 Cup Ready-Pour Pitcher product page."
+    },
+    {
+      "source_id": "zerowater-23-cup-dispenser-product",
+      "organization": "ZeroWater",
+      "title": "23 Cup 5-Stage Water Filter Dispenser",
+      "url": "https://www.zerowater.com/products/zerowater-23-cup-dispenser",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product identity",
+        "installation type"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official ZeroWater 23 Cup dispenser product page."
+    },
+    {
+      "source_id": "zerowater-5-gallon-cooler-product",
+      "organization": "ZeroWater",
+      "title": "5-Gallon Water Cooler Dispenser",
+      "url": "https://www.zerowater.com/products/filtered-water-cooler",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product identity",
+        "installation type"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official ZeroWater 5-gallon cooler dispenser product page."
+    },
+    {
+      "source_id": "zerowater-30-cup-dispenser-bundle-product",
+      "organization": "ZeroWater",
+      "title": "30 Cup Ready-Pour Dispenser + 2 Filters",
+      "url": "https://www.zerowater.com/products/subscription-bundle-offer-30-cup-water-filter-ready-pour-dispenser-2pk-filters",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T10:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product identity",
+        "installation type"
+      ],
+      "disallowed_uses": [
+        "claim proof without supporting documentation"
+      ],
+      "notes": "Official ZeroWater 30 Cup Ready-Pour Dispenser bundle product page."
     }
   ]
 }

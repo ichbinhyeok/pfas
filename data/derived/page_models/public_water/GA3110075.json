@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:56:01.351500800+09:00",
-  "model_id" : "public_water:NV0000408",
+  "generated_at" : "2026-03-20T10:56:01.140119100+09:00",
+  "model_id" : "public_water:GA3110075",
   "route_type" : "public_water",
-  "route_key" : "NV0000408",
+  "route_key" : "GA3110075",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NV0000408",
+  "render_path" : "/public-water/GA3110075",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 4,
+  "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "NV0000408",
-      "pwsName" : "Calvada Meadows Water System",
-      "stateCode" : "NV",
+      "pwsid" : "GA3110075",
+      "pwsName" : "Alpine Terrace Water System",
+      "stateCode" : "GA",
       "systemType" : "community",
       "populationServed" : "",
       "sourceWaterType" : "groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/greatbasinwater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2024/calvadameadows-24ccr-443cm(891).pdf?sfvrsn=7df43c5b_6",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2023/pahrump-(cv-meadows).pdf?sfvrsn=82de3a5b_4",
-      "serviceAreaNotes" : "Great Basin Water community groundwater system in Pahrump with a separate 2023 PFAS report and 2024 CCR system context for Calvada Meadows",
+      "utilityWebsiteUrl" : "https://www.mywater.us/georgia",
+      "ccrUrl" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/alpineterrace-24ccr-742dbad5fe5853362838a44ff0000903d3d.pdf?sfvrsn=a19e3d5b_4",
+      "pfasNoticeUrl" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/ga-pfas-2023-alpine-terace-742.pdf?sfvrsn=f39a3d5b_4",
+      "serviceAreaNotes" : "Utilities Inc. of Georgia community groundwater system using a single rock aquifer well with a 2023 PFAS report showing non-detects across mapped analytes",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "great-basin-water-home", "great-basin-water-quality-reports", "calvada-meadows-2024-water-quality-report", "calvada-meadows-pfas-2023-report" ]
+      "sourceIds" : [ "georgia-water-home", "alpine-terrace-2024-water-quality-report", "alpine-terrace-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NV0000408",
+      "result_id" : "public-water:GA3110075",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T10:56:01.349501300+09:00",
+      "generated_at" : "2026-03-20T10:56:01.137608500+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
@@ -76,28 +76,22 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "calvada-meadows-2024-water-quality-report",
-        "organization" : "Great Basin Water",
-        "title" : "Annual Water Quality Report 2024 Calvada Meadows CCR 443CM 891",
-        "url" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2024/calvadameadows-24ccr-443cm(891).pdf?sfvrsn=7df43c5b_6",
+        "source_id" : "alpine-terrace-2024-water-quality-report",
+        "organization" : "Utilities, Inc. of Georgia",
+        "title" : "Annual Water Quality Report 2024 Alpine Terrace CCR 742",
+        "url" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/alpineterrace-24ccr-742dbad5fe5853362838a44ff0000903d3d.pdf?sfvrsn=a19e3d5b_4",
         "trust_tier" : 2
       }, {
-        "source_id" : "calvada-meadows-pfas-2023-report",
-        "organization" : "Great Basin Water",
-        "title" : "PFAS Results 2023 Calvada Meadows",
-        "url" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/calvada-meadows/2023/pahrump-(cv-meadows).pdf?sfvrsn=82de3a5b_4",
+        "source_id" : "alpine-terrace-pfas-2023-report",
+        "organization" : "Utilities, Inc. of Georgia",
+        "title" : "PFAS Results 2023 Alpine Terrace 742",
+        "url" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/ga-pfas-2023-alpine-terace-742.pdf?sfvrsn=f39a3d5b_4",
         "trust_tier" : 2
       }, {
-        "source_id" : "great-basin-water-home",
-        "organization" : "Great Basin Water",
-        "title" : "Great Basin Water",
-        "url" : "https://www.myutility.us/greatbasinwater",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "great-basin-water-quality-reports",
-        "organization" : "Great Basin Water",
-        "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/greatbasinwater/water-safety/water-quality-reports",
+        "source_id" : "georgia-water-home",
+        "organization" : "Utilities, Inc. of Georgia",
+        "title" : "Utilities, Inc. of Georgia",
+        "url" : "https://www.mywater.us/georgia",
         "trust_tier" : 2
       } ],
       "meta" : {
@@ -108,9 +102,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NV0000408",
+      "input_id" : "public_water:GA3110075",
       "route_type" : "public_water",
-      "route_key" : "NV0000408",
+      "route_key" : "GA3110075",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -118,12 +112,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NV0000408",
+      "pwsid" : "GA3110075",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/NV0000408",
-      "secondary_path" : "/internal/results/public-water/NV0000408",
+      "primary_path" : "/public-water/GA3110075",
+      "secondary_path" : "/internal/results/public-water/GA3110075",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NV0000408"
+    "supporting_path" : "/public-water-system/GA3110075"
   }
 }

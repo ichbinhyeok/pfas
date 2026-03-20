@@ -7,11 +7,13 @@ import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
 import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.data.PfasDataProperties;
+import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.readiness.ExpansionReadinessStatus;
 import com.example.pfas.result.PrivateWellResultService;
@@ -29,6 +31,8 @@ public class DerivedArtifactService {
 	private static final String SCHEMA_VERSION = "v1";
 	private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
+	private final PublicationRouteService publicationRouteService;
+	private final RouteQualityGateService routeQualityGateService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final GuidePageService guidePageService;
 	private final StateGuidanceService stateGuidanceService;
@@ -40,6 +44,8 @@ public class DerivedArtifactService {
 	private final PfasDataProperties dataProperties;
 
 	public DerivedArtifactService(
+		PublicationRouteService publicationRouteService,
+		RouteQualityGateService routeQualityGateService,
 		ExpansionReadinessService expansionReadinessService,
 		GuidePageService guidePageService,
 		StateGuidanceService stateGuidanceService,
@@ -50,6 +56,8 @@ public class DerivedArtifactService {
 		ActionCheckerService actionCheckerService,
 		PfasDataProperties dataProperties
 	) {
+		this.publicationRouteService = publicationRouteService;
+		this.routeQualityGateService = routeQualityGateService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.guidePageService = guidePageService;
 		this.stateGuidanceService = stateGuidanceService;
@@ -63,35 +71,28 @@ public class DerivedArtifactService {
 
 	public RouteManifestFile buildRouteManifest() {
 		var generatedAt = OffsetDateTime.now().toString();
-		var routes = new ArrayList<RouteManifestRoute>();
+		var gateIndex = routeQualityGateService.decisionIndex();
+		var routes = publicationRouteService.buildRoutes().stream()
+			.map(route -> applyGate(route, gateIndex))
+			.toList();
 
-		guidePageService.getAll().stream()
-			.sorted(Comparator.comparing(GuidePage::slug))
-			.map(this::toGuideRoute)
-			.forEach(routes::add);
-
-		expansionReadinessService.getReport().items().stream()
-			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
-			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
-			.map(this::toReadyRoute)
-			.forEach(routes::add);
-
-		return new RouteManifestFile(SCHEMA_VERSION, generatedAt, routes.size(), List.copyOf(routes));
+		return new RouteManifestFile(SCHEMA_VERSION, generatedAt, routes.size(), routes);
 	}
 
 	public SearchIndexSeedFile buildSearchIndexSeed() {
 		var generatedAt = OffsetDateTime.now().toString();
 		var documents = new ArrayList<SearchIndexSeedDocument>();
+		var gateIndex = routeQualityGateService.decisionIndex();
 
 		guidePageService.getAll().stream()
 			.sorted(Comparator.comparing(GuidePage::slug))
-			.map(this::toGuideDocument)
+			.map(page -> toGuideDocument(page, routeIndexable(gateIndex, "guide", page.slug())))
 			.forEach(documents::add);
 
 		expansionReadinessService.getReport().items().stream()
 			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
 			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
-			.map(this::toReadyDocument)
+			.map(item -> toReadyDocument(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())))
 			.forEach(documents::add);
 
 		return new SearchIndexSeedFile(SCHEMA_VERSION, generatedAt, documents.size(), List.copyOf(documents));
@@ -131,25 +132,27 @@ public class DerivedArtifactService {
 
 	public List<GeneratedPageModelFile> buildPageModels() {
 		var models = new ArrayList<GeneratedPageModelFile>();
+		var gateIndex = routeQualityGateService.decisionIndex();
 
 		guidePageService.getAll().stream()
 			.sorted(Comparator.comparing(GuidePage::slug))
-			.map(this::toGuidePageModel)
+			.map(page -> toGuidePageModel(page, routeIndexable(gateIndex, "guide", page.slug())))
 			.forEach(models::add);
 
 		expansionReadinessService.getReport().items().stream()
 			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
 			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
-			.map(this::toReadyPageModel)
+			.map(item -> toReadyPageModel(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())))
 			.forEach(models::add);
 
 		return List.copyOf(models);
 	}
 
 	public GeneratedPageModelFile buildPageModel(String routeType, String routeKey) {
+		var gateIndex = routeQualityGateService.decisionIndex();
 		if ("guide".equals(routeType)) {
 			return guidePageService.getBySlug(routeKey)
-				.map(this::toGuidePageModel)
+				.map(page -> toGuidePageModel(page, routeIndexable(gateIndex, "guide", page.slug())))
 				.orElseThrow(() -> new IllegalStateException("Unknown guide page model: " + routeKey));
 		}
 
@@ -158,7 +161,7 @@ public class DerivedArtifactService {
 			.filter(item -> item.routeType().equals(routeType))
 			.filter(item -> item.routeKey().equalsIgnoreCase(routeKey))
 			.findFirst()
-			.map(this::toReadyPageModel)
+			.map(item -> toReadyPageModel(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())))
 			.orElseThrow(() -> new IllegalStateException("Unknown derived page model: " + routeType + ":" + routeKey));
 	}
 
@@ -219,24 +222,7 @@ public class DerivedArtifactService {
 		}
 	}
 
-	private RouteManifestRoute toGuideRoute(GuidePage page) {
-		return new RouteManifestRoute(
-			"guide",
-			page.slug(),
-			page.title(),
-			"guide_page",
-			"/guides/" + page.slug(),
-			page.primaryHref(),
-			null,
-			true,
-			page.lastVerifiedDate(),
-			page.sourceIds().size(),
-			"curated_guide",
-			guideKeywords(page)
-		);
-	}
-
-	private SearchIndexSeedDocument toGuideDocument(GuidePage page) {
+	private SearchIndexSeedDocument toGuideDocument(GuidePage page, boolean indexable) {
 		return new SearchIndexSeedDocument(
 			"guide:" + page.slug(),
 			"guide",
@@ -245,51 +231,13 @@ public class DerivedArtifactService {
 			page.title(),
 			page.lede() + " " + page.nextActionSummary(),
 			page.lastVerifiedDate(),
-			true,
+			indexable,
 			page.sourceIds().size(),
 			guideKeywords(page)
 		);
 	}
 
-	private RouteManifestRoute toReadyRoute(com.example.pfas.readiness.ExpansionReadinessItem item) {
-		return switch (item.routeType()) {
-			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
-				.map(guidance -> new RouteManifestRoute(
-					item.routeType(),
-					item.routeKey(),
-					guidance.stateCode() + " private-well PFAS guide",
-					"private_well_state_page",
-					"/private-well/" + guidance.stateCode(),
-					"/private-well-result/" + guidance.stateCode() + "?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false",
-					"/internal/results/private-well/" + guidance.stateCode() + "?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE",
-					true,
-					item.lastVerifiedDate(),
-					item.sourceCount(),
-					"state_guidance_ready",
-					List.of(guidance.stateCode(), "private well", "PFAS", "certified lab", "state guidance")
-				))
-				.orElseThrow(() -> new IllegalStateException("Missing state guidance for ready route: " + item.routeKey()));
-			case "public_water" -> publicWaterSystemService.getByPwsid(item.routeKey())
-				.map(system -> new RouteManifestRoute(
-					item.routeType(),
-					item.routeKey(),
-					system.pwsName() + " PFAS interpretation",
-					"public_water_result_page",
-					"/public-water/" + system.pwsid(),
-					"/public-water-system/" + system.pwsid(),
-					"/internal/results/public-water/" + system.pwsid(),
-					true,
-					item.lastVerifiedDate(),
-					item.sourceCount(),
-					"public_water_ready",
-					List.of(system.pwsName(), system.stateCode(), system.pwsid(), "CCR", "PFAS", "public water")
-				))
-				.orElseThrow(() -> new IllegalStateException("Missing public water system for ready route: " + item.routeKey()));
-			default -> throw new IllegalStateException("Unsupported ready route type: " + item.routeType());
-		};
-	}
-
-	private SearchIndexSeedDocument toReadyDocument(com.example.pfas.readiness.ExpansionReadinessItem item) {
+	private SearchIndexSeedDocument toReadyDocument(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
 		return switch (item.routeType()) {
 			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
 				.map(guidance -> new SearchIndexSeedDocument(
@@ -300,7 +248,7 @@ public class DerivedArtifactService {
 					guidance.stateCode() + " private-well PFAS guide",
 					"State guidance, lab lookup, and reference context for private-well PFAS interpretation in " + guidance.stateCode() + ".",
 					item.lastVerifiedDate(),
-					true,
+					indexable,
 					item.sourceCount(),
 					List.of(guidance.stateCode(), "private well", "PFAS", "state guidance", "lab lookup")
 				))
@@ -314,7 +262,7 @@ public class DerivedArtifactService {
 					system.pwsName() + " PFAS interpretation",
 					"Utility observations, benchmark context, and certified point-of-use next steps for " + system.pwsName() + ".",
 					item.lastVerifiedDate(),
-					true,
+					indexable,
 					item.sourceCount(),
 					List.of(system.pwsName(), system.stateCode(), system.pwsid(), "public water", "CCR", "PFAS")
 				))
@@ -393,7 +341,7 @@ public class DerivedArtifactService {
 		};
 	}
 
-	private GeneratedPageModelFile toGuidePageModel(GuidePage page) {
+	private GeneratedPageModelFile toGuidePageModel(GuidePage page, boolean indexable) {
 		return new GeneratedPageModelFile(
 			SCHEMA_VERSION,
 			OffsetDateTime.now().toString(),
@@ -403,14 +351,14 @@ public class DerivedArtifactService {
 			"guide_page",
 			"/guides/" + page.slug(),
 			"static_file_seed",
-			true,
+			indexable,
 			page.lastVerifiedDate(),
 			page.sourceIds().size(),
 			new GuidePageModelPayload(page)
 		);
 	}
 
-	private GeneratedPageModelFile toReadyPageModel(com.example.pfas.readiness.ExpansionReadinessItem item) {
+	private GeneratedPageModelFile toReadyPageModel(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
 		return switch (item.routeType()) {
 			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
 				.map(guidance -> new GeneratedPageModelFile(
@@ -422,7 +370,7 @@ public class DerivedArtifactService {
 					"private_well_state_page",
 					"/private-well/" + guidance.stateCode(),
 					"static_file_seed",
-					true,
+					indexable,
 					item.lastVerifiedDate(),
 					item.sourceCount(),
 					new StateGuidePageModelPayload(
@@ -444,7 +392,7 @@ public class DerivedArtifactService {
 						"public_water_result_page",
 						"/public-water/" + system.pwsid(),
 						"static_file_seed",
-						true,
+						indexable,
 						item.lastVerifiedDate(),
 						item.sourceCount(),
 						new PublicWaterPageModelPayload(
@@ -465,5 +413,27 @@ public class DerivedArtifactService {
 
 	private List<String> guideKeywords(GuidePage page) {
 		return List.of(page.slug().replace('-', ' '), "PFAS", "water", "decision guide");
+	}
+
+	private RouteManifestRoute applyGate(RouteManifestRoute route, Map<String, com.example.pfas.quality.RouteQualityDecision> gateIndex) {
+		return new RouteManifestRoute(
+			route.routeType(),
+			route.routeKey(),
+			route.displayLabel(),
+			route.templateKind(),
+			route.primaryPath(),
+			route.supportingPath(),
+			route.apiPath(),
+			routeIndexable(gateIndex, route.routeType(), route.routeKey()),
+			route.lastVerifiedDate(),
+			route.sourceCount(),
+			route.readinessBasis(),
+			route.keywords()
+		);
+	}
+
+	private boolean routeIndexable(Map<String, com.example.pfas.quality.RouteQualityDecision> gateIndex, String routeType, String routeKey) {
+		var decision = gateIndex.get((routeType + ":" + routeKey).toUpperCase());
+		return decision == null || decision.indexable();
 	}
 }

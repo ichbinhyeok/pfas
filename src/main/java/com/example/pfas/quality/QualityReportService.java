@@ -4,14 +4,9 @@ import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.example.pfas.derived.DerivedArtifactService;
-import com.example.pfas.readiness.ExpansionReadinessItem;
-import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 
@@ -19,20 +14,15 @@ import com.example.pfas.source.SourceRegistryService;
 public class QualityReportService {
 
 	private static final int SOURCE_STALE_DAYS = 120;
-	private static final int ROUTE_STALE_DAYS = 120;
-	private static final int MIN_INDEXABLE_ROUTE_SOURCE_COUNT = 3;
 
-	private final DerivedArtifactService derivedArtifactService;
-	private final ExpansionReadinessService expansionReadinessService;
+	private final RouteQualityGateService routeQualityGateService;
 	private final SourceRegistryService sourceRegistryService;
 
 	public QualityReportService(
-		DerivedArtifactService derivedArtifactService,
-		ExpansionReadinessService expansionReadinessService,
+		RouteQualityGateService routeQualityGateService,
 		SourceRegistryService sourceRegistryService
 	) {
-		this.derivedArtifactService = derivedArtifactService;
-		this.expansionReadinessService = expansionReadinessService;
+		this.routeQualityGateService = routeQualityGateService;
 		this.sourceRegistryService = sourceRegistryService;
 	}
 
@@ -44,20 +34,15 @@ public class QualityReportService {
 			.sorted(Comparator.comparing(FreshnessSourceFinding::sourceId))
 			.toList();
 
-		Map<String, ExpansionReadinessItem> readinessByRoute = new HashMap<>();
-		expansionReadinessService.getReport().items().forEach(item ->
-			readinessByRoute.put(routeKey(item.routeType(), item.routeKey()), item)
-		);
-
-		var routeFindings = derivedArtifactService.buildRouteManifest().routes().stream()
-			.filter(route -> route.indexable())
-			.map(route -> toRouteFinding(route, readinessByRoute.get(routeKey(route.routeType(), route.routeKey())), today))
-			.filter(finding -> !finding.reasons().isEmpty())
+		var routeDecisions = routeQualityGateService.getAllDecisions();
+		var routeFindings = routeDecisions.stream()
+			.filter(decision -> !decision.indexable())
+			.map(this::toRouteFinding)
 			.sorted(Comparator.comparing(FreshnessRouteFinding::primaryPath))
 			.toList();
 
-		var indexableRouteCount = derivedArtifactService.buildRouteManifest().routes().stream()
-			.filter(route -> route.indexable())
+		var indexableRouteCount = routeDecisions.stream()
+			.filter(RouteQualityDecision::indexable)
 			.count();
 		var staleIndexableRouteCount = routeFindings.stream()
 			.filter(finding -> finding.reasons().contains("stale_last_verified"))
@@ -118,44 +103,16 @@ public class QualityReportService {
 		return java.util.Optional.empty();
 	}
 
-	private FreshnessRouteFinding toRouteFinding(
-		com.example.pfas.derived.RouteManifestRoute route,
-		ExpansionReadinessItem readinessItem,
-		LocalDate today
-	) {
-		var reasons = new java.util.ArrayList<String>();
-		var lastVerified = parseDate(route.lastVerifiedDate());
-		if (lastVerified == null) {
-			reasons.add("missing_last_verified");
-		}
-		else if (ChronoUnit.DAYS.between(lastVerified, today) > ROUTE_STALE_DAYS) {
-			reasons.add("stale_last_verified");
-		}
-
-		if (route.sourceCount() < MIN_INDEXABLE_ROUTE_SOURCE_COUNT) {
-			reasons.add("low_source_count");
-		}
-
-		Integer resolvedSourceCount = null;
-		if (readinessItem != null) {
-			resolvedSourceCount = readinessItem.resolvedSourceCount();
-			if (readinessItem.resolvedSourceCount() < readinessItem.sourceCount()) {
-				reasons.add("unresolved_readiness_sources");
-			}
-			if (!readinessItem.missingSignals().isEmpty()) {
-				reasons.add("readiness_missing_signals");
-			}
-		}
-
+	private FreshnessRouteFinding toRouteFinding(RouteQualityDecision decision) {
 		return new FreshnessRouteFinding(
-			route.routeType(),
-			route.routeKey(),
-			route.primaryPath(),
-			route.lastVerifiedDate(),
-			route.sourceCount(),
-			resolvedSourceCount,
-			!reasons.isEmpty(),
-			java.util.List.copyOf(reasons)
+			decision.routeType(),
+			decision.routeKey(),
+			decision.primaryPath(),
+			decision.lastVerifiedDate(),
+			decision.sourceCount(),
+			decision.resolvedSourceCount(),
+			!decision.indexable(),
+			decision.blockReasons()
 		);
 	}
 
@@ -174,9 +131,5 @@ public class QualityReportService {
 				return null;
 			}
 		}
-	}
-
-	private String routeKey(String routeType, String routeKey) {
-		return routeType + ":" + routeKey.toUpperCase();
 	}
 }

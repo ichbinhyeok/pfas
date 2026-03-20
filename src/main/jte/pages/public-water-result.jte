@@ -13,12 +13,13 @@
 @param PublicWaterSystem system
 @param PublicWaterDecisionContext decision
 @param WaterDecisionResult result
+@param boolean pageIndexable
 
 @template.layout.base(
     pageTitle = system.pwsName() + " PFAS Result",
     pageDescription = "Rendered PFAS decision result for " + system.pwsName() + " using normalized utility and benchmark data.",
     pageCanonicalUrl = siteBaseUrl + "/public-water/" + system.pwsid(),
-    pageIndexable = true,
+    pageIndexable = pageIndexable,
     content = @`
 <section class="result-shell">
     <div class="shell">

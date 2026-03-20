@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.pfas.filter.FilterCatalogService;
+import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
@@ -25,6 +26,7 @@ public class GuidePagesController {
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final FilterCatalogService filterCatalogService;
 	private final ExpansionReadinessService expansionReadinessService;
+	private final RouteQualityGateService routeQualityGateService;
 
 	public GuidePagesController(
 		GuidePageService guidePageService,
@@ -32,7 +34,8 @@ public class GuidePagesController {
 		StateGuidanceService stateGuidanceService,
 		PublicWaterSystemService publicWaterSystemService,
 		FilterCatalogService filterCatalogService,
-		ExpansionReadinessService expansionReadinessService
+		ExpansionReadinessService expansionReadinessService,
+		RouteQualityGateService routeQualityGateService
 	) {
 		this.guidePageService = guidePageService;
 		this.sourceRegistryService = sourceRegistryService;
@@ -40,6 +43,7 @@ public class GuidePagesController {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.filterCatalogService = filterCatalogService;
 		this.expansionReadinessService = expansionReadinessService;
+		this.routeQualityGateService = routeQualityGateService;
 	}
 
 	@GetMapping("/guides/{slug}")
@@ -55,6 +59,7 @@ public class GuidePagesController {
 		model.addAttribute("page", page);
 		model.addAttribute("allGuides", guidePageService.getAll());
 		model.addAttribute("guideSources", guideSources);
+		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
 		return "pages/guide-page";
 	}
 

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T05:29:20.042573900+09:00",
+  "generated_at" : "2026-03-20T10:56:01.421750500+09:00",
   "model_id" : "state_guidance:CA",
   "route_type" : "state_guidance",
   "route_key" : "CA",

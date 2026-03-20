@@ -8,12 +8,13 @@
 @param GuidePage page
 @param List<GuidePage> allGuides
 @param List<SourceDocument> guideSources
+@param boolean pageIndexable
 
 @template.layout.base(
     pageTitle = page.title(),
     pageDescription = page.lede(),
     pageCanonicalUrl = siteBaseUrl + "/guides/" + page.slug(),
-    pageIndexable = true,
+    pageIndexable = pageIndexable,
     content = @`
 <section class="result-shell">
     <div class="shell">

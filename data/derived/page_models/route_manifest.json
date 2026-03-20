@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T05:29:17.983121600+09:00",
-  "route_count" : 26,
+  "generated_at" : "2026-03-20T10:55:58.820001300+09:00",
+  "route_count" : 27,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -145,6 +145,19 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "GA3110075",
+    "display_label" : "Alpine Terrace Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/GA3110075",
+    "supporting_path" : "/public-water-system/GA3110075",
+    "api_path" : "/internal/results/public-water/GA3110075",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Alpine Terrace Water System", "GA", "GA3110075", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "IL0855150",

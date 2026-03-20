@@ -8,12 +8,13 @@
 @param StateGuidance guidance
 @param StateBenchmarkProfile profile
 @param List<SourceDocument> sources
+@param boolean pageIndexable
 
 @template.layout.base(
     pageTitle = guidance.stateCode() + " private-well PFAS guide",
     pageDescription = "State-backed private-well PFAS routing page for " + guidance.stateCode() + ".",
     pageCanonicalUrl = siteBaseUrl + "/private-well/" + guidance.stateCode(),
-    pageIndexable = true,
+    pageIndexable = pageIndexable,
     content = @`
 <section class="result-shell">
     <div class="shell">
