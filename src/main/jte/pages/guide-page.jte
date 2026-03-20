@@ -3,14 +3,15 @@
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.web.GuidePage
 @import com.example.pfas.web.GuideSection
-@import com.example.pfas.water.PublicWaterSystem
+@import com.example.pfas.web.GuideSystemExample
+@import com.example.pfas.web.PresentationText
 @param String siteBaseUrl
 @param String siteEditorialOwner
 @param String siteMethodologyOwner
 @param GuidePage page
 @param List<GuidePage> allGuides
 @param List<SourceDocument> guideSources
-@param List<PublicWaterSystem> relatedSystems
+@param List<GuideSystemExample> relatedSystemExamples
 @param List<FilterCatalogItem> relatedProducts
 @param boolean pageIndexable
 
@@ -172,15 +173,15 @@
                     </div>
                 </section>
 
-                @if(!relatedSystems.isEmpty())
+                @if(!relatedSystemExamples.isEmpty())
                     <section class="rail-card">
-                        <h2 class="rail-card__title">Seeded utility dossiers</h2>
+                        <h2 class="rail-card__title">Live utility examples</h2>
                         <div class="source-list">
-                            @for(var system : relatedSystems)
-                                <a class="source-item" href="/public-water/${system.pwsid()}">
-                                    <div class="source-item__meta">${system.stateCode()} / ${system.pwsid()}</div>
-                                    <div class="source-item__title">${system.pwsName()}</div>
-                                    <div class="source-item__url">${system.sourceWaterType()} source, ${system.lastVerifiedDate()} verified</div>
+                            @for(var example : relatedSystemExamples)
+                                <a class="source-item" href="/public-water/${example.system().pwsid()}">
+                                    <div class="source-item__meta">${example.system().stateCode()} / ${example.system().pwsid()} / ${PresentationText.sourceWaterTypeLabel(example.system().sourceWaterType())}</div>
+                                    <div class="source-item__title">${example.system().pwsName()}</div>
+                                    <div class="source-item__url">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} · ${example.result().nextAction().title()}</div>
                                 </a>
                             @endfor
                         </div>
@@ -195,7 +196,7 @@
                                 <a class="source-item" href="${product.listingUrl()}">
                                     <div class="source-item__meta">${product.brand()} / ${product.installationType()}</div>
                                     <div class="source-item__title">${product.model()}</div>
-                                    <div class="source-item__url">${product.certBody()} ${product.standardCode()} / ${product.coveredPfas().size()} mapped PFAS claims</div>
+                                    <div class="source-item__url">${product.certBody()} ${product.standardCode()} / ${product.coveredPfas().size()} mapped PFAS claims / ${PresentationText.currencyLabel(product.upfrontCostUsd())}</div>
                                 </a>
                             @endfor
                         </div>

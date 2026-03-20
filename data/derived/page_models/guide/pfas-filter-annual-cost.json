@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:22:31.693278500+09:00",
+  "generated_at" : "2026-03-20T11:47:19.483405800+09:00",
   "model_id" : "guide:pfas-filter-annual-cost",
   "route_type" : "guide",
   "route_key" : "pfas-filter-annual-cost",
@@ -24,8 +24,8 @@
       "checklist" : [ "Check replacement cadence.", "Check annual cartridge cost.", "Compare burden before upgrading the treatment class." ],
       "evidenceHighlights" : [ "EPA filter guidance supports comparing upkeep and replacement burden, not just upfront price.", "Aquasana and Amway product records provide model-specific cadence and replacement pricing inputs.", "Annual ownership belongs beside the interpretation result because maintenance changes product fit." ],
       "targetQueries" : [ "pfas filter annual cost", "pfas filter maintenance cost", "pfas filter replacement cost" ],
-      "relatedPwsids" : [ "PA1510001" ],
-      "relatedProductIds" : [ "zerowater-7-cup-pitcher", "aq-claryum-direct-connect", "aquasana-aq-sfro2" ],
+      "relatedPwsids" : [ "PA1510001", "FL6535055" ],
+      "relatedProductIds" : [ "zerowater-7-cup-pitcher", "aq-claryum-direct-connect", "aquasana-aq-sfro2", "aquatru-model-1" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "aq-claryum-direct-connect-product", "aq-claryum-direct-connect-replacement", "amway-espring-100186-cartridge" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

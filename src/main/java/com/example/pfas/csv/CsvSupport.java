@@ -1,6 +1,7 @@
 package com.example.pfas.csv;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +14,37 @@ public final class CsvSupport {
 	}
 
 	public static String[] split(String line) {
-		return line.split(",", -1);
+		if (line == null) {
+			return new String[0];
+		}
+
+		var values = new ArrayList<String>();
+		var current = new StringBuilder();
+		var inQuotes = false;
+
+		for (var index = 0; index < line.length(); index++) {
+			var character = line.charAt(index);
+			if (character == '"') {
+				if (inQuotes && index + 1 < line.length() && line.charAt(index + 1) == '"') {
+					current.append('"');
+					index++;
+				} else {
+					inQuotes = !inQuotes;
+				}
+				continue;
+			}
+
+			if (character == ',' && !inQuotes) {
+				values.add(current.toString());
+				current.setLength(0);
+				continue;
+			}
+
+			current.append(character);
+		}
+
+		values.add(current.toString());
+		return values.toArray(String[]::new);
 	}
 
 	public static Map<String, Integer> headerMap(String headerLine) {

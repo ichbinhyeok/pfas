@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T23:55:00+09:00",
+  "generated_at": "2026-03-20T11:40:24+09:00",
   "documents": [
     {
       "source_id": "abington-2024-water-quality-report",
@@ -1379,6 +1379,49 @@
       "notes": "Official College Utilities report showing AK2310900 and 2024 PFAS values including PFOA 3.8 ppt, PFOS 2.4 ppt, PFHxS 6.4 ppt, and PFNA 0.46 ppt."
     },
     {
+      "source_id": "crescent-heights-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Crescent Heights CCR 084",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2024/crescentheights-24ccr-084.pdf?sfvrsn=16e3c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "direct household verdict"
+      ],
+      "notes": "Crescent Heights CCR confirming PWS ID FL3480255 and purchased-groundwater supply under wholesale agreement with Orlando Utilities Commission."
+    },
+    {
+      "source_id": "crescent-heights-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Crescent Heights 84",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2023/crescent-heights-pfas-2023.pdf?sfvrsn=8a173b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2023-03-28",
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Crescent Heights PFAS report showing non-detect results for PFOA, PFOS, PFHxS, and PFNA in 2023 sampling."
+    },
+    {
       "source_id": "csa-group-product-listing",
       "organization": "CSA Group",
       "title": "CSA Group Product Listing",
@@ -1398,6 +1441,49 @@
         "truth layer for exposure or compliance"
       ],
       "notes": "Referenced by EPA as an additional certification directory."
+    },
+    {
+      "source_id": "cypress-lakes-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Cypress Lakes CCR 095",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/cypress-lakes/2024/cypress-lakes-24ccr-095.pdf?sfvrsn=5f533c5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "direct household verdict"
+      ],
+      "notes": "Cypress Lakes CCR confirming PWS ID FL6535055 and groundwater source-water profile."
+    },
+    {
+      "source_id": "cypress-lakes-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Cypress Lakes",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/cypress-lakes/2023/cypress-lakes-pfas-2023.pdf?sfvrsn=76163b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2023-11-07",
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Cypress Lakes PFAS report showing low-level 2023 average values for PFOA, PFOS, and PFHxS with PFNA reported as non-detect."
     },
     {
       "source_id": "epa-ccr-consumer-info",
@@ -1629,6 +1715,49 @@
       "notes": "PDF companion to EPA filter guidance; date inferred from file path and publication context."
     },
     {
+      "source_id": "four-lakes-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Four Lakes CCR 127",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2024/fourlakes-24ccr-127.pdf?sfvrsn=d9b43f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "direct household verdict"
+      ],
+      "notes": "Four Lakes CCR confirming PWS ID FL3354647 and groundwater source-water profile."
+    },
+    {
+      "source_id": "four-lakes-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Four Lakes",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2023/four-lake-pfas-2023.pdf?sfvrsn=7f163b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2023-11-01",
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Four Lakes PFAS report showing 2023 average values for PFOA, PFOS, and PFHxS with PFNA reported as non-detect."
+    },
+    {
       "source_id": "georgia-water-home",
       "organization": "Utilities, Inc. of Georgia",
       "title": "Utilities, Inc. of Georgia",
@@ -1670,6 +1799,49 @@
         "cross-system extrapolation"
       ],
       "notes": "Official Golden Heart Utilities water quality report showing AK2310730 and 2024 PFAS values including PFOA 3.8 ppt and PFOS 2.4 ppt."
+    },
+    {
+      "source_id": "golden-hills-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Golden Hills CCR 136090",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2024/goldenhills-24ccr-136090.pdf?sfvrsn=c5b43f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "direct household verdict"
+      ],
+      "notes": "Golden Hills CCR confirming PWS ID FL6424076 and groundwater source-water profile."
+    },
+    {
+      "source_id": "golden-hills-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Golden Hills",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2023/golden-hills-pfas-2023362559e5853362838a44ff0000903d3d.pdf?sfvrsn=4c163b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2023-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T11:40:24+09:00",
+      "effective_date": "2023-11-01",
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Golden Hills PFAS report showing 2023 average values for PFOA, PFOS, and PFHxS with PFNA reported as non-detect."
     },
     {
       "source_id": "great-basin-water-home",

@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:22:29.862535300+09:00",
-  "document_count" : 27,
+  "generated_at" : "2026-03-20T11:47:17.703998200+09:00",
+  "document_count" : 31,
   "documents" : [ {
     "document_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
@@ -113,6 +113,28 @@
     "source_count" : 4,
     "keywords" : [ "Bermuda Water Company", "AZ", "AZ0408063", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3354647",
+    "route_type" : "public_water",
+    "route_key" : "FL3354647",
+    "url" : "/public-water/FL3354647",
+    "title" : "Four Lakes Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Four Lakes Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL3480255",
+    "route_type" : "public_water",
+    "route_key" : "FL3480255",
+    "url" : "/public-water/FL3480255",
+    "title" : "Crescent Heights Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Crescent Heights Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Crescent Heights Water System", "FL", "FL3480255", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL3590069",
     "route_type" : "public_water",
     "route_key" : "FL3590069",
@@ -123,6 +145,28 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL6424076",
+    "route_type" : "public_water",
+    "route_key" : "FL6424076",
+    "url" : "/public-water/FL6424076",
+    "title" : "Golden Hills Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Golden Hills Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL6535055",
+    "route_type" : "public_water",
+    "route_key" : "FL6535055",
+    "url" : "/public-water/FL6535055",
+    "title" : "Cypress Lakes Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Cypress Lakes Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cypress Lakes Water System", "FL", "FL6535055", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:GA3110075",
     "route_type" : "public_water",

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:22:31.693278500+09:00",
+  "generated_at" : "2026-03-20T11:47:19.483405800+09:00",
   "model_id" : "guide:public-water-vs-private-well",
   "route_type" : "guide",
   "route_key" : "public-water-vs-private-well",
@@ -24,8 +24,8 @@
       "checklist" : [ "Identify the water source first.", "If public water, open the utility path.", "If private well, open the state-guided testing path." ],
       "evidenceHighlights" : [ "EPA CCR guidance establishes public-water reporting as a direct-evidence path.", "EPA private-well guidance keeps testing owner-driven and state-guided.", "The first split is evidence system, not product category." ],
       "targetQueries" : [ "public water vs private well pfas", "pfas public water private well difference", "private well vs utility water pfas" ],
-      "relatedPwsids" : [ "PA1510001", "GA3110075" ],
-      "relatedProductIds" : [ "aq-claryum-direct-connect", "zerowater-23-cup-dispenser" ],
+      "relatedPwsids" : [ "PA1510001", "GA3110075", "FL3480255" ],
+      "relatedProductIds" : [ "aq-claryum-direct-connect", "zerowater-23-cup-dispenser", "aquatru-model-1" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-private-wells", "epa-pfas-private-wells" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

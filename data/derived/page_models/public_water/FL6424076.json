@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:20.168220+09:00",
-  "model_id" : "public_water:NC0353101",
+  "generated_at" : "2026-03-20T11:47:19.908424100+09:00",
+  "model_id" : "public_water:FL6424076",
   "route_type" : "public_water",
-  "route_key" : "NC0353101",
+  "route_key" : "FL6424076",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NC0353101",
+  "render_path" : "/public-water/FL6424076",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "NC0353101",
-      "pwsName" : "Carolina Trace Water System",
-      "stateCode" : "NC",
+      "pwsid" : "FL6424076",
+      "pwsName" : "Golden Hills Water System",
+      "stateCode" : "FL",
       "systemType" : "community",
-      "populationServed" : "4200",
-      "sourceWaterType" : "surface_water",
-      "utilityWebsiteUrl" : "https://www.myutility.us/carolinawater",
-      "ccrUrl" : "https://www.myutility.us/NC/CCR24/049.pdf",
-      "pfasNoticeUrl" : "https://www.myutility.us/NC/CCR24/049.pdf",
-      "serviceAreaNotes" : "Carolina Water Service of North Carolina system using TriRiver Waters Sanford Water Filtration Facility finished water context",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2024/goldenhills-24ccr-136090.pdf?sfvrsn=c5b43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2023/golden-hills-pfas-2023362559e5853362838a44ff0000903d3d.pdf?sfvrsn=4c163b5b_2",
+      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with separate 2023 PFAS reporting showing detectable PFOA, PFOS, and PFHxS values and a 2024 CCR for source-water context.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "carolina-trace-2024-water-quality-report" ]
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "golden-hills-2024-water-quality-report", "golden-hills-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NC0353101",
+      "result_id" : "public-water:FL6424076",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T11:47:20.150952800+09:00",
+      "generated_at" : "2026-03-20T11:47:19.891033700+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
-        "title" : "Review utility response and consider certified point-of-use filtration",
-        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
+        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
+        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
+        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 2 above selected benchmark, 2 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
         "range_high_usd" : 1499.00,
@@ -97,22 +97,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "carolina-trace-2024-water-quality-report",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Annual Water Quality Report 2024 Carolina Trace CCR 049",
-        "url" : "https://www.myutility.us/NC/CCR24/049.pdf",
+        "source_id" : "golden-hills-2024-water-quality-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "Annual Water Quality Report 2024 Golden Hills CCR 136090",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2024/goldenhills-24ccr-136090.pdf?sfvrsn=c5b43f5b_4",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-home",
-        "organization" : "Carolina Water Service of North Carolina",
-        "title" : "Carolina Water Service of North Carolina",
-        "url" : "https://www.myutility.us/carolinawater",
+        "source_id" : "golden-hills-pfas-2023-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "PFAS Monitoring Results 2023 Golden Hills",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2023/golden-hills-pfas-2023362559e5853362838a44ff0000903d3d.pdf?sfvrsn=4c163b5b_2",
         "trust_tier" : 2
       }, {
-        "source_id" : "carolina-water-quality-reports",
-        "organization" : "Carolina Water Service of North Carolina",
+        "source_id" : "sunshine-water-home",
+        "organization" : "Sunshine Water Services",
+        "title" : "Sunshine Water Services",
+        "url" : "https://www.myutility.us/sunshinewater",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "sunshine-water-quality-reports",
+        "organization" : "Sunshine Water Services",
         "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/carolinawater/water-safety/water-quality-reports",
+        "url" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -375,28 +381,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "above_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
+        "benchmark_relation" : "below_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NC0353101",
+      "input_id" : "public_water:FL6424076",
       "route_type" : "public_water",
-      "route_key" : "NC0353101",
+      "route_key" : "FL6424076",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "ABOVE_REFERENCE",
+      "benchmark_relation" : "BELOW_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NC0353101",
-      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
-      "primary_path" : "/public-water/NC0353101",
-      "secondary_path" : "/guides/under-sink-vs-whole-house",
-      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+      "pwsid" : "FL6424076",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/FL6424076",
+      "secondary_path" : "/internal/results/public-water/FL6424076",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NC0353101"
+    "supporting_path" : "/public-water-system/FL6424076"
   }
 }

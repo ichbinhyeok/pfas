@@ -1,6 +1,6 @@
 {
   "schemaVersion": "v1",
-  "generatedAt": "2026-03-20T23:55:00+09:00",
+  "generatedAt": "2026-03-20T11:40:24+09:00",
   "guides": [
     {
       "slug": "public-water-vs-private-well",
@@ -88,11 +88,13 @@
       ],
       "relatedPwsids": [
         "PA1510001",
-        "GA3110075"
+        "GA3110075",
+        "FL3480255"
       ],
       "relatedProductIds": [
         "aq-claryum-direct-connect",
-        "zerowater-23-cup-dispenser"
+        "zerowater-23-cup-dispenser",
+        "aquatru-model-1"
       ]
     },
     {
@@ -181,11 +183,14 @@
       ],
       "relatedPwsids": [
         "GA3110075",
-        "PA1510001"
+        "PA1510001",
+        "FL3354647",
+        "FL6535055"
       ],
       "relatedProductIds": [
         "aq-claryum-direct-connect",
-        "aquatru-under-sink"
+        "aquatru-under-sink",
+        "aquatru-model-1"
       ]
     },
     {
@@ -277,10 +282,13 @@
       "relatedPwsids": [
         "PA1510001",
         "7360058",
-        "GA3110075"
+        "FL3480255",
+        "FL6535055",
+        "FL6424076"
       ],
       "relatedProductIds": [
-        "aq-claryum-direct-connect"
+        "aq-claryum-direct-connect",
+        "aquatru-model-1"
       ]
     },
     {
@@ -372,7 +380,8 @@
       "relatedProductIds": [
         "aq-claryum-direct-connect",
         "aquasana-aq-sfro2",
-        "aquatru-classic"
+        "aquatru-classic",
+        "aquatru-model-1"
       ]
     },
     {
@@ -462,12 +471,14 @@
       ],
       "relatedPwsids": [
         "PA1510001",
-        "MD0120011"
+        "MD0120011",
+        "FL6424076"
       ],
       "relatedProductIds": [
         "aquasana-aq-6200",
         "aquasana-aq-sfro2",
-        "espring-122941"
+        "espring-122941",
+        "aquatru-model-1"
       ]
     },
     {
@@ -556,12 +567,14 @@
         "pfas filter replacement cost"
       ],
       "relatedPwsids": [
-        "PA1510001"
+        "PA1510001",
+        "FL6535055"
       ],
       "relatedProductIds": [
         "zerowater-7-cup-pitcher",
         "aq-claryum-direct-connect",
-        "aquasana-aq-sfro2"
+        "aquasana-aq-sfro2",
+        "aquatru-model-1"
       ]
     }
   ]

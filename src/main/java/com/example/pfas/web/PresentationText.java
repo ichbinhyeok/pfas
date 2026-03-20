@@ -1,5 +1,7 @@
 package com.example.pfas.web;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
@@ -109,6 +111,13 @@ public final class PresentationText {
 	public static String sourceWaterTypeLabel(String sourceWaterType) {
 		var value = titleCaseUnderscore(sourceWaterType);
 		return value.isBlank() ? "Source water not set" : value;
+	}
+
+	public static String currencyLabel(BigDecimal amount) {
+		if (amount == null) {
+			return "Price not normalized";
+		}
+		return "$" + amount.setScale(2, RoundingMode.HALF_UP).toPlainString();
 	}
 
 	private static String titleCaseUnderscore(String rawValue) {

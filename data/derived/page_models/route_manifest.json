@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:22:29.273769300+09:00",
-  "route_count" : 27,
+  "generated_at" : "2026-03-20T11:47:17.165333500+09:00",
+  "route_count" : 31,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -134,6 +134,32 @@
     "keywords" : [ "Bermuda Water Company", "AZ", "AZ0408063", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3354647",
+    "display_label" : "Four Lakes Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3354647",
+    "supporting_path" : "/public-water-system/FL3354647",
+    "api_path" : "/internal/results/public-water/FL3354647",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL3480255",
+    "display_label" : "Crescent Heights Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3480255",
+    "supporting_path" : "/public-water-system/FL3480255",
+    "api_path" : "/internal/results/public-water/FL3480255",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Crescent Heights Water System", "FL", "FL3480255", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3590069",
     "display_label" : "Bear Lake Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -145,6 +171,32 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL6424076",
+    "display_label" : "Golden Hills Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL6424076",
+    "supporting_path" : "/public-water-system/FL6424076",
+    "api_path" : "/internal/results/public-water/FL6424076",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL6535055",
+    "display_label" : "Cypress Lakes Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL6535055",
+    "supporting_path" : "/public-water-system/FL6535055",
+    "api_path" : "/internal/results/public-water/FL6535055",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Cypress Lakes Water System", "FL", "FL6535055", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "GA3110075",

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:22:31.693278500+09:00",
+  "generated_at" : "2026-03-20T11:47:19.483405800+09:00",
   "model_id" : "guide:under-sink-vs-whole-house",
   "route_type" : "guide",
   "route_key" : "under-sink-vs-whole-house",
@@ -24,8 +24,8 @@
       "checklist" : [ "Define the household objective.", "Compare against certified point-of-use first.", "Only then review whole-house as an escalation." ],
       "evidenceHighlights" : [ "EPA filter guidance centers certified point-of-use for ingestion-focused PFAS reduction.", "EPA fact-sheet framing and model data sheets keep maintenance and install burden visible.", "Whole-house becomes a justified escalation only after a broader household objective is explicit." ],
       "targetQueries" : [ "under sink vs whole house pfas filter", "whole house vs under sink pfas", "do i need whole house pfas filter" ],
-      "relatedPwsids" : [ "PA1510001", "MD0120011" ],
-      "relatedProductIds" : [ "aquasana-aq-6200", "aquasana-aq-sfro2", "espring-122941" ],
+      "relatedPwsids" : [ "PA1510001", "MD0120011", "FL6424076" ],
+      "relatedProductIds" : [ "aquasana-aq-6200", "aquasana-aq-sfro2", "espring-122941", "aquatru-model-1" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-water-filter-fact-sheet-2024-04", "aq-claryum-direct-connect-install-pdf", "amway-espring-122941-product" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

@@ -13,10 +13,10 @@ import com.example.pfas.filter.FilterCatalogItem;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.readiness.ExpansionReadinessService;
+import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
-import com.example.pfas.water.PublicWaterSystem;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @Controller
@@ -26,6 +26,7 @@ public class GuidePagesController {
 	private final SourceRegistryService sourceRegistryService;
 	private final StateGuidanceService stateGuidanceService;
 	private final PublicWaterSystemService publicWaterSystemService;
+	private final PublicWaterResultService publicWaterResultService;
 	private final FilterCatalogService filterCatalogService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final RouteQualityGateService routeQualityGateService;
@@ -35,6 +36,7 @@ public class GuidePagesController {
 		SourceRegistryService sourceRegistryService,
 		StateGuidanceService stateGuidanceService,
 		PublicWaterSystemService publicWaterSystemService,
+		PublicWaterResultService publicWaterResultService,
 		FilterCatalogService filterCatalogService,
 		ExpansionReadinessService expansionReadinessService,
 		RouteQualityGateService routeQualityGateService
@@ -43,6 +45,7 @@ public class GuidePagesController {
 		this.sourceRegistryService = sourceRegistryService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.publicWaterSystemService = publicWaterSystemService;
+		this.publicWaterResultService = publicWaterResultService;
 		this.filterCatalogService = filterCatalogService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.routeQualityGateService = routeQualityGateService;
@@ -58,9 +61,9 @@ public class GuidePagesController {
 			.sorted(java.util.Comparator.comparingInt(SourceDocument::trustTier).thenComparing(SourceDocument::organization))
 			.toList();
 		var relatedSystems = page.relatedPwsids() == null
-			? List.<PublicWaterSystem>of()
+			? List.<GuideSystemExample>of()
 			: page.relatedPwsids().stream()
-				.map(publicWaterSystemService::getByPwsid)
+				.map(this::resolveGuideSystemExample)
 				.flatMap(java.util.Optional::stream)
 				.toList();
 		var relatedProducts = page.relatedProductIds() == null
@@ -73,7 +76,7 @@ public class GuidePagesController {
 		model.addAttribute("page", page);
 		model.addAttribute("allGuides", guidePageService.getAll());
 		model.addAttribute("guideSources", guideSources);
-		model.addAttribute("relatedSystems", relatedSystems);
+		model.addAttribute("relatedSystemExamples", relatedSystems);
 		model.addAttribute("relatedProducts", relatedProducts);
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
 		return "pages/guide-page";
@@ -114,5 +117,16 @@ public class GuidePagesController {
 			.filter(document -> document.trustTier() == trustTier)
 			.limit(8)
 			.toList();
+	}
+
+	private java.util.Optional<GuideSystemExample> resolveGuideSystemExample(String pwsid) {
+		var system = publicWaterSystemService.getByPwsid(pwsid);
+		var result = publicWaterResultService.getByPwsid(pwsid);
+
+		if (system.isEmpty() || result.isEmpty()) {
+			return java.util.Optional.empty();
+		}
+
+		return java.util.Optional.of(new GuideSystemExample(system.get(), result.get()));
 	}
 }

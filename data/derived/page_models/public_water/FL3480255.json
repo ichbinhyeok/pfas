@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:20.021569800+09:00",
-  "model_id" : "public_water:IL0855150",
+  "generated_at" : "2026-03-20T11:47:19.815138300+09:00",
+  "model_id" : "public_water:FL3480255",
   "route_type" : "public_water",
-  "route_key" : "IL0855150",
+  "route_key" : "FL3480255",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/IL0855150",
+  "render_path" : "/public-water/FL3480255",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
   "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "IL0855150",
-      "pwsName" : "Apple Canyon Water System",
-      "stateCode" : "IL",
+      "pwsid" : "FL3480255",
+      "pwsName" : "Crescent Heights Water System",
+      "stateCode" : "FL",
       "systemType" : "community",
       "populationServed" : "",
-      "sourceWaterType" : "groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/prairiepathwater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2024/applecanyon-24ccr-518.pdf?sfvrsn=57ba3f5b_6",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2023/apple-canyon-pfas-2023-518.pdf?sfvrsn=f05f3b5b_6",
-      "serviceAreaNotes" : "Prairie Path Water community groundwater system with separate 2023 PFAS reporting and 2024 CCR source context for Apple Canyon",
+      "sourceWaterType" : "purchased_groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2024/crescentheights-24ccr-084.pdf?sfvrsn=16e3c5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2023/crescent-heights-pfas-2023.pdf?sfvrsn=8a173b5b_2",
+      "serviceAreaNotes" : "Sunshine Water Services system supplied under wholesale agreement with Orlando Utilities Commission and a separate 2023 PFAS report showing non-detects across the core mapped benchmark analytes.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "prairie-path-water-home", "prairie-path-water-quality-reports", "apple-canyon-2024-water-quality-report", "apple-canyon-pfas-2023-report" ]
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "crescent-heights-2024-water-quality-report", "crescent-heights-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:IL0855150",
+      "result_id" : "public-water:FL3480255",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T11:47:20.019557500+09:00",
+      "generated_at" : "2026-03-20T11:47:19.812630300+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
@@ -76,28 +76,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "apple-canyon-2024-water-quality-report",
-        "organization" : "Prairie Path Water Company",
-        "title" : "Annual Water Quality Report 2024 Apple Canyon CCR 518",
-        "url" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2024/applecanyon-24ccr-518.pdf?sfvrsn=57ba3f5b_6",
+        "source_id" : "crescent-heights-2024-water-quality-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "Annual Water Quality Report 2024 Crescent Heights CCR 084",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2024/crescentheights-24ccr-084.pdf?sfvrsn=16e3c5b_6",
         "trust_tier" : 2
       }, {
-        "source_id" : "apple-canyon-pfas-2023-report",
-        "organization" : "Prairie Path Water Company",
-        "title" : "PFAS Results 2023 Apple Canyon Water System",
-        "url" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/apple-canyon/2023/apple-canyon-pfas-2023-518.pdf?sfvrsn=f05f3b5b_6",
+        "source_id" : "crescent-heights-pfas-2023-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "PFAS Monitoring Results 2023 Crescent Heights 84",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/crescent-heights/2023/crescent-heights-pfas-2023.pdf?sfvrsn=8a173b5b_2",
         "trust_tier" : 2
       }, {
-        "source_id" : "prairie-path-water-home",
-        "organization" : "Prairie Path Water Company",
-        "title" : "Prairie Path Water",
-        "url" : "https://www.myutility.us/prairiepathwater",
+        "source_id" : "sunshine-water-home",
+        "organization" : "Sunshine Water Services",
+        "title" : "Sunshine Water Services",
+        "url" : "https://www.myutility.us/sunshinewater",
         "trust_tier" : 2
       }, {
-        "source_id" : "prairie-path-water-quality-reports",
-        "organization" : "Prairie Path Water Company",
+        "source_id" : "sunshine-water-quality-reports",
+        "organization" : "Sunshine Water Services",
         "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/prairiepathwater/water-safety/water-quality-reports",
+        "url" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
         "trust_tier" : 2
       } ],
       "meta" : {
@@ -108,9 +108,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:IL0855150",
+      "input_id" : "public_water:FL3480255",
       "route_type" : "public_water",
-      "route_key" : "IL0855150",
+      "route_key" : "FL3480255",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -118,12 +118,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "IL0855150",
+      "pwsid" : "FL3480255",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/IL0855150",
-      "secondary_path" : "/internal/results/public-water/IL0855150",
+      "primary_path" : "/public-water/FL3480255",
+      "secondary_path" : "/internal/results/public-water/FL3480255",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/IL0855150"
+    "supporting_path" : "/public-water-system/FL3480255"
   }
 }
