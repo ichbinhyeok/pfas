@@ -51,6 +51,15 @@ public class PublicationRouteService {
 	}
 
 	private RouteManifestRoute toGuideRoute(GuidePage page) {
+		var keywords = new ArrayList<String>();
+		if (page.targetQueries() != null) {
+			keywords.addAll(page.targetQueries());
+		}
+		keywords.add(page.slug().replace('-', ' '));
+		keywords.add("PFAS");
+		keywords.add("water");
+		keywords.add("decision guide");
+
 		return new RouteManifestRoute(
 			"guide",
 			page.slug(),
@@ -63,7 +72,7 @@ public class PublicationRouteService {
 			page.lastVerifiedDate(),
 			page.sourceIds().size(),
 			"curated_guide",
-			List.of(page.slug().replace('-', ' '), "PFAS", "water", "decision guide")
+			List.copyOf(keywords)
 		);
 	}
 

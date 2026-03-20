@@ -412,7 +412,15 @@ public class DerivedArtifactService {
 	}
 
 	private List<String> guideKeywords(GuidePage page) {
-		return List.of(page.slug().replace('-', ' '), "PFAS", "water", "decision guide");
+		var keywords = new ArrayList<String>();
+		if (page.targetQueries() != null) {
+			keywords.addAll(page.targetQueries());
+		}
+		keywords.add(page.slug().replace('-', ' '));
+		keywords.add("PFAS");
+		keywords.add("water");
+		keywords.add("decision guide");
+		return List.copyOf(keywords);
 	}
 
 	private RouteManifestRoute applyGate(RouteManifestRoute route, Map<String, com.example.pfas.quality.RouteQualityDecision> gateIndex) {

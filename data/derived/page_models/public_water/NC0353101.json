@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:56:01.296159200+09:00",
+  "generated_at" : "2026-03-20T11:22:32.290693800+09:00",
   "model_id" : "public_water:NC0353101",
   "route_type" : "public_water",
   "route_key" : "NC0353101",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:NC0353101",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T10:56:01.276093600+09:00",
+      "generated_at" : "2026-03-20T11:22:32.270509700+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
         "title" : "Review utility response and consider certified point-of-use filtration",
@@ -40,7 +40,7 @@
       "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
-        "range_high_usd" : 1299.00,
+        "range_high_usd" : 1499.00,
         "confidence" : "medium",
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
@@ -305,6 +305,18 @@
         "organization" : "AquaTru",
         "title" : "AquaTru Classic",
         "url" : "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-performance-pdf",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Model 1 Performance Data Sheet",
+        "url" : "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2Fc66bfe87447942d8a5acb700f3430550?alt=media&token=0b70af6c-39f9-4526-94bb-f27798da56be&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-product",
+        "organization" : "AquaTru",
+        "title" : "Freestanding Model 1",
+        "url" : "https://aquatruwater.com/products/aquatru-freestanding-model-1",
         "trust_tier" : 4
       }, {
         "source_id" : "aquatru-under-sink-performance-pdf",

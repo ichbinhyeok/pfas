@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:55:58.820001300+09:00",
+  "generated_at" : "2026-03-20T11:22:29.273769300+09:00",
   "route_count" : 27,
   "routes" : [ {
     "route_type" : "guide",
@@ -14,7 +14,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "nsf 53 vs 58 pfas", "nsf 53 58 pfas filter", "which certification for pfas filters", "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "pfas-filter-annual-cost",
@@ -27,7 +27,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "pfas filter annual cost", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "pfas filter annual cost", "pfas filter maintenance cost", "pfas filter replacement cost", "pfas filter annual cost", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "public-water-vs-private-well",
@@ -40,7 +40,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 3,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "public water vs private well", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "public water vs private well pfas", "pfas public water private well difference", "private well vs utility water pfas", "public water vs private well", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "read-your-ccr",
@@ -53,7 +53,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 5,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "read your ccr", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "how to read ccr pfas", "how to read utility water report pfas", "ccr pfas interpretation", "read your ccr", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "test-first-vs-filter-first",
@@ -66,7 +66,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 3,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "test first vs filter first", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "test first vs filter first pfas", "should i test for pfas before buying a filter", "pfas test first or filter first", "test first vs filter first", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "under-sink-vs-whole-house",
@@ -79,7 +79,7 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 4,
     "readiness_basis" : "curated_guide",
-    "keywords" : [ "under sink vs whole house", "PFAS", "water", "decision guide" ]
+    "keywords" : [ "under sink vs whole house pfas filter", "whole house vs under sink pfas", "do i need whole house pfas filter", "under sink vs whole house", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "7360058",
@@ -181,7 +181,7 @@
     "api_path" : "/internal/results/public-water/MD0120011",
     "indexable" : true,
     "last_verified_date" : "2026-03-20",
-    "source_count" : 3,
+    "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Green Ridge Utilities Inc.", "MD", "MD0120011", "CCR", "PFAS", "public water" ]
   }, {
@@ -194,7 +194,7 @@
     "api_path" : "/internal/results/public-water/NC0234191",
     "indexable" : true,
     "last_verified_date" : "2026-03-20",
-    "source_count" : 3,
+    "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Abington Water System", "NC", "NC0234191", "CCR", "PFAS", "public water" ]
   }, {

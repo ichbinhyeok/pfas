@@ -1,6 +1,6 @@
 {
   "schemaVersion": "v1",
-  "generatedAt": "2026-03-20T16:20:00+09:00",
+  "generatedAt": "2026-03-20T23:55:00+09:00",
   "guides": [
     {
       "slug": "public-water-vs-private-well",
@@ -79,6 +79,20 @@
             "The split determines whether a product layer should open at all."
           ]
         }
+      ],
+      "queryIntent": "Routing split",
+      "targetQueries": [
+        "public water vs private well pfas",
+        "pfas public water private well difference",
+        "private well vs utility water pfas"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "GA3110075"
+      ],
+      "relatedProductIds": [
+        "aq-claryum-direct-connect",
+        "zerowater-23-cup-dispenser"
       ]
     },
     {
@@ -158,6 +172,20 @@
             "Evidence keeps cost tradeoffs honest."
           ]
         }
+      ],
+      "queryIntent": "Decision timing",
+      "targetQueries": [
+        "test first vs filter first pfas",
+        "should i test for pfas before buying a filter",
+        "pfas test first or filter first"
+      ],
+      "relatedPwsids": [
+        "GA3110075",
+        "PA1510001"
+      ],
+      "relatedProductIds": [
+        "aq-claryum-direct-connect",
+        "aquatru-under-sink"
       ]
     },
     {
@@ -239,6 +267,20 @@
             "Do not turn report tables into safe/unsafe language."
           ]
         }
+      ],
+      "queryIntent": "Utility interpretation",
+      "targetQueries": [
+        "how to read ccr pfas",
+        "how to read utility water report pfas",
+        "ccr pfas interpretation"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "7360058",
+        "GA3110075"
+      ],
+      "relatedProductIds": [
+        "aq-claryum-direct-connect"
       ]
     },
     {
@@ -319,6 +361,18 @@
             "Maintenance burden matters as much as headline price."
           ]
         }
+      ],
+      "queryIntent": "Certification comparison",
+      "targetQueries": [
+        "nsf 53 vs 58 pfas",
+        "nsf 53 58 pfas filter",
+        "which certification for pfas filters"
+      ],
+      "relatedPwsids": [],
+      "relatedProductIds": [
+        "aq-claryum-direct-connect",
+        "aquasana-aq-sfro2",
+        "aquatru-classic"
       ]
     },
     {
@@ -399,6 +453,21 @@
             "Escalation requires explicit maintenance and cost acceptance."
           ]
         }
+      ],
+      "queryIntent": "Treatment scope comparison",
+      "targetQueries": [
+        "under sink vs whole house pfas filter",
+        "whole house vs under sink pfas",
+        "do i need whole house pfas filter"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "MD0120011"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-6200",
+        "aquasana-aq-sfro2",
+        "espring-122941"
       ]
     },
     {
@@ -479,6 +548,20 @@
             "Do not let annual cost replace evidence about whether treatment is needed."
           ]
         }
+      ],
+      "queryIntent": "Ownership cost comparison",
+      "targetQueries": [
+        "pfas filter annual cost",
+        "pfas filter maintenance cost",
+        "pfas filter replacement cost"
+      ],
+      "relatedPwsids": [
+        "PA1510001"
+      ],
+      "relatedProductIds": [
+        "zerowater-7-cup-pitcher",
+        "aq-claryum-direct-connect",
+        "aquasana-aq-sfro2"
       ]
     }
   ]

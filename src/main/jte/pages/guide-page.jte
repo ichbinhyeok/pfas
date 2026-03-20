@@ -1,13 +1,17 @@
 @import java.util.List
+@import com.example.pfas.filter.FilterCatalogItem
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.web.GuidePage
 @import com.example.pfas.web.GuideSection
+@import com.example.pfas.water.PublicWaterSystem
 @param String siteBaseUrl
 @param String siteEditorialOwner
 @param String siteMethodologyOwner
 @param GuidePage page
 @param List<GuidePage> allGuides
 @param List<SourceDocument> guideSources
+@param List<PublicWaterSystem> relatedSystems
+@param List<FilterCatalogItem> relatedProducts
 @param boolean pageIndexable
 
 @template.layout.base(
@@ -42,6 +46,11 @@
                 <span class="dossier-cell__label">Guide type</span>
                 <span class="dossier-cell__value">Manual decision guide</span>
                 <span class="dossier-cell__copy">Curated for high-intent PFAS routing questions.</span>
+            </article>
+            <article class="dossier-cell">
+                <span class="dossier-cell__label">Search intent</span>
+                <span class="dossier-cell__value">${page.queryIntent()}</span>
+                <span class="dossier-cell__copy">Guide copy is tuned for decision-intent queries, not generic PFAS explainers.</span>
             </article>
             <article class="dossier-cell">
                 <span class="dossier-cell__label">Evidence basis</span>
@@ -118,6 +127,17 @@
                         <li>No external reviewer is claimed on this build.</li>
                     </ul>
                 </section>
+
+                @if(page.targetQueries() != null && !page.targetQueries().isEmpty())
+                    <section class="card">
+                        <p class="card__label">Query cluster</p>
+                        <ul class="list">
+                            @for(var query : page.targetQueries())
+                                <li>${query}</li>
+                            @endfor
+                        </ul>
+                    </section>
+                @endif
             </div>
 
             <aside class="stack">
@@ -151,6 +171,36 @@
                         @endfor
                     </div>
                 </section>
+
+                @if(!relatedSystems.isEmpty())
+                    <section class="rail-card">
+                        <h2 class="rail-card__title">Seeded utility dossiers</h2>
+                        <div class="source-list">
+                            @for(var system : relatedSystems)
+                                <a class="source-item" href="/public-water/${system.pwsid()}">
+                                    <div class="source-item__meta">${system.stateCode()} / ${system.pwsid()}</div>
+                                    <div class="source-item__title">${system.pwsName()}</div>
+                                    <div class="source-item__url">${system.sourceWaterType()} source, ${system.lastVerifiedDate()} verified</div>
+                                </a>
+                            @endfor
+                        </div>
+                    </section>
+                @endif
+
+                @if(!relatedProducts.isEmpty())
+                    <section class="rail-card">
+                        <h2 class="rail-card__title">Certified option examples</h2>
+                        <div class="source-list">
+                            @for(var product : relatedProducts)
+                                <a class="source-item" href="${product.listingUrl()}">
+                                    <div class="source-item__meta">${product.brand()} / ${product.installationType()}</div>
+                                    <div class="source-item__title">${product.model()}</div>
+                                    <div class="source-item__url">${product.certBody()} ${product.standardCode()} / ${product.coveredPfas().size()} mapped PFAS claims</div>
+                                </a>
+                            @endfor
+                        </div>
+                    </section>
+                @endif
 
                 <section class="rail-card">
                     <h2 class="rail-card__title">Related guides</h2>

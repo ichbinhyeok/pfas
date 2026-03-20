@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:56:01.241734200+09:00",
+  "generated_at" : "2026-03-20T11:22:32.231028+09:00",
   "model_id" : "public_water:NC0234191",
   "route_type" : "public_water",
   "route_key" : "NC0234191",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
       "pwsid" : "NC0234191",
@@ -21,14 +21,14 @@
       "utilityWebsiteUrl" : "https://www.myutility.us/carolinawater",
       "ccrUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
       "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
-      "serviceAreaNotes" : "Carolina Water Service of North Carolina system reporting 2024 PFAS results from February and May sampling",
+      "serviceAreaNotes" : "Carolina Water Service of North Carolina system with 2024 PFAS results and a separate 2023 PFAS report supporting trend context.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "abington-2024-water-quality-report" ]
+      "sourceIds" : [ "carolina-water-home", "carolina-water-quality-reports", "abington-2024-water-quality-report", "abington-pfas-2023-report" ]
     },
     "result" : {
       "result_id" : "public-water:NC0234191",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T10:56:01.223392600+09:00",
+      "generated_at" : "2026-03-20T11:22:32.210350700+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -40,7 +40,7 @@
       "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
-        "range_high_usd" : 1299.00,
+        "range_high_usd" : 1499.00,
         "confidence" : "medium",
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
@@ -101,6 +101,12 @@
         "organization" : "Carolina Water Service of North Carolina",
         "title" : "Annual Water Quality Report 2024 Abington CCR 002",
         "url" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2024/abington-24ccr-002rev.pdf",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "abington-pfas-2023-report",
+        "organization" : "Carolina Water Service of North Carolina",
+        "title" : "PFAS Report 2023 Abington 002",
+        "url" : "https://www.myutility.us/docs/default-source/carolinawater/water-quality-reports/abington/2023/abington.pdf?sfvrsn=aa1b385b_6",
         "trust_tier" : 2
       }, {
         "source_id" : "carolina-water-home",
@@ -305,6 +311,18 @@
         "organization" : "AquaTru",
         "title" : "AquaTru Classic",
         "url" : "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-performance-pdf",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Model 1 Performance Data Sheet",
+        "url" : "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2Fc66bfe87447942d8a5acb700f3430550?alt=media&token=0b70af6c-39f9-4526-94bb-f27798da56be&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-product",
+        "organization" : "AquaTru",
+        "title" : "Freestanding Model 1",
+        "url" : "https://aquatruwater.com/products/aquatru-freestanding-model-1",
         "trust_tier" : 4
       }, {
         "source_id" : "aquatru-under-sink-performance-pdf",

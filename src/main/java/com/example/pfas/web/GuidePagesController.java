@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.example.pfas.filter.FilterCatalogItem;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
+import com.example.pfas.water.PublicWaterSystem;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @Controller
@@ -55,10 +57,24 @@ public class GuidePagesController {
 			.flatMap(java.util.Optional::stream)
 			.sorted(java.util.Comparator.comparingInt(SourceDocument::trustTier).thenComparing(SourceDocument::organization))
 			.toList();
+		var relatedSystems = page.relatedPwsids() == null
+			? List.<PublicWaterSystem>of()
+			: page.relatedPwsids().stream()
+				.map(publicWaterSystemService::getByPwsid)
+				.flatMap(java.util.Optional::stream)
+				.toList();
+		var relatedProducts = page.relatedProductIds() == null
+			? List.<FilterCatalogItem>of()
+			: page.relatedProductIds().stream()
+				.map(filterCatalogService::getByProductId)
+				.flatMap(java.util.Optional::stream)
+				.toList();
 
 		model.addAttribute("page", page);
 		model.addAttribute("allGuides", guidePageService.getAll());
 		model.addAttribute("guideSources", guideSources);
+		model.addAttribute("relatedSystems", relatedSystems);
+		model.addAttribute("relatedProducts", relatedProducts);
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
 		return "pages/guide-page";
 	}

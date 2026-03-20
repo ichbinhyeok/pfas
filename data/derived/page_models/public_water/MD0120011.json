@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:56:01.192579+09:00",
+  "generated_at" : "2026-03-20T11:22:32.165204900+09:00",
   "model_id" : "public_water:MD0120011",
   "route_type" : "public_water",
   "route_key" : "MD0120011",
@@ -9,7 +9,7 @@
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
       "pwsid" : "MD0120011",
@@ -21,14 +21,14 @@
       "utilityWebsiteUrl" : "https://www.myutility.us/maryland",
       "ccrUrl" : "https://www.myutility.us/docs/default-source/maryland/water-quality-reports/green-ridge/2024/greenridge-24ccr-145.pdf?sfvrsn=7ff53c5b_4",
       "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/maryland/water-quality-reports/green-ridge/2024/greenridge-24ccr-145.pdf?sfvrsn=7ff53c5b_4",
-      "serviceAreaNotes" : "Green Ridge Utilities community system with March 2024 PFAS results and official Maryland reporting context",
+      "serviceAreaNotes" : "Green Ridge Utilities community system with official Maryland reporting context and a separate 2023 PFAS report supporting benchmark interpretation.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "maryland-water-home", "maryland-water-quality-reports", "green-ridge-2024-water-quality-report" ]
+      "sourceIds" : [ "maryland-water-home", "maryland-water-quality-reports", "green-ridge-2024-water-quality-report", "green-ridge-pfas-2023-report" ]
     },
     "result" : {
       "result_id" : "public-water:MD0120011",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T10:56:01.177228600+09:00",
+      "generated_at" : "2026-03-20T11:22:32.142165200+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -40,7 +40,7 @@
       "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
-        "range_high_usd" : 1299.00,
+        "range_high_usd" : 1499.00,
         "confidence" : "medium",
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
@@ -101,6 +101,12 @@
         "organization" : "Green Ridge Utilities Inc.",
         "title" : "Annual Water Quality Report 2024",
         "url" : "https://www.myutility.us/docs/default-source/maryland/water-quality-reports/green-ridge/2024/greenridge-24ccr-145.pdf?sfvrsn=7ff53c5b_4",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "green-ridge-pfas-2023-report",
+        "organization" : "MyUtility / Maryland Water Service",
+        "title" : "PFAS Report 2023 Green Ridge 145",
+        "url" : "https://www.myutility.us/docs/default-source/maryland/water-quality-reports/green-ridge/2023/md-green-ridge-23pfas-145.pdf?sfvrsn=365d3b5b_4",
         "trust_tier" : 2
       }, {
         "source_id" : "maryland-water-home",
@@ -305,6 +311,18 @@
         "organization" : "AquaTru",
         "title" : "AquaTru Classic",
         "url" : "https://aquatruwater.com/products/countertop-reverse-osmosis-water-purifier",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-performance-pdf",
+        "organization" : "AquaTru",
+        "title" : "AquaTru Model 1 Performance Data Sheet",
+        "url" : "https://cdn.builder.io/o/assets%2Ff2b06d2e554043f0b2703af08544b2a3%2Fc66bfe87447942d8a5acb700f3430550?alt=media&token=0b70af6c-39f9-4526-94bb-f27798da56be&apiKey=f2b06d2e554043f0b2703af08544b2a3",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "aquatru-model-1-product",
+        "organization" : "AquaTru",
+        "title" : "Freestanding Model 1",
+        "url" : "https://aquatruwater.com/products/aquatru-freestanding-model-1",
         "trust_tier" : 4
       }, {
         "source_id" : "aquatru-under-sink-performance-pdf",

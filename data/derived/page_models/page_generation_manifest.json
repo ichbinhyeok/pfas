@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T10:56:00.053109300+09:00",
+  "generated_at" : "2026-03-20T11:22:30.634244400+09:00",
   "model_count" : 27,
   "models" : [ {
     "model_id" : "guide:nsf-53-vs-58-pfas",
@@ -155,7 +155,7 @@
     "generation_mode" : "static_file_seed",
     "indexable" : true,
     "last_verified_date" : "2026-03-20",
-    "source_count" : 3
+    "source_count" : 4
   }, {
     "model_id" : "public_water:NC0234191",
     "route_type" : "public_water",
@@ -166,7 +166,7 @@
     "generation_mode" : "static_file_seed",
     "indexable" : true,
     "last_verified_date" : "2026-03-20",
-    "source_count" : 3
+    "source_count" : 4
   }, {
     "model_id" : "public_water:NC0353101",
     "route_type" : "public_water",

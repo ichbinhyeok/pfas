@@ -119,7 +119,9 @@ class PfasApplicationTests {
 				"alpine-terrace-pfas-2023-report",
 				"alaska-dww-college-utilities-monitoring-summary",
 				"college-utilities-2025-water-quality-report",
+				"green-ridge-pfas-2023-report",
 				"bermuda-water-pfas-2023-report",
+				"abington-pfas-2023-report",
 				"apple-canyon-pfas-2023-report",
 				"calvada-meadows-pfas-2023-report",
 				"new-jersey-water-home",
@@ -129,6 +131,8 @@ class PfasApplicationTests {
 				"aquatru-classic-product",
 				"aquatru-carafe-product",
 				"aquatru-under-sink-product",
+				"aquatru-model-1-product",
+				"aquatru-model-1-performance-pdf",
 				"zerowater-performance-certification",
 				"zerowater-certified-devices-performance-pdf",
 				"zerowater-7-cup-pitcher-product",
@@ -244,7 +248,8 @@ class PfasApplicationTests {
 			.contains(
 				"maryland-water-home",
 				"maryland-water-quality-reports",
-				"green-ridge-2024-water-quality-report"
+				"green-ridge-2024-water-quality-report",
+				"green-ridge-pfas-2023-report"
 			);
 		assertThat(montague.sourceIds())
 			.contains(
@@ -264,7 +269,8 @@ class PfasApplicationTests {
 			.contains(
 				"carolina-water-home",
 				"carolina-water-quality-reports",
-				"abington-2024-water-quality-report"
+				"abington-2024-water-quality-report",
+				"abington-pfas-2023-report"
 			);
 		assertThat(carolinaTrace.sourceIds())
 			.contains(
@@ -427,6 +433,7 @@ class PfasApplicationTests {
 		var aquaTruClaims = certificationClaimService.getByListingRecordId("AT2000-AT2050");
 		var aquaTruCarafeClaims = certificationClaimService.getByListingRecordId("AT100-AT140");
 		var aquaTruUnderSinkClaims = certificationClaimService.getByListingRecordId("ATU100");
+		var aquaTruModel1Claims = certificationClaimService.getByListingRecordId("ATW-1-FAC|ATW-1-FBAC|ATW-1-FBLAC");
 		var aqCwm2Claims = certificationClaimService.getByListingRecordId("AQ-CWM2");
 		var aq6200Claims = certificationClaimService.getByListingRecordId("AQ-6200");
 		var aq6300Claims = certificationClaimService.getByListingRecordId("AQ-6300");
@@ -447,6 +454,9 @@ class PfasApplicationTests {
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
 		assertThat(aquaTruUnderSinkClaims)
+			.extracting(claim -> claim.claimName())
+			.containsExactly("PFOA Reduction", "PFOS Reduction");
+		assertThat(aquaTruModel1Claims)
 			.extracting(claim -> claim.claimName())
 			.containsExactly("PFOA Reduction", "PFOS Reduction");
 		assertThat(aqCwm2Claims)
@@ -489,6 +499,7 @@ class PfasApplicationTests {
 		var aquaTruCarafe = filterCatalogService.getByProductId("aquatru-carafe").orElseThrow();
 		var aquaTruClassic = filterCatalogService.getByProductId("aquatru-classic").orElseThrow();
 		var aquaTruUnderSink = filterCatalogService.getByProductId("aquatru-under-sink").orElseThrow();
+		var aquaTruModel1 = filterCatalogService.getByProductId("aquatru-model-1").orElseThrow();
 		var cleanWaterMachine = filterCatalogService.getByProductId("aquasana-aq-cwm2").orElseThrow();
 		var aq6200 = filterCatalogService.getByProductId("aquasana-aq-6200").orElseThrow();
 		var aq6300 = filterCatalogService.getByProductId("aquasana-aq-6300").orElseThrow();
@@ -501,13 +512,14 @@ class PfasApplicationTests {
 		var zeroWater5Gallon = filterCatalogService.getByProductId("zerowater-5-gallon-cooler").orElseThrow();
 		var zeroWater30Cup = filterCatalogService.getByProductId("zerowater-30-cup-dispenser-bundle").orElseThrow();
 
-		assertThat(items).hasSize(15);
+		assertThat(items).hasSize(16);
 		assertThat(items)
 			.extracting(item -> item.productId())
 			.contains(
 				"espring-122941",
 				"aquatru-carafe",
 				"aquatru-classic",
+				"aquatru-model-1",
 				"aquatru-under-sink",
 				"aquasana-aq-cwm2",
 				"aquasana-aq-6200",
@@ -538,6 +550,10 @@ class PfasApplicationTests {
 		assertThat(aquaTruUnderSink.upfrontCostUsd()).isEqualByComparingTo("375.00");
 		assertThat(aquaTruUnderSink.replacementCostUsd()).isNull();
 		assertThat(aquaTruUnderSink.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
+		assertThat(aquaTruModel1.listingRecordId()).isEqualTo("ATW-1-FAC|ATW-1-FBAC|ATW-1-FBLAC");
+		assertThat(aquaTruModel1.upfrontCostUsd()).isEqualByComparingTo("1499.00");
+		assertThat(aquaTruModel1.replacementCostUsd()).isNull();
+		assertThat(aquaTruModel1.claimNames()).contains("PFOA Reduction", "PFOS Reduction");
 		assertThat(items.get(0).claimNames())
 			.contains("PFOA Reduction", "PFOS Reduction", "Total PFAS Reduction");
 		assertThat(aq6200.listingRecordId()).isEqualTo("AQ-6200");
@@ -616,7 +632,7 @@ class PfasApplicationTests {
 		assertThat(result.schemaVersion()).isEqualTo("v1");
 		assertThat(result.nextAction().code()).isEqualTo("REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU");
 		assertThat(result.initialCost().rangeLowUsd()).isEqualByComparingTo("24.99");
-		assertThat(result.initialCost().rangeHighUsd()).isEqualByComparingTo("1299.00");
+		assertThat(result.initialCost().rangeHighUsd()).isEqualByComparingTo("1499.00");
 		assertThat(result.annualCostMaintenance().rangeLowUsd()).isEqualByComparingTo("110.83");
 		assertThat(result.annualCostMaintenance().rangeHighUsd()).isEqualByComparingTo("280.00");
 		assertThat(result.certificationChecklist()).hasSize(3);
@@ -1186,8 +1202,12 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public water vs private well is the first split, not a small detail")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-intent guide")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Routing split")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Use source type as the first decision boundary")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("How this guide was built")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Query cluster")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seeded utility dossiers")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Certified option examples")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("CCR Information for Consumers")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in Private Wells")));
