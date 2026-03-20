@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
+  "model_id" : "guide:how-to-read-a-pfas-utility-notice",
+  "route_type" : "guide",
+  "route_key" : "how-to-read-a-pfas-utility-notice",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/how-to-read-a-pfas-utility-notice",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "how-to-read-a-pfas-utility-notice",
+      "eyebrow" : "Decision-intent guide",
+      "title" : "A PFAS utility notice is an action document, not a generic scare document",
+      "lede" : "If a utility sends a PFAS notice, read the exact system and contaminant context first, then decide whether certified point-of-use treatment is justified.",
+      "queryIntent" : "Utility notice interpretation",
+      "nextActionTitle" : "Read the system notice before comparing products",
+      "nextActionSummary" : "A mailed notice can be above-reference, below-reference, or unregulated monitoring context. The first job is to classify the document, not to guess the fix.",
+      "whyThis" : [ "A notice belongs to one system and one benchmark context, not to PFAS in general.", "The contaminant list and sampling period change what the household should do next.", "The document can narrow the product layer from the start." ],
+      "whatThisDoesNotTellYou" : [ "A notice alone does not justify whole-house treatment.", "A notice is not the same as a personal tap test.", "A UCMR notice should not be read as a compliance violation unless the document says so." ],
+      "checklist" : [ "Confirm the system number and service area.", "Identify whether the document is a CCR, a UCMR notice, or a state-specific action notice.", "Read the listed analytes and averages before opening the product layer." ],
+      "evidenceHighlights" : [ "EPA CCR guidance and UCMR materials create different interpretation paths.", "A system-specific notice is direct evidence and should outrank generic product advice.", "The benchmark relation changes whether treatment is optional, recommended, or escalated." ],
+      "targetQueries" : [ "pfas utility notice what does it mean", "how to read pfas notice from water utility", "ucmr pfas notice what should i do" ],
+      "relatedPwsids" : [ "7360058", "FL3354883", "FL3591121" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-g3p600", "aquatru-classic" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-ucmr5-main", "epa-ucmr-occurrence-data" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/read-your-ccr",
+      "secondaryLabel" : "Read the CCR guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Start by classifying the document type",
+        "summary" : "CCR, UCMR, and compliance notices do different jobs.",
+        "paragraphs" : [ "A CCR is an annual public-water report with broad system context and sometimes PFAS values. A UCMR notice is usually a monitoring notice explaining unregulated contaminant results. A compliance or state action notice points toward a narrower regulatory question. Treating them as the same document type creates the wrong next action.", "The project should therefore ask a very plain question first: what type of utility document is this? Once that is locked, the benchmark layer and the product layer become much easier to interpret without overreacting." ],
+        "bullets" : [ "CCR: annual utility context.", "UCMR notice: monitoring context, not automatically a violation.", "Compliance notice: a more direct escalation signal." ]
+      }, {
+        "title" : "Read the analytes before the adjectives",
+        "summary" : "Words like detected or precautionary are not enough.",
+        "paragraphs" : [ "A notice might list PFOA, PFOS, PFHxS, PFBS, or other compounds. Some of those map directly into the benchmark logic already used by the engine, while others are context compounds that matter for interpretation but do not alone create the same next action.", "That is why the notice should be read as structured evidence: analyte, period, average, range, and benchmark relation. Once those pieces are visible, the household can judge whether a certified under-sink or countertop option is sufficient for the present decision." ],
+        "bullets" : [ "Read the exact analyte names, not just PFAS as a bucket.", "Prefer average or running-average context over vague language.", "Use the benchmark relation to decide whether POU should open." ]
+      }, {
+        "title" : "Use the notice to narrow the product layer",
+        "summary" : "A good notice reading reduces product noise.",
+        "paragraphs" : [ "If the utility context is below the selected benchmark, the decision often becomes review-first with optional certified POU. If the system is above the selected benchmark or clearly trending upward, the household may reasonably compare tighter under-sink or RO options without jumping straight to whole-house marketing.", "The notice is therefore not just information. It is a routing input. That makes it one of the highest-value documents for a public-water household." ],
+        "bullets" : [ "Use the document to narrow, not to panic.", "Certified POU can be enough even when the document sounds alarming.", "Whole-house still needs a separate justification." ]
+      } ]
+    }
+  }
+}

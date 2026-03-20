@@ -74,3 +74,11 @@ phila-belmont-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,belmont_running_ann
 phila-belmont-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,belmont_running_annual_average,,,,2.4,ppt,reported,,pa_pfos_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
 phila-queenlane-pfoa-raa,PA1510001,PFOA,Perfluorooctanoic acid,queen_lane_running_annual_average,,,,6.8,ppt,reported,,pa_pfoa_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
 phila-queenlane-pfos-raa,PA1510001,PFOS,Perfluorooctane sulfonate,queen_lane_running_annual_average,,,,4.6,ppt,reported,,pa_pfos_mcl_2023,phila-pfas-management|pa-pfas-mcl-rule
+lusi-north-pfhxs-average-2024,FL3354883,PFHxS,Perfluorohexanesulfonic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,2.41,ppt,reported,,us_pfhxs_mcl_2024,lusi-north-umcr5-2024-notice
+lusi-north-pfna-nd-2024,FL3354883,PFNA,Perfluorononanoic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,0,ppt,not_detected,,us_pfna_mcl_2024,lusi-north-umcr5-2024-notice
+lusi-north-pfoa-average-2024,FL3354883,PFOA,Perfluorooctanoic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,4.51,ppt,reported,,us_pfoa_mcl_2024,lusi-north-umcr5-2024-notice
+lusi-north-pfos-average-2024,FL3354883,PFOS,Perfluorooctane sulfonate,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,6.54,ppt,reported,,us_pfos_mcl_2024,lusi-north-umcr5-2024-notice
+sanlando-pfhxs-average-2024,FL3591121,PFHxS,Perfluorohexanesulfonic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,1.17,ppt,reported,,us_pfhxs_mcl_2024,sanlando-umcr5-2024-notice
+sanlando-pfna-nd-2024,FL3591121,PFNA,Perfluorononanoic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,0,ppt,not_detected,,us_pfna_mcl_2024,sanlando-umcr5-2024-notice
+sanlando-pfoa-average-2024,FL3591121,PFOA,Perfluorooctanoic acid,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,1.77,ppt,reported,,us_pfoa_mcl_2024,sanlando-umcr5-2024-notice
+sanlando-pfos-average-2024,FL3591121,PFOS,Perfluorooctane sulfonate,ucmr5_notice_average_2024,2024-02-01,2024-08-31,,1.43,ppt,reported,,us_pfos_mcl_2024,sanlando-umcr5-2024-notice

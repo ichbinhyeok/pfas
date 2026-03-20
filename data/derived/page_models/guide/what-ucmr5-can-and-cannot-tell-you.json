@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
+  "model_id" : "guide:what-ucmr5-can-and-cannot-tell-you",
+  "route_type" : "guide",
+  "route_key" : "what-ucmr5-can-and-cannot-tell-you",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/what-ucmr5-can-and-cannot-tell-you",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "what-ucmr5-can-and-cannot-tell-you",
+      "eyebrow" : "Decision-intent guide",
+      "title" : "UCMR5 is useful PFAS evidence, but it is not a full household answer",
+      "lede" : "UCMR5 can be one of the fastest ways to understand a public-water PFAS signal, but it is easy to overread if you treat it like a final compliance verdict or a direct household test.",
+      "queryIntent" : "Program interpretation",
+      "nextActionTitle" : "Use UCMR5 as routing evidence, not final certainty",
+      "nextActionSummary" : "UCMR5 can open the right utility path quickly, but it should still be read in the context of later notices, utility updates, and certified point-of-use fit.",
+      "whyThis" : [ "UCMR5 provides direct system-specific monitoring context.", "EPA uses UCMR data for occurrence and regulatory understanding, not as a simple one-step household answer.", "The data can be highly useful without pretending it is the only thing that matters." ],
+      "whatThisDoesNotTellYou" : [ "UCMR5 does not replace later utility notices or state actions.", "It does not equal a personal tap result.", "It should not be inflated into a safe or unsafe label for the home." ],
+      "checklist" : [ "Confirm the system identifier.", "Read the analyte table and time range.", "Keep UCMR5 in the evidence stack with newer utility or state documents." ],
+      "evidenceHighlights" : [ "EPA explicitly frames UCMR as monitoring data with a broader regulatory purpose.", "Utility UCMR notices can still act as strong routing inputs for the household.", "The right interpretation is practical and bounded at the same time." ],
+      "targetQueries" : [ "what is ucmr5 for pfas", "how to read ucmr5 pfas", "ucmr5 pfas what should i do" ],
+      "relatedPwsids" : [ "FL3354883", "FL3591121", "7360058" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-x12", "waterdrop-x16" ],
+      "sourceIds" : [ "epa-ucmr5-main", "epa-ucmr-occurrence-data", "epa-pfas-npdwr-implementation" ],
+      "primaryHref" : "/guides/how-to-read-a-pfas-utility-notice",
+      "primaryLabel" : "Read the utility notice guide",
+      "secondaryHref" : "/checker",
+      "secondaryLabel" : "Open Action Checker",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Why UCMR5 is worth reading carefully",
+        "summary" : "Many households first see PFAS through a utility UCMR notice.",
+        "paragraphs" : [ "UCMR5 tells you what the system sampled, when it sampled, and which contaminants were detected. That is already far better than generic PFAS worry content because it anchors the conversation in the actual system serving the household.", "For that reason alone, UCMR5 can be enough to open a public-water interpretation path and rule out a lot of irrelevant advice." ],
+        "bullets" : [ "It is system-specific, not generic.", "It gives analyte-level evidence.", "It is often the first real signal a household sees." ]
+      }, {
+        "title" : "Why UCMR5 is easy to overread",
+        "summary" : "The same features that make UCMR5 valuable also make it tempting to treat like a final verdict.",
+        "paragraphs" : [ "UCMR5 is a monitoring framework. EPA uses the data to understand occurrence and to support broader regulatory work. That means the document is useful and bounded at the same time. It is not a substitute for every later utility update, and it is not a personal tap-water diagnosis.", "The right move is to use UCMR5 as a strong routing signal while staying honest about what else could still matter." ],
+        "bullets" : [ "UCMR5 is not the whole evidence stack.", "It should not replace newer notices.", "It should not be treated as a household-safe label." ]
+      }, {
+        "title" : "How to use UCMR5 well inside the engine",
+        "summary" : "Use UCMR5 to narrow the next action without pretending it answers every downstream question.",
+        "paragraphs" : [ "If UCMR5 shows low or moderate detections, the user may move into review-first or optional-certified-POU territory. If it shows stronger values or utility messaging indicating active response planning, the household may more reasonably compare certified under-sink solutions. In both cases the value is in better routing, not in false certainty.", "That is the same reason UCMR5 belongs in the guide cluster: it is one of the most searchable and most misread pieces of PFAS evidence." ],
+        "bullets" : [ "Use it to narrow the route.", "Do not use it to force certainty.", "Pair it with newer utility context when available." ]
+      } ]
+    }
+  }
+}

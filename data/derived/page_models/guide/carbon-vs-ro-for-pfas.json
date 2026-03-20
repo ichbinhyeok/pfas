@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
+  "model_id" : "guide:carbon-vs-ro-for-pfas",
+  "route_type" : "guide",
+  "route_key" : "carbon-vs-ro-for-pfas",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/carbon-vs-ro-for-pfas",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "carbon-vs-ro-for-pfas",
+      "eyebrow" : "Decision-intent guide",
+      "title" : "Carbon vs reverse osmosis for PFAS is a fit question, not a badge question",
+      "lede" : "Carbon and reverse osmosis can both reduce PFAS when the specific product has the right claim set. The real decision is fit, maintenance, and evidence state, not technology pride.",
+      "queryIntent" : "Product comparison",
+      "nextActionTitle" : "Compare fit, maintenance, and certification together",
+      "nextActionSummary" : "RO is not automatically the best answer and carbon is not automatically too weak. The product class only makes sense after the document path is clear.",
+      "whyThis" : [ "Certified carbon systems can be enough for many public-water households.", "RO often adds more removal breadth but also adds maintenance and cost complexity.", "Technology class without claim scope is a weak shortcut." ],
+      "whatThisDoesNotTellYou" : [ "This does not say carbon and RO are interchangeable in all households.", "It does not mean every product marketed as RO or carbon has the right claim set.", "It does not justify whole-house by itself." ],
+      "checklist" : [ "Lock the evidence state first.", "Check the exact PFAS claim, not just the standard badge.", "Compare annual maintenance and workflow burden before deciding." ],
+      "evidenceHighlights" : [ "EPA filter guidance points households toward certified claim-level comparison rather than technology worship.", "NSF 53 and 58 labels only become meaningful when tied to the actual reduction claim.", "Annual maintenance changes which system is truly sustainable." ],
+      "targetQueries" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro" ],
+      "relatedPwsids" : [ "PA1510001", "FL3354883", "FL3591121" ],
+      "relatedProductIds" : [ "aquasana-aq-6200", "aquatru-classic", "waterdrop-g3p600", "waterdrop-k19-sfk" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-ccr-consumer-info", "nsf-dwtu-listings" ],
+      "primaryHref" : "/guides/pfas-filter-annual-cost",
+      "primaryLabel" : "Read the annual cost guide",
+      "secondaryHref" : "/guides/nsf-53-vs-58-pfas",
+      "secondaryLabel" : "Read the certification guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Why carbon is often undersold in PFAS discussions",
+        "summary" : "Weak PFAS content often treats carbon as lightweight and RO as serious. That is too blunt.",
+        "paragraphs" : [ "A certified carbon block or ion exchange point-of-use system can be a very reasonable fit when the household is on public water with low or below-reference PFAS context and wants a proportional intervention. The key is that the product has the relevant claim set, not that it belongs to the most dramatic technology class.", "Carbon systems also tend to be easier to install, easier to maintain, and cheaper to keep running, which matters more than marketing language suggests." ],
+        "bullets" : [ "Carbon can be enough when the evidence state is moderate.", "Certification and maintenance matter more than category prestige.", "Point-of-use often beats overbuilt house-wide responses." ]
+      }, {
+        "title" : "Why RO still matters for some households",
+        "summary" : "RO becomes more compelling when the household wants a narrower tap solution with broader contaminant reduction and accepts the maintenance tradeoff.",
+        "paragraphs" : [ "RO products can be attractive when the household already knows it wants a dedicated drinking-water intervention and is willing to manage membranes, multiple cartridges, and a higher total ownership burden. That is especially true when the user wants a more conservative removal layer for drinking and cooking water only.", "But the practical value disappears if the household cannot realistically maintain it. A high-spec system with poor upkeep is not a better decision than a simpler certified system that the household will actually service." ],
+        "bullets" : [ "RO can be stronger on breadth, not automatically on fit.", "Maintenance burden is part of the decision, not a footnote.", "Dedicated drinking-water use often matters more than whole-home ambition." ]
+      }, {
+        "title" : "Use technology class only after evidence and cost",
+        "summary" : "The defensible sequence is evidence first, claims second, maintenance third, technology class last.",
+        "paragraphs" : [ "This order protects the user from jumping from a utility notice or low detection straight into a prestige technology purchase. It also protects the user from dismissing a simpler certified carbon product that may be fully adequate for the actual situation.", "The engine should therefore present carbon versus RO as a fit decision, not a ladder of seriousness." ],
+        "bullets" : [ "Document state first.", "Claim scope second.", "Annual maintenance third.", "Technology class last." ]
+      } ]
+    }
+  }
+}

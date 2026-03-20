@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T23:55:00+09:00",
+  "generated_at": "2026-03-20T23:59:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-amway-espring-100186-cartridge-20260319",
@@ -547,6 +547,149 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official ZeroWater certification page linking the all-certified-devices performance sheet."
+    },
+    {
+      "raw_source_id": "raw-zerowater-10-cup-pitcher-product-20260320",
+      "source_id": "zerowater-10-cup-pitcher-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.zerowater.com/products/10-cup-water-filter-pitcher",
+      "organization": "Culligan ZeroWater",
+      "title": "10 Cup Pitcher | Culligan ZeroWater",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official 10 Cup Pitcher product page showing price and product configuration."
+    },
+    {
+      "raw_source_id": "raw-zerowater-faucet-mount-faq-20260320",
+      "source_id": "zerowater-faucet-mount-faq",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.zerowater.com/pages/frequently-asked-questions-faucet-mount/",
+      "organization": "Culligan ZeroWater",
+      "title": "Faucet Mount | Frequently Asked Questions",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official ZeroWater faucet mount FAQ with replacement cadence and certification language."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g3p600-product-20260320",
+      "source_id": "waterdrop-g3p600-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/remineralization-ro-system-g3p600?ref=headermenu",
+      "organization": "Waterdrop",
+      "title": "Remineralization Reverse Osmosis System - Waterdrop G3P600",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official G3P600 product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g3p600-spec-pdf-20260320",
+      "source_id": "waterdrop-g3p600-spec-pdf",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-WD-G3P600-V005.pdf?v=1724235889",
+      "organization": "Waterdrop",
+      "title": "Specification Sheet for Reducing Harmful Substances - WD-G3P600",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Waterdrop specification sheet supporting harmful substance reduction claims for G3P600."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g3p800-product-20260320",
+      "source_id": "waterdrop-g3p800-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-g3p800-ro-system-with-3-years-extended-warranty",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Tankless Reverse Osmosis System G3P800",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official G3P800 product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g3p800-spec-pdf-20260320",
+      "source_id": "waterdrop-g3p800-spec-pdf",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-G3P800.pdf?v=1725595808",
+      "organization": "Waterdrop",
+      "title": "Specification Sheet for Reducing Harmful Substances - G3P800",
+      "content_type": "application/pdf",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Waterdrop specification sheet supporting harmful substance reduction claims for G3P800."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g5p700a-product-20260320",
+      "source_id": "waterdrop-g5p700a-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/alkaline-ro-water-filter-for-tap-g5p700a",
+      "organization": "Waterdrop",
+      "title": "Waterdrop G5P700A Alkaline RO Filtration System | Pure & Healthy",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official G5P700A product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-k19-sfk-product-20260320",
+      "source_id": "waterdrop-k19-sfk-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/countertop-ro-water-filter-k19-sfk?ref=headermenu",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official K19-SFK countertop RO product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-x8-a-product-20260320",
+      "source_id": "waterdrop-x8-a-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/ro-system-for-home-alkaline-x8-a?ref=headermenu",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X8 Alkaline RO System | 800 GPD Tankless Filter",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official X8-A product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-x12-product-20260320",
+      "source_id": "waterdrop-x12-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/reverse-osmosis-system-x12?ref=headermenu",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Undersink Reverse Osmosis System, X12",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official X12 product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-x16-product-20260320",
+      "source_id": "waterdrop-x16-product",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.waterdropfilter.com/collections/undersink-ro-systems/products/undersink-reverse-osmosis-system-x16?ref=headermenu",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Undersink Reverse Osmosis System, X16",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official X16 product page with certification language and PFAS reduction context."
     }
   ]
 }

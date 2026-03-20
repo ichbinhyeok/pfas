@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:58.381662700+09:00",
-  "model_id" : "public_water:FL3354647",
+  "generated_at" : "2026-03-20T12:54:58.638243800+09:00",
+  "model_id" : "public_water:FL3591121",
   "route_type" : "public_water",
-  "route_key" : "FL3354647",
+  "route_key" : "FL3591121",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/FL3354647",
+  "render_path" : "/public-water/FL3591121",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 4,
+  "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "FL3354647",
-      "pwsName" : "Four Lakes Water System",
+      "pwsid" : "FL3591121",
+      "pwsName" : "Sanlando Water System",
       "stateCode" : "FL",
       "systemType" : "community",
       "populationServed" : "",
-      "sourceWaterType" : "groundwater",
+      "sourceWaterType" : "unknown",
       "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2024/fourlakes-24ccr-127.pdf?sfvrsn=d9b43f5b_4",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2023/four-lake-pfas-2023.pdf?sfvrsn=7f163b5b_2",
-      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with separate 2023 PFAS reporting showing detectable PFOA, PFOS, and PFHxS values and a 2024 CCR for system profile context.",
+      "ccrUrl" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/regulatory/sanlando-umcr5-public-notification-%28p-1-2%29.pdf?sfvrsn=e12b385b_0",
+      "serviceAreaNotes" : "Sunshine Water Services community system in Altamonte Springs currently represented by a 2024 UCMR5 PFAS notice showing low-level PFOA, PFOS, and PFHxS detections from 2024 sampling.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "four-lakes-2024-water-quality-report", "four-lakes-pfas-2023-report" ]
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "sanlando-umcr5-2024-notice" ]
     },
     "result" : {
-      "result_id" : "public-water:FL3354647",
+      "result_id" : "public-water:FL3591121",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T12:54:58.358543+09:00",
+      "generated_at" : "2026-03-20T12:54:58.615467800+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -97,16 +97,10 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "four-lakes-2024-water-quality-report",
+        "source_id" : "sanlando-umcr5-2024-notice",
         "organization" : "Sunshine Water Services",
-        "title" : "Annual Water Quality Report 2024 Four Lakes CCR 127",
-        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2024/fourlakes-24ccr-127.pdf?sfvrsn=d9b43f5b_4",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "four-lakes-pfas-2023-report",
-        "organization" : "Sunshine Water Services",
-        "title" : "PFAS Monitoring Results 2023 Four Lakes",
-        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2023/four-lake-pfas-2023.pdf?sfvrsn=7f163b5b_2",
+        "title" : "Unregulated Contaminant Monitoring Rule Results for Sanlando Water System",
+        "url" : "https://www.myutility.us/docs/default-source/florida/regulatory/sanlando-umcr5-public-notification-%28p-1-2%29.pdf?sfvrsn=e12b385b_0",
         "trust_tier" : 2
       }, {
         "source_id" : "sunshine-water-home",
@@ -453,9 +447,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:FL3354647",
+      "input_id" : "public_water:FL3591121",
       "route_type" : "public_water",
-      "route_key" : "FL3354647",
+      "route_key" : "FL3591121",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -463,12 +457,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "FL3354647",
+      "pwsid" : "FL3591121",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/FL3354647",
-      "secondary_path" : "/internal/results/public-water/FL3354647",
+      "primary_path" : "/public-water/FL3591121",
+      "secondary_path" : "/internal/results/public-water/FL3591121",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/FL3354647"
+    "supporting_path" : "/public-water-system/FL3591121"
   }
 }

@@ -1,8 +1,41 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:17.703998200+09:00",
-  "document_count" : 31,
+  "generated_at" : "2026-03-20T12:54:55.449941800+09:00",
+  "document_count" : 37,
   "documents" : [ {
+    "document_id" : "guide:carbon-vs-ro-for-pfas",
+    "route_type" : "guide",
+    "route_key" : "carbon-vs-ro-for-pfas",
+    "url" : "/guides/carbon-vs-ro-for-pfas",
+    "title" : "Carbon vs reverse osmosis for PFAS is a fit question, not a badge question",
+    "summary" : "Carbon and reverse osmosis can both reduce PFAS when the specific product has the right claim set. The real decision is fit, maintenance, and evidence state, not technology pride. RO is not automatically the best answer and carbon is not automatically too weak. The product class only makes sense after the document path is clear.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro", "carbon vs ro for pfas", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:how-to-read-a-pfas-utility-notice",
+    "route_type" : "guide",
+    "route_key" : "how-to-read-a-pfas-utility-notice",
+    "url" : "/guides/how-to-read-a-pfas-utility-notice",
+    "title" : "A PFAS utility notice is an action document, not a generic scare document",
+    "summary" : "If a utility sends a PFAS notice, read the exact system and contaminant context first, then decide whether certified point-of-use treatment is justified. A mailed notice can be above-reference, below-reference, or unregulated monitoring context. The first job is to classify the document, not to guess the fix.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "pfas utility notice what does it mean", "how to read pfas notice from water utility", "ucmr pfas notice what should i do", "how to read a pfas utility notice", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:non-detect-vs-below-reference-pfas",
+    "route_type" : "guide",
+    "route_key" : "non-detect-vs-below-reference-pfas",
+    "url" : "/guides/non-detect-vs-below-reference-pfas",
+    "title" : "Non-detect and below reference are not the same PFAS answer",
+    "summary" : "A non-detect result and a below-reference detection both feel reassuring, but they mean different things for confidence, monitoring, and product urgency. A household should not treat non-detect language as identical to a low detected value. The next action can still differ even when both fall below the chosen benchmark.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "pfas non detect vs below reference", "what does non detect mean for pfas", "pfas detected below limit what should i do", "non detect vs below reference pfas", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -69,6 +102,17 @@
     "source_count" : 4,
     "keywords" : [ "under sink vs whole house pfas filter", "whole house vs under sink pfas", "do i need whole house pfas filter", "under sink vs whole house", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:what-ucmr5-can-and-cannot-tell-you",
+    "route_type" : "guide",
+    "route_key" : "what-ucmr5-can-and-cannot-tell-you",
+    "url" : "/guides/what-ucmr5-can-and-cannot-tell-you",
+    "title" : "UCMR5 is useful PFAS evidence, but it is not a full household answer",
+    "summary" : "UCMR5 can be one of the fastest ways to understand a public-water PFAS signal, but it is easy to overread if you treat it like a final compliance verdict or a direct household test. UCMR5 can open the right utility path quickly, but it should still be read in the context of later notices, utility updates, and certified point-of-use fit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "what is ucmr5 for pfas", "how to read ucmr5 pfas", "ucmr5 pfas what should i do", "what ucmr5 can and cannot tell you", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "public_water:7360058",
     "route_type" : "public_water",
     "route_key" : "7360058",
@@ -124,6 +168,17 @@
     "source_count" : 4,
     "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3354883",
+    "route_type" : "public_water",
+    "route_key" : "FL3354883",
+    "url" : "/public-water/FL3354883",
+    "title" : "Lake Utility Services North PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Lake Utility Services North.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Lake Utility Services North", "FL", "FL3354883", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL3480255",
     "route_type" : "public_water",
     "route_key" : "FL3480255",
@@ -145,6 +200,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL3591121",
+    "route_type" : "public_water",
+    "route_key" : "FL3591121",
+    "url" : "/public-water/FL3591121",
+    "title" : "Sanlando Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Sanlando Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:FL6424076",
     "route_type" : "public_water",

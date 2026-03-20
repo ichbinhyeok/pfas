@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:19.852731+09:00",
+  "generated_at" : "2026-03-20T12:54:58.563243700+09:00",
   "model_id" : "public_water:FL3590069",
   "route_type" : "public_water",
   "route_key" : "FL3590069",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:FL3590069",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T11:47:19.834940200+09:00",
+      "generated_at" : "2026-03-20T12:54:58.540350200+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -343,6 +343,66 @@
         "url" : "https://aquatruwater.com/collections/water-purifiers",
         "trust_tier" : 4
       }, {
+        "source_id" : "waterdrop-g3p600-product",
+        "organization" : "Waterdrop",
+        "title" : "Remineralization Reverse Osmosis System - Waterdrop G3P600",
+        "url" : "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/remineralization-ro-system-g3p600?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g3p600-spec-pdf",
+        "organization" : "Waterdrop",
+        "title" : "Specification Sheet for Reducing Harmful Substances - WD-G3P600",
+        "url" : "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-WD-G3P600-V005.pdf?v=1724235889",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g3p800-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Tankless Reverse Osmosis System G3P800",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-g3p800-ro-system-with-3-years-extended-warranty",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g3p800-spec-pdf",
+        "organization" : "Waterdrop",
+        "title" : "Specification Sheet for Reducing Harmful Substances - G3P800",
+        "url" : "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-G3P800.pdf?v=1725595808",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g5p700a-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop G5P700A Alkaline RO Filtration System | Pure & Healthy",
+        "url" : "https://www.waterdropfilter.com/products/alkaline-ro-water-filter-for-tap-g5p700a",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-k19-sfk-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK",
+        "url" : "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/countertop-ro-water-filter-k19-sfk?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x12-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X Series Undersink Reverse Osmosis System, X12",
+        "url" : "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/reverse-osmosis-system-x12?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x16-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X Series Undersink Reverse Osmosis System, X16",
+        "url" : "https://www.waterdropfilter.com/collections/undersink-ro-systems/products/undersink-reverse-osmosis-system-x16?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x8-a-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X8 Alkaline RO System | 800 GPD Tankless Filter",
+        "url" : "https://www.waterdropfilter.com/products/ro-system-for-home-alkaline-x8-a?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "zerowater-10-cup-pitcher-product",
+        "organization" : "Culligan ZeroWater",
+        "title" : "10 Cup Pitcher | Culligan ZeroWater",
+        "url" : "https://www.zerowater.com/products/10-cup-water-filter-pitcher",
+        "trust_tier" : 4
+      }, {
         "source_id" : "zerowater-23-cup-dispenser-product",
         "organization" : "ZeroWater",
         "title" : "23 Cup 5-Stage Water Filter Dispenser",
@@ -371,6 +431,12 @@
         "organization" : "ZeroWater",
         "title" : "Performance Data Sheet for All Certified Devices IAPMO 12-1-2023",
         "url" : "https://cdn.shopify.com/s/files/1/0311/5499/5336/files/Performance_Data_Sheet_for_all_certified_devices_IAPMO_12-1-2023.pdf?v=1702410912",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "zerowater-faucet-mount-faq",
+        "organization" : "Culligan ZeroWater",
+        "title" : "Faucet Mount | Frequently Asked Questions",
+        "url" : "https://www.zerowater.com/pages/frequently-asked-questions-faucet-mount/",
         "trust_tier" : 4
       }, {
         "source_id" : "zerowater-performance-certification",

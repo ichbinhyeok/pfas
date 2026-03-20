@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T11:40:24+09:00",
+  "generated_at": "2026-03-20T23:59:00+09:00",
   "captures": [
     {
       "raw_source_id": "raw-abington-2024-water-quality-report-20260320",
@@ -677,6 +677,32 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official Sunshine Water Services report index used to locate Bear Lake reports."
+    },
+    {
+      "raw_source_id": "raw-lusi-north-umcr5-2024-notice-20260320",
+      "source_id": "lusi-north-umcr5-2024-notice",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/florida/general/lus-n-umcr5-public-notification-8-2024.pdf?sfvrsn=b1de3a5b_0",
+      "organization": "Sunshine Water Services",
+      "title": "Unregulated Contaminant Monitoring Rule Results for the Lake Utility Services North Water System",
+      "content_type": "application/pdf",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official UCMR5 notice for Lake Utility Services North with average values for PFOA, PFOS, and PFHxS from 2024 sampling."
+    },
+    {
+      "raw_source_id": "raw-sanlando-umcr5-2024-notice-20260320",
+      "source_id": "sanlando-umcr5-2024-notice",
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/florida/regulatory/sanlando-umcr5-public-notification-%28p-1-2%29.pdf?sfvrsn=e12b385b_0",
+      "organization": "Sunshine Water Services",
+      "title": "Unregulated Contaminant Monitoring Rule Results for Sanlando Water System",
+      "content_type": "application/pdf",
+      "jurisdiction": "FL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official UCMR5 notice for Sanlando with average values for PFOA, PFOS, and PFHxS from 2024 sampling."
     }
   ]
 }

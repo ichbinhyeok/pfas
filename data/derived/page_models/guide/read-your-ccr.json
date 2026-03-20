@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:19.483405800+09:00",
+  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
   "model_id" : "guide:read-your-ccr",
   "route_type" : "guide",
   "route_key" : "read-your-ccr",
@@ -24,7 +24,7 @@
       "checklist" : [ "Find the system name and PWSID.", "Check the report date.", "Open any newer PFAS notice or utility PFAS page." ],
       "evidenceHighlights" : [ "EPA says community water systems deliver annual CCRs by July 1, but newer PFAS notices can still outrank an older report.", "Philadelphia and Lancaster show how a CCR and a newer PFAS page or notice need to be read together.", "The CCR is a routing layer into the direct utility record, not a household verdict." ],
       "targetQueries" : [ "how to read ccr pfas", "how to read utility water report pfas", "ccr pfas interpretation" ],
-      "relatedPwsids" : [ "PA1510001", "7360058", "FL3480255", "FL6535055", "FL6424076" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "FL3480255", "FL6535055", "FL6424076", "FL3354883", "FL3591121" ],
       "relatedProductIds" : [ "aq-claryum-direct-connect", "aquatru-model-1" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "phila-2024-water-quality-report", "phila-pfas-management", "lancaster-2024-water-quality-report", "lancaster-pfoa-notice-2025" ],
       "primaryHref" : "/public-water-system/PA1510001",

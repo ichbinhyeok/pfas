@@ -1,8 +1,41 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:18.420346700+09:00",
-  "model_count" : 31,
+  "generated_at" : "2026-03-20T12:54:56.440340400+09:00",
+  "model_count" : 37,
   "models" : [ {
+    "model_id" : "guide:carbon-vs-ro-for-pfas",
+    "route_type" : "guide",
+    "route_key" : "carbon-vs-ro-for-pfas",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/carbon-vs-ro-for-pfas.json",
+    "render_path" : "/guides/carbon-vs-ro-for-pfas",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
+    "model_id" : "guide:how-to-read-a-pfas-utility-notice",
+    "route_type" : "guide",
+    "route_key" : "how-to-read-a-pfas-utility-notice",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/how-to-read-a-pfas-utility-notice.json",
+    "render_path" : "/guides/how-to-read-a-pfas-utility-notice",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
+    "model_id" : "guide:non-detect-vs-below-reference-pfas",
+    "route_type" : "guide",
+    "route_key" : "non-detect-vs-below-reference-pfas",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/non-detect-vs-below-reference-pfas.json",
+    "render_path" : "/guides/non-detect-vs-below-reference-pfas",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
     "model_id" : "guide:nsf-53-vs-58-pfas",
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
@@ -69,6 +102,17 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 4
   }, {
+    "model_id" : "guide:what-ucmr5-can-and-cannot-tell-you",
+    "route_type" : "guide",
+    "route_key" : "what-ucmr5-can-and-cannot-tell-you",
+    "template_kind" : "guide_page",
+    "model_path" : "derived/page_models/guide/what-ucmr5-can-and-cannot-tell-you.json",
+    "render_path" : "/guides/what-ucmr5-can-and-cannot-tell-you",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
     "model_id" : "public_water:7360058",
     "route_type" : "public_water",
     "route_key" : "7360058",
@@ -124,6 +168,17 @@
     "last_verified_date" : "2026-03-20",
     "source_count" : 4
   }, {
+    "model_id" : "public_water:FL3354883",
+    "route_type" : "public_water",
+    "route_key" : "FL3354883",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/FL3354883.json",
+    "render_path" : "/public-water/FL3354883",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
+  }, {
     "model_id" : "public_water:FL3480255",
     "route_type" : "public_water",
     "route_key" : "FL3480255",
@@ -145,6 +200,17 @@
     "indexable" : true,
     "last_verified_date" : "2026-03-20",
     "source_count" : 4
+  }, {
+    "model_id" : "public_water:FL3591121",
+    "route_type" : "public_water",
+    "route_key" : "FL3591121",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/FL3591121.json",
+    "render_path" : "/public-water/FL3591121",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3
   }, {
     "model_id" : "public_water:FL6424076",
     "route_type" : "public_water",

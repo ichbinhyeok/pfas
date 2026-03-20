@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
+  "model_id" : "guide:non-detect-vs-below-reference-pfas",
+  "route_type" : "guide",
+  "route_key" : "non-detect-vs-below-reference-pfas",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/non-detect-vs-below-reference-pfas",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "non-detect-vs-below-reference-pfas",
+      "eyebrow" : "Decision-intent guide",
+      "title" : "Non-detect and below reference are not the same PFAS answer",
+      "lede" : "A non-detect result and a below-reference detection both feel reassuring, but they mean different things for confidence, monitoring, and product urgency.",
+      "queryIntent" : "Interpretation nuance",
+      "nextActionTitle" : "Separate absence of detection from low detected presence",
+      "nextActionSummary" : "A household should not treat non-detect language as identical to a low detected value. The next action can still differ even when both fall below the chosen benchmark.",
+      "whyThis" : [ "Non-detect means the method did not detect the analyte at or above the reporting limit.", "Below-reference means the analyte was detected, but the value is below the chosen benchmark.", "Those are different evidence states and should not collapse into one reassurance bucket." ],
+      "whatThisDoesNotTellYou" : [ "Non-detect does not prove zero PFAS forever.", "Below-reference does not prove the household needs treatment immediately.", "Neither state, by itself, proves whole-house is appropriate." ],
+      "checklist" : [ "Look for the result flag first.", "If detected, compare the actual number to the selected benchmark.", "If non-detect, note the reporting limit and keep the interpretation narrow." ],
+      "evidenceHighlights" : [ "EPA monitoring frameworks distinguish detected values from non-detect results.", "The project already models non-detect separately from below-reference detections.", "This distinction changes how strongly the product layer should open." ],
+      "targetQueries" : [ "pfas non detect vs below reference", "what does non detect mean for pfas", "pfas detected below limit what should i do" ],
+      "relatedPwsids" : [ "FL3480255", "GA3110075", "FL3590069" ],
+      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "aquasana-aq-mf-1", "waterdrop-g3p800" ],
+      "sourceIds" : [ "epa-ucmr-occurrence-data", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Compare your state in the checker",
+      "secondaryHref" : "/guides/test-first-vs-filter-first",
+      "secondaryLabel" : "Read the evidence-first guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Why non-detect feels stronger than it is",
+        "summary" : "People naturally hear non-detect as no contaminant, but the document usually supports a narrower statement.",
+        "paragraphs" : [ "Non-detect means the lab did not report the contaminant above the method threshold for that sample. It is a useful signal, but it is still bounded by sampling date, method sensitivity, and document scope. That makes it a conservative piece of reassurance, not a permanent certificate.", "In the engine, non-detect is still valuable because it often keeps the next action in review mode instead of purchase mode. The mistake is turning that limited result into a sweeping safety statement." ],
+        "bullets" : [ "Non-detect is a bounded lab statement.", "It reduces urgency but does not end future monitoring.", "It should not be marketed as zero risk." ]
+      }, {
+        "title" : "Why below-reference detections still matter",
+        "summary" : "A detected value below the selected benchmark is often the most misunderstood middle state.",
+        "paragraphs" : [ "A below-reference detection means there is direct evidence of the analyte, but the measured level is still below the chosen decision threshold. That can still justify attention to trend, source context, and certified point-of-use options, especially if the household wants a conservative response.", "This is not the same as an above-reference escalation. It is a narrower state that often leads to optional certified POU rather than mandatory treatment behavior." ],
+        "bullets" : [ "Detection matters even when urgency stays moderate.", "Trend and context still belong in the interpretation.", "POU can be optional rather than absent." ]
+      }, {
+        "title" : "Use the distinction to avoid overbuying",
+        "summary" : "The strongest practical use of this split is avoiding the habit of buying the largest system for any detected PFAS mention.",
+        "paragraphs" : [ "When a document says non-detect, a household can often stay in watchful review mode. When it says below-reference detection, the household can compare a small certified POU step without pretending the situation is the same as an above-reference notice.", "That distinction is one of the cleanest ways to keep PFAS decisions proportional rather than emotional." ],
+        "bullets" : [ "Non-detect and below-reference should not collapse into one outcome.", "Both states can avoid whole-house overreach.", "The product layer should mirror the evidence layer." ]
+      } ]
+    }
+  }
+}

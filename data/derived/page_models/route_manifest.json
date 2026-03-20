@@ -1,8 +1,47 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T11:47:17.165333500+09:00",
-  "route_count" : 31,
+  "generated_at" : "2026-03-20T12:54:54.839186800+09:00",
+  "route_count" : 37,
   "routes" : [ {
+    "route_type" : "guide",
+    "route_key" : "carbon-vs-ro-for-pfas",
+    "display_label" : "Carbon vs reverse osmosis for PFAS is a fit question, not a badge question",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/carbon-vs-ro-for-pfas",
+    "supporting_path" : "/guides/pfas-filter-annual-cost",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro", "carbon vs ro for pfas", "PFAS", "water", "decision guide" ]
+  }, {
+    "route_type" : "guide",
+    "route_key" : "how-to-read-a-pfas-utility-notice",
+    "display_label" : "A PFAS utility notice is an action document, not a generic scare document",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/how-to-read-a-pfas-utility-notice",
+    "supporting_path" : "/checker",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "pfas utility notice what does it mean", "how to read pfas notice from water utility", "ucmr pfas notice what should i do", "how to read a pfas utility notice", "PFAS", "water", "decision guide" ]
+  }, {
+    "route_type" : "guide",
+    "route_key" : "non-detect-vs-below-reference-pfas",
+    "display_label" : "Non-detect and below reference are not the same PFAS answer",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/non-detect-vs-below-reference-pfas",
+    "supporting_path" : "/checker",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "pfas non detect vs below reference", "what does non detect mean for pfas", "pfas detected below limit what should i do", "non detect vs below reference pfas", "PFAS", "water", "decision guide" ]
+  }, {
     "route_type" : "guide",
     "route_key" : "nsf-53-vs-58-pfas",
     "display_label" : "NSF 53 vs 58 is not enough by itself for PFAS decisions",
@@ -81,6 +120,19 @@
     "readiness_basis" : "curated_guide",
     "keywords" : [ "under sink vs whole house pfas filter", "whole house vs under sink pfas", "do i need whole house pfas filter", "under sink vs whole house", "PFAS", "water", "decision guide" ]
   }, {
+    "route_type" : "guide",
+    "route_key" : "what-ucmr5-can-and-cannot-tell-you",
+    "display_label" : "UCMR5 is useful PFAS evidence, but it is not a full household answer",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/what-ucmr5-can-and-cannot-tell-you",
+    "supporting_path" : "/guides/how-to-read-a-pfas-utility-notice",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "what is ucmr5 for pfas", "how to read ucmr5 pfas", "ucmr5 pfas what should i do", "what ucmr5 can and cannot tell you", "PFAS", "water", "decision guide" ]
+  }, {
     "route_type" : "public_water",
     "route_key" : "7360058",
     "display_label" : "City of Lancaster Water Department PFAS interpretation",
@@ -147,6 +199,19 @@
     "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3354883",
+    "display_label" : "Lake Utility Services North PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3354883",
+    "supporting_path" : "/public-water-system/FL3354883",
+    "api_path" : "/internal/results/public-water/FL3354883",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Lake Utility Services North", "FL", "FL3354883", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3480255",
     "display_label" : "Crescent Heights Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -171,6 +236,19 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL3591121",
+    "display_label" : "Sanlando Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3591121",
+    "supporting_path" : "/public-water-system/FL3591121",
+    "api_path" : "/internal/results/public-water/FL3591121",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "FL6424076",

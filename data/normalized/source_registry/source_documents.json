@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-03-20T11:40:24+09:00",
+  "generated_at": "2026-03-20T23:59:00+09:00",
   "documents": [
     {
       "source_id": "abington-2024-water-quality-report",
@@ -3224,6 +3224,290 @@
         "third-party listing replacement"
       ],
       "notes": "ZeroWater certification page linking the current all-certified-devices performance sheet."
+    },
+    {
+      "source_id": "lusi-north-umcr5-2024-notice",
+      "organization": "Sunshine Water Services",
+      "title": "Unregulated Contaminant Monitoring Rule Results for the Lake Utility Services North Water System",
+      "url": "https://www.myutility.us/docs/default-source/florida/general/lus-n-umcr5-public-notification-8-2024.pdf?sfvrsn=b1de3a5b_0",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-08-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": "2024-08-01",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Sunshine Water UCMR5 notice for Lake Utility Services North showing average values for PFOA 4.51 ppt, PFOS 6.54 ppt, and PFHxS 2.41 ppt."
+    },
+    {
+      "source_id": "sanlando-umcr5-2024-notice",
+      "organization": "Sunshine Water Services",
+      "title": "Unregulated Contaminant Monitoring Rule Results for Sanlando Water System",
+      "url": "https://www.myutility.us/docs/default-source/florida/regulatory/sanlando-umcr5-public-notification-%28p-1-2%29.pdf?sfvrsn=e12b385b_0",
+      "source_kind": "utility_notice_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-08-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": "2024-08-01",
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "system-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Sunshine Water UCMR5 notice for Sanlando showing average values for PFOA 1.77 ppt, PFOS 1.43 ppt, and PFHxS 1.17 ppt."
+    },
+    {
+      "source_id": "zerowater-10-cup-pitcher-product",
+      "organization": "Culligan ZeroWater",
+      "title": "10 Cup Pitcher | Culligan ZeroWater",
+      "url": "https://www.zerowater.com/products/10-cup-water-filter-pitcher",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product price",
+        "product configuration",
+        "installation type"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official 10 Cup Pitcher page showing current price and product configuration for a certified ZeroWater pitcher device."
+    },
+    {
+      "source_id": "zerowater-faucet-mount-faq",
+      "organization": "Culligan ZeroWater",
+      "title": "Faucet Mount | Frequently Asked Questions",
+      "url": "https://www.zerowater.com/pages/frequently-asked-questions-faucet-mount/",
+      "source_kind": "vendor_support_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official replacement cadence",
+        "official capacity context",
+        "supporting certification language"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official ZeroWater faucet mount FAQ with replacement cadence and certification language."
+    },
+    {
+      "source_id": "waterdrop-g3p600-product",
+      "organization": "Waterdrop",
+      "title": "Remineralization Reverse Osmosis System - Waterdrop G3P600",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/remineralization-ro-system-g3p600?ref=headermenu",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G3P600 page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-g3p600-spec-pdf",
+      "organization": "Waterdrop",
+      "title": "Specification Sheet for Reducing Harmful Substances - WD-G3P600",
+      "url": "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-WD-G3P600-V005.pdf?v=1724235889",
+      "source_kind": "vendor_report_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "PFAS claim support",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution"
+      ],
+      "notes": "Waterdrop specification sheet supporting harmful substance reduction claims for the G3P600 system."
+    },
+    {
+      "source_id": "waterdrop-g3p800-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Tankless Reverse Osmosis System G3P800",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-g3p800-ro-system-with-3-years-extended-warranty",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G3P800 page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-g3p800-spec-pdf",
+      "organization": "Waterdrop",
+      "title": "Specification Sheet for Reducing Harmful Substances - G3P800",
+      "url": "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-G3P800.pdf?v=1725595808",
+      "source_kind": "vendor_report_pdf",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "PFAS claim support",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution"
+      ],
+      "notes": "Waterdrop specification sheet supporting harmful substance reduction claims for the G3P800 system."
+    },
+    {
+      "source_id": "waterdrop-g5p700a-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop G5P700A Alkaline RO Filtration System | Pure & Healthy",
+      "url": "https://www.waterdropfilter.com/products/alkaline-ro-water-filter-for-tap-g5p700a",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G5P700A page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-k19-sfk-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/countertop-ro-water-filter-k19-sfk?ref=headermenu",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop K19-SFK countertop RO page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x8-a-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X8 Alkaline RO System | 800 GPD Tankless Filter",
+      "url": "https://www.waterdropfilter.com/products/ro-system-for-home-alkaline-x8-a?ref=headermenu",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X8-A page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x12-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Undersink Reverse Osmosis System, X12",
+      "url": "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/reverse-osmosis-system-x12?ref=headermenu",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X12 page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x16-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Undersink Reverse Osmosis System, X16",
+      "url": "https://www.waterdropfilter.com/collections/undersink-ro-systems/products/undersink-reverse-osmosis-system-x16?ref=headermenu",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X16 page stating IAPMO certification context and PFAS reduction marketing language."
     }
   ]
 }

@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:58.381662700+09:00",
-  "model_id" : "public_water:FL3354647",
+  "generated_at" : "2026-03-20T12:54:58.455854900+09:00",
+  "model_id" : "public_water:FL3354883",
   "route_type" : "public_water",
-  "route_key" : "FL3354647",
+  "route_key" : "FL3354883",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/FL3354647",
+  "render_path" : "/public-water/FL3354883",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 4,
+  "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "FL3354647",
-      "pwsName" : "Four Lakes Water System",
+      "pwsid" : "FL3354883",
+      "pwsName" : "Lake Utility Services North",
       "stateCode" : "FL",
       "systemType" : "community",
       "populationServed" : "",
-      "sourceWaterType" : "groundwater",
+      "sourceWaterType" : "unknown",
       "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2024/fourlakes-24ccr-127.pdf?sfvrsn=d9b43f5b_4",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2023/four-lake-pfas-2023.pdf?sfvrsn=7f163b5b_2",
-      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with separate 2023 PFAS reporting showing detectable PFOA, PFOS, and PFHxS values and a 2024 CCR for system profile context.",
+      "ccrUrl" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/general/lus-n-umcr5-public-notification-8-2024.pdf?sfvrsn=b1de3a5b_0",
+      "serviceAreaNotes" : "Sunshine Water Services community system in Altamonte Springs currently represented by a 2024 UCMR5 PFAS notice showing elevated PFOA and PFOS averages while broader report discovery continues from the official report index.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "four-lakes-2024-water-quality-report", "four-lakes-pfas-2023-report" ]
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "lusi-north-umcr5-2024-notice" ]
     },
     "result" : {
-      "result_id" : "public-water:FL3354647",
+      "result_id" : "public-water:FL3354883",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T12:54:58.358543+09:00",
+      "generated_at" : "2026-03-20T12:54:58.432915800+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
-        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
-        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
+        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
+        "title" : "Review utility response and consider certified point-of-use filtration",
+        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 2 above selected benchmark, 1 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
         "range_high_usd" : 1499.00,
@@ -97,16 +97,10 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "four-lakes-2024-water-quality-report",
+        "source_id" : "lusi-north-umcr5-2024-notice",
         "organization" : "Sunshine Water Services",
-        "title" : "Annual Water Quality Report 2024 Four Lakes CCR 127",
-        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2024/fourlakes-24ccr-127.pdf?sfvrsn=d9b43f5b_4",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "four-lakes-pfas-2023-report",
-        "organization" : "Sunshine Water Services",
-        "title" : "PFAS Monitoring Results 2023 Four Lakes",
-        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/four-lakes/2023/four-lake-pfas-2023.pdf?sfvrsn=7f163b5b_2",
+        "title" : "Unregulated Contaminant Monitoring Rule Results for the Lake Utility Services North Water System",
+        "url" : "https://www.myutility.us/docs/default-source/florida/general/lus-n-umcr5-public-notification-8-2024.pdf?sfvrsn=b1de3a5b_0",
         "trust_tier" : 2
       }, {
         "source_id" : "sunshine-water-home",
@@ -447,28 +441,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "below_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
+        "benchmark_relation" : "above_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:FL3354647",
+      "input_id" : "public_water:FL3354883",
       "route_type" : "public_water",
-      "route_key" : "FL3354647",
+      "route_key" : "FL3354883",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "BELOW_REFERENCE",
+      "benchmark_relation" : "ABOVE_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "FL3354647",
-      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/FL3354647",
-      "secondary_path" : "/internal/results/public-water/FL3354647",
-      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+      "pwsid" : "FL3354883",
+      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
+      "primary_path" : "/public-water/FL3354883",
+      "secondary_path" : "/guides/under-sink-vs-whole-house",
+      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
     },
-    "supporting_path" : "/public-water-system/FL3354647"
+    "supporting_path" : "/public-water-system/FL3354883"
   }
 }
