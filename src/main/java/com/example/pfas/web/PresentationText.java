@@ -247,6 +247,120 @@ public final class PresentationText {
 		}
 	}
 
+	public static String bestForLabel(FilterCatalogItem product) {
+		if (product == null) {
+			return "Best for a narrowly scoped drinking-water intervention.";
+		}
+		var installationType = safeLower(product.installationType());
+		var filterType = safeLower(product.filterType());
+		if (installationType.contains("under_sink") && filterType.contains("reverse_osmosis")) {
+			return "Best for households that accept installation and higher upkeep to keep a narrow point-of-use route.";
+		}
+		if (installationType.contains("under_sink")) {
+			return "Best for households that want a daily-use under-sink route without jumping straight to whole-house treatment.";
+		}
+		if (installationType.contains("countertop")) {
+			return "Best for renters or low-plumbing households that still want a deliberate point-of-use lane.";
+		}
+		if (installationType.contains("pitcher") || installationType.contains("dispenser")) {
+			return "Best for low-commitment households that prioritize a narrow intervention and simple setup.";
+		}
+		if (installationType.contains("faucet") || installationType.contains("direct_connect")) {
+			return "Best for households that want a lighter-installation route with easier day-one adoption.";
+		}
+		return "Best for households that need a proportionate point-of-use option tied to direct evidence.";
+	}
+
+	public static String notForLabel(FilterCatalogItem product) {
+		if (product == null) {
+			return "Not for whole-house expectations or zero-maintenance assumptions.";
+		}
+		var installationType = safeLower(product.installationType());
+		var filterType = safeLower(product.filterType());
+		if (installationType.contains("pitcher") || installationType.contains("dispenser")) {
+			return "Not for households that want high-capacity flow with minimal refill friction.";
+		}
+		if (installationType.contains("countertop")) {
+			return "Not for households that cannot spare counter space or want hidden plumbing integration.";
+		}
+		if (filterType.contains("reverse_osmosis")) {
+			return "Not for households that want the lowest-maintenance ownership path.";
+		}
+		if (installationType.contains("under_sink")) {
+			return "Not for households that cannot install under-sink hardware or only need a very light-touch solution.";
+		}
+		return "Not for households expecting this page to justify whole-house escalation.";
+	}
+
+	public static String sellerChoiceNote(FilterCatalogItem product) {
+		if (product == null) {
+			return "This click should stay tied to an official record, not a generic roundup link.";
+		}
+		var listingUrl = safeLower(product.listingUrl());
+		if (listingUrl.contains("info.nsf.org")) {
+			return "The click goes to the certification listing itself, which keeps the product lane grounded in the listing record.";
+		}
+		if (listingUrl.endsWith(".pdf") || listingUrl.contains("performance")) {
+			return "The click goes to a performance document, which makes the commercial path evidence-forward instead of storefront-first.";
+		}
+		if (product.sourceIds() != null && product.sourceIds().stream().anyMatch(sourceId -> sourceId != null && sourceId.toLowerCase(Locale.US).contains("performance"))) {
+			return "The click goes to the current official product record while the engine keeps the paired performance document in its source set.";
+		}
+		return "The click goes to the current official product record used in the normalized catalog, not a generic affiliate wrapper.";
+	}
+
+	public static List<String> productPros(FilterCatalogItem product) {
+		if (product == null) {
+			return List.of();
+		}
+		var pros = new java.util.ArrayList<String>();
+		pros.add("Keeps the intervention at the point-of-use level.");
+		var annualized = annualizedMaintenanceAmount(product);
+		if (annualized != null && annualized.compareTo(BigDecimal.valueOf(120)) <= 0) {
+			pros.add("Annualized upkeep stays in the lighter range for the current catalog.");
+		}
+		if (safeLower(product.filterType()).contains("reverse_osmosis")) {
+			pros.add("RO route can fit households that explicitly want a higher-burden treatment class.");
+		}
+		else {
+			pros.add("Non-RO ownership path usually stays simpler for households that want proportionate treatment.");
+		}
+		if (safeLower(product.installationType()).contains("countertop") || safeLower(product.installationType()).contains("pitcher")) {
+			pros.add("Lower installation burden makes the lane easier to adopt quickly.");
+		}
+		else if (safeLower(product.installationType()).contains("under_sink")) {
+			pros.add("Under-sink placement reduces daily-use friction once installed.");
+		}
+		return pros.stream().distinct().limit(3).toList();
+	}
+
+	public static List<String> productConstraints(FilterCatalogItem product) {
+		if (product == null) {
+			return List.of();
+		}
+		var constraints = new java.util.ArrayList<String>();
+		var installationType = safeLower(product.installationType());
+		var filterType = safeLower(product.filterType());
+		var annualized = annualizedMaintenanceAmount(product);
+		if (filterType.contains("reverse_osmosis")) {
+			constraints.add("RO ownership usually means more components and more maintenance discipline.");
+		}
+		if (installationType.contains("under_sink")) {
+			constraints.add("Under-sink install effort is real and should not be treated as a zero-friction upgrade.");
+		}
+		if (installationType.contains("countertop")) {
+			constraints.add("Countertop systems trade plumbing simplicity for visible footprint.");
+		}
+		if (installationType.contains("pitcher") || installationType.contains("dispenser")) {
+			constraints.add("Pitcher or dispenser flow usually comes with refill friction.");
+		}
+		if (annualized != null && annualized.compareTo(BigDecimal.valueOf(180)) > 0) {
+			constraints.add("Annualized upkeep sits in the heavier range for the current catalog.");
+		}
+		constraints.add("This lane does not justify whole-house escalation by itself.");
+		return constraints.stream().distinct().limit(3).toList();
+	}
+
 	private static String titleCaseUnderscore(String rawValue) {
 		if (rawValue == null || rawValue.isBlank()) {
 			return "";
@@ -270,5 +384,9 @@ public final class PresentationText {
 	private static BigDecimal annualize(BigDecimal cost, int cadenceMonths) {
 		return cost.multiply(BigDecimal.valueOf(12))
 			.divide(BigDecimal.valueOf(cadenceMonths), 2, RoundingMode.HALF_UP);
+	}
+
+	private static String safeLower(String value) {
+		return value == null ? "" : value.toLowerCase(Locale.US);
 	}
 }

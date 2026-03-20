@@ -17,6 +17,7 @@
 @param List<GuidePage> relatedGuides
 @param List<GuidePage> allGuides
 @param boolean pageIndexable
+@param String pageStructuredDataJson
 
 @template.layout.base(
     pageTitle = page.title(),
@@ -24,6 +25,7 @@
     pageCanonicalUrl = siteBaseUrl + "/compare/" + page.slug(),
     pageIndexable = pageIndexable,
     content = @`
+<script type="application/ld+json">$unsafe{pageStructuredDataJson}</script>
 <section class="result-shell">
     <div class="shell">
         <div class="result-header">
@@ -168,6 +170,30 @@
                                 <div class="compare-card__row">
                                     <span class="compare-card__label">Merchant</span>
                                     <span class="compare-card__value">${PresentationText.merchantLabel(product)}</span>
+                                </div>
+                                <div class="compare-card__row">
+                                    <span class="compare-card__label">Best for</span>
+                                    <span class="compare-card__value">${PresentationText.bestForLabel(product)}</span>
+                                </div>
+                                <div class="compare-card__row">
+                                    <span class="compare-card__label">Seller choice</span>
+                                    <span class="compare-card__value">${PresentationText.sellerChoiceNote(product)}</span>
+                                </div>
+                                <div class="compare-card__stack">
+                                    <span class="compare-card__label">Pros</span>
+                                    <ul class="compare-card__list">
+                                        @for(var item : PresentationText.productPros(product))
+                                            <li>${item}</li>
+                                        @endfor
+                                    </ul>
+                                </div>
+                                <div class="compare-card__stack">
+                                    <span class="compare-card__label">Constraints</span>
+                                    <ul class="compare-card__list">
+                                        @for(var item : PresentationText.productConstraints(product))
+                                            <li>${item}</li>
+                                        @endfor
+                                    </ul>
                                 </div>
                             </article>
                         @endfor

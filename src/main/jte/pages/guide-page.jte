@@ -16,6 +16,7 @@
 @param List<FilterCatalogItem> relatedProducts
 @param List<ComparePage> relatedComparePages
 @param boolean pageIndexable
+@param String pageStructuredDataJson
 
 @template.layout.base(
     pageTitle = page.title(),
@@ -23,6 +24,7 @@
     pageCanonicalUrl = siteBaseUrl + "/guides/" + page.slug(),
     pageIndexable = pageIndexable,
     content = @`
+<script type="application/ld+json">$unsafe{pageStructuredDataJson}</script>
 <section class="result-shell">
     <div class="shell">
         <div class="result-header">

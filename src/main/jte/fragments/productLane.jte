@@ -42,6 +42,36 @@
                     <p class="merchant-card__copy">${product.certBody()} ${product.standardCode()} / ${product.claimNames().size()} mapped claims</p>
                     <p class="merchant-card__copy">PFAS coverage preview: ${PresentationText.previewList(product.coveredPfas(), 4)}</p>
                     <p class="merchant-card__copy">${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence ${PresentationText.confidenceLabel(product.costConfidence())}</p>
+                    <div class="merchant-card__advice">
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Best for</span>
+                            <p class="merchant-card__copy">${PresentationText.bestForLabel(product)}</p>
+                        </div>
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Not for</span>
+                            <p class="merchant-card__copy">${PresentationText.notForLabel(product)}</p>
+                        </div>
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Seller choice</span>
+                            <p class="merchant-card__copy">${PresentationText.sellerChoiceNote(product)}</p>
+                        </div>
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Pros</span>
+                            <ul class="merchant-card__list">
+                                @for(var item : PresentationText.productPros(product))
+                                    <li>${item}</li>
+                                @endfor
+                            </ul>
+                        </div>
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Constraints</span>
+                            <ul class="merchant-card__list">
+                                @for(var item : PresentationText.productConstraints(product))
+                                    <li>${item}</li>
+                                @endfor
+                            </ul>
+                        </div>
+                    </div>
                     <div class="button-row button-row--tight">
                         <a
                             class="button button--primary"

@@ -1122,6 +1122,35 @@ img {
 	line-height: 1.55;
 }
 
+.merchant-card__advice {
+	display: grid;
+	gap: 12px;
+	padding-top: 12px;
+	border-top: 1px solid rgba(23, 34, 53, 0.08);
+}
+
+.merchant-card__stack {
+	display: grid;
+	gap: 6px;
+}
+
+.merchant-card__subhead {
+	color: var(--text-secondary);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.merchant-card__list,
+.compare-card__list {
+	margin: 0;
+	padding-left: 18px;
+	color: var(--text-secondary);
+	font-size: 0.84rem;
+	line-height: 1.55;
+}
+
 .compare-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1164,6 +1193,13 @@ img {
 	font-size: 0.9rem;
 	font-weight: 600;
 	line-height: 1.55;
+}
+
+.compare-card__stack {
+	display: grid;
+	gap: 6px;
+	padding-top: 12px;
+	border-top: 1px solid rgba(23, 34, 53, 0.08);
 }
 
 .button-row--tight {

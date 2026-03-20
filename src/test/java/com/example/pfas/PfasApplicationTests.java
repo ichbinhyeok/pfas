@@ -1465,6 +1465,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official product records for this utility route")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seller choice")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Best for")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public-water interpretation")));
 	}
@@ -2007,6 +2009,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Linked certified option lanes")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Dedicated compare pages")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/countertop-vs-pitcher-vs-under-sink-compare")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("application/ld+json")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"@type\":\"Article\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("CCR Information for Consumers")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in Private Wells")));
@@ -2021,6 +2025,10 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Merchant-routing lane")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Live utility examples")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seller choice")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("application/ld+json")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"@type\":\"ItemList\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"positiveNotes\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-type=\"compare\"")));
 	}

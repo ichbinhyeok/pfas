@@ -14,6 +14,7 @@ import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.result.PublicWaterResultService;
+import com.example.pfas.site.PageStructuredDataService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
@@ -31,6 +32,7 @@ public class GuidePagesController {
 	private final ComparePageService comparePageService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final RouteQualityGateService routeQualityGateService;
+	private final PageStructuredDataService pageStructuredDataService;
 
 	public GuidePagesController(
 		GuidePageService guidePageService,
@@ -41,7 +43,8 @@ public class GuidePagesController {
 		FilterCatalogService filterCatalogService,
 		ComparePageService comparePageService,
 		ExpansionReadinessService expansionReadinessService,
-		RouteQualityGateService routeQualityGateService
+		RouteQualityGateService routeQualityGateService,
+		PageStructuredDataService pageStructuredDataService
 	) {
 		this.guidePageService = guidePageService;
 		this.sourceRegistryService = sourceRegistryService;
@@ -52,6 +55,7 @@ public class GuidePagesController {
 		this.comparePageService = comparePageService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.routeQualityGateService = routeQualityGateService;
+		this.pageStructuredDataService = pageStructuredDataService;
 	}
 
 	@GetMapping("/guides/{slug}")
@@ -83,6 +87,7 @@ public class GuidePagesController {
 		model.addAttribute("relatedProducts", relatedProducts);
 		model.addAttribute("relatedComparePages", comparePageService.resolveRelatedToGuide(page, 3));
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
+		model.addAttribute("pageStructuredDataJson", pageStructuredDataService.guidePageJsonLd(page, relatedProducts));
 		return "pages/guide-page";
 	}
 
