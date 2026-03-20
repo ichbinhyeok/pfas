@@ -309,6 +309,41 @@ public final class PresentationText {
 		return "The click goes to the current official product record used in the normalized catalog, not a generic affiliate wrapper.";
 	}
 
+	public static String maintenanceBurdenLabel(FilterCatalogItem product) {
+		var annualized = annualizedMaintenanceAmount(product);
+		if (annualized == null) {
+			return "Maintenance burden not normalized";
+		}
+		if (annualized.compareTo(BigDecimal.valueOf(120)) <= 0) {
+			return "Lighter maintenance burden";
+		}
+		if (annualized.compareTo(BigDecimal.valueOf(220)) <= 0) {
+			return "Moderate maintenance burden";
+		}
+		return "Heavier maintenance burden";
+	}
+
+	public static String nextStepLabel(FilterCatalogItem product) {
+		if (product == null) {
+			return "Verify the exact certification record before taking the commercial path.";
+		}
+		var installationType = safeLower(product.installationType());
+		var filterType = safeLower(product.filterType());
+		if (installationType.contains("pitcher") || installationType.contains("dispenser")) {
+			return "Use this lane only if a low-commitment point-of-use route matches the household.";
+		}
+		if (installationType.contains("countertop")) {
+			return "Use this lane when fast setup matters more than a hidden install.";
+		}
+		if (installationType.contains("under_sink") && filterType.contains("reverse_osmosis")) {
+			return "Use this lane only if the household accepts installation and a heavier ownership path.";
+		}
+		if (installationType.contains("under_sink")) {
+			return "Use this lane when a daily-use under-sink route fits the household better than a light-touch option.";
+		}
+		return "Verify the official record before deciding whether this point-of-use path fits the household.";
+	}
+
 	public static List<String> productPros(FilterCatalogItem product) {
 		if (product == null) {
 			return List.of();

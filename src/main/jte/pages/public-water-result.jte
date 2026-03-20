@@ -86,6 +86,27 @@
                     </div>
                 </section>
 
+                <section class="card card--hero lane-card">
+                    <span class="next-action__code">Decision-to-product lane</span>
+                    <div class="lane-card__grid">
+                        <article class="lane-card__cell">
+                            <p class="card__label">First move</p>
+                            <div class="lane-card__value">${result.nextAction().title()}</div>
+                            <p class="card__copy">${result.nextAction().summary()}</p>
+                        </article>
+                        <article class="lane-card__cell">
+                            <p class="card__label">Commercial path</p>
+                            <div class="lane-card__value">Certified point-of-use first</div>
+                            <p class="card__copy">Open official product records only after the utility context, benchmark relation, and maintenance burden are visible.</p>
+                        </article>
+                        <article class="lane-card__cell">
+                            <p class="card__label">Not the default</p>
+                            <div class="lane-card__value">Whole-house</div>
+                            <p class="card__copy">This route keeps whole-house behind a separate purpose, cost, and maintenance justification.</p>
+                        </article>
+                    </div>
+                </section>
+
                 <section class="metric-grid">
                     <article class="metric">
                         <p class="card__label">Initial cost</p>

@@ -110,6 +110,27 @@
                     </div>
                 </section>
 
+                <section class="card card--hero lane-card">
+                    <span class="next-action__code">Decision-to-product lane</span>
+                    <div class="lane-card__grid">
+                        <article class="lane-card__cell">
+                            <p class="card__label">First move</p>
+                            <div class="lane-card__value">${page.nextActionTitle()}</div>
+                            <p class="card__copy">${page.nextActionSummary()}</p>
+                        </article>
+                        <article class="lane-card__cell">
+                            <p class="card__label">Not this page for</p>
+                            <div class="lane-card__value">Blind upgrading</div>
+                            <p class="card__copy">${page.whatThisDoesNotTellYou().isEmpty() ? "This compare page is not a generic upgrade prompt." : page.whatThisDoesNotTellYou().get(0)}</p>
+                        </article>
+                        <article class="lane-card__cell">
+                            <p class="card__label">Commercial path</p>
+                            <div class="lane-card__value">Official records first</div>
+                            <p class="card__copy">Use the compare lane to open official merchant or listing records only after the compare thesis and maintenance burden are clear.</p>
+                        </article>
+                    </div>
+                </section>
+
                 <section class="card">
                     <p class="card__label">Comparison axes</p>
                     <ul class="list">
@@ -178,6 +199,14 @@
                                 <div class="compare-card__row">
                                     <span class="compare-card__label">Seller choice</span>
                                     <span class="compare-card__value">${PresentationText.sellerChoiceNote(product)}</span>
+                                </div>
+                                <div class="compare-card__row">
+                                    <span class="compare-card__label">Maintenance</span>
+                                    <span class="compare-card__value">${PresentationText.maintenanceBurdenLabel(product)}</span>
+                                </div>
+                                <div class="compare-card__row">
+                                    <span class="compare-card__label">Next step</span>
+                                    <span class="compare-card__value">${PresentationText.nextStepLabel(product)}</span>
                                 </div>
                                 <div class="compare-card__stack">
                                     <span class="compare-card__label">Pros</span>

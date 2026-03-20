@@ -80,8 +80,11 @@ public class DerivedArtifactService {
 		var routes = publicationRouteService.buildRoutes().stream()
 			.map(route -> applyGate(route, gateIndex))
 			.toList();
+		var indexableRouteCount = (int) routes.stream()
+			.filter(RouteManifestRoute::indexable)
+			.count();
 
-		return new RouteManifestFile(SCHEMA_VERSION, generatedAt, routes.size(), routes);
+		return new RouteManifestFile(SCHEMA_VERSION, generatedAt, routes.size(), indexableRouteCount, routes);
 	}
 
 	public SearchIndexSeedFile buildSearchIndexSeed() {

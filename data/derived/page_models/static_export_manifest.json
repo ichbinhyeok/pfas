@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T19:11:08.396381800+09:00",
+  "generated_at" : "2026-03-20T19:45:28.861743+09:00",
   "item_count" : 103,
   "items" : [ {
     "path" : "/",
@@ -50,21 +50,21 @@
     "content_kind" : "asset",
     "indexable" : false,
     "source_kind" : "asset",
-    "last_verified_date" : null
+    "last_verified_date" : "2026-03-20"
   }, {
     "path" : "/js/merchant-tracking.js",
     "output_path" : "js/merchant-tracking.js",
     "content_kind" : "asset",
     "indexable" : false,
     "source_kind" : "asset",
-    "last_verified_date" : null
+    "last_verified_date" : "2026-03-20"
   }, {
     "path" : "/favicon.svg",
     "output_path" : "favicon.svg",
     "content_kind" : "asset",
     "indexable" : false,
     "source_kind" : "asset",
-    "last_verified_date" : null
+    "last_verified_date" : "2026-03-20"
   }, {
     "path" : "/compare/countertop-vs-pitcher-vs-under-sink-compare",
     "output_path" : "compare/countertop-vs-pitcher-vs-under-sink-compare/index.html",

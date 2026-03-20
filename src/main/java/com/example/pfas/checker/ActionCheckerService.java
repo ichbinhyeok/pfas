@@ -87,15 +87,22 @@ public class ActionCheckerService {
 	}
 
 	public ActionCheckerRecommendation evaluate(ActionCheckerSelection selection) {
-		if (selection.shoppingIntent() != ActionShoppingIntent.NONE
-			&& selection.directData() == ActionDirectDataStatus.NONE) {
+		if (selection.directData() == ActionDirectDataStatus.NONE) {
+			if (selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+				&& selection.indirectData() == ActionIndirectDataStatus.UCMR_ONLY) {
+				return publicWaterVerifyWithUtilityAndCcr(selection);
+			}
 			return selection.waterSource() == ActionWaterSource.PUBLIC_WATER
-				? publicWaterUtilityFirst(selection, "Shopping intent cannot outrank missing direct utility evidence.")
-				: privateWellTestFirst(selection, "Shopping intent cannot outrank missing direct well-test evidence.");
+				? publicWaterUtilityFirst(selection, noDirectEvidencePrinciple(selection))
+				: privateWellTestFirst(selection, noDirectEvidencePrinciple(selection));
 		}
 
 		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.UNCERTIFIED) {
 			return uncertifiedFilterRoute(selection);
+		}
+
+		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.CERTIFIED) {
+			return certifiedFilterRoute(selection);
 		}
 
 		if (selection.wholeHouseConsidered()) {
@@ -398,6 +405,35 @@ public class ActionCheckerService {
 		);
 	}
 
+	private ActionCheckerRecommendation certifiedFilterRoute(ActionCheckerSelection selection) {
+		var primaryHref = selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+			? "/public-water/" + selection.pwsid()
+			: privateWellResultHref(selection);
+		var benchmarkPrinciple = switch (selection.benchmarkRelation()) {
+			case ABOVE_REFERENCE, MIXED -> "Current certified hardware should be checked against the current evidence before opening a replacement or whole-house path.";
+			case BELOW_REFERENCE -> "Below-reference context does not justify replacing a certified filter by default.";
+			case UNKNOWN, NOT_COMPARABLE -> "Unknown benchmark context means the current certified unit should be verified before any upgrade story is opened.";
+		};
+
+		return new ActionCheckerRecommendation(
+			ActionCheckerRouteCode.MAINTAIN_OR_VERIFY_CERTIFIED_FILTER,
+			"Verify certified filter",
+			"Verify the current certified filter before upgrading",
+			"A certified filter is already in place, so the next step is to confirm the exact model, PFAS claim scope, and cartridge cadence against the current evidence before shopping for a replacement.",
+			List.of(
+				"Current certified hardware should be checked at the exact model and claim level.",
+				benchmarkPrinciple,
+				"Whole-house still needs a separate purpose, cost, and maintenance rationale."
+			),
+			primaryHref,
+			"Open current interpretation",
+			"/guides/nsf-53-vs-58-pfas",
+			"Read certification guide",
+			selection.wholeHouseConsidered(),
+			"A certified point-of-use unit does not automatically justify whole-house escalation."
+		);
+	}
+
 	private ActionCheckerRecommendation wholeHouseNotDefault(ActionCheckerSelection selection) {
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.WHOLE_HOUSE_NOT_DEFAULT,
@@ -501,5 +537,25 @@ public class ActionCheckerService {
 		}
 
 		return publicWaterSystemService.getByPwsid(pwsid);
+	}
+
+	private String noDirectEvidencePrinciple(ActionCheckerSelection selection) {
+		if (selection.shoppingIntent() != ActionShoppingIntent.NONE) {
+			return selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+				? "Shopping intent cannot outrank missing direct utility evidence."
+				: "Shopping intent cannot outrank missing direct well-test evidence.";
+		}
+		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.UNCERTIFIED) {
+			return "Current filter status does not outrank the need for direct evidence first.";
+		}
+		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.CERTIFIED) {
+			return "Even a certified current filter does not replace the need for direct evidence first.";
+		}
+		if (selection.wholeHouseConsidered()) {
+			return "Whole-house intent cannot outrank missing direct evidence.";
+		}
+		return selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+			? "Indirect signals are not enough to justify a product recommendation without direct utility evidence."
+			: "General PFAS concern is not enough to justify a product recommendation without a direct well test.";
 	}
 }

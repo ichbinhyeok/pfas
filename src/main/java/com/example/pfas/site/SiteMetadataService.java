@@ -44,7 +44,7 @@ public class SiteMetadataService {
 	public String siteLastVerifiedDate() {
 		return sourceRegistryService.registryGeneratedAt()
 			.map(this::toDateOnly)
-			.orElse("unknown");
+			.orElse(OffsetDateTime.now().toLocalDate().toString());
 	}
 
 	public String absoluteUrl(String path) {

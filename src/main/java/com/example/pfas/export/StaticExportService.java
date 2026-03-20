@@ -50,9 +50,9 @@ public class StaticExportService {
 		addFixedItem(items, "/source-policy", true, "fixed_page", siteLastVerifiedDate);
 		addFixedItem(items, "/robots.txt", true, "seo_surface", siteLastVerifiedDate);
 		addFixedItem(items, "/sitemap.xml", true, "seo_surface", siteLastVerifiedDate);
-		addFixedItem(items, "/css/app.css", false, "asset", null);
-		addFixedItem(items, "/js/merchant-tracking.js", false, "asset", null);
-		addFixedItem(items, "/favicon.svg", false, "asset", null);
+		addFixedItem(items, "/css/app.css", false, "asset", siteLastVerifiedDate);
+		addFixedItem(items, "/js/merchant-tracking.js", false, "asset", siteLastVerifiedDate);
+		addFixedItem(items, "/favicon.svg", false, "asset", siteLastVerifiedDate);
 
 		var pageGenerationManifest = derivedArtifactService.buildPageGenerationManifest();
 		pageGenerationManifest.models().stream()

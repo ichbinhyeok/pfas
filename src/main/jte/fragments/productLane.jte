@@ -19,6 +19,10 @@
             </div>
             <p class="card__copy lane-summary">${summary}</p>
         </div>
+        <div class="lane-note">
+            <span class="lane-note__label">Commercial path note</span>
+            <p class="lane-note__copy">Links in this lane go to official product or listing records used in the normalized catalog. Ranking stays tied to certification scope, cadence, cost, and evidence handling rather than merchant preference.</p>
+        </div>
         <div class="merchant-grid">
             @for(var product : products)
                 <article class="merchant-card">
@@ -44,12 +48,20 @@
                     <p class="merchant-card__copy">${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence ${PresentationText.confidenceLabel(product.costConfidence())}</p>
                     <div class="merchant-card__advice">
                         <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Next step</span>
+                            <p class="merchant-card__copy">${PresentationText.nextStepLabel(product)}</p>
+                        </div>
+                        <div class="merchant-card__stack">
                             <span class="merchant-card__subhead">Best for</span>
                             <p class="merchant-card__copy">${PresentationText.bestForLabel(product)}</p>
                         </div>
                         <div class="merchant-card__stack">
                             <span class="merchant-card__subhead">Not for</span>
                             <p class="merchant-card__copy">${PresentationText.notForLabel(product)}</p>
+                        </div>
+                        <div class="merchant-card__stack">
+                            <span class="merchant-card__subhead">Maintenance burden</span>
+                            <p class="merchant-card__copy">${PresentationText.maintenanceBurdenLabel(product)}</p>
                         </div>
                         <div class="merchant-card__stack">
                             <span class="merchant-card__subhead">Seller choice</span>

@@ -1333,6 +1333,57 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void directEvidenceOutranksWholeHouseAndFilterStatus() {
+		var privateWellSelection = actionCheckerService.normalize(
+			"private_well",
+			"none",
+			"none",
+			"unknown",
+			"uncertified",
+			"compare_options",
+			true,
+			"MI",
+			null
+		);
+		var publicWaterSelection = actionCheckerService.normalize(
+			"public_water",
+			"none",
+			"ucmr_only",
+			"unknown",
+			"certified",
+			"filter_now",
+			true,
+			null,
+			"PA1510001"
+		);
+
+		assertThat(actionCheckerService.evaluate(privateWellSelection).routeCode())
+			.isEqualTo(ActionCheckerRouteCode.PRIVATE_WELL_TEST_FIRST);
+		assertThat(actionCheckerService.evaluate(publicWaterSelection).routeCode())
+			.isEqualTo(ActionCheckerRouteCode.PUBLIC_WATER_VERIFY_WITH_UTILITY_AND_CCR);
+	}
+
+	@Test
+	void buildsCertifiedFilterMaintenanceRecommendation() {
+		var selection = actionCheckerService.normalize(
+			"public_water",
+			"utility_document",
+			"none",
+			"below_reference",
+			"certified",
+			"filter_now",
+			false,
+			null,
+			"PA1510001"
+		);
+		var recommendation = actionCheckerService.evaluate(selection);
+
+		assertThat(recommendation.routeCode()).isEqualTo(ActionCheckerRouteCode.MAINTAIN_OR_VERIFY_CERTIFIED_FILTER);
+		assertThat(recommendation.primaryHref()).isEqualTo("/public-water/PA1510001");
+		assertThat(recommendation.secondaryHref()).isEqualTo("/guides/nsf-53-vs-58-pfas");
+	}
+
+	@Test
 	void clearsIrrelevantCheckerDimensions() {
 		var privateWellSelection = actionCheckerService.normalize(
 			"private_well",
@@ -1464,6 +1515,7 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Review utility updates and add certified point-of-use only if you want extra margin")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official product records for this utility route")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-to-product lane")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seller choice")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Best for")))
@@ -1654,6 +1706,7 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":59")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":59")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AZ0408063\"")))
@@ -1915,7 +1968,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/under-sink-certified-pfas-options/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/pfas-filter-annual-cost-compare/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/merchant-tracking.js\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/merchant-tracking.js\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"last_verified_date\":null"))));
 	}
 
 	@Test
@@ -2023,9 +2077,12 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Structured comparison")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Merchant-routing lane")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-to-product lane")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Commercial path note")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Live utility examples")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seller choice")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Maintenance")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("application/ld+json")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"@type\":\"ItemList\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"positiveNotes\"")))
