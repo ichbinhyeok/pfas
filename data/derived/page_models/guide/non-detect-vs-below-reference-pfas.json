@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:10.833397800+09:00",
+  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
   "model_id" : "guide:non-detect-vs-below-reference-pfas",
   "route_type" : "guide",
   "route_key" : "non-detect-vs-below-reference-pfas",
@@ -24,8 +24,8 @@
       "checklist" : [ "Look for the result flag first.", "If detected, compare the actual number to the selected benchmark.", "If non-detect, note the reporting limit and keep the interpretation narrow." ],
       "evidenceHighlights" : [ "EPA monitoring frameworks distinguish detected values from non-detect results.", "The project already models non-detect separately from below-reference detections.", "This distinction changes how strongly the product layer should open." ],
       "targetQueries" : [ "pfas non detect vs below reference", "what does non detect mean for pfas", "pfas detected below limit what should i do" ],
-      "relatedPwsids" : [ "FL3480255", "GA3110075", "FL3590069" ],
-      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "aquasana-aq-mf-1", "waterdrop-g3p800" ],
+      "relatedPwsids" : [ "FL3480255", "FL6514842", "FL3590615", "FL3354695", "FL6521000", "FL3591451" ],
+      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "aquasana-aq-cwm2", "aquasana-aq-6200", "aquatru-classic", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-ucmr-occurrence-data", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Compare your state in the checker",

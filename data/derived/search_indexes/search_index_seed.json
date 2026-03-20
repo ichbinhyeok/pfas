@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:05.657162200+09:00",
-  "document_count" : 47,
+  "generated_at" : "2026-03-20T15:10:13.614198800+09:00",
+  "document_count" : 52,
   "documents" : [ {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -190,6 +190,17 @@
     "source_count" : 4,
     "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3354695",
+    "route_type" : "public_water",
+    "route_key" : "FL3354695",
+    "url" : "/public-water/FL3354695",
+    "title" : "Lake Saunders Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Lake Saunders Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Lake Saunders Water System", "FL", "FL3354695", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL3354883",
     "route_type" : "public_water",
     "route_key" : "FL3354883",
@@ -223,6 +234,17 @@
     "source_count" : 4,
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3590615",
+    "route_type" : "public_water",
+    "route_key" : "FL3590615",
+    "url" : "/public-water/FL3590615",
+    "title" : "Jansen Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Jansen Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Jansen Water System", "FL", "FL3590615", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL3591121",
     "route_type" : "public_water",
     "route_key" : "FL3591121",
@@ -234,6 +256,17 @@
     "source_count" : 3,
     "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3591451",
+    "route_type" : "public_water",
+    "route_key" : "FL3591451",
+    "url" : "/public-water/FL3591451",
+    "title" : "Weathersfield Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Weathersfield Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Weathersfield Water System", "FL", "FL3591451", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL6424076",
     "route_type" : "public_water",
     "route_key" : "FL6424076",
@@ -244,6 +277,28 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL6514842",
+    "route_type" : "public_water",
+    "route_key" : "FL6514842",
+    "url" : "/public-water/FL6514842",
+    "title" : "Labrador Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Labrador Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Labrador Water System", "FL", "FL6514842", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL6521000",
+    "route_type" : "public_water",
+    "route_key" : "FL6521000",
+    "url" : "/public-water/FL6521000",
+    "title" : "Lake Tarpon Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Lake Tarpon Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Lake Tarpon Water System", "FL", "FL6521000", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:FL6535055",
     "route_type" : "public_water",

@@ -4117,6 +4117,226 @@
         "proof of whole-market superiority"
       ],
       "notes": "Official Waterdrop G5P500A product page with direct PFAS reduction claims and IAPMO certification context."
+    },
+    {
+      "source_id": "jansen-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Jansen CCR 204",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2024/jansen-24ccr-204.pdf?sfvrsn=9db43f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Jansen CCR PDF confirming PWS ID FL3590615 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "jansen-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Jansen",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2023/jansen-pfas-2023.pdf?sfvrsn=4163b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Jansen PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
+    },
+    {
+      "source_id": "labrador-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Labrador CCR 217",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/labrador/2024/labrador-24ccr-217.pdf?sfvrsn=79bb3f5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Labrador CCR PDF confirming PWS ID FL6514842 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "labrador-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Labrador",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/labrador/2023/labrador-pfas-2023.pdf?sfvrsn=e9163b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Labrador PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
+    },
+    {
+      "source_id": "lake-saunders-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Lake Saunders CCR 226",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/lake-saunders/2024/lakesaunders-24ccr-226.pdf?sfvrsn=41bb3f5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Lake Saunders CCR PDF confirming PWS ID FL3354695 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "lake-saunders-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Lake Saunders",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/lake-saunders/2023/lake-saunders-pfas-2023.pdf?sfvrsn=88163b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Lake Saunders PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
+    },
+    {
+      "source_id": "lake-tarpon-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Lake Tarpon CCR 421",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/lake-tarpon/2024/laketarpon-24ccr-421.pdf?sfvrsn=27533c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Lake Tarpon CCR PDF confirming PWS ID FL6521000, groundwater source profile, and emergency interconnect context in the 2024 reporting year."
+    },
+    {
+      "source_id": "lake-tarpon-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Lake Tarpon",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/lake-tarpon/2023/lake-tarpon-pfas-2023.pdf?sfvrsn=43153b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Lake Tarpon PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
+    },
+    {
+      "source_id": "weathersfield-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Weathersfield CCR 470527",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/weathersfield/2024/weathersfield-24ccr-470527.pdf?sfvrsn=70ba3f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Weathersfield CCR PDF confirming PWS ID FL3591451 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "weathersfield-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Weathersfield",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/weathersfield/2023/weathersfield-pfas-2023.pdf?sfvrsn=65143b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Weathersfield PFAS report with 2023 direct results for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
     }
   ]
 }

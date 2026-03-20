@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:10.833397800+09:00",
+  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
   "model_id" : "guide:nsf-53-vs-58-pfas",
   "route_type" : "guide",
   "route_key" : "nsf-53-vs-58-pfas",
@@ -25,7 +25,7 @@
       "evidenceHighlights" : [ "EPA filter guidance says current certification should not be treated as automatic proof of every current EPA benchmark.", "NSF listing directories and PFAS guidance pages support claim-level verification over badge-only reading.", "Model-specific listing records matter more than broad standard shorthand." ],
       "targetQueries" : [ "nsf 53 vs 58 pfas", "nsf 53 58 pfas filter", "which certification for pfas filters" ],
       "relatedPwsids" : [ ],
-      "relatedProductIds" : [ "espring-122941", "aquasana-aq-ro-3", "aquasana-aq-mf-1", "waterdrop-k19-sfk", "waterdrop-x10", "waterdrop-x12" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-6300m", "aquasana-aq-ro-3", "aquatru-classic", "aquatru-under-sink", "waterdrop-10ub-pro", "waterdrop-g3p600", "waterdrop-x10", "zerowater-extremelife-faucet-mount" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-pfas-drinking-water-article", "nsf-dwtu-listings", "nsf-espring-listing-053" ],
       "primaryHref" : "/source-policy",
       "primaryLabel" : "Open source policy",

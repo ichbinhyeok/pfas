@@ -181,7 +181,8 @@
                                 <a class="source-item" href="/public-water/${example.system().pwsid()}">
                                     <div class="source-item__meta">${example.system().stateCode()} / ${example.system().pwsid()} / ${PresentationText.sourceWaterTypeLabel(example.system().sourceWaterType())}</div>
                                     <div class="source-item__title">${example.system().pwsName()}</div>
-                                    <div class="source-item__url">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} · ${example.result().nextAction().title()}</div>
+                                    <div class="source-item__url">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} / ${example.result().nextAction().title()}</div>
+                                    <div class="source-item__note">${example.result().whyThis().isEmpty() ? "Utility-backed decision example." : example.result().whyThis().get(0)}</div>
                                 </a>
                             @endfor
                         </div>
@@ -190,13 +191,15 @@
 
                 @if(!relatedProducts.isEmpty())
                     <section class="rail-card">
-                        <h2 class="rail-card__title">Certified option examples</h2>
+                        <h2 class="rail-card__title">Linked certified option lanes</h2>
                         <div class="source-list">
                             @for(var product : relatedProducts)
                                 <a class="source-item" href="${product.listingUrl()}">
-                                    <div class="source-item__meta">${product.brand()} / ${product.installationType()}</div>
+                                    <div class="source-item__meta">${product.brand()} / ${PresentationText.installationTypeLabel(product.installationType())} / ${PresentationText.filterTypeLabel(product.filterType())}</div>
                                     <div class="source-item__title">${product.model()}</div>
-                                    <div class="source-item__url">${product.certBody()} ${product.standardCode()} / ${product.coveredPfas().size()} mapped PFAS claims / ${PresentationText.currencyLabel(product.upfrontCostUsd())}</div>
+                                    <div class="source-item__url">${PresentationText.currencyLabel(product.upfrontCostUsd())} upfront / ${product.certBody()} ${product.standardCode()} / ${product.claimNames().size()} mapped claims</div>
+                                    <div class="source-item__note">Mapped PFAS: ${PresentationText.previewList(product.coveredPfas(), 4)}</div>
+                                    <div class="source-item__note">${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence: ${PresentationText.confidenceLabel(product.costConfidence())}</div>
                                 </a>
                             @endfor
                         </div>

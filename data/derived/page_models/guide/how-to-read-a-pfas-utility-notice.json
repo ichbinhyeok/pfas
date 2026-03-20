@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:10.833397800+09:00",
+  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
   "model_id" : "guide:how-to-read-a-pfas-utility-notice",
   "route_type" : "guide",
   "route_key" : "how-to-read-a-pfas-utility-notice",
@@ -24,8 +24,8 @@
       "checklist" : [ "Confirm the system number and service area.", "Identify whether the document is a CCR, a UCMR notice, or a state-specific action notice.", "Read the listed analytes and averages before opening the product layer." ],
       "evidenceHighlights" : [ "EPA CCR guidance and UCMR materials create different interpretation paths.", "A system-specific notice is direct evidence and should outrank generic product advice.", "The benchmark relation changes whether treatment is optional, recommended, or escalated." ],
       "targetQueries" : [ "pfas utility notice what does it mean", "how to read pfas notice from water utility", "ucmr pfas notice what should i do" ],
-      "relatedPwsids" : [ "7360058", "FL3354883", "FL3591121" ],
-      "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-g3p600", "aquatru-classic" ],
+      "relatedPwsids" : [ "7360058", "FL3354883", "FL3591121", "FL3354695", "FL6521000", "FL3591451" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-g3p600", "aquatru-classic", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-ucmr5-main", "epa-ucmr-occurrence-data" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

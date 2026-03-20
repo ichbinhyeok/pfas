@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:10:23.298041700+09:00",
-  "model_id" : "public_water:NV0005027",
+  "generated_at" : "2026-03-20T15:10:21.168745700+09:00",
+  "model_id" : "public_water:FL3590615",
   "route_type" : "public_water",
-  "route_key" : "NV0005027",
+  "route_key" : "FL3590615",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NV0005027",
+  "render_path" : "/public-water/FL3590615",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 3,
+  "source_count" : 4,
   "payload" : {
     "system" : {
-      "pwsid" : "NV0005027",
-      "pwsName" : "Spring Creek Mobile Home Park Water System",
-      "stateCode" : "NV",
+      "pwsid" : "FL3590615",
+      "pwsName" : "Jansen Water System",
+      "stateCode" : "FL",
       "systemType" : "community",
       "populationServed" : "",
       "sourceWaterType" : "groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/greatbasinwater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
-      "serviceAreaNotes" : "Great Basin Water community groundwater system with a 2024 CCR PFAS table showing elevated PFOA PFOS and PFHxS averages in the mapped analyte set",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2024/jansen-24ccr-204.pdf?sfvrsn=9db43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2023/jansen-pfas-2023.pdf?sfvrsn=4163b5b_4",
+      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with a separate 2023 PFAS report showing low-level PFOS, PFOA, and PFHxS detections plus a 2024 CCR for system profile context.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "great-basin-water-home", "great-basin-water-quality-reports", "spring-creek-mobile-home-2024-water-quality-report" ]
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "jansen-2024-water-quality-report", "jansen-pfas-2023-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NV0005027",
+      "result_id" : "public-water:FL3590615",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T15:10:23.262486900+09:00",
+      "generated_at" : "2026-03-20T15:10:21.134173200+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
-        "title" : "Review utility response and consider certified point-of-use filtration",
-        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
+        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
+        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
+        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 3 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 3 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
         "range_high_usd" : 1799.00,
@@ -97,22 +97,28 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "great-basin-water-home",
-        "organization" : "Great Basin Water",
-        "title" : "Great Basin Water",
-        "url" : "https://www.myutility.us/greatbasinwater",
+        "source_id" : "jansen-2024-water-quality-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "Annual Water Quality Report 2024 Jansen CCR 204",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2024/jansen-24ccr-204.pdf?sfvrsn=9db43f5b_4",
         "trust_tier" : 2
       }, {
-        "source_id" : "great-basin-water-quality-reports",
-        "organization" : "Great Basin Water",
+        "source_id" : "jansen-pfas-2023-report",
+        "organization" : "Sunshine Water Services",
+        "title" : "PFAS Monitoring Results 2023 Jansen",
+        "url" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2023/jansen-pfas-2023.pdf?sfvrsn=4163b5b_4",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "sunshine-water-home",
+        "organization" : "Sunshine Water Services",
+        "title" : "Sunshine Water Services",
+        "url" : "https://www.myutility.us/sunshinewater",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "sunshine-water-quality-reports",
+        "organization" : "Sunshine Water Services",
         "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/greatbasinwater/water-safety/water-quality-reports",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "spring-creek-mobile-home-2024-water-quality-report",
-        "organization" : "Great Basin Water",
-        "title" : "Annual Water Quality Report 2024 Spring Creek MHP CCR 403 MHP 852",
-        "url" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
+        "url" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -531,28 +537,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "above_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
+        "benchmark_relation" : "below_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NV0005027",
+      "input_id" : "public_water:FL3590615",
       "route_type" : "public_water",
-      "route_key" : "NV0005027",
+      "route_key" : "FL3590615",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "ABOVE_REFERENCE",
+      "benchmark_relation" : "BELOW_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NV0005027",
-      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
-      "primary_path" : "/public-water/NV0005027",
-      "secondary_path" : "/guides/under-sink-vs-whole-house",
-      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
+      "pwsid" : "FL3590615",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/FL3590615",
+      "secondary_path" : "/internal/results/public-water/FL3590615",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NV0005027"
+    "supporting_path" : "/public-water-system/FL3590615"
   }
 }

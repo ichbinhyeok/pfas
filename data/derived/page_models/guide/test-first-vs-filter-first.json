@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:10.833397800+09:00",
+  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
   "model_id" : "guide:test-first-vs-filter-first",
   "route_type" : "guide",
   "route_key" : "test-first-vs-filter-first",
@@ -24,8 +24,8 @@
       "checklist" : [ "Public water without direct records: start with the utility.", "Private well without a test: start with state-guided testing.", "Only then compare certified point-of-use." ],
       "evidenceHighlights" : [ "EPA private-well guidance keeps direct testing ahead of shopping.", "EPA filter guidance supports certification-first product review, not product-first routing.", "CCR context is the public-water equivalent of a test-first branch." ],
       "targetQueries" : [ "test first vs filter first pfas", "should i test for pfas before buying a filter", "pfas test first or filter first" ],
-      "relatedPwsids" : [ "GA3110075", "PA1510001", "FL3354647", "FL6535055" ],
-      "relatedProductIds" : [ "aq-claryum-direct-connect", "aquatru-under-sink", "aquatru-model-1" ],
+      "relatedPwsids" : [ "GA3110075", "PA1510001", "FL3590615", "FL3354695", "FL6521000" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquatru-under-sink", "aquatru-model-1", "aquasana-aq-cwm2", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

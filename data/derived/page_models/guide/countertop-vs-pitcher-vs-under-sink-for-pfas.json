@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:10.833397800+09:00",
+  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
   "model_id" : "guide:countertop-vs-pitcher-vs-under-sink-for-pfas",
   "route_type" : "guide",
   "route_key" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
@@ -24,8 +24,8 @@
       "checklist" : [ "Lock the evidence route first.", "Match the product class to installation tolerance and maintenance rhythm.", "Then compare exact certified models inside that class." ],
       "evidenceHighlights" : [ "EPA filter guidance supports comparing certified point-of-use options before jumping to larger interventions.", "ZeroWater AquaTru Aquasana and Waterdrop records provide distinct examples of pitcher countertop and under-sink PFAS-capable products.", "The right form factor often comes down to maintenance behavior and household workflow." ],
       "targetQueries" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas" ],
-      "relatedPwsids" : [ "IL0855050", "FL3591121", "AK2310730" ],
-      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "aquatru-classic", "aquasana-aq-cwm2", "waterdrop-a2", "waterdrop-g2" ],
+      "relatedPwsids" : [ "FL3590615", "FL6514842", "FL3354695", "FL6521000", "FL3591451" ],
+      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-model-1", "aquasana-aq-mf-1", "aquasana-aq-6200", "waterdrop-c1s", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "zerowater-performance-certification", "aquatru-classic-product", "aq-clean-water-machine-product", "waterdrop-a2-product" ],
       "primaryHref" : "/checker",
       "primaryLabel" : "Open Action Checker",

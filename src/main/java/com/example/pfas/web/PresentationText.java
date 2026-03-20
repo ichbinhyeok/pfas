@@ -3,6 +3,7 @@ package com.example.pfas.web;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -111,6 +112,47 @@ public final class PresentationText {
 	public static String sourceWaterTypeLabel(String sourceWaterType) {
 		var value = titleCaseUnderscore(sourceWaterType);
 		return value.isBlank() ? "Source water not set" : value;
+	}
+
+	public static String installationTypeLabel(String installationType) {
+		var value = titleCaseUnderscore(installationType);
+		return value.isBlank() ? "Installation type not set" : value;
+	}
+
+	public static String filterTypeLabel(String filterType) {
+		if (filterType == null || filterType.isBlank()) {
+			return "Filter type not set";
+		}
+		return switch (filterType) {
+			case "reverse_osmosis" -> "Reverse osmosis";
+			case "carbon_block" -> "Carbon block";
+			case "carbon_fiber" -> "Carbon fiber";
+			default -> titleCaseUnderscore(filterType);
+		};
+	}
+
+	public static String cadenceLabel(Integer months) {
+		if (months == null || months <= 0) {
+			return "Cadence not normalized";
+		}
+		return months + "-month replacement cadence";
+	}
+
+	public static String previewList(List<String> values, int limit) {
+		if (values == null || values.isEmpty()) {
+			return "No mapped values";
+		}
+		var safeLimit = Math.max(limit, 1);
+		var preview = values.stream()
+			.filter(Objects::nonNull)
+			.filter(value -> !value.isBlank())
+			.limit(safeLimit)
+			.reduce((left, right) -> left + ", " + right)
+			.orElse("");
+		if (values.size() <= safeLimit) {
+			return preview;
+		}
+		return preview + " +" + (values.size() - safeLimit) + " more";
 	}
 
 	public static String currencyLabel(BigDecimal amount) {

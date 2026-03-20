@@ -89,12 +89,14 @@
       "relatedPwsids": [
         "PA1510001",
         "GA3110075",
-        "FL3480255"
+        "FL3590615",
+        "FL3354695"
       ],
       "relatedProductIds": [
-        "aq-claryum-direct-connect",
+        "aquasana-aq-mf-1",
         "zerowater-23-cup-dispenser",
-        "aquatru-model-1"
+        "aquatru-model-1",
+        "aquasana-aq-6200"
       ]
     },
     {
@@ -184,13 +186,16 @@
       "relatedPwsids": [
         "GA3110075",
         "PA1510001",
-        "FL3354647",
-        "FL6535055"
+        "FL3590615",
+        "FL3354695",
+        "FL6521000"
       ],
       "relatedProductIds": [
-        "aq-claryum-direct-connect",
+        "aquasana-aq-mf-1",
         "aquatru-under-sink",
-        "aquatru-model-1"
+        "aquatru-model-1",
+        "aquasana-aq-cwm2",
+        "waterdrop-10ub-pro"
       ]
     },
     {
@@ -282,15 +287,18 @@
       "relatedPwsids": [
         "PA1510001",
         "7360058",
-        "FL3480255",
-        "FL6535055",
-        "FL6424076",
-        "FL3354883",
-        "FL3591121"
+        "FL3590615",
+        "FL6514842",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451",
+        "GA3110075",
+        "IL1830600"
       ],
       "relatedProductIds": [
-        "aq-claryum-direct-connect",
-        "aquatru-model-1"
+        "aquasana-aq-mf-1",
+        "waterdrop-10ub-pro",
+        "aquatru-under-sink"
       ]
     },
     {
@@ -380,12 +388,16 @@
       "relatedPwsids": [
         "7360058",
         "FL3354883",
-        "FL3591121"
+        "FL3591121",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451"
       ],
       "relatedProductIds": [
         "aquasana-aq-mf-1",
         "waterdrop-g3p600",
-        "aquatru-classic"
+        "aquatru-classic",
+        "waterdrop-10ub-pro"
       ]
     },
     {
@@ -569,13 +581,18 @@
       ],
       "relatedPwsids": [
         "FL3480255",
-        "GA3110075",
-        "FL3590069"
+        "FL6514842",
+        "FL3590615",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451"
       ],
       "relatedProductIds": [
         "zerowater-10-cup-pitcher",
-        "aquasana-aq-mf-1",
-        "waterdrop-g3p800"
+        "aquasana-aq-cwm2",
+        "aquasana-aq-6200",
+        "aquatru-classic",
+        "waterdrop-10ub-pro"
       ]
     },
     {
@@ -665,12 +682,16 @@
       ],
       "relatedPwsids": [],
       "relatedProductIds": [
-        "espring-122941",
-        "aquasana-aq-ro-3",
         "aquasana-aq-mf-1",
-        "waterdrop-k19-sfk",
+        "aquasana-aq-6200",
+        "aquasana-aq-6300m",
+        "aquasana-aq-ro-3",
+        "aquatru-classic",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro",
+        "waterdrop-g3p600",
         "waterdrop-x10",
-        "waterdrop-x12"
+        "zerowater-extremelife-faucet-mount"
       ]
     },
     {
@@ -759,17 +780,21 @@
         "best filter type for pfas carbon or ro"
       ],
       "relatedPwsids": [
-        "PA1510001",
-        "FL3354883",
-        "FL3591121"
+        "FL3590615",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451",
+        "IL1830600"
       ],
       "relatedProductIds": [
+        "aquasana-aq-mf-1",
         "aquasana-aq-6200",
+        "aquasana-aq-cwm2",
         "aquatru-classic",
+        "aquatru-under-sink",
         "waterdrop-g3p600",
-        "waterdrop-g2",
-        "waterdrop-k19-sfk",
-        "waterdrop-a2"
+        "waterdrop-x10",
+        "waterdrop-10ub-pro"
       ]
     },
     {
@@ -858,16 +883,21 @@
         "do i need whole house pfas filter"
       ],
       "relatedPwsids": [
-        "PA1510001",
-        "MD0120011",
-        "FL6424076"
+        "FL3354695",
+        "FL6521000",
+        "FL3591451",
+        "NV0005027",
+        "NJ1914002"
       ],
       "relatedProductIds": [
+        "aquasana-aq-mf-1",
         "aquasana-aq-6200",
         "aquasana-aq-ro-3",
-        "waterdrop-g3p800",
-        "waterdrop-x16",
-        "aquatru-under-sink"
+        "aquatru-under-sink",
+        "waterdrop-g3p600",
+        "waterdrop-x10",
+        "waterdrop-10ub-pro",
+        "waterdrop-g5p700"
       ]
     },
     {
@@ -956,18 +986,23 @@
         "pfas filter replacement cost"
       ],
       "relatedPwsids": [
-        "PA1510001",
-        "FL6535055"
+        "FL3590615",
+        "FL3354695",
+        "FL6521000",
+        "IL1830600",
+        "NV0005027"
       ],
       "relatedProductIds": [
+        "zerowater-10-cup-pitcher",
+        "zerowater-23-cup-dispenser",
+        "aquasana-aq-mf-1",
         "aquasana-aq-6200",
-        "aquasana-aq-ro-3",
+        "aquasana-aq-cwm2",
         "aquatru-classic",
-        "aquatru-model-1",
+        "aquatru-under-sink",
         "waterdrop-g3p600",
-        "waterdrop-g3p800",
-        "waterdrop-g5p700",
-        "waterdrop-a1"
+        "waterdrop-c1s",
+        "waterdrop-10ub-pro"
       ]
     },
     {
@@ -1058,15 +1093,23 @@
       ],
       "relatedPwsids": [
         "PA1510001",
-        "NV0001086",
-        "NV0005027"
+        "7360058",
+        "FL3590615",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451"
       ],
       "relatedProductIds": [
         "aquasana-aq-mf-1",
-        "waterdrop-g2",
+        "aquasana-aq-6200",
+        "aquasana-aq-cwm2",
+        "aquatru-classic",
+        "aquatru-under-sink",
+        "zerowater-23-cup-dispenser",
+        "waterdrop-10ub-pro",
+        "waterdrop-g3p600",
         "waterdrop-x10",
-        "waterdrop-a1",
-        "zerowater-extremelife-faucet-mount"
+        "waterdrop-c1s"
       ]
     },
     {
@@ -1156,16 +1199,22 @@
         "pitcher or under sink for pfas"
       ],
       "relatedPwsids": [
-        "IL0855050",
-        "FL3591121",
-        "AK2310730"
+        "FL3590615",
+        "FL6514842",
+        "FL3354695",
+        "FL6521000",
+        "FL3591451"
       ],
       "relatedProductIds": [
         "zerowater-10-cup-pitcher",
-        "aquatru-classic",
+        "zerowater-23-cup-dispenser",
         "aquasana-aq-cwm2",
-        "waterdrop-a2",
-        "waterdrop-g2"
+        "aquatru-classic",
+        "aquatru-model-1",
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "waterdrop-c1s",
+        "waterdrop-10ub-pro"
       ]
     }
   ]

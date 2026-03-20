@@ -929,6 +929,13 @@ img {
 	word-break: break-word;
 }
 
+.source-item__note {
+	margin-top: 6px;
+	color: var(--text-soft);
+	font-size: 0.78rem;
+	line-height: 1.45;
+}
+
 .rail-card {
 	padding: 20px;
 	position: relative;

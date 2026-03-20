@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:04.932215900+09:00",
-  "route_count" : 47,
+  "generated_at" : "2026-03-20T15:10:12.812195+09:00",
+  "route_count" : 52,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "carbon-vs-ro-for-pfas",
@@ -225,6 +225,19 @@
     "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3354695",
+    "display_label" : "Lake Saunders Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3354695",
+    "supporting_path" : "/public-water-system/FL3354695",
+    "api_path" : "/internal/results/public-water/FL3354695",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Lake Saunders Water System", "FL", "FL3354695", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3354883",
     "display_label" : "Lake Utility Services North PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -264,6 +277,19 @@
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3590615",
+    "display_label" : "Jansen Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3590615",
+    "supporting_path" : "/public-water-system/FL3590615",
+    "api_path" : "/internal/results/public-water/FL3590615",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Jansen Water System", "FL", "FL3590615", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3591121",
     "display_label" : "Sanlando Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -277,6 +303,19 @@
     "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3591451",
+    "display_label" : "Weathersfield Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3591451",
+    "supporting_path" : "/public-water-system/FL3591451",
+    "api_path" : "/internal/results/public-water/FL3591451",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Weathersfield Water System", "FL", "FL3591451", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL6424076",
     "display_label" : "Golden Hills Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -288,6 +327,32 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL6514842",
+    "display_label" : "Labrador Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL6514842",
+    "supporting_path" : "/public-water-system/FL6514842",
+    "api_path" : "/internal/results/public-water/FL6514842",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Labrador Water System", "FL", "FL6514842", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL6521000",
+    "display_label" : "Lake Tarpon Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL6521000",
+    "supporting_path" : "/public-water-system/FL6521000",
+    "api_path" : "/internal/results/public-water/FL6521000",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Lake Tarpon Water System", "FL", "FL6521000", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "FL6535055",

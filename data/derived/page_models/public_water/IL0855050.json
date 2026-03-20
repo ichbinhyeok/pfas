@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T14:30:12.265364300+09:00",
+  "generated_at" : "2026-03-20T15:10:22.040601+09:00",
   "model_id" : "public_water:IL0855050",
   "route_type" : "public_water",
   "route_key" : "IL0855050",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:IL0855050",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T14:30:12.261911400+09:00",
+      "generated_at" : "2026-03-20T15:10:22.038596300+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",

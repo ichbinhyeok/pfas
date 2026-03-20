@@ -42,7 +42,8 @@ tasks.named('test') {
 tasks.register('syncDerivedArtifacts', JavaExec) {
 	group = 'build'
 	description = 'Regenerates derived PFAS artifacts under data/derived.'
-	classpath = sourceSets.main.runtimeClasspath
+	dependsOn classes
+	classpath = files(sourceSets.main.output, configurations.runtimeClasspath)
 	mainClass = 'com.example.pfas.PfasApplication'
 	args '--pfas.derived.sync-on-startup=true', '--server.port=0'
 }
@@ -50,7 +51,8 @@ tasks.register('syncDerivedArtifacts', JavaExec) {
 tasks.register('exportStaticSite', JavaExec) {
 	group = 'build'
 	description = 'Exports the PFAS site to build/static-export.'
-	classpath = sourceSets.main.runtimeClasspath
+	dependsOn classes
+	classpath = files(sourceSets.main.output, configurations.runtimeClasspath)
 	mainClass = 'com.example.pfas.PfasApplication'
 	args '--pfas.export.static-on-startup=true', '--server.port=0'
 }
