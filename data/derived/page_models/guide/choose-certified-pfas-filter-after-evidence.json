@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:10:19.978860700+09:00",
+  "generated_at" : "2026-03-20T15:56:41.091427+09:00",
   "model_id" : "guide:choose-certified-pfas-filter-after-evidence",
   "route_type" : "guide",
   "route_key" : "choose-certified-pfas-filter-after-evidence",
@@ -24,7 +24,7 @@
       "checklist" : [ "Confirm the route from utility or well evidence first.", "Check the exact model and PFAS claim support second.", "Compare installation class and annual burden before selecting a product." ],
       "evidenceHighlights" : [ "EPA filter guidance supports claim-level and certification-body-level verification before product choice.", "NSF listing directories remain useful only when tied to the exact model and claim.", "Product fit improves when the engine keeps evidence state and ownership burden in the same frame." ],
       "targetQueries" : [ "how to choose a certified pfas filter", "best certified pfas filter after test results", "which pfas filter after utility notice" ],
-      "relatedPwsids" : [ "PA1510001", "7360058", "FL3590615", "FL3354695", "FL6521000", "FL3591451" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "FL3590615", "FL3354695", "FL6521000", "FL3591451", "FL3590762", "FL3590912" ],
       "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-under-sink", "zerowater-23-cup-dispenser", "waterdrop-10ub-pro", "waterdrop-g3p600", "waterdrop-x10", "waterdrop-c1s" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-direct-connect-product", "waterdrop-x10-product", "zerowater-performance-certification" ],
       "primaryHref" : "/checker",

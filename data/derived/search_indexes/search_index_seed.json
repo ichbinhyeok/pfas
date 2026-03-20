@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:10:13.614198800+09:00",
-  "document_count" : 52,
+  "generated_at" : "2026-03-20T15:56:32.572705300+09:00",
+  "document_count" : 55,
   "documents" : [ {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -245,6 +245,28 @@
     "source_count" : 4,
     "keywords" : [ "Jansen Water System", "FL", "FL3590615", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:FL3590762",
+    "route_type" : "public_water",
+    "route_key" : "FL3590762",
+    "url" : "/public-water/FL3590762",
+    "title" : "Little Wekiva Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Little Wekiva Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Little Wekiva Water System", "FL", "FL3590762", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:FL3590912",
+    "route_type" : "public_water",
+    "route_key" : "FL3590912",
+    "url" : "/public-water/FL3590912",
+    "title" : "Oakland Shores Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Oakland Shores Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Oakland Shores Water System", "FL", "FL3590912", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:FL3591121",
     "route_type" : "public_water",
     "route_key" : "FL3591121",
@@ -376,6 +398,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:IN5245057",
+    "route_type" : "public_water",
+    "route_key" : "IN5245057",
+    "url" : "/public-water/IN5245057",
+    "title" : "Community Utilities of Indiana Inc. PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Community Utilities of Indiana Inc..",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Community Utilities of Indiana Inc.", "IN", "IN5245057", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:MD0120011",
     "route_type" : "public_water",

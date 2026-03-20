@@ -13,6 +13,7 @@ import com.example.pfas.checker.ActionDirectDataStatus;
 import com.example.pfas.checker.ActionIndirectDataStatus;
 import com.example.pfas.checker.ActionWaterSource;
 import com.example.pfas.decision.BenchmarkComparisonStatus;
+import com.example.pfas.filter.FilterCatalogItem;
 
 public final class PresentationText {
 
@@ -162,6 +163,33 @@ public final class PresentationText {
 		return "$" + amount.setScale(2, RoundingMode.HALF_UP).toPlainString();
 	}
 
+	public static String annualizedMaintenanceLabel(FilterCatalogItem product) {
+		if (product == null) {
+			return "Maintenance not normalized";
+		}
+
+		BigDecimal total = null;
+		if (product.replacementCostUsd() != null && product.replacementCadenceMonths() != null && product.replacementCadenceMonths() > 0) {
+			total = annualize(product.replacementCostUsd(), product.replacementCadenceMonths());
+		}
+		if (product.membraneCostUsd() != null) {
+			total = total == null ? product.membraneCostUsd() : total.add(product.membraneCostUsd());
+		}
+		if (product.serviceCostUsd() != null) {
+			total = total == null ? product.serviceCostUsd() : total.add(product.serviceCostUsd());
+		}
+		if (product.recurringCostComponents() != null) {
+			for (var component : product.recurringCostComponents()) {
+				if (component.componentCostUsd() != null && component.cadenceMonths() != null && component.cadenceMonths() > 0) {
+					var annualized = annualize(component.componentCostUsd(), component.cadenceMonths());
+					total = total == null ? annualized : total.add(annualized);
+				}
+			}
+		}
+
+		return total == null ? "Maintenance not normalized" : currencyLabel(total) + " annualized";
+	}
+
 	private static String titleCaseUnderscore(String rawValue) {
 		if (rawValue == null || rawValue.isBlank()) {
 			return "";
@@ -180,5 +208,10 @@ public final class PresentationText {
 		}
 		var lower = token.toLowerCase(Locale.US);
 		return Character.toUpperCase(lower.charAt(0)) + lower.substring(1);
+	}
+
+	private static BigDecimal annualize(BigDecimal cost, int cadenceMonths) {
+		return cost.multiply(BigDecimal.valueOf(12))
+			.divide(BigDecimal.valueOf(cadenceMonths), 2, RoundingMode.HALF_UP);
 	}
 }

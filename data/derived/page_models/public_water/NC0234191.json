@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:10:22.575957300+09:00",
+  "generated_at" : "2026-03-20T15:56:45.023067+09:00",
   "model_id" : "public_water:NC0234191",
   "route_type" : "public_water",
   "route_key" : "NC0234191",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:NC0234191",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T15:10:22.535805500+09:00",
+      "generated_at" : "2026-03-20T15:56:44.977090400+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",

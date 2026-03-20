@@ -4337,6 +4337,159 @@
         "safe or unsafe household determination"
       ],
       "notes": "Weathersfield PFAS report with 2023 direct results for PFOA, PFOS, PFHxS, PFNA, PFBS, and HFPO-DA."
+    },
+    {
+      "source_id": "little-wekiva-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Little Wekiva CCR 247",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/little-wekiva/2024/littlewekiva-24ccr-247.pdf?sfvrsn=22bb3f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Little Wekiva CCR PDF confirming PWS ID FL3590762 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "little-wekiva-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Little Wekiva",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/little-wekiva/2023/little-wekivia-pfas-2023.pdf?sfvrsn=73153b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Little Wekiva PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and PFHpA."
+    },
+    {
+      "source_id": "oakland-shores-2024-water-quality-report",
+      "organization": "Sunshine Water Services",
+      "title": "Annual Water Quality Report 2024 Oakland Shores CCR 295",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/oakland-shores/2024/oaklandshores-24ccr-295.pdf?sfvrsn=e8bb3f5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "system type verification",
+        "source water verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Oakland Shores CCR PDF confirming PWS ID FL3590912 and groundwater source profile for the 2024 reporting year."
+    },
+    {
+      "source_id": "oakland-shores-pfas-2023-report",
+      "organization": "Sunshine Water Services",
+      "title": "PFAS Monitoring Results 2023 Oakland Shores",
+      "url": "https://www.myutility.us/docs/default-source/florida/water-quality-reports/oakland-shores/2023/oakland-shores-pfas-2023.pdf?sfvrsn=4c153b5b_2",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "FL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Oakland Shores PFAS report with 2023 averages for PFOA, PFOS, PFHxS, PFNA, PFBS, and PFHpA."
+    },
+    {
+      "source_id": "indiana-water-home",
+      "organization": "Community Utilities of Indiana",
+      "title": "Community Utilities of Indiana Home",
+      "url": "https://www.myutility.us/indiana",
+      "source_kind": "utility_homepage",
+      "trust_tier": 2,
+      "jurisdiction": "IN",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity verification",
+        "utility contact context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS observation"
+      ],
+      "notes": "Community Utilities of Indiana homepage used to validate the operating utility and state-specific context."
+    },
+    {
+      "source_id": "indiana-water-quality-reports",
+      "organization": "Community Utilities of Indiana",
+      "title": "Community Utilities of Indiana Water Quality Reports",
+      "url": "https://www.myutility.us/indiana/water-safety/water-quality-reports",
+      "source_kind": "utility_report_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "IN",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility report routing",
+        "report index verification"
+      ],
+      "disallowed_uses": [
+        "direct PFAS observation"
+      ],
+      "notes": "Community Utilities of Indiana report index page used to verify the official CCR routing path."
+    },
+    {
+      "source_id": "iws-2024-water-quality-report",
+      "organization": "Community Utilities of Indiana",
+      "title": "Annual Water Quality Report 2024 Community Utilities of Indiana CCR 201",
+      "url": "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IN",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "source water verification",
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Community Utilities of Indiana 2024 CCR confirming PWS ID IN5245057, purchased Lake Michigan supply, and integrated PFAS table showing non-detect across the mapped analytes."
     }
   ]
 }

@@ -32,6 +32,9 @@
             <div class="button-row">
                 <a class="button button--primary" href="${page.primaryHref()}">${page.primaryLabel()}</a>
                 <a class="button button--secondary" href="${page.secondaryHref()}">${page.secondaryLabel()}</a>
+                @if(!relatedProducts.isEmpty())
+                    <a class="button button--secondary" href="#guide-product-lane">Open comparison lane</a>
+                @endif
             </div>
         </div>
 
@@ -80,6 +83,29 @@
                     </div>
                     <p class="next-action__summary">${page.nextActionSummary()}</p>
                 </section>
+
+                @if(!relatedProducts.isEmpty())
+                    <section class="card card--hero lane-card">
+                        <span class="next-action__code">Decision-to-product lane</span>
+                        <div class="lane-card__grid">
+                            <article class="lane-card__cell">
+                                <p class="card__label">Linked certified options</p>
+                                <div class="lane-card__value">${relatedProducts.size()}</div>
+                                <p class="card__copy">Curated products tied to this guide's decision intent.</p>
+                            </article>
+                            <article class="lane-card__cell">
+                                <p class="card__label">Live utility examples</p>
+                                <div class="lane-card__value">${relatedSystemExamples.size()}</div>
+                                <p class="card__copy">Direct dossiers tied to the same question cluster.</p>
+                            </article>
+                            <article class="lane-card__cell">
+                                <p class="card__label">Commercial posture</p>
+                                <div class="lane-card__value">Evidence first</div>
+                                <p class="card__copy">The product layer opens only after the guide frames the route.</p>
+                            </article>
+                        </div>
+                    </section>
+                @endif
 
                 @for(var section : page.sections())
                     <section class="card">
@@ -139,6 +165,14 @@
                         </ul>
                     </section>
                 @endif
+
+                @template.fragments.productLane(
+                    sectionId = "guide-product-lane",
+                    eyebrow = "Comparison lane",
+                    title = "Official product records linked to this guide",
+                    summary = "This lane is intentionally narrow. It routes from interpretation to concrete certified options without pretending every household should buy the same class.",
+                    products = relatedProducts.subList(0, Math.min(relatedProducts.size(), 8))
+                )
             </div>
 
             <aside class="stack">
@@ -192,17 +226,7 @@
                 @if(!relatedProducts.isEmpty())
                     <section class="rail-card">
                         <h2 class="rail-card__title">Linked certified option lanes</h2>
-                        <div class="source-list">
-                            @for(var product : relatedProducts)
-                                <a class="source-item" href="${product.listingUrl()}">
-                                    <div class="source-item__meta">${product.brand()} / ${PresentationText.installationTypeLabel(product.installationType())} / ${PresentationText.filterTypeLabel(product.filterType())}</div>
-                                    <div class="source-item__title">${product.model()}</div>
-                                    <div class="source-item__url">${PresentationText.currencyLabel(product.upfrontCostUsd())} upfront / ${product.certBody()} ${product.standardCode()} / ${product.claimNames().size()} mapped claims</div>
-                                    <div class="source-item__note">Mapped PFAS: ${PresentationText.previewList(product.coveredPfas(), 4)}</div>
-                                    <div class="source-item__note">${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence: ${PresentationText.confidenceLabel(product.costConfidence())}</div>
-                                </a>
-                            @endfor
-                        </div>
+                        <p class="checker-block__hint">Use the comparison lane in the main column when you want a direct merchant path with upkeep and claim context side by side.</p>
                     </section>
                 @endif
 

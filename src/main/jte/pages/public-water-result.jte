@@ -5,6 +5,7 @@
 @import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
 @import static com.example.pfas.web.PresentationText.comparisonStatusLabel
 @import static com.example.pfas.web.PresentationText.confidenceLabel
+@import static com.example.pfas.web.PresentationText.currencyLabel
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param String siteBaseUrl
@@ -34,6 +35,7 @@
             </div>
             <div class="button-row">
                 <a class="button button--secondary" href="${system.ccrUrl()}">Open utility report</a>
+                <a class="button button--primary" href="#public-water-product-lane">Review comparison lane</a>
                 <a class="button button--primary" href="/internal/results/public-water/${system.pwsid()}">Open result JSON</a>
             </div>
         </div>
@@ -157,6 +159,14 @@
                         @endfor
                     </div>
                 </section>
+
+                @template.fragments.productLane(
+                    sectionId = "public-water-product-lane",
+                    eyebrow = "Certified comparison lane",
+                    title = "Official product records for this utility route",
+                    summary = "These are not generic best-seller cards. They are the current certified point-of-use examples the engine can defend for this utility interpretation path.",
+                    products = decision.certifiedPouOptions().subList(0, Math.min(decision.certifiedPouOptions().size(), 8))
+                )
 
                 <section class="card">
                     <p class="card__label">Primary source ledger</p>

@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:10:12.812195+09:00",
-  "route_count" : 52,
+  "generated_at" : "2026-03-20T15:56:31.581494500+09:00",
+  "route_count" : 55,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "carbon-vs-ro-for-pfas",
@@ -290,6 +290,32 @@
     "keywords" : [ "Jansen Water System", "FL", "FL3590615", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "FL3590762",
+    "display_label" : "Little Wekiva Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3590762",
+    "supporting_path" : "/public-water-system/FL3590762",
+    "api_path" : "/internal/results/public-water/FL3590762",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Little Wekiva Water System", "FL", "FL3590762", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "FL3590912",
+    "display_label" : "Oakland Shores Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/FL3590912",
+    "supporting_path" : "/public-water-system/FL3590912",
+    "api_path" : "/internal/results/public-water/FL3590912",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Oakland Shores Water System", "FL", "FL3590912", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "FL3591121",
     "display_label" : "Sanlando Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -444,6 +470,19 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "IN5245057",
+    "display_label" : "Community Utilities of Indiana Inc. PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IN5245057",
+    "supporting_path" : "/public-water-system/IN5245057",
+    "api_path" : "/internal/results/public-water/IN5245057",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Community Utilities of Indiana Inc.", "IN", "IN5245057", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "MD0120011",

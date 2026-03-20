@@ -1,34 +1,34 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:56:45.307317600+09:00",
-  "model_id" : "public_water:NJ1914002",
+  "generated_at" : "2026-03-20T15:56:44.756141+09:00",
+  "model_id" : "public_water:IN5245057",
   "route_type" : "public_water",
-  "route_key" : "NJ1914002",
+  "route_key" : "IN5245057",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/NJ1914002",
+  "render_path" : "/public-water/IN5245057",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 4,
+  "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "NJ1914002",
-      "pwsName" : "Montague Water Company",
-      "stateCode" : "NJ",
+      "pwsid" : "IN5245057",
+      "pwsName" : "Community Utilities of Indiana Inc.",
+      "stateCode" : "IN",
       "systemType" : "community",
       "populationServed" : "",
-      "sourceWaterType" : "groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/new-jersey",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
-      "serviceAreaNotes" : "Montague Water Company community groundwater system with five wells and a separate 2023 PFAS report showing non-detects across mapped analytes",
+      "sourceWaterType" : "purchased_surface_water",
+      "utilityWebsiteUrl" : "https://www.myutility.us/indiana",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
+      "serviceAreaNotes" : "Community Utilities of Indiana purchased-surface-water system using Indiana American Water's Lake Michigan supply with an integrated 2024 CCR PFAS table showing non-detect across the mapped analytes.",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "new-jersey-water-home", "new-jersey-water-quality-reports", "montague-2024-water-quality-report", "montague-pfas-2023-report" ]
+      "sourceIds" : [ "indiana-water-home", "indiana-water-quality-reports", "iws-2024-water-quality-report" ]
     },
     "result" : {
-      "result_id" : "public-water:NJ1914002",
+      "result_id" : "public-water:IN5245057",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T15:56:45.305318+09:00",
+      "generated_at" : "2026-03-20T15:56:44.752565400+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
@@ -76,28 +76,22 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "montague-2024-water-quality-report",
-        "organization" : "Montague Water Company",
-        "title" : "Annual Water Quality Report 2025 Montague CCR 268",
-        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2024/montague-24ccr-268.pdf?sfvrsn=38db055b_14",
+        "source_id" : "indiana-water-home",
+        "organization" : "Community Utilities of Indiana",
+        "title" : "Community Utilities of Indiana Home",
+        "url" : "https://www.myutility.us/indiana",
         "trust_tier" : 2
       }, {
-        "source_id" : "montague-pfas-2023-report",
-        "organization" : "Montague Water Company",
-        "title" : "PFAS Results 2023 Montague Water Company",
-        "url" : "https://www.myutility.us/docs/default-source/new-jersey/water-quality-reports/montague/2023/nj_montague-23pfas.pdf?sfvrsn=ed5d3b5b_4",
+        "source_id" : "indiana-water-quality-reports",
+        "organization" : "Community Utilities of Indiana",
+        "title" : "Community Utilities of Indiana Water Quality Reports",
+        "url" : "https://www.myutility.us/indiana/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
-        "source_id" : "new-jersey-water-home",
-        "organization" : "Montague Water Company",
-        "title" : "Montague Water",
-        "url" : "https://www.myutility.us/new-jersey",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "new-jersey-water-quality-reports",
-        "organization" : "Montague Water Company",
-        "title" : "Water Quality Reports",
-        "url" : "https://www.myutility.us/new-jersey/water-safety/water-quality-reports",
+        "source_id" : "iws-2024-water-quality-report",
+        "organization" : "Community Utilities of Indiana",
+        "title" : "Annual Water Quality Report 2024 Community Utilities of Indiana CCR 201",
+        "url" : "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
         "trust_tier" : 2
       } ],
       "meta" : {
@@ -108,9 +102,9 @@
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:NJ1914002",
+      "input_id" : "public_water:IN5245057",
       "route_type" : "public_water",
-      "route_key" : "NJ1914002",
+      "route_key" : "IN5245057",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
@@ -118,12 +112,12 @@
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "NJ1914002",
+      "pwsid" : "IN5245057",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/NJ1914002",
-      "secondary_path" : "/internal/results/public-water/NJ1914002",
+      "primary_path" : "/public-water/IN5245057",
+      "secondary_path" : "/internal/results/public-water/IN5245057",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
-    "supporting_path" : "/public-water-system/NJ1914002"
+    "supporting_path" : "/public-water-system/IN5245057"
   }
 }
