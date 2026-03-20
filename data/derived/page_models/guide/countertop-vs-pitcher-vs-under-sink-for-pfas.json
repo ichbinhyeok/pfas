@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T13:50:08.086172200+09:00",
+  "model_id" : "guide:countertop-vs-pitcher-vs-under-sink-for-pfas",
+  "route_type" : "guide",
+  "route_key" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 5,
+  "payload" : {
+    "guide" : {
+      "slug" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
+      "eyebrow" : "Money-path guide",
+      "title" : "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
+      "lede" : "The product class should reflect evidence strength, maintenance tolerance, and daily workflow. The most expensive form factor is not automatically the most rational one.",
+      "queryIntent" : "Form factor comparison",
+      "nextActionTitle" : "Compare form factor only after the route is clear",
+      "nextActionSummary" : "Pitcher, countertop, and under-sink systems solve different household constraints. They should be compared as operating choices, not as a prestige ladder.",
+      "whyThis" : [ "Installation class changes cost and friction as much as claim scope does.", "Form factor can determine whether the product actually gets used and maintained.", "A smaller product class can still be the right proportional intervention." ],
+      "whatThisDoesNotTellYou" : [ "This guide does not say one form factor wins in every household.", "It does not make a pitcher equivalent to every under-sink system.", "It does not skip claim verification or evidence review." ],
+      "checklist" : [ "Lock the evidence route first.", "Match the product class to installation tolerance and maintenance rhythm.", "Then compare exact certified models inside that class." ],
+      "evidenceHighlights" : [ "EPA filter guidance supports comparing certified point-of-use options before jumping to larger interventions.", "ZeroWater AquaTru Aquasana and Waterdrop records provide distinct examples of pitcher countertop and under-sink PFAS-capable products.", "The right form factor often comes down to maintenance behavior and household workflow." ],
+      "targetQueries" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas" ],
+      "relatedPwsids" : [ "IL0855050", "FL3591121", "AK2310730" ],
+      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "aquatru-classic", "aquasana-aq-cwm2", "waterdrop-a2", "waterdrop-g2" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "zerowater-performance-certification", "aquatru-classic-product", "aq-clean-water-machine-product", "waterdrop-a2-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/carbon-vs-ro-for-pfas",
+      "secondaryLabel" : "Read carbon vs RO logic",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Pitchers are about proportionality and simplicity",
+        "summary" : "A pitcher can be the right answer when the household wants a constrained drinking-water intervention and can accept lower capacity and refill friction.",
+        "paragraphs" : [ "Pitchers are often dismissed because they do not look serious enough. That is usually a branding problem rather than a decision problem. If the claim support is real and the household only needs a narrow point-of-use path the pitcher format can be proportionate.", "The tradeoff is operational: lower throughput, refill behavior, and shorter practical capacity in many households." ],
+        "bullets" : [ "Lower commitment can still be the right fit.", "Refill behavior is part of the decision.", "Capacity limits matter." ]
+      }, {
+        "title" : "Countertop systems trade footprint for easier adoption",
+        "summary" : "Countertop products often make sense for renters or households that want RO performance without under-sink installation.",
+        "paragraphs" : [ "Countertop products occupy visible space and can cost more up front but they reduce installation resistance and can still provide a strong point-of-use path. That makes them attractive for households that will maintain them consistently but do not want plumbing work.", "They are not automatically better than under-sink units. They simply solve a different constraint." ],
+        "bullets" : [ "Good for low-plumbing tolerance.", "Countertop footprint is the tradeoff.", "Maintenance still matters." ]
+      }, {
+        "title" : "Under-sink wins when permanence and daily convenience matter",
+        "summary" : "Under-sink products usually create the smoothest daily workflow when the household accepts installation and recurring maintenance.",
+        "paragraphs" : [ "Under-sink products can feel less disruptive once installed because the user gets a dedicated tap or direct-connect flow without pitcher refill habits or countertop space loss. That convenience can matter more than headline technology class.", "But the best under-sink choice still depends on claim scope annual cost and whether the evidence route actually justifies treatment." ],
+        "bullets" : [ "Best daily workflow for many households.", "Installation is the main barrier.", "Use the class only after evidence supports treatment." ]
+      } ]
+    }
+  }
+}

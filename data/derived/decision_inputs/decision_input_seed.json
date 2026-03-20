@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:55.668610+09:00",
-  "input_count" : 27,
+  "generated_at" : "2026-03-20T13:50:04.183635200+09:00",
+  "input_count" : 32,
   "inputs" : [ {
     "input_id" : "public_water:7360058",
     "route_type" : "public_water",
@@ -195,6 +195,22 @@
     "secondary_path" : "/internal/results/public-water/GA3110075",
     "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
   }, {
+    "input_id" : "public_water:IL0855050",
+    "route_type" : "public_water",
+    "route_key" : "IL0855050",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "UNKNOWN",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "IL0855050",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/IL0855050",
+    "secondary_path" : "/internal/results/public-water/IL0855050",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
     "input_id" : "public_water:IL0855150",
     "route_type" : "public_water",
     "route_key" : "IL0855150",
@@ -275,6 +291,38 @@
     "secondary_path" : "/internal/results/public-water/NJ1914002",
     "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
   }, {
+    "input_id" : "public_water:NV0000036",
+    "route_type" : "public_water",
+    "route_key" : "NV0000036",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "BELOW_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NV0000036",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/NV0000036",
+    "secondary_path" : "/internal/results/public-water/NV0000036",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
+    "input_id" : "public_water:NV0000207",
+    "route_type" : "public_water",
+    "route_key" : "NV0000207",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "BELOW_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NV0000207",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/NV0000207",
+    "secondary_path" : "/internal/results/public-water/NV0000207",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
     "input_id" : "public_water:NV0000408",
     "route_type" : "public_water",
     "route_key" : "NV0000408",
@@ -290,6 +338,38 @@
     "primary_path" : "/public-water/NV0000408",
     "secondary_path" : "/internal/results/public-water/NV0000408",
     "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
+    "input_id" : "public_water:NV0001086",
+    "route_type" : "public_water",
+    "route_key" : "NV0001086",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "BELOW_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NV0001086",
+    "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+    "primary_path" : "/public-water/NV0001086",
+    "secondary_path" : "/internal/results/public-water/NV0001086",
+    "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+  }, {
+    "input_id" : "public_water:NV0005027",
+    "route_type" : "public_water",
+    "route_key" : "NV0005027",
+    "water_source" : "PUBLIC_WATER",
+    "direct_data_status" : "UTILITY_DOCUMENT",
+    "indirect_data_status" : "NONE",
+    "benchmark_relation" : "ABOVE_REFERENCE",
+    "current_filter_status" : "NONE",
+    "whole_house_considered" : false,
+    "state_code" : null,
+    "pwsid" : "NV0005027",
+    "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
+    "primary_path" : "/public-water/NV0005027",
+    "secondary_path" : "/guides/under-sink-vs-whole-house",
+    "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
   }, {
     "input_id" : "public_water:PA1510001",
     "route_type" : "public_water",

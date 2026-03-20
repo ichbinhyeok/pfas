@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:55.449941800+09:00",
-  "document_count" : 37,
+  "generated_at" : "2026-03-20T13:50:03.888167600+09:00",
+  "document_count" : 44,
   "documents" : [ {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -13,6 +13,28 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro", "carbon vs ro for pfas", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:choose-certified-pfas-filter-after-evidence",
+    "route_type" : "guide",
+    "route_key" : "choose-certified-pfas-filter-after-evidence",
+    "url" : "/guides/choose-certified-pfas-filter-after-evidence",
+    "title" : "After you have direct evidence choose a certified PFAS filter by fit not hype",
+    "summary" : "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route. The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "how to choose a certified pfas filter", "best certified pfas filter after test results", "which pfas filter after utility notice", "choose certified pfas filter after evidence", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:countertop-vs-pitcher-vs-under-sink-for-pfas",
+    "route_type" : "guide",
+    "route_key" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
+    "url" : "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
+    "title" : "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
+    "summary" : "The product class should reflect evidence strength, maintenance tolerance, and daily workflow. The most expensive form factor is not automatically the most rational one. Pitcher, countertop, and under-sink systems solve different household constraints. They should be compared as operating choices, not as a prestige ladder.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas", "countertop vs pitcher vs under sink for pfas", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:how-to-read-a-pfas-utility-notice",
     "route_type" : "guide",
@@ -245,6 +267,17 @@
     "source_count" : 3,
     "keywords" : [ "Alpine Terrace Water System", "GA", "GA3110075", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:IL0855050",
+    "route_type" : "public_water",
+    "route_key" : "IL0855050",
+    "url" : "/public-water/IL0855050",
+    "title" : "Galena Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Galena Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Galena Water System", "IL", "IL0855050", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:IL0855150",
     "route_type" : "public_water",
     "route_key" : "IL0855150",
@@ -300,6 +333,28 @@
     "source_count" : 4,
     "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water:NV0000036",
+    "route_type" : "public_water",
+    "route_key" : "NV0000036",
+    "url" : "/public-water/NV0000036",
+    "title" : "Spring Creek Housing Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Spring Creek Housing Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Spring Creek Housing Water System", "NV", "NV0000036", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:NV0000207",
+    "route_type" : "public_water",
+    "route_key" : "NV0000207",
+    "url" : "/public-water/NV0000207",
+    "title" : "Cold Springs Water Company PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Cold Springs Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cold Springs Water Company", "NV", "NV0000207", "public water", "CCR", "PFAS" ]
+  }, {
     "document_id" : "public_water:NV0000408",
     "route_type" : "public_water",
     "route_key" : "NV0000408",
@@ -310,6 +365,28 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Calvada Meadows Water System", "NV", "NV0000408", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:NV0001086",
+    "route_type" : "public_water",
+    "route_key" : "NV0001086",
+    "url" : "/public-water/NV0001086",
+    "title" : "Spanish Springs Water Company PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Spanish Springs Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Spanish Springs Water Company", "NV", "NV0001086", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:NV0005027",
+    "route_type" : "public_water",
+    "route_key" : "NV0005027",
+    "url" : "/public-water/NV0005027",
+    "title" : "Spring Creek Mobile Home Park Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Spring Creek Mobile Home Park Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Spring Creek Mobile Home Park Water System", "NV", "NV0005027", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:PA1510001",
     "route_type" : "public_water",

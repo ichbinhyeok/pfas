@@ -3508,6 +3508,376 @@
         "benchmark substitution without claim evidence"
       ],
       "notes": "Official Waterdrop X16 page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "galena-2024-water-quality-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Galena CCR 133",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/galena/2024/galena-24ccr-133.pdf?sfvrsn=bdba3f5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Galena CCR confirming PWS ID IL0855050 and a PFAS table showing non-detect values across the mapped analytes."
+    },
+    {
+      "source_id": "cold-springs-2024-water-quality-report",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Cold Springs CCR 444",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2024/cold-springs-24ccr-444.pdf?sfvrsn=d0b93f5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Cold Springs CCR confirming PWS ID NV0000207 and groundwater system profile."
+    },
+    {
+      "source_id": "cold-springs-pfas-2023-report",
+      "organization": "Great Basin Water",
+      "title": "PFAS Results 2023 Cold Springs",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2023/cold-springs-pfas23-444.pdf?sfvrsn=6add3a5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Cold Springs PFAS report with detectable PFOA and PFHxS values plus non-detect context for PFOS and PFNA."
+    },
+    {
+      "source_id": "spanish-springs-2024-water-quality-report",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spanish Springs CCR 388",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spanish-springs/2024/spanish-springs-24ccr-388.pdf?sfvrsn=bcb93f5b_8",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Spanish Springs CCR confirming PWS ID NV0001086 and groundwater system profile."
+    },
+    {
+      "source_id": "spanish-springs-pfas-2023-report",
+      "organization": "Great Basin Water",
+      "title": "PFAS Results 2023 Spanish Springs",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spanish-springs/2023/spanish-springs-pfas23-388.pdf?sfvrsn=cdd3a5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Spanish Springs PFAS report showing detectable PFOA PFOS PFHxS and PFNA values across the mapped analytes."
+    },
+    {
+      "source_id": "spring-creek-housing-2024-water-quality-report",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spring Creek Housing CCR 403 Housing 851",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek-housing/2024/springcreek-24ccr-403-housing(851).pdf?sfvrsn=ef43c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Spring Creek Housing CCR confirming PWS ID NV0000036 and a PFAS table with detectable PFOS plus non-detect context for the other mapped analytes."
+    },
+    {
+      "source_id": "spring-creek-mobile-home-2024-water-quality-report",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spring Creek MHP CCR 403 MHP 852",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NV",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Spring Creek Mobile Home Park CCR confirming PWS ID NV0005027 and a PFAS table with elevated PFOA PFOS and PFHxS averages."
+    },
+    {
+      "source_id": "waterdrop-g2-product",
+      "organization": "Waterdrop",
+      "title": "Tankless Reverse Osmosis System G2",
+      "url": "https://www.waterdropfilter.com/products/tankless-reverse-osmosis-system-g2",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G2 product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-h9-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Reverse Osmosis Water Filtration System H9",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-reverse-osmosis-water-filtration-system",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop H9 product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-a1-product",
+      "organization": "Waterdrop",
+      "title": "RO Hot and Cold Water Dispenser A1",
+      "url": "https://www.waterdropfilter.com/products/ro-hot-cold-water-dispenser-a1",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop A1 countertop RO page stating certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-a2-product",
+      "organization": "Waterdrop",
+      "title": "Reverse Osmosis Hot and Cold Water Dispenser A2",
+      "url": "https://www.waterdropfilter.com/products/reverse-osmosis-hot-and-cold-water-dispenser-a2",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop A2 countertop RO page stating certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x14-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X14 Master X Series Reverse Osmosis System",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-x14-master-x-series-reverse-osmosis-system",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X14 product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-g5p700-product",
+      "organization": "Waterdrop",
+      "title": "Tankless RO System G5P700",
+      "url": "https://www.waterdropfilter.com/products/tankless-ro-system-g5p700",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G5P700 product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x10-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Master X Series Reverse Osmosis System X10",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-master-x-series-reverse-osmosis-system-x10",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X10 product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x8-pro-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Reverse Osmosis System X8 Pro",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-x-series-reverse-osmosis-system-x8-pro",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X8 Pro product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-x12-pro-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop X Series Reverse Osmosis System X12 Pro",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-x-series-reverse-osmosis-system-x12-pro",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop X12 Pro product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "waterdrop-g5p700a-pro-product",
+      "organization": "Waterdrop",
+      "title": "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System",
+      "url": "https://www.waterdropfilter.com/products/g5p700a-pro-dual-flow-alkaline-reverse-osmosis-system",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 4,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "official product configuration",
+        "certification language",
+        "PFAS reduction claim context"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without claim evidence"
+      ],
+      "notes": "Official Waterdrop G5P700A Pro product page stating IAPMO certification context and PFAS reduction marketing language."
     }
   ]
 }

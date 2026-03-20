@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:57.996968900+09:00",
+  "generated_at" : "2026-03-20T13:50:08.086172200+09:00",
   "model_id" : "guide:carbon-vs-ro-for-pfas",
   "route_type" : "guide",
   "route_key" : "carbon-vs-ro-for-pfas",
@@ -25,7 +25,7 @@
       "evidenceHighlights" : [ "EPA filter guidance points households toward certified claim-level comparison rather than technology worship.", "NSF 53 and 58 labels only become meaningful when tied to the actual reduction claim.", "Annual maintenance changes which system is truly sustainable." ],
       "targetQueries" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro" ],
       "relatedPwsids" : [ "PA1510001", "FL3354883", "FL3591121" ],
-      "relatedProductIds" : [ "aquasana-aq-6200", "aquatru-classic", "waterdrop-g3p600", "waterdrop-k19-sfk" ],
+      "relatedProductIds" : [ "aquasana-aq-6200", "aquatru-classic", "waterdrop-g3p600", "waterdrop-g2", "waterdrop-k19-sfk", "waterdrop-a2" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-ccr-consumer-info", "nsf-dwtu-listings" ],
       "primaryHref" : "/guides/pfas-filter-annual-cost",
       "primaryLabel" : "Read the annual cost guide",

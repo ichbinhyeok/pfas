@@ -1,0 +1,53 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T13:50:08.086172200+09:00",
+  "model_id" : "guide:choose-certified-pfas-filter-after-evidence",
+  "route_type" : "guide",
+  "route_key" : "choose-certified-pfas-filter-after-evidence",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/choose-certified-pfas-filter-after-evidence",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 5,
+  "payload" : {
+    "guide" : {
+      "slug" : "choose-certified-pfas-filter-after-evidence",
+      "eyebrow" : "Money-path guide",
+      "title" : "After you have direct evidence choose a certified PFAS filter by fit not hype",
+      "lede" : "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route.",
+      "queryIntent" : "Post-evidence product selection",
+      "nextActionTitle" : "Open products only after the evidence state is locked",
+      "nextActionSummary" : "The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
+      "whyThis" : [ "A certified product list is only useful after the route is clear.", "Claim scope and maintenance burden decide whether a certified product is actually workable.", "This order protects the user from shopping before interpretation." ],
+      "whatThisDoesNotTellYou" : [ "This guide does not declare any household safe or unsafe.", "It does not make certification equal every current regulatory benchmark.", "It does not justify whole-house treatment by itself." ],
+      "checklist" : [ "Confirm the route from utility or well evidence first.", "Check the exact model and PFAS claim support second.", "Compare installation class and annual burden before selecting a product." ],
+      "evidenceHighlights" : [ "EPA filter guidance supports claim-level and certification-body-level verification before product choice.", "NSF listing directories remain useful only when tied to the exact model and claim.", "Product fit improves when the engine keeps evidence state and ownership burden in the same frame." ],
+      "targetQueries" : [ "how to choose a certified pfas filter", "best certified pfas filter after test results", "which pfas filter after utility notice" ],
+      "relatedPwsids" : [ "PA1510001", "NV0001086", "NV0005027" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-g2", "waterdrop-x10", "waterdrop-a1", "zerowater-extremelife-faucet-mount" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-direct-connect-product", "waterdrop-x10-product", "zerowater-performance-certification" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/nsf-53-vs-58-pfas",
+      "secondaryLabel" : "Read certification logic",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Treat product choice as the second layer not the first layer",
+        "summary" : "A filter is only a credible next move after the evidence layer shows why treatment belongs on the table.",
+        "paragraphs" : [ "When a public-water route already has direct utility data or a well route already has state-grounded test interpretation the product layer becomes useful because the household knows why it is shopping. Without that context even a certified device can become a premature answer.", "That is why the engine should open product comparison only after the route is stabilized. The sequence matters as much as the product list because it blocks shopping-first drift." ],
+        "bullets" : [ "Evidence creates the reason to shop.", "Certification only matters when the route is real.", "Shopping first creates avoidable overbuild." ]
+      }, {
+        "title" : "Choose by claim scope and maintenance class",
+        "summary" : "Once evidence justifies treatment the strongest-looking unit is still not automatically the best fit.",
+        "paragraphs" : [ "The best post-evidence comparison keeps three layers together: claim scope, installation class, and recurring burden. A simpler under-sink or faucet product can be more realistic than a premium countertop or high-output RO device if the household only needs a proportionate point-of-use response.", "The reverse is also true. A higher-burden RO system can be rational when the user knowingly wants a dedicated drinking-water solution and accepts the maintenance model." ],
+        "bullets" : [ "Claim scope filters the product list.", "Installation class narrows what is realistic.", "Annual burden keeps the recommendation honest." ]
+      }, {
+        "title" : "Why this improves conversion quality too",
+        "summary" : "Better sequencing produces fewer but more defensible clicks because the user understands why the product layer opened.",
+        "paragraphs" : [ "A money page becomes stronger when it follows interpretation instead of replacing it. The user can see why a given product class was surfaced, what claim support exists, and what ownership burden comes with it.", "That kind of click is slower but higher quality because it is anchored in a real household route rather than generic PFAS fear." ],
+        "bullets" : [ "Interpretation-led clicks are better than panic-led clicks.", "Evidence plus fit improves trust.", "Trust improves the quality of the money path." ]
+      } ]
+    }
+  }
+}

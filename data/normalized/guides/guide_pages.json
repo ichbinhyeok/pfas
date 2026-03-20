@@ -669,6 +669,7 @@
         "aquasana-aq-ro-3",
         "aquasana-aq-mf-1",
         "waterdrop-k19-sfk",
+        "waterdrop-x10",
         "waterdrop-x12"
       ]
     },
@@ -766,7 +767,9 @@
         "aquasana-aq-6200",
         "aquatru-classic",
         "waterdrop-g3p600",
-        "waterdrop-k19-sfk"
+        "waterdrop-g2",
+        "waterdrop-k19-sfk",
+        "waterdrop-a2"
       ]
     },
     {
@@ -962,7 +965,207 @@
         "aquatru-classic",
         "aquatru-model-1",
         "waterdrop-g3p600",
-        "waterdrop-g3p800"
+        "waterdrop-g3p800",
+        "waterdrop-g5p700",
+        "waterdrop-a1"
+      ]
+    },
+    {
+      "slug": "choose-certified-pfas-filter-after-evidence",
+      "eyebrow": "Money-path guide",
+      "title": "After you have direct evidence choose a certified PFAS filter by fit not hype",
+      "lede": "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route.",
+      "nextActionTitle": "Open products only after the evidence state is locked",
+      "nextActionSummary": "The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
+      "whyThis": [
+        "A certified product list is only useful after the route is clear.",
+        "Claim scope and maintenance burden decide whether a certified product is actually workable.",
+        "This order protects the user from shopping before interpretation."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This guide does not declare any household safe or unsafe.",
+        "It does not make certification equal every current regulatory benchmark.",
+        "It does not justify whole-house treatment by itself."
+      ],
+      "checklist": [
+        "Confirm the route from utility or well evidence first.",
+        "Check the exact model and PFAS claim support second.",
+        "Compare installation class and annual burden before selecting a product."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance supports claim-level and certification-body-level verification before product choice.",
+        "NSF listing directories remain useful only when tied to the exact model and claim.",
+        "Product fit improves when the engine keeps evidence state and ownership burden in the same frame."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "aq-claryum-direct-connect-product",
+        "waterdrop-x10-product",
+        "zerowater-performance-certification"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/nsf-53-vs-58-pfas",
+      "secondaryLabel": "Read certification logic",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Treat product choice as the second layer not the first layer",
+          "summary": "A filter is only a credible next move after the evidence layer shows why treatment belongs on the table.",
+          "paragraphs": [
+            "When a public-water route already has direct utility data or a well route already has state-grounded test interpretation the product layer becomes useful because the household knows why it is shopping. Without that context even a certified device can become a premature answer.",
+            "That is why the engine should open product comparison only after the route is stabilized. The sequence matters as much as the product list because it blocks shopping-first drift."
+          ],
+          "bullets": [
+            "Evidence creates the reason to shop.",
+            "Certification only matters when the route is real.",
+            "Shopping first creates avoidable overbuild."
+          ]
+        },
+        {
+          "title": "Choose by claim scope and maintenance class",
+          "summary": "Once evidence justifies treatment the strongest-looking unit is still not automatically the best fit.",
+          "paragraphs": [
+            "The best post-evidence comparison keeps three layers together: claim scope, installation class, and recurring burden. A simpler under-sink or faucet product can be more realistic than a premium countertop or high-output RO device if the household only needs a proportionate point-of-use response.",
+            "The reverse is also true. A higher-burden RO system can be rational when the user knowingly wants a dedicated drinking-water solution and accepts the maintenance model."
+          ],
+          "bullets": [
+            "Claim scope filters the product list.",
+            "Installation class narrows what is realistic.",
+            "Annual burden keeps the recommendation honest."
+          ]
+        },
+        {
+          "title": "Why this improves conversion quality too",
+          "summary": "Better sequencing produces fewer but more defensible clicks because the user understands why the product layer opened.",
+          "paragraphs": [
+            "A money page becomes stronger when it follows interpretation instead of replacing it. The user can see why a given product class was surfaced, what claim support exists, and what ownership burden comes with it.",
+            "That kind of click is slower but higher quality because it is anchored in a real household route rather than generic PFAS fear."
+          ],
+          "bullets": [
+            "Interpretation-led clicks are better than panic-led clicks.",
+            "Evidence plus fit improves trust.",
+            "Trust improves the quality of the money path."
+          ]
+        }
+      ],
+      "queryIntent": "Post-evidence product selection",
+      "targetQueries": [
+        "how to choose a certified pfas filter",
+        "best certified pfas filter after test results",
+        "which pfas filter after utility notice"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "NV0001086",
+        "NV0005027"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "waterdrop-g2",
+        "waterdrop-x10",
+        "waterdrop-a1",
+        "zerowater-extremelife-faucet-mount"
+      ]
+    },
+    {
+      "slug": "countertop-vs-pitcher-vs-under-sink-for-pfas",
+      "eyebrow": "Money-path guide",
+      "title": "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
+      "lede": "The product class should reflect evidence strength, maintenance tolerance, and daily workflow. The most expensive form factor is not automatically the most rational one.",
+      "nextActionTitle": "Compare form factor only after the route is clear",
+      "nextActionSummary": "Pitcher, countertop, and under-sink systems solve different household constraints. They should be compared as operating choices, not as a prestige ladder.",
+      "whyThis": [
+        "Installation class changes cost and friction as much as claim scope does.",
+        "Form factor can determine whether the product actually gets used and maintained.",
+        "A smaller product class can still be the right proportional intervention."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This guide does not say one form factor wins in every household.",
+        "It does not make a pitcher equivalent to every under-sink system.",
+        "It does not skip claim verification or evidence review."
+      ],
+      "checklist": [
+        "Lock the evidence route first.",
+        "Match the product class to installation tolerance and maintenance rhythm.",
+        "Then compare exact certified models inside that class."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance supports comparing certified point-of-use options before jumping to larger interventions.",
+        "ZeroWater AquaTru Aquasana and Waterdrop records provide distinct examples of pitcher countertop and under-sink PFAS-capable products.",
+        "The right form factor often comes down to maintenance behavior and household workflow."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "zerowater-performance-certification",
+        "aquatru-classic-product",
+        "aq-clean-water-machine-product",
+        "waterdrop-a2-product"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/carbon-vs-ro-for-pfas",
+      "secondaryLabel": "Read carbon vs RO logic",
+      "lastVerifiedDate": "2026-03-20",
+      "sections": [
+        {
+          "title": "Pitchers are about proportionality and simplicity",
+          "summary": "A pitcher can be the right answer when the household wants a constrained drinking-water intervention and can accept lower capacity and refill friction.",
+          "paragraphs": [
+            "Pitchers are often dismissed because they do not look serious enough. That is usually a branding problem rather than a decision problem. If the claim support is real and the household only needs a narrow point-of-use path the pitcher format can be proportionate.",
+            "The tradeoff is operational: lower throughput, refill behavior, and shorter practical capacity in many households."
+          ],
+          "bullets": [
+            "Lower commitment can still be the right fit.",
+            "Refill behavior is part of the decision.",
+            "Capacity limits matter."
+          ]
+        },
+        {
+          "title": "Countertop systems trade footprint for easier adoption",
+          "summary": "Countertop products often make sense for renters or households that want RO performance without under-sink installation.",
+          "paragraphs": [
+            "Countertop products occupy visible space and can cost more up front but they reduce installation resistance and can still provide a strong point-of-use path. That makes them attractive for households that will maintain them consistently but do not want plumbing work.",
+            "They are not automatically better than under-sink units. They simply solve a different constraint."
+          ],
+          "bullets": [
+            "Good for low-plumbing tolerance.",
+            "Countertop footprint is the tradeoff.",
+            "Maintenance still matters."
+          ]
+        },
+        {
+          "title": "Under-sink wins when permanence and daily convenience matter",
+          "summary": "Under-sink products usually create the smoothest daily workflow when the household accepts installation and recurring maintenance.",
+          "paragraphs": [
+            "Under-sink products can feel less disruptive once installed because the user gets a dedicated tap or direct-connect flow without pitcher refill habits or countertop space loss. That convenience can matter more than headline technology class.",
+            "But the best under-sink choice still depends on claim scope annual cost and whether the evidence route actually justifies treatment."
+          ],
+          "bullets": [
+            "Best daily workflow for many households.",
+            "Installation is the main barrier.",
+            "Use the class only after evidence supports treatment."
+          ]
+        }
+      ],
+      "queryIntent": "Form factor comparison",
+      "targetQueries": [
+        "countertop vs pitcher vs under sink pfas filter",
+        "best pfas filter form factor",
+        "pitcher or under sink for pfas"
+      ],
+      "relatedPwsids": [
+        "IL0855050",
+        "FL3591121",
+        "AK2310730"
+      ],
+      "relatedProductIds": [
+        "zerowater-10-cup-pitcher",
+        "aquatru-classic",
+        "aquasana-aq-cwm2",
+        "waterdrop-a2",
+        "waterdrop-g2"
       ]
     }
   ]

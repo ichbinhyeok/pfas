@@ -703,6 +703,97 @@
       "source_family": "utility_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official UCMR5 notice for Sanlando with average values for PFOA, PFOS, and PFHxS from 2024 sampling."
+    },
+    {
+      "raw_source_id": "raw-galena-2024-water-quality-report-20260320",
+      "source_id": "galena-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/galena/2024/galena-24ccr-133.pdf?sfvrsn=bdba3f5b_6",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Galena CCR 133",
+      "content_type": "application/pdf",
+      "jurisdiction": "IL",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Galena CCR confirming PWS ID IL0855050 and a PFAS table with non-detect values across the mapped analytes."
+    },
+    {
+      "raw_source_id": "raw-cold-springs-2024-water-quality-report-20260320",
+      "source_id": "cold-springs-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2024/cold-springs-24ccr-444.pdf?sfvrsn=d0b93f5b_6",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Cold Springs CCR 444",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Cold Springs CCR confirming PWS ID NV0000207 and groundwater system profile."
+    },
+    {
+      "raw_source_id": "raw-cold-springs-pfas-2023-report-20260320",
+      "source_id": "cold-springs-pfas-2023-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2023/cold-springs-pfas23-444.pdf?sfvrsn=6add3a5b_4",
+      "organization": "Great Basin Water",
+      "title": "PFAS Results 2023 Cold Springs",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Cold Springs PFAS report with detectable PFOA and PFHxS values plus non-detect context for PFOS and PFNA."
+    },
+    {
+      "raw_source_id": "raw-spanish-springs-2024-water-quality-report-20260320",
+      "source_id": "spanish-springs-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spanish-springs/2024/spanish-springs-24ccr-388.pdf?sfvrsn=bcb93f5b_8",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spanish Springs CCR 388",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Spanish Springs CCR confirming PWS ID NV0001086 and groundwater system profile."
+    },
+    {
+      "raw_source_id": "raw-spanish-springs-pfas-2023-report-20260320",
+      "source_id": "spanish-springs-pfas-2023-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spanish-springs/2023/spanish-springs-pfas23-388.pdf?sfvrsn=cdd3a5b_4",
+      "organization": "Great Basin Water",
+      "title": "PFAS Results 2023 Spanish Springs",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Spanish Springs PFAS report showing detectable PFOA PFOS PFHxS and PFNA values across the mapped analytes."
+    },
+    {
+      "raw_source_id": "raw-spring-creek-housing-2024-water-quality-report-20260320",
+      "source_id": "spring-creek-housing-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek-housing/2024/springcreek-24ccr-403-housing(851).pdf?sfvrsn=ef43c5b_6",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spring Creek Housing CCR 403 Housing 851",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Spring Creek Housing CCR confirming PWS ID NV0000036 and a PFAS table with detectable PFOS plus non-detect context for the other mapped analytes."
+    },
+    {
+      "raw_source_id": "raw-spring-creek-mobile-home-2024-water-quality-report-20260320",
+      "source_id": "spring-creek-mobile-home-2024-water-quality-report",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
+      "organization": "Great Basin Water",
+      "title": "Annual Water Quality Report 2024 Spring Creek MHP CCR 403 MHP 852",
+      "content_type": "application/pdf",
+      "jurisdiction": "NV",
+      "source_family": "utility_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Spring Creek Mobile Home Park CCR confirming PWS ID NV0005027 and a PFAS table with elevated PFOA PFOS and PFHxS averages."
     }
   ]
 }

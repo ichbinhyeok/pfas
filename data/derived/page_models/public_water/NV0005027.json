@@ -1,43 +1,43 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T13:50:08.412265900+09:00",
-  "model_id" : "public_water:AK2310900",
+  "generated_at" : "2026-03-20T13:50:10.126478900+09:00",
+  "model_id" : "public_water:NV0005027",
   "route_type" : "public_water",
-  "route_key" : "AK2310900",
+  "route_key" : "NV0005027",
   "template_kind" : "public_water_result_page",
-  "render_path" : "/public-water/AK2310900",
+  "render_path" : "/public-water/NV0005027",
   "generation_mode" : "static_file_seed",
   "indexable" : true,
   "last_verified_date" : "2026-03-20",
-  "source_count" : 4,
+  "source_count" : 3,
   "payload" : {
     "system" : {
-      "pwsid" : "AK2310900",
-      "pwsName" : "College Utilities Corporation",
-      "stateCode" : "AK",
+      "pwsid" : "NV0005027",
+      "pwsName" : "Spring Creek Mobile Home Park Water System",
+      "stateCode" : "NV",
       "systemType" : "community",
-      "populationServed" : "27000",
-      "sourceWaterType" : "purchased_groundwater",
-      "utilityWebsiteUrl" : "https://www.myutility.us/akwater",
-      "ccrUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
-      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
-      "serviceAreaNotes" : "Fairbanks-area community system with purchased groundwater supply and 2024 PFAS values reported in the 2025 utility water quality report",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/greatbasinwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
+      "serviceAreaNotes" : "Great Basin Water community groundwater system with a 2024 CCR PFAS table showing elevated PFOA PFOS and PFHxS averages in the mapped analyte set",
       "lastVerifiedDate" : "2026-03-20",
-      "sourceIds" : [ "alaska-water-home", "alaska-water-quality-reports", "alaska-dww-college-utilities-monitoring-summary", "college-utilities-2025-water-quality-report" ]
+      "sourceIds" : [ "great-basin-water-home", "great-basin-water-quality-reports", "spring-creek-mobile-home-2024-water-quality-report" ]
     },
     "result" : {
-      "result_id" : "public-water:AK2310900",
+      "result_id" : "public-water:NV0005027",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T13:50:08.382137700+09:00",
+      "generated_at" : "2026-03-20T13:50:10.095837200+09:00",
       "next_action" : {
-        "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
-        "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
-        "summary" : "PFAS is present in the normalized utility observations but remains below the selected benchmark, so the user should monitor utility updates first and treat certified point-of-use filtration as an optional margin choice rather than an automatic escalation.",
+        "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
+        "title" : "Review utility response and consider certified point-of-use filtration",
+        "summary" : "At least one normalized utility observation is above the selected benchmark, so the user should review the utility's current PFAS response and consider a certified point-of-use option while utility remediation proceeds.",
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 4 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
-      "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
+      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 3 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
         "range_high_usd" : 1799.00,
@@ -97,28 +97,22 @@
         "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
         "trust_tier" : 1
       }, {
-        "source_id" : "alaska-dww-college-utilities-monitoring-summary",
-        "organization" : "Alaska Department of Environmental Conservation",
-        "title" : "Monitoring Summary for College Utilities Corporation",
-        "url" : "https://dec.alaska.gov/DWW/MonSumm/310900.pdf",
+        "source_id" : "great-basin-water-home",
+        "organization" : "Great Basin Water",
+        "title" : "Great Basin Water",
+        "url" : "https://www.myutility.us/greatbasinwater",
         "trust_tier" : 2
       }, {
-        "source_id" : "alaska-water-home",
-        "organization" : "College & Golden Heart Utilities",
-        "title" : "College & Golden Heart Utilities | Home",
-        "url" : "https://www.myutility.us/akwater",
+        "source_id" : "great-basin-water-quality-reports",
+        "organization" : "Great Basin Water",
+        "title" : "Water Quality Reports",
+        "url" : "https://www.myutility.us/greatbasinwater/water-safety/water-quality-reports",
         "trust_tier" : 2
       }, {
-        "source_id" : "alaska-water-quality-reports",
-        "organization" : "College & Golden Heart Utilities",
-        "title" : "Water Safety | Water Quality Reports",
-        "url" : "https://www.myutility.us/akwater/water-safety/water-quality-reports",
-        "trust_tier" : 2
-      }, {
-        "source_id" : "college-utilities-2025-water-quality-report",
-        "organization" : "College Utilities Corporation",
-        "title" : "2025 Annual Consumer Confidence Water Quality Report",
-        "url" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/college-utilities/2025/cuc-ccr-2025.pdf",
+        "source_id" : "spring-creek-mobile-home-2024-water-quality-report",
+        "organization" : "Great Basin Water",
+        "title" : "Annual Water Quality Report 2024 Spring Creek MHP CCR 403 MHP 852",
+        "url" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/spring-creek/2024/springcreek-24ccr-403-mhp(852).pdf?sfvrsn=e0f43c5b_4",
         "trust_tier" : 2
       }, {
         "source_id" : "nsf-dwtu-listings",
@@ -507,28 +501,28 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "below_reference",
-        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_OPTIONAL_POU",
+        "benchmark_relation" : "above_reference",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_ABOVE_REFERENCE",
         "manual_review_required" : false
       }
     },
     "decision_input" : {
-      "input_id" : "public_water:AK2310900",
+      "input_id" : "public_water:NV0005027",
       "route_type" : "public_water",
-      "route_key" : "AK2310900",
+      "route_key" : "NV0005027",
       "water_source" : "PUBLIC_WATER",
       "direct_data_status" : "UTILITY_DOCUMENT",
       "indirect_data_status" : "NONE",
-      "benchmark_relation" : "BELOW_REFERENCE",
+      "benchmark_relation" : "ABOVE_REFERENCE",
       "current_filter_status" : "NONE",
       "whole_house_considered" : false,
       "state_code" : null,
-      "pwsid" : "AK2310900",
-      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
-      "primary_path" : "/public-water/AK2310900",
-      "secondary_path" : "/internal/results/public-water/AK2310900",
-      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+      "pwsid" : "NV0005027",
+      "recommended_route_code" : "PUBLIC_WATER_CERTIFIED_POU_EVALUATION",
+      "primary_path" : "/public-water/NV0005027",
+      "secondary_path" : "/guides/under-sink-vs-whole-house",
+      "summary" : "A direct utility notice or above-reference benchmark relation exists, so the engine can open a certified point-of-use path while keeping utility response and direct notice context in view."
     },
-    "supporting_path" : "/public-water-system/AK2310900"
+    "supporting_path" : "/public-water-system/NV0005027"
   }
 }

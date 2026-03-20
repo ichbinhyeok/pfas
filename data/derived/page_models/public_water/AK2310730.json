@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:58.161146700+09:00",
+  "generated_at" : "2026-03-20T13:50:08.307533100+09:00",
   "model_id" : "public_water:AK2310730",
   "route_type" : "public_water",
   "route_key" : "AK2310730",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:AK2310730",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T12:54:58.138369300+09:00",
+      "generated_at" : "2026-03-20T13:50:08.278773200+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -40,7 +40,7 @@
       "what_this_does_not_tell_you" : [ "This is not a safe or unsafe label.", "Observation values may reflect running annual averages or utility-specific reporting context.", "Certification claims do not automatically equal compliance with every current regulatory benchmark." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
-        "range_high_usd" : 1499.00,
+        "range_high_usd" : 1799.00,
         "confidence" : "medium",
         "notes" : [ "Upfront cost uses normalized vendor-observed pricing tied to the listed option set." ]
       },
@@ -343,6 +343,24 @@
         "url" : "https://aquatruwater.com/collections/water-purifiers",
         "trust_tier" : 4
       }, {
+        "source_id" : "waterdrop-a1-product",
+        "organization" : "Waterdrop",
+        "title" : "RO Hot and Cold Water Dispenser A1",
+        "url" : "https://www.waterdropfilter.com/products/ro-hot-cold-water-dispenser-a1",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-a2-product",
+        "organization" : "Waterdrop",
+        "title" : "Reverse Osmosis Hot and Cold Water Dispenser A2",
+        "url" : "https://www.waterdropfilter.com/products/reverse-osmosis-hot-and-cold-water-dispenser-a2",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g2-product",
+        "organization" : "Waterdrop",
+        "title" : "Tankless Reverse Osmosis System G2",
+        "url" : "https://www.waterdropfilter.com/products/tankless-reverse-osmosis-system-g2",
+        "trust_tier" : 4
+      }, {
         "source_id" : "waterdrop-g3p600-product",
         "organization" : "Waterdrop",
         "title" : "Remineralization Reverse Osmosis System - Waterdrop G3P600",
@@ -367,10 +385,28 @@
         "url" : "https://cdn.shopify.com/s/files/1/0078/6156/7570/files/Specification_Sheet_for_Reducing_Harmful_Substances-G3P800.pdf?v=1725595808",
         "trust_tier" : 4
       }, {
+        "source_id" : "waterdrop-g5p700-product",
+        "organization" : "Waterdrop",
+        "title" : "Tankless RO System G5P700",
+        "url" : "https://www.waterdropfilter.com/products/tankless-ro-system-g5p700",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-g5p700a-pro-product",
+        "organization" : "Waterdrop",
+        "title" : "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System",
+        "url" : "https://www.waterdropfilter.com/products/g5p700a-pro-dual-flow-alkaline-reverse-osmosis-system",
+        "trust_tier" : 4
+      }, {
         "source_id" : "waterdrop-g5p700a-product",
         "organization" : "Waterdrop",
         "title" : "Waterdrop G5P700A Alkaline RO Filtration System | Pure & Healthy",
         "url" : "https://www.waterdropfilter.com/products/alkaline-ro-water-filter-for-tap-g5p700a",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-h9-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Reverse Osmosis Water Filtration System H9",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-reverse-osmosis-water-filtration-system",
         "trust_tier" : 4
       }, {
         "source_id" : "waterdrop-k19-sfk-product",
@@ -379,10 +415,28 @@
         "url" : "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/countertop-ro-water-filter-k19-sfk?ref=headermenu",
         "trust_tier" : 4
       }, {
+        "source_id" : "waterdrop-x10-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Master X Series Reverse Osmosis System X10",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-master-x-series-reverse-osmosis-system-x10",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x12-pro-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X Series Reverse Osmosis System X12 Pro",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-x-series-reverse-osmosis-system-x12-pro",
+        "trust_tier" : 4
+      }, {
         "source_id" : "waterdrop-x12-product",
         "organization" : "Waterdrop",
         "title" : "Waterdrop X Series Undersink Reverse Osmosis System, X12",
         "url" : "https://www.waterdropfilter.com/collections/remineralization-reverse-osmosis-system/products/reverse-osmosis-system-x12?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x14-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X14 Master X Series Reverse Osmosis System",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-x14-master-x-series-reverse-osmosis-system",
         "trust_tier" : 4
       }, {
         "source_id" : "waterdrop-x16-product",
@@ -395,6 +449,12 @@
         "organization" : "Waterdrop",
         "title" : "Waterdrop X8 Alkaline RO System | 800 GPD Tankless Filter",
         "url" : "https://www.waterdropfilter.com/products/ro-system-for-home-alkaline-x8-a?ref=headermenu",
+        "trust_tier" : 4
+      }, {
+        "source_id" : "waterdrop-x8-pro-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop X Series Reverse Osmosis System X8 Pro",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-x-series-reverse-osmosis-system-x8-pro",
         "trust_tier" : 4
       }, {
         "source_id" : "zerowater-10-cup-pitcher-product",

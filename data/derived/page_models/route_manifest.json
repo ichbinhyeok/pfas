@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T12:54:54.839186800+09:00",
-  "route_count" : 37,
+  "generated_at" : "2026-03-20T13:50:03.077072100+09:00",
+  "route_count" : 44,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "carbon-vs-ro-for-pfas",
@@ -15,6 +15,32 @@
     "source_count" : 3,
     "readiness_basis" : "curated_guide",
     "keywords" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro", "carbon vs ro for pfas", "PFAS", "water", "decision guide" ]
+  }, {
+    "route_type" : "guide",
+    "route_key" : "choose-certified-pfas-filter-after-evidence",
+    "display_label" : "After you have direct evidence choose a certified PFAS filter by fit not hype",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/choose-certified-pfas-filter-after-evidence",
+    "supporting_path" : "/checker",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 5,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "how to choose a certified pfas filter", "best certified pfas filter after test results", "which pfas filter after utility notice", "choose certified pfas filter after evidence", "PFAS", "water", "decision guide" ]
+  }, {
+    "route_type" : "guide",
+    "route_key" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
+    "display_label" : "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
+    "template_kind" : "guide_page",
+    "primary_path" : "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
+    "supporting_path" : "/checker",
+    "api_path" : null,
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 5,
+    "readiness_basis" : "curated_guide",
+    "keywords" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas", "countertop vs pitcher vs under sink for pfas", "PFAS", "water", "decision guide" ]
   }, {
     "route_type" : "guide",
     "route_key" : "how-to-read-a-pfas-utility-notice",
@@ -290,6 +316,19 @@
     "keywords" : [ "Alpine Terrace Water System", "GA", "GA3110075", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "IL0855050",
+    "display_label" : "Galena Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IL0855050",
+    "supporting_path" : "/public-water-system/IL0855050",
+    "api_path" : "/internal/results/public-water/IL0855050",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Galena Water System", "IL", "IL0855050", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "IL0855150",
     "display_label" : "Apple Canyon Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -355,6 +394,32 @@
     "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
+    "route_key" : "NV0000036",
+    "display_label" : "Spring Creek Housing Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NV0000036",
+    "supporting_path" : "/public-water-system/NV0000036",
+    "api_path" : "/internal/results/public-water/NV0000036",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Spring Creek Housing Water System", "NV", "NV0000036", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NV0000207",
+    "display_label" : "Cold Springs Water Company PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NV0000207",
+    "supporting_path" : "/public-water-system/NV0000207",
+    "api_path" : "/internal/results/public-water/NV0000207",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Cold Springs Water Company", "NV", "NV0000207", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
     "route_key" : "NV0000408",
     "display_label" : "Calvada Meadows Water System PFAS interpretation",
     "template_kind" : "public_water_result_page",
@@ -366,6 +431,32 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Calvada Meadows Water System", "NV", "NV0000408", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NV0001086",
+    "display_label" : "Spanish Springs Water Company PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NV0001086",
+    "supporting_path" : "/public-water-system/NV0001086",
+    "api_path" : "/internal/results/public-water/NV0001086",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Spanish Springs Water Company", "NV", "NV0001086", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "NV0005027",
+    "display_label" : "Spring Creek Mobile Home Park Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/NV0005027",
+    "supporting_path" : "/public-water-system/NV0005027",
+    "api_path" : "/internal/results/public-water/NV0005027",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 3,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Spring Creek Mobile Home Park Water System", "NV", "NV0005027", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "PA1510001",
