@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T19:45:28.861743+09:00",
-  "item_count" : 103,
+  "generated_at" : "2026-03-20T20:38:26.264517700+09:00",
+  "item_count" : 104,
   "items" : [ {
     "path" : "/",
     "output_path" : "index.html",
@@ -47,6 +47,13 @@
   }, {
     "path" : "/css/app.css",
     "output_path" : "css/app.css",
+    "content_kind" : "asset",
+    "indexable" : false,
+    "source_kind" : "asset",
+    "last_verified_date" : "2026-03-20"
+  }, {
+    "path" : "/css/tailwind.css",
+    "output_path" : "css/tailwind.css",
     "content_kind" : "asset",
     "indexable" : false,
     "source_kind" : "asset",

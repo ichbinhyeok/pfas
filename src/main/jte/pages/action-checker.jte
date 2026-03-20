@@ -1,9 +1,6 @@
 @import java.util.List
 @import com.example.pfas.checker.ActionCheckerSelection
 @import com.example.pfas.checker.ActionCheckerRecommendation
-@import com.example.pfas.checker.ActionWaterSource
-@import com.example.pfas.checker.ActionDirectDataStatus
-@import com.example.pfas.checker.ActionShoppingIntent
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
 @param String siteBaseUrl
@@ -17,70 +14,57 @@
 
 @template.layout.base(
     pageTitle = "PFAS Action Checker",
-    pageDescription = "Server-backed PFAS action checker that routes users by direct data status before any product comparison.",
+    pageDescription = "Server-backed PFAS action checker that routes households through direct evidence before any product decision.",
     pageCanonicalUrl = siteBaseUrl + "/checker",
     pageIndexable = false,
     content = @`
-<section class="hero checker-hero">
+<section class="pt-12 md:pt-16">
     <div class="shell">
-        <span class="eyebrow">Decision console</span>
-        <div class="hero__grid">
-            <div>
-                <h1 class="hero__title">
-                    Route the household
-                    <span class="hero__title-accent">like a controlled evidence workflow.</span>
+        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+            <div class="space-y-5">
+                <span class="inline-flex rounded-full border border-shell-border bg-ivory-panel px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-slate-soft">Action checker</span>
+                <h1 class="max-w-4xl text-4xl font-semibold tracking-[-0.05em] text-slate-deep sm:text-5xl lg:text-[3.55rem] lg:leading-[1.04]">
+                    Route the household with
+                    <span class="font-serif font-medium text-mineral-blue">direct evidence before purchase logic.</span>
                 </h1>
-                <p class="hero__lede">
-                    This screen is meant to feel more like a routing dossier than a cheerful wizard. The right rail should read
-                    like the current interpretation stance, not a floating marketing card.
+                <p class="max-w-3xl text-lg leading-8 text-slate-body">
+                    The checker is meant to feel like a premium intake console, not a playful wizard. It should make the current
+                    state obvious, keep caveats visible, and open shopping only when the evidence layer justifies it.
                 </p>
             </div>
-            <aside class="hero__panel">
-                <p class="hero__panel-label">Current principle</p>
-                <div class="hero__panel-value">Server-backed routing</div>
-                <p class="hero__panel-copy">
-                    Public-water and private-well users are pushed toward direct official data first, then interpretation,
-                    then optional certified point-of-use.
-                </p>
-                <ul class="hero__panel-list">
-                    <li>Input panel on the left.</li>
-                    <li>Routing position on the right.</li>
-                    <li>No product-first state.</li>
-                </ul>
+            <aside class="rounded-[22px] border border-shell-border bg-ivory-panel px-6 py-6 shadow-quiet">
+                <span class="block text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-slate-soft">Current discipline</span>
+                <div class="mt-4 space-y-4">
+                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
+                        <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">What opens first</span>
+                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">Utility records, notices, and private-well tests.</p>
+                    </div>
+                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
+                        <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">What stays guarded</span>
+                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">Whole-house installs and unsupported certification claims.</p>
+                    </div>
+                    <div class="rounded-[16px] border border-shell-border bg-ivory px-4 py-4">
+                        <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-soft">What this is not</span>
+                        <p class="mt-2 text-base font-semibold tracking-[-0.02em] text-slate-deep">A safe-or-unsafe label, health diagnosis, or panic sales funnel.</p>
+                    </div>
+                </div>
             </aside>
         </div>
     </div>
 </section>
 
-<section class="section">
+<section class="pt-10 md:pt-12">
     <div class="shell">
         @template.fragments.publicationStrip(
             lastVerified = siteLastVerifiedDate,
-            scopeLabel = "Routing interface",
+            scopeLabel = "Server-backed routing interface",
             editorialOwner = siteEditorialOwner,
             methodologyOwner = siteMethodologyOwner
         )
-        <div class="dossier-strip dossier-strip--compact">
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Step 01</span>
-                <span class="dossier-cell__value">Collect input</span>
-                <span class="dossier-cell__copy">Source, direct data, and shopping posture.</span>
-            </article>
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Step 02</span>
-                <span class="dossier-cell__value">Normalize state</span>
-                <span class="dossier-cell__copy">Server rules remove invalid combinations.</span>
-            </article>
-            <article class="dossier-cell">
-                <span class="dossier-cell__label">Step 03</span>
-                <span class="dossier-cell__value">Route next action</span>
-                <span class="dossier-cell__copy">Interpretation opens before product comparison.</span>
-            </article>
-        </div>
     </div>
 </section>
 
-<section class="section">
+<section class="pt-14 md:pt-20">
     @template.fragments.checkerPanel(
         states = states,
         systems = systems,

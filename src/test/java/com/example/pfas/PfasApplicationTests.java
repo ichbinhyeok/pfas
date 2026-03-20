@@ -1416,9 +1416,9 @@ class PfasApplicationTests {
 	void rendersHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official records,")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("High-intent guides before scaled expansion")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read the record.")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action checker preview")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Current dossiers")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/\">")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"index, follow\">")));
 	}
@@ -1428,8 +1428,8 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/checker"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Route the household")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Server-backed routing")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("direct evidence before purchase logic")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Current discipline")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/checker\">")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"noindex, nofollow\">")));
 	}
@@ -1923,7 +1923,7 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":103")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":104")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))

@@ -5,3 +5,4 @@ bin/
 .idea/
 *.iml
 jte-classes/
+node_modules/

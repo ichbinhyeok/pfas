@@ -1,0 +1,38 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-sans: "Manrope", "Pretendard Variable", "Pretendard", "SUIT", sans-serif;
+  --font-serif: "Newsreader", "Source Serif 4", serif;
+
+  --color-ivory: #f7f7f4;
+  --color-ivory-panel: #fdfcf8;
+  --color-ivory-muted: #f1f0ea;
+  --color-slate-deep: #17212b;
+  --color-slate-body: #30414f;
+  --color-slate-muted: #66737f;
+  --color-slate-soft: #8d98a1;
+  --color-teal-deep: #0f766e;
+  --color-teal-tint: #dff1ee;
+  --color-mineral-blue: #31576b;
+  --color-brass: #8b7247;
+  --color-shell-border: #0f172a0f;
+  --color-shell-border-strong: #0f172a1a;
+
+  --shadow-quiet: 0 1px 2px rgba(15, 23, 42, 0.04), 0 16px 36px rgba(15, 23, 42, 0.06);
+  --shadow-float: 0 1px 2px rgba(15, 23, 42, 0.03), 0 10px 22px rgba(15, 23, 42, 0.05);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: rgba(15, 118, 110, 0.14);
+    color: #17212b;
+  }
+}

@@ -67,8 +67,11 @@ public class PublicPagesController {
 
 	@GetMapping("/")
 	public String home(Model model) {
+		var checkerSelection = actionCheckerService.normalize(null, null, null, null, null, null, null, null, null);
 		model.addAttribute("systems", publicWaterSystemService.getAll());
 		model.addAttribute("guides", guidePageService.getAll());
+		model.addAttribute("checkerSelection", checkerSelection);
+		model.addAttribute("checkerRecommendation", actionCheckerService.evaluate(checkerSelection));
 		return "pages/home";
 	}
 

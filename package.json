@@ -1,0 +1,26 @@
+{
+  "name": "pfas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./src/main/tailwind/app.css -o ./src/main/resources/static/css/tailwind.css --minify",
+    "watch:tailwind": "tailwindcss -i ./src/main/tailwind/app.css -o ./src/main/resources/static/css/tailwind.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichbinhyeok/pfas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichbinhyeok/pfas/issues"
+  },
+  "homepage": "https://github.com/ichbinhyeok/pfas#readme",
+  "description": "PFAS decision engine frontend assets",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
