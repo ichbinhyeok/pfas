@@ -1,6 +1,7 @@
 @import java.util.List
 @import com.example.pfas.filter.FilterCatalogItem
 @import com.example.pfas.source.SourceDocument
+@import com.example.pfas.web.ComparePage
 @import com.example.pfas.web.GuidePage
 @import com.example.pfas.web.GuideSection
 @import com.example.pfas.web.GuideSystemExample
@@ -13,6 +14,7 @@
 @param List<SourceDocument> guideSources
 @param List<GuideSystemExample> relatedSystemExamples
 @param List<FilterCatalogItem> relatedProducts
+@param List<ComparePage> relatedComparePages
 @param boolean pageIndexable
 
 @template.layout.base(
@@ -171,6 +173,9 @@
                     eyebrow = "Comparison lane",
                     title = "Official product records linked to this guide",
                     summary = "This lane is intentionally narrow. It routes from interpretation to concrete certified options without pretending every household should buy the same class.",
+                    sourcePage = "/guides/" + page.slug(),
+                    routeType = "guide",
+                    ctaSlot = "guide_product_lane",
                     products = relatedProducts.subList(0, Math.min(relatedProducts.size(), 8))
                 )
             </div>
@@ -227,6 +232,21 @@
                     <section class="rail-card">
                         <h2 class="rail-card__title">Linked certified option lanes</h2>
                         <p class="checker-block__hint">Use the comparison lane in the main column when you want a direct merchant path with upkeep and claim context side by side.</p>
+                    </section>
+                @endif
+
+                @if(!relatedComparePages.isEmpty())
+                    <section class="rail-card">
+                        <h2 class="rail-card__title">Dedicated compare pages</h2>
+                        <div class="source-list">
+                            @for(var comparePage : relatedComparePages)
+                                <a class="source-item" href="/compare/${comparePage.slug()}">
+                                    <div class="source-item__meta">${comparePage.eyebrow()} / ${comparePage.queryIntent()}</div>
+                                    <div class="source-item__title">${comparePage.title()}</div>
+                                    <div class="source-item__note">${comparePage.nextActionSummary()}</div>
+                                </a>
+                            @endfor
+                        </div>
                     </section>
                 @endif
 

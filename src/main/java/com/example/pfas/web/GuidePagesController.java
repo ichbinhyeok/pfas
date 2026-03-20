@@ -28,6 +28,7 @@ public class GuidePagesController {
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final PublicWaterResultService publicWaterResultService;
 	private final FilterCatalogService filterCatalogService;
+	private final ComparePageService comparePageService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final RouteQualityGateService routeQualityGateService;
 
@@ -38,6 +39,7 @@ public class GuidePagesController {
 		PublicWaterSystemService publicWaterSystemService,
 		PublicWaterResultService publicWaterResultService,
 		FilterCatalogService filterCatalogService,
+		ComparePageService comparePageService,
 		ExpansionReadinessService expansionReadinessService,
 		RouteQualityGateService routeQualityGateService
 	) {
@@ -47,6 +49,7 @@ public class GuidePagesController {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.publicWaterResultService = publicWaterResultService;
 		this.filterCatalogService = filterCatalogService;
+		this.comparePageService = comparePageService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.routeQualityGateService = routeQualityGateService;
 	}
@@ -78,6 +81,7 @@ public class GuidePagesController {
 		model.addAttribute("guideSources", guideSources);
 		model.addAttribute("relatedSystemExamples", relatedSystems);
 		model.addAttribute("relatedProducts", relatedProducts);
+		model.addAttribute("relatedComparePages", comparePageService.resolveRelatedToGuide(page, 3));
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
 		return "pages/guide-page";
 	}

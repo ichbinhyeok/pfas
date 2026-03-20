@@ -1,0 +1,54 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T17:44:40.973499700+09:00",
+  "model_id" : "compare:pfas-filter-annual-cost-compare",
+  "route_type" : "compare",
+  "route_key" : "pfas-filter-annual-cost-compare",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/pfas-filter-annual-cost-compare",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 8,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "pfas-filter-annual-cost-compare",
+      "eyebrow" : "Compare page",
+      "title" : "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
+      "lede" : "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path.",
+      "queryIntent" : "Cost comparison",
+      "nextActionTitle" : "Compare yearly ownership before you compare headline price",
+      "nextActionSummary" : "A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
+      "comparisonAxes" : [ "Upfront price band", "Annualized maintenance band", "Recurring component complexity", "Whether the product class stays proportionate to the route" ],
+      "whyThis" : [ "Annual cost often explains why a product that looks cheap becomes a poor fit.", "The project already normalizes recurring components and cadence, so the compare can be more honest than a simple roundup.", "Users need this layer before escalating into more expensive classes." ],
+      "whatThisDoesNotTellYou" : [ "This compare does not assume one universal water usage profile.", "It does not make low annual cost more important than claim fit.", "It does not justify treatment on its own." ],
+      "evidenceHighlights" : [ "The engine annualizes cadence-based maintenance and recurring component costs where normalized inputs exist.", "Cost is presented beside interpretation because maintenance can block otherwise plausible products.", "The compare page helps stop high-ticket upsell by making burden visible." ],
+      "targetQueries" : [ "pfas filter annual cost comparison", "pfas filter maintenance cost compare", "pfas filter upkeep cost" ],
+      "relatedGuideSlugs" : [ "pfas-filter-annual-cost", "choose-certified-pfas-filter-after-evidence", "carbon-vs-ro-for-pfas" ],
+      "relatedPwsids" : [ "FL3590615", "FL3590762", "FL3354695", "IL1830600", "NV0005027" ],
+      "relatedProductIds" : [ "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-under-sink", "espring-122941", "waterdrop-g3p600", "waterdrop-c1s" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "aq-claryum-direct-connect-product", "aq-claryum-direct-connect-replacement", "amway-espring-100186-cartridge", "aquatru-classic-product", "aquatru-under-sink-product", "waterdrop-g3p600-product", "waterdrop-c1s-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/pfas-filter-annual-cost",
+      "secondaryLabel" : "Read cost guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Annualized cost is where honest comparison starts",
+        "summary" : "A merchant surface that hides annual burden is weak decision support even if the product list is technically accurate.",
+        "paragraphs" : [ "The compare should make it easy to see which products stay low-friction over a year and which products demand a stronger maintenance posture. That is more useful than a headline price sort because upkeep is what users actually live with.", "This is especially important in PFAS because the strongest-looking unit is often not the most practical one." ],
+        "bullets" : [ "Headline price hides cadence.", "Recurring components change the real burden.", "A good compare page makes regret visible before checkout." ]
+      }, {
+        "title" : "Use annual cost to block overbuying",
+        "summary" : "Annual cost becomes a restraint, not just a commerce detail.",
+        "paragraphs" : [ "When the evidence route is still moderate rather than urgent, annualized cost is often the strongest signal against jumping into a premium class that the household does not need. That makes the compare page valuable even when it reduces click volume because it improves click quality.", "The engine should therefore keep low-burden point-of-use options visible beside higher-burden systems instead of burying them." ],
+        "bullets" : [ "Upkeep can stop unnecessary escalation.", "Cost makes the product lane more honest.", "Better click quality matters more than raw click count." ]
+      }, {
+        "title" : "Read annual cost with claim scope",
+        "summary" : "The cheapest product is not automatically the right one.",
+        "paragraphs" : [ "A low annual burden does not rescue a weak claim set, and a strong listing record does not excuse an unrealistic ownership model. The compare works when both layers remain visible at once.", "That is why this page sits alongside, not above, the certification-focused compare surfaces." ],
+        "bullets" : [ "Annual cost matters.", "Claim scope still matters.", "The page exists to hold both truths together." ]
+      } ]
+    }
+  }
+}

@@ -2,6 +2,7 @@ package com.example.pfas.web;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -163,9 +164,27 @@ public final class PresentationText {
 		return "$" + amount.setScale(2, RoundingMode.HALF_UP).toPlainString();
 	}
 
+	public static String currencyRangeLabel(BigDecimal low, BigDecimal high, String fallback) {
+		if (low == null && high == null) {
+			return fallback;
+		}
+		if (low == null || high == null) {
+			return currencyLabel(low == null ? high : low);
+		}
+		if (low.compareTo(high) == 0) {
+			return currencyLabel(low);
+		}
+		return currencyLabel(low) + " - " + currencyLabel(high);
+	}
+
 	public static String annualizedMaintenanceLabel(FilterCatalogItem product) {
+		var total = annualizedMaintenanceAmount(product);
+		return total == null ? "Maintenance not normalized" : currencyLabel(total) + " annualized";
+	}
+
+	public static BigDecimal annualizedMaintenanceAmount(FilterCatalogItem product) {
 		if (product == null) {
-			return "Maintenance not normalized";
+			return null;
 		}
 
 		BigDecimal total = null;
@@ -187,7 +206,45 @@ public final class PresentationText {
 			}
 		}
 
-		return total == null ? "Maintenance not normalized" : currencyLabel(total) + " annualized";
+		return total;
+	}
+
+	public static String merchantLabel(FilterCatalogItem product) {
+		if (product == null) {
+			return "Merchant";
+		}
+		if (product.brand() != null && !product.brand().isBlank()) {
+			return product.brand();
+		}
+		if (product.listingUrl() == null || product.listingUrl().isBlank()) {
+			return "Merchant";
+		}
+		try {
+			var host = URI.create(product.listingUrl()).getHost();
+			if (host == null || host.isBlank()) {
+				return "Merchant";
+			}
+			var normalized = host.toLowerCase(Locale.US).replaceFirst("^www\\.", "");
+			if (normalized.contains("aquasana")) {
+				return "Aquasana";
+			}
+			if (normalized.contains("aquatru")) {
+				return "AquaTru";
+			}
+			if (normalized.contains("zerowater")) {
+				return "ZeroWater";
+			}
+			if (normalized.contains("waterdrop")) {
+				return "Waterdrop";
+			}
+			if (normalized.contains("amway")) {
+				return "Amway";
+			}
+			return normalized;
+		}
+		catch (Exception ignored) {
+			return "Merchant";
+		}
 	}
 
 	private static String titleCaseUnderscore(String rawValue) {

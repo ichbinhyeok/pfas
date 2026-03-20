@@ -10,6 +10,8 @@ import com.example.pfas.readiness.ExpansionReadinessService;
 import com.example.pfas.readiness.ExpansionReadinessStatus;
 import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.water.PublicWaterSystemService;
+import com.example.pfas.web.ComparePage;
+import com.example.pfas.web.ComparePageService;
 import com.example.pfas.web.GuidePage;
 import com.example.pfas.web.GuidePageService;
 
@@ -17,17 +19,20 @@ import com.example.pfas.web.GuidePageService;
 public class PublicationRouteService {
 
 	private final GuidePageService guidePageService;
+	private final ComparePageService comparePageService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final StateGuidanceService stateGuidanceService;
 	private final PublicWaterSystemService publicWaterSystemService;
 
 	public PublicationRouteService(
 		GuidePageService guidePageService,
+		ComparePageService comparePageService,
 		ExpansionReadinessService expansionReadinessService,
 		StateGuidanceService stateGuidanceService,
 		PublicWaterSystemService publicWaterSystemService
 	) {
 		this.guidePageService = guidePageService;
+		this.comparePageService = comparePageService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.publicWaterSystemService = publicWaterSystemService;
@@ -39,6 +44,11 @@ public class PublicationRouteService {
 		guidePageService.getAll().stream()
 			.sorted(Comparator.comparing(GuidePage::slug))
 			.map(this::toGuideRoute)
+			.forEach(routes::add);
+
+		comparePageService.getAll().stream()
+			.sorted(Comparator.comparing(ComparePage::slug))
+			.map(this::toCompareRoute)
 			.forEach(routes::add);
 
 		expansionReadinessService.getReport().items().stream()
@@ -72,6 +82,32 @@ public class PublicationRouteService {
 			page.lastVerifiedDate(),
 			page.sourceIds().size(),
 			"curated_guide",
+			List.copyOf(keywords)
+		);
+	}
+
+	private RouteManifestRoute toCompareRoute(ComparePage page) {
+		var keywords = new ArrayList<String>();
+		if (page.targetQueries() != null) {
+			keywords.addAll(page.targetQueries());
+		}
+		keywords.add(page.slug().replace('-', ' '));
+		keywords.add("PFAS");
+		keywords.add("comparison");
+		keywords.add("certified options");
+
+		return new RouteManifestRoute(
+			"compare",
+			page.slug(),
+			page.title(),
+			"compare_page",
+			"/compare/" + page.slug(),
+			page.secondaryHref(),
+			null,
+			true,
+			page.lastVerifiedDate(),
+			page.sourceIds().size(),
+			"curated_compare_page",
 			List.copyOf(keywords)
 		);
 	}

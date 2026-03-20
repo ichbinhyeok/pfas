@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:56:32.572705300+09:00",
-  "document_count" : 55,
+  "generated_at" : "2026-03-20T17:44:28.980792900+09:00",
+  "document_count" : 59,
   "documents" : [ {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -134,6 +134,50 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "what is ucmr5 for pfas", "how to read ucmr5 pfas", "ucmr5 pfas what should i do", "what ucmr5 can and cannot tell you", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "compare:countertop-vs-pitcher-vs-under-sink-compare",
+    "route_type" : "compare",
+    "route_key" : "countertop-vs-pitcher-vs-under-sink-compare",
+    "url" : "/compare/countertop-vs-pitcher-vs-under-sink-compare",
+    "title" : "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
+    "summary" : "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine. The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas", "countertop vs pitcher vs under sink compare", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:nsf-53-vs-58-claim-examples",
+    "route_type" : "compare",
+    "route_key" : "nsf-53-vs-58-claim-examples",
+    "url" : "/compare/nsf-53-vs-58-claim-examples",
+    "title" : "NSF 53 vs 58 claim examples matter more than the badge shorthand",
+    "summary" : "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record. A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "nsf 53 vs 58 pfas", "pfas filter nsf 53 or 58", "nsf 53 58 claim examples pfas", "nsf 53 vs 58 claim examples", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:pfas-filter-annual-cost-compare",
+    "route_type" : "compare",
+    "route_key" : "pfas-filter-annual-cost-compare",
+    "url" : "/compare/pfas-filter-annual-cost-compare",
+    "title" : "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
+    "summary" : "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path. A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "pfas filter annual cost comparison", "pfas filter maintenance cost compare", "pfas filter upkeep cost", "pfas filter annual cost compare", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:under-sink-certified-pfas-options",
+    "route_type" : "compare",
+    "route_key" : "under-sink-certified-pfas-options",
+    "url" : "/compare/under-sink-certified-pfas-options",
+    "title" : "Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment",
+    "summary" : "This compare page narrows to under-sink certified point-of-use systems that can be defended after a utility dossier, state-guided test, or direct evidence path justifies treatment. Under-sink is often the most practical money path, but it still needs claim scope, annual burden, and installation tolerance to line up with the household route.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 10,
+    "keywords" : [ "best under sink pfas filter", "under sink certified pfas filter options", "under sink pfas filter comparison", "under sink certified pfas options", "PFAS", "comparison", "certified options" ]
   }, {
     "document_id" : "public_water:7360058",
     "route_type" : "public_water",

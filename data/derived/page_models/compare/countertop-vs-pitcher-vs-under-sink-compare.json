@@ -1,0 +1,54 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T17:44:40.973499700+09:00",
+  "model_id" : "compare:countertop-vs-pitcher-vs-under-sink-compare",
+  "route_type" : "compare",
+  "route_key" : "countertop-vs-pitcher-vs-under-sink-compare",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/countertop-vs-pitcher-vs-under-sink-compare",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 8,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "countertop-vs-pitcher-vs-under-sink-compare",
+      "eyebrow" : "Compare page",
+      "title" : "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
+      "lede" : "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine.",
+      "queryIntent" : "Form-factor comparison",
+      "nextActionTitle" : "Choose a form factor that the household will actually maintain",
+      "nextActionSummary" : "The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
+      "comparisonAxes" : [ "Form factor and installation burden", "Price band and annualized maintenance", "Capacity and daily workflow friction", "Whether the class stays proportionate to the evidence route" ],
+      "whyThis" : [ "Form factor often determines whether a product is installed, refilled, and maintained consistently.", "The same PFAS question can reasonably end in a pitcher, countertop, or under-sink path.", "A dedicated compare surface helps users avoid treating form factor like a prestige ladder." ],
+      "whatThisDoesNotTellYou" : [ "This compare does not declare one class universally best.", "It does not erase claim-level differences between exact models.", "It does not bypass the evidence step." ],
+      "evidenceHighlights" : [ "EPA guidance supports comparing point-of-use classes before broader interventions.", "The engine already has live examples across pitcher, countertop, direct-connect, and under-sink classes.", "Operational fit is often as important as upfront price." ],
+      "targetQueries" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas" ],
+      "relatedGuideSlugs" : [ "countertop-vs-pitcher-vs-under-sink-for-pfas", "pfas-filter-annual-cost", "choose-certified-pfas-filter-after-evidence" ],
+      "relatedPwsids" : [ "FL3590615", "FL3591451", "FL6521000", "FL3590762", "IN5245057" ],
+      "relatedProductIds" : [ "zerowater-7-cup-pitcher", "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-model-1", "aquasana-aq-mf-1", "aquasana-aq-6200", "waterdrop-ed01", "waterdrop-c1s" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "zerowater-performance-certification", "aq-clean-water-machine-product", "aquatru-classic-product", "aquatru-model-1-product", "aq-claryum-direct-connect-product", "waterdrop-ed01-product", "waterdrop-c1s-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
+      "secondaryLabel" : "Read form-factor guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "The wrong question is which class looks most serious",
+        "summary" : "Product classes should be compared by operating fit, not by visual heft or price signaling.",
+        "paragraphs" : [ "Pitchers, countertop systems, and under-sink systems solve different household constraints. Some minimize installation burden. Others minimize refill friction. Others trade higher commitment for smoother daily use. The compare page works when it makes those tradeoffs visible instead of implying that the most engineered-looking class always wins.", "That framing also protects conversion quality because it leads users toward the class they can actually live with." ],
+        "bullets" : [ "Form factor changes behavior.", "Behavior changes upkeep success.", "Upkeep success changes product fit." ]
+      }, {
+        "title" : "Why pitcher and countertop lanes still matter",
+        "summary" : "Some households need low-plumbing, renter-friendly, or space-constrained options that still keep the intervention narrow.",
+        "paragraphs" : [ "Pitcher and countertop systems are easy to dismiss in a PFAS conversation because they look smaller and feel less permanent. That is a mistake when the route only justifies a constrained drinking-water intervention and the household wants a lower-friction adoption path.", "The page should make those cases visible instead of pushing every user into under-sink by default." ],
+        "bullets" : [ "Renters need different defaults.", "Visibility and refill friction matter.", "A lower-commitment class can still be rational." ]
+      }, {
+        "title" : "How to use this compare page with the rest of the engine",
+        "summary" : "The page is strongest when paired with live utility examples and related money-path guides.",
+        "paragraphs" : [ "Users can read the compare table, see how utility dossiers lead into product lanes, and then choose whether the extra installation and maintenance burden of under-sink is actually justified. That keeps the compare page anchored in the same product philosophy as the engine.", "It also makes the money path more transparent because the compare page never pretends the click happens in a vacuum." ],
+        "bullets" : [ "Use after route stabilization.", "Read with annual cost in view.", "Treat form factor as operating fit, not prestige." ]
+      } ]
+    }
+  }
+}

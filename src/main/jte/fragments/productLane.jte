@@ -5,6 +5,9 @@
 @param String eyebrow
 @param String title
 @param String summary
+@param String sourcePage
+@param String routeType
+@param String ctaSlot
 @param List<FilterCatalogItem> products
 
 @if(products != null && !products.isEmpty())
@@ -40,7 +43,17 @@
                     <p class="merchant-card__copy">PFAS coverage preview: ${PresentationText.previewList(product.coveredPfas(), 4)}</p>
                     <p class="merchant-card__copy">${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence ${PresentationText.confidenceLabel(product.costConfidence())}</p>
                     <div class="button-row button-row--tight">
-                        <a class="button button--primary" href="${product.listingUrl()}">Open official product record</a>
+                        <a
+                            class="button button--primary"
+                            href="${product.listingUrl()}"
+                            data-merchant-track="true"
+                            data-product-id="${product.productId()}"
+                            data-merchant="${PresentationText.merchantLabel(product)}"
+                            data-cta-slot="${ctaSlot}"
+                            data-source-page="${sourcePage}"
+                            data-route-type="${routeType}"
+                            data-target-url="${product.listingUrl()}"
+                        >Open ${PresentationText.merchantLabel(product)} record</a>
                     </div>
                 </article>
             @endfor

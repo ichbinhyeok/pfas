@@ -1,0 +1,54 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T17:44:40.973499700+09:00",
+  "model_id" : "compare:nsf-53-vs-58-claim-examples",
+  "route_type" : "compare",
+  "route_key" : "nsf-53-vs-58-claim-examples",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/nsf-53-vs-58-claim-examples",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 8,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "nsf-53-vs-58-claim-examples",
+      "eyebrow" : "Compare page",
+      "title" : "NSF 53 vs 58 claim examples matter more than the badge shorthand",
+      "lede" : "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record.",
+      "queryIntent" : "Certification logic comparison",
+      "nextActionTitle" : "Read the exact model and claim before trusting the standard shorthand",
+      "nextActionSummary" : "A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
+      "comparisonAxes" : [ "Certification body and standard code", "Exact model and claim examples", "Product class and ownership burden", "How shorthand can mislead when detached from the listing" ],
+      "whyThis" : [ "Users often search the badge shorthand before they understand the model-level record.", "A compare page with real product examples is more defensible than generic standard lore.", "The engine needs a direct answer to the NSF 53 versus 58 query cluster." ],
+      "whatThisDoesNotTellYou" : [ "This page does not claim every 53 product equals every 58 product.", "It does not say a 58 badge alone proves a household fit.", "It does not collapse EPA guidance into a single shorthand rule." ],
+      "evidenceHighlights" : [ "EPA filter guidance warns against assuming certification automatically means current EPA benchmark compliance.", "Listing directories and exact performance records are the right layer for this comparison.", "Comparing claim examples is stronger than repeating badge shorthand." ],
+      "targetQueries" : [ "nsf 53 vs 58 pfas", "pfas filter nsf 53 or 58", "nsf 53 58 claim examples pfas" ],
+      "relatedGuideSlugs" : [ "nsf-53-vs-58-pfas", "choose-certified-pfas-filter-after-evidence", "carbon-vs-ro-for-pfas" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "FL3590615", "FL3591451" ],
+      "relatedProductIds" : [ "espring-122941", "aquasana-aq-6200", "aquasana-aq-ro-3", "aquatru-under-sink", "zerowater-10-cup-pitcher", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "nsf-espring-listing-053", "aq-claryum-2-stage-performance-pdf", "aq-optimh2o-ro-performance-pdf", "aquatru-under-sink-performance-pdf", "zerowater-certified-devices-performance-pdf", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/nsf-53-vs-58-pfas",
+      "secondaryLabel" : "Read certification guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Badge shorthand is where users start not where the engine should stop",
+        "summary" : "NSF 53 and 58 are useful because they help users frame the category, but the shorthand becomes misleading when it replaces exact model review.",
+        "paragraphs" : [ "The compare page fixes that by attaching the shorthand to actual products and claim records. That way the user sees what kind of system carries the standard, what the ownership model looks like, and why the badge alone is not the whole story.", "This is also the safest commercial posture for a YMYL-adjacent product question because it keeps the claim record visible." ],
+        "bullets" : [ "Badge shorthand is a starting point.", "Model-level claim review is the real work.", "A compare page can answer the query without oversimplifying it." ]
+      }, {
+        "title" : "53 and 58 usually map to different product expectations",
+        "summary" : "In practice the user often wants to know what system class usually sits behind the shorthand.",
+        "paragraphs" : [ "A 53-driven lane often surfaces carbon or other non-RO systems that stay simpler in ownership. A 58-driven lane often surfaces RO systems that ask more of the household. That does not make one badge better. It makes them different commercial paths.", "Showing that difference with real examples is more helpful than a bare standards explainer." ],
+        "bullets" : [ "53 often aligns with simpler systems.", "58 often aligns with RO ownership.", "The right badge still depends on the route and the exact model." ]
+      }, {
+        "title" : "Why this compare page matters for conversion quality",
+        "summary" : "Users searching certification shorthand are often close to a click, but still need a grounded explanation.",
+        "paragraphs" : [ "If the page resolves the shorthand question with real product examples and a clear explanation of why the badge is not enough by itself, the user gets both trust and a cleaner route into the product lane.", "That is the kind of money page the project should want: explicit, defensible, and tied to actual listing evidence." ],
+        "bullets" : [ "Resolve shorthand with examples.", "Keep the listing evidence visible.", "Move the user into the right product lane, not just any click." ]
+      } ]
+    }
+  }
+}

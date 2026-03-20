@@ -2,13 +2,20 @@ package com.example.pfas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Comparator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.pfas.benchmark.BenchmarkService;
@@ -36,7 +43,8 @@ import com.example.pfas.web.GuidePageService;
 
 @SpringBootTest(properties = {
 	"pfas.data.root=./data",
-	"pfas.site.base-url=https://pfas.example.test"
+	"pfas.site.base-url=https://pfas.example.test",
+	"pfas.merchant-clicks.root=./build/test-merchant-clicks"
 })
 @AutoConfigureMockMvc
 class PfasApplicationTests {
@@ -1456,7 +1464,7 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Review utility updates and add certified point-of-use only if you want extra margin")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Assessment ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official product records for this utility route")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open official product record")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public-water interpretation")));
 	}
@@ -1643,7 +1651,7 @@ class PfasApplicationTests {
 	void returnsDerivedRouteManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":55")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":59")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AZ0408063\"")))
@@ -1684,14 +1692,16 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/how-to-read-a-pfas-utility-notice\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/what-ucmr5-can-and-cannot-tell-you\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/non-detect-vs-below-reference-pfas\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/carbon-vs-ro-for-pfas\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/carbon-vs-ro-for-pfas\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/under-sink-certified-pfas-options\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/pfas-filter-annual-cost-compare\"")));
 	}
 
 	@Test
 	void returnsDerivedSearchIndexSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":55")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":59")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310900\"")))
@@ -1732,7 +1742,9 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:how-to-read-a-pfas-utility-notice\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:what-ucmr5-can-and-cannot-tell-you\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:non-detect-vs-below-reference-pfas\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:carbon-vs-ro-for-pfas\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:carbon-vs-ro-for-pfas\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:under-sink-certified-pfas-options\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:nsf-53-vs-58-claim-examples\"")));
 	}
 
 	@Test
@@ -1786,7 +1798,7 @@ class PfasApplicationTests {
 	void returnsDerivedPageGenerationManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":55")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":59")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310730.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310900.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AZ0408063.json\"")))
@@ -1827,7 +1839,9 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/how-to-read-a-pfas-utility-notice.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/what-ucmr5-can-and-cannot-tell-you.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/non-detect-vs-below-reference-pfas.json\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/carbon-vs-ro-for-pfas.json\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/carbon-vs-ro-for-pfas.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/under-sink-certified-pfas-options.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/nsf-53-vs-58-claim-examples.json\"")));
 	}
 
 	@Test
@@ -1854,11 +1868,13 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":98")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":103")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/sitemap.xml\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/compare/under-sink-certified-pfas-options\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/compare/nsf-53-vs-58-claim-examples\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AZ0408063\"")))
@@ -1894,7 +1910,10 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/what-ucmr5-can-and-cannot-tell-you/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/non-detect-vs-below-reference-pfas/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/carbon-vs-ro-for-pfas/index.html\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/under-sink-certified-pfas-options/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/pfas-filter-annual-cost-compare/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/merchant-tracking.js\"")));
 	}
 
 	@Test
@@ -1911,6 +1930,8 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/sitemap.xml"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/compare/under-sink-certified-pfas-options</loc>")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/compare/pfas-filter-annual-cost-compare</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/guides/choose-certified-pfas-filter-after-evidence</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/guides/countertop-vs-pitcher-vs-under-sink-for-pfas</loc>")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<loc>https://pfas.example.test/guides/read-your-ccr</loc>")))
@@ -1949,7 +1970,7 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/internal/quality/freshness-report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_source_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":55")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":59")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_indexable_route_count\":0")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":0")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unresolved_readiness_route_count\":0")))
@@ -1984,9 +2005,55 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Jansen Water System")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Official product records linked to this guide")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Linked certified option lanes")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Dedicated compare pages")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/countertop-vs-pitcher-vs-under-sink-compare")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("CCR Information for Consumers")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in Private Wells")));
+	}
+
+	@Test
+	void rendersComparePage() throws Exception {
+		mockMvc.perform(get("/compare/under-sink-certified-pfas-options"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Structured comparison")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Merchant-routing lane")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Live utility examples")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-type=\"compare\"")));
+	}
+
+	@Test
+	void recordsMerchantClicksAndReturnsReport() throws Exception {
+		clearMerchantClickTestData();
+
+		mockMvc.perform(post("/internal/merchant-clicks")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("""
+					{
+					  "productId": "aquasana-aq-6200",
+					  "merchant": "Aquasana",
+					  "ctaSlot": "guide_product_lane",
+					  "sourcePage": "/guides/public-water-vs-private-well",
+					  "routeType": "guide",
+					  "targetUrl": "https://example.test/product",
+					  "pagePath": "/guides/public-water-vs-private-well"
+					}
+					"""))
+			.andExpect(status().isAccepted())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"accepted\":true")));
+
+		mockMvc.perform(get("/internal/merchant-clicks/report"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"total_count\":1")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unique_product_count\":1")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unique_source_page_count\":1")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"key\":\"Aquasana\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"key\":\"aquasana-aq-6200\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"key\":\"/guides/public-water-vs-private-well\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"key\":\"guide\"")));
 	}
 
 	@Test
@@ -2003,5 +2070,23 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("The project ranks sources before it ranks products")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Trust tiers")));
+	}
+
+	private void clearMerchantClickTestData() throws IOException {
+		var root = Path.of("./build/test-merchant-clicks");
+		if (!Files.exists(root)) {
+			return;
+		}
+		try (var paths = Files.walk(root)) {
+			paths.sorted(Comparator.reverseOrder())
+				.forEach(path -> {
+					try {
+						Files.deleteIfExists(path);
+					}
+					catch (IOException exception) {
+						throw new IllegalStateException("Failed to clear merchant click test data", exception);
+					}
+				});
+		}
 	}
 }

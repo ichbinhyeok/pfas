@@ -1,0 +1,54 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-20T17:44:40.973499700+09:00",
+  "model_id" : "compare:under-sink-certified-pfas-options",
+  "route_type" : "compare",
+  "route_key" : "under-sink-certified-pfas-options",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/under-sink-certified-pfas-options",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 10,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "under-sink-certified-pfas-options",
+      "eyebrow" : "Compare page",
+      "title" : "Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment",
+      "lede" : "This compare page narrows to under-sink certified point-of-use systems that can be defended after a utility dossier, state-guided test, or direct evidence path justifies treatment.",
+      "queryIntent" : "Commercial comparison",
+      "nextActionTitle" : "Compare under-sink systems only after the route has already justified treatment",
+      "nextActionSummary" : "Under-sink is often the most practical money path, but it still needs claim scope, annual burden, and installation tolerance to line up with the household route.",
+      "comparisonAxes" : [ "Certification and PFAS claim coverage", "Upfront price band and annualized maintenance", "Installation class and daily-use convenience", "Whether the system stays proportionate to a drinking-water use case" ],
+      "whyThis" : [ "Under-sink is usually the highest-intent point-of-use class for households that accept installation.", "The category is broad enough to include simpler carbon systems and higher-burden RO systems.", "Comparing under-sink options side by side helps block generic best-filter advice." ],
+      "whatThisDoesNotTellYou" : [ "This page does not prove every under-sink system fits every PFAS scenario.", "It does not make certification equal every active or pending benchmark path.", "It does not justify whole-house treatment." ],
+      "evidenceHighlights" : [ "EPA filter guidance keeps product review grounded in certification and claim-level verification.", "Under-sink options show the clearest tradeoff between carbon simplicity and RO burden.", "A stronger compare page reduces generic roundup drift because the lane is tied to the route." ],
+      "targetQueries" : [ "best under sink pfas filter", "under sink certified pfas filter options", "under sink pfas filter comparison" ],
+      "relatedGuideSlugs" : [ "choose-certified-pfas-filter-after-evidence", "countertop-vs-pitcher-vs-under-sink-for-pfas", "under-sink-vs-whole-house-for-pfas", "carbon-vs-ro-for-pfas" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "FL3590615", "IL1830600", "NJ1914002" ],
+      "relatedProductIds" : [ "aquasana-aq-6200", "aquasana-aq-6300", "aquasana-aq-6300m", "aquasana-aq-ro-3", "aquatru-under-sink", "espring-122941", "waterdrop-10ub-pro", "waterdrop-g3p600" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-2-stage-product", "aq-claryum-3-stage-product", "aq-claryum-3-stage-max-flow-product", "aq-optimh2o-ro-product", "aquatru-under-sink-product", "nsf-espring-listing-053", "waterdrop-10ub-pro-product", "waterdrop-g3p600-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Open Action Checker",
+      "secondaryHref" : "/guides/choose-certified-pfas-filter-after-evidence",
+      "secondaryLabel" : "Read post-evidence guide",
+      "lastVerifiedDate" : "2026-03-20",
+      "sections" : [ {
+        "title" : "Why under-sink becomes the core commercial lane",
+        "summary" : "When the evidence route is real, under-sink is often the cleanest point-of-use class because it combines daily convenience with credible claim review.",
+        "paragraphs" : [ "Under-sink systems are the point where the project can show actual differences between carbon-led and RO-led ownership models without drifting into a generic roundup voice. That makes the page useful for both SEO intent and conversion quality.", "The category is also easier to defend editorially because it maps directly to a drinking-water intervention rather than a whole-home buildout." ],
+        "bullets" : [ "High-intent product lane.", "Clear carbon versus RO split.", "Easier to keep proportionate than whole-house." ]
+      }, {
+        "title" : "The useful comparison is claim scope plus burden",
+        "summary" : "Users do not need a loud winner. They need the narrowest system class that still fits the route.",
+        "paragraphs" : [ "Some under-sink systems stay attractive because they keep annualized ownership lower and installation simpler. Others justify themselves only if the household explicitly prefers RO and accepts the maintenance model. That is why the page keeps cost and cadence in the same frame as claim scope.", "The result is a better commercial surface: fewer products, clearer reasons, and less fear-driven upsell pressure." ],
+        "bullets" : [ "Claim scope screens the list.", "Annualized burden changes the ranking.", "The best system is usually the narrowest defendable fit." ]
+      }, {
+        "title" : "How this compare page should be used",
+        "summary" : "Treat it as a post-interpretation lane, not an opening move.",
+        "paragraphs" : [ "The engine should route into this page after a direct utility dossier, a state-guided test interpretation, or a similar evidence-backed decision state. That makes the click path feel rational instead of reactive.", "When the route is still low-evidence, the compare lane should remain secondary to testing or utility review." ],
+        "bullets" : [ "Interpretation first.", "Comparison second.", "Merchant click quality improves when the sequence is respected." ]
+      } ]
+    }
+  }
+}

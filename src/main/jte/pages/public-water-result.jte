@@ -165,6 +165,9 @@
                     eyebrow = "Certified comparison lane",
                     title = "Official product records for this utility route",
                     summary = "These are not generic best-seller cards. They are the current certified point-of-use examples the engine can defend for this utility interpretation path.",
+                    sourcePage = "/public-water/" + system.pwsid(),
+                    routeType = "public_water",
+                    ctaSlot = "public_water_product_lane",
                     products = decision.certifiedPouOptions().subList(0, Math.min(decision.certifiedPouOptions().size(), 8))
                 )
 

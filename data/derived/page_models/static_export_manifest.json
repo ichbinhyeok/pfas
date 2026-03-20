@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T15:56:46.390508900+09:00",
-  "item_count" : 98,
+  "generated_at" : "2026-03-20T17:44:47.328558400+09:00",
+  "item_count" : 103,
   "items" : [ {
     "path" : "/",
     "output_path" : "index.html",
@@ -52,12 +52,47 @@
     "source_kind" : "asset",
     "last_verified_date" : null
   }, {
+    "path" : "/js/merchant-tracking.js",
+    "output_path" : "js/merchant-tracking.js",
+    "content_kind" : "asset",
+    "indexable" : false,
+    "source_kind" : "asset",
+    "last_verified_date" : null
+  }, {
     "path" : "/favicon.svg",
     "output_path" : "favicon.svg",
     "content_kind" : "asset",
     "indexable" : false,
     "source_kind" : "asset",
     "last_verified_date" : null
+  }, {
+    "path" : "/compare/countertop-vs-pitcher-vs-under-sink-compare",
+    "output_path" : "compare/countertop-vs-pitcher-vs-under-sink-compare/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model",
+    "last_verified_date" : "2026-03-20"
+  }, {
+    "path" : "/compare/nsf-53-vs-58-claim-examples",
+    "output_path" : "compare/nsf-53-vs-58-claim-examples/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model",
+    "last_verified_date" : "2026-03-20"
+  }, {
+    "path" : "/compare/pfas-filter-annual-cost-compare",
+    "output_path" : "compare/pfas-filter-annual-cost-compare/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model",
+    "last_verified_date" : "2026-03-20"
+  }, {
+    "path" : "/compare/under-sink-certified-pfas-options",
+    "output_path" : "compare/under-sink-certified-pfas-options/index.html",
+    "content_kind" : "html",
+    "indexable" : true,
+    "source_kind" : "generated_page_model",
+    "last_verified_date" : "2026-03-20"
   }, {
     "path" : "/guides/carbon-vs-ro-for-pfas",
     "output_path" : "guides/carbon-vs-ro-for-pfas/index.html",

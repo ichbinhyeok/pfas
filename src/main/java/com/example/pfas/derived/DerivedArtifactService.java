@@ -21,6 +21,8 @@ import com.example.pfas.result.PublicWaterResultService;
 import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 import com.example.pfas.water.PublicWaterSystemService;
+import com.example.pfas.web.ComparePage;
+import com.example.pfas.web.ComparePageService;
 import com.example.pfas.web.GuidePage;
 import com.example.pfas.web.GuidePageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,6 +37,7 @@ public class DerivedArtifactService {
 	private final RouteQualityGateService routeQualityGateService;
 	private final ExpansionReadinessService expansionReadinessService;
 	private final GuidePageService guidePageService;
+	private final ComparePageService comparePageService;
 	private final StateGuidanceService stateGuidanceService;
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final PublicWaterSystemService publicWaterSystemService;
@@ -48,6 +51,7 @@ public class DerivedArtifactService {
 		RouteQualityGateService routeQualityGateService,
 		ExpansionReadinessService expansionReadinessService,
 		GuidePageService guidePageService,
+		ComparePageService comparePageService,
 		StateGuidanceService stateGuidanceService,
 		StateBenchmarkProfileService stateBenchmarkProfileService,
 		PublicWaterSystemService publicWaterSystemService,
@@ -60,6 +64,7 @@ public class DerivedArtifactService {
 		this.routeQualityGateService = routeQualityGateService;
 		this.expansionReadinessService = expansionReadinessService;
 		this.guidePageService = guidePageService;
+		this.comparePageService = comparePageService;
 		this.stateGuidanceService = stateGuidanceService;
 		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.publicWaterSystemService = publicWaterSystemService;
@@ -87,6 +92,11 @@ public class DerivedArtifactService {
 		guidePageService.getAll().stream()
 			.sorted(Comparator.comparing(GuidePage::slug))
 			.map(page -> toGuideDocument(page, routeIndexable(gateIndex, "guide", page.slug())))
+			.forEach(documents::add);
+
+		comparePageService.getAll().stream()
+			.sorted(Comparator.comparing(ComparePage::slug))
+			.map(page -> toCompareDocument(page, routeIndexable(gateIndex, "compare", page.slug())))
 			.forEach(documents::add);
 
 		expansionReadinessService.getReport().items().stream()
@@ -139,6 +149,11 @@ public class DerivedArtifactService {
 			.map(page -> toGuidePageModel(page, routeIndexable(gateIndex, "guide", page.slug())))
 			.forEach(models::add);
 
+		comparePageService.getAll().stream()
+			.sorted(Comparator.comparing(ComparePage::slug))
+			.map(page -> toComparePageModel(page, routeIndexable(gateIndex, "compare", page.slug())))
+			.forEach(models::add);
+
 		expansionReadinessService.getReport().items().stream()
 			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
 			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
@@ -154,6 +169,11 @@ public class DerivedArtifactService {
 			return guidePageService.getBySlug(routeKey)
 				.map(page -> toGuidePageModel(page, routeIndexable(gateIndex, "guide", page.slug())))
 				.orElseThrow(() -> new IllegalStateException("Unknown guide page model: " + routeKey));
+		}
+		if ("compare".equals(routeType)) {
+			return comparePageService.getBySlug(routeKey)
+				.map(page -> toComparePageModel(page, routeIndexable(gateIndex, "compare", page.slug())))
+				.orElseThrow(() -> new IllegalStateException("Unknown compare page model: " + routeKey));
 		}
 
 		return expansionReadinessService.getReport().items().stream()
@@ -234,6 +254,21 @@ public class DerivedArtifactService {
 			indexable,
 			page.sourceIds().size(),
 			guideKeywords(page)
+		);
+	}
+
+	private SearchIndexSeedDocument toCompareDocument(ComparePage page, boolean indexable) {
+		return new SearchIndexSeedDocument(
+			"compare:" + page.slug(),
+			"compare",
+			page.slug(),
+			"/compare/" + page.slug(),
+			page.title(),
+			page.lede() + " " + page.nextActionSummary(),
+			page.lastVerifiedDate(),
+			indexable,
+			page.sourceIds().size(),
+			compareKeywords(page)
 		);
 	}
 
@@ -358,6 +393,23 @@ public class DerivedArtifactService {
 		);
 	}
 
+	private GeneratedPageModelFile toComparePageModel(ComparePage page, boolean indexable) {
+		return new GeneratedPageModelFile(
+			SCHEMA_VERSION,
+			OffsetDateTime.now().toString(),
+			"compare:" + page.slug(),
+			"compare",
+			page.slug(),
+			"compare_page",
+			"/compare/" + page.slug(),
+			"static_file_seed",
+			indexable,
+			page.lastVerifiedDate(),
+			page.sourceIds().size(),
+			new ComparePageModelPayload(page)
+		);
+	}
+
 	private GeneratedPageModelFile toReadyPageModel(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
 		return switch (item.routeType()) {
 			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
@@ -420,6 +472,18 @@ public class DerivedArtifactService {
 		keywords.add("PFAS");
 		keywords.add("water");
 		keywords.add("decision guide");
+		return List.copyOf(keywords);
+	}
+
+	private List<String> compareKeywords(ComparePage page) {
+		var keywords = new ArrayList<String>();
+		if (page.targetQueries() != null) {
+			keywords.addAll(page.targetQueries());
+		}
+		keywords.add(page.slug().replace('-', ' '));
+		keywords.add("PFAS");
+		keywords.add("comparison");
+		keywords.add("certified options");
 		return List.copyOf(keywords);
 	}
 
