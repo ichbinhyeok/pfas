@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T13:50:05.491765200+09:00",
-  "model_count" : 44,
+  "generated_at" : "2026-03-20T14:30:07.596103100+09:00",
+  "model_count" : 47,
   "models" : [ {
     "model_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -284,6 +284,39 @@
     "template_kind" : "public_water_result_page",
     "model_path" : "derived/page_models/public_water/IL0855150.json",
     "render_path" : "/public-water/IL0855150",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4
+  }, {
+    "model_id" : "public_water:IL1830600",
+    "route_type" : "public_water",
+    "route_key" : "IL1830600",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/IL1830600.json",
+    "render_path" : "/public-water/IL1830600",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4
+  }, {
+    "model_id" : "public_water:IL1975200",
+    "route_type" : "public_water",
+    "route_key" : "IL1975200",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/IL1975200.json",
+    "render_path" : "/public-water/IL1975200",
+    "generation_mode" : "static_file_seed",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4
+  }, {
+    "model_id" : "public_water:IL2015160",
+    "route_type" : "public_water",
+    "route_key" : "IL2015160",
+    "template_kind" : "public_water_result_page",
+    "model_path" : "derived/page_models/public_water/IL2015160.json",
+    "render_path" : "/public-water/IL2015160",
     "generation_mode" : "static_file_seed",
     "indexable" : true,
     "last_verified_date" : "2026-03-20",

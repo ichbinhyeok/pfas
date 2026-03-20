@@ -3878,6 +3878,245 @@
         "benchmark substitution without claim evidence"
       ],
       "notes": "Official Waterdrop G5P700A Pro product page stating IAPMO certification context and PFAS reduction marketing language."
+    },
+    {
+      "source_id": "camelot-2024-water-quality-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Camelot CCR 043",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/camelot/2024/camelot-24ccr-043.pdf?sfvrsn=c2ac3c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Camelot CCR confirming PWS ID IL1975200, groundwater source, and 2024 system profile context."
+    },
+    {
+      "source_id": "camelot-pfas-2023-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Camelot Utilities PFAS 2023 043",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/camelot/2023/camelot-utilities-pfas-2023-043.pdf?sfvrsn=755e3b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Camelot PFAS report for 2023 showing non-detect values across the mapped analytes."
+    },
+    {
+      "source_id": "coventry-creek-2024-water-quality-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Coventry Creek CCR 141",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/coventry-creek/2024/coventrycreek-24ccr-141rt300(943).pdf?sfvrsn=afac3c5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Coventry Creek CCR confirming PWS ID IL2015160, groundwater source, and 2024 system profile context."
+    },
+    {
+      "source_id": "coventry-creek-pfas-2023-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Coventry Creek PFAS 2023 141",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/coventry-creek/2023/coventry-creek-pfas-2023-141.pdf?sfvrsn=885f3b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Coventry Creek PFAS report for 2023 showing non-detect values across the mapped analytes."
+    },
+    {
+      "source_id": "oakwood-2024-water-quality-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Annual Water Quality Report 2024 Oakwood CCR 533",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/oakwood/2024/oakwood-24ccr-533.pdf?sfvrsn=b8973c5b_6",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Oakwood CCR confirming PWS ID IL1830600, surface-water source, and 2024 system profile context."
+    },
+    {
+      "source_id": "oakwood-pfas-2023-report",
+      "organization": "Prairie Path Water Company",
+      "title": "Oakwood PFAS 2023",
+      "url": "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/oakwood/2023/oakwood-2023-pfas.pdf?sfvrsn=345e3b5b_4",
+      "source_kind": "utility_report_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "IL",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct utility PFAS observation context",
+        "utility-specific benchmark interpretation"
+      ],
+      "disallowed_uses": [
+        "safe or unsafe household determination"
+      ],
+      "notes": "Official Oakwood PFAS report for 2023 showing detectable PFOS PFOA and PFHxS values with non-detect PFNA."
+    },
+    {
+      "source_id": "waterdrop-10ub-pro-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop 10UB PRO Under Sink Water Filter",
+      "url": "https://www.waterdropfilter.com/products/10ub-pro-under-sink-water-filter",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "product list price",
+        "manufacturer PFAS reduction claim",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "proof of whole-market superiority"
+      ],
+      "notes": "Official Waterdrop 10UB PRO product page with direct PFAS reduction claims and IAPMO certification context."
+    },
+    {
+      "source_id": "waterdrop-c1h-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop C1H Instant Hot Water Reverse Osmosis System",
+      "url": "https://www.waterdropfilter.com/products/countertop-instant-hot-ro-system-corero-system-c1h",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "product list price",
+        "manufacturer PFAS reduction claim",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "proof of whole-market superiority"
+      ],
+      "notes": "Official Waterdrop C1H product page with direct PFAS reduction claims and IAPMO certification context."
+    },
+    {
+      "source_id": "waterdrop-c1s-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Countertop Water Filter CoreRO System C1S",
+      "url": "https://www.waterdropfilter.com/products/countertop-ro-system-corero-system-c1s",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "product list price",
+        "manufacturer PFAS reduction claim",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "proof of whole-market superiority"
+      ],
+      "notes": "Official Waterdrop C1S product page with direct PFAS reduction claims and low-lead certification context."
+    },
+    {
+      "source_id": "waterdrop-ed01-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Electric Water Filter ED01 Countertop Filter",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-countertop-electric-dispenser-water-filtration-system",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "product list price",
+        "manufacturer PFAS reduction claim",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "proof of whole-market superiority"
+      ],
+      "notes": "Official Waterdrop ED01 product page with direct PFAS reduction claims and IAPMO certification context."
+    },
+    {
+      "source_id": "waterdrop-g5p500a-product",
+      "organization": "Waterdrop",
+      "title": "Waterdrop G5P500A Alkaline Water Filter System",
+      "url": "https://www.waterdropfilter.com/products/alkaline-ro-water-purifier-g5p500a",
+      "source_kind": "vendor_product_page",
+      "trust_tier": 3,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "product list price",
+        "manufacturer PFAS reduction claim",
+        "certification context"
+      ],
+      "disallowed_uses": [
+        "proof of whole-market superiority"
+      ],
+      "notes": "Official Waterdrop G5P500A product page with direct PFAS reduction claims and IAPMO certification context."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T13:50:03.077072100+09:00",
-  "route_count" : 44,
+  "generated_at" : "2026-03-20T14:30:04.932215900+09:00",
+  "route_count" : 47,
   "routes" : [ {
     "route_type" : "guide",
     "route_key" : "carbon-vs-ro-for-pfas",
@@ -340,6 +340,45 @@
     "source_count" : 4,
     "readiness_basis" : "public_water_ready",
     "keywords" : [ "Apple Canyon Water System", "IL", "IL0855150", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "IL1830600",
+    "display_label" : "Oakwood Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IL1830600",
+    "supporting_path" : "/public-water-system/IL1830600",
+    "api_path" : "/internal/results/public-water/IL1830600",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Oakwood Water System", "IL", "IL1830600", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "IL1975200",
+    "display_label" : "Camelot Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IL1975200",
+    "supporting_path" : "/public-water-system/IL1975200",
+    "api_path" : "/internal/results/public-water/IL1975200",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Camelot Water System", "IL", "IL1975200", "CCR", "PFAS", "public water" ]
+  }, {
+    "route_type" : "public_water",
+    "route_key" : "IL2015160",
+    "display_label" : "Coventry Creek Water System PFAS interpretation",
+    "template_kind" : "public_water_result_page",
+    "primary_path" : "/public-water/IL2015160",
+    "supporting_path" : "/public-water-system/IL2015160",
+    "api_path" : "/internal/results/public-water/IL2015160",
+    "indexable" : true,
+    "last_verified_date" : "2026-03-20",
+    "source_count" : 4,
+    "readiness_basis" : "public_water_ready",
+    "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "CCR", "PFAS", "public water" ]
   }, {
     "route_type" : "public_water",
     "route_key" : "MD0120011",

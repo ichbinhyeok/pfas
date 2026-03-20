@@ -102,3 +102,15 @@ spring-creek-mobile-home-pfhxs-average-2024,NV0005027,PFHxS,Perfluorohexanesulfo
 spring-creek-mobile-home-pfna-nd-2024,NV0005027,PFNA,Perfluorononanoic acid,ccr_table_average_2024,2024-01-01,2024-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,spring-creek-mobile-home-2024-water-quality-report
 spring-creek-mobile-home-pfoa-average-2024,NV0005027,PFOA,Perfluorooctanoic acid,ccr_table_average_2024,2024-01-01,2024-12-31,,1650,ppt,reported,,us_pfoa_mcl_2024,spring-creek-mobile-home-2024-water-quality-report
 spring-creek-mobile-home-pfos-average-2024,NV0005027,PFOS,Perfluorooctane sulfonate,ccr_table_average_2024,2024-01-01,2024-12-31,,124000,ppt,reported,,us_pfos_mcl_2024,spring-creek-mobile-home-2024-water-quality-report
+camelot-pfhxs-nd-2023,IL1975200,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,camelot-pfas-2023-report
+camelot-pfna-nd-2023,IL1975200,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,camelot-pfas-2023-report
+camelot-pfoa-nd-2023,IL1975200,PFOA,Perfluorooctanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfoa_mcl_2024,camelot-pfas-2023-report
+camelot-pfos-nd-2023,IL1975200,PFOS,Perfluorooctane sulfonate,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfos_mcl_2024,camelot-pfas-2023-report
+coventry-creek-pfhxs-nd-2023,IL2015160,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,coventry-creek-pfas-2023-report
+coventry-creek-pfna-nd-2023,IL2015160,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,coventry-creek-pfas-2023-report
+coventry-creek-pfoa-nd-2023,IL2015160,PFOA,Perfluorooctanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfoa_mcl_2024,coventry-creek-pfas-2023-report
+coventry-creek-pfos-nd-2023,IL2015160,PFOS,Perfluorooctane sulfonate,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfos_mcl_2024,coventry-creek-pfas-2023-report
+oakwood-pfhxs-average-2023,IL1830600,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,2023-01-30,9.2,ppt,reported,,us_pfhxs_mcl_2024,oakwood-pfas-2023-report
+oakwood-pfna-nd-2023,IL1830600,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,2023-01-30,0,ppt,not_detected,,us_pfna_mcl_2024,oakwood-pfas-2023-report
+oakwood-pfoa-average-2023,IL1830600,PFOA,Perfluorooctanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,2023-01-30,3.1,ppt,reported,,us_pfoa_mcl_2024,oakwood-pfas-2023-report
+oakwood-pfos-average-2023,IL1830600,PFOS,Perfluorooctane sulfonate,separate_pfas_report_2023,2023-01-01,2023-12-31,2023-01-30,11,ppt,reported,,us_pfos_mcl_2024,oakwood-pfas-2023-report

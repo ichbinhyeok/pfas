@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T13:50:08.412265900+09:00",
+  "generated_at" : "2026-03-20T14:30:11.207057100+09:00",
   "model_id" : "public_water:AK2310900",
   "route_type" : "public_water",
   "route_key" : "AK2310900",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:AK2310900",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T13:50:08.382137700+09:00",
+      "generated_at" : "2026-03-20T14:30:11.172756+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_UPDATES_AND_OPTIONALLY_ADD_CERTIFIED_POU",
         "title" : "Review utility updates and add certified point-of-use only if you want extra margin",
@@ -131,6 +131,36 @@
         "organization" : "NSF",
         "title" : "NSF DWTU Listing Search - eSpring Standard 53",
         "url" : "https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=053&TradeName=espring&hdModlStd=ModlStd&submit3=Search",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "waterdrop-10ub-pro-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop 10UB PRO Under Sink Water Filter",
+        "url" : "https://www.waterdropfilter.com/products/10ub-pro-under-sink-water-filter",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "waterdrop-c1h-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop C1H Instant Hot Water Reverse Osmosis System",
+        "url" : "https://www.waterdropfilter.com/products/countertop-instant-hot-ro-system-corero-system-c1h",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "waterdrop-c1s-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Countertop Water Filter CoreRO System C1S",
+        "url" : "https://www.waterdropfilter.com/products/countertop-ro-system-corero-system-c1s",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "waterdrop-ed01-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop Electric Water Filter ED01 Countertop Filter",
+        "url" : "https://www.waterdropfilter.com/products/waterdrop-countertop-electric-dispenser-water-filtration-system",
+        "trust_tier" : 3
+      }, {
+        "source_id" : "waterdrop-g5p500a-product",
+        "organization" : "Waterdrop",
+        "title" : "Waterdrop G5P500A Alkaline Water Filter System",
+        "url" : "https://www.waterdropfilter.com/products/alkaline-ro-water-purifier-g5p500a",
         "trust_tier" : 3
       }, {
         "source_id" : "amway-espring-100186-cartridge",

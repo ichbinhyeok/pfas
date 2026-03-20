@@ -1,7 +1,7 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T13:50:03.888167600+09:00",
-  "document_count" : 44,
+  "generated_at" : "2026-03-20T14:30:05.657162200+09:00",
+  "document_count" : 47,
   "documents" : [ {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
@@ -288,6 +288,39 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Apple Canyon Water System", "IL", "IL0855150", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:IL1830600",
+    "route_type" : "public_water",
+    "route_key" : "IL1830600",
+    "url" : "/public-water/IL1830600",
+    "title" : "Oakwood Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Oakwood Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Oakwood Water System", "IL", "IL1830600", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:IL1975200",
+    "route_type" : "public_water",
+    "route_key" : "IL1975200",
+    "url" : "/public-water/IL1975200",
+    "title" : "Camelot Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Camelot Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Camelot Water System", "IL", "IL1975200", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water:IL2015160",
+    "route_type" : "public_water",
+    "route_key" : "IL2015160",
+    "url" : "/public-water/IL2015160",
+    "title" : "Coventry Creek Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Coventry Creek Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "public water", "CCR", "PFAS" ]
   }, {
     "document_id" : "public_water:MD0120011",
     "route_type" : "public_water",

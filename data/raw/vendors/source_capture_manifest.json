@@ -820,6 +820,71 @@
       "source_family": "vendor_official",
       "checksum_or_snapshot_id": null,
       "notes": "Official G5P700A Pro product page with certification language and PFAS reduction context."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-10ub-pro-product-20260320",
+      "source_id": "waterdrop-10ub-pro-product",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/10ub-pro-under-sink-water-filter",
+      "organization": "Waterdrop",
+      "title": "Waterdrop 10UB PRO Under Sink Water Filter",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Waterdrop 10UB PRO page with price, IAPMO certification context, and direct PFOA/PFOS reduction claims."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-c1h-product-20260320",
+      "source_id": "waterdrop-c1h-product",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/countertop-instant-hot-ro-system-corero-system-c1h",
+      "organization": "Waterdrop",
+      "title": "Waterdrop C1H Instant Hot Water Reverse Osmosis System",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Waterdrop C1H page with price, IAPMO certification context, and direct PFOA/PFOS reduction claims."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-c1s-product-20260320",
+      "source_id": "waterdrop-c1s-product",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/countertop-ro-system-corero-system-c1s",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Countertop Water Filter CoreRO System C1S",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Waterdrop C1S page with price, lead-free certification context, and direct PFOA/PFOS reduction claims."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-ed01-product-20260320",
+      "source_id": "waterdrop-ed01-product",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/waterdrop-countertop-electric-dispenser-water-filtration-system",
+      "organization": "Waterdrop",
+      "title": "Waterdrop Electric Water Filter ED01 Countertop Filter",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Waterdrop ED01 page with price, IAPMO certification context, and direct PFOA/PFOS reduction claims."
+    },
+    {
+      "raw_source_id": "raw-waterdrop-g5p500a-product-20260320",
+      "source_id": "waterdrop-g5p500a-product",
+      "retrieved_at": "2026-03-20T23:59:00+09:00",
+      "url": "https://www.waterdropfilter.com/products/alkaline-ro-water-purifier-g5p500a",
+      "organization": "Waterdrop",
+      "title": "Waterdrop G5P500A Alkaline Water Filter System",
+      "content_type": "text/html",
+      "jurisdiction": "US",
+      "source_family": "vendor_official",
+      "checksum_or_snapshot_id": null,
+      "notes": "Official Waterdrop G5P500A page with price, IAPMO certification context, and direct PFOA/PFOS reduction claims."
     }
   ]
 }
