@@ -1,0 +1,20 @@
+{
+  "schema_version": "v1",
+  "state_code": "NJ",
+  "agency_name": "New Jersey Department of Health / New Jersey Department of Environmental Protection",
+  "agency_url": "https://www.nj.gov/health/ceohs/environmental-occupational/private-well-outreach/",
+  "private_well_guidance_url": "https://www.nj.gov/health/ceohs/environmental-occupational/private-well-outreach/",
+  "pfas_guidance_url": "https://www.nj.gov/health/ceohs/documents/pfas_well_water.pdf",
+  "certified_lab_lookup_url": "https://njems.nj.gov/DataMiner/DM_REPORT.aspx?RN=Laboratories+Certified+for+PWTA+Sample+Collection&TOT=1",
+  "sampling_guidance_url": "https://www.nj.gov/health/ceohs/documents/pw_faq.pdf",
+  "repeat_testing_guidance": "New Jersey private well owners should use PWTA timing, local conditions, and NJDOH or NJDEP guidance rather than a single Sharp v1 retest cadence. The route should keep certified-lab collection and follow-up context visible.",
+  "benchmark_notes": "New Jersey has state PFAS drinking-water standards and PWTA-related private well context, but private wells remain owner-managed. Outputs should stay reference-based and should not be framed as household compliance findings.",
+  "last_verified_date": "2026-03-22",
+  "source_ids": [
+    "nj-private-well-outreach",
+    "nj-pfas-private-well-factsheet",
+    "nj-private-wells-factsheet",
+    "nj-pwta-certified-labs",
+    "nj-pfas-mcl-transition-letter"
+  ]
+}

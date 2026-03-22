@@ -2,14 +2,19 @@
 @import com.example.pfas.checker.ActionCheckerSelection
 @import com.example.pfas.state.StateGuidance
 @import com.example.pfas.water.PublicWaterSystem
+@import com.example.pfas.web.ComparePage
 @import com.example.pfas.web.GuidePage
 @param String siteBaseUrl
 @param String siteEditorialOwner
 @param String siteMethodologyOwner
 @param String siteLastVerifiedDate
 @param java.util.List<StateGuidance> states
+@param java.util.List<StateGuidance> featuredStates
 @param java.util.List<PublicWaterSystem> systems
+@param java.util.List<PublicWaterSystem> featuredSystems
+@param java.util.List<PublicWaterSystem> featuredPennsylvaniaSystems
 @param java.util.List<GuidePage> guides
+@param java.util.List<ComparePage> compares
 @param ActionCheckerSelection checkerSelection
 @param ActionCheckerRecommendation checkerRecommendation
 
@@ -138,7 +143,10 @@
     <div class="hidden md:block">
         @template.fragments.checkerPanel(
             states = states,
+            featuredStates = featuredStates,
             systems = systems,
+            featuredSystems = featuredSystems,
+            featuredPennsylvaniaSystems = featuredPennsylvaniaSystems,
             selection = checkerSelection,
             recommendation = checkerRecommendation
         )
@@ -239,25 +247,273 @@
     <div class="shell">
         <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div class="space-y-3">
+                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Curated compare lanes</span>
+                <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.04]">Comparison pages stay downstream from the evidence path.</h2>
+                <p class="max-w-3xl text-base leading-8 text-base-content/68">These compare lanes only make sense after the record is read. The homepage now exposes that handoff directly instead of burying it behind generic product discovery.</p>
+            </div>
+        </div>
+
+        <div class="surface-muted mb-5 px-5 py-5">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                <div class="space-y-2">
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Commercial logic lanes</span>
+                    <p class="max-w-3xl text-sm leading-7 text-base-content/72">The next compare layer should reward state-led private-well routing, annual ownership burden, and claim-level certification logic instead of a generic best-filter voice.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/compare/private-well-certified-pou-after-test" data-route-click-track="true" data-route-click-id="home:commercial:private-well" data-route-click-source-page="/" data-route-click-target-path="/compare/private-well-certified-pou-after-test" data-route-click-cta-slot="commercial_logic_lane" data-route-click-family="commercial_logic" data-route-click-lane="private_well_compare" data-route-click-region="multi">Private-well compare</a>
+                    <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/compare/pfas-filter-annual-cost-compare" data-route-click-track="true" data-route-click-id="home:commercial:annual-cost" data-route-click-source-page="/" data-route-click-target-path="/compare/pfas-filter-annual-cost-compare" data-route-click-cta-slot="commercial_logic_lane" data-route-click-family="commercial_logic" data-route-click-lane="annual_cost_compare" data-route-click-region="multi">Annual cost compare</a>
+                    <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/compare/nsf-53-vs-58-claim-examples" data-route-click-track="true" data-route-click-id="home:commercial:nsf" data-route-click-source-page="/" data-route-click-target-path="/compare/nsf-53-vs-58-claim-examples" data-route-click-cta-slot="commercial_logic_lane" data-route-click-family="commercial_logic" data-route-click-lane="nsf_compare" data-route-click-region="multi">NSF claim examples</a>
+                </div>
+            </div>
+        </div>
+
+        @if (!compares.isEmpty())
+            <article class="overflow-hidden rounded-[1.35rem] border border-base-300/70 bg-base-100/96 shadow-[var(--shadow-panel)]">
+                <div class="grid gap-px bg-base-300/70 lg:grid-cols-[minmax(0,1fr)_18rem]">
+                    <div class="bg-base-100/96 p-7 md:p-8">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compares.get(0).eyebrow()}</span>
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compares.get(0).queryIntent()}</span>
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Last verified ${compares.get(0).lastVerifiedDate()}</span>
+                        </div>
+                        <h3 class="mt-5 max-w-3xl text-[2rem] font-semibold tracking-[-0.04em] text-base-content md:text-[2.35rem] md:leading-[1.02]">${compares.get(0).title()}</h3>
+                        <p class="mt-4 max-w-3xl text-base leading-8 text-base-content/68">${compares.get(0).lede()}</p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/compare/${compares.get(0).slug()}">Open compare lane</a>
+                            <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${compares.get(0).primaryHref()}">${compares.get(0).primaryLabel()}</a>
+                        </div>
+                    </div>
+                    <aside class="bg-base-200/36 p-6 md:p-7">
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Why this compare exists</div>
+                        <p class="mt-4 text-sm leading-7 text-base-content/72">This lane is not a generic roundup. It exists to keep households inside a narrower post-evidence compare path with claim-level support still in view.</p>
+                        <div class="mt-6 border-t border-base-300/70 pt-6">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Next action in view</div>
+                            <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">${compares.get(0).nextActionTitle()}</p>
+                            <p class="mt-2 text-sm leading-6 text-base-content/62">${compares.get(0).nextActionSummary()}</p>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+        @endif
+
+        @if (compares.size() > 1)
+            <div class="surface-panel mt-5 overflow-hidden">
+                @for (var compare : compares.subList(1, Math.min(3, compares.size())))
+                    <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${compare != compares.get(1) ? "border-t border-base-300/70" : ""}">
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.eyebrow()}</span>
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.queryIntent()}</span>
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.lastVerifiedDate()}</span>
+                            </div>
+                            <h3 class="text-[1.45rem] font-semibold tracking-[-0.035em] text-base-content">${compare.title()}</h3>
+                            <p class="text-sm leading-7 text-base-content/68">${compare.lede()}</p>
+                        </div>
+                        <div class="py-1">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Guardrail</div>
+                            <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">${compare.nextActionTitle()}</p>
+                            <p class="mt-2 text-sm leading-6 text-base-content/62">${compare.nextActionSummary()}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-3 lg:justify-end">
+                            <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/compare/${compare.slug()}">Open compare</a>
+                            <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${compare.primaryHref()}">${compare.primaryLabel()}</a>
+                        </div>
+                    </article>
+                @endfor
+            </div>
+            @if (compares.size() > 3)
+                <details class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More compare lanes (${compares.size() - 3})</summary>
+                    <div class="collapse-content">
+                        <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
+                            @for (var compare : compares.subList(3, compares.size()))
+                                <article class="grid gap-4 px-5 py-5 ${compare != compares.get(3) ? "border-t border-base-300/70" : ""} lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start">
+                                    <div class="space-y-3">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.eyebrow()}</span>
+                                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.queryIntent()}</span>
+                                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${compare.lastVerifiedDate()}</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">${compare.title()}</h3>
+                                        <p class="text-sm leading-7 text-base-content/68">${compare.lede()}</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3 lg:justify-end">
+                                        <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/compare/${compare.slug()}">Open compare</a>
+                                        <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${compare.primaryHref()}">${compare.primaryLabel()}</a>
+                                    </div>
+                                </article>
+                            @endfor
+                        </div>
+                    </div>
+                </details>
+            @endif
+        @endif
+    </div>
+</section>
+
+<section class="pt-14 md:pt-20">
+    <div class="shell">
+        <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div class="space-y-3">
+                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Regional dossier corridors</span>
+                <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.04]">Pennsylvania, New Jersey, and California now have regional lanes that stay downstream from utility records.</h2>
+                <p class="max-w-3xl text-base leading-8 text-base-content/68">Use the state label only as navigation. The actual decision still belongs to the exact system dossier, then to a narrower certified point-of-use compare if the route supports it.</p>
+            </div>
+        </div>
+
+        <div class="surface-panel overflow-hidden">
+            <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.25fr)_16rem_18rem] lg:items-start">
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Pennsylvania corridor</span>
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Guide + compare</span>
+                    </div>
+                    <h3 class="text-[1.45rem] font-semibold tracking-[-0.035em] text-base-content">Read the Pennsylvania dossier cluster, then open the regional post-utility compare lane.</h3>
+                    <p class="text-sm leading-7 text-base-content/68">Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main now form a state corridor that still behaves like four separate utility records.</p>
+                </div>
+                <div class="py-1">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Route logic</div>
+                    <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">System dossier first</p>
+                    <p class="mt-2 text-sm leading-6 text-base-content/62">Use the guide to stay system-led. Use the compare lane only after the utility route is interpretable.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 lg:justify-end">
+                    <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/guides/pennsylvania-pfas-utility-records" data-route-click-track="true" data-route-click-id="home:pa-corridor:guide" data-route-click-source-page="/" data-route-click-target-path="/guides/pennsylvania-pfas-utility-records" data-route-click-cta-slot="regional_corridor_guide" data-route-click-family="regional_corridor" data-route-click-lane="pennsylvania_corridor" data-route-click-region="PA">Read Pennsylvania guide</a>
+                    <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/compare/pennsylvania-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="home:pa-corridor:compare" data-route-click-source-page="/" data-route-click-target-path="/compare/pennsylvania-certified-pou-after-utility-context" data-route-click-cta-slot="regional_corridor_compare" data-route-click-family="regional_corridor" data-route-click-lane="pennsylvania_corridor" data-route-click-region="PA">Open Pennsylvania compare</a>
+                </div>
+            </article>
+            <article class="row-link grid gap-5 border-t border-base-300/70 px-6 py-6 lg:grid-cols-[minmax(0,1.25fr)_16rem_18rem] lg:items-start">
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">New Jersey corridor</span>
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Guide + compare</span>
+                    </div>
+                    <h3 class="text-[1.45rem] font-semibold tracking-[-0.035em] text-base-content">Read the New Jersey utility pair, then open the regional post-utility compare lane.</h3>
+                    <p class="text-sm leading-7 text-base-content/68">Hamilton and Montague now give the engine both an action-heavy and a lighter dossier inside one regional corridor.</p>
+                </div>
+                <div class="py-1">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Route logic</div>
+                    <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">Utility context first</p>
+                    <p class="mt-2 text-sm leading-6 text-base-content/62">Use the guide to separate Hamilton from Montague. Use the compare lane only after that difference is clear.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 lg:justify-end">
+                    <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/guides/new-jersey-pfas-utility-records" data-route-click-track="true" data-route-click-id="home:nj-corridor:guide" data-route-click-source-page="/" data-route-click-target-path="/guides/new-jersey-pfas-utility-records" data-route-click-cta-slot="regional_corridor_guide" data-route-click-family="regional_corridor" data-route-click-lane="new_jersey_corridor" data-route-click-region="NJ">Read New Jersey guide</a>
+                    <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/compare/new-jersey-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="home:nj-corridor:compare" data-route-click-source-page="/" data-route-click-target-path="/compare/new-jersey-certified-pou-after-utility-context" data-route-click-cta-slot="regional_corridor_compare" data-route-click-family="regional_corridor" data-route-click-lane="new_jersey_corridor" data-route-click-region="NJ">Open New Jersey compare</a>
+                </div>
+            </article>
+            <article class="row-link grid gap-5 border-t border-base-300/70 px-6 py-6 lg:grid-cols-[minmax(0,1.25fr)_16rem_18rem] lg:items-start">
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">California corridor</span>
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Guide + compare</span>
+                    </div>
+                    <h3 class="text-[1.45rem] font-semibold tracking-[-0.035em] text-base-content">Read the California utility pair, then open the regional post-utility compare lane.</h3>
+                    <p class="text-sm leading-7 text-base-content/68">Sacramento and East Los Angeles now give the engine both a direct detectable dossier and a treated-water non-detect dossier inside one regional corridor.</p>
+                </div>
+                <div class="py-1">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Route logic</div>
+                    <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">Exact system first</p>
+                    <p class="mt-2 text-sm leading-6 text-base-content/62">Use the guide to separate Sacramento from East Los Angeles. Use the compare lane only after that difference is clear.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 lg:justify-end">
+                    <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/guides/california-pfas-utility-records" data-route-click-track="true" data-route-click-id="home:ca-corridor:guide" data-route-click-source-page="/" data-route-click-target-path="/guides/california-pfas-utility-records" data-route-click-cta-slot="regional_corridor_guide" data-route-click-family="regional_corridor" data-route-click-lane="california_corridor" data-route-click-region="CA">Read California guide</a>
+                    <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/compare/california-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="home:ca-corridor:compare" data-route-click-source-page="/" data-route-click-target-path="/compare/california-certified-pou-after-utility-context" data-route-click-cta-slot="regional_corridor_compare" data-route-click-family="regional_corridor" data-route-click-lane="california_corridor" data-route-click-region="CA">Open California compare</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="pt-14 md:pt-20">
+    <div class="shell">
+        <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div class="space-y-3">
+                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">State-led private-well lanes</span>
+                <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.04]">Private-well routes are thick enough to stay state-led before any product lane opens.</h2>
+                <p class="max-w-3xl text-base leading-8 text-base-content/68">These lanes keep the household inside state guidance, certified-lab routing, and result interpretation before any certified point-of-use shortlist appears.</p>
+            </div>
+        </div>
+
+        <div class="surface-panel overflow-hidden">
+            <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.25fr)_15rem_18rem] lg:items-start">
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Private-well route</span>
+                        <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">Guide + compare</span>
+                    </div>
+                    <h3 class="text-[1.45rem] font-semibold tracking-[-0.035em] text-base-content">Move from the state route into a private-well compare only after the result is interpretable.</h3>
+                    <p class="text-sm leading-7 text-base-content/68">The guide explains why state posture and lab comparability decide the next move. The compare lane stays narrower than a generic private-well filter roundup.</p>
+                </div>
+                <div class="py-1">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Guardrail</div>
+                    <p class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">State context first</p>
+                    <p class="mt-2 text-sm leading-6 text-base-content/62">The well result needs a state route, not a prestige purchase. Certified point-of-use only opens after the state path is clear.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 lg:justify-end">
+                    <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/guides/private-well-pfas-result-next-steps" data-route-click-track="true" data-route-click-id="home:private-well:guide" data-route-click-source-page="/" data-route-click-target-path="/guides/private-well-pfas-result-next-steps" data-route-click-cta-slot="private_well_lane_guide" data-route-click-family="private_well_lane" data-route-click-lane="state_led_private_well" data-route-click-region="multi">Read private-well guide</a>
+                    <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/compare/private-well-certified-pou-after-test" data-route-click-track="true" data-route-click-id="home:private-well:compare" data-route-click-source-page="/" data-route-click-target-path="/compare/private-well-certified-pou-after-test" data-route-click-cta-slot="private_well_lane_compare" data-route-click-family="private_well_lane" data-route-click-lane="state_led_private_well" data-route-click-region="multi">Open private-well compare</a>
+                </div>
+            </article>
+            @if (!featuredStates.isEmpty())
+                <div class="grid gap-px border-t border-base-300/70 bg-base-300/70 md:grid-cols-2 xl:grid-cols-5">
+                    @for (var state : featuredStates)
+                        <article class="bg-base-100/96 px-5 py-5">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${state.stateCode()} lane</span>
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/42">Private well</span>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold tracking-[-0.03em] text-base-content">${state.stateCode()} state route</h3>
+                            <p class="mt-3 text-sm leading-7 text-base-content/66">${state.agencyName()}</p>
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <a class="btn btn-primary h-10 rounded-full border-0 px-4 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/private-well/${state.stateCode()}" data-route-click-track="true" data-route-click-id="home:state-lane:${state.stateCode()}" data-route-click-source-page="/" data-route-click-target-path="/private-well/${state.stateCode()}" data-route-click-cta-slot="state_lane_route" data-route-click-family="private_well_state_lane" data-route-click-lane="${state.stateCode()}_private_well" data-route-click-region="${state.stateCode()}">Open ${state.stateCode()}</a>
+                                <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/checker?waterSource=PRIVATE_WELL&directData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&stateCode=${state.stateCode()}" data-route-click-track="true" data-route-click-id="home:state-lane-checker:${state.stateCode()}" data-route-click-source-page="/" data-route-click-target-path="/checker?waterSource=PRIVATE_WELL&directData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&stateCode=${state.stateCode()}" data-route-click-cta-slot="state_lane_checker" data-route-click-family="private_well_state_lane" data-route-click-lane="${state.stateCode()}_private_well" data-route-click-region="${state.stateCode()}">Run checker</a>
+                            </div>
+                        </article>
+                    @endfor
+                </div>
+            @endif
+        </div>
+    </div>
+</section>
+
+<section class="pt-14 md:pt-20">
+    <div class="shell">
+        <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div class="space-y-3">
                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Current dossiers</span>
                 <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.04]">Seeded public-water routes are treated like records, not location spam.</h2>
                 <p class="max-w-3xl text-base leading-8 text-base-content/68">Each route keeps direct system context, benchmark-aware interpretation, and certified option logic together.</p>
             </div>
         </div>
 
-        @if (!systems.isEmpty())
+        @if (!featuredPennsylvaniaSystems.isEmpty())
+            <div class="surface-muted mb-5 px-5 py-5">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Pennsylvania dossier cluster</span>
+                        <p class="max-w-3xl text-sm leading-7 text-base-content/72">The Pennsylvania lane now spans a major metro utility, Lancaster's action-heavy record, and two additional utility dossiers so households can read comparable system evidence before any product path opens.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        @for (var system : featuredPennsylvaniaSystems)
+                            <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/public-water/${system.pwsid()}">${system.pwsName()}</a>
+                        @endfor
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if (!featuredSystems.isEmpty())
             <article class="overflow-hidden rounded-[1.35rem] border border-base-300/70 bg-base-100/96 shadow-[var(--shadow-panel)]">
                 <div class="grid gap-px bg-base-300/70 lg:grid-cols-[minmax(0,1fr)_18rem]">
                     <div class="bg-base-100/96 p-7 md:p-8">
                         <div class="flex flex-wrap items-center gap-2">
-                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${systems.get(0).stateCode()} public water dossier</span>
-                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">PWSID ${systems.get(0).pwsid()}</span>
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${featuredSystems.get(0).stateCode()} public water dossier</span>
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">PWSID ${featuredSystems.get(0).pwsid()}</span>
                         </div>
-                        <h3 class="mt-5 max-w-3xl text-[2rem] font-semibold tracking-[-0.04em] text-base-content md:text-[2.3rem] md:leading-[1.02]">${systems.get(0).pwsName()}</h3>
+                        <h3 class="mt-5 max-w-3xl text-[2rem] font-semibold tracking-[-0.04em] text-base-content md:text-[2.3rem] md:leading-[1.02]">${featuredSystems.get(0).pwsName()}</h3>
                         <p class="mt-4 max-w-3xl text-base leading-8 text-base-content/68">Open the system record first, interpret benchmark context second, then move into certified point-of-use only if the route justifies it.</p>
                         <div class="mt-6 flex flex-wrap gap-3">
-                            <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/public-water/${systems.get(0).pwsid()}">Open result page</a>
-                            <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/public-water-system/${systems.get(0).pwsid()}">Open source context</a>
+                            <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/public-water/${featuredSystems.get(0).pwsid()}">Open result page</a>
+                            <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/public-water-system/${featuredSystems.get(0).pwsid()}">Open source context</a>
                         </div>
                     </div>
                     <aside class="bg-base-200/36 p-6 md:p-7">
@@ -272,10 +528,10 @@
             </article>
         @endif
 
-        @if (systems.size() > 1)
+        @if (featuredSystems.size() > 1)
             <div class="surface-panel mt-5 overflow-hidden">
-                @for (var system : systems.subList(1, Math.min(3, systems.size())))
-                    <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${system != systems.get(1) ? "border-t border-base-300/70" : ""}">
+                @for (var system : featuredSystems.subList(1, Math.min(3, featuredSystems.size())))
+                    <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${system != featuredSystems.get(1) ? "border-t border-base-300/70" : ""}">
                         <div class="space-y-3">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${system.stateCode()} public water dossier</span>
@@ -296,13 +552,13 @@
                     </article>
                 @endfor
             </div>
-            @if (systems.size() > 3)
+            @if (featuredSystems.size() > 3)
                 <details class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More seeded dossiers (${systems.size() - 3})</summary>
+                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More seeded dossiers (${featuredSystems.size() - 3})</summary>
                     <div class="collapse-content">
                         <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
-                            @for (var system : systems.subList(3, systems.size()))
-                                <article class="grid gap-4 px-5 py-5 ${system != systems.get(3) ? "border-t border-base-300/70" : ""} lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start">
+                            @for (var system : featuredSystems.subList(3, featuredSystems.size()))
+                                <article class="grid gap-4 px-5 py-5 ${system != featuredSystems.get(3) ? "border-t border-base-300/70" : ""} lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start">
                                     <div class="space-y-3">
                                         <div class="flex flex-wrap items-center gap-2">
                                             <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${system.stateCode()} public water dossier</span>

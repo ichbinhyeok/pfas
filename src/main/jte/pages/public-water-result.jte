@@ -43,7 +43,11 @@
 
                     <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
                         <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="${system.ccrUrl()}">Open utility report</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#public-water-product-lane">Review comparison lane</a>
+                        @if(commercialState.shoppingUnlocked())
+                            <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#public-water-product-lane">Review comparison lane</a>
+                        @else
+                            <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/guides/choose-certified-pfas-filter-after-evidence">Read compare guardrails</a>
+                        @endif
                         <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/public-water-system/${system.pwsid()}">Open source context</a>
                     </div>
                 </div>

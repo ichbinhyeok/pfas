@@ -28,8 +28,10 @@ import com.example.pfas.result.WaterDecisionResult;
 import com.example.pfas.site.SiteMetadataService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
+import com.example.pfas.state.StateGuidance;
 import com.example.pfas.state.StateGuidanceService;
 import com.example.pfas.stateprofile.StateBenchmarkProfileService;
+import com.example.pfas.water.PublicWaterSystem;
 import com.example.pfas.water.PublicWaterSystemService;
 
 @Controller
@@ -43,6 +45,7 @@ public class PublicPagesController {
 	private final SourceRegistryService sourceRegistryService;
 	private final ActionCheckerService actionCheckerService;
 	private final GuidePageService guidePageService;
+	private final ComparePageService comparePageService;
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final RouteQualityGateService routeQualityGateService;
 	private final CommercialSurfaceService commercialSurfaceService;
@@ -57,6 +60,7 @@ public class PublicPagesController {
 		SourceRegistryService sourceRegistryService,
 		ActionCheckerService actionCheckerService,
 		GuidePageService guidePageService,
+		ComparePageService comparePageService,
 		StateBenchmarkProfileService stateBenchmarkProfileService,
 		RouteQualityGateService routeQualityGateService,
 		CommercialSurfaceService commercialSurfaceService,
@@ -70,6 +74,7 @@ public class PublicPagesController {
 		this.sourceRegistryService = sourceRegistryService;
 		this.actionCheckerService = actionCheckerService;
 		this.guidePageService = guidePageService;
+		this.comparePageService = comparePageService;
 		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.routeQualityGateService = routeQualityGateService;
 		this.commercialSurfaceService = commercialSurfaceService;
@@ -80,8 +85,12 @@ public class PublicPagesController {
 	public String home(Model model) {
 		var checkerSelection = actionCheckerService.normalize(null, null, null, null, null, null, null, null, null);
 		model.addAttribute("systems", publicWaterSystemService.getAll());
+		model.addAttribute("featuredSystems", featuredSystems());
+		model.addAttribute("featuredPennsylvaniaSystems", featuredPennsylvaniaSystems());
 		model.addAttribute("states", stateGuidanceService.getAll());
+		model.addAttribute("featuredStates", featuredStates());
 		model.addAttribute("guides", guidePageService.getAll());
+		model.addAttribute("compares", comparePageService.getAll());
 		model.addAttribute("checkerSelection", checkerSelection);
 		model.addAttribute("checkerRecommendation", actionCheckerService.evaluate(checkerSelection));
 		return "pages/home";
@@ -289,7 +298,34 @@ public class PublicPagesController {
 		model.addAttribute("selection", selection);
 		model.addAttribute("recommendation", actionCheckerService.evaluate(selection));
 		model.addAttribute("states", stateGuidanceService.getAll());
+		model.addAttribute("featuredStates", featuredStates());
 		model.addAttribute("systems", publicWaterSystemService.getAll());
+		model.addAttribute("featuredSystems", featuredSystems());
+		model.addAttribute("featuredPennsylvaniaSystems", featuredPennsylvaniaSystems());
+	}
+
+	private List<StateGuidance> featuredStates() {
+		return List.of("CA", "MI", "MA", "WA", "PA")
+			.stream()
+			.map(stateGuidanceService::getByStateCode)
+			.flatMap(Optional::stream)
+			.toList();
+	}
+
+	private List<PublicWaterSystem> featuredSystems() {
+		return List.of("3049000", "MI0000220", "WA5377050", "CA3410020", "PA1510001", "7360058", "PA2450065", "PA1460073", "NJ1103001")
+			.stream()
+			.map(publicWaterSystemService::getByPwsid)
+			.flatMap(Optional::stream)
+			.toList();
+	}
+
+	private List<PublicWaterSystem> featuredPennsylvaniaSystems() {
+		return List.of("PA1510001", "7360058", "PA2450065", "PA1460073")
+			.stream()
+			.map(publicWaterSystemService::getByPwsid)
+			.flatMap(Optional::stream)
+			.toList();
 	}
 
 	private void validateCheckerInputs(

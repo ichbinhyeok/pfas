@@ -43,8 +43,8 @@
                     </div>
 
                     <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
-                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="${page.primaryHref()}">${page.primaryLabel()}</a>
-                    <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${page.secondaryHref()}">${page.secondaryLabel()}</a>
+                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="${page.primaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:primary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.primaryHref()}" data-route-click-cta-slot="compare_primary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.primaryLabel()}</a>
+                    <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${page.secondaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:secondary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.secondaryHref()}" data-route-click-cta-slot="compare_secondary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.secondaryLabel()}</a>
                     @if(!relatedProducts.isEmpty())
                         <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#compare-product-lane">Open compare lane</a>
                     @endif
@@ -337,7 +337,7 @@
                             <div class="collapse-content">
                                 <div class="space-y-3 pt-2">
                                     @for(var example : relatedSystems.subList(0, Math.min(relatedSystems.size(), 3)))
-                                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/public-water/${example.system().pwsid()}">
+                                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/public-water/${example.system().pwsid()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:system:${example.system().pwsid()}" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="/public-water/${example.system().pwsid()}" data-route-click-cta-slot="compare_live_system" data-route-click-family="compare_to_dossier" data-route-click-lane="${page.slug()}" data-route-click-region="${example.system().stateCode()}">
                                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${example.system().stateCode()} / ${example.system().pwsid()}</div>
                                             <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${example.system().pwsName()}</div>
                                             <div class="mt-2 text-sm leading-6 text-base-content/60">${PresentationText.benchmarkRelationLabel(example.result().meta().benchmarkRelation())} / ${example.result().nextAction().title()}</div>
@@ -374,7 +374,7 @@
                             <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-base-content/52">Related guides</h3>
                             <div class="mt-4 space-y-3">
                                 @for(var guide : relatedGuides.subList(0, Math.min(relatedGuides.size(), 3)))
-                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}">
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:guide:${guide.slug()}" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="/guides/${guide.slug()}" data-route-click-cta-slot="compare_related_guide" data-route-click-family="compare_to_guide" data-route-click-lane="${page.slug()}" data-route-click-region="">
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${guide.eyebrow()}</div>
                                         <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${guide.title()}</div>
                                     </a>

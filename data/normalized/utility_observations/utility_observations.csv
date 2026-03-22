@@ -13,6 +13,10 @@ bermuda-water-pfhxs-average-2023,AZ0408063,PFHxS,Perfluorohexanesulfonic acid,se
 bermuda-water-pfna-nd-2023,AZ0408063,PFNA,Perfluorononanoic acid,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,bermuda-water-pfas-2023-report
 bermuda-water-pfoa-average-2023,AZ0408063,PFOA,Perfluorooctanoic acid,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0.3,ppt,reported,,us_pfoa_mcl_2024,bermuda-water-pfas-2023-report
 bermuda-water-pfos-average-2023,AZ0408063,PFOS,Perfluorooctane sulfonate,separate_pfas_report_average_2023,2023-01-01,2023-12-31,,0.23,ppt,reported,,us_pfos_mcl_2024,bermuda-water-pfas-2023-report
+sacramento-pfhxs-average-2024,CA3410020,PFHxS,Perfluorohexanesulfonic acid,max_annual_average_2024,2024-01-01,2024-12-31,,3.7,ppt,reported,,us_pfhxs_mcl_2024,sacramento-2024-water-quality-report
+east-la-pfhxs-nd-2024,CA1910036,PFHxS,Perfluorohexanesulfonic acid,state_notification_level_average_2019_2024,2019-01-01,2024-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,east-la-2024-water-quality-report|calwater-2024-pfas-application
+east-la-pfoa-nd-2024,CA1910036,PFOA,Perfluorooctanoic acid,state_notification_level_average_2019_2024,2019-01-01,2024-12-31,,0,ppt,not_detected,,us_pfoa_mcl_2024,east-la-2024-water-quality-report|calwater-2024-pfas-application
+east-la-pfos-nd-2024,CA1910036,PFOS,Perfluorooctane sulfonate,state_notification_level_average_2019_2024,2019-01-01,2024-12-31,,0,ppt,not_detected,,us_pfos_mcl_2024,east-la-2024-water-quality-report|calwater-2024-pfas-application
 four-lakes-pfhxs-average-2023,FL3354647,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_average_2023,2023-11-01,2023-11-30,,0.75,ppt,reported,,us_pfhxs_mcl_2024,four-lakes-pfas-2023-report
 four-lakes-pfna-nd-2023,FL3354647,PFNA,Perfluorononanoic acid,separate_pfas_report_average_2023,2023-11-01,2023-11-30,,0,ppt,not_detected,,us_pfna_mcl_2024,four-lakes-pfas-2023-report
 four-lakes-pfoa-average-2023,FL3354647,PFOA,Perfluorooctanoic acid,separate_pfas_report_average_2023,2023-11-01,2023-11-30,,1.33,ppt,reported,,us_pfoa_mcl_2024,four-lakes-pfas-2023-report
@@ -49,6 +53,11 @@ green-ridge-pfhxs-average-2024,MD0120011,PFHxS,Perfluorohexanesulfonic acid,syst
 green-ridge-pfna-average-2024,MD0120011,PFNA,Perfluorononanoic acid,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,0,ppt,not_detected,,us_pfna_mcl_2024,green-ridge-2024-water-quality-report
 green-ridge-pfoa-average-2024,MD0120011,PFOA,Perfluorooctanoic acid,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,2.28,ppt,reported,,us_pfoa_mcl_2024,green-ridge-2024-water-quality-report
 green-ridge-pfos-average-2024,MD0120011,PFOS,Perfluorooctane sulfonate,system_average_detected_march_2024,2024-03-01,2024-03-31,2024-03-01,1.7,ppt,reported,,us_pfos_mcl_2024,green-ridge-2024-water-quality-report
+cambridge-pfas6-finished-water-nov-2023,3049000,PFAS6,Sum of six PFAS compounds (PFAS6),finished_water_monthly_sum_nov_2023,2023-11-01,2023-11-30,2023-11-01,6.3,ppt,reported,,ma_pfas6_mcl_current,cambridge-pfas-test-results|cambridge-2024-water-quality-report
+ann-arbor-pfoa-nd-2024,MI0000220,PFOA,Perfluorooctanoic acid,grouped_pfas_results_2024,2024-01-01,2024-12-31,,0,ppt,not_detected,2.0,mi_pfoa_mcl_current,ann-arbor-2024-water-quality-report|ann-arbor-pfas-page
+ann-arbor-pfos-nd-2024,MI0000220,PFOS,Perfluorooctane sulfonate,grouped_pfas_results_2024,2024-01-01,2024-12-31,,0,ppt,not_detected,2.0,mi_pfos_mcl_current,ann-arbor-2024-water-quality-report|ann-arbor-pfas-page
+ann-arbor-pfhxs-nd-2024,MI0000220,PFHxS,Perfluorohexanesulfonic acid,grouped_pfas_results_2024,2024-01-01,2024-12-31,,0,ppt,not_detected,2.0,us_pfhxs_mcl_2024,ann-arbor-2024-water-quality-report|ann-arbor-pfas-page
+ann-arbor-pfna-nd-2024,MI0000220,PFNA,Perfluorononanoic acid,grouped_pfas_results_2024,2024-01-01,2024-12-31,,0,ppt,not_detected,2.0,mi_pfna_mcl_current,ann-arbor-2024-water-quality-report|ann-arbor-pfas-page
 abington-hfpoda-average-2024,NC0234191,HFPO-DA,HFPO-DA (GenX),system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,0,ppt,not_detected,,us_hfpoda_mcl_2024,abington-2024-water-quality-report
 abington-pfhxs-average-2024,NC0234191,PFHxS,Perfluorohexanesulfonic acid,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,1.37,ppt,reported,,us_pfhxs_mcl_2024,abington-2024-water-quality-report
 abington-pfna-average-2024,NC0234191,PFNA,Perfluorononanoic acid,system_average_detected_feb_may_2024,2024-02-01,2024-05-31,,0,ppt,not_detected,,us_pfna_mcl_2024,abington-2024-water-quality-report
@@ -63,6 +72,18 @@ montague-pfhxs-nd-2023,NJ1914002,PFHxS,Perfluorohexanesulfonic acid,statewide_pf
 montague-pfna-nd-2023,NJ1914002,PFNA,Perfluorononanoic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfna_mcl_2024,montague-pfas-2023-report
 montague-pfoa-nd-2023,NJ1914002,PFOA,Perfluorooctanoic acid,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfoa_mcl_2024,montague-pfas-2023-report
 montague-pfos-nd-2023,NJ1914002,PFOS,Perfluorooctane sulfonate,statewide_pfas_report_2023,2023-04-01,2023-09-30,,0,ppt,not_detected,,us_pfos_mcl_2024,montague-pfas-2023-report
+hamilton-pfoa-raa-2024,NJ1103001,PFOA,Perfluorooctanoic acid,highest_running_annual_average_2024,2024-01-01,2024-12-31,,9.4,ppt,reported,,nj_pfoa_mcl_current,aqua-hamilton-2024-water-quality-report
+hamilton-pfos-raa-2024,NJ1103001,PFOS,Perfluorooctane sulfonate,highest_running_annual_average_2024,2024-01-01,2024-12-31,,10.9,ppt,reported,,nj_pfos_mcl_current,aqua-hamilton-2024-water-quality-report
+aqua-pa-main-pfoa-average-2024,PA1460073,PFOA,Perfluorooctanoic acid,entry_point_average_detection_2024,2024-01-01,2024-12-31,,7.0,ppt,reported,,pa_pfoa_mcl_2023,aqua-pa-main-system-2024-water-quality-report
+aqua-pa-main-pfos-average-2024,PA1460073,PFOS,Perfluorooctane sulfonate,entry_point_average_detection_2024,2024-01-01,2024-12-31,,5.9,ppt,reported,,pa_pfos_mcl_2023,aqua-pa-main-system-2024-water-quality-report
+penn-estates-pfhxs-average-2024,PA2450065,PFHxS,Perfluorohexanesulfonic acid,system_average_reported_in_2024_wqr,2024-01-01,2024-12-31,,0.5,ppt,reported,,us_pfhxs_mcl_2024,penn-estates-2024-water-quality-report
+penn-estates-pfna-average-2024,PA2450065,PFNA,Perfluorononanoic acid,system_average_reported_in_2024_wqr,2024-01-01,2024-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,penn-estates-2024-water-quality-report
+penn-estates-pfoa-average-2024,PA2450065,PFOA,Perfluorooctanoic acid,system_average_reported_in_2024_wqr,2024-01-01,2024-12-31,,0.3,ppt,reported,,us_pfoa_mcl_2024,penn-estates-2024-water-quality-report
+penn-estates-pfos-average-2024,PA2450065,PFOS,Perfluorooctane sulfonate,system_average_reported_in_2024_wqr,2024-01-01,2024-12-31,,0.3,ppt,reported,,us_pfos_mcl_2024,penn-estates-2024-water-quality-report
+seattle-pfhxs-nd-2023,WA5377050,PFHxS,Perfluorohexanesulfonic acid,cedar_and_tolt_finished_water_ucmr5_2023,2023-06-01,2023-12-31,,0,ppt,not_detected,0.003,us_pfhxs_mcl_2024,seattle-pfas-page
+seattle-pfna-nd-2023,WA5377050,PFNA,Perfluorononanoic acid,cedar_and_tolt_finished_water_ucmr5_2023,2023-06-01,2023-12-31,,0,ppt,not_detected,0.004,us_pfna_mcl_2024,seattle-pfas-page
+seattle-pfoa-nd-2023,WA5377050,PFOA,Perfluorooctanoic acid,cedar_and_tolt_finished_water_ucmr5_2023,2023-06-01,2023-12-31,,0,ppt,not_detected,0.004,us_pfoa_mcl_2024,seattle-pfas-page
+seattle-pfos-nd-2023,WA5377050,PFOS,Perfluorooctane sulfonate,cedar_and_tolt_finished_water_ucmr5_2023,2023-06-01,2023-12-31,,0,ppt,not_detected,0.004,us_pfos_mcl_2024,seattle-pfas-page
 calvada-meadows-hfpoda-nd-2023,NV0000408,HFPO-DA,HFPO-DA (GenX),separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_hfpoda_mcl_2024,calvada-meadows-pfas-2023-report
 calvada-meadows-pfhxs-nd-2023,NV0000408,PFHxS,Perfluorohexanesulfonic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfhxs_mcl_2024,calvada-meadows-pfas-2023-report
 calvada-meadows-pfna-nd-2023,NV0000408,PFNA,Perfluorononanoic acid,separate_pfas_report_2023,2023-01-01,2023-12-31,,0,ppt,not_detected,,us_pfna_mcl_2024,calvada-meadows-pfas-2023-report

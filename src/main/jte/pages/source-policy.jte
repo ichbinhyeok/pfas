@@ -166,6 +166,51 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-6">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Commercial unlock rules</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Source quality controls what the product layer may say.</h2>
+                        </div>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">A lower-tier source may add</h3>
+                                <ul class="mt-3 space-y-3 text-sm leading-7 text-base-content/72">
+                                    <li>Price</li>
+                                    <li>Replacement cadence</li>
+                                    <li>Exact model detail</li>
+                                    <li>Merchant destination</li>
+                                </ul>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">A lower-tier source may not add</h3>
+                                <ul class="mt-3 space-y-3 text-sm leading-7 text-base-content/72">
+                                    <li>A household risk grade</li>
+                                    <li>A compliance finding</li>
+                                    <li>A whole-house default</li>
+                                    <li>A reason to ignore missing direct evidence</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-6">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Editorial guardrails</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">The trust layer is built from limits as much as from links.</h2>
+                        </div>
+                        <ul class="space-y-3 text-sm leading-7 text-base-content/72">
+                            <li>No safe or unsafe labels are generated from indirect hints.</li>
+                            <li>No anonymous reviewer theater is used to make the route sound more certain than the evidence allows.</li>
+                            <li>No product page is allowed to outrun the public-water or private-well evidence path.</li>
+                            <li>No whole-house suggestion is treated as a default answer to an ingestion-focused problem.</li>
+                            <li>No vendor record can override a direct utility record, state guide, or official benchmark source.</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
 
             <aside class="space-y-5 xl:sticky xl:top-28">

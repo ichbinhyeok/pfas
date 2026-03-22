@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record GuidePage(
 	String slug,
+	Integer editorialRank,
 	String eyebrow,
 	String title,
 	String lede,

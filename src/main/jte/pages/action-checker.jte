@@ -8,7 +8,10 @@
 @param String siteMethodologyOwner
 @param String siteLastVerifiedDate
 @param List<StateGuidance> states
+@param List<StateGuidance> featuredStates
 @param List<PublicWaterSystem> systems
+@param List<PublicWaterSystem> featuredSystems
+@param List<PublicWaterSystem> featuredPennsylvaniaSystems
 @param ActionCheckerSelection selection
 @param ActionCheckerRecommendation recommendation
 
@@ -73,7 +76,10 @@
 <section class="pt-14 md:pt-20">
     @template.fragments.checkerPanel(
         states = states,
+        featuredStates = featuredStates,
         systems = systems,
+        featuredSystems = featuredSystems,
+        featuredPennsylvaniaSystems = featuredPennsylvaniaSystems,
         selection = selection,
         recommendation = recommendation
     )

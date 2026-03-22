@@ -4,6 +4,7 @@
   "comparePages": [
     {
       "slug": "under-sink-certified-pfas-options",
+      "editorialRank": 1,
       "eyebrow": "Compare page",
       "title": "Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment",
       "lede": "This compare page narrows to under-sink certified point-of-use systems that can be defended after a utility dossier, state-guided test, or direct evidence path justifies treatment.",
@@ -120,6 +121,7 @@
     },
     {
       "slug": "countertop-vs-pitcher-vs-under-sink-compare",
+      "editorialRank": 4,
       "eyebrow": "Compare page",
       "title": "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
       "lede": "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine.",
@@ -235,6 +237,7 @@
     },
     {
       "slug": "pfas-filter-annual-cost-compare",
+      "editorialRank": 5,
       "eyebrow": "Compare page",
       "title": "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
       "lede": "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path.",
@@ -349,7 +352,452 @@
       ]
     },
     {
+      "slug": "certified-pou-after-utility-context",
+      "editorialRank": 2,
+      "eyebrow": "Compare page",
+      "title": "Certified point-of-use after a utility PFAS record should stay narrow and claim-led",
+      "lede": "This compare page is for households that already read the utility record and now need a disciplined point-of-use lane instead of a panic-buy roundup.",
+      "queryIntent": "Post-utility treatment comparison",
+      "nextActionTitle": "Compare certified point-of-use only after the utility route is interpretable",
+      "nextActionSummary": "If the utility path is already anchored, compare certified point-of-use by claim scope, upkeep, and installation burden rather than by fear or badge shorthand alone.",
+      "comparisonAxes": [
+        "Claim-level PFAS support",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to an ingestion-focused public-water route"
+      ],
+      "whyThis": [
+        "A utility notice or CCR reading often narrows the right treatment class without settling the exact model.",
+        "Public-water households need a compare page that opens after evidence, not before it.",
+        "This lane blocks whole-house overreach by keeping the compare set anchored to point-of-use."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility record.",
+        "It does not prove every certified model fits every public-water route.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance keeps certified filter review tied to exact claims.",
+        "Utility records are the first evidence layer for public-water households.",
+        "A narrower compare lane improves both conversion quality and route discipline."
+      ],
+      "targetQueries": [
+        "pfas filter after utility notice",
+        "best pfas filter after ccr",
+        "certified pfas filter after utility report"
+      ],
+      "relatedGuideSlugs": [
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "ccr-without-pfas-line",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "7360058",
+        "FL3590615",
+        "FL3354695",
+        "GA3110075"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquasana-aq-6300",
+        "aquatru-under-sink",
+        "espring-122941",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "nsf-espring-listing-053",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
+      "secondaryLabel": "Read post-evidence guide",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why this compare page exists after the utility read",
+          "summary": "A public-water household often needs one more step after interpretation: a tighter compare set, not a wider search.",
+          "paragraphs": [
+            "Once the utility route is interpretable, the question usually becomes which certified point-of-use class stays proportionate to the current objective. That is a better question than which product page feels most serious.",
+            "This compare page exists to keep that second step narrow. It treats the utility record as the opener and the model compare as the follow-through."
+          ],
+          "bullets": [
+            "Utility first.",
+            "Point-of-use second.",
+            "Whole-house remains a separate review."
+          ]
+        },
+        {
+          "title": "What a public-water compare should reward",
+          "summary": "Claim fit and upkeep quality should decide the shortlist more than prestige or loud marketing.",
+          "paragraphs": [
+            "A stronger public-water compare page should make it easy to eliminate the wrong ownership burden early. Some households need simpler direct-connect or under-sink carbon options. Others will tolerate RO ownership. The route should make that distinction visible.",
+            "That means certification, annual cost, and installation class stay on the same screen as the click path."
+          ],
+          "bullets": [
+            "Claim scope matters.",
+            "Maintenance burden matters.",
+            "The right model is often the narrowest defendable fit."
+          ]
+        },
+        {
+          "title": "Why this lane helps search and trust",
+          "summary": "Search users often want a filter answer when they really need a post-record compare lane.",
+          "paragraphs": [
+            "That mismatch is what weak sites exploit. This page turns the same query into a calmer decision step by assuming the utility record already happened and by refusing to widen the scope beyond point-of-use.",
+            "It is commercial, but it stays bounded by the same evidence posture as the rest of the engine."
+          ],
+          "bullets": [
+            "It answers a buying query without skipping interpretation.",
+            "It narrows the commercial lane.",
+            "It improves merchant click quality by keeping the route explicit."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pennsylvania-certified-pou-after-utility-context",
+      "editorialRank": 4,
+      "eyebrow": "Regional compare page",
+      "title": "Pennsylvania certified point-of-use after a utility PFAS record should stay system-led and narrow",
+      "lede": "This compare page is for Pennsylvania households that already read a seeded utility dossier and now need a certified point-of-use shortlist without collapsing multiple systems into one statewide buying story.",
+      "queryIntent": "Regional post-utility comparison",
+      "nextActionTitle": "Keep the compare lane tied to the exact Pennsylvania system dossier",
+      "nextActionSummary": "Use Pennsylvania as a navigation layer, but keep the shortlist anchored to the exact utility record, its timing, and the current system interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes": [
+        "Claim-level PFAS support for an ingestion-focused route",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to a Pennsylvania utility dossier"
+      ],
+      "whyThis": [
+        "Pennsylvania now has a usable cluster of public-water dossiers rather than a single flagship example.",
+        "Households searching within Pennsylvania still need a system-led compare lane, not a statewide roundup.",
+        "This page gives the project a commercial surface that stays narrower than a generic best-filter page."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility dossier.",
+        "It does not turn one Pennsylvania record into a fit for another system.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main give the compare lane multiple seeded utility entry points.",
+        "EPA filter guidance still keeps claim review tied to exact certified products.",
+        "A Pennsylvania compare lane is strongest when it behaves like a downstream route, not a state roundup."
+      ],
+      "targetQueries": [
+        "pennsylvania pfas filter after utility report",
+        "pennsylvania pfas filter after water notice",
+        "certified pfas filter pennsylvania utility"
+      ],
+      "relatedGuideSlugs": [
+        "pennsylvania-pfas-utility-records",
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "7360058",
+        "PA2450065",
+        "PA1460073"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquasana-aq-6300",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "phila-pfas-management",
+        "lancaster-pfoa-notice-2025",
+        "penn-estates-2024-water-quality-report",
+        "aqua-pa-main-system-2024-water-quality-report",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/guides/pennsylvania-pfas-utility-records",
+      "primaryLabel": "Read Pennsylvania utility guide",
+      "secondaryHref": "/checker",
+      "secondaryLabel": "Open Action Checker",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why Pennsylvania needs its own post-utility compare lane",
+          "summary": "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending Pennsylvania is one PFAS document.",
+          "paragraphs": [
+            "The Pennsylvania cluster now includes multiple public-water dossiers with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.",
+            "This page exists to keep the state label from turning into lazy commercial shorthand. The system record still leads."
+          ],
+          "bullets": [
+            "Pennsylvania is the navigation layer.",
+            "The exact utility dossier is the evidence layer.",
+            "Certified point-of-use is the commercial layer."
+          ]
+        },
+        {
+          "title": "What the shortlist should reward",
+          "summary": "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+          "paragraphs": [
+            "A Pennsylvania household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.",
+            "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and noisier hardware should still need separate justification."
+          ],
+          "bullets": [
+            "Claim fit first.",
+            "Maintenance honesty second.",
+            "Whole-house remains outside this lane."
+          ]
+        },
+        {
+          "title": "How this protects both trust and conversion quality",
+          "summary": "It gives Pennsylvania users a buying step without rewriting the record they just read.",
+          "paragraphs": [
+            "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.",
+            "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path."
+          ],
+          "bullets": [
+            "It answers a commercial query without skipping interpretation.",
+            "It improves click quality by narrowing the path.",
+            "It keeps Pennsylvania from collapsing into location-spam commerce."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "private-well-certified-pou-after-test",
+      "editorialRank": 3,
+      "eyebrow": "Compare page",
+      "title": "Private-well certified point-of-use after a PFAS test should follow the state route not replace it",
+      "lede": "This compare page is for private-well households that already have a test and now need a certified point-of-use shortlist that still respects state context and comparability limits.",
+      "queryIntent": "Private-well treatment comparison",
+      "nextActionTitle": "Compare certified point-of-use only after the well result is interpretable",
+      "nextActionSummary": "A private-well owner should move from test result to state context, then into a certified point-of-use shortlist that still keeps cost and upkeep visible.",
+      "comparisonAxes": [
+        "Claim-level PFAS support",
+        "Installation burden for owner-managed treatment",
+        "Annualized maintenance and cartridge cadence",
+        "Whether the product stays proportionate to an ingestion-focused private-well route"
+      ],
+      "whyThis": [
+        "Private-well users often reach a buying phase after testing but before they have a disciplined shortlist.",
+        "The project needs a compare lane that assumes the test already happened and still keeps state context visible.",
+        "A tighter private-well compare page blocks generic prestige shopping."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the test result or state guide.",
+        "It does not prove a model fits a route that is still unknown or not comparable.",
+        "It does not justify whole-house by default."
+      ],
+      "evidenceHighlights": [
+        "EPA private-well guidance keeps the route owner-managed and evidence-first.",
+        "EPA filter guidance supports certification-first product review after the evidence step.",
+        "A private-well compare lane should open only after the state route is interpretable."
+      ],
+      "targetQueries": [
+        "private well pfas filter comparison",
+        "best pfas filter after well test",
+        "certified pfas filter for private well"
+      ],
+      "relatedGuideSlugs": [
+        "private-well-pfas-result-next-steps",
+        "test-first-vs-filter-first",
+        "choose-certified-pfas-filter-after-evidence",
+        "unknown-or-not-comparable-pfas-result"
+      ],
+      "relatedPwsids": [],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "espring-122941",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-private-wells",
+        "epa-pfas-private-wells",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "nsf-espring-listing-053",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/private-well-pfas-result-next-steps",
+      "secondaryLabel": "Read private-well next steps",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why this compare page starts after the test",
+          "summary": "A private-well owner should not need to re-decide whether testing mattered before comparing the shortlist.",
+          "paragraphs": [
+            "Once the test exists, the better question is which certified point-of-use route stays proportionate to the current result and maintenance tolerance. This page exists for that exact moment.",
+            "It does not replace the state route. It assumes the state route already narrowed the household into a treatment conversation."
+          ],
+          "bullets": [
+            "Testing came first.",
+            "State context stays attached.",
+            "Comparison opens only after interpretability."
+          ]
+        },
+        {
+          "title": "What private-well owners need from the shortlist",
+          "summary": "Owner-managed routes reward simplicity and upkeep honesty more than badge theater.",
+          "paragraphs": [
+            "Some households need a lower-burden certified option they can actually maintain. Others are willing to accept more hardware and upkeep. The page should make those tradeoffs visible instead of implying that the most engineered-looking system always wins.",
+            "That is why annualized cost, replacement cadence, and installation tolerance sit beside the claim support."
+          ],
+          "bullets": [
+            "Owner-managed upkeep matters.",
+            "Annual cost matters.",
+            "A point-of-use lane should stay narrower than a whole-home pitch."
+          ]
+        },
+        {
+          "title": "How this compare page protects the route",
+          "summary": "It gives the user a buying step without letting the buying step rewrite the evidence.",
+          "paragraphs": [
+            "Unknown or not comparable routes should still stay out of this lane. Above-reference or clearly interpretable routes can enter it. That makes the page more useful than a generic private-well roundup because it only opens when the route has already earned the comparison.",
+            "This is the exact kind of compare page that supports trust instead of spending it."
+          ],
+          "bullets": [
+            "Unknown route: stay out.",
+            "Interpretable route: open the shortlist.",
+            "Whole-house still requires a separate objective."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "new-jersey-certified-pou-after-utility-context",
+      "editorialRank": 6,
+      "eyebrow": "Regional compare page",
+      "title": "New Jersey certified point-of-use after a utility PFAS record should stay system-led and proportional",
+      "lede": "This compare page is for New Jersey households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Hamilton and Montague into one state-level buying answer.",
+      "queryIntent": "Regional post-utility comparison",
+      "nextActionTitle": "Keep the compare lane tied to the exact New Jersey utility dossier",
+      "nextActionSummary": "Use New Jersey as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes": [
+        "Claim-level PFAS support for an ingestion-focused route",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to a New Jersey utility dossier"
+      ],
+      "whyThis": [
+        "New Jersey now has two seeded utility dossiers with different route posture.",
+        "Households searching within New Jersey still need a system-led compare lane rather than a statewide roundup.",
+        "This page gives the project a narrower commercial lane than a generic best-filter page."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility dossier.",
+        "It does not turn one New Jersey record into a fit for another system.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "Hamilton and Montague give the compare lane both an action-heavy and a lighter utility dossier example.",
+        "EPA filter guidance still keeps claim review tied to exact certified products.",
+        "A New Jersey compare lane is strongest when it stays downstream from the system record."
+      ],
+      "targetQueries": [
+        "new jersey pfas filter after utility report",
+        "new jersey pfas filter after water notice",
+        "certified pfas filter new jersey utility"
+      ],
+      "relatedGuideSlugs": [
+        "new-jersey-pfas-utility-records",
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "NJ1103001",
+        "NJ1914002"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "aqua-hamilton-2024-water-quality-report",
+        "aqua-pfas-new-jersey",
+        "montague-pfas-2023-report",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/guides/new-jersey-pfas-utility-records",
+      "primaryLabel": "Read New Jersey utility guide",
+      "secondaryHref": "/checker",
+      "secondaryLabel": "Open Action Checker",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why New Jersey needs its own post-utility compare lane",
+          "summary": "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending New Jersey is one PFAS document.",
+          "paragraphs": [
+            "The New Jersey cluster now gives the project two distinct public-water entry points with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.",
+            "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads."
+          ],
+          "bullets": [
+            "New Jersey is the navigation layer.",
+            "The exact utility dossier is the evidence layer.",
+            "Certified point-of-use is the commercial layer."
+          ]
+        },
+        {
+          "title": "What the shortlist should reward",
+          "summary": "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+          "paragraphs": [
+            "A New Jersey household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.",
+            "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification."
+          ],
+          "bullets": [
+            "Claim fit first.",
+            "Maintenance honesty second.",
+            "Whole-house remains outside this lane."
+          ]
+        },
+        {
+          "title": "How this protects both trust and conversion quality",
+          "summary": "It gives New Jersey users a buying step without rewriting the record they just read.",
+          "paragraphs": [
+            "A statewide buying query often hides a better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.",
+            "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path."
+          ],
+          "bullets": [
+            "It answers a commercial query without skipping interpretation.",
+            "It improves click quality by narrowing the path.",
+            "It keeps New Jersey from collapsing into location-spam commerce."
+          ]
+        }
+      ]
+    },
+    {
       "slug": "nsf-53-vs-58-claim-examples",
+      "editorialRank": 6,
       "eyebrow": "Compare page",
       "title": "NSF 53 vs 58 claim examples matter more than the badge shorthand",
       "lede": "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record.",
@@ -454,6 +902,117 @@
             "Resolve shorthand with examples.",
             "Keep the listing evidence visible.",
             "Move the user into the right product lane, not just any click."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "california-certified-pou-after-utility-context",
+      "editorialRank": 7,
+      "eyebrow": "Regional compare page",
+      "title": "California certified point-of-use after a utility PFAS record should stay system-led and proportional",
+      "lede": "This compare page is for California households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Sacramento and East Los Angeles into one state-level buying answer.",
+      "queryIntent": "Regional post-utility comparison",
+      "nextActionTitle": "Keep the compare lane tied to the exact California utility dossier",
+      "nextActionSummary": "Use California as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes": [
+        "Claim-level PFAS support for an ingestion-focused route",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to a California utility dossier"
+      ],
+      "whyThis": [
+        "California now has two seeded utility dossiers with different route posture.",
+        "Households searching within California still need a system-led compare lane rather than a statewide roundup.",
+        "This page gives the project a narrower commercial lane than a generic best-filter page."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility dossier.",
+        "It does not turn one California record into a fit for another system.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "Sacramento and East Los Angeles give the compare lane both a detectable CCR route and a treated-water non-detect dossier.",
+        "EPA filter guidance still keeps claim review tied to exact certified products.",
+        "A California compare lane is strongest when it stays downstream from the system record."
+      ],
+      "targetQueries": [
+        "california pfas filter after utility report",
+        "california pfas filter after water notice",
+        "certified pfas filter california utility"
+      ],
+      "relatedGuideSlugs": [
+        "california-pfas-utility-records",
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "CA3410020",
+        "CA1910036"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "sacramento-2024-water-quality-report",
+        "sacramento-pfas-faq",
+        "east-la-2024-water-quality-report",
+        "calwater-2024-pfas-application",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/guides/california-pfas-utility-records",
+      "primaryLabel": "Read California utility guide",
+      "secondaryHref": "/checker",
+      "secondaryLabel": "Open Action Checker",
+      "lastVerifiedDate": "2026-03-23",
+      "sections": [
+        {
+          "title": "Why California needs its own post-utility compare lane",
+          "summary": "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending California is one PFAS document.",
+          "paragraphs": [
+            "The California cluster now gives the project two distinct public-water entry points with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.",
+            "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads."
+          ],
+          "bullets": [
+            "California is the navigation layer.",
+            "The exact utility dossier is the evidence layer.",
+            "Certified point-of-use is the commercial layer."
+          ]
+        },
+        {
+          "title": "What the shortlist should reward",
+          "summary": "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+          "paragraphs": [
+            "A California household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.",
+            "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification."
+          ],
+          "bullets": [
+            "Claim fit first.",
+            "Maintenance honesty second.",
+            "Whole-house remains outside this lane."
+          ]
+        },
+        {
+          "title": "How this protects both trust and conversion quality",
+          "summary": "It gives California users a buying step without rewriting the record they just read.",
+          "paragraphs": [
+            "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.",
+            "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path."
+          ],
+          "bullets": [
+            "It answers a commercial query without skipping interpretation.",
+            "It improves click quality by narrowing the path.",
+            "It keeps California from collapsing into location-spam commerce."
           ]
         }
       ]

@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "state_code": "PA",
+  "agency_name": "Pennsylvania Department of Health / Pennsylvania Department of Environmental Protection",
+  "agency_url": "https://www.pa.gov/agencies/health/programs/environmental-health/well-water.html",
+  "private_well_guidance_url": "https://www.pa.gov/agencies/health/programs/environmental-health/well-water.html",
+  "pfas_guidance_url": "https://www.pa.gov/content/dam/copapwp-pagov/en/health/documents/topics/documents/environmental-health/PFAS%20and%20Well%20Water%20Factsheet.pdf",
+  "certified_lab_lookup_url": "https://www.pa.gov/services/dep/apply-for-laboratory-accreditation",
+  "sampling_guidance_url": "https://www.pa.gov/agencies/health/programs/environmental-health/well-water.html",
+  "repeat_testing_guidance": "Pennsylvania does not publish a single universal PFAS retesting cadence for all private wells in Sharp v1. Keep repeat testing tied to accredited-lab interpretation, Pennsylvania agency guidance, and any site-specific investigation follow-up.",
+  "benchmark_notes": "Pennsylvania private wells are owner-managed, not regulated public-water systems. Pennsylvania's PFAS MCL rule can supply reference context for covered analytes, but private-well outputs should stay reference-based and should not be framed as compliance findings.",
+  "last_verified_date": "2026-03-22",
+  "source_ids": [
+    "pa-well-water",
+    "pa-laboratory-accreditation",
+    "pa-pfas-private-well-factsheet",
+    "pa-pfas-mcl-rule"
+  ]
+}

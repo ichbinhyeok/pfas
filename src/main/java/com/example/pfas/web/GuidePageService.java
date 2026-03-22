@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class GuidePageService {
 
+	private static final Comparator<GuidePage> PAGE_ORDER = Comparator
+		.comparing(GuidePage::editorialRank, Comparator.nullsLast(Comparator.naturalOrder()))
+		.thenComparing(GuidePage::slug);
+
 	private final GuidePageRepository guidePageRepository;
 	private volatile List<GuidePage> cachedPages;
 
@@ -25,7 +29,7 @@ public class GuidePageService {
 		synchronized (this) {
 			if (cachedPages == null) {
 				cachedPages = guidePageRepository.findAll().stream()
-					.sorted(Comparator.comparing(GuidePage::slug))
+					.sorted(PAGE_ORDER)
 					.toList();
 			}
 			return cachedPages;

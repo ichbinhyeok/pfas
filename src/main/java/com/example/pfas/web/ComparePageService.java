@@ -20,7 +20,9 @@ import com.example.pfas.water.PublicWaterSystemService;
 @Service
 public class ComparePageService {
 
-	private static final Comparator<ComparePage> PAGE_ORDER = Comparator.comparing(ComparePage::slug);
+	private static final Comparator<ComparePage> PAGE_ORDER = Comparator
+		.comparing(ComparePage::editorialRank, Comparator.nullsLast(Comparator.naturalOrder()))
+		.thenComparing(ComparePage::slug);
 
 	private final ComparePageRepository comparePageRepository;
 	private final GuidePageService guidePageService;
@@ -88,6 +90,7 @@ public class ComparePageService {
 			.map(page -> new java.util.AbstractMap.SimpleEntry<>(page, score(guideProductIds, guidePwsids, guideSources, guideKeywords, page)))
 			.filter(entry -> entry.getValue() > 0)
 			.sorted(Comparator.<java.util.AbstractMap.SimpleEntry<ComparePage, Integer>>comparingInt(java.util.AbstractMap.SimpleEntry::getValue).reversed()
+				.thenComparing(entry -> entry.getKey().editorialRank(), Comparator.nullsLast(Comparator.naturalOrder()))
 				.thenComparing(entry -> entry.getKey().slug()))
 			.limit(limit)
 			.map(java.util.AbstractMap.SimpleEntry::getKey)

@@ -10,6 +10,8 @@
 @param List<SourceDocument> sources
 @param boolean pageIndexable
 
+!{ var hasPopulationServed = system.populationServed() != null && !system.populationServed().isBlank(); }
+
 @template.layout.base(
     pageTitle = system.pwsName() + " utility context",
     pageDescription = "Utility-context page for " + system.pwsName() + " before result interpretation.",
@@ -79,11 +81,13 @@
                 <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${systemTypeLabel(system.systemType())}</div>
                 <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Operational context before any filter comparison.</div>
             </div>
-            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
-                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Population served</div>
-                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${system.populationServed()}</div>
-                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Utility scale can affect response timing and context.</div>
-            </div>
+            @if(hasPopulationServed)
+                <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
+                    <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Population served</div>
+                    <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${system.populationServed()}</div>
+                    <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">Utility scale can affect response timing and context.</div>
+                </div>
+            @endif
             <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
                 <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Last verified</div>
                 <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${system.lastVerifiedDate()}</div>
@@ -157,7 +161,9 @@
                         <ul class="space-y-3 text-sm leading-7 text-base-content/72">
                             <li>PWSID: ${system.pwsid()}</li>
                             <li>System type: ${systemTypeLabel(system.systemType())}</li>
-                            <li>Population served: ${system.populationServed()}</li>
+                            @if(hasPopulationServed)
+                                <li>Population served: ${system.populationServed()}</li>
+                            @endif
                             <li>Source water type: ${sourceWaterTypeLabel(system.sourceWaterType())}</li>
                             <li>Last verified: ${system.lastVerifiedDate()}</li>
                         </ul>

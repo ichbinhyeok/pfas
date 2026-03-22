@@ -29,9 +29,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <script defer src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
     <script defer src="/js/merchant-tracking.js"></script>
+    <script defer src="/js/route-click-tracking.js"></script>
     <script defer src="/js/route-actions.js"></script>
     <link rel="stylesheet" href="/css/tailwind.css">
     <link rel="stylesheet" href="/css/app.css">

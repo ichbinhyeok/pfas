@@ -178,6 +178,71 @@
       "notes": "Official Alpine Terrace PFAS report showing non-detect values across the mapped benchmark analytes."
     },
     {
+      "source_id": "ann-arbor-2024-water-quality-report",
+      "organization": "City of Ann Arbor",
+      "title": "2024 Water Quality Report",
+      "url": "https://www.a2gov.org/media/gjbl30sb/2024-water-quality-report_final.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T23:40:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Ann Arbor 2024 water quality report showing Supply Serial Number 0220 and a grouped PFAS row with listed analytes below 2.0 ppt."
+    },
+    {
+      "source_id": "ann-arbor-pfas-page",
+      "organization": "City of Ann Arbor",
+      "title": "PFAS and Your Drinking Water in Ann Arbor",
+      "url": "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/pfas-and-your-drinking-water-in-ann-arbor/",
+      "source_kind": "utility_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T23:40:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility PFAS reporting context",
+        "state benchmark context",
+        "treatment scope clarification"
+      ],
+      "disallowed_uses": [
+        "household tap safety claim"
+      ],
+      "notes": "Official Ann Arbor PFAS page explaining that current finished-water PFAS concentrations remain significantly below Michigan's adopted PFAS MCLs."
+    },
+    {
+      "source_id": "ann-arbor-water-report-page",
+      "organization": "City of Ann Arbor",
+      "title": "Water Quality Report",
+      "url": "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/water-quality-report/",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T23:40:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "utility identity"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Ann Arbor water quality report landing page used to anchor the current annual report."
+    },
+    {
       "source_id": "amway-espring-100186-cartridge",
       "organization": "Amway",
       "title": "eSpring UV Water Purifier Replacement Filter Cartridge With UV Technology",
@@ -265,6 +330,155 @@
         "cross-system extrapolation"
       ],
       "notes": "Official Apple Canyon PFAS report showing non-detect results across the mapped PFAS analytes in 2023."
+    },
+    {
+      "source_id": "aqua-hamilton-2024-water-quality-report",
+      "organization": "Aqua New Jersey",
+      "title": "2024 Hamilton System Water Quality Report",
+      "url": "https://prod.aquawater.com/WaterQualityReports/2024/NJ/NJ1103001.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Hamilton System report for Aqua New Jersey showing PWSID NJ1103001 with PFOS highest running annual average 10.9 ppt and PFOA highest running annual average 9.4 ppt."
+    },
+    {
+      "source_id": "aqua-new-jersey-home",
+      "organization": "Aqua New Jersey",
+      "title": "Aqua New Jersey | Essential Utilities",
+      "url": "https://www.aquawater.com/about/states-we-serve/new-jersey.php",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Aqua New Jersey state page describing service territory and water quality reporting posture."
+    },
+    {
+      "source_id": "aqua-pfas-new-jersey",
+      "organization": "Aqua New Jersey",
+      "title": "PFAS - New Jersey | Essential Utilities",
+      "url": "https://www.aquawater.com/all-about-water-wastewater/water-quality/pfas-new-jersey",
+      "source_kind": "utility_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility PFAS reporting context",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Aqua New Jersey PFAS page directing customers to system-specific annual water quality reports."
+    },
+    {
+      "source_id": "aqua-water-quality-reports",
+      "organization": "Aqua",
+      "title": "Water Quality Reports | Essential Utilities",
+      "url": "https://www.aquawater.com/all-about-water-wastewater/water-quality/water-quality-reports",
+      "source_kind": "utility_report_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "US",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:35:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility report index",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Aqua water quality report index used to locate annual system CCRs."
+    },
+    {
+      "source_id": "aqua-pa-main-system-2024-water-quality-report",
+      "organization": "Aqua Pennsylvania",
+      "title": "2024 Water Quality Report Main System",
+      "url": "https://prod.aquawater.com/WaterQualityReports/2024/PA/PA1460073.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:46:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Aqua Pennsylvania main system report for PWSID PA1460073 showing PFOA average detection 7.0 ppt and PFOS average detection 5.9 ppt with annual ranges."
+    },
+    {
+      "source_id": "aqua-pennsylvania-home",
+      "organization": "Aqua Pennsylvania",
+      "title": "Aqua Pennsylvania | Essential Utilities",
+      "url": "https://www.aquawater.com/about/states-we-serve/pennsylvania/index.php",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:46:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Aqua Pennsylvania state page describing statewide service area and water quality reporting posture."
+    },
+    {
+      "source_id": "aqua-pfas-pennsylvania",
+      "organization": "Aqua Pennsylvania",
+      "title": "PFAS - Pennsylvania | Essential Utilities",
+      "url": "https://www.aquawater.com/all-about-water-wastewater/water-quality/pfas-pennsylvania",
+      "source_kind": "utility_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:46:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility PFAS reporting context",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Aqua Pennsylvania PFAS page directing customers to system-specific annual water quality reports and additional PFAS monitoring pages."
     },
     {
       "source_id": "aq-claryum-2-stage-performance-pdf",
@@ -1249,6 +1463,174 @@
       "notes": "California Water Boards PFAS page used for state-level PFAS context."
     },
     {
+      "source_id": "ca-pfas-general-order-exhibit-a",
+      "organization": "California State Water Resources Control Board",
+      "title": "PFAS DDW General Order Exhibit A List of Sources",
+      "url": "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/pfas_ddw_general_order/docs/exhibit-a-list-of-sources.pdf",
+      "source_kind": "state_utility_registry_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T15:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "PWSID confirmation",
+        "California utility registry context"
+      ],
+      "disallowed_uses": [
+        "household PFAS interpretation without utility records"
+      ],
+      "notes": "California Water Boards Exhibit A confirms City of Sacramento Main under PWSID CA3410020."
+    },
+    {
+      "source_id": "sacramento-2024-water-quality-report",
+      "organization": "City of Sacramento",
+      "title": "2024 Consumer Confidence Report",
+      "url": "https://www.cityofsacramento.gov/content/dam/portal/dou/utilities/water/water-quality/documents/2024%20Consumer%20Confidence%20Report.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T15:05:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "CCR PFAS table extraction",
+        "Sacramento PFAS observation support"
+      ],
+      "disallowed_uses": [
+        "future compliance prediction"
+      ],
+      "notes": "City of Sacramento 2024 CCR lists PFHxS max annual average at 3.7 ng/L and PFPeA at 3.9 ng/L."
+    },
+    {
+      "source_id": "sacramento-pfas-faq",
+      "organization": "City of Sacramento",
+      "title": "PFAS",
+      "url": "https://www.cityofsacramento.gov/utilities/water-quality/frequently-asked-questions/pfas.html",
+      "source_kind": "utility_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T15:00:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility PFAS context",
+        "household next-step framing"
+      ],
+      "disallowed_uses": [
+        "quantitative PFAS extraction without report support"
+      ],
+      "notes": "City of Sacramento PFAS FAQ provides utility-specific PFAS context for residents."
+    },
+    {
+      "source_id": "sacramento-water-quality-page",
+      "organization": "City of Sacramento",
+      "title": "Water Quality",
+      "url": "https://www.cityofsacramento.gov/utilities/water-quality",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T14:58:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility homepage context",
+        "CCR navigation support"
+      ],
+      "disallowed_uses": [
+        "PFAS value extraction"
+      ],
+      "notes": "City of Sacramento water quality page is the official entry point for current reports and PFAS context."
+    },
+    {
+      "source_id": "calwater-2024-pfas-application",
+      "organization": "California Water Service",
+      "title": "2024 PFAS Application",
+      "url": "https://www.calwater.com/rates/other-regulatory/2024-pfas-application/",
+      "source_kind": "utility_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": "2025-06-02",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-23T00:05:00+09:00",
+      "effective_date": "2025-06-02",
+      "allowed_uses": [
+        "utility PFAS treatment context",
+        "California Cal Water PFAS upgrade context"
+      ],
+      "disallowed_uses": [
+        "district-specific PFAS value extraction without CCR support"
+      ],
+      "notes": "Cal Water PFAS application page describes treatment planning and PFAS infrastructure context across California districts."
+    },
+    {
+      "source_id": "east-la-2024-water-quality-page",
+      "organization": "California Water Service",
+      "title": "East Los Angeles 2024 Water Quality Report",
+      "url": "https://www.calwater.com/ccrs/ela-ela-2024/",
+      "source_kind": "utility_report_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-23T00:03:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "district report discovery",
+        "East Los Angeles utility context"
+      ],
+      "disallowed_uses": [
+        "PFAS benchmark extraction without CCR support"
+      ],
+      "notes": "Cal Water East Los Angeles report landing page provides the district report context and contact framing."
+    },
+    {
+      "source_id": "east-la-2024-water-quality-report",
+      "organization": "California Water Service",
+      "title": "East Los Angeles District 2024 Water Quality Report",
+      "url": "https://www.calwater.com/docs/ccr/2024/ela-ela-2024.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": "2025-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-23T00:02:00+09:00",
+      "effective_date": "2025-01-01",
+      "allowed_uses": [
+        "East Los Angeles PFAS table extraction",
+        "district action-item review"
+      ],
+      "disallowed_uses": [
+        "statewide PFAS generalization"
+      ],
+      "notes": "East Los Angeles 2024 CCR reports treated-water PFHxS, PFOA, and PFOS averages as ND while noting PFAS treatment work for certain wells."
+    },
+    {
+      "source_id": "east-la-system-detail",
+      "organization": "California State Water Resources Control Board",
+      "title": "Water System Details: California Water Service Co. - ELA",
+      "url": "https://sdwis.waterboards.ca.gov/PDWW/JSP/WaterSystemDetail.jsp?counter=0&tinwsys_is_number=2592&tinwsys_st_code=CA",
+      "source_kind": "state_utility_registry_page",
+      "trust_tier": 2,
+      "jurisdiction": "CA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-23T00:01:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "PWSID confirmation",
+        "utility registry support"
+      ],
+      "disallowed_uses": [
+        "household PFAS interpretation without utility records"
+      ],
+      "notes": "California Drinking Water Watch confirms California Water Service Co. - ELA under PWSID CA1910036."
+    },
+    {
       "source_id": "calvada-meadows-2024-water-quality-report",
       "organization": "Great Basin Water",
       "title": "Annual Water Quality Report 2024 Calvada Meadows CCR 443CM 891",
@@ -1313,6 +1695,71 @@
         "cross-system extrapolation"
       ],
       "notes": "Official Carolina Trace CCR showing PWS ID NC0353101 and 2024 PFAS amount-detected values."
+    },
+    {
+      "source_id": "cambridge-2024-water-quality-report",
+      "organization": "Cambridge Water Department",
+      "title": "2024 Annual Drinking Water Quality Report",
+      "url": "https://www.cambridgema.gov/-/media/Files/waterdepartment/labfiles/2024annualdrinkingwaterqualityreport.pdf",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": "2025-06-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": "2025-06-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "utility profile",
+        "treatment context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Cambridge annual drinking water quality report distributed in June 2025 confirming PWS ID 3049000 and describing the surface-water treatment context."
+    },
+    {
+      "source_id": "cambridge-pfas-test-results",
+      "organization": "Cambridge Water Department",
+      "title": "PFAS Test Results",
+      "url": "https://www.cambridgema.gov/Water/wateroperationsdivision/waterchemistryinformationforplumbers/pfasinformation/pfastestresults",
+      "source_kind": "utility_notice_page",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "benchmark comparison input",
+        "utility-specific PFAS context"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Cambridge PFAS results page showing monthly PFAS6 finished-water sums including the November 2023 value of 6.3 ppt."
+    },
+    {
+      "source_id": "cambridge-water-home",
+      "organization": "City of Cambridge",
+      "title": "Cambridge Water Department",
+      "url": "https://www.cambridgema.gov/Water",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "MA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "official navigation anchor"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Cambridge Water Department landing page used as the public utility identity anchor."
     },
     {
       "source_id": "carolina-water-home",
@@ -2252,6 +2699,28 @@
       "notes": "Current Maine CDC private-well guidance page used for owner-responsibility and follow-up context."
     },
     {
+      "source_id": "mi-community-water-supply-list-2025",
+      "organization": "Michigan Department of Environment, Great Lakes, and Energy",
+      "title": "Michigan Community Water Supply List",
+      "url": "https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/DWEHD/Community-Water-Supply/Contact-Information-Maps/community-water-supply-list.pdf",
+      "source_kind": "state_utility_registry_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "MI",
+      "published_date": "2025-09-01",
+      "last_updated_date": "2025-09-01",
+      "retrieved_at": "2026-03-22T23:40:00+09:00",
+      "effective_date": "2025-09-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "population verification",
+        "source water verification"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Michigan community water supply list confirming MI0000220 for Ann Arbor with surface-water source and population-served context."
+    },
+    {
       "source_id": "mi-pfas-home-testing-labs",
       "organization": "Michigan PFAS Action Response Team",
       "title": "PFAS Testing Laboratories",
@@ -2708,6 +3177,70 @@
         "private well legal compliance determination"
       ],
       "notes": "Pennsylvania established MCLs of 14 ppt for PFOA and 18 ppt for PFOS in January 2023."
+    },
+    {
+      "source_id": "penn-estates-2024-water-quality-report",
+      "organization": "Community Utilities of Pennsylvania, Inc.",
+      "title": "Annual Water Quality Report 2024 Penn Estates CCR 317",
+      "url": "https://www.myutility.us/docs/default-source/pennsylvania/water-quality-reports/penn-estates/2024/pennestates-24ccr-317.pdf?sfvrsn=53fb3c5b_4",
+      "source_kind": "utility_ccr_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": "2024-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:18:00+09:00",
+      "effective_date": "2024-01-01",
+      "allowed_uses": [
+        "pwsid verification",
+        "direct PFAS value extraction",
+        "utility profile"
+      ],
+      "disallowed_uses": [
+        "cross-system extrapolation"
+      ],
+      "notes": "Official Penn Estates 2024 CCR identifies PWSID PA2450065, seven groundwater wells, and PFAS averages reported within the annual report."
+    },
+    {
+      "source_id": "pennsylvania-water-home",
+      "organization": "Community Utilities of Pennsylvania, Inc.",
+      "title": "Community Utilities of Pennsylvania, Inc.",
+      "url": "https://www.myutility.us/pennsylvania",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:18:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Pennsylvania state landing page for Community Utilities of Pennsylvania, Inc."
+    },
+    {
+      "source_id": "pennsylvania-water-quality-reports",
+      "organization": "Community Utilities of Pennsylvania, Inc.",
+      "title": "Water Safety | Water Quality Reports",
+      "url": "https://www.myutility.us/pennsylvania/water-safety/water-quality-reports",
+      "source_kind": "utility_report_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:18:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility report index",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Community Utilities of Pennsylvania report index listing Penn Estates annual water quality reports."
     },
     {
       "source_id": "phila-2024-water-quality-report",
@@ -3593,6 +4126,92 @@
         "cross-system extrapolation"
       ],
       "notes": "Official Spanish Springs CCR confirming PWS ID NV0001086 and groundwater system profile."
+    },
+    {
+      "source_id": "seattle-pfas-page",
+      "organization": "Seattle Public Utilities",
+      "title": "PFAS",
+      "url": "https://www.seattle.gov/utilities/your-services/water/water-quality/quality-concerns/pfas",
+      "source_kind": "utility_notice_page",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "direct PFAS value extraction",
+        "utility-specific PFAS context",
+        "treatment scope clarification"
+      ],
+      "disallowed_uses": [
+        "household tap safety claim"
+      ],
+      "notes": "Official Seattle PFAS page stating that 2023 Cedar and Tolt finished-water UCMR5 samples showed no detections for the mapped analytes and clarifying that 2022 well detections were not introduced into the drinking water system."
+    },
+    {
+      "source_id": "seattle-utilities-home",
+      "organization": "Seattle Public Utilities",
+      "title": "Seattle Public Utilities",
+      "url": "https://www.seattle.gov/utilities",
+      "source_kind": "utility_home_page",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "utility identity",
+        "official navigation anchor"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Seattle Public Utilities homepage used as the public-water identity anchor."
+    },
+    {
+      "source_id": "seattle-water-quality-reports",
+      "organization": "Seattle Public Utilities",
+      "title": "Water Quality Annual Reports",
+      "url": "https://www.seattle.gov/utilities/about/reports/water-quality",
+      "source_kind": "utility_reports_index_page",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "report directory",
+        "system report discovery"
+      ],
+      "disallowed_uses": [
+        "benchmark substitution without report-level data"
+      ],
+      "notes": "Official Seattle Public Utilities water-quality reports index used to anchor annual drinking-water report discovery."
+    },
+    {
+      "source_id": "seattle-water-system-plan-2019",
+      "organization": "Seattle Public Utilities",
+      "title": "SPU Final 2019 Water System Plan Volume 1",
+      "url": "https://www.seattle.gov/documents/Departments/SPU/Documents/SPUFinal2019_WSP_Volume1.pdf",
+      "source_kind": "utility_system_plan_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "WA",
+      "published_date": "2019-01-01",
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T11:10:00+09:00",
+      "effective_date": "2019-01-01",
+      "allowed_uses": [
+        "utility profile",
+        "source water verification",
+        "service-area context"
+      ],
+      "disallowed_uses": [
+        "direct PFAS value extraction"
+      ],
+      "notes": "Official Seattle water system plan describing the regional surface-water system and service-area population context."
     },
     {
       "source_id": "spanish-springs-pfas-2023-report",
@@ -4490,6 +5109,184 @@
         "safe or unsafe household determination"
       ],
       "notes": "Community Utilities of Indiana 2024 CCR confirming PWS ID IN5245057, purchased Lake Michigan supply, and integrated PFAS table showing non-detect across the mapped analytes."
+    },
+    {
+      "source_id": "pa-well-water",
+      "organization": "Pennsylvania Department of Health",
+      "title": "Well Water",
+      "url": "https://www.pa.gov/agencies/health/programs/environmental-health/well-water.html",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T20:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state private well guidance",
+        "sampling context",
+        "testing path"
+      ],
+      "disallowed_uses": [
+        "legal compliance determination",
+        "safe or unsafe household determination"
+      ],
+      "notes": "Pennsylvania Department of Health well-water guidance page for homeowner testing, interpretation resources, and private well care context."
+    },
+    {
+      "source_id": "pa-laboratory-accreditation",
+      "organization": "Pennsylvania Department of Environmental Protection",
+      "title": "Laboratory Accreditation Program",
+      "url": "https://www.pa.gov/services/dep/apply-for-laboratory-accreditation",
+      "source_kind": "state_lab_lookup_page",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T20:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "certified lab lookup",
+        "laboratory accreditation context",
+        "testing logistics"
+      ],
+      "disallowed_uses": [
+        "health interpretation"
+      ],
+      "notes": "Pennsylvania DEP laboratory accreditation page, including the search path for accredited environmental laboratories used for drinking-water testing."
+    },
+    {
+      "source_id": "pa-pfas-private-well-factsheet",
+      "organization": "Pennsylvania Department of Health",
+      "title": "PFAS and Private Well Water",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/health/documents/topics/documents/environmental-health/PFAS%20and%20Well%20Water%20Factsheet.pdf",
+      "source_kind": "state_private_well_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "PA",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T20:45:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "private well PFAS guidance",
+        "testing path",
+        "state referral layer"
+      ],
+      "disallowed_uses": [
+        "medical diagnosis",
+        "private well compliance determination"
+      ],
+      "notes": "Pennsylvania Department of Health factsheet explaining PFAS and private well water, including testing, accredited laboratory references, and interpretation guardrails."
+    },
+    {
+      "source_id": "nj-private-well-outreach",
+      "organization": "New Jersey Department of Health",
+      "title": "Private Well Outreach Project",
+      "url": "https://www.nj.gov/health/ceohs/environmental-occupational/private-well-outreach/",
+      "source_kind": "state_private_well_guidance_page",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:00:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "state private well guidance",
+        "private well outreach context",
+        "testing map referral"
+      ],
+      "disallowed_uses": [
+        "household compliance determination"
+      ],
+      "notes": "New Jersey Department of Health private well outreach page linking homeowners to NJDEP private well information resources and testing maps."
+    },
+    {
+      "source_id": "nj-pfas-private-well-factsheet",
+      "organization": "New Jersey Department of Health",
+      "title": "PFAS in private well water",
+      "url": "https://www.nj.gov/health/ceohs/documents/pfas_well_water.pdf",
+      "source_kind": "state_private_well_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": "2025-07-01",
+      "retrieved_at": "2026-03-22T21:00:00+09:00",
+      "effective_date": "2025-07-01",
+      "allowed_uses": [
+        "private well PFAS guidance",
+        "state referral layer",
+        "testing and treatment context"
+      ],
+      "disallowed_uses": [
+        "medical diagnosis",
+        "private well compliance determination"
+      ],
+      "notes": "New Jersey Department of Health PFAS private well factsheet covering PWTA testing, certified laboratory routing, and Spill Fund treatment context."
+    },
+    {
+      "source_id": "nj-private-wells-factsheet",
+      "organization": "New Jersey Department of Health",
+      "title": "Drinking Water Facts: Private Wells",
+      "url": "https://nj.gov/health/ceohs/documents/pw_faq.pdf",
+      "source_kind": "state_private_well_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": "2023-01-01",
+      "retrieved_at": "2026-03-22T21:00:00+09:00",
+      "effective_date": "2023-01-01",
+      "allowed_uses": [
+        "private well testing cadence context",
+        "pwta testing requirements",
+        "certified lab referral"
+      ],
+      "disallowed_uses": [
+        "PFAS-only household conclusion"
+      ],
+      "notes": "New Jersey Department of Health private wells factsheet describing PWTA testing requirements, PFAS among required parameters, and certified lab sample collection routing."
+    },
+    {
+      "source_id": "nj-pwta-certified-labs",
+      "organization": "New Jersey Department of Environmental Protection",
+      "title": "Laboratories Certified for PWTA Sample Collection",
+      "url": "https://njems.nj.gov/DataMiner/DM_REPORT.aspx?RN=Laboratories+Certified+for+PWTA+Sample+Collection&TOT=1",
+      "source_kind": "state_lab_lookup",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": null,
+      "last_updated_date": null,
+      "retrieved_at": "2026-03-22T21:00:00+09:00",
+      "effective_date": null,
+      "allowed_uses": [
+        "certified lab lookup",
+        "pwta sample collection routing"
+      ],
+      "disallowed_uses": [
+        "health interpretation"
+      ],
+      "notes": "NJDEP DataMiner report used to locate laboratories certified for PWTA sample collection and private well testing logistics."
+    },
+    {
+      "source_id": "nj-pfas-mcl-transition-letter",
+      "organization": "New Jersey Department of Environmental Protection",
+      "title": "DEP Commissioner Letter to DWQI on PFAS MCLs",
+      "url": "https://www.nj.gov/dep/watersupply/pdf/dwqi-cmmr-ltr-usepa-pfas-mcls-2025.pdf",
+      "source_kind": "state_guidance_pdf",
+      "trust_tier": 2,
+      "jurisdiction": "NJ",
+      "published_date": "2025-05-28",
+      "last_updated_date": "2025-05-28",
+      "retrieved_at": "2026-03-22T21:00:00+09:00",
+      "effective_date": "2025-05-28",
+      "allowed_uses": [
+        "state mcl benchmark",
+        "transition note",
+        "reference context"
+      ],
+      "disallowed_uses": [
+        "private well legal compliance determination"
+      ],
+      "notes": "NJDEP letter summarizing current New Jersey PFAS MCLs of 14 ppt for PFOA and 13 ppt each for PFOS and PFNA while additional state-federal PFAS standard work continues."
     }
   ]
 }

@@ -4,6 +4,7 @@
   "guides": [
     {
       "slug": "public-water-vs-private-well",
+      "editorialRank": 1,
       "eyebrow": "High-intent guide",
       "title": "Public water vs private well is the first split, not a small detail",
       "lede": "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
@@ -101,6 +102,7 @@
     },
     {
       "slug": "test-first-vs-filter-first",
+      "editorialRank": 2,
       "eyebrow": "High-intent guide",
       "title": "Test first vs filter first is mostly a question about evidence quality",
       "lede": "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
@@ -200,6 +202,7 @@
     },
     {
       "slug": "read-your-ccr",
+      "editorialRank": 3,
       "eyebrow": "High-intent guide",
       "title": "How to read your CCR or utility report without turning it into a false household verdict",
       "lede": "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
@@ -306,6 +309,7 @@
     },
     {
       "slug": "how-to-read-a-pfas-utility-notice",
+      "editorialRank": 6,
       "eyebrow": "Decision-intent guide",
       "title": "A PFAS utility notice is an action document, not a generic scare document",
       "lede": "If a utility sends a PFAS notice, read the exact system and contaminant context first, then decide whether certified point-of-use treatment is justified.",
@@ -407,6 +411,7 @@
     },
     {
       "slug": "what-ucmr5-can-and-cannot-tell-you",
+      "editorialRank": 15,
       "eyebrow": "Decision-intent guide",
       "title": "UCMR5 is useful PFAS evidence, but it is not a full household answer",
       "lede": "UCMR5 can be one of the fastest ways to understand a public-water PFAS signal, but it is easy to overread if you treat it like a final compliance verdict or a direct household test.",
@@ -502,6 +507,7 @@
     },
     {
       "slug": "non-detect-vs-below-reference-pfas",
+      "editorialRank": 14,
       "eyebrow": "Decision-intent guide",
       "title": "Non-detect and below reference are not the same PFAS answer",
       "lede": "A non-detect result and a below-reference detection both feel reassuring, but they mean different things for confidence, monitoring, and product urgency.",
@@ -602,6 +608,7 @@
     },
     {
       "slug": "nsf-53-vs-58-pfas",
+      "editorialRank": 9,
       "eyebrow": "High-intent guide",
       "title": "NSF 53 vs 58 is not enough by itself for PFAS decisions",
       "lede": "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit.",
@@ -701,6 +708,7 @@
     },
     {
       "slug": "carbon-vs-ro-for-pfas",
+      "editorialRank": 13,
       "eyebrow": "Decision-intent guide",
       "title": "Carbon vs reverse osmosis for PFAS is a fit question, not a badge question",
       "lede": "Carbon and reverse osmosis can both reduce PFAS when the specific product has the right claim set. The real decision is fit, maintenance, and evidence state, not technology pride.",
@@ -804,6 +812,7 @@
     },
     {
       "slug": "under-sink-vs-whole-house",
+      "editorialRank": 11,
       "eyebrow": "High-intent guide",
       "title": "Under-sink vs whole-house should start with purpose, not fear",
       "lede": "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
@@ -907,6 +916,7 @@
     },
     {
       "slug": "pfas-filter-annual-cost",
+      "editorialRank": 10,
       "eyebrow": "High-intent guide",
       "title": "PFAS filter annual cost matters because maintenance changes the real decision",
       "lede": "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
@@ -1015,6 +1025,7 @@
     },
     {
       "slug": "choose-certified-pfas-filter-after-evidence",
+      "editorialRank": 8,
       "eyebrow": "Money-path guide",
       "title": "After you have direct evidence choose a certified PFAS filter by fit not hype",
       "lede": "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route.",
@@ -1124,6 +1135,7 @@
     },
     {
       "slug": "countertop-vs-pitcher-vs-under-sink-for-pfas",
+      "editorialRank": 12,
       "eyebrow": "Money-path guide",
       "title": "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
       "lede": "The product class should reflect evidence strength, maintenance tolerance, and daily workflow. The most expensive form factor is not automatically the most rational one.",
@@ -1224,6 +1236,767 @@
         "aquasana-aq-mf-1",
         "aquasana-aq-6200",
         "waterdrop-c1s",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "ccr-without-pfas-line",
+      "editorialRank": 5,
+      "eyebrow": "High-intent guide",
+      "title": "No PFAS line in your CCR is not the end of the question",
+      "lede": "A CCR without an obvious PFAS line can still be useful, but it should push the household toward the system record, report date, and newer utility PFAS materials instead of a false all-clear.",
+      "nextActionTitle": "Use the CCR to find the next direct utility layer",
+      "nextActionSummary": "If PFAS is not obvious in the annual report, check the report year, system identity, and whether a newer PFAS notice or utility page exists before treating the route as settled.",
+      "whyThis": [
+        "A CCR is time-bound and can lag newer PFAS notices or utility updates.",
+        "A missing PFAS line is not the same thing as a household tap result.",
+        "The useful move is to continue reading the utility record, not to jump straight into a buying flow."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not prove the water is safe.",
+        "It does not replace a newer PFAS utility page or notice.",
+        "It does not justify whole-house or product urgency on its own."
+      ],
+      "checklist": [
+        "Confirm the report year and the exact system.",
+        "Look for a newer PFAS-specific utility page or notice.",
+        "Only then decide whether interpretation or optional point-of-use comparison should open."
+      ],
+      "evidenceHighlights": [
+        "EPA CCR guidance makes the report a routing document, not a household verdict.",
+        "Utility-specific notices can outrank an older annual report.",
+        "The route stays public-water-first until direct utility context is exhausted."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "lancaster-pfoa-notice-2025",
+        "epa-ucmr5-main"
+      ],
+      "primaryHref": "/guides/read-your-ccr",
+      "primaryLabel": "Read the CCR guide",
+      "secondaryHref": "/guides/how-to-read-a-pfas-utility-notice",
+      "secondaryLabel": "Read the notice guide",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "A missing PFAS line is still a routing clue",
+          "summary": "The useful question is not whether the CCR feels reassuring. It is whether the report gives you the exact system, timing, and next place to look.",
+          "paragraphs": [
+            "A public-water household should treat the CCR as the start of the direct evidence stack. If the PFAS detail is missing or thin, that usually means the route should move to newer utility material rather than to generalized guessing.",
+            "That is why this state should stay interpretive. The absence of a visible PFAS line is not a product trigger and not a household all-clear."
+          ],
+          "bullets": [
+            "Use the report year to judge freshness.",
+            "Use the system name and PWSID to find newer utility records.",
+            "Do not convert a thin CCR into a final household answer."
+          ]
+        },
+        {
+          "title": "What to do next instead of overreacting",
+          "summary": "Keep the route disciplined: utility page, notice, then optional comparison only if the record supports it.",
+          "paragraphs": [
+            "If a newer PFAS page or notice exists, it should outrank the annual report for current decision-making. If no newer direct material is visible, the household can stay in a review-first posture rather than turning uncertainty into a shopping cue.",
+            "This is where many weak PFAS pages fail. They use ambiguity to sell hardware. The better move is to make the direct record more complete first."
+          ],
+          "bullets": [
+            "Uncertainty should stay visible.",
+            "Comparison opens only after the utility route is interpretable.",
+            "Whole-house remains a separate escalation case."
+          ]
+        }
+      ],
+      "queryIntent": "CCR interpretation gap",
+      "targetQueries": [
+        "no pfas in ccr what does it mean",
+        "ccr does not mention pfas",
+        "consumer confidence report no pfas line"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "FL3590615",
+        "FL3354695",
+        "GA3110075"
+      ],
+      "relatedProductIds": []
+    },
+    {
+      "slug": "unknown-or-not-comparable-pfas-result",
+      "editorialRank": 7,
+      "eyebrow": "High-intent guide",
+      "title": "Unknown or not comparable is a real PFAS result state, not a broken page",
+      "lede": "When the route cannot yet compare the current number against a usable benchmark, the answer should stay in interpretation and evidence collection instead of pretending the next step is obvious.",
+      "nextActionTitle": "Keep uncertainty visible and recover the missing context",
+      "nextActionSummary": "Unknown or not comparable means the household needs more context such as unit normalization, state benchmark posture, document freshness, or utility classification before hardware certainty opens.",
+      "whyThis": [
+        "PFAS routes often fail because they hide uncertainty instead of naming it.",
+        "Unknown and not comparable often point to missing units, weak benchmark fit, or stale source context.",
+        "A disciplined route should reopen the evidence layer before it reopens the product layer."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not prove a household problem is minor.",
+        "It does not prove a household problem is severe.",
+        "It does not justify shopping your way out of missing evidence."
+      ],
+      "checklist": [
+        "Check whether the route is public water or private well.",
+        "Check whether the current number is actually comparable to the reference layer.",
+        "Recover the missing context before comparing products."
+      ],
+      "evidenceHighlights": [
+        "EPA and state PFAS materials often separate screening context from direct compliance or reference context.",
+        "The engine already treats unknown and not comparable as first-class result states.",
+        "A closed product lane is part of the answer, not a failure of the page."
+      ],
+      "sourceIds": [
+        "epa-ucmr5-main",
+        "epa-ucmr-occurrence-data",
+        "epa-pfas-private-wells"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/test-first-vs-filter-first",
+      "secondaryLabel": "Read evidence-first logic",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why this state is healthy for the product",
+          "summary": "A trustworthy route needs a real way to stop before it drifts into fake confidence.",
+          "paragraphs": [
+            "PFAS decision pages often behave as if every route must end in a confident recommendation. That creates bad outcomes because many real household routes start from incomplete, stale, or mismatched evidence.",
+            "The better posture is to show unknown or not comparable as a legitimate route state and explain exactly what is missing."
+          ],
+          "bullets": [
+            "Missing evidence is still evidence about the route.",
+            "This state protects the household from overbuying.",
+            "This state protects the product from pretending too much."
+          ]
+        },
+        {
+          "title": "What usually resolves an unknown route",
+          "summary": "The fix is usually a better record, not a louder product page.",
+          "paragraphs": [
+            "For public water, the route often needs the actual utility notice, report date, or better system context. For private wells, it often needs unit normalization, analyte matching, or the correct state benchmark profile.",
+            "Once that missing layer is restored, the route can reopen interpretation and only then decide whether point-of-use comparison belongs on screen."
+          ],
+          "bullets": [
+            "Public water: utility record quality first.",
+            "Private well: lab and state context first.",
+            "Comparison stays closed until the route becomes comparable."
+          ]
+        }
+      ],
+      "queryIntent": "Uncertainty handling",
+      "targetQueries": [
+        "pfas result unknown what does it mean",
+        "pfas test not comparable",
+        "ucmr pfas not comparable"
+      ],
+      "relatedPwsids": [
+        "FL3590615",
+        "FL3591451",
+        "PA1510001"
+      ],
+      "relatedProductIds": []
+    },
+    {
+      "slug": "private-well-pfas-result-next-steps",
+      "editorialRank": 4,
+      "eyebrow": "High-intent guide",
+      "title": "A private-well PFAS result needs state context before product certainty",
+      "lede": "A number is useful only when the household knows which state reference posture applies, what the lab actually measured, and whether the route is comparable enough to justify treatment review.",
+      "nextActionTitle": "Interpret the result in the state route before comparing filters",
+      "nextActionSummary": "Private-well owners should move from number to state-guided interpretation, then to certified point-of-use only if the route actually justifies it.",
+      "whyThis": [
+        "Private wells are owner-managed and reference-based, not public-water compliance cases.",
+        "A lab result without state context can still be ambiguous.",
+        "Product certainty should not outrun benchmark clarity."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not turn a private-well result into a legal compliance verdict.",
+        "It does not prove a universal retesting cadence.",
+        "It does not automatically justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the result to the correct state route.",
+        "Check analyte, unit, and comparability notes.",
+        "Only then review certified point-of-use options."
+      ],
+      "evidenceHighlights": [
+        "EPA private-well guidance keeps testing and interpretation owner-driven.",
+        "State guidance changes what counts as a useful next step.",
+        "Point-of-use should stay ahead of whole-house for ingestion-focused private-well decisions."
+      ],
+      "sourceIds": [
+        "epa-private-wells",
+        "epa-pfas-private-wells",
+        "epa-certified-pfas-filter-guidance"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
+      "secondaryLabel": "Read post-evidence filter logic",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why the number alone is not enough",
+          "summary": "A private-well result is still a route input, not the whole decision.",
+          "paragraphs": [
+            "Well owners often feel that a lab number should instantly resolve the situation. In practice, the route still needs state posture, matched analyte logic, and sample context before treatment certainty becomes trustworthy.",
+            "That is why the engine treats private-well interpretation as a state-backed route rather than a single field in a spreadsheet."
+          ],
+          "bullets": [
+            "State context changes the meaning of the number.",
+            "Comparability matters as much as the raw value.",
+            "The buying step stays downstream from interpretation."
+          ]
+        },
+        {
+          "title": "What a disciplined next step looks like",
+          "summary": "Move from number to route, then from route to hardware.",
+          "paragraphs": [
+            "If the result sits above the current reference layer, certified point-of-use can open as the first product class. If the result is below the current reference layer, monitoring and state follow-up may be a more proportionate answer. If the result is not comparable, the right answer is to recover the missing context.",
+            "This protects the household from using a private-well result as an excuse for a generic prestige purchase."
+          ],
+          "bullets": [
+            "Above-reference: state next steps plus certified point-of-use review.",
+            "Below-reference: monitoring posture with optional treatment.",
+            "Not comparable: recover the missing state or lab context first."
+          ]
+        }
+      ],
+      "queryIntent": "Private-well result interpretation",
+      "targetQueries": [
+        "private well pfas result what next",
+        "pfas well water test result next steps",
+        "private well pfas filter after test"
+      ],
+      "relatedPwsids": [],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "pfas-notice-vs-ccr",
+      "editorialRank": 6,
+      "eyebrow": "High-intent guide",
+      "title": "A PFAS notice and a CCR do different jobs even when they come from the same utility",
+      "lede": "A PFAS notice is usually the more action-heavy layer. A CCR is still useful, but it often works as system identity and timing context rather than as the freshest PFAS read.",
+      "nextActionTitle": "Read the PFAS notice first, then use the CCR for system context",
+      "nextActionSummary": "When both documents exist, the PFAS notice usually answers the immediate PFAS question while the CCR confirms the system, source, and broader report timing.",
+      "whyThis": [
+        "Utilities often publish PFAS notices on a different timetable than the annual CCR.",
+        "A CCR can still anchor PWSID, source water, and report year even when the PFAS notice carries the sharper action signal.",
+        "Treating both documents as interchangeable makes the route easier to misread."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not mean every PFAS notice is newer than every CCR.",
+        "It does not make the state label or city name more important than the exact system record.",
+        "It does not justify product comparison before the document posture is clear."
+      ],
+      "checklist": [
+        "Match the household to the exact system and PWSID.",
+        "Check whether a PFAS notice exists in addition to the CCR.",
+        "Use the notice for PFAS posture and the CCR for system context."
+      ],
+      "evidenceHighlights": [
+        "EPA frames CCRs as consumer reporting tools, not household tap verdicts.",
+        "Lancaster and several utility notice routes show why a PFAS notice can change the next action without replacing the system dossier.",
+        "The strongest route reads both documents in sequence instead of forcing them into one role."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "lancaster-pfoa-notice-2025",
+        "phila-2024-water-quality-report",
+        "phila-pfas-management",
+        "lusi-north-umcr5-2024-notice",
+        "sanlando-umcr5-2024-notice"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/read-your-ccr",
+      "secondaryLabel": "Read CCR routing guide",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why the PFAS notice usually carries the sharper signal",
+          "summary": "The notice is often written because the utility needs to explain PFAS-specific monitoring or action context, while the CCR has a broader reporting job.",
+          "paragraphs": [
+            "A PFAS notice is usually closer to the immediate PFAS question. It can highlight running annual averages, a specific quarter, or a newer action layer that would be too easy to miss if the household treated the CCR as the whole story.",
+            "That does not make the CCR disposable. The CCR still tells the user which system they are actually on, what the source-water profile looks like, and whether the household is even reading the right utility record."
+          ],
+          "bullets": [
+            "PFAS notice: action-heavy PFAS layer.",
+            "CCR: system identity and timing layer.",
+            "Use both when both exist."
+          ]
+        },
+        {
+          "title": "How to keep the documents from collapsing into one another",
+          "summary": "The route gets cleaner when each document keeps its job.",
+          "paragraphs": [
+            "A disciplined read starts with the exact system and the newest PFAS-specific document. Then the CCR can confirm the system profile, report year, and broader source context. That sequence prevents a lighter annual report from muting a more important PFAS notice.",
+            "It also prevents the opposite error: using a PFAS notice like it explains the whole water system when it may only answer one part of the story."
+          ],
+          "bullets": [
+            "Find the exact system first.",
+            "Read the PFAS-specific notice second.",
+            "Use the CCR to confirm the broader system frame."
+          ]
+        }
+      ],
+      "queryIntent": "Utility notice interpretation",
+      "targetQueries": [
+        "pfas notice vs ccr",
+        "pfas notice and consumer confidence report difference",
+        "is a pfas notice different from a ccr"
+      ],
+      "relatedPwsids": [
+        "7360058",
+        "PA1510001",
+        "FL3354883",
+        "FL3591121",
+        "NJ1103001"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "old-utility-report-next-step",
+      "editorialRank": 10,
+      "eyebrow": "High-intent guide",
+      "title": "An older utility PFAS report should reopen the route not close it",
+      "lede": "An older CCR or PFAS report still helps with system identity, but it should usually trigger a freshness check before the household treats the route as settled.",
+      "nextActionTitle": "Use the older report as a starting point, then look for a newer PFAS layer",
+      "nextActionSummary": "If the report is older than the current PFAS cycle or the utility publishes newer notices, keep the route in evidence collection until the newer layer is checked.",
+      "whyThis": [
+        "PFAS reporting often changes faster than a utility's broad annual summary.",
+        "An older report can still be the right system record while no longer being the right PFAS posture.",
+        "The engine should reward document freshness before it rewards shopping intent."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not mean the older report is useless.",
+        "It does not automatically prove the household needs treatment.",
+        "It does not let geography replace current utility evidence."
+      ],
+      "checklist": [
+        "Confirm the exact system and report year.",
+        "Look for a newer PFAS notice, utility PFAS page, or current annual report.",
+        "Keep comparison secondary until the freshest direct layer is checked."
+      ],
+      "evidenceHighlights": [
+        "EPA consumer CCR guidance is useful, but households still need the freshest available utility layer.",
+        "Lancaster, Aqua New Jersey, and Aqua Pennsylvania all show why a newer PFAS-specific page or notice can outrank an older annual report for routing.",
+        "Freshness is a route input, not a minor detail."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "lancaster-pfoa-notice-2025",
+        "aqua-pfas-new-jersey",
+        "aqua-pfas-pennsylvania",
+        "sunshine-water-quality-reports"
+      ],
+      "primaryHref": "/checker",
+      "primaryLabel": "Open Action Checker",
+      "secondaryHref": "/guides/ccr-without-pfas-line",
+      "secondaryLabel": "Read missing-line guide",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why an older report still matters but cannot end the route",
+          "summary": "The report can still anchor the correct system even when it no longer answers the current PFAS question by itself.",
+          "paragraphs": [
+            "Older utility material is still valuable because it can confirm the PWSID, source-water posture, and the exact system the household should keep following. That is often enough to block a bad ZIP-code shortcut.",
+            "What it cannot do is guarantee that the PFAS posture is current. If the utility has issued newer PFAS pages, notices, or a more recent annual report, the route should reopen until those are checked."
+          ],
+          "bullets": [
+            "Use the old report to confirm the system.",
+            "Do not let the old report freeze the PFAS posture.",
+            "Freshness check before product certainty."
+          ]
+        },
+        {
+          "title": "How freshness changes the commercial sequence",
+          "summary": "A stale document should slow the route down before it opens the compare lane wider.",
+          "paragraphs": [
+            "If the household is shopping while the utility evidence is stale, the engine should stay in interpretation and document discovery. That is especially important for public-water routes where a newer PFAS notice can change whether the current question is still just interpretive or ready for a narrow certified point-of-use compare.",
+            "This is one of the cleaner places to stop fear-based overspending: the right response to stale evidence is newer evidence, not bigger hardware."
+          ],
+          "bullets": [
+            "Stale report: reopen evidence collection.",
+            "Fresh PFAS layer: reassess the route.",
+            "Only then open the narrow compare path."
+          ]
+        }
+      ],
+      "queryIntent": "Document freshness",
+      "targetQueries": [
+        "old utility pfas report what next",
+        "how recent should pfas water report be",
+        "older ccr pfas notice newer report"
+      ],
+      "relatedPwsids": [
+        "7360058",
+        "NJ1103001",
+        "PA1460073",
+        "FL3354883",
+        "FL3591121"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "pennsylvania-pfas-utility-records",
+      "editorialRank": 8,
+      "eyebrow": "Regional decision guide",
+      "title": "Pennsylvania PFAS utility records should be read as system dossiers, not statewide proof",
+      "lede": "Pennsylvania now has a stronger seeded utility cluster, but the useful move is still to read each system record on its own terms instead of turning one notice or one clean-looking report into a statewide verdict.",
+      "nextActionTitle": "Open the exact Pennsylvania system dossier before treating the route as settled",
+      "nextActionSummary": "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main are different system records with different document posture. Read the dossier, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis": [
+        "Pennsylvania households can now enter the engine through multiple seeded utility dossiers instead of a single metro example.",
+        "A state cluster is useful only if the user keeps the interpretation at the system level.",
+        "The right product posture depends on the exact utility record, not on Pennsylvania as a label."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not convert one Pennsylvania record into a statewide household verdict.",
+        "It does not prove every Pennsylvania utility route needs treatment.",
+        "It does not justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the household to the exact system and PWSID.",
+        "Read the annual report or notice type before inferring the route.",
+        "Open certified point-of-use only after the system record is interpretable."
+      ],
+      "evidenceHighlights": [
+        "Philadelphia and Lancaster show why a large-system CCR or notice can create a different route than a smaller Pennsylvania utility record.",
+        "Penn Estates and Aqua Pennsylvania Main add smaller and regional dossier examples that keep the cluster from collapsing into one city narrative.",
+        "A regional cluster gets stronger when every entry still behaves like a system dossier."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "phila-2024-water-quality-report",
+        "phila-pfas-management",
+        "lancaster-2024-water-quality-report",
+        "lancaster-pfoa-notice-2025",
+        "penn-estates-2024-water-quality-report",
+        "aqua-pa-main-system-2024-water-quality-report"
+      ],
+      "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=PA1510001",
+      "primaryLabel": "Open Pennsylvania dossier route",
+      "secondaryHref": "/compare/certified-pou-after-utility-context",
+      "secondaryLabel": "Open post-utility compare lane",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why Pennsylvania should be read as a cluster of dossiers not a single story",
+          "summary": "The state becomes more useful when the user can compare multiple seeded systems, but less useful when one system gets treated as proof for the rest.",
+          "paragraphs": [
+            "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main are all legitimate entry points into the public-water lane, but they do not carry the same kind of PFAS context. Some behave like bigger public records with newer PFAS context layered on top. Others behave like smaller utility dossiers where the annual report itself does more of the work.",
+            "That difference is exactly why the engine should keep the cluster. It lets the user stay in Pennsylvania while still reading one system at a time."
+          ],
+          "bullets": [
+            "Use Pennsylvania as a navigation layer.",
+            "Use the exact system dossier as the evidence layer.",
+            "Do not turn one record into a statewide shortcut."
+          ]
+        },
+        {
+          "title": "What a disciplined Pennsylvania route looks like",
+          "summary": "The route should move from exact system record to benchmark-aware interpretation, then into a narrow point-of-use lane only if the dossier justifies it.",
+          "paragraphs": [
+            "A strong Pennsylvania route starts with the system identifier, report timing, and whether the utility has a newer PFAS page or notice. That is enough to keep the page from becoming location spam or statewide fear content.",
+            "Once the record is interpretable, certified point-of-use can open as a bounded next step. If the record is still thin or ambiguous, the correct answer is to stay with the dossier and keep the product lane constrained."
+          ],
+          "bullets": [
+            "System result first.",
+            "Source context second.",
+            "Certified point-of-use only after interpretation."
+          ]
+        }
+      ],
+      "queryIntent": "Regional utility interpretation",
+      "targetQueries": [
+        "pennsylvania pfas utility records",
+        "pennsylvania pfas water report how to read",
+        "pennsylvania utility pfas notice"
+      ],
+      "relatedPwsids": [
+        "PA1510001",
+        "7360058",
+        "PA2450065",
+        "PA1460073"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "new-jersey-pfas-utility-records",
+      "editorialRank": 9,
+      "eyebrow": "Regional decision guide",
+      "title": "New Jersey PFAS utility records should be read as system-specific routes not statewide shorthand",
+      "lede": "New Jersey now has a seeded utility pair with very different posture. The useful move is to read Hamilton and Montague as separate system dossiers before turning New Jersey into a buying shortcut.",
+      "nextActionTitle": "Open the exact New Jersey system dossier before comparing products",
+      "nextActionSummary": "Hamilton and Montague create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis": [
+        "New Jersey now has both an action-heavy utility example and a lighter non-detect dossier inside the seeded cluster.",
+        "That makes the state useful for comparison only if the household still reads one exact system at a time.",
+        "The product lane should stay downstream from the utility dossier rather than from the state label."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not turn one New Jersey system into a statewide verdict.",
+        "It does not prove every New Jersey route needs treatment.",
+        "It does not justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the household to the exact New Jersey system and PWSID.",
+        "Read whether the system record is a notice-driven route or a lighter annual-report route.",
+        "Open certified point-of-use only after the dossier is interpretable."
+      ],
+      "evidenceHighlights": [
+        "Hamilton shows a stronger direct PFAS record with running annual averages that change the next action.",
+        "Montague shows why a system-level non-detect dossier still needs to be read as one utility record, not as a state verdict.",
+        "A regional New Jersey page is useful only when it preserves those differences."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "aqua-hamilton-2024-water-quality-report",
+        "aqua-pfas-new-jersey",
+        "montague-2024-water-quality-report",
+        "montague-pfas-2023-report"
+      ],
+      "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NJ1103001",
+      "primaryLabel": "Open New Jersey dossier route",
+      "secondaryHref": "/compare/new-jersey-certified-pou-after-utility-context",
+      "secondaryLabel": "Open New Jersey compare lane",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why New Jersey is useful only as a cluster of exact system routes",
+          "summary": "The state helps users compare route posture, but the evidence still lives inside one utility record at a time.",
+          "paragraphs": [
+            "Hamilton and Montague are both valid New Jersey public-water entry points, but they do not behave the same way. Hamilton gives the engine a stronger direct PFAS record with running annual averages. Montague behaves more like a lighter system dossier where the absence of detected values still needs to be kept in system context.",
+            "That difference is why the New Jersey cluster helps. It shows users how to read two utility routes in one state without pretending the state itself is the evidence."
+          ],
+          "bullets": [
+            "Use New Jersey as the navigation layer.",
+            "Use Hamilton or Montague as the evidence layer.",
+            "Do not turn a state label into a treatment shortcut."
+          ]
+        },
+        {
+          "title": "How the New Jersey route should progress",
+          "summary": "The route should move from exact utility dossier to interpretation, then into a narrow point-of-use compare only if the current record supports it.",
+          "paragraphs": [
+            "A strong New Jersey read starts with the system name, PWSID, report timing, and whether the record behaves like a direct PFAS action route or a lighter annual utility dossier. That is enough to keep the page disciplined and away from statewide fear language.",
+            "Once the system route is clear, the project can decide whether certified point-of-use belongs on screen at all. If the record is still thin, the correct answer is to stay with the dossier instead of using New Jersey as a buying cue."
+          ],
+          "bullets": [
+            "System result first.",
+            "Utility source context second.",
+            "Certified point-of-use only after interpretation."
+          ]
+        }
+      ],
+      "queryIntent": "Regional utility interpretation",
+      "targetQueries": [
+        "new jersey pfas utility records",
+        "new jersey pfas water report how to read",
+        "new jersey utility pfas notice"
+      ],
+      "relatedPwsids": [
+        "NJ1103001",
+        "NJ1914002"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "when-whole-house-is-not-justified",
+      "editorialRank": 16,
+      "eyebrow": "High-intent guide",
+      "title": "Whole-house is usually not the first PFAS move",
+      "lede": "Whole-house can be a real escalation case, but most household PFAS routes should clear the ingestion-focused point-of-use question before opening a whole-home install story.",
+      "nextActionTitle": "Prove the whole-home objective before opening whole-house",
+      "nextActionSummary": "If the route is still mainly about drinking and cooking water, point-of-use usually stays the first serious class. Whole-house needs its own purpose, cost, and maintenance case.",
+      "whyThis": [
+        "Whole-house systems are expensive, maintenance-heavy, and easy to oversell.",
+        "Many PFAS routes are really ingestion-focused and do not need whole-home hardware first.",
+        "The stronger the product cost, the stronger the justification burden should be."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not say whole-house is never justified.",
+        "It does not say point-of-use is always enough for every household objective.",
+        "It does not turn fear into a whole-home requirement."
+      ],
+      "checklist": [
+        "Clarify whether the household goal is ingestion-only or whole-home.",
+        "Review certified point-of-use first.",
+        "Only then compare purpose, cost, and maintenance for whole-house."
+      ],
+      "evidenceHighlights": [
+        "EPA filter guidance supports a certification-first point-of-use review.",
+        "The route engine already treats whole-house as a separate escalation case.",
+        "A stronger hardware class should not open just because anxiety is high."
+      ],
+      "sourceIds": [
+        "epa-certified-pfas-filter-guidance",
+        "epa-pfas-private-wells",
+        "epa-ccr-consumer-info"
+      ],
+      "primaryHref": "/guides/under-sink-vs-whole-house",
+      "primaryLabel": "Read escalation guardrails",
+      "secondaryHref": "/compare/under-sink-certified-pfas-options",
+      "secondaryLabel": "Open under-sink compare lane",
+      "lastVerifiedDate": "2026-03-22",
+      "sections": [
+        {
+          "title": "Why whole-house has a higher proof burden",
+          "summary": "A larger install should not be treated as a more serious version of the same answer.",
+          "paragraphs": [
+            "Whole-house changes the financial and maintenance posture of the household. It should therefore answer a more specific objective than 'PFAS feels scary.' If the route still centers drinking and cooking water, point-of-use usually remains the tighter first answer.",
+            "That is why the engine treats whole-house as an escalation review instead of a premium default."
+          ],
+          "bullets": [
+            "Higher upfront cost.",
+            "Higher maintenance commitment.",
+            "Needs a whole-home purpose, not just a bigger product."
+          ]
+        },
+        {
+          "title": "What should happen before whole-house opens",
+          "summary": "Interpret first, compare point-of-use next, then review whole-house only if the household objective still demands it.",
+          "paragraphs": [
+            "The route should already know whether the user is on public water or a private well, whether the evidence is direct enough to support treatment, and whether point-of-use remains proportionate. Only after those gates are cleared should whole-house be reviewed at all.",
+            "This is one of the clearest anti-fear guardrails in the product."
+          ],
+          "bullets": [
+            "No direct evidence: keep whole-house closed.",
+            "Ingestion-focused route: point-of-use first.",
+            "Whole-home objective: open a separate escalation review."
+          ]
+        }
+      ],
+      "queryIntent": "Whole-house guardrails",
+      "targetQueries": [
+        "do i need whole house pfas filter",
+        "when is whole house pfas filter worth it",
+        "whole house pfas filter not necessary"
+      ],
+      "relatedPwsids": [
+        "FL3590615",
+        "PA1510001",
+        "GA3110075"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "california-pfas-utility-records",
+      "editorialRank": 10,
+      "eyebrow": "Regional decision guide",
+      "title": "California PFAS utility records should be read as system dossiers, not statewide shorthand",
+      "lede": "California now has a seeded utility pair with different PFAS posture. Sacramento and East Los Angeles are useful only if the reader keeps the interpretation attached to the exact system dossier instead of turning California into one buying shortcut.",
+      "nextActionTitle": "Open the exact California system dossier before comparing products",
+      "nextActionSummary": "Sacramento and East Los Angeles create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis": [
+        "California now has both a direct detectable dossier and a treated-water non-detect dossier inside the seeded cluster.",
+        "That makes the state useful for comparison only if the household still reads one exact system at a time.",
+        "The product lane should stay downstream from the utility dossier rather than from the California label."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not turn one California system into a statewide verdict.",
+        "It does not prove every California route needs treatment.",
+        "It does not justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the household to the exact California system and PWSID.",
+        "Read whether the record is a direct detectable CCR route or a treated-water non-detect route with treatment context.",
+        "Open certified point-of-use only after the dossier is interpretable."
+      ],
+      "evidenceHighlights": [
+        "Sacramento gives the cluster a direct PFHxS result in the 2024 CCR.",
+        "East Los Angeles shows a lighter treated-water route with PFAS treatment context still attached to the utility record.",
+        "A regional California page is useful only when it preserves those differences."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "sacramento-2024-water-quality-report",
+        "sacramento-pfas-faq",
+        "ca-pfas-general-order-exhibit-a",
+        "east-la-2024-water-quality-report",
+        "east-la-system-detail",
+        "calwater-2024-pfas-application"
+      ],
+      "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=CA3410020",
+      "primaryLabel": "Open California dossier route",
+      "secondaryHref": "/compare/california-certified-pou-after-utility-context",
+      "secondaryLabel": "Open California compare lane",
+      "lastVerifiedDate": "2026-03-23",
+      "sections": [
+        {
+          "title": "Why California is useful only as a cluster of exact system routes",
+          "summary": "The state helps users compare route posture, but the evidence still lives inside one utility record at a time.",
+          "paragraphs": [
+            "Sacramento and East Los Angeles are both valid California public-water entry points, but they do not behave the same way. Sacramento gives the engine a direct detectable PFHxS result in the 2024 CCR. East Los Angeles behaves more like a treated-water non-detect dossier with additional PFAS treatment context attached to the utility record.",
+            "That difference is why the California cluster helps. It shows users how to read two utility routes in one state without pretending the state itself is the evidence."
+          ],
+          "bullets": [
+            "Use California as the navigation layer.",
+            "Use Sacramento or East Los Angeles as the evidence layer.",
+            "Do not turn a state label into a treatment shortcut."
+          ]
+        },
+        {
+          "title": "What a disciplined California route looks like",
+          "summary": "The route should move from exact system record to benchmark-aware interpretation, then into a narrow point-of-use lane only if the dossier justifies it.",
+          "paragraphs": [
+            "A strong California route starts with the system identifier, report timing, and whether the utility attached extra PFAS context beyond the CCR. That is enough to keep the page from becoming statewide fear content or lazy local SEO.",
+            "Once the record is interpretable, certified point-of-use can open as a bounded next step. If the record is still thin or the water is already represented as treated-water non-detect, the correct answer is to stay with the dossier and keep the product lane constrained."
+          ],
+          "bullets": [
+            "System result first.",
+            "Source context second.",
+            "Certified point-of-use only after interpretation."
+          ]
+        }
+      ],
+      "queryIntent": "Regional utility interpretation",
+      "targetQueries": [
+        "california pfas utility records",
+        "california pfas water report how to read",
+        "california utility pfas notice"
+      ],
+      "relatedPwsids": [
+        "CA3410020",
+        "CA1910036"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
         "waterdrop-10ub-pro"
       ]
     }

@@ -17,13 +17,20 @@ public class CommercialSurfaceService {
 	public CommercialSurfaceState forPublicWater(PublicWaterDecisionContext decision, WaterDecisionResult result) {
 		var benchmarkRelation = blankToUnknown(result.meta().benchmarkRelation());
 		var hasOptions = decision.certifiedPouOptions() != null && !decision.certifiedPouOptions().isEmpty();
+		var needsManualReview = decision.manualReviewRequired();
 		if (!hasOptions) {
 			return new CommercialSurfaceState(
-				"PUBLIC_WATER_INTERPRET_FIRST_ONLY",
+				needsManualReview ? "PUBLIC_WATER_EVIDENCE_INCOMPLETE" : "PUBLIC_WATER_INTERPRET_FIRST_ONLY",
 				"Interpret only",
-				"Stay in interpretation until the utility reading opens a defendable treatment path.",
-				"The current utility posture does not justify a certified product lane yet. Read the record before opening hardware comparison.",
-				"The current next action is " + result.nextAction().title().toLowerCase() + ".",
+				needsManualReview
+					? "Stay in interpretation until the utility record is complete enough to compare hardware responsibly."
+					: "Stay in interpretation until the utility reading opens a defendable treatment path.",
+				needsManualReview
+					? "The current utility posture still carries unresolved comparability or freshness limits. Keep the product lane closed until the record is interpretable."
+					: "The current utility posture does not justify a certified product lane yet. Read the record before opening hardware comparison.",
+				needsManualReview
+					? "The current route is " + result.nextAction().code() + ", so uncertainty stays visible as a first-class result."
+					: "The current next action is " + result.nextAction().title().toLowerCase() + ".",
 				"Whole-house remains separately justified and no commercial lane should outrun the direct utility record.",
 				false
 			);
@@ -45,7 +52,7 @@ public class CommercialSurfaceService {
 			"Comparison is available, but the route is still interpretive rather than urgent.",
 			"Detected PFAS remains below the current benchmark relation, so comparison stays optional and subordinate to the utility reading.",
 			"The current route is " + result.nextAction().code() + ".",
-			"This is not a signal to overbuy. It keeps certified options visible for households that still want ingestion-focused margin.",
+			"This is not a signal to overbuy. It keeps certified options visible only for households that still want ingestion-focused margin after reading the utility context.",
 			true
 		);
 	}

@@ -154,10 +154,72 @@
                                 <li>It does not label a household safe or unsafe.</li>
                                 <li>It does not turn ZIP hints into exposure claims.</li>
                                 <li>It does not treat certification as proof of every current regulatory benchmark.</li>
+                                <li>It does not use reviewer theater or fake expert voice to turn uncertainty into certainty.</li>
                             </ul>
                         </div>
                     </section>
                 </div>
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-6">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Persona lanes</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">YMYL posture is handled as persona routing, not authority cosplay.</h2>
+                            <p class="max-w-3xl text-sm leading-7 text-base-content/64">The engine does not pretend to be a clinician, regulator, or household inspector. It names the household posture, the evidence class, and the next responsible move.</p>
+                        </div>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Public-water starter</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Read the utility record before the product layer.</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">The first move is CCR, utility PFAS page, or direct notice. Geography and shopping intent stay subordinate.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Private-well owner</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Use state guidance and lab context before hardware certainty.</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">Testing, units, comparability, and state notes come first. A private well is not rendered as public-water compliance.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Result-holder</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Unknown and not comparable are valid result states.</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">The engine keeps uncertainty visible and routes back to the missing evidence instead of turning it into a shopping cue.</p>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Buyer-in-motion</span>
+                                <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Comparison opens only after the route is defendable.</h3>
+                                <p class="mt-3 text-sm leading-7 text-base-content/68">Certification, annual cost, and cadence stay visible beside the route so the buying step cannot outrun the evidence.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <div class="card-body gap-6">
+                        <div class="space-y-2">
+                            <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Decision gates</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Commercial unlock rules are part of the methodology, not a merchandising layer.</h2>
+                        </div>
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Keep comparison closed when</h3>
+                                <ul class="mt-3 space-y-3 text-sm leading-7 text-base-content/72">
+                                    <li>No direct utility record exists for a public-water route.</li>
+                                    <li>No well test exists for a private-well route.</li>
+                                    <li>The result is unknown or not comparable.</li>
+                                    <li>The user is really asking a whole-house question without a separate purpose case.</li>
+                                </ul>
+                            </article>
+                            <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Open comparison only when</h3>
+                                <ul class="mt-3 space-y-3 text-sm leading-7 text-base-content/72">
+                                    <li>The evidence layer is direct enough to support a treatment discussion.</li>
+                                    <li>The route already narrowed to ingestion-focused point-of-use.</li>
+                                    <li>Claim scope, annual cost, and maintenance burden stay visible on the same screen.</li>
+                                    <li>Whole-house is still treated as a separate escalation review.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <aside class="space-y-5 xl:sticky xl:top-28">

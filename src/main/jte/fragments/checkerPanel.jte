@@ -15,7 +15,10 @@
 @import static com.example.pfas.web.PresentationText.indirectDataLabel
 @import static com.example.pfas.web.PresentationText.waterSourceLabel
 @param List<StateGuidance> states
+@param List<StateGuidance> featuredStates
 @param List<PublicWaterSystem> systems
+@param List<PublicWaterSystem> featuredSystems
+@param List<PublicWaterSystem> featuredPennsylvaniaSystems
 @param ActionCheckerSelection selection
 @param ActionCheckerRecommendation recommendation
 
@@ -232,6 +235,32 @@
                                         <option value="${state.stateCode()}" selected="${state.stateCode().equals(selection.stateCode())}">${state.stateCode()} - ${state.agencyName()}</option>
                                     @endfor
                                 </select>
+                                @if(!featuredStates.isEmpty())
+                                    <div class="mt-4 space-y-2">
+                                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary/76">Expanded state coverage</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            @for(var state : featuredStates)
+                                                <a class="badge badge-outline border-primary/22 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/checker?waterSource=PRIVATE_WELL&directData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&stateCode=${state.stateCode()}">${state.stateCode()} route</a>
+                                            @endfor
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 rounded-[0.95rem] border border-primary/14 bg-base-100 px-4 py-4">
+                                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary/76">State-led private-well lanes</span>
+                                        <p class="mt-2 text-sm leading-6 text-base-content/64">Open the exact state route first, then use the private-well compare lane only after a result is interpretable inside that state posture.</p>
+                                        <div class="mt-3 grid gap-3 md:grid-cols-2">
+                                            @for(var state : featuredStates)
+                                                <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/private-well/${state.stateCode()}" data-route-click-track="true" data-route-click-id="checker:state-lane:${state.stateCode()}" data-route-click-source-page="/checker" data-route-click-target-path="/private-well/${state.stateCode()}" data-route-click-cta-slot="checker_state_lane" data-route-click-family="checker_private_well_lane" data-route-click-lane="${state.stateCode()}_private_well" data-route-click-region="${state.stateCode()}">
+                                                    <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">${state.stateCode()} guide</span>
+                                                    <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">${state.agencyName()}</span>
+                                                </a>
+                                            @endfor
+                                        </div>
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/guides/private-well-pfas-result-next-steps" data-route-click-track="true" data-route-click-id="checker:private-well:guide" data-route-click-source-page="/checker" data-route-click-target-path="/guides/private-well-pfas-result-next-steps" data-route-click-cta-slot="checker_private_well_guide" data-route-click-family="checker_private_well_lane" data-route-click-lane="state_led_private_well" data-route-click-region="multi">Private-well guide</a>
+                                            <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/compare/private-well-certified-pou-after-test" data-route-click-track="true" data-route-click-id="checker:private-well:compare" data-route-click-source-page="/checker" data-route-click-target-path="/compare/private-well-certified-pou-after-test" data-route-click-cta-slot="checker_private_well_compare" data-route-click-family="checker_private_well_lane" data-route-click-lane="state_led_private_well" data-route-click-region="multi">Private-well compare</a>
+                                        </div>
+                                    </div>
+                                @endif
                             </label>
                             <article class="rounded-[1rem] border border-base-300/70 bg-base-200/44 px-4 py-4">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Utility dossiers</span>
@@ -246,6 +275,57 @@
                                         <option value="${system.pwsid()}" selected="${system.pwsid().equals(selection.pwsid())}">${system.pwsName()} (${system.stateCode()})</option>
                                     @endfor
                                 </select>
+                                @if(!featuredSystems.isEmpty())
+                                    <div class="mt-4 space-y-2">
+                                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary/76">Curated dossier routes</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            @for(var system : featuredSystems)
+                                                <a class="badge badge-outline border-primary/22 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=${system.pwsid()}">${system.pwsName()} (${system.stateCode()})</a>
+                                            @endfor
+                                        </div>
+                                    </div>
+                                @endif
+                                @if(!featuredPennsylvaniaSystems.isEmpty())
+                                    <div class="mt-4 rounded-[0.95rem] border border-primary/14 bg-base-100 px-4 py-4">
+                                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary/76">Pennsylvania dossier cluster</span>
+                                        <p class="mt-2 text-sm leading-6 text-base-content/64">Use the Pennsylvania record set to compare a notice-driven metro system, a regional authority, and two smaller utility dossiers without leaving the evidence-first lane.</p>
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            @for(var system : featuredPennsylvaniaSystems)
+                                                <a class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-content transition duration-150 ease-out hover:-translate-y-px hover:border-primary hover:text-primary" href="/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=${system.pwsid()}">${system.pwsName()}</a>
+                                            @endfor
+                                        </div>
+                                    </div>
+                                @endif
+                                <div class="mt-4 rounded-[0.95rem] border border-base-300/70 bg-base-100 px-4 py-4">
+                                    <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary/76">Regional dossier lanes</span>
+                                    <p class="mt-2 text-sm leading-6 text-base-content/64">Use regional guides and compares only as downstream navigation. The exact utility dossier still decides whether the route stays interpretive or opens point-of-use.</p>
+                                    <div class="mt-3 grid gap-3 md:grid-cols-2">
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/guides/pennsylvania-pfas-utility-records" data-route-click-track="true" data-route-click-id="checker:pa-corridor:guide" data-route-click-source-page="/checker" data-route-click-target-path="/guides/pennsylvania-pfas-utility-records" data-route-click-cta-slot="checker_regional_guide" data-route-click-family="checker_regional_corridor" data-route-click-lane="pennsylvania_corridor" data-route-click-region="PA">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Pennsylvania guide</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Read the Pennsylvania dossier cluster</span>
+                                        </a>
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/compare/pennsylvania-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="checker:pa-corridor:compare" data-route-click-source-page="/checker" data-route-click-target-path="/compare/pennsylvania-certified-pou-after-utility-context" data-route-click-cta-slot="checker_regional_compare" data-route-click-family="checker_regional_corridor" data-route-click-lane="pennsylvania_corridor" data-route-click-region="PA">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Pennsylvania compare</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Open the Pennsylvania post-utility lane</span>
+                                        </a>
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/guides/new-jersey-pfas-utility-records" data-route-click-track="true" data-route-click-id="checker:nj-corridor:guide" data-route-click-source-page="/checker" data-route-click-target-path="/guides/new-jersey-pfas-utility-records" data-route-click-cta-slot="checker_regional_guide" data-route-click-family="checker_regional_corridor" data-route-click-lane="new_jersey_corridor" data-route-click-region="NJ">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">New Jersey guide</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Read the New Jersey utility pair</span>
+                                        </a>
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/compare/new-jersey-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="checker:nj-corridor:compare" data-route-click-source-page="/checker" data-route-click-target-path="/compare/new-jersey-certified-pou-after-utility-context" data-route-click-cta-slot="checker_regional_compare" data-route-click-family="checker_regional_corridor" data-route-click-lane="new_jersey_corridor" data-route-click-region="NJ">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">New Jersey compare</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Open the New Jersey post-utility lane</span>
+                                        </a>
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/guides/california-pfas-utility-records" data-route-click-track="true" data-route-click-id="checker:ca-corridor:guide" data-route-click-source-page="/checker" data-route-click-target-path="/guides/california-pfas-utility-records" data-route-click-cta-slot="checker_regional_guide" data-route-click-family="checker_regional_corridor" data-route-click-lane="california_corridor" data-route-click-region="CA">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">California guide</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Read the California utility pair</span>
+                                        </a>
+                                        <a class="rounded-[0.9rem] border border-base-300/70 bg-base-100 px-4 py-4 transition duration-150 ease-out hover:-translate-y-px hover:border-primary" href="/compare/california-certified-pou-after-utility-context" data-route-click-track="true" data-route-click-id="checker:ca-corridor:compare" data-route-click-source-page="/checker" data-route-click-target-path="/compare/california-certified-pou-after-utility-context" data-route-click-cta-slot="checker_regional_compare" data-route-click-family="checker_regional_corridor" data-route-click-lane="california_corridor" data-route-click-region="CA">
+                                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">California compare</span>
+                                            <span class="mt-2 block text-sm font-semibold tracking-[-0.02em] text-base-content">Open the California post-utility lane</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </label>
                             <article class="rounded-[1rem] border border-base-300/70 bg-base-200/44 px-4 py-4">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">State lab guide</span>

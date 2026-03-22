@@ -334,6 +334,83 @@
         "wa-pfas-drinking-water",
         "wa-pfas-state-action-levels"
       ]
+    },
+    {
+      "state_code": "PA",
+      "profile_kind": "state_mcls_used_as_private_well_reference_context",
+      "primary_reference_label": "Pennsylvania PFAS MCL rule used as private-well reference context",
+      "comparability_mode": "state_action_level_numeric_with_transition_notes",
+      "summary": "Pennsylvania adopted PFAS MCLs for PFOA and PFOS in public water, while private wells remain owner-managed. For Sharp v1, Pennsylvania can provide direct numeric reference context for covered analytes, but the route should still keep current state and federal transition notes visible and avoid presenting a private-well compliance determination.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "Pennsylvania MCL for PFOA",
+          "benchmark_display": "14 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfoa",
+          "note": "Pennsylvania's PFAS MCL rule set PFOA at 14 ppt for public-water compliance context."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "Pennsylvania MCL for PFOS",
+          "benchmark_display": "18 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfos",
+          "note": "Pennsylvania's PFAS MCL rule set PFOS at 18 ppt for public-water compliance context."
+        }
+      ],
+      "private_well_use_note": "Use Pennsylvania's PFOA and PFOS MCL values as reference context only. Private wells are not public-water systems, so the household path should stay anchored in accredited-lab interpretation, state guidance, and PFAS-specific follow-up rather than in a compliance-style verdict.",
+      "last_verified_date": "2026-03-22",
+      "source_ids": [
+        "pa-pfas-mcl-rule",
+        "pa-well-water",
+        "pa-pfas-private-well-factsheet"
+      ]
+    },
+    {
+      "state_code": "NJ",
+      "profile_kind": "state_mcls_with_private_well_transition_notes",
+      "primary_reference_label": "New Jersey PFAS drinking-water standards used with PWTA private-well context",
+      "comparability_mode": "state_action_level_numeric_with_transition_notes",
+      "summary": "New Jersey already regulates PFOA, PFOS, and PFNA in drinking water and requires PFAS testing under the Private Well Testing Act. For Sharp v1, New Jersey gives unusually direct private-well reference context for covered analytes, but the route should still keep the current state-to-federal transition and certified-lab workflow visible.",
+      "benchmarks": [
+        {
+          "contaminant_code": "PFOA",
+          "label": "New Jersey MCL for PFOA",
+          "benchmark_display": "14 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfoa",
+          "note": "New Jersey currently enforces a 14 ppt state MCL for PFOA while state-federal transition work continues."
+        },
+        {
+          "contaminant_code": "PFOS",
+          "label": "New Jersey MCL for PFOS",
+          "benchmark_display": "13 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfos",
+          "note": "New Jersey currently enforces a 13 ppt state MCL for PFOS."
+        },
+        {
+          "contaminant_code": "PFNA",
+          "label": "New Jersey MCL for PFNA",
+          "benchmark_display": "13 ppt",
+          "unit": "ppt",
+          "benchmark_type": "state_mcl",
+          "applicability": "direct_for_pfna",
+          "note": "New Jersey currently enforces a 13 ppt state MCL for PFNA and includes PFNA in PWTA-required PFAS testing."
+        }
+      ],
+      "private_well_use_note": "Use New Jersey's PFOA, PFOS, and PFNA standards as reference context for covered analytes and keep PWTA-certified sampling and local follow-up in view. The route should not present a private well as if it were a regulated community system.",
+      "last_verified_date": "2026-03-22",
+      "source_ids": [
+        "nj-pfas-mcl-transition-letter",
+        "nj-pfas-private-well-factsheet",
+        "nj-private-wells-factsheet"
+      ]
     }
   ]
 }
