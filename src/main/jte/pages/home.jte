@@ -207,12 +207,11 @@
                 @endfor
             </div>
             @if (guides.size() > 3)
-                <div class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <input type="checkbox">
-                    <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More decision-intent pages (${guides.size() - 3})</div>
+                <details class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More decision-intent pages (${guides.size() - 3})</summary>
                     <div class="collapse-content">
                         <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
-                            @for (var guide : guides.subList(3, Math.min(6, guides.size())))
+                            @for (var guide : guides.subList(3, guides.size()))
                                 <article class="grid gap-4 px-5 py-5 ${guide != guides.get(3) ? "border-t border-base-300/70" : ""} lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start">
                                     <div class="space-y-3">
                                         <div class="flex flex-wrap items-center gap-2">
@@ -230,7 +229,7 @@
                             @endfor
                         </div>
                     </div>
-                </div>
+                </details>
             @endif
         @endif
     </div>
@@ -298,12 +297,11 @@
                 @endfor
             </div>
             @if (systems.size() > 3)
-                <div class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <input type="checkbox">
-                    <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More seeded dossiers (${systems.size() - 3})</div>
+                <details class="mt-4 collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More seeded dossiers (${systems.size() - 3})</summary>
                     <div class="collapse-content">
                         <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
-                            @for (var system : systems.subList(3, Math.min(4, systems.size())))
+                            @for (var system : systems.subList(3, systems.size()))
                                 <article class="grid gap-4 px-5 py-5 ${system != systems.get(3) ? "border-t border-base-300/70" : ""} lg:grid-cols-[minmax(0,1fr)_14rem] lg:items-start">
                                     <div class="space-y-3">
                                         <div class="flex flex-wrap items-center gap-2">
@@ -321,7 +319,7 @@
                             @endfor
                         </div>
                     </div>
-                </div>
+                </details>
             @endif
         @endif
     </div>

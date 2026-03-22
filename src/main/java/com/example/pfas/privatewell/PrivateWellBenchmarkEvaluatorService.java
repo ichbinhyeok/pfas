@@ -19,7 +19,7 @@ import com.example.pfas.stateprofile.StateBenchmarkProfileService;
 public class PrivateWellBenchmarkEvaluatorService {
 
 	private static final Pattern NUMERIC_PATTERN = Pattern.compile("(\\d+(?:\\.\\d+)?)");
-	private static final Pattern BATCH_LINE_PATTERN = Pattern.compile("^\\s*([A-Za-z0-9\\-]+)\\s*[:=]\\s*(\\d+(?:\\.\\d+)?)\\s*([A-Za-z/]+)?\\s*$");
+	private static final Pattern BATCH_LINE_PATTERN = Pattern.compile("^\\s*([A-Za-z0-9_\\-]+)\\s*[:=]\\s*(\\d+(?:\\.\\d+)?)\\s*([A-Za-z/]+)?\\s*$");
 	private static final BigDecimal THOUSAND = new BigDecimal("1000");
 
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
@@ -53,7 +53,7 @@ public class PrivateWellBenchmarkEvaluatorService {
 
 		var measurements = parseBatchInput(batchInput);
 		if (measurements.isEmpty()) {
-			return Optional.empty();
+			throw new InvalidPrivateWellBatchInputException("batchInput did not contain any parseable analyte lines.");
 		}
 
 		var evaluations = measurements.stream()
@@ -83,6 +83,7 @@ public class PrivateWellBenchmarkEvaluatorService {
 		}
 
 		var results = new ArrayList<PrivateWellMeasurementInput>();
+		var invalidLines = new ArrayList<String>();
 		for (var rawLine : batchInput.split("[;\\r\\n]+")) {
 			if (rawLine.isBlank()) {
 				continue;
@@ -90,6 +91,7 @@ public class PrivateWellBenchmarkEvaluatorService {
 
 			var matcher = BATCH_LINE_PATTERN.matcher(rawLine.trim());
 			if (!matcher.matches()) {
+				invalidLines.add(rawLine.trim());
 				continue;
 			}
 
@@ -98,6 +100,12 @@ public class PrivateWellBenchmarkEvaluatorService {
 				new BigDecimal(matcher.group(2)),
 				matcher.group(3) == null || matcher.group(3).isBlank() ? "ppt" : matcher.group(3).trim()
 			));
+		}
+
+		if (!invalidLines.isEmpty()) {
+			throw new InvalidPrivateWellBatchInputException(
+				"batchInput contains invalid lines: " + String.join(", ", invalidLines)
+			);
 		}
 
 		return List.copyOf(results);

@@ -32,12 +32,11 @@
     </section>
 
     <div class="space-y-3">
-        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
-            <input type="checkbox">
-            <div class="collapse-title pr-12">
+        <details class="collapse collapse-arrow border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
+            <summary class="collapse-title pr-12">
                 <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">State in view</div>
                 <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${waterSourceLabel(selection.waterSource())} / ${directDataLabel(selection.directData())}</div>
-            </div>
+            </summary>
             <div class="collapse-content">
                 <dl class="space-y-3 text-sm">
                     <div class="flex items-start justify-between gap-4 border-b border-base-300/70 pb-3">
@@ -66,14 +65,13 @@
                     </div>
                 </dl>
             </div>
-        </div>
+        </details>
 
-        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-            <input type="checkbox">
-            <div class="collapse-title pr-12">
+        <details class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+            <summary class="collapse-title pr-12">
                 <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened</div>
                 <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${recommendation.principles().size()} routing principles are active</div>
-            </div>
+            </summary>
             <div class="collapse-content">
                 <ul class="space-y-3 text-sm leading-6 text-base-content/72">
                     @for(var principle : recommendation.principles())
@@ -81,7 +79,7 @@
                     @endfor
                 </ul>
             </div>
-        </div>
+        </details>
 
         <article class="surface-muted px-5 py-5 shadow-[var(--shadow-soft)]">
             <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">What this does not confirm</span>

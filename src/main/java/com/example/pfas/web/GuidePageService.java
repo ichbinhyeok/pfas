@@ -10,19 +10,30 @@ import org.springframework.stereotype.Service;
 public class GuidePageService {
 
 	private final GuidePageRepository guidePageRepository;
+	private volatile List<GuidePage> cachedPages;
 
 	public GuidePageService(GuidePageRepository guidePageRepository) {
 		this.guidePageRepository = guidePageRepository;
 	}
 
 	public List<GuidePage> getAll() {
-		return guidePageRepository.findAll().stream()
-			.sorted(Comparator.comparing(GuidePage::slug))
-			.toList();
+		var local = cachedPages;
+		if (local != null) {
+			return local;
+		}
+
+		synchronized (this) {
+			if (cachedPages == null) {
+				cachedPages = guidePageRepository.findAll().stream()
+					.sorted(Comparator.comparing(GuidePage::slug))
+					.toList();
+			}
+			return cachedPages;
+		}
 	}
 
 	public Optional<GuidePage> getBySlug(String slug) {
-		return guidePageRepository.findAll().stream()
+		return getAll().stream()
 			.filter(page -> page.slug().equals(slug))
 			.findFirst();
 	}

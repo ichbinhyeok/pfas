@@ -36,7 +36,12 @@ public class PrivateWellBenchmarkEvaluationController {
 		@PathVariable String stateCode,
 		@RequestParam String batchInput
 	) {
-		return service.evaluateBatch(stateCode, batchInput)
-			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		try {
+			return service.evaluateBatch(stateCode, batchInput)
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		}
+		catch (InvalidPrivateWellBatchInputException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+		}
 	}
 }

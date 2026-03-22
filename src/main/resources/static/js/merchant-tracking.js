@@ -18,7 +18,7 @@
 			pagePath: window.location.pathname
 		});
 
-		var url = "/internal/merchant-clicks";
+		var url = "/merchant-clicks";
 		if (navigator.sendBeacon) {
 			try {
 				navigator.sendBeacon(url, new Blob([payload], { type: "application/json" }));

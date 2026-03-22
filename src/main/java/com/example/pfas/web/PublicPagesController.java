@@ -3,6 +3,7 @@ package com.example.pfas.web;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.List;
 import java.util.Optional;
 
@@ -242,6 +243,8 @@ public class PublicPagesController {
 		String stateCode,
 		String pwsid
 	) {
+		validateCheckerInputs(waterSource, stateCode, pwsid);
+
 		var selection = actionCheckerService.normalize(
 			waterSource,
 			directData,
@@ -258,6 +261,24 @@ public class PublicPagesController {
 		model.addAttribute("recommendation", actionCheckerService.evaluate(selection));
 		model.addAttribute("states", stateGuidanceService.getAll());
 		model.addAttribute("systems", publicWaterSystemService.getAll());
+	}
+
+	private void validateCheckerInputs(String waterSource, String stateCode, String pwsid) {
+		var normalizedWaterSource = waterSource == null ? "" : waterSource.trim().toUpperCase(Locale.ROOT);
+
+		if ("PRIVATE_WELL".equals(normalizedWaterSource)
+			&& stateCode != null
+			&& !stateCode.isBlank()
+			&& !actionCheckerService.isKnownStateCode(stateCode)) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown stateCode: " + stateCode);
+		}
+
+		if ((normalizedWaterSource.isBlank() || "PUBLIC_WATER".equals(normalizedWaterSource))
+			&& pwsid != null
+			&& !pwsid.isBlank()
+			&& !actionCheckerService.isKnownPwsid(pwsid)) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown pwsid: " + pwsid);
+		}
 	}
 
 	private List<SourceDocument> resolveSources(List<String> sourceIds) {

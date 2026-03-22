@@ -1,6 +1,10 @@
 package com.example.pfas.merchant;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -18,9 +22,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class MerchantClickService {
 
+	private static final int MAX_FIELD_LENGTH = 240;
+	private static final int MAX_URL_LENGTH = 2048;
 	private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
 	private final Path eventFile;
+	private final Object writeLock = new Object();
 
 	public MerchantClickService(PfasMerchantClickProperties properties) {
 		var configuredRoot = properties.root();
@@ -30,27 +37,15 @@ public class MerchantClickService {
 		this.eventFile = root.normalize().resolve("events.ndjson");
 	}
 
-	public synchronized MerchantClickAccepted recordClick(MerchantClickPayload payload, String userAgent) {
-		var event = new MerchantClickEvent(
-			OffsetDateTime.now().toString(),
-			nullToBlank(payload.productId()),
-			nullToBlank(payload.merchant()),
-			nullToBlank(payload.ctaSlot()),
-			nullToBlank(payload.sourcePage()),
-			nullToBlank(payload.routeType()),
-			nullToBlank(payload.routeCode()),
-			nullToBlank(payload.benchmarkRelation()),
-			nullToBlank(payload.unlockState()),
-			nullToBlank(payload.nextActionCode()),
-			nullToBlank(payload.targetUrl()),
-			nullToBlank(payload.pagePath()),
-			nullToBlank(userAgent)
-		);
-		append(event);
+	public MerchantClickAccepted recordClick(MerchantClickPayload payload, String userAgent) {
+		var event = validate(payload, userAgent);
+		synchronized (writeLock) {
+			append(event);
+		}
 		return new MerchantClickAccepted(true, event.recordedAt());
 	}
 
-	public synchronized MerchantClickReport getReport() {
+	public MerchantClickReport getReport() {
 		var events = readEvents();
 		return new MerchantClickReport(
 			OffsetDateTime.now().toString(),
@@ -67,6 +62,33 @@ public class MerchantClickService {
 				.sorted(Comparator.comparing(MerchantClickEvent::recordedAt).reversed())
 				.limit(20)
 				.toList()
+		);
+	}
+
+	private MerchantClickEvent validate(MerchantClickPayload payload, String userAgent) {
+		if (payload == null) {
+			throw new InvalidMerchantClickPayloadException("Merchant click payload is required.");
+		}
+
+		var productId = normalizedRequired(payload.productId(), "productId");
+		var merchant = normalizedRequired(payload.merchant(), "merchant");
+		var targetUrl = normalizedUrl(payload.targetUrl(), "targetUrl");
+		var pagePath = normalizedPath(payload.pagePath(), "pagePath");
+
+		return new MerchantClickEvent(
+			OffsetDateTime.now().toString(),
+			productId,
+			merchant,
+			normalizedOptional(payload.ctaSlot()),
+			normalizedOptional(payload.sourcePage()),
+			normalizedOptional(payload.routeType()),
+			normalizedOptional(payload.routeCode()),
+			normalizedOptional(payload.benchmarkRelation()),
+			normalizedOptional(payload.unlockState()),
+			normalizedOptional(payload.nextActionCode()),
+			targetUrl,
+			pagePath,
+			normalizedOptional(userAgent, 512)
 		);
 	}
 
@@ -89,10 +111,12 @@ public class MerchantClickService {
 		if (!Files.exists(eventFile)) {
 			return List.of();
 		}
-		try {
-			return Files.readAllLines(eventFile).stream()
+		try (BufferedReader reader = Files.newBufferedReader(eventFile, StandardCharsets.UTF_8)) {
+			return reader.lines()
+				.map(String::trim)
 				.filter(line -> !line.isBlank())
-				.map(this::parseEvent)
+				.map(this::parseEventSafely)
+				.flatMap(java.util.Optional::stream)
 				.toList();
 		}
 		catch (IOException exception) {
@@ -100,12 +124,12 @@ public class MerchantClickService {
 		}
 	}
 
-	private MerchantClickEvent parseEvent(String line) {
+	private java.util.Optional<MerchantClickEvent> parseEventSafely(String line) {
 		try {
-			return JSON_MAPPER.readValue(line, MerchantClickEvent.class);
+			return java.util.Optional.of(JSON_MAPPER.readValue(line, MerchantClickEvent.class));
 		}
 		catch (IOException exception) {
-			throw new IllegalStateException("Failed to parse merchant click event", exception);
+			return java.util.Optional.empty();
 		}
 	}
 
@@ -120,7 +144,7 @@ public class MerchantClickService {
 	private List<MerchantClickCountEntry> counts(List<MerchantClickEvent> events, Function<MerchantClickEvent, String> keyExtractor) {
 		Map<String, Long> counts = events.stream()
 			.map(keyExtractor)
-			.map(this::nullToBlank)
+			.map(this::normalizedOptional)
 			.filter(value -> !value.isBlank())
 			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
@@ -130,7 +154,57 @@ public class MerchantClickService {
 			.toList();
 	}
 
-	private String nullToBlank(String value) {
-		return value == null ? "" : value;
+	private String normalizedRequired(String value, String fieldName) {
+		var normalized = normalizedOptional(value);
+		if (normalized.isBlank()) {
+			throw new InvalidMerchantClickPayloadException(fieldName + " is required.");
+		}
+		return normalized;
+	}
+
+	private String normalizedOptional(String value) {
+		return normalizedOptional(value, MAX_FIELD_LENGTH);
+	}
+
+	private String normalizedOptional(String value, int maxLength) {
+		if (value == null) {
+			return "";
+		}
+
+		var trimmed = value.trim();
+		if (trimmed.length() > maxLength) {
+			return trimmed.substring(0, maxLength);
+		}
+		return trimmed;
+	}
+
+	private String normalizedUrl(String value, String fieldName) {
+		var normalized = normalizedOptional(value, MAX_URL_LENGTH);
+		if (normalized.isBlank()) {
+			throw new InvalidMerchantClickPayloadException(fieldName + " is required.");
+		}
+
+		try {
+			var uri = new URI(normalized);
+			var scheme = uri.getScheme();
+			if (scheme == null || (!scheme.equalsIgnoreCase("http") && !scheme.equalsIgnoreCase("https"))) {
+				throw new InvalidMerchantClickPayloadException(fieldName + " must be an absolute http or https URL.");
+			}
+			return uri.toString();
+		}
+		catch (URISyntaxException exception) {
+			throw new InvalidMerchantClickPayloadException(fieldName + " must be a valid URL.");
+		}
+	}
+
+	private String normalizedPath(String value, String fieldName) {
+		var normalized = normalizedOptional(value, MAX_URL_LENGTH);
+		if (normalized.isBlank()) {
+			throw new InvalidMerchantClickPayloadException(fieldName + " is required.");
+		}
+		if (!normalized.startsWith("/")) {
+			throw new InvalidMerchantClickPayloadException(fieldName + " must start with '/'.");
+		}
+		return normalized;
 	}
 }

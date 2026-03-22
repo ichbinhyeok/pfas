@@ -31,5 +31,5 @@
             >Send summary</button>
         </div>
     </div>
-    <div class="border-t border-base-300/70 px-6 py-4 text-sm leading-6 text-base-content/58" data-route-status>Saved routes stay on this device until a full account layer exists.</div>
+    <div class="border-t border-base-300/70 px-6 py-4 text-sm leading-6 text-base-content/58" data-route-status role="status" aria-live="polite" aria-atomic="true">Saved routes stay on this device until a full account layer exists.</div>
 </section>

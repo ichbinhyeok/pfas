@@ -1,9 +1,11 @@
 package com.example.pfas.derived;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/internal/derived")
@@ -40,7 +42,12 @@ public class DerivedArtifactController {
 		@org.springframework.web.bind.annotation.PathVariable String routeType,
 		@org.springframework.web.bind.annotation.PathVariable String routeKey
 	) {
-		return service.buildPageModel(routeType, routeKey);
+		try {
+			return service.buildPageModel(routeType, routeKey);
+		}
+		catch (IllegalStateException exception) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage(), exception);
+		}
 	}
 
 	@PostMapping("/sync")

@@ -37,9 +37,8 @@
         </article>
     </div>
 
-    <div class="collapse collapse-arrow rounded-none border-0 bg-base-100 xl:hidden">
-        <input type="checkbox">
-        <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Verification details</div>
+    <details class="collapse collapse-arrow rounded-none border-0 bg-base-100 xl:hidden">
+        <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Verification details</summary>
         <div class="collapse-content">
             <div class="grid gap-3 pt-2">
                 <div class="rounded-[0.95rem] border border-base-300/70 bg-base-100 px-4 py-4">
@@ -59,5 +58,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </details>
 </section>

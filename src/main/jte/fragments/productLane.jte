@@ -70,6 +70,7 @@
                                 <a
                                     class="btn btn-primary h-11 w-full rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92"
                                     href="${product.listingUrl()}"
+                                    rel="sponsored nofollow"
                                     data-merchant-track="true"
                                     data-product-id="${product.productId()}"
                                     data-merchant="${PresentationText.merchantLabel(product)}"
@@ -83,9 +84,8 @@
                                     data-target-url="${product.listingUrl()}"
                                 >Open ${PresentationText.merchantLabel(product)} record</a>
 
-                                <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
-                                    <input type="checkbox">
-                                    <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Decision details</div>
+                                <details class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
+                                    <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Decision details</summary>
                                     <div class="collapse-content">
                                         <div class="grid gap-4 sm:grid-cols-2">
                                             <div>
@@ -110,7 +110,7 @@
                                             <strong class="font-semibold text-base-content">Cadence and confidence</strong> ${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence ${PresentationText.confidenceLabel(product.costConfidence())}
                                         </div>
                                     </div>
-                                </div>
+                                </details>
                             </div>
                         </div>
                     </article>
@@ -118,9 +118,8 @@
             </div>
 
             @if(products.size() > 2)
-                <div class="collapse collapse-arrow rounded-[1.25rem] border border-base-300/70 bg-base-200/36">
-                    <input type="checkbox">
-                    <div class="collapse-title pr-12 text-base font-semibold tracking-[-0.02em] text-base-content">More certified options (${products.size() - 2})</div>
+                <details class="collapse collapse-arrow rounded-[1.25rem] border border-base-300/70 bg-base-200/36">
+                    <summary class="collapse-title pr-12 text-base font-semibold tracking-[-0.02em] text-base-content">More certified options (${products.size() - 2})</summary>
                     <div class="collapse-content">
                         <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
                             @for(var product : products.subList(2, products.size()))
@@ -141,6 +140,7 @@
                                         <a
                                             class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
                                             href="${product.listingUrl()}"
+                                            rel="sponsored nofollow"
                                             data-merchant-track="true"
                                             data-product-id="${product.productId()}"
                                             data-merchant="${PresentationText.merchantLabel(product)}"
@@ -158,7 +158,7 @@
                             @endfor
                         </div>
                     </div>
-                </div>
+                </details>
             @endif
         </div>
     </section>

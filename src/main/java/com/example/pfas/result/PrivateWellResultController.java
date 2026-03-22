@@ -35,12 +35,17 @@ public class PrivateWellResultController {
 		@RequestParam(defaultValue = "false") boolean wholeHouseConsidered
 	) {
 		if (batchInput != null && !batchInput.isBlank()) {
-			return privateWellResultService.getFromBatchMeasurement(
-				stateCode.toUpperCase(),
-				batchInput,
-				currentFilterStatus,
-				wholeHouseConsidered
-			).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+			try {
+				return privateWellResultService.getFromBatchMeasurement(
+					stateCode.toUpperCase(),
+					batchInput,
+					currentFilterStatus,
+					wholeHouseConsidered
+				).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+			}
+			catch (com.example.pfas.privatewell.InvalidPrivateWellBatchInputException exception) {
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+			}
 		}
 
 		if (analyteCode != null && value != null) {

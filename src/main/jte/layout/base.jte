@@ -12,6 +12,14 @@
     <title>${pageTitle}</title>
     <meta name="description" content="${pageDescription}">
     <link rel="canonical" href="${pageCanonicalUrl}">
+    <meta property="og:title" content="${pageTitle}">
+    <meta property="og:description" content="${pageDescription}">
+    <meta property="og:url" content="${pageCanonicalUrl}">
+    <meta property="og:site_name" content="PFAS Decision Engine">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="${pageTitle}">
+    <meta name="twitter:description" content="${pageDescription}">
     @if (pageIndexable)
         <meta name="robots" content="index, follow">
     @else
@@ -44,23 +52,23 @@
                 </a>
             </div>
             <div class="navbar-end md:hidden">
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100/92 px-4 text-sm font-semibold text-base-content shadow-none hover:bg-base-200">
+                <details class="dropdown dropdown-end">
+                    <summary class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100/92 px-4 text-sm font-semibold text-base-content shadow-none hover:bg-base-200 list-none">
                         Menu
                         <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
                             <path d="M4 7h16"></path>
                             <path d="M4 12h16"></path>
                             <path d="M4 17h16"></path>
                         </svg>
-                    </label>
-                    <ul tabindex="0" class="menu dropdown-content z-[60] mt-3 w-64 rounded-[1.1rem] border border-base-300/80 bg-base-100 p-2 text-sm font-semibold text-base-content shadow-[var(--shadow-panel)]">
+                    </summary>
+                    <ul class="menu dropdown-content z-[60] mt-3 w-64 rounded-[1.1rem] border border-base-300/80 bg-base-100 p-2 text-sm font-semibold text-base-content shadow-[var(--shadow-panel)]">
                         <li><a href="/">Home</a></li>
                         <li><a href="/checker">Action Checker</a></li>
                         <li><a href="/guides/public-water-vs-private-well">Guides</a></li>
                         <li><a href="/methodology">Methodology</a></li>
                         <li><a href="/source-policy">Source Policy</a></li>
                     </ul>
-                </div>
+                </details>
             </div>
             <div class="navbar-end hidden w-auto flex-none md:flex">
                 <nav aria-label="Primary" class="rounded-full border border-base-300/80 bg-white/82 px-1.5 py-1 shadow-[var(--shadow-soft)]">

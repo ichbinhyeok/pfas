@@ -120,6 +120,27 @@ public class PublicWaterDecisionService {
 			);
 		}
 
+		if (hasInsufficientBenchmark) {
+			return new PublicWaterDecisionContext(
+				system.pwsid(),
+				system.pwsName(),
+				system.stateCode(),
+				PublicWaterDecisionStatus.INSUFFICIENT_BENCHMARK_CONTEXT,
+				PublicWaterNextActionCode.REVIEW_UTILITY_DATA_WITH_BENCHMARK_CONTEXT,
+				PublicWaterDecisionRuleId.PUBLIC_WATER_DIRECT_DATA_NEEDS_BENCHMARK_REVIEW,
+				"Review utility data with benchmark context before treating it as below reference",
+				"The utility has direct PFAS observations, but one or more benchmark mappings are incomplete, so the route should stay in a manual-review posture instead of defaulting to a below-benchmark interpretation.",
+				true,
+				List.of(
+					"Direct observations exist, but benchmark context is incomplete.",
+					"This is not a safe or unsafe label.",
+					"Do not treat missing benchmark mappings as evidence that the system is below reference."
+				),
+				assessments,
+				List.of()
+			);
+		}
+
 		return new PublicWaterDecisionContext(
 			system.pwsid(),
 			system.pwsName(),

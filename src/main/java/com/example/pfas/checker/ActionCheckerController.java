@@ -1,9 +1,13 @@
 package com.example.pfas.checker;
 
+import java.util.Locale;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/internal/action-checker")
@@ -27,6 +31,8 @@ public class ActionCheckerController {
 		@RequestParam(required = false) String stateCode,
 		@RequestParam(required = false) String pwsid
 	) {
+		validateRouteInputs(waterSource, stateCode, pwsid);
+
 		var selection = actionCheckerService.normalize(
 			waterSource,
 			directData,
@@ -40,5 +46,23 @@ public class ActionCheckerController {
 		);
 
 		return new ActionCheckerResponse(selection, actionCheckerService.evaluate(selection));
+	}
+
+	private void validateRouteInputs(String waterSource, String stateCode, String pwsid) {
+		var normalizedWaterSource = waterSource == null ? "" : waterSource.trim().toUpperCase(Locale.ROOT);
+
+		if ("PRIVATE_WELL".equals(normalizedWaterSource)
+			&& stateCode != null
+			&& !stateCode.isBlank()
+			&& !actionCheckerService.isKnownStateCode(stateCode)) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown stateCode: " + stateCode);
+		}
+
+		if ((normalizedWaterSource.isBlank() || "PUBLIC_WATER".equals(normalizedWaterSource))
+			&& pwsid != null
+			&& !pwsid.isBlank()
+			&& !actionCheckerService.isKnownPwsid(pwsid)) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown pwsid: " + pwsid);
+		}
 	}
 }

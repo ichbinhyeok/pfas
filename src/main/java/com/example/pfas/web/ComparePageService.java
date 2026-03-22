@@ -28,6 +28,7 @@ public class ComparePageService {
 	private final SourceRegistryService sourceRegistryService;
 	private final PublicWaterSystemService publicWaterSystemService;
 	private final PublicWaterResultService publicWaterResultService;
+	private volatile List<ComparePage> cachedPages;
 
 	public ComparePageService(
 		ComparePageRepository comparePageRepository,
@@ -46,13 +47,23 @@ public class ComparePageService {
 	}
 
 	public List<ComparePage> getAll() {
-		return comparePageRepository.findAll().stream()
-			.sorted(PAGE_ORDER)
-			.toList();
+		var local = cachedPages;
+		if (local != null) {
+			return local;
+		}
+
+		synchronized (this) {
+			if (cachedPages == null) {
+				cachedPages = comparePageRepository.findAll().stream()
+					.sorted(PAGE_ORDER)
+					.toList();
+			}
+			return cachedPages;
+		}
 	}
 
 	public Optional<ComparePage> getBySlug(String slug) {
-		return comparePageRepository.findAll().stream()
+		return getAll().stream()
 			.filter(page -> page.slug().equals(slug))
 			.findFirst();
 	}

@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-@RequestMapping("/internal/merchant-clicks")
 public class MerchantClickController {
 
 	private final MerchantClickService merchantClickService;
@@ -20,15 +19,24 @@ public class MerchantClickController {
 		this.merchantClickService = merchantClickService;
 	}
 
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(
+		value = {"/merchant-clicks", "/internal/merchant-clicks"},
+		consumes = MediaType.APPLICATION_JSON_VALUE,
+		produces = MediaType.APPLICATION_JSON_VALUE
+	)
 	public ResponseEntity<MerchantClickAccepted> record(
 		@RequestBody MerchantClickPayload payload,
 		@RequestHeader(value = "User-Agent", required = false) String userAgent
 	) {
-		return ResponseEntity.status(HttpStatus.ACCEPTED).body(merchantClickService.recordClick(payload, userAgent));
+		try {
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(merchantClickService.recordClick(payload, userAgent));
+		}
+		catch (InvalidMerchantClickPayloadException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+		}
 	}
 
-	@GetMapping(value = "/report", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/internal/merchant-clicks/report", produces = MediaType.APPLICATION_JSON_VALUE)
 	public MerchantClickReport report() {
 		return merchantClickService.getReport();
 	}

@@ -3,6 +3,7 @@ package com.example.pfas.filter;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public class FilterCatalogService {
 	private final FilterCostRepository filterCostRepository;
 	private final FilterCostComponentRepository filterCostComponentRepository;
 	private final CertificationClaimService certificationClaimService;
+	private volatile List<FilterCatalogItem> cachedCatalog;
 
 	public FilterCatalogService(
 		FilterProductRepository filterProductRepository,
@@ -35,15 +37,30 @@ public class FilterCatalogService {
 	}
 
 	public List<FilterCatalogItem> getAll() {
-		return filterProductRepository.findAll().stream()
-			.map(this::toCatalogItem)
-			.sorted(ITEM_ORDER)
-			.toList();
+		var local = cachedCatalog;
+		if (local != null) {
+			return local;
+		}
+
+		synchronized (this) {
+			if (cachedCatalog == null) {
+				cachedCatalog = filterProductRepository.findAll().stream()
+					.map(this::toCatalogItem)
+					.sorted(ITEM_ORDER)
+					.toList();
+			}
+			return cachedCatalog;
+		}
 	}
 
 	public Optional<FilterCatalogItem> getByProductId(String productId) {
-		return filterProductRepository.findByProductId(productId)
-			.map(this::toCatalogItem);
+		if (productId == null || productId.isBlank()) {
+			return Optional.empty();
+		}
+		var normalized = productId.trim().toUpperCase(Locale.ROOT);
+		return getAll().stream()
+			.filter(item -> item.productId().toUpperCase(Locale.ROOT).equals(normalized))
+			.findFirst();
 	}
 
 	public List<FilterCatalogItem> getForPfasCoverage(List<String> targetPfas) {

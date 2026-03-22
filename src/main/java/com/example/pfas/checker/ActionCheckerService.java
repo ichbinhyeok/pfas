@@ -126,6 +126,14 @@ public class ActionCheckerService {
 		};
 	}
 
+	public boolean isKnownStateCode(String stateCode) {
+		return stateGuidanceService.isKnownStateCode(stateCode);
+	}
+
+	public boolean isKnownPwsid(String pwsid) {
+		return publicWaterSystemService.isKnownPwsid(pwsid);
+	}
+
 	private boolean shouldStayOnEvidenceRoute(ActionCheckerSelection selection) {
 		if (selection.waterSource() == ActionWaterSource.PRIVATE_WELL) {
 			return true;
@@ -181,7 +189,7 @@ public class ActionCheckerService {
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
 		var utilityHref = system
 			.map(item -> "/public-water-system/" + item.pwsid())
-			.orElse("/internal/public-water-systems");
+			.orElse("/guides/read-your-ccr");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_UTILITY_FIRST,
@@ -194,7 +202,7 @@ public class ActionCheckerService {
 				extraPrinciple
 			),
 			utilityHref,
-			system.isPresent() ? "Open " + systemName + " context" : "Open public-water systems",
+			system.isPresent() ? "Open " + systemName + " context" : "Read how to use a CCR first",
 			"/guides/read-your-ccr",
 			"Read how to use a CCR first",
 			selection.wholeHouseConsidered(),
@@ -207,7 +215,7 @@ public class ActionCheckerService {
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
 		var utilityHref = system
 			.map(item -> "/public-water-system/" + item.pwsid())
-			.orElse("/internal/public-water-systems");
+			.orElse("/guides/read-your-ccr");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_VERIFY_WITH_UTILITY_AND_CCR,
@@ -220,7 +228,7 @@ public class ActionCheckerService {
 				"Product comparison should stay closed until direct utility context is reviewed."
 			),
 			utilityHref,
-			system.isPresent() ? "Open " + systemName + " context" : "Open public-water systems",
+			system.isPresent() ? "Open " + systemName + " context" : "Read how to use a CCR first",
 			"/guides/read-your-ccr",
 			"Read how to use a CCR first",
 			false,
@@ -233,7 +241,7 @@ public class ActionCheckerService {
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
 		var interpretationHref = system
 			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/internal/results/public-water/PA1510001");
+			.orElse("/guides/read-your-ccr");
 		var secondaryHref = system
 			.map(item -> "/public-water-system/" + item.pwsid())
 			.orElse("/guides/read-your-ccr");
@@ -250,7 +258,7 @@ public class ActionCheckerService {
 				"Optional point-of-use remains the first product class when extra margin is desired."
 			),
 			interpretationHref,
-			system.isPresent() ? "Open " + systemName + " interpretation" : "Open seeded interpretation",
+			system.isPresent() ? "Open " + systemName + " interpretation" : "Read how to use a CCR first",
 			secondaryHref,
 			secondaryLabel,
 			false,
@@ -263,7 +271,7 @@ public class ActionCheckerService {
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
 		var interpretationHref = system
 			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/internal/results/public-water/PA1510001");
+			.orElse("/guides/read-your-ccr");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_CERTIFIED_POU_EVALUATION,
@@ -276,7 +284,7 @@ public class ActionCheckerService {
 				"Whole-house is still a separate justification path, not the baseline."
 			),
 			interpretationHref,
-			system.isPresent() ? "Open " + systemName + " interpretation" : "Open seeded interpretation",
+			system.isPresent() ? "Open " + systemName + " interpretation" : "Read how to use a CCR first",
 			"/guides/under-sink-vs-whole-house",
 			"Read escalation guardrails",
 			false,
@@ -288,7 +296,7 @@ public class ActionCheckerService {
 		var system = resolveSystem(selection.pwsid());
 		var interpretationHref = system
 			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/internal/results/public-water/PA1510001");
+			.orElse("/guides/read-your-ccr");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_OPTIONAL_POU_COMPARE,
@@ -301,7 +309,7 @@ public class ActionCheckerService {
 				"Whole-house remains a separate escalation path, not the baseline."
 			),
 			interpretationHref,
-			"Open interpreted result",
+			system.isPresent() ? "Open interpreted result" : "Read how to use a CCR first",
 			"/guides/nsf-53-vs-58-pfas",
 			"Read certification basics",
 			false,
@@ -314,7 +322,7 @@ public class ActionCheckerService {
 		var stateLabel = state.map(StateGuidance::stateCode).orElse("state");
 		var stateHref = state
 			.map(guidance -> "/private-well/" + guidance.stateCode())
-			.orElse("/internal/state-guidance");
+			.orElse("/guides/test-first-vs-filter-first");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PRIVATE_WELL_TEST_FIRST,
@@ -327,7 +335,7 @@ public class ActionCheckerService {
 				extraPrinciple
 			),
 			stateHref,
-			state.isPresent() ? "Open " + stateLabel + " private-well guide" : "Open state guidance list",
+			state.isPresent() ? "Open " + stateLabel + " private-well guide" : "Read test-first guide",
 			"/guides/test-first-vs-filter-first",
 			"Read test-first reasoning",
 			selection.wholeHouseConsidered(),
