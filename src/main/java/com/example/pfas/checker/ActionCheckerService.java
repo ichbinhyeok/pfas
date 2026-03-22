@@ -97,14 +97,6 @@ public class ActionCheckerService {
 				: privateWellTestFirst(selection, noDirectEvidencePrinciple(selection));
 		}
 
-		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.UNCERTIFIED) {
-			return uncertifiedFilterRoute(selection);
-		}
-
-		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.CERTIFIED) {
-			return certifiedFilterRoute(selection);
-		}
-
 		if (selection.wholeHouseConsidered()) {
 			if (selection.benchmarkRelation() == ActionBenchmarkRelation.ABOVE_REFERENCE
 				|| selection.benchmarkRelation() == ActionBenchmarkRelation.MIXED) {
@@ -113,9 +105,39 @@ public class ActionCheckerService {
 			return wholeHouseNotDefault(selection);
 		}
 
+		if (shouldStayOnEvidenceRoute(selection)) {
+			return switch (selection.waterSource()) {
+				case PRIVATE_WELL -> evaluatePrivateWell(selection);
+				case PUBLIC_WATER -> evaluatePublicWater(selection);
+			};
+		}
+
+		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.UNCERTIFIED) {
+			return uncertifiedFilterRoute(selection);
+		}
+
+		if (selection.currentFilterStatus() == ActionCurrentFilterStatus.CERTIFIED) {
+			return certifiedFilterRoute(selection);
+		}
+
 		return switch (selection.waterSource()) {
 			case PRIVATE_WELL -> evaluatePrivateWell(selection);
 			case PUBLIC_WATER -> evaluatePublicWater(selection);
+		};
+	}
+
+	private boolean shouldStayOnEvidenceRoute(ActionCheckerSelection selection) {
+		if (selection.waterSource() == ActionWaterSource.PRIVATE_WELL) {
+			return true;
+		}
+
+		if (selection.directData() == ActionDirectDataStatus.OFFICIAL_NOTICE) {
+			return true;
+		}
+
+		return switch (selection.benchmarkRelation()) {
+			case ABOVE_REFERENCE, MIXED, UNKNOWN, NOT_COMPARABLE -> true;
+			case BELOW_REFERENCE -> false;
 		};
 	}
 
@@ -212,9 +234,10 @@ public class ActionCheckerService {
 		var interpretationHref = system
 			.map(item -> "/public-water/" + item.pwsid())
 			.orElse("/internal/results/public-water/PA1510001");
-		var resultJsonHref = system
-			.map(item -> "/internal/results/public-water/" + item.pwsid())
-			.orElse("/internal/results/public-water/PA1510001");
+		var secondaryHref = system
+			.map(item -> "/public-water-system/" + item.pwsid())
+			.orElse("/guides/read-your-ccr");
+		var secondaryLabel = system.isPresent() ? "Open source context" : "Read how to use a CCR first";
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_INTERPRET_DIRECT_DATA,
@@ -228,8 +251,8 @@ public class ActionCheckerService {
 			),
 			interpretationHref,
 			system.isPresent() ? "Open " + systemName + " interpretation" : "Open seeded interpretation",
-			resultJsonHref,
-			"Inspect typed result JSON",
+			secondaryHref,
+			secondaryLabel,
 			false,
 			"Whole-house still needs a separate justification beyond drinking and cooking use."
 		);
@@ -266,9 +289,6 @@ public class ActionCheckerService {
 		var interpretationHref = system
 			.map(item -> "/public-water/" + item.pwsid())
 			.orElse("/internal/results/public-water/PA1510001");
-		var resultJsonHref = system
-			.map(item -> "/internal/results/public-water/" + item.pwsid())
-			.orElse("/internal/results/public-water/PA1510001");
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_OPTIONAL_POU_COMPARE,
@@ -282,8 +302,8 @@ public class ActionCheckerService {
 			),
 			interpretationHref,
 			"Open interpreted result",
-			resultJsonHref,
-			"Inspect typed result JSON",
+			"/guides/nsf-53-vs-58-pfas",
+			"Read certification basics",
 			false,
 			"Whole-house should only appear after a separate whole-home rationale is established."
 		);
@@ -435,6 +455,10 @@ public class ActionCheckerService {
 	}
 
 	private ActionCheckerRecommendation wholeHouseNotDefault(ActionCheckerSelection selection) {
+		var interpretationHref = selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+			? "/public-water/" + selection.pwsid()
+			: privateWellResultHref(selection);
+
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.WHOLE_HOUSE_NOT_DEFAULT,
 			"Whole-house guarded",
@@ -445,16 +469,20 @@ public class ActionCheckerService {
 				"Below-reference or unknown evidence should not be used to force a whole-home install.",
 				"Purpose, cost, and maintenance need separate justification."
 			),
+			interpretationHref,
+			"Open current interpretation",
 			"/guides/under-sink-vs-whole-house",
 			"Read whole-house guardrails",
-			selection.waterSource() == ActionWaterSource.PUBLIC_WATER ? "/public-water/" + selection.pwsid() : privateWellResultHref(selection),
-			"Open current interpretation",
 			true,
 			"Stay point-of-use first until a whole-home objective is clearly justified."
 		);
 	}
 
 	private ActionCheckerRecommendation wholeHouseJustifiedEscalation(ActionCheckerSelection selection) {
+		var interpretationHref = selection.waterSource() == ActionWaterSource.PUBLIC_WATER
+			? "/public-water/" + selection.pwsid()
+			: privateWellResultHref(selection);
+
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.WHOLE_HOUSE_JUSTIFIED_ESCALATION_REVIEW,
 			"Whole-house review",
@@ -465,10 +493,10 @@ public class ActionCheckerService {
 				"Point-of-use alternatives should still be compared explicitly.",
 				"Maintenance and annual ownership burden need to be visible before escalation."
 			),
+			interpretationHref,
+			"Open current interpretation",
 			"/guides/under-sink-vs-whole-house",
 			"Read escalation guide",
-			selection.waterSource() == ActionWaterSource.PUBLIC_WATER ? "/public-water/" + selection.pwsid() : privateWellResultHref(selection),
-			"Open current interpretation",
 			true,
 			"A justified escalation still requires purpose, cost, and maintenance review."
 		);

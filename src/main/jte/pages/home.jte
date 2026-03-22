@@ -21,64 +21,64 @@
     content = @`
 <section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_24rem] xl:items-start">
-            <div class="space-y-8">
-                <div class="space-y-5">
-                    <span class="badge badge-outline border-base-300 bg-base-100 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-base-content/58">Quiet infrastructure for water decisions</span>
-                    <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-base-content sm:text-5xl lg:text-[4.2rem] lg:leading-[0.98]">
-                        Read the record.
-                        <span class="font-serif font-medium text-secondary">Then decide what to do next.</span>
-                    </h1>
-                    <p class="max-w-3xl text-lg leading-8 text-base-content/74">
-                        This is not a panic funnel and not a decorative SaaS shell. It is a decision engine for households
-                        deciding whether to inspect a utility dossier, order a private-well test, or compare certified
-                        point-of-use options without overspending.
-                    </p>
+        <div class="terminal-panel overflow-hidden">
+            <div class="grid gap-px bg-white/8 xl:grid-cols-[minmax(0,1.18fr)_24rem]">
+                <div class="space-y-8 bg-white/[0.03] p-7 md:p-9">
+                    <div class="space-y-5">
+                        <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">Quiet infrastructure for water decisions</span>
+                        <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.98]">
+                            Read the record.
+                            <span class="font-serif font-medium text-white/72">Then decide what to do next.</span>
+                        </h1>
+                        <p class="max-w-3xl text-lg leading-8 text-white/72">
+                            This is not a panic funnel and not a decorative SaaS shell. It is a decision engine for households
+                            deciding whether to inspect a utility dossier, order a private-well test, or compare certified
+                            point-of-use options without overspending.
+                        </p>
+                    </div>
+
+                    <div class="join join-vertical gap-3 sm:join-horizontal">
+                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/checker">Open action checker</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/methodology">Read methodology</a>
+                    </div>
                 </div>
 
-                <div class="join join-vertical gap-3 sm:join-horizontal">
-                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/checker">Open action checker</a>
-                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/methodology">Read methodology</a>
-                </div>
-
-                <div class="grid gap-px overflow-hidden rounded-[1.25rem] border border-base-300/70 bg-base-300/70 shadow-[var(--shadow-soft)] lg:grid-cols-3">
-                    <article class="bg-base-100/96 px-6 py-5">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Interpretation bias</div>
-                        <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Direct evidence first</div>
-                        <div class="mt-3 text-sm leading-6 text-base-content/58">Utility records and well tests open before any shopping path.</div>
-                    </article>
-                    <article class="bg-base-100/96 px-6 py-5">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Trust layer</div>
-                        <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Caveats stay visible</div>
-                        <div class="mt-3 text-sm leading-6 text-base-content/58">Limits remain in the main reading path instead of disappearing below the fold.</div>
-                    </article>
-                    <article class="bg-base-100/96 px-6 py-5">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Commercial posture</div>
-                        <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Point-of-use before escalation</div>
-                        <div class="mt-3 text-sm leading-6 text-base-content/58">Certified point-of-use opens before whole-house and only with claim-level support.</div>
-                    </article>
-                </div>
+                <aside class="space-y-4 bg-white/[0.02] p-7 md:p-8">
+                    <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Operating stance</span>
+                    <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">Built like a control room, not a promo page.</h2>
+                    <div class="terminal-pane overflow-hidden">
+                        <div class="terminal-stack">
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78">
+                                <strong class="font-semibold text-white">Evidence stack</strong><br>EPA, state guidance, utility documents, and captured listing records.
+                            </article>
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78">
+                                <strong class="font-semibold text-white">Reading rhythm</strong><br>Calm, benchmark-aware, and explicit about what the data does not settle.
+                            </article>
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78">
+                                <strong class="font-semibold text-white">Decision posture</strong><br>Verify first. Compare only after the household context is anchored.
+                            </article>
+                        </div>
+                    </div>
+                </aside>
             </div>
 
-            <aside class="card border border-neutral/12 bg-neutral text-neutral-content shadow-[var(--shadow-panel)]">
-                <div class="card-body gap-5">
-                    <div class="space-y-2">
-                        <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Operating stance</span>
-                        <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">Built like an editorial control room, not a promo page.</h2>
-                    </div>
-                    <div class="overflow-hidden rounded-[1rem] border border-white/10 bg-white/4">
-                        <article class="px-4 py-4 text-sm leading-6 text-white/78">
-                            <strong class="font-semibold text-white">Evidence stack</strong><br>EPA, state guidance, utility documents, and captured listing records.
-                        </article>
-                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78">
-                            <strong class="font-semibold text-white">Reading rhythm</strong><br>Calm, benchmark-aware, and explicit about what the data does not settle.
-                        </article>
-                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78">
-                            <strong class="font-semibold text-white">Decision posture</strong><br>Verify first. Compare only after the household context is anchored.
-                        </article>
-                    </div>
-                </div>
-            </aside>
+            <div class="terminal-grid border-x-0 border-b-0 rounded-none lg:grid-cols-3">
+                <article class="px-6 py-5">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Interpretation bias</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Direct evidence first</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">Utility records and well tests open before any shopping path.</div>
+                </article>
+                <article class="px-6 py-5">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Trust layer</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Caveats stay visible</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">Limits remain in the main reading path instead of disappearing below the fold.</div>
+                </article>
+                <article class="px-6 py-5">
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Commercial posture</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Point-of-use before escalation</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">Certified point-of-use opens before whole-house and only with claim-level support.</div>
+                </article>
+            </div>
         </div>
     </div>
 </section>
@@ -98,25 +98,51 @@
     <div class="shell space-y-8">
         <div class="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_22rem] xl:items-end">
             <div class="space-y-3">
-                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Action intake</span>
+                <span class="section-label">Action intake</span>
                 <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.02]">
                     Start with the case details.
                     <span class="font-serif font-medium text-secondary">Let the engine expose the next responsible move.</span>
                 </h2>
                 <p class="max-w-3xl text-base leading-8 text-base-content/68">This is the same server-backed intake surface used by the full checker. It keeps evidence hierarchy, caveats, and next action visible in one read.</p>
             </div>
-            <div class="rounded-[1rem] border border-neutral/12 bg-neutral px-5 py-4 text-neutral-content shadow-[var(--shadow-soft)]">
-                <span class="text-sm leading-7 text-white/76"><strong class="font-semibold text-white">Homepage discipline</strong> No fear copy, no affiliate-first detour, and no fake certainty.</span>
+            <div class="surface-muted px-5 py-4">
+                <span class="text-sm font-medium leading-7 text-base-content/76"><strong class="font-semibold text-base-content">Homepage discipline</strong> No fear copy, no affiliate-first detour, and no fake certainty.</span>
+            </div>
+        </div>
+
+        <div class="surface-panel md:hidden">
+            <div class="grid gap-4 p-5">
+                <div class="space-y-2">
+                    <span class="section-label">Quick route</span>
+                    <h3 class="text-2xl font-semibold tracking-[-0.04em] text-base-content">${checkerRecommendation.title()}</h3>
+                    <p class="text-sm leading-7 text-base-content/68">${checkerRecommendation.summary()}</p>
+                </div>
+                <div class="ledger-grid">
+                    <article class="px-4 py-4">
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Current route</div>
+                        <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.routeCode()}</div>
+                    </article>
+                    <article class="px-4 py-4">
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Next action</div>
+                        <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.primaryLabel()}</div>
+                    </article>
+                </div>
+                <div class="join join-vertical gap-3 sm:join-horizontal">
+                    <a class="btn btn-primary join-item h-11 rounded-full border-0 px-5 text-sm font-semibold" href="/checker">Open full checker</a>
+                    <a class="btn btn-outline join-item h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content" href="${checkerRecommendation.primaryHref()}">Open route</a>
+                </div>
             </div>
         </div>
     </div>
 
-    @template.fragments.checkerPanel(
-        states = states,
-        systems = systems,
-        selection = checkerSelection,
-        recommendation = checkerRecommendation
-    )
+    <div class="hidden md:block">
+        @template.fragments.checkerPanel(
+            states = states,
+            systems = systems,
+            selection = checkerSelection,
+            recommendation = checkerRecommendation
+        )
+    </div>
 </section>
 
 <section class="pt-14 md:pt-20">
@@ -144,7 +170,7 @@
                             <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guides.get(0).primaryHref()}">${guides.get(0).primaryLabel()}</a>
                         </div>
                     </div>
-                    <aside class="bg-base-200/36 p-6 md:p-7">
+                    <aside class="bg-base-200/58 p-6 md:p-7">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Why this page exists</div>
                         <p class="mt-4 text-sm leading-7 text-base-content/72">This is a decision-intent page, not a glossary page. It should close the gap between search intent and the next accountable move.</p>
                         <div class="mt-6 border-t border-base-300/70 pt-6">
@@ -157,9 +183,9 @@
         @endif
 
         @if (guides.size() > 1)
-            <div class="mt-5 overflow-hidden rounded-[1.2rem] border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
+            <div class="surface-panel mt-5 overflow-hidden">
                 @for (var guide : guides.subList(1, Math.min(3, guides.size())))
-                    <article class="grid gap-5 px-6 py-6 transition duration-150 ease-out hover:bg-base-200/18 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${guide != guides.get(1) ? "border-t border-base-300/70" : ""}">
+                    <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${guide != guides.get(1) ? "border-t border-base-300/70" : ""}">
                         <div class="space-y-3">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${guide.eyebrow()}</span>
@@ -248,9 +274,9 @@
         @endif
 
         @if (systems.size() > 1)
-            <div class="mt-5 overflow-hidden rounded-[1.2rem] border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
+            <div class="surface-panel mt-5 overflow-hidden">
                 @for (var system : systems.subList(1, Math.min(3, systems.size())))
-                    <article class="grid gap-5 px-6 py-6 transition duration-150 ease-out hover:bg-base-200/18 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${system != systems.get(1) ? "border-t border-base-300/70" : ""}">
+                    <article class="row-link grid gap-5 px-6 py-6 lg:grid-cols-[minmax(0,1.35fr)_12rem_16rem] lg:items-start ${system != systems.get(1) ? "border-t border-base-300/70" : ""}">
                         <div class="space-y-3">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${system.stateCode()} public water dossier</span>

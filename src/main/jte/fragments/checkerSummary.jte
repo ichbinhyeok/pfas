@@ -9,8 +9,8 @@
 @param ActionCheckerRecommendation recommendation
 
 <aside class="order-1 space-y-4 xl:order-2 xl:sticky xl:top-28" id="checker-summary">
-    <section class="card border border-neutral/12 bg-neutral text-neutral-content shadow-[var(--shadow-panel)]">
-        <div class="card-body gap-5 p-6">
+    <section class="terminal-panel">
+        <div class="space-y-5 p-6">
             <div class="space-y-3 border-b border-white/10 pb-5">
                 <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/80">${recommendation.tag()}</span>
                 <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/55">${recommendation.routeCode()}</p>
@@ -18,7 +18,7 @@
                 <p class="text-base leading-7 text-white/72">${recommendation.summary()}</p>
             </div>
 
-            <div class="rounded-[1rem] border border-white/10 bg-white/6 px-5 py-5">
+            <div class="terminal-pane px-5 py-5">
                 <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Next action now</span>
                 <p class="mt-3 text-lg font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</p>
                 <p class="mt-2 text-sm leading-6 text-white/68">The engine opens this path first. It is the least aggressive action supported by the current state.</p>
@@ -32,7 +32,7 @@
     </section>
 
     <div class="space-y-3">
-        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+        <div class="collapse collapse-arrow border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
             <input type="checkbox">
             <div class="collapse-title pr-12">
                 <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">State in view</div>
@@ -83,13 +83,13 @@
             </div>
         </div>
 
-        <article class="rounded-[1rem] border border-base-300/70 bg-base-100/92 px-5 py-5 shadow-[var(--shadow-soft)]">
+        <article class="surface-muted px-5 py-5 shadow-[var(--shadow-soft)]">
             <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">What this does not confirm</span>
             <p class="mt-3 text-sm leading-7 text-base-content/68">This route does not declare the household safe or unsafe. It does not replace utility interpretation, state guidance, or accredited lab review.</p>
         </article>
 
         @if(recommendation.wholeHouseGuardrail())
-            <article class="rounded-[1rem] border border-accent/18 bg-accent/7 px-5 py-5 shadow-[var(--shadow-soft)]">
+            <article class="rounded-[1rem] border border-accent/18 bg-[rgba(120,104,90,0.08)] px-5 py-5 shadow-[var(--shadow-soft)]">
                 <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent">Whole-house guardrail</span>
                 <p class="mt-3 text-sm leading-7 text-base-content/72">${recommendation.wholeHouseMessage()}</p>
             </article>

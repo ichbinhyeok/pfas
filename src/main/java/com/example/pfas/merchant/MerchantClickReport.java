@@ -13,6 +13,8 @@ public record MerchantClickReport(
 	@JsonProperty("product_counts") List<MerchantClickCountEntry> productCounts,
 	@JsonProperty("source_page_counts") List<MerchantClickCountEntry> sourcePageCounts,
 	@JsonProperty("route_type_counts") List<MerchantClickCountEntry> routeTypeCounts,
+	@JsonProperty("route_code_counts") List<MerchantClickCountEntry> routeCodeCounts,
+	@JsonProperty("unlock_state_counts") List<MerchantClickCountEntry> unlockStateCounts,
 	@JsonProperty("recent_events") List<MerchantClickEvent> recentEvents
 ) {
 }

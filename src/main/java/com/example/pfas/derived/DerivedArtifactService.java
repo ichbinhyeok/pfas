@@ -11,6 +11,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.example.pfas.catalog.FilterCollectionSurface;
+import com.example.pfas.catalog.FilterProductSurface;
+import com.example.pfas.catalog.FilterSurfaceService;
 import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.data.PfasDataProperties;
 import com.example.pfas.quality.RouteQualityGateService;
@@ -44,6 +47,7 @@ public class DerivedArtifactService {
 	private final PublicWaterResultService publicWaterResultService;
 	private final PrivateWellResultService privateWellResultService;
 	private final ActionCheckerService actionCheckerService;
+	private final FilterSurfaceService filterSurfaceService;
 	private final PfasDataProperties dataProperties;
 
 	public DerivedArtifactService(
@@ -58,6 +62,7 @@ public class DerivedArtifactService {
 		PublicWaterResultService publicWaterResultService,
 		PrivateWellResultService privateWellResultService,
 		ActionCheckerService actionCheckerService,
+		FilterSurfaceService filterSurfaceService,
 		PfasDataProperties dataProperties
 	) {
 		this.publicationRouteService = publicationRouteService;
@@ -71,6 +76,7 @@ public class DerivedArtifactService {
 		this.publicWaterResultService = publicWaterResultService;
 		this.privateWellResultService = privateWellResultService;
 		this.actionCheckerService = actionCheckerService;
+		this.filterSurfaceService = filterSurfaceService;
 		this.dataProperties = dataProperties;
 	}
 
@@ -102,11 +108,23 @@ public class DerivedArtifactService {
 			.map(page -> toCompareDocument(page, routeIndexable(gateIndex, "compare", page.slug())))
 			.forEach(documents::add);
 
+		filterSurfaceService.getProductSurfaces().stream()
+			.map(surface -> toFilterProductDocument(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+			.forEach(documents::add);
+
+		filterSurfaceService.getCollectionSurfaces().stream()
+			.map(surface -> toFilterCollectionDocument(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+			.forEach(documents::add);
+
 		expansionReadinessService.getReport().items().stream()
 			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
 			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
-			.map(item -> toReadyDocument(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())))
-			.forEach(documents::add);
+			.forEach(item -> {
+				documents.add(toReadyDocument(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())));
+				if ("public_water".equals(item.routeType())) {
+					documents.add(toPublicWaterSupportDocument(item, routeIndexable(gateIndex, "public_water_support", item.routeKey())));
+				}
+			});
 
 		return new SearchIndexSeedFile(SCHEMA_VERSION, generatedAt, documents.size(), List.copyOf(documents));
 	}
@@ -157,11 +175,23 @@ public class DerivedArtifactService {
 			.map(page -> toComparePageModel(page, routeIndexable(gateIndex, "compare", page.slug())))
 			.forEach(models::add);
 
+		filterSurfaceService.getProductSurfaces().stream()
+			.map(surface -> toFilterProductPageModel(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+			.forEach(models::add);
+
+		filterSurfaceService.getCollectionSurfaces().stream()
+			.map(surface -> toFilterCollectionPageModel(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+			.forEach(models::add);
+
 		expansionReadinessService.getReport().items().stream()
 			.filter(item -> item.status() == ExpansionReadinessStatus.READY)
 			.sorted(Comparator.comparing(item -> item.routeType() + ":" + item.routeKey()))
-			.map(item -> toReadyPageModel(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())))
-			.forEach(models::add);
+			.forEach(item -> {
+				models.add(toReadyPageModel(item, routeIndexable(gateIndex, item.routeType(), item.routeKey())));
+				if ("public_water".equals(item.routeType())) {
+					models.add(toPublicWaterSupportPageModel(item, routeIndexable(gateIndex, "public_water_support", item.routeKey())));
+				}
+			});
 
 		return List.copyOf(models);
 	}
@@ -177,6 +207,28 @@ public class DerivedArtifactService {
 			return comparePageService.getBySlug(routeKey)
 				.map(page -> toComparePageModel(page, routeIndexable(gateIndex, "compare", page.slug())))
 				.orElseThrow(() -> new IllegalStateException("Unknown compare page model: " + routeKey));
+		}
+		if (FilterSurfaceService.ROUTE_TYPE_FILTER_PRODUCT.equals(routeType)) {
+			return filterSurfaceService.getProductSurface(routeKey)
+				.map(surface -> toFilterProductPageModel(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+				.orElseThrow(() -> new IllegalStateException("Unknown filter product page model: " + routeKey));
+		}
+		if (FilterSurfaceService.ROUTE_TYPE_FILTER_BRAND.equals(routeType)
+			|| FilterSurfaceService.ROUTE_TYPE_FILTER_INSTALLATION.equals(routeType)
+			|| FilterSurfaceService.ROUTE_TYPE_FILTER_TYPE.equals(routeType)
+			|| FilterSurfaceService.ROUTE_TYPE_FILTER_MERCHANT.equals(routeType)) {
+			return filterSurfaceService.getCollectionSurface(routeType, routeKey)
+				.map(surface -> toFilterCollectionPageModel(surface, routeIndexable(gateIndex, surface.routeType(), surface.routeKey())))
+				.orElseThrow(() -> new IllegalStateException("Unknown filter collection page model: " + routeType + ":" + routeKey));
+		}
+		if ("public_water_support".equals(routeType)) {
+			return expansionReadinessService.getReport().items().stream()
+				.filter(item -> item.status() == ExpansionReadinessStatus.READY)
+				.filter(item -> "public_water".equals(item.routeType()))
+				.filter(item -> item.routeKey().equalsIgnoreCase(routeKey))
+				.findFirst()
+				.map(item -> toPublicWaterSupportPageModel(item, routeIndexable(gateIndex, routeType, routeKey)))
+				.orElseThrow(() -> new IllegalStateException("Unknown public water support page model: " + routeKey));
 		}
 
 		return expansionReadinessService.getReport().items().stream()
@@ -275,6 +327,36 @@ public class DerivedArtifactService {
 		);
 	}
 
+	private SearchIndexSeedDocument toFilterProductDocument(FilterProductSurface surface, boolean indexable) {
+		return new SearchIndexSeedDocument(
+			"filter_product:" + surface.routeKey(),
+			surface.routeType(),
+			surface.routeKey(),
+			surface.canonicalPath(),
+			surface.title(),
+			surface.lede(),
+			surface.lastVerifiedDate(),
+			indexable,
+			surface.sourceCount(),
+			surface.keywords()
+		);
+	}
+
+	private SearchIndexSeedDocument toFilterCollectionDocument(FilterCollectionSurface surface, boolean indexable) {
+		return new SearchIndexSeedDocument(
+			surface.routeType() + ":" + surface.routeKey(),
+			surface.routeType(),
+			surface.routeKey(),
+			surface.canonicalPath(),
+			surface.title(),
+			surface.lede(),
+			surface.lastVerifiedDate(),
+			indexable,
+			surface.sourceCount(),
+			surface.keywords()
+		);
+	}
+
 	private SearchIndexSeedDocument toReadyDocument(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
 		return switch (item.routeType()) {
 			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
@@ -307,6 +389,23 @@ public class DerivedArtifactService {
 				.orElseThrow(() -> new IllegalStateException("Missing public water system for ready document: " + item.routeKey()));
 			default -> throw new IllegalStateException("Unsupported ready document type: " + item.routeType());
 		};
+	}
+
+	private SearchIndexSeedDocument toPublicWaterSupportDocument(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
+		return publicWaterSystemService.getByPwsid(item.routeKey())
+			.map(system -> new SearchIndexSeedDocument(
+				"public_water_support:" + system.pwsid(),
+				"public_water_support",
+				system.pwsid(),
+				"/public-water-system/" + system.pwsid(),
+				system.pwsName() + " PFAS source context",
+				"Supporting source context and utility record file for " + system.pwsName() + ".",
+				item.lastVerifiedDate(),
+				indexable,
+				item.sourceCount(),
+				List.of(system.pwsName(), system.stateCode(), system.pwsid(), "public water", "PFAS source context", "CCR")
+			))
+			.orElseThrow(() -> new IllegalStateException("Missing public water support document: " + item.routeKey()));
 	}
 
 	private DecisionInputSeed toDecisionInputSeed(com.example.pfas.readiness.ExpansionReadinessItem item) {
@@ -413,6 +512,40 @@ public class DerivedArtifactService {
 		);
 	}
 
+	private GeneratedPageModelFile toFilterProductPageModel(FilterProductSurface surface, boolean indexable) {
+		return new GeneratedPageModelFile(
+			SCHEMA_VERSION,
+			OffsetDateTime.now().toString(),
+			"filter_product:" + surface.routeKey(),
+			surface.routeType(),
+			surface.routeKey(),
+			"filter_product_page",
+			surface.canonicalPath(),
+			"static_file_seed",
+			indexable,
+			surface.lastVerifiedDate(),
+			surface.sourceCount(),
+			new FilterProductPageModelPayload(surface)
+		);
+	}
+
+	private GeneratedPageModelFile toFilterCollectionPageModel(FilterCollectionSurface surface, boolean indexable) {
+		return new GeneratedPageModelFile(
+			SCHEMA_VERSION,
+			OffsetDateTime.now().toString(),
+			surface.routeType() + ":" + surface.routeKey(),
+			surface.routeType(),
+			surface.routeKey(),
+			"filter_collection_page",
+			surface.canonicalPath(),
+			"static_file_seed",
+			indexable,
+			surface.lastVerifiedDate(),
+			surface.sourceCount(),
+			new FilterCollectionPageModelPayload(surface)
+		);
+	}
+
 	private GeneratedPageModelFile toReadyPageModel(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
 		return switch (item.routeType()) {
 			case "state_guidance" -> stateGuidanceService.getByStateCode(item.routeKey())
@@ -462,6 +595,25 @@ public class DerivedArtifactService {
 		};
 	}
 
+	private GeneratedPageModelFile toPublicWaterSupportPageModel(com.example.pfas.readiness.ExpansionReadinessItem item, boolean indexable) {
+		return publicWaterSystemService.getByPwsid(item.routeKey())
+			.map(system -> new GeneratedPageModelFile(
+				SCHEMA_VERSION,
+				OffsetDateTime.now().toString(),
+				"public_water_support:" + system.pwsid(),
+				"public_water_support",
+				system.pwsid(),
+				"public_water_support_page",
+				"/public-water-system/" + system.pwsid(),
+				"static_file_seed",
+				indexable,
+				item.lastVerifiedDate(),
+				item.sourceCount(),
+				new PublicWaterSupportPageModelPayload(system)
+			))
+			.orElseThrow(() -> new IllegalStateException("Missing public water support page model: " + item.routeKey()));
+	}
+
 	private String pageModelPath(String routeType, String routeKey) {
 		return "derived/page_models/" + routeType + "/" + routeKey + ".json";
 	}
@@ -508,7 +660,7 @@ public class DerivedArtifactService {
 	}
 
 	private boolean routeIndexable(Map<String, com.example.pfas.quality.RouteQualityDecision> gateIndex, String routeType, String routeKey) {
-		var decision = gateIndex.get((routeType + ":" + routeKey).toUpperCase());
+		var decision = gateIndex.get(routeType + ":" + routeKey.toUpperCase());
 		return decision == null || decision.indexable();
 	}
 }

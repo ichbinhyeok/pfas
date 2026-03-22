@@ -53,6 +53,7 @@ public class StaticExportService {
 		addFixedItem(items, "/css/app.css", false, "asset", siteLastVerifiedDate);
 		addFixedItem(items, "/css/tailwind.css", false, "asset", siteLastVerifiedDate);
 		addFixedItem(items, "/js/merchant-tracking.js", false, "asset", siteLastVerifiedDate);
+		addFixedItem(items, "/js/route-actions.js", false, "asset", siteLastVerifiedDate);
 		addFixedItem(items, "/favicon.svg", false, "asset", siteLastVerifiedDate);
 
 		var pageGenerationManifest = derivedArtifactService.buildPageGenerationManifest();

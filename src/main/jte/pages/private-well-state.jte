@@ -68,26 +68,26 @@
 
 <section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="stats stats-vertical gap-3 bg-transparent p-0 shadow-none lg:stats-horizontal">
-            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
-                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State route</div>
-                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.stateCode()}</div>
-                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">State-specific guide and lab pathway.</div>
+        <div class="ledger-grid md:grid-cols-2 xl:grid-cols-4">
+            <div class="px-4 py-4 md:px-6 md:py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State route</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${guidance.stateCode()}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">State-specific guide and lab pathway.</div>
             </div>
-            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
-                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Repeat testing</div>
-                <div class="stat-value mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content">Guidance in view</div>
-                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">${guidance.repeatTestingGuidance()}</div>
+            <div class="px-4 py-4 md:px-6 md:py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Repeat testing</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content">Guidance in view</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">${guidance.repeatTestingGuidance()}</div>
             </div>
-            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
-                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Benchmark notes</div>
-                <div class="stat-value mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content">Reference-based</div>
-                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">${guidance.benchmarkNotes()}</div>
+            <div class="px-4 py-4 md:px-6 md:py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Benchmark notes</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content">Reference-based</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">${guidance.benchmarkNotes()}</div>
             </div>
-            <div class="stat rounded-[1rem] border border-base-300/70 bg-base-100/92 px-6 py-5 shadow-[var(--shadow-soft)]">
-                <div class="stat-title text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Last verified</div>
-                <div class="stat-value mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.lastVerifiedDate()}</div>
-                <div class="stat-desc mt-3 text-sm leading-6 text-base-content/58">State guidance and lab route review date.</div>
+            <div class="px-4 py-4 md:px-6 md:py-5">
+                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Last verified</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${guidance.lastVerifiedDate()}</div>
+                <div class="mt-3 text-sm leading-6 text-base-content/58">State guidance and lab route review date.</div>
             </div>
         </div>
     </div>
@@ -194,9 +194,9 @@
                                     <option value="UNCERTIFIED">Uncertified or unclear</option>
                                 </select>
                             </label>
-                            <label class="label col-span-full justify-start gap-3 rounded-[1rem] border border-base-300/70 bg-base-100 px-4 py-4">
-                                <input class="checkbox checkbox-sm border-base-300 bg-base-100 text-primary" type="checkbox" name="wholeHouseConsidered" value="true">
-                                <span class="label-text text-sm leading-6 text-base-content/68">Whole-house has already been considered and rejected as the default move.</span>
+                            <label class="col-span-full flex cursor-pointer items-start gap-3 rounded-[1rem] border border-base-300/70 bg-base-100 px-4 py-4">
+                                <input class="checkbox checkbox-primary mt-1 border-base-300 bg-base-100 text-primary" type="checkbox" name="wholeHouseConsidered" value="true">
+                                <span class="text-sm leading-6 text-base-content/68">Whole-house has already been considered and rejected as the default move.</span>
                             </label>
                             <div class="col-span-full pt-1">
                                 <button class="btn btn-primary h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" type="submit">Run state comparison</button>

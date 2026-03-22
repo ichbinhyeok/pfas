@@ -8,10 +8,14 @@
 @param String sourcePage
 @param String routeType
 @param String ctaSlot
+@param String routeCode
+@param String benchmarkRelation
+@param String unlockState
+@param String nextActionCode
 @param List<FilterCatalogItem> products
 
 @if(products != null && !products.isEmpty())
-    <section class="rounded-[1.5rem] border border-base-300/70 bg-base-100/96 shadow-[var(--shadow-panel)]" id="${sectionId}">
+    <section class="surface-panel-strong" id="${sectionId}">
         <div class="grid gap-6 p-6 md:p-8">
             <div class="grid gap-5 xl:grid-cols-[minmax(0,0.62fr)_minmax(0,1.38fr)] xl:items-end">
                 <div class="space-y-3">
@@ -30,7 +34,7 @@
 
             <div class="overflow-hidden rounded-[1.2rem] border border-base-300/70 bg-base-100">
                 @for(var product : products.subList(0, Math.min(products.size(), 2)))
-                    <article class="px-5 py-5 ${product != products.get(0) ? "border-t border-base-300/70" : ""}">
+                    <article class="row-link px-5 py-5 ${product != products.get(0) ? "border-t border-base-300/70" : ""}">
                         <div class="grid gap-5 xl:grid-cols-[minmax(0,1.05fr)_12rem_16rem] xl:items-start">
                             <div class="space-y-3">
                                 <div class="flex flex-wrap items-center gap-3">
@@ -43,16 +47,16 @@
                                 <p class="text-sm leading-6 text-base-content/58"><strong class="font-semibold text-base-content">Seller choice</strong> ${PresentationText.sellerChoiceNote(product)}</p>
                             </div>
 
-                            <div class="grid gap-px overflow-hidden rounded-[0.95rem] border border-base-300/70 bg-base-300/70">
-                                <div class="bg-base-100 px-4 py-4">
+                            <div class="ledger-grid rounded-[0.95rem]">
+                                <div class="px-4 py-4">
                                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Upfront</div>
                                     <div class="mt-2 text-sm font-semibold text-base-content">${PresentationText.currencyLabel(product.upfrontCostUsd())}</div>
                                 </div>
-                                <div class="bg-base-100 px-4 py-4">
+                                <div class="px-4 py-4">
                                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Annualized</div>
                                     <div class="mt-2 text-sm font-semibold text-base-content">${PresentationText.annualizedMaintenanceLabel(product)}</div>
                                 </div>
-                                <div class="bg-base-100 px-4 py-4">
+                                <div class="px-4 py-4">
                                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Burden</div>
                                     <div class="mt-2 text-sm font-semibold text-base-content">${PresentationText.maintenanceBurdenLabel(product)}</div>
                                 </div>
@@ -72,6 +76,10 @@
                                     data-cta-slot="${ctaSlot}"
                                     data-source-page="${sourcePage}"
                                     data-route-type="${routeType}"
+                                    data-route-code="${routeCode}"
+                                    data-benchmark-relation="${benchmarkRelation}"
+                                    data-unlock-state="${unlockState}"
+                                    data-next-action-code="${nextActionCode}"
                                     data-target-url="${product.listingUrl()}"
                                 >Open ${PresentationText.merchantLabel(product)} record</a>
 
@@ -97,7 +105,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="mt-4 rounded-[1rem] border border-base-300/70 bg-base-100 px-4 py-4 text-sm leading-7 text-base-content/68">
+                                        <div class="surface-muted mt-4 px-4 py-4 text-sm leading-7 text-base-content/68">
                                             <strong class="font-semibold text-base-content">Not for</strong> ${PresentationText.notForLabel(product)}<br>
                                             <strong class="font-semibold text-base-content">Cadence and confidence</strong> ${PresentationText.cadenceLabel(product.replacementCadenceMonths())} / Cost confidence ${PresentationText.confidenceLabel(product.costConfidence())}
                                         </div>
@@ -110,7 +118,7 @@
             </div>
 
             @if(products.size() > 2)
-                <div class="collapse collapse-arrow rounded-[1.25rem] border border-base-300/70 bg-base-200/30">
+                <div class="collapse collapse-arrow rounded-[1.25rem] border border-base-300/70 bg-base-200/36">
                     <input type="checkbox">
                     <div class="collapse-title pr-12 text-base font-semibold tracking-[-0.02em] text-base-content">More certified options (${products.size() - 2})</div>
                     <div class="collapse-content">
@@ -139,6 +147,10 @@
                                             data-cta-slot="${ctaSlot}"
                                             data-source-page="${sourcePage}"
                                             data-route-type="${routeType}"
+                                            data-route-code="${routeCode}"
+                                            data-benchmark-relation="${benchmarkRelation}"
+                                            data-unlock-state="${unlockState}"
+                                            data-next-action-code="${nextActionCode}"
                                             data-target-url="${product.listingUrl()}"
                                         >Open ${PresentationText.merchantLabel(product)} record</a>
                                     </div>

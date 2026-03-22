@@ -1275,6 +1275,19 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void keepsPrivateWellStateContextAheadOfUncertifiedFilterWhenBenchmarkIsUnknown() {
+		var result = privateWellResultService
+			.get("MI", ActionBenchmarkRelation.UNKNOWN, ActionCurrentFilterStatus.UNCERTIFIED, false)
+			.orElseThrow();
+
+		assertThat(result.nextAction().code()).isEqualTo("GET_STATE_GUIDANCE_AND_LAB_CONTEXT");
+		assertThat(result.bestFitOptions()).isEmpty();
+		assertThat(result.meta().decisionRuleId()).isEqualTo("PRIVATE_WELL_STATE_CONTEXT_REQUIRED");
+		assertThat(result.whyThis())
+			.anySatisfy(line -> assertThat(line).contains("should not be treated as PFAS mitigation"));
+	}
+
+	@Test
 	void evaluatesPrivateWellMeasurementAgainstStateProfile() {
 		var evaluation = privateWellBenchmarkEvaluatorService.evaluate("MI", "PFOA", new java.math.BigDecimal("12"), "ppt").orElseThrow();
 
@@ -1381,6 +1394,57 @@ class PfasApplicationTests {
 		assertThat(recommendation.routeCode()).isEqualTo(ActionCheckerRouteCode.MAINTAIN_OR_VERIFY_CERTIFIED_FILTER);
 		assertThat(recommendation.primaryHref()).isEqualTo("/public-water/PA1510001");
 		assertThat(recommendation.secondaryHref()).isEqualTo("/guides/nsf-53-vs-58-pfas");
+	}
+
+	@Test
+	void keepsUrgentEvidenceRoutesAheadOfExistingFilterStatus() {
+		var publicWaterSelection = actionCheckerService.normalize(
+			"public_water",
+			"official_notice",
+			"none",
+			"above_reference",
+			"certified",
+			"filter_now",
+			false,
+			null,
+			"7360058"
+		);
+		var privateWellSelection = actionCheckerService.normalize(
+			"private_well",
+			"private_well_test",
+			"none",
+			"above_reference",
+			"uncertified",
+			"compare_options",
+			false,
+			"MI",
+			null
+		);
+
+		assertThat(actionCheckerService.evaluate(publicWaterSelection).routeCode())
+			.isEqualTo(ActionCheckerRouteCode.PUBLIC_WATER_CERTIFIED_POU_EVALUATION);
+		assertThat(actionCheckerService.evaluate(privateWellSelection).routeCode())
+			.isEqualTo(ActionCheckerRouteCode.PRIVATE_WELL_CERTIFIED_POU_AND_STATE_NEXT_STEPS);
+	}
+
+	@Test
+	void keepsCurrentInterpretationPrimaryWhenWholeHouseIsUnderReview() {
+		var publicWaterSelection = actionCheckerService.normalize(
+			"public_water",
+			"official_notice",
+			"none",
+			"above_reference",
+			"none",
+			"filter_now",
+			true,
+			null,
+			"7360058"
+		);
+		var recommendation = actionCheckerService.evaluate(publicWaterSelection);
+
+		assertThat(recommendation.routeCode()).isEqualTo(ActionCheckerRouteCode.WHOLE_HOUSE_JUSTIFIED_ESCALATION_REVIEW);
+		assertThat(recommendation.primaryHref()).isEqualTo("/public-water/7360058");
+		assertThat(recommendation.secondaryHref()).isEqualTo("/guides/under-sink-vs-whole-house");
 	}
 
 	@Test
@@ -1520,7 +1584,9 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Seller choice")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Best for")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public-water interpretation")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public-water interpretation")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open source context")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("Open result JSON"))));
 	}
 
 	@Test
@@ -1582,7 +1648,25 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open state next steps and evaluate certified point-of-use")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan PFAS drinking-water MCLs used with other private-well factors")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well interpretation")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well interpretation")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read certification basics")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("Open result JSON"))));
+	}
+
+	@Test
+	void publicWaterInterpretationRecommendationUsesUserFacingSecondaryLinks() throws Exception {
+		mockMvc.perform(
+			get("/internal/action-checker/recommendation")
+				.param("waterSource", "PUBLIC_WATER")
+				.param("directData", "UTILITY_DOCUMENT")
+				.param("benchmarkRelation", "UNKNOWN")
+				.param("currentFilterStatus", "NONE")
+				.param("pwsid", "PA1510001")
+		)
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PUBLIC_WATER_INTERPRET_DIRECT_DATA")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/public-water-system/PA1510001")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("/internal/results/public-water/PA1510001"))));
 	}
 
 	@Test
@@ -1705,8 +1789,8 @@ class PfasApplicationTests {
 	void returnsDerivedRouteManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":59")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":59")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":157")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":129")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AZ0408063\"")))
@@ -1748,15 +1832,24 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/what-ucmr5-can-and-cannot-tell-you\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/non-detect-vs-below-reference-pfas\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/carbon-vs-ro-for-pfas\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/guides/public-water-vs-private-well\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/under-sink-certified-pfas-options\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/pfas-filter-annual-cost-compare\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/pfas-filter-annual-cost-compare\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/compare/countertop-vs-pitcher-vs-under-sink-compare\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water-system/PA1510001\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/aquasana-aq-6200\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/brands/aquasana\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/installations/countertop\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/types/reverse-osmosis\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/merchants/aquasana\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable\":false")));
 	}
 
 	@Test
 	void returnsDerivedSearchIndexSeed() throws Exception {
 		mockMvc.perform(get("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":59")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":157")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310900\"")))
@@ -1799,7 +1892,15 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:non-detect-vs-below-reference-pfas\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:carbon-vs-ro-for-pfas\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:under-sink-certified-pfas-options\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:nsf-53-vs-58-claim-examples\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:nsf-53-vs-58-claim-examples\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water_support:PA1510001\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_product:aquasana-aq-6200\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_brand:aquasana\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_installation:countertop\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_type:reverse-osmosis\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_merchant:aquasana\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"filter_product:waterdrop-10ub-pro\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable\":false")));
 	}
 
 	@Test
@@ -1853,7 +1954,7 @@ class PfasApplicationTests {
 	void returnsDerivedPageGenerationManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":59")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":157")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310730.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310900.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AZ0408063.json\"")))
@@ -1896,7 +1997,14 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/non-detect-vs-below-reference-pfas.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/carbon-vs-ro-for-pfas.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/under-sink-certified-pfas-options.json\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/nsf-53-vs-58-claim-examples.json\"")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/nsf-53-vs-58-claim-examples.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water_support/PA1510001.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/filter_product/aquasana-aq-6200.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/filter_brand/aquasana.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/filter_installation/countertop.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/filter_type/reverse-osmosis.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/filter_merchant/aquasana.json\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable\":false")));
 	}
 
 	@Test
@@ -1923,13 +2031,14 @@ class PfasApplicationTests {
 	void returnsStaticExportManifest() throws Exception {
 		mockMvc.perform(get("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":104")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":140")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/sitemap.xml\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/compare/under-sink-certified-pfas-options\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/compare/nsf-53-vs-58-claim-examples\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/compare/countertop-vs-pitcher-vs-under-sink-compare\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/public-water-system/AZ0408063\"")))
@@ -1965,10 +2074,15 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/what-ucmr5-can-and-cannot-tell-you/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/non-detect-vs-below-reference-pfas/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/carbon-vs-ro-for-pfas/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"guides/public-water-vs-private-well/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/under-sink-certified-pfas-options/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"compare/pfas-filter-annual-cost-compare/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"filters/aquasana-aq-6200/index.html\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"filters/brands/aquasana/index.html\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/merchant-tracking.js\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/route-actions.js\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"path\":\"/filters/waterdrop-10ub-pro\""))))
 			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"last_verified_date\":null"))));
 	}
 
@@ -2026,13 +2140,14 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/internal/quality/freshness-report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_source_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":59")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":129")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_indexable_route_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":28")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unresolved_readiness_route_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"noindex_candidate_count\":0")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"noindex_candidate_count\":28")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_sources\":[]")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_findings\":[]")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/filters/waterdrop-10ub-pro\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"reasons\":[\"low_source_count\"]")));
 	}
 
 	@Test

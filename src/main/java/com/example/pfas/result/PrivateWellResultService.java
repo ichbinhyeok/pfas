@@ -106,7 +106,6 @@ public class PrivateWellResultService {
 		var profile = stateBenchmarkProfileService.getByStateCode(guidance.stateCode()).orElse(null);
 		var options = benchmarkRelation == ActionBenchmarkRelation.ABOVE_REFERENCE
 			|| benchmarkRelation == ActionBenchmarkRelation.MIXED
-			|| currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED
 			? filterCatalogService.getForPfasCoverage(List.of("PFOA", "PFOS"))
 			: List.<FilterCatalogItem>of();
 
@@ -114,7 +113,7 @@ public class PrivateWellResultService {
 			"private-well:" + guidance.stateCode() + ":" + benchmarkRelation.name(),
 			"v1",
 			OffsetDateTime.now().toString(),
-			nextAction(guidance, profile, benchmarkRelation, currentFilterStatus),
+			nextAction(guidance, profile, benchmarkRelation),
 			whyThis(guidance, profile, benchmarkRelation, currentFilterStatus),
 			whatThisDoesNotTellYou(guidance, profile),
 			buildInitialCost(options),
@@ -129,7 +128,7 @@ public class PrivateWellResultService {
 			new ResultMeta(
 				"private_well",
 				benchmarkRelation.name().toLowerCase(),
-				decisionRuleId(benchmarkRelation, currentFilterStatus),
+				decisionRuleId(benchmarkRelation),
 				benchmarkRelation == ActionBenchmarkRelation.UNKNOWN || benchmarkRelation == ActionBenchmarkRelation.NOT_COMPARABLE
 			)
 		);
@@ -138,20 +137,8 @@ public class PrivateWellResultService {
 	private NextAction nextAction(
 		StateGuidance guidance,
 		StateBenchmarkProfile profile,
-		ActionBenchmarkRelation benchmarkRelation,
-		ActionCurrentFilterStatus currentFilterStatus
+		ActionBenchmarkRelation benchmarkRelation
 	) {
-		var primaryReferenceLabel = profile != null ? profile.primaryReferenceLabel() : guidance.stateCode() + " state guidance";
-		if (currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED) {
-			return new NextAction(
-				"VERIFY_OR_REPLACE_WITH_CERTIFIED_OPTION",
-				"Verify or replace the current filter with a certified point-of-use option",
-				"The current household filter is not confirmed as certified for PFAS reduction, so certification and replacement cadence should be checked before relying on it against " + primaryReferenceLabel + ".",
-				"medium",
-				"Private-well interpretation stays reference-based and state-guided."
-			);
-		}
-
 		return switch (benchmarkRelation) {
 			case ABOVE_REFERENCE, MIXED -> new NextAction(
 				"EVALUATE_CERTIFIED_POU_FILTER_AND_STATE_NEXT_STEPS",
@@ -184,7 +171,7 @@ public class PrivateWellResultService {
 		ActionCurrentFilterStatus currentFilterStatus
 	) {
 		var filterLine = currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED
-			? "The current filter status is uncertified, so certification verification becomes a first-order action."
+			? "The current filter status is uncertified, so it should not be treated as PFAS mitigation until the exact claim is verified."
 			: "Any treatment path should stay certification-first and state-guided.";
 		var referenceLine = profile == null
 			? "State-specific benchmark context is still limited, so the route leans on direct agency guidance before any benchmark claim."
@@ -439,10 +426,7 @@ public class PrivateWellResultService {
 		);
 	}
 
-	private String decisionRuleId(ActionBenchmarkRelation benchmarkRelation, ActionCurrentFilterStatus currentFilterStatus) {
-		if (currentFilterStatus == ActionCurrentFilterStatus.UNCERTIFIED) {
-			return "PRIVATE_WELL_UNCERTIFIED_FILTER_CHECK";
-		}
+	private String decisionRuleId(ActionBenchmarkRelation benchmarkRelation) {
 		return switch (benchmarkRelation) {
 			case ABOVE_REFERENCE, MIXED -> "PRIVATE_WELL_ABOVE_REFERENCE_CERTIFIED_POU";
 			case BELOW_REFERENCE -> "PRIVATE_WELL_BELOW_REFERENCE_MONITOR";

@@ -17,6 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.example.pfas.checker.ActionBenchmarkRelation;
 import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.checker.ActionCheckerService;
+import com.example.pfas.commercial.CommercialSurfaceService;
 import com.example.pfas.decision.PublicWaterDecisionService;
 import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.result.PrivateWellResultService;
@@ -40,6 +41,7 @@ public class PublicPagesController {
 	private final GuidePageService guidePageService;
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final RouteQualityGateService routeQualityGateService;
+	private final CommercialSurfaceService commercialSurfaceService;
 
 	public PublicPagesController(
 		PublicWaterSystemService publicWaterSystemService,
@@ -51,7 +53,8 @@ public class PublicPagesController {
 		ActionCheckerService actionCheckerService,
 		GuidePageService guidePageService,
 		StateBenchmarkProfileService stateBenchmarkProfileService,
-		RouteQualityGateService routeQualityGateService
+		RouteQualityGateService routeQualityGateService,
+		CommercialSurfaceService commercialSurfaceService
 	) {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.stateGuidanceService = stateGuidanceService;
@@ -63,6 +66,7 @@ public class PublicPagesController {
 		this.guidePageService = guidePageService;
 		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.routeQualityGateService = routeQualityGateService;
+		this.commercialSurfaceService = commercialSurfaceService;
 	}
 
 	@GetMapping("/")
@@ -146,6 +150,7 @@ public class PublicPagesController {
 		model.addAttribute("system", system);
 		model.addAttribute("decision", decision);
 		model.addAttribute("result", result);
+		model.addAttribute("commercialState", commercialSurfaceService.forPublicWater(decision, result));
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water", system.pwsid()));
 		return "pages/public-water-result";
 	}
@@ -157,7 +162,7 @@ public class PublicPagesController {
 
 		model.addAttribute("system", system);
 		model.addAttribute("sources", resolveSources(system.sourceIds()));
-		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water", system.pwsid()));
+		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water_support", system.pwsid()));
 		return "pages/public-water-system";
 	}
 
@@ -205,6 +210,18 @@ public class PublicPagesController {
 				: benchmarkRelation);
 		model.addAttribute("currentFilterStatus", currentFilterStatus);
 		model.addAttribute("wholeHouseConsidered", wholeHouseConsidered);
+		model.addAttribute(
+			"commercialState",
+			commercialSurfaceService.forPrivateWell(
+				result,
+				result.benchmarkBatchEvaluation() != null
+					? ActionBenchmarkRelation.valueOf(result.benchmarkBatchEvaluation().aggregateRelation().toUpperCase())
+					: result.benchmarkEvaluation() != null
+						? ActionBenchmarkRelation.valueOf(result.benchmarkEvaluation().benchmarkRelation().toUpperCase())
+						: benchmarkRelation,
+				wholeHouseConsidered
+			)
+		);
 		model.addAttribute("batchInput", batchInput);
 		model.addAttribute("encodedBatchInput", batchInput == null ? null : URLEncoder.encode(batchInput, StandardCharsets.UTF_8));
 		model.addAttribute("analyteCode", analyteCode);

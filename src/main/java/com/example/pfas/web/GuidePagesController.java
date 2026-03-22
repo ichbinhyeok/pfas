@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.example.pfas.commercial.CommercialSurfaceService;
 import com.example.pfas.filter.FilterCatalogItem;
 import com.example.pfas.filter.FilterCatalogService;
 import com.example.pfas.quality.RouteQualityGateService;
@@ -33,6 +34,7 @@ public class GuidePagesController {
 	private final ExpansionReadinessService expansionReadinessService;
 	private final RouteQualityGateService routeQualityGateService;
 	private final PageStructuredDataService pageStructuredDataService;
+	private final CommercialSurfaceService commercialSurfaceService;
 
 	public GuidePagesController(
 		GuidePageService guidePageService,
@@ -44,7 +46,8 @@ public class GuidePagesController {
 		ComparePageService comparePageService,
 		ExpansionReadinessService expansionReadinessService,
 		RouteQualityGateService routeQualityGateService,
-		PageStructuredDataService pageStructuredDataService
+		PageStructuredDataService pageStructuredDataService,
+		CommercialSurfaceService commercialSurfaceService
 	) {
 		this.guidePageService = guidePageService;
 		this.sourceRegistryService = sourceRegistryService;
@@ -56,6 +59,7 @@ public class GuidePagesController {
 		this.expansionReadinessService = expansionReadinessService;
 		this.routeQualityGateService = routeQualityGateService;
 		this.pageStructuredDataService = pageStructuredDataService;
+		this.commercialSurfaceService = commercialSurfaceService;
 	}
 
 	@GetMapping("/guides/{slug}")
@@ -86,6 +90,7 @@ public class GuidePagesController {
 		model.addAttribute("relatedSystemExamples", relatedSystems);
 		model.addAttribute("relatedProducts", relatedProducts);
 		model.addAttribute("relatedComparePages", comparePageService.resolveRelatedToGuide(page, 3));
+		model.addAttribute("commercialState", commercialSurfaceService.forGuidePage(page, relatedProducts));
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("guide", page.slug()));
 		model.addAttribute("pageStructuredDataJson", pageStructuredDataService.guidePageJsonLd(page, relatedProducts));
 		return "pages/guide-page";

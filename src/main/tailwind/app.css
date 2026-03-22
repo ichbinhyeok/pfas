@@ -12,58 +12,58 @@
   --font-sans: "Manrope", "Pretendard Variable", "Pretendard", "SUIT", sans-serif;
   --font-serif: "Newsreader", "Source Serif 4", serif;
 
-  --color-ink-strong: #111c25;
-  --color-ink-body: #4d5c68;
-  --color-ink-muted: #75828c;
-  --color-mineral-500: #5f7281;
-  --color-teal-600: #155e63;
-  --color-teal-700: #10474c;
-  --color-bronze-500: #816e5f;
-  --color-paper-50: #f4f6f8;
-  --color-paper-100: #ebeff3;
-  --color-paper-200: #dbe3ea;
-  --color-ivory: #f4f6f8;
-  --color-ivory-panel: #fbfcfd;
-  --color-ivory-muted: #ebeff3;
-  --color-slate-deep: #111c25;
-  --color-slate-body: #4d5c68;
-  --color-slate-muted: #75828c;
-  --color-slate-soft: #8a949d;
-  --color-teal-deep: #155e63;
-  --color-teal-tint: #dcebed;
-  --color-mineral-blue: #5f7281;
-  --color-brass: #816e5f;
-  --color-shell-border: rgba(23, 33, 43, 0.08);
-  --color-shell-border-strong: rgba(23, 33, 43, 0.14);
+  --color-ink-strong: #0f1820;
+  --color-ink-body: #445463;
+  --color-ink-muted: #6b7883;
+  --color-mineral-500: #617487;
+  --color-teal-600: #155d65;
+  --color-teal-700: #103f46;
+  --color-bronze-500: #78685a;
+  --color-paper-50: #f1f5f8;
+  --color-paper-100: #e5edf3;
+  --color-paper-200: #d0dae4;
+  --color-ivory: #f1f5f8;
+  --color-ivory-panel: #f8fbfd;
+  --color-ivory-muted: #e5edf3;
+  --color-slate-deep: #0f1820;
+  --color-slate-body: #445463;
+  --color-slate-muted: #6b7883;
+  --color-slate-soft: #85909a;
+  --color-teal-deep: #155d65;
+  --color-teal-tint: #d7e7ea;
+  --color-mineral-blue: #617487;
+  --color-brass: #78685a;
+  --color-shell-border: rgba(15, 24, 32, 0.1);
+  --color-shell-border-strong: rgba(15, 24, 32, 0.17);
 
-  --shadow-panel: 0 1px 2px rgba(15, 23, 42, 0.03), 0 18px 38px rgba(15, 23, 42, 0.05);
-  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.02), 0 8px 20px rgba(15, 23, 42, 0.04);
-  --shadow-quiet: 0 1px 2px rgba(15, 23, 42, 0.04), 0 20px 42px rgba(15, 23, 42, 0.04);
-  --shadow-float: 0 1px 2px rgba(15, 23, 42, 0.03), 0 12px 24px rgba(15, 23, 42, 0.04);
+  --shadow-panel: 0 1px 2px rgba(15, 24, 32, 0.04), 0 24px 56px rgba(15, 24, 32, 0.09);
+  --shadow-soft: 0 1px 2px rgba(15, 24, 32, 0.03), 0 12px 28px rgba(15, 24, 32, 0.06);
+  --shadow-quiet: 0 1px 2px rgba(15, 24, 32, 0.04), 0 28px 64px rgba(15, 24, 32, 0.07);
+  --shadow-float: 0 1px 2px rgba(15, 24, 32, 0.04), 0 16px 32px rgba(15, 24, 32, 0.07);
 }
 
 :root,
 [data-theme="pfas"] {
   color-scheme: light;
-  --color-base-100: #fbfcfd;
-  --color-base-200: #eef2f5;
-  --color-base-300: #dbe3ea;
-  --color-base-content: #111c25;
-  --color-primary: #155e63;
+  --color-base-100: #f8fbfd;
+  --color-base-200: #ebf1f5;
+  --color-base-300: #d2dce5;
+  --color-base-content: #0f1820;
+  --color-primary: #155d65;
   --color-primary-content: #f7fbfc;
-  --color-secondary: #5f7281;
+  --color-secondary: #617487;
   --color-secondary-content: #f7fbfc;
-  --color-accent: #816e5f;
+  --color-accent: #78685a;
   --color-accent-content: #fbf8f5;
-  --color-neutral: #13202a;
-  --color-neutral-content: #f5f8fa;
-  --color-info: #567a90;
+  --color-neutral: #111b24;
+  --color-neutral-content: #f3f7fa;
+  --color-info: #536d82;
   --color-info-content: #f7fbfc;
-  --color-success: #4d6f5f;
+  --color-success: #4d6c5f;
   --color-success-content: #f7fbfc;
-  --color-warning: #8f6a2d;
+  --color-warning: #8c6527;
   --color-warning-content: #fdf7eb;
-  --color-error: #9a5143;
+  --color-error: #975041;
   --color-error-content: #fff7f5;
   --radius-selector: 0.75rem;
   --radius-field: 1rem;
@@ -108,14 +108,15 @@
     min-height: 100vh;
     letter-spacing: -0.01em;
     background:
-      radial-gradient(circle at top, rgba(95, 114, 129, 0.08), transparent 26rem),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0)),
-      #f4f6f8;
-    color: #111c25;
+      radial-gradient(circle at top left, rgba(17, 27, 36, 0.09), transparent 23rem),
+      radial-gradient(circle at top right, rgba(97, 116, 135, 0.12), transparent 24rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
+      #f1f5f8;
+    color: #0f1820;
   }
 
   ::selection {
-    background: rgba(21, 94, 99, 0.16);
-    color: #111c25;
+    background: rgba(21, 93, 101, 0.16);
+    color: #0f1820;
   }
 }

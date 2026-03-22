@@ -10,6 +10,10 @@
 			ctaSlot: anchor.dataset.ctaSlot || "",
 			sourcePage: anchor.dataset.sourcePage || "",
 			routeType: anchor.dataset.routeType || "",
+			routeCode: anchor.dataset.routeCode || "",
+			benchmarkRelation: anchor.dataset.benchmarkRelation || "",
+			unlockState: anchor.dataset.unlockState || "",
+			nextActionCode: anchor.dataset.nextActionCode || "",
 			targetUrl: anchor.href || anchor.dataset.targetUrl || "",
 			pagePath: window.location.pathname
 		});

@@ -38,6 +38,10 @@ public class MerchantClickService {
 			nullToBlank(payload.ctaSlot()),
 			nullToBlank(payload.sourcePage()),
 			nullToBlank(payload.routeType()),
+			nullToBlank(payload.routeCode()),
+			nullToBlank(payload.benchmarkRelation()),
+			nullToBlank(payload.unlockState()),
+			nullToBlank(payload.nextActionCode()),
 			nullToBlank(payload.targetUrl()),
 			nullToBlank(payload.pagePath()),
 			nullToBlank(userAgent)
@@ -57,6 +61,8 @@ public class MerchantClickService {
 			counts(events, MerchantClickEvent::productId),
 			counts(events, MerchantClickEvent::sourcePage),
 			counts(events, MerchantClickEvent::routeType),
+			counts(events, MerchantClickEvent::routeCode),
+			counts(events, MerchantClickEvent::unlockState),
 			events.stream()
 				.sorted(Comparator.comparing(MerchantClickEvent::recordedAt).reversed())
 				.limit(20)

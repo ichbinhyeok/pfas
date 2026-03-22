@@ -20,8 +20,8 @@
 @param ActionCheckerRecommendation recommendation
 
 <div class="shell grid gap-8 xl:grid-cols-[minmax(0,1.08fr)_24rem]" id="checker-panel">
-    <form class="order-2 overflow-hidden rounded-[1.5rem] border border-base-300/70 bg-base-100/96 shadow-[var(--shadow-panel)] xl:order-1" method="get" action="/checker" hx-get="/checker/panel" hx-trigger="change from:input, change from:select" hx-target="#checker-panel" hx-swap="outerHTML">
-        <section class="bg-neutral text-neutral-content">
+    <form class="order-2 surface-panel-strong overflow-hidden xl:order-1" method="get" action="/checker" hx-get="/checker/panel" hx-trigger="change from:input, change from:select" hx-target="#checker-panel" hx-swap="outerHTML">
+        <section class="terminal-panel rounded-none border-0 shadow-none">
             <div class="grid gap-6 p-6 md:p-8 lg:grid-cols-[minmax(0,1fr)_21rem] lg:items-start">
                 <div class="space-y-4">
                     <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Case intake</span>
@@ -30,12 +30,12 @@
                 </div>
 
                 <div class="space-y-3">
-                    <div class="rounded-[1rem] border border-white/10 bg-white/6 px-5 py-5">
+                    <div class="terminal-pane px-5 py-5">
                         <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/56">Current route</span>
                         <span class="mt-3 block text-base font-semibold tracking-[-0.02em] text-white">${recommendation.routeCode()}</span>
                         <span class="mt-1 block text-sm leading-6 text-white/62">${recommendation.tag()}</span>
                     </div>
-                    <div class="rounded-[1rem] border border-primary/20 bg-primary/14 px-5 py-5">
+                    <div class="rounded-[1rem] border border-primary/28 bg-primary/16 px-5 py-5 shadow-[0_1px_2px_rgba(15,24,32,0.06),0_16px_30px_rgba(15,24,32,0.12)]">
                         <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/74">Next action now</span>
                         <span class="mt-3 block text-base font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</span>
                         <span class="mt-1 block text-sm leading-6 text-white/68">This is the first path opened from the current state.</span>
@@ -43,20 +43,20 @@
                 </div>
             </div>
 
-            <div class="grid gap-px border-t border-white/8 bg-white/8 md:grid-cols-4">
-                <div class="bg-white/3 px-6 py-4">
+            <div class="terminal-grid border-x-0 border-b-0 rounded-none md:grid-cols-4">
+                <div class="px-6 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/48">Source</div>
                     <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-white">${waterSourceLabel(selection.waterSource())}</div>
                 </div>
-                <div class="bg-white/3 px-6 py-4">
+                <div class="px-6 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/48">Direct evidence</div>
                     <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-white">${directDataLabel(selection.directData())}</div>
                 </div>
-                <div class="bg-white/3 px-6 py-4">
+                <div class="px-6 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/48">Benchmark</div>
                     <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-white">${benchmarkRelationLabel(selection.benchmarkRelation())}</div>
                 </div>
-                <div class="bg-white/3 px-6 py-4">
+                <div class="px-6 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/48">Hardware</div>
                     <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-white">${currentFilterStatusLabel(selection.currentFilterStatus())}</div>
                 </div>
@@ -64,7 +64,7 @@
         </section>
 
         <div class="divide-y divide-base-300/70">
-            <section class="grid gap-5 bg-base-100 px-6 py-7 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
+            <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">1. Household source</span>
                     <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Choose the evidence system.</h3>
@@ -73,14 +73,14 @@
                 <div class="grid gap-4 md:grid-cols-2">
                     <label class="group cursor-pointer">
                         <input class="peer sr-only" type="radio" name="waterSource" value="PUBLIC_WATER" checked="${selection.waterSource() == ActionWaterSource.PUBLIC_WATER}">
-                        <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                        <div class="rounded-[1rem] border border-base-300/70 bg-base-200/42 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                             <span class="text-lg font-semibold tracking-[-0.02em] text-base-content">Public water</span>
                             <p class="mt-2 text-sm leading-6 text-base-content/64">Use utility records, CCRs, and direct notices first.</p>
                         </div>
                     </label>
                     <label class="group cursor-pointer">
                         <input class="peer sr-only" type="radio" name="waterSource" value="PRIVATE_WELL" checked="${selection.waterSource() == ActionWaterSource.PRIVATE_WELL}">
-                        <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                        <div class="rounded-[1rem] border border-base-300/70 bg-base-200/42 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                             <span class="text-lg font-semibold tracking-[-0.02em] text-base-content">Private well</span>
                             <p class="mt-2 text-sm leading-6 text-base-content/64">Use state-guided testing and lab interpretation first.</p>
                         </div>
@@ -88,7 +88,7 @@
                 </div>
             </section>
 
-            <section class="grid gap-5 bg-base-200/34 px-6 py-7 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
+            <section class="grid gap-5 bg-base-200/46 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">2. Direct evidence</span>
                     <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Choose the strongest direct record.</h3>
@@ -99,21 +99,21 @@
                         <div class="grid gap-4 md:grid-cols-3">
                             <label class="group cursor-pointer">
                                 <input class="peer sr-only" type="radio" name="directData" value="NONE" checked="${selection.directData() == ActionDirectDataStatus.NONE}">
-                                <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                                <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                     <span class="text-base font-semibold tracking-[-0.02em] text-base-content">No direct record yet</span>
                                     <p class="mt-2 text-sm leading-6 text-base-content/64">No CCR, system document, or notice is in hand.</p>
                                 </div>
                             </label>
                             <label class="group cursor-pointer">
                                 <input class="peer sr-only" type="radio" name="directData" value="UTILITY_DOCUMENT" checked="${selection.directData() == ActionDirectDataStatus.UTILITY_DOCUMENT}">
-                                <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                                <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                     <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Utility document</span>
                                     <p class="mt-2 text-sm leading-6 text-base-content/64">A CCR or system report exists and should drive interpretation.</p>
                                 </div>
                             </label>
                             <label class="group cursor-pointer">
                                 <input class="peer sr-only" type="radio" name="directData" value="OFFICIAL_NOTICE" checked="${selection.directData() == ActionDirectDataStatus.OFFICIAL_NOTICE}">
-                                <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                                <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                     <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Official notice</span>
                                     <p class="mt-2 text-sm leading-6 text-base-content/64">A regulator or utility has already issued direct PFAS context.</p>
                                 </div>
@@ -123,27 +123,27 @@
                         <div class="grid gap-4 md:grid-cols-2">
                             <label class="group cursor-pointer">
                                 <input class="peer sr-only" type="radio" name="directData" value="NONE" checked="${selection.directData() == ActionDirectDataStatus.NONE}">
-                                <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                                <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                     <span class="text-base font-semibold tracking-[-0.02em] text-base-content">No well test yet</span>
                                     <p class="mt-2 text-sm leading-6 text-base-content/64">The route stays in sampling and lab setup mode.</p>
                                 </div>
                             </label>
                             <label class="group cursor-pointer">
                                 <input class="peer sr-only" type="radio" name="directData" value="PRIVATE_WELL_TEST" checked="${selection.directData() == ActionDirectDataStatus.PRIVATE_WELL_TEST}">
-                                <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                                <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                     <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Private-well test</span>
                                     <p class="mt-2 text-sm leading-6 text-base-content/64">A lab result exists and can be interpreted against the state context.</p>
                                 </div>
                             </label>
                         </div>
                     @endif
-                    <div class="rounded-[1rem] border border-primary/10 bg-primary/5 px-5 py-4 text-sm leading-7 text-base-content/72">
+                    <div class="surface-muted px-5 py-4 text-sm leading-7 text-base-content/72">
                         <strong class="font-semibold text-base-content">Routing effect</strong> Missing direct evidence collapses benchmark certainty and blocks premature shopping.
                     </div>
                 </div>
             </section>
 
-            <section class="grid gap-5 bg-base-100 px-6 py-7 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
+            <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">3. Interpretation posture</span>
                     <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Describe the current case, not your fear level.</h3>
@@ -186,13 +186,13 @@
                             </select>
                         </label>
                     </div>
-                    <div class="rounded-[1rem] border border-base-300/70 bg-base-200/44 px-5 py-4 text-sm leading-7 text-base-content/68">
+                    <div class="surface-muted px-5 py-4 text-sm leading-7 text-base-content/68">
                         <strong class="font-semibold text-base-content">Model limit</strong> Without direct evidence, benchmark relation stays unresolved even if concern or shopping intent is high.
                     </div>
                 </div>
             </section>
 
-            <section class="grid gap-5 bg-base-200/34 px-6 py-7 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
+            <section class="grid gap-5 bg-base-200/46 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">4. Decision context</span>
                     <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Show the engine where this case lives.</h3>
@@ -202,21 +202,21 @@
                     <div class="grid gap-4 md:grid-cols-3">
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="NONE" checked="${selection.shoppingIntent() == ActionShoppingIntent.NONE}">
-                            <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                            <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                 <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Hold</span>
                                 <p class="mt-2 text-sm leading-6 text-base-content/64">Stay in evidence and interpretation mode.</p>
                             </div>
                         </label>
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="FILTER_NOW" checked="${selection.shoppingIntent() == ActionShoppingIntent.FILTER_NOW}">
-                            <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                            <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                 <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Filter now</span>
                                 <p class="mt-2 text-sm leading-6 text-base-content/64">Open hardware only when the route allows it.</p>
                             </div>
                         </label>
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="COMPARE_OPTIONS" checked="${selection.shoppingIntent() == ActionShoppingIntent.COMPARE_OPTIONS}">
-                            <div class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-primary/6">
+                            <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
                                 <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Compare</span>
                                 <p class="mt-2 text-sm leading-6 text-base-content/64">Open constrained point-of-use comparison after interpretation.</p>
                             </div>
@@ -257,22 +257,22 @@
                 </div>
             </section>
 
-            <section class="grid gap-5 bg-base-100 px-6 py-7 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
+            <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">5. Guardrails</span>
                     <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Keep escalation explicit.</h3>
                     <p class="text-sm leading-7 text-base-content/62">Whole-house interest can be recorded, but it never becomes the default route.</p>
                 </div>
                 <div class="space-y-4">
-                    <label class="flex cursor-pointer items-start gap-4 rounded-[1rem] border border-accent/18 bg-accent/7 px-5 py-5">
-                        <input class="checkbox checkbox-sm checkbox-primary mt-1 border-base-300 bg-base-100" type="checkbox" name="wholeHouseConsidered" value="true" checked="${selection.wholeHouseConsidered()}">
+                    <label class="flex cursor-pointer items-start gap-4 rounded-[1rem] border border-accent/20 bg-[rgba(120,104,90,0.08)] px-5 py-5">
+                        <input class="checkbox checkbox-primary mt-1 border-base-300 bg-base-100" type="checkbox" name="wholeHouseConsidered" value="true" checked="${selection.wholeHouseConsidered()}">
                         <span class="space-y-2">
                             <span class="block text-sm font-semibold tracking-[-0.02em] text-base-content">Whole-house is being considered</span>
                             <span class="block text-sm leading-7 text-base-content/68">The engine treats this as a guarded escalation and compares it against narrower point-of-use routes first.</span>
                         </span>
                     </label>
 
-                    <div class="flex flex-wrap items-center justify-between gap-4 rounded-[1rem] border border-base-300/70 bg-base-200/44 px-5 py-5">
+                    <div class="flex flex-wrap items-center justify-between gap-4 rounded-[1rem] border border-base-300/70 bg-base-200/52 px-5 py-5">
                         <div class="space-y-1">
                             <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Submission posture</span>
                             <p class="text-sm leading-7 text-base-content/66">Run the full route when the case description feels honest. Reset if you want to clear the posture.</p>

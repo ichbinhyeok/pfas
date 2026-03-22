@@ -6,6 +6,10 @@ public record MerchantClickPayload(
 	String ctaSlot,
 	String sourcePage,
 	String routeType,
+	String routeCode,
+	String benchmarkRelation,
+	String unlockState,
+	String nextActionCode,
 	String targetUrl,
 	String pagePath
 ) {

@@ -1,5 +1,6 @@
 @import com.example.pfas.checker.ActionBenchmarkRelation
 @import com.example.pfas.checker.ActionCurrentFilterStatus
+@import com.example.pfas.commercial.CommercialSurfaceState
 @import com.example.pfas.result.WaterDecisionResult
 @import com.example.pfas.state.StateGuidance
 @import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
@@ -12,6 +13,7 @@
 @param WaterDecisionResult result
 @param ActionBenchmarkRelation benchmarkRelation
 @param ActionCurrentFilterStatus currentFilterStatus
+@param CommercialSurfaceState commercialState
 @param boolean wholeHouseConsidered
 @param String batchInput
 @param String encodedBatchInput
@@ -27,49 +29,43 @@
     content = @`
 <section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
-            <div class="space-y-6">
-                <div class="space-y-4">
-                    <span class="badge badge-outline border-base-300 bg-base-100 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-base-content/58">${guidance.stateCode()} private-well dossier</span>
-                    <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-base-content sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
-                        ${guidance.agencyName()}
-                        <span class="font-serif font-medium text-secondary">with the state route kept in view.</span>
-                    </h1>
-                    <p class="max-w-3xl text-lg leading-8 text-base-content/72">
-                        This result keeps private-well interpretation reference-based. State guidance, certified-lab context,
-                        and optional certified point-of-use treatment are rendered together without pretending a private well is a
-                        public-water compliance case.
-                    </p>
+        <div class="terminal-panel overflow-hidden">
+            <div class="grid gap-px bg-white/8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
+                <div class="space-y-6 bg-white/[0.03] p-7 md:p-9">
+                    <div class="space-y-4">
+                        <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">${guidance.stateCode()} private-well dossier</span>
+                        <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-white sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
+                            ${guidance.agencyName()}
+                            <span class="font-serif font-medium text-white/72">with the state route kept in view.</span>
+                        </h1>
+                        <p class="max-w-3xl text-lg leading-8 text-white/72">
+                            This result keeps private-well interpretation reference-based. State guidance, certified-lab context,
+                            and optional certified point-of-use treatment are rendered together without pretending a private well is a
+                            public-water compliance case.
+                        </p>
+                    </div>
+
+                    <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/guides/nsf-53-vs-58-pfas">Read certification basics</a>
+                    </div>
                 </div>
 
-                <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
-                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
-                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
-                    @if (result.benchmarkBatchEvaluation() != null && encodedBatchInput != null)
-                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?batchInput=${encodedBatchInput}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                    @else
-                        @if (result.benchmarkEvaluation() != null)
-                            <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?analyteCode=${result.benchmarkEvaluation().analyteCode()}&value=${result.benchmarkEvaluation().inputValue()}&unit=${result.benchmarkEvaluation().inputUnit()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                        @else
-                            <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/internal/results/private-well/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}">Open result JSON</a>
-                        @endif
-                    @endif
-                </div>
-            </div>
-
-            <aside class="card border border-neutral/12 bg-neutral text-neutral-content shadow-[var(--shadow-panel)]">
-                <div class="card-body gap-5">
+                <aside class="bg-white/[0.02] p-7 md:p-8">
                     <div class="space-y-2">
-                        <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Current docket</span>
+                        <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Current docket</span>
                         <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">The state reference stays attached to the route and the caveats.</h2>
                     </div>
-                    <div class="overflow-hidden rounded-[1rem] border border-white/10 bg-white/4">
-                        <article class="px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Benchmark relation</strong><br>${benchmarkRelationLabel(benchmarkRelation)}</article>
-                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Current filter</strong><br>${currentFilterStatusLabel(currentFilterStatus)}</article>
-                        <article class="border-t border-white/10 px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Whole-house considered</strong><br>${wholeHouseConsidered ? "yes" : "no"}</article>
+                    <div class="terminal-pane mt-4 overflow-hidden">
+                        <div class="terminal-stack">
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Benchmark relation</strong><br>${benchmarkRelationLabel(benchmarkRelation)}</article>
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Current filter</strong><br>${currentFilterStatusLabel(currentFilterStatus)}</article>
+                            <article class="px-4 py-4 text-sm leading-6 text-white/78"><strong class="font-semibold text-white">Whole-house considered</strong><br>${wholeHouseConsidered ? "yes" : "no"}</article>
+                        </div>
                     </div>
-                </div>
-            </aside>
+                </aside>
+            </div>
         </div>
     </div>
 </section>
@@ -87,28 +83,97 @@
 
 <section class="pt-14 md:pt-18">
     <div class="shell">
-        <div class="grid gap-px overflow-hidden rounded-[1.25rem] border border-base-300/70 bg-base-300/70 shadow-[var(--shadow-soft)] xl:grid-cols-4">
-            <article class="bg-base-100/96 px-6 py-5">
+        <div class="ledger-grid shadow-[var(--shadow-soft)] md:grid-cols-2 xl:grid-cols-4">
+            <article class="px-4 py-4 md:px-6 md:py-5">
                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State route</div>
-                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.stateCode()}</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${guidance.stateCode()}</div>
                 <div class="mt-3 text-sm leading-6 text-base-content/58">State-specific guide and lab pathway.</div>
             </article>
-            <article class="bg-base-100/96 px-6 py-5">
+            <article class="px-4 py-4 md:px-6 md:py-5">
                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Benchmark relation</div>
-                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${benchmarkRelationLabel(benchmarkRelation)}</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${benchmarkRelationLabel(benchmarkRelation)}</div>
                 <div class="mt-3 text-sm leading-6 text-base-content/58">${result.meta().decisionRuleId()}</div>
             </article>
-            <article class="bg-base-100/96 px-6 py-5">
+            <article class="px-4 py-4 md:px-6 md:py-5">
                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Current filter</div>
-                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${currentFilterStatusLabel(currentFilterStatus)}</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${currentFilterStatusLabel(currentFilterStatus)}</div>
                 <div class="mt-3 text-sm leading-6 text-base-content/58">Whole-house considered: ${wholeHouseConsidered ? "yes" : "no"}</div>
             </article>
-            <article class="bg-base-100/96 px-6 py-5">
+            <article class="px-4 py-4 md:px-6 md:py-5">
                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Last verified</div>
-                <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">${guidance.lastVerifiedDate()}</div>
+                <div class="mt-3 text-lg font-semibold tracking-[-0.03em] text-base-content md:text-xl">${guidance.lastVerifiedDate()}</div>
                 <div class="mt-3 text-sm leading-6 text-base-content/58">State guidance and source layer.</div>
             </article>
         </div>
+    </div>
+</section>
+
+<section class="pt-10 md:pt-12">
+    <div class="shell space-y-5">
+        @template.fragments.commercialState(
+            eyebrow = "Commercial state",
+            state = commercialState
+        )
+        @template.fragments.routeActions(
+            routeId = "private-well:" + guidance.stateCode() + ":" + benchmarkRelation.name(),
+            routeTitle = guidance.stateCode() + " private-well route",
+            routeSummary = commercialState.summary(),
+            routeUrl = "/private-well-result/" + guidance.stateCode()
+                + "?benchmarkRelation=" + benchmarkRelation.name()
+                + "&currentFilterStatus=" + currentFilterStatus.name()
+                + "&wholeHouseConsidered=" + wholeHouseConsidered
+        )
+        <section class="surface-panel overflow-hidden">
+            <div class="border-b border-base-300/70 px-6 py-5">
+                <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Service lanes</span>
+                <h2 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-base-content">Keep the private-well route handoff-ready before any future partner layer exists.</h2>
+                <p class="mt-3 max-w-3xl text-sm leading-7 text-base-content/66">The state route, lab lookup, and consult summary should already be structured enough that a future lab or advisory partner inherits the current context instead of replacing it.</p>
+            </div>
+            <div class="service-lane-grid">
+                <article class="px-6 py-5">
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Certified lab lane</span>
+                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Prepare the lab handoff first.</h3>
+                    <p class="mt-3 text-sm leading-7 text-base-content/68">Sampling and lab lookup stay explicit here so a future referral can attach to the route without changing the state-first logic.</p>
+                    <div class="mt-4 flex flex-wrap items-center gap-3">
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                        <button
+                            type="button"
+                            class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
+                            data-route-save="true"
+                            data-route-id="private-well:${guidance.stateCode()}:${benchmarkRelation.name()}:lab"
+                            data-route-title="${guidance.stateCode()} private-well lab brief"
+                            data-route-summary="${commercialState.summary()}"
+                            data-route-url="/private-well-result/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}"
+                        >Save lab brief</button>
+                    </div>
+                </article>
+                <article class="px-6 py-5">
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">State guidance lane</span>
+                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Keep the agency route visible before hardware.</h3>
+                    <p class="mt-3 text-sm leading-7 text-base-content/68">Retest cadence, reference posture, and official next steps stay visible here even when treatment is under evaluation.</p>
+                    <div class="mt-4 flex flex-wrap items-center gap-3">
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/private-well/${guidance.stateCode()}">Open state guide</a>
+                    </div>
+                </article>
+                <article class="service-lane-accent px-6 py-5">
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Consult-ready handoff</span>
+                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Send the current route as a consult packet.</h3>
+                    <p class="mt-3 text-sm leading-7 text-base-content/68">The future consult or referral lane should inherit the current benchmark relation, state context, and filter posture instead of asking the user to restate them.</p>
+                    <div class="mt-4 flex flex-wrap items-center gap-3">
+                        <button
+                            type="button"
+                            class="btn btn-primary h-10 rounded-full border-0 px-4 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92"
+                            data-route-email="true"
+                            data-route-id="private-well:${guidance.stateCode()}:${benchmarkRelation.name()}:consult"
+                            data-route-title="${guidance.stateCode()} private-well consult summary"
+                            data-route-summary="${commercialState.summary()}"
+                            data-route-url="/private-well-result/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}"
+                        >Send consult-ready summary</button>
+                    </div>
+                </article>
+            </div>
+        </section>
     </div>
 </section>
 
@@ -116,7 +181,7 @@
     <div class="shell">
         <div class="grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_23rem] xl:items-start">
             <div class="space-y-6">
-                <section class="overflow-hidden rounded-[1.35rem] border border-neutral/12 bg-neutral shadow-[var(--shadow-panel)]">
+                <section class="terminal-panel overflow-hidden">
                     <div class="grid gap-5 p-6 text-neutral-content md:p-7">
                         <div class="flex flex-wrap items-center gap-2">
                             <span class="badge border-0 bg-white text-neutral">${result.nextAction().code()}</span>
@@ -125,12 +190,12 @@
                         </div>
                         <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-white">${result.nextAction().title()}</h2>
                         <p class="max-w-3xl text-sm leading-7 text-white/70">${result.nextAction().summary()}</p>
-                        <div class="grid gap-px overflow-hidden rounded-[1rem] border border-white/10 bg-white/10 md:grid-cols-2">
-                            <article class="bg-white/[0.03] px-5 py-5">
+                        <div class="terminal-grid md:grid-cols-2">
+                            <article class="px-5 py-5">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/54">Decision posture</div>
                                 <p class="mt-3 text-sm leading-7 text-white/72">Private-well logic stays reference-based. A state line and lab-ready context open before any shopping lane becomes active.</p>
                             </article>
-                            <article class="bg-white/[0.03] px-5 py-5">
+                            <article class="px-5 py-5">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/54">What remains guarded</div>
                                 <p class="mt-3 text-sm leading-7 text-white/72">Whole-house treatment still requires a separate ingestion-versus-whole-home justification, not just generalized concern.</p>
                             </article>
@@ -138,40 +203,41 @@
                     </div>
                 </section>
 
-                <div class="grid gap-px overflow-hidden rounded-[1.15rem] border border-base-300/70 bg-base-300/70 lg:grid-cols-2">
-                    <section class="bg-base-100/96 px-6 py-5">
+                <div class="ledger-grid lg:grid-cols-2">
+                    <section class="px-6 py-5">
                         <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Initial cost</span>
                         <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-base-content">$${result.initialCost().rangeLowUsd()} - $${result.initialCost().rangeHighUsd()}</h2>
                         <p class="mt-3 text-sm leading-7 text-base-content/68">${confidenceLabel(result.initialCost().confidence())} confidence / normalized vendor pricing</p>
                     </section>
-                    <section class="bg-base-100/96 px-6 py-5">
+                    <section class="px-6 py-5">
                         <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Annual maintenance</span>
                         <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-base-content">$${result.annualCostMaintenance().rangeLowUsd()} - $${result.annualCostMaintenance().rangeHighUsd()}</h2>
                         <p class="mt-3 text-sm leading-7 text-base-content/68">${confidenceLabel(result.annualCostMaintenance().maintenanceBurden())} maintenance burden</p>
                     </section>
                 </div>
 
-                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <div class="card-body gap-0 p-0">
-                        <div class="grid gap-px overflow-hidden rounded-[1.15rem] border-b border-base-300/70 bg-base-300/70 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-                            <div class="bg-base-100 px-6 py-5">
+                <section class="surface-panel overflow-hidden">
+                    <div class="grid gap-px bg-base-300/70 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+                            <div class="bg-base-100 px-6 py-6">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">What this means now</span>
-                                <div class="mt-4 grid gap-px overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-300/70">
-                                    <article class="bg-base-100 px-4 py-4">
+                                <div class="mt-4 overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100">
+                                    <div class="data-stack">
+                                    <article class="px-5 py-4">
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">State route</div>
                                         <p class="mt-2 text-sm leading-7 text-base-content/68">Private well results are interpreted against ${guidance.stateCode()} state guidance, not as public-water compliance findings.</p>
                                     </article>
-                                    <article class="bg-base-100 px-4 py-4">
+                                    <article class="px-5 py-4">
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Reference posture</div>
                                         <p class="mt-2 text-sm leading-7 text-base-content/68">Benchmark relation is ${benchmarkRelationLabel(benchmarkRelation).toLowerCase()} and remains attached to the state reference context.</p>
                                     </article>
-                                    <article class="bg-base-100 px-4 py-4">
+                                    <article class="px-5 py-4">
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Treatment posture</div>
                                         <p class="mt-2 text-sm leading-7 text-base-content/68">Any treatment path stays certification-first and state-guided before whole-house escalation is considered.</p>
                                     </article>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bg-base-200/32 px-6 py-5">
+                            <div class="bg-base-200/58 px-6 py-6">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">What this does not tell you</span>
                                 <ul class="mt-4 space-y-3 text-sm leading-7 text-base-content/72">
                                     @for (var item : result.whatThisDoesNotTellYou())
@@ -191,12 +257,11 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
                 </section>
 
                 @if(!result.bestFitOptions().isEmpty())
-                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                        <div class="card-body gap-0 p-0">
+                    <section class="surface-panel overflow-hidden">
+                        <div class="gap-0 p-0">
                             <div class="border-b border-base-300/70 px-6 py-5">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Best-fit options</span>
                                 <h2 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-base-content">Best-fit options</h2>
@@ -211,7 +276,7 @@
                                             <p class="text-sm leading-7 text-base-content/68">${option.fitReason()}</p>
                                             <p class="text-sm leading-7 text-base-content/58">${option.notForEveryone()}</p>
                                         </div>
-                                        <div class="rounded-[1rem] border border-base-300/70 bg-base-200/32 px-4 py-4">
+                                        <div class="surface-muted px-4 py-4">
                                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Cost posture</div>
                                             <div class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">${option.costProfile()} cost</div>
                                             <div class="mt-2 text-sm leading-6 text-base-content/58">Apply only after the state route and maintenance fit are clear.</div>
@@ -248,8 +313,8 @@
                 @endif
 
                 @if (result.benchmarkEvaluation() != null)
-                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                        <div class="card-body gap-5">
+                    <section class="surface-panel px-6 py-5">
+                        <div class="space-y-5">
                             <div class="space-y-2">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Benchmark check used for this route</span>
                                 <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Benchmark check used for this route</h2>
@@ -266,8 +331,8 @@
                 @endif
 
                 @if (result.benchmarkBatchEvaluation() != null)
-                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                        <div class="card-body gap-5">
+                    <section class="surface-panel px-6 py-5">
+                        <div class="space-y-5">
                             <div class="space-y-2">
                                 <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Batch benchmark check used for this route</span>
                                 <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Batch benchmark check used for this route</h2>
@@ -280,7 +345,7 @@
                             </ul>
                             <div class="grid gap-4 lg:grid-cols-2">
                                 @for (var line : result.benchmarkBatchEvaluation().lineEvaluations())
-                                    <article class="rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5">
+                                    <article class="surface-muted px-5 py-5">
                                         <div class="flex items-start justify-between gap-3">
                                             <div class="space-y-2">
                                                 <h3 class="text-lg font-semibold tracking-[-0.02em] text-base-content">${line.analyteCode()}</h3>
@@ -296,8 +361,8 @@
                     </section>
                 @endif
 
-                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <div class="card-body gap-0 p-0">
+                <section class="surface-panel overflow-hidden">
+                    <div class="gap-0 p-0">
                         <div class="border-b border-base-300/70 px-6 py-5">
                             <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Primary source ledger</span>
                             <h2 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-base-content">Primary source ledger</h2>
@@ -305,7 +370,7 @@
                         </div>
                         <div class="divide-y divide-base-300/70">
                             @for (var source : result.sources().subList(0, Math.min(result.sources().size(), 2)))
-                                <a class="grid gap-4 px-6 py-5 transition duration-150 ease-out hover:bg-base-200/18 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start" href="${source.url()}">
+                                <a class="row-link grid gap-4 px-6 py-5 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start" href="${source.url()}">
                                     <div>
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()}</div>
                                         <div class="mt-2 text-sm leading-6 text-base-content/60">${source.organization()}</div>
@@ -324,7 +389,7 @@
                                 <div class="collapse-content">
                                     <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
                                         @for (var source : result.sources().subList(2, result.sources().size()))
-                                            <a class="grid gap-4 px-5 py-5 transition duration-150 ease-out hover:bg-base-200/18 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start ${source != result.sources().get(2) ? "border-t border-base-300/70" : ""}" href="${source.url()}">
+                                            <a class="row-link grid gap-4 px-5 py-5 sm:grid-cols-[12rem_minmax(0,1fr)] sm:items-start ${source != result.sources().get(2) ? "border-t border-base-300/70" : ""}" href="${source.url()}">
                                                 <div>
                                                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Tier ${source.trustTier()}</div>
                                                     <div class="mt-2 text-sm leading-6 text-base-content/60">${source.organization()}</div>
@@ -344,8 +409,8 @@
             </div>
 
             <aside class="xl:sticky xl:top-28">
-                <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
-                    <div class="card-body gap-0 p-0">
+                <section class="surface-panel overflow-hidden">
+                    <div class="gap-0 p-0">
                         <div class="border-b border-base-300/70 px-6 py-5">
                             <h2 class="text-xl font-semibold tracking-[-0.03em] text-base-content">State operating notes</h2>
                             <p class="mt-3 text-sm leading-7 text-base-content/64">Keep the state logic, reference notes, and escalation posture in one operating panel instead of scattering them across separate cards.</p>
