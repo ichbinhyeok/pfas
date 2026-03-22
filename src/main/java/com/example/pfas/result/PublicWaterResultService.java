@@ -171,8 +171,8 @@ public class PublicWaterResultService {
 			.map(option -> new BestFitOption(
 				option.productId().toUpperCase().replace('-', '_'),
 				option.brand() + " " + option.model(),
-				"Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-				"Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+				"Useful for a public-water household that already finished the utility-reading step and now wants an ingestion-focused certified point-of-use option.",
+				"Not for everyone if the household still lacks a settled utility reading, needs a whole-home objective, or cannot carry the upkeep burden.",
 				costProfile(option),
 				maintenanceBurden(List.of(option))
 			))
@@ -182,8 +182,8 @@ public class PublicWaterResultService {
 	private List<String> whenToEscalate(PublicWaterDecisionContext decision) {
 		return List.of(
 			"A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.",
-			"You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.",
-			"Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review."
+			"The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.",
+			"Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade."
 		);
 	}
 
@@ -225,9 +225,9 @@ public class PublicWaterResultService {
 			.count();
 
 		return List.of(
-			"Public water utility observations are treated as direct official data for this system.",
+			"This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.",
 			"Current normalized assessment counts: " + aboveCount + " above selected benchmark, " + presentCount + " present below selected benchmark.",
-			"Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin."
+			"Certified point-of-use is treated as the first escalation class only after the utility record is interpretable."
 		);
 	}
 
@@ -237,6 +237,9 @@ public class PublicWaterResultService {
 		}
 		if (decision.assessments().stream().anyMatch(assessment -> assessment.comparisonStatus() == BenchmarkComparisonStatus.PRESENT_BELOW_SELECTED_BENCHMARK)) {
 			return "below_reference";
+		}
+		if (decision.assessments().stream().anyMatch(assessment -> assessment.comparisonStatus() == BenchmarkComparisonStatus.NON_DETECT_OR_ZERO_REPORTED)) {
+			return "not_detected";
 		}
 		return "unknown";
 	}

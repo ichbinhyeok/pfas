@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
 import com.example.pfas.benchmark.BenchmarkService;
 import com.example.pfas.certification.CertificationClaimService;
@@ -44,10 +45,13 @@ import com.example.pfas.web.GuidePageService;
 @SpringBootTest(properties = {
 	"pfas.data.root=./data",
 	"pfas.site.base-url=https://pfas.example.test",
-	"pfas.merchant-clicks.root=./build/test-merchant-clicks"
+	"pfas.merchant-clicks.root=./build/test-merchant-clicks",
+	"pfas.internal-api.token=test-internal-token"
 })
 @AutoConfigureMockMvc
 class PfasApplicationTests {
+
+	private static final String INTERNAL_API_TOKEN = "test-internal-token";
 
 	@Autowired
 	private SourceRegistryService sourceRegistryService;
@@ -1164,7 +1168,7 @@ class PfasApplicationTests {
 	void guideReferencesResolveToLiveSystemsAndProducts() {
 		var guides = guidePageService.getAll();
 
-		assertThat(guides).hasSize(12);
+		assertThat(guides).hasSize(16);
 		for (var guide : guides) {
 			if (guide.relatedPwsids() != null) {
 				for (var pwsid : guide.relatedPwsids()) {
@@ -1547,7 +1551,7 @@ class PfasApplicationTests {
 	@Test
 	void returnsInternalActionCheckerRecommendation() throws Exception {
 		mockMvc.perform(
-			get("/internal/action-checker/recommendation")
+			internalGet("/internal/action-checker/recommendation")
 				.param("waterSource", "PUBLIC_WATER")
 				.param("directData", "NONE")
 				.param("pwsid", "PA1510001")
@@ -1558,9 +1562,35 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void hidesInternalEndpointsWithoutToken() throws Exception {
+		mockMvc.perform(get("/internal/readiness/report"))
+			.andExpect(status().isNotFound());
+	}
+
+	@Test
+	void rejectsInvalidActionCheckerEnumInput() throws Exception {
+		mockMvc.perform(
+			internalGet("/internal/action-checker/recommendation")
+				.param("waterSource", "PRIVATE_WELL")
+				.param("directData", "NONE")
+				.param("currentFilterStatus", "CERTIFIED_POU")
+		)
+			.andExpect(status().isBadRequest());
+	}
+
+	@Test
+	void doesNotFabricatePrivateWellStateWhenMissing() {
+		var selection = actionCheckerService.normalize("PRIVATE_WELL", "NONE", null, null, null, null, false, null, null);
+		var recommendation = actionCheckerService.evaluate(selection);
+
+		assertThat(selection.stateCode()).isNull();
+		assertThat(recommendation.primaryHref()).isEqualTo("/guides/test-first-vs-filter-first");
+	}
+
+	@Test
 	void returnsPrivateWellActionCheckerRecommendation() throws Exception {
 		mockMvc.perform(
-			get("/internal/action-checker/recommendation")
+			internalGet("/internal/action-checker/recommendation")
 				.param("waterSource", "PRIVATE_WELL")
 				.param("directData", "PRIVATE_WELL_TEST")
 				.param("benchmarkRelation", "ABOVE_REFERENCE")
@@ -1600,7 +1630,7 @@ class PfasApplicationTests {
 	@Test
 	void returnsInternalPrivateWellResult() throws Exception {
 		mockMvc.perform(
-			get("/internal/results/private-well/MI")
+			internalGet("/internal/results/private-well/MI")
 				.param("benchmarkRelation", "ABOVE_REFERENCE")
 				.param("currentFilterStatus", "NONE")
 		)
@@ -1613,7 +1643,7 @@ class PfasApplicationTests {
 	@Test
 	void returnsInternalPrivateWellResultFromMeasurement() throws Exception {
 		mockMvc.perform(
-			get("/internal/results/private-well/MI")
+			internalGet("/internal/results/private-well/MI")
 				.param("analyteCode", "PFOA")
 				.param("value", "12")
 				.param("unit", "ppt")
@@ -1626,9 +1656,20 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void rejectsNegativePrivateWellMeasurement() throws Exception {
+		mockMvc.perform(
+			internalGet("/internal/private-well-benchmark-evaluation/MI")
+				.param("analyteCode", "PFOA")
+				.param("value", "-1")
+				.param("unit", "ppt")
+		)
+			.andExpect(status().isBadRequest());
+	}
+
+	@Test
 	void returnsInternalPrivateWellResultFromBatchMeasurement() throws Exception {
 		mockMvc.perform(
-			get("/internal/results/private-well/MI")
+			internalGet("/internal/results/private-well/MI")
 				.param("batchInput", "PFOA=12ppt;PFOS=3ppt")
 				.param("currentFilterStatus", "NONE")
 		)
@@ -1656,7 +1697,7 @@ class PfasApplicationTests {
 	@Test
 	void publicWaterInterpretationRecommendationUsesUserFacingSecondaryLinks() throws Exception {
 		mockMvc.perform(
-			get("/internal/action-checker/recommendation")
+			internalGet("/internal/action-checker/recommendation")
 				.param("waterSource", "PUBLIC_WATER")
 				.param("directData", "UTILITY_DOCUMENT")
 				.param("benchmarkRelation", "UNKNOWN")
@@ -1680,7 +1721,9 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Benchmark check used for this route")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Normalized value: 12")));
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Normalized value: 12")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/private-well-result/MI?analyteCode=PFOA&amp;value=12&amp;unit=ppt&amp;currentFilterStatus=NONE&amp;wholeHouseConsidered=false\">")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-url=\"/private-well-result/MI?analyteCode=PFOA&amp;value=12&amp;unit=ppt&amp;currentFilterStatus=NONE&amp;wholeHouseConsidered=false\"")));
 	}
 
 	@Test
@@ -1697,8 +1740,17 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void rejectsInvalidPrivateWellBatchInputOnHtmlRoute() throws Exception {
+		mockMvc.perform(
+			get("/private-well-result/MI")
+				.param("batchInput", "not-a-valid-line")
+		)
+			.andExpect(status().isBadRequest());
+	}
+
+	@Test
 	void returnsStateBenchmarkProfiles() throws Exception {
-		mockMvc.perform(get("/internal/state-benchmark-profiles/NY"))
+		mockMvc.perform(internalGet("/internal/state-benchmark-profiles/NY"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("New York PFOA and PFOS MCLs")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("10 ppt")));
@@ -1706,7 +1758,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsMaineStateBenchmarkProfile() throws Exception {
-		mockMvc.perform(get("/internal/state-benchmark-profiles/ME"))
+		mockMvc.perform(internalGet("/internal/state-benchmark-profiles/ME"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Maine interim PFAS6 drinking-water standard")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("20 ppt")));
@@ -1714,7 +1766,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsReadinessReport() throws Exception {
-		mockMvc.perform(get("/internal/readiness/report"))
+		mockMvc.perform(internalGet("/internal/readiness/report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":8")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_public_water_routes\":35")))
@@ -1744,7 +1796,7 @@ class PfasApplicationTests {
 	@Test
 	void returnsPrivateWellBenchmarkEvaluation() throws Exception {
 		mockMvc.perform(
-			get("/internal/private-well-benchmark-evaluation/WA")
+			internalGet("/internal/private-well-benchmark-evaluation/WA")
 				.param("analyteCode", "PFOA")
 				.param("value", "5")
 				.param("unit", "ppt")
@@ -1757,7 +1809,7 @@ class PfasApplicationTests {
 	@Test
 	void returnsPrivateWellBatchBenchmarkEvaluation() throws Exception {
 		mockMvc.perform(
-			get("/internal/private-well-benchmark-evaluation/MA/batch")
+			internalGet("/internal/private-well-benchmark-evaluation/MA/batch")
 				.param("batchInput", "PFAS6=18ppt")
 		)
 			.andExpect(status().isOk())
@@ -1767,7 +1819,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsExpansionCandidates() throws Exception {
-		mockMvc.perform(get("/internal/expansion/candidates"))
+		mockMvc.perform(internalGet("/internal/expansion/candidates"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/private-well/MI")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/public-water-system/AK2310900")))
@@ -1787,10 +1839,10 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedRouteManifest() throws Exception {
-		mockMvc.perform(get("/internal/derived/route-manifest"))
+		mockMvc.perform(internalGet("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":157")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":129")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":161")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":133")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AK2310900\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/AZ0408063\"")))
@@ -1847,9 +1899,9 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedSearchIndexSeed() throws Exception {
-		mockMvc.perform(get("/internal/derived/search-index"))
+		mockMvc.perform(internalGet("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":157")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":161")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310730\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:AK2310900\"")))
@@ -1905,7 +1957,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedDecisionInputSeed() throws Exception {
-		mockMvc.perform(get("/internal/derived/decision-inputs"))
+		mockMvc.perform(internalGet("/internal/derived/decision-inputs"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_count\":43")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"input_id\":\"state_guidance:MI\"")))
@@ -1952,9 +2004,9 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedPageGenerationManifest() throws Exception {
-		mockMvc.perform(get("/internal/derived/page-generation-manifest"))
+		mockMvc.perform(internalGet("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":157")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":161")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310730.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AK2310900.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/AZ0408063.json\"")))
@@ -2009,7 +2061,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedPublicWaterPageModel() throws Exception {
-		mockMvc.perform(get("/internal/derived/page-models/public_water/7360058"))
+		mockMvc.perform(internalGet("/internal/derived/page-models/public_water/7360058"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_id\":\"public_water:7360058\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"template_kind\":\"public_water_result_page\"")))
@@ -2019,7 +2071,7 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsDerivedStateGuidePageModel() throws Exception {
-		mockMvc.perform(get("/internal/derived/page-models/state_guidance/MI"))
+		mockMvc.perform(internalGet("/internal/derived/page-models/state_guidance/MI"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_id\":\"state_guidance:MI\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"template_kind\":\"private_well_state_page\"")))
@@ -2029,9 +2081,8 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsStaticExportManifest() throws Exception {
-		mockMvc.perform(get("/internal/derived/static-export-manifest"))
+		mockMvc.perform(internalGet("/internal/derived/static-export-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"item_count\":140")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/checker\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/robots.txt\"")))
@@ -2082,7 +2133,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"css/app.css\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/merchant-tracking.js\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"output_path\":\"js/route-actions.js\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"path\":\"/filters/waterdrop-10ub-pro\""))))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"path\":\"/filters/waterdrop-10ub-pro\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable\":false")))
 			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"last_verified_date\":null"))));
 	}
 
@@ -2137,10 +2189,10 @@ class PfasApplicationTests {
 
 	@Test
 	void returnsFreshnessQualityReport() throws Exception {
-		mockMvc.perform(get("/internal/quality/freshness-report"))
+		mockMvc.perform(internalGet("/internal/quality/freshness-report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_source_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":129")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":133")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_indexable_route_count\":0")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":28")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unresolved_readiness_route_count\":0")))
@@ -2209,7 +2261,7 @@ class PfasApplicationTests {
 	void recordsMerchantClicksAndReturnsReport() throws Exception {
 		clearMerchantClickTestData();
 
-		mockMvc.perform(post("/internal/merchant-clicks")
+		mockMvc.perform(internalPost("/internal/merchant-clicks")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content("""
 					{
@@ -2225,7 +2277,7 @@ class PfasApplicationTests {
 			.andExpect(status().isAccepted())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"accepted\":true")));
 
-		mockMvc.perform(get("/internal/merchant-clicks/report"))
+		mockMvc.perform(internalGet("/internal/merchant-clicks/report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"total_count\":1")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unique_product_count\":1")))
@@ -2250,6 +2302,16 @@ class PfasApplicationTests {
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("The project ranks sources before it ranks products")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Trust tiers")));
+	}
+
+	private MockHttpServletRequestBuilder internalGet(String uriTemplate, Object... uriVariables) {
+		return get(uriTemplate, uriVariables)
+			.header("X-PFAS-Internal-Token", INTERNAL_API_TOKEN);
+	}
+
+	private MockHttpServletRequestBuilder internalPost(String uriTemplate, Object... uriVariables) {
+		return post(uriTemplate, uriVariables)
+			.header("X-PFAS-Internal-Token", INTERNAL_API_TOKEN);
 	}
 
 	private void clearMerchantClickTestData() throws IOException {

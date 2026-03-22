@@ -16,15 +16,32 @@
 @param CommercialSurfaceState commercialState
 @param boolean wholeHouseConsidered
 @param String batchInput
-@param String encodedBatchInput
 @param String analyteCode
 @param java.math.BigDecimal value
 @param String unit
+@param String routeId
+@param String routeUrl
+@param String canonicalUrl
 
 @template.layout.base(
     pageTitle = guidance.stateCode() + " private-well PFAS result",
     pageDescription = "State-guided private-well PFAS interpretation result for " + guidance.stateCode() + ".",
-    pageCanonicalUrl = siteBaseUrl + "/private-well/" + guidance.stateCode(),
+    pageCanonicalUrl = batchInput != null && !batchInput.isBlank()
+        ? siteBaseUrl + "/private-well-result/" + guidance.stateCode()
+            + "?batchInput=" + java.net.URLEncoder.encode(batchInput, java.nio.charset.StandardCharsets.UTF_8)
+            + "&currentFilterStatus=" + currentFilterStatus.name()
+            + "&wholeHouseConsidered=" + wholeHouseConsidered
+        : analyteCode != null && value != null
+        ? siteBaseUrl + "/private-well-result/" + guidance.stateCode()
+            + "?analyteCode=" + java.net.URLEncoder.encode(analyteCode, java.nio.charset.StandardCharsets.UTF_8)
+            + "&value=" + java.net.URLEncoder.encode(value.toPlainString(), java.nio.charset.StandardCharsets.UTF_8)
+            + "&unit=" + java.net.URLEncoder.encode(unit == null || unit.isBlank() ? "ppt" : unit, java.nio.charset.StandardCharsets.UTF_8)
+            + "&currentFilterStatus=" + currentFilterStatus.name()
+            + "&wholeHouseConsidered=" + wholeHouseConsidered
+        : siteBaseUrl + "/private-well-result/" + guidance.stateCode()
+            + "?benchmarkRelation=" + benchmarkRelation.name()
+            + "&currentFilterStatus=" + currentFilterStatus.name()
+            + "&wholeHouseConsidered=" + wholeHouseConsidered,
     pageIndexable = false,
     content = @`
 <section class="pt-14 md:pt-18">
@@ -115,36 +132,60 @@
             state = commercialState
         )
         @template.fragments.routeActions(
-            routeId = "private-well:" + guidance.stateCode() + ":" + benchmarkRelation.name(),
+            routeId = routeId,
             routeTitle = guidance.stateCode() + " private-well route",
             routeSummary = commercialState.summary(),
-            routeUrl = "/private-well-result/" + guidance.stateCode()
-                + "?benchmarkRelation=" + benchmarkRelation.name()
-                + "&currentFilterStatus=" + currentFilterStatus.name()
-                + "&wholeHouseConsidered=" + wholeHouseConsidered
+            routeUrl = routeUrl
         )
-        <section class="surface-panel overflow-hidden">
+        <section class="surface-panel overflow-hidden" data-route-actions>
             <div class="border-b border-base-300/70 px-6 py-5">
                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Service lanes</span>
-                <h2 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-base-content">Keep the private-well route handoff-ready before any future partner layer exists.</h2>
-                <p class="mt-3 max-w-3xl text-sm leading-7 text-base-content/66">The state route, lab lookup, and consult summary should already be structured enough that a future lab or advisory partner inherits the current context instead of replacing it.</p>
+                <h2 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-base-content">Make the private-well route handoff-ready before a partner layer exists.</h2>
+                <p class="mt-3 max-w-3xl text-sm leading-7 text-base-content/66">These lanes now produce a usable intake brief, consult packet, and state handoff note. A future lab or advisory partner should inherit this structure instead of asking the household to restate the same context.</p>
             </div>
             <div class="service-lane-grid">
                 <article class="px-6 py-5">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Certified lab lane</span>
-                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Prepare the lab handoff first.</h3>
-                    <p class="mt-3 text-sm leading-7 text-base-content/68">Sampling and lab lookup stay explicit here so a future referral can attach to the route without changing the state-first logic.</p>
+                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Prepare the lab intake first.</h3>
+                    <p class="mt-3 text-sm leading-7 text-base-content/68">Sampling context, benchmark relation, and current filter posture stay attached so the lab handoff is already structured before any referral exists.</p>
                     <div class="mt-4 flex flex-wrap items-center gap-3">
                         <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
                         <button
                             type="button"
                             class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
                             data-route-save="true"
-                            data-route-id="private-well:${guidance.stateCode()}:${benchmarkRelation.name()}:lab"
+                            data-route-id="${routeId}:lab"
                             data-route-title="${guidance.stateCode()} private-well lab brief"
                             data-route-summary="${commercialState.summary()}"
-                            data-route-url="/private-well-result/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}"
+                            data-route-url="${routeUrl}"
+                            data-route-detail="${guidance.stateCode()} private-well lab brief&#10;Commercial state: ${commercialState.statusLabel()}&#10;Route code: ${commercialState.code()}&#10;Benchmark relation: ${benchmarkRelationLabel(benchmarkRelation)}&#10;Current filter: ${currentFilterStatusLabel(currentFilterStatus)}&#10;Whole-house considered: ${wholeHouseConsidered ? "Yes" : "No"}&#10;Next action: ${result.nextAction().title()}&#10;Official guidance: ${guidance.privateWellGuidanceUrl()}&#10;Certified lab lookup: ${guidance.certifiedLabLookupUrl()}"
+                            data-service-lane="Certified lab"
+                            data-state-code="${guidance.stateCode()}"
+                            data-benchmark-relation="${benchmarkRelationLabel(benchmarkRelation)}"
+                            data-current-filter-status="${currentFilterStatusLabel(currentFilterStatus)}"
+                            data-whole-house-considered="${wholeHouseConsidered ? "Yes" : "No"}"
+                            data-next-action="${result.nextAction().title()}"
+                            data-official-guidance-url="${guidance.privateWellGuidanceUrl()}"
+                            data-lab-lookup-url="${guidance.certifiedLabLookupUrl()}"
                         >Save lab brief</button>
+                        <button
+                            type="button"
+                            class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
+                            data-route-copy="true"
+                            data-route-id="${routeId}:lab-copy"
+                            data-route-title="${guidance.stateCode()} private-well lab brief"
+                            data-route-summary="${commercialState.summary()}"
+                            data-route-url="${routeUrl}"
+                            data-route-detail="${guidance.stateCode()} private-well lab brief&#10;Commercial state: ${commercialState.statusLabel()}&#10;Route code: ${commercialState.code()}&#10;Benchmark relation: ${benchmarkRelationLabel(benchmarkRelation)}&#10;Current filter: ${currentFilterStatusLabel(currentFilterStatus)}&#10;Whole-house considered: ${wholeHouseConsidered ? "Yes" : "No"}&#10;Next action: ${result.nextAction().title()}&#10;Official guidance: ${guidance.privateWellGuidanceUrl()}&#10;Certified lab lookup: ${guidance.certifiedLabLookupUrl()}"
+                            data-service-lane="Certified lab"
+                            data-state-code="${guidance.stateCode()}"
+                            data-benchmark-relation="${benchmarkRelationLabel(benchmarkRelation)}"
+                            data-current-filter-status="${currentFilterStatusLabel(currentFilterStatus)}"
+                            data-whole-house-considered="${wholeHouseConsidered ? "Yes" : "No"}"
+                            data-next-action="${result.nextAction().title()}"
+                            data-official-guidance-url="${guidance.privateWellGuidanceUrl()}"
+                            data-lab-lookup-url="${guidance.certifiedLabLookupUrl()}"
+                        >Copy lab intake</button>
                     </div>
                 </article>
                 <article class="px-6 py-5">
@@ -154,25 +195,71 @@
                     <div class="mt-4 flex flex-wrap items-center gap-3">
                         <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
                         <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/private-well/${guidance.stateCode()}">Open state guide</a>
+                        <button
+                            type="button"
+                            class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
+                            data-route-download="true"
+                            data-route-id="${routeId}:state-note"
+                            data-route-title="${guidance.stateCode()} private-well state handoff note"
+                            data-route-summary="${commercialState.summary()}"
+                            data-route-url="${routeUrl}"
+                            data-route-detail="${guidance.stateCode()} private-well state handoff note&#10;Commercial state: ${commercialState.statusLabel()}&#10;Route code: ${commercialState.code()}&#10;Benchmark relation: ${benchmarkRelationLabel(benchmarkRelation)}&#10;Current filter: ${currentFilterStatusLabel(currentFilterStatus)}&#10;Whole-house considered: ${wholeHouseConsidered ? "Yes" : "No"}&#10;Next action: ${result.nextAction().title()}&#10;Official guidance: ${guidance.privateWellGuidanceUrl()}&#10;Certified lab lookup: ${guidance.certifiedLabLookupUrl()}"
+                            data-service-lane="State guidance"
+                            data-state-code="${guidance.stateCode()}"
+                            data-benchmark-relation="${benchmarkRelationLabel(benchmarkRelation)}"
+                            data-current-filter-status="${currentFilterStatusLabel(currentFilterStatus)}"
+                            data-whole-house-considered="${wholeHouseConsidered ? "Yes" : "No"}"
+                            data-next-action="${result.nextAction().title()}"
+                            data-official-guidance-url="${guidance.privateWellGuidanceUrl()}"
+                            data-lab-lookup-url="${guidance.certifiedLabLookupUrl()}"
+                        >Download state note</button>
                     </div>
                 </article>
                 <article class="service-lane-accent px-6 py-5">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/52">Consult-ready handoff</span>
-                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Send the current route as a consult packet.</h3>
-                    <p class="mt-3 text-sm leading-7 text-base-content/68">The future consult or referral lane should inherit the current benchmark relation, state context, and filter posture instead of asking the user to restate them.</p>
+                    <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Package the route for consult intake.</h3>
+                    <p class="mt-3 text-sm leading-7 text-base-content/68">The consult lane now ships as a reusable packet so a future advisor or referral can start from the current route instead of restarting intake.</p>
                     <div class="mt-4 flex flex-wrap items-center gap-3">
                         <button
                             type="button"
                             class="btn btn-primary h-10 rounded-full border-0 px-4 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92"
                             data-route-email="true"
-                            data-route-id="private-well:${guidance.stateCode()}:${benchmarkRelation.name()}:consult"
+                            data-route-id="${routeId}:consult"
                             data-route-title="${guidance.stateCode()} private-well consult summary"
                             data-route-summary="${commercialState.summary()}"
-                            data-route-url="/private-well-result/${guidance.stateCode()}?benchmarkRelation=${benchmarkRelation.name()}&currentFilterStatus=${currentFilterStatus.name()}&wholeHouseConsidered=${wholeHouseConsidered}"
+                            data-route-url="${routeUrl}"
+                            data-route-detail="${guidance.stateCode()} private-well consult packet&#10;Commercial state: ${commercialState.statusLabel()}&#10;Route code: ${commercialState.code()}&#10;Benchmark relation: ${benchmarkRelationLabel(benchmarkRelation)}&#10;Current filter: ${currentFilterStatusLabel(currentFilterStatus)}&#10;Whole-house considered: ${wholeHouseConsidered ? "Yes" : "No"}&#10;Next action: ${result.nextAction().title()}&#10;Official guidance: ${guidance.privateWellGuidanceUrl()}&#10;Certified lab lookup: ${guidance.certifiedLabLookupUrl()}"
+                            data-service-lane="Consult"
+                            data-state-code="${guidance.stateCode()}"
+                            data-benchmark-relation="${benchmarkRelationLabel(benchmarkRelation)}"
+                            data-current-filter-status="${currentFilterStatusLabel(currentFilterStatus)}"
+                            data-whole-house-considered="${wholeHouseConsidered ? "Yes" : "No"}"
+                            data-next-action="${result.nextAction().title()}"
+                            data-official-guidance-url="${guidance.privateWellGuidanceUrl()}"
+                            data-lab-lookup-url="${guidance.certifiedLabLookupUrl()}"
                         >Send consult-ready summary</button>
+                        <button
+                            type="button"
+                            class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
+                            data-route-download="true"
+                            data-route-id="${routeId}:consult-packet"
+                            data-route-title="${guidance.stateCode()} private-well consult packet"
+                            data-route-summary="${commercialState.summary()}"
+                            data-route-url="${routeUrl}"
+                            data-route-detail="${guidance.stateCode()} private-well consult packet&#10;Commercial state: ${commercialState.statusLabel()}&#10;Route code: ${commercialState.code()}&#10;Benchmark relation: ${benchmarkRelationLabel(benchmarkRelation)}&#10;Current filter: ${currentFilterStatusLabel(currentFilterStatus)}&#10;Whole-house considered: ${wholeHouseConsidered ? "Yes" : "No"}&#10;Next action: ${result.nextAction().title()}&#10;Official guidance: ${guidance.privateWellGuidanceUrl()}&#10;Certified lab lookup: ${guidance.certifiedLabLookupUrl()}"
+                            data-service-lane="Consult"
+                            data-state-code="${guidance.stateCode()}"
+                            data-benchmark-relation="${benchmarkRelationLabel(benchmarkRelation)}"
+                            data-current-filter-status="${currentFilterStatusLabel(currentFilterStatus)}"
+                            data-whole-house-considered="${wholeHouseConsidered ? "Yes" : "No"}"
+                            data-next-action="${result.nextAction().title()}"
+                            data-official-guidance-url="${guidance.privateWellGuidanceUrl()}"
+                            data-lab-lookup-url="${guidance.certifiedLabLookupUrl()}"
+                        >Download consult packet</button>
                     </div>
                 </article>
             </div>
+            <div class="border-t border-base-300/70 px-6 py-4 text-sm leading-6 text-base-content/58" data-route-status role="status" aria-live="polite" aria-atomic="true">Lab and consult packets can now be saved, copied, mailed, or downloaded before any partner integration exists.</div>
         </section>
     </div>
 </section>

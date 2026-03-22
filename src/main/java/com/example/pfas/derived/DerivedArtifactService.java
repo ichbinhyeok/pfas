@@ -246,7 +246,7 @@ public class DerivedArtifactService {
 		var decisionInputs = buildDecisionInputSeed();
 		var pageGenerationManifest = buildPageGenerationManifest();
 		var pageModels = buildPageModels();
-		var root = Path.of(dataProperties.root()).normalize();
+		var root = dataProperties.rootPath();
 		var outputs = new ArrayList<DerivedArtifactOutput>();
 
 		writeJson(root.resolve("derived/page_models/route_manifest.json"), manifest);

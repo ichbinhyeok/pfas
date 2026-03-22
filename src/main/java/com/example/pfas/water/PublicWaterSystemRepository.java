@@ -19,7 +19,7 @@ public class PublicWaterSystemRepository {
 	private final Path csvPath;
 
 	public PublicWaterSystemRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), PUBLIC_WATER_SYSTEMS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(PUBLIC_WATER_SYSTEMS_PATH).normalize();
 	}
 
 	public List<PublicWaterSystem> findAll() {

@@ -1,7 +1,5 @@
 package com.example.pfas.checker;
 
-import java.util.Locale;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +29,16 @@ public class ActionCheckerController {
 		@RequestParam(required = false) String stateCode,
 		@RequestParam(required = false) String pwsid
 	) {
-		validateRouteInputs(waterSource, stateCode, pwsid);
+		validateRouteInputs(
+			waterSource,
+			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
+			shoppingIntent,
+			stateCode,
+			pwsid
+		);
 
 		var selection = actionCheckerService.normalize(
 			waterSource,
@@ -48,21 +55,30 @@ public class ActionCheckerController {
 		return new ActionCheckerResponse(selection, actionCheckerService.evaluate(selection));
 	}
 
-	private void validateRouteInputs(String waterSource, String stateCode, String pwsid) {
-		var normalizedWaterSource = waterSource == null ? "" : waterSource.trim().toUpperCase(Locale.ROOT);
-
-		if ("PRIVATE_WELL".equals(normalizedWaterSource)
-			&& stateCode != null
-			&& !stateCode.isBlank()
-			&& !actionCheckerService.isKnownStateCode(stateCode)) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown stateCode: " + stateCode);
+	private void validateRouteInputs(
+		String waterSource,
+		String directData,
+		String indirectData,
+		String benchmarkRelation,
+		String currentFilterStatus,
+		String shoppingIntent,
+		String stateCode,
+		String pwsid
+	) {
+		try {
+			actionCheckerService.validateInputs(
+				waterSource,
+				directData,
+				indirectData,
+				benchmarkRelation,
+				currentFilterStatus,
+				shoppingIntent,
+				stateCode,
+				pwsid
+			);
 		}
-
-		if ((normalizedWaterSource.isBlank() || "PUBLIC_WATER".equals(normalizedWaterSource))
-			&& pwsid != null
-			&& !pwsid.isBlank()
-			&& !actionCheckerService.isKnownPwsid(pwsid)) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown pwsid: " + pwsid);
+		catch (IllegalArgumentException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
 		}
 	}
 }

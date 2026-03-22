@@ -21,7 +21,7 @@ public class GuidePageRepository {
 
 	public GuidePageRepository(PfasDataProperties dataProperties) {
 		this.objectMapper = new ObjectMapper();
-		this.guidePagesFile = Path.of(dataProperties.root(), GUIDE_PAGES_PATH).normalize();
+		this.guidePagesFile = dataProperties.rootPath().resolve(GUIDE_PAGES_PATH).normalize();
 	}
 
 	public List<GuidePage> findAll() {

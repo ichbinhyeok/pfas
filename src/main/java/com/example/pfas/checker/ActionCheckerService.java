@@ -86,6 +86,39 @@ public class ActionCheckerService {
 		);
 	}
 
+	public void validateInputs(
+		String waterSource,
+		String directData,
+		String indirectData,
+		String benchmarkRelation,
+		String currentFilterStatus,
+		String shoppingIntent,
+		String stateCode,
+		String pwsid
+	) {
+		validateEnum(waterSource, ActionWaterSource.class, "waterSource");
+		validateEnum(directData, ActionDirectDataStatus.class, "directData");
+		validateEnum(indirectData, ActionIndirectDataStatus.class, "indirectData");
+		validateEnum(benchmarkRelation, ActionBenchmarkRelation.class, "benchmarkRelation");
+		validateEnum(currentFilterStatus, ActionCurrentFilterStatus.class, "currentFilterStatus");
+		validateEnum(shoppingIntent, ActionShoppingIntent.class, "shoppingIntent");
+
+		var normalizedWaterSource = parseEnum(waterSource, ActionWaterSource.class, null);
+		if (normalizedWaterSource == ActionWaterSource.PRIVATE_WELL
+			&& stateCode != null
+			&& !stateCode.isBlank()
+			&& !isKnownStateCode(stateCode)) {
+			throw new IllegalArgumentException("Unknown stateCode: " + stateCode);
+		}
+
+		if ((normalizedWaterSource == null || normalizedWaterSource == ActionWaterSource.PUBLIC_WATER)
+			&& pwsid != null
+			&& !pwsid.isBlank()
+			&& !isKnownPwsid(pwsid)) {
+			throw new IllegalArgumentException("Unknown pwsid: " + pwsid);
+		}
+	}
+
 	public ActionCheckerRecommendation evaluate(ActionCheckerSelection selection) {
 		if (selection.directData() == ActionDirectDataStatus.NONE) {
 			if (selection.waterSource() == ActionWaterSource.PUBLIC_WATER
@@ -346,6 +379,7 @@ public class ActionCheckerService {
 	private ActionCheckerRecommendation privateWellStateContextRequired(ActionCheckerSelection selection) {
 		var state = resolveState(selection.stateCode());
 		var stateHref = privateWellResultHref(selection);
+		var guideHref = privateWellGuideHref(selection);
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PRIVATE_WELL_STATE_CONTEXT_REQUIRED,
@@ -359,8 +393,8 @@ public class ActionCheckerService {
 			),
 			stateHref,
 			state.isPresent() ? "Open " + state.get().stateCode() + " private-well result" : "Open private-well result",
-			"/private-well/" + selection.stateCode(),
-			"Open state guidance",
+			guideHref,
+			privateWellGuideLabel(selection),
 			false,
 			"Whole-house remains a separate escalation after the lab result is understood."
 		);
@@ -401,8 +435,8 @@ public class ActionCheckerService {
 			),
 			stateHref,
 			"Open private-well interpretation",
-			"/private-well/" + selection.stateCode(),
-			"Open state guidance",
+			privateWellGuideHref(selection),
+			privateWellGuideLabel(selection),
 			false,
 			"Whole-house should not be the default next step for below-reference private-well results."
 		);
@@ -511,7 +545,10 @@ public class ActionCheckerService {
 	}
 
 	private String privateWellResultHref(ActionCheckerSelection selection) {
-		var stateCode = selection.stateCode() == null ? "" : selection.stateCode();
+		var stateCode = selection.stateCode();
+		if (stateCode == null || stateCode.isBlank()) {
+			return "/guides/test-first-vs-filter-first";
+		}
 		return "/private-well-result/" + stateCode
 			+ "?benchmarkRelation=" + selection.benchmarkRelation().name()
 			+ "&currentFilterStatus=" + selection.currentFilterStatus().name()
@@ -539,10 +576,7 @@ public class ActionCheckerService {
 			}
 		}
 
-		return stateGuidanceService.getAll().stream()
-			.findFirst()
-			.map(StateGuidance::stateCode)
-			.orElse(null);
+		return null;
 	}
 
 	private String resolvePwsid(String pwsid) {
@@ -553,10 +587,35 @@ public class ActionCheckerService {
 			}
 		}
 
-		return publicWaterSystemService.getAll().stream()
-			.findFirst()
-			.map(PublicWaterSystem::pwsid)
-			.orElse(null);
+		return null;
+	}
+
+	private String privateWellGuideHref(ActionCheckerSelection selection) {
+		var stateCode = selection.stateCode();
+		if (stateCode == null || stateCode.isBlank()) {
+			return "/guides/test-first-vs-filter-first";
+		}
+		return "/private-well/" + stateCode;
+	}
+
+	private String privateWellGuideLabel(ActionCheckerSelection selection) {
+		var state = resolveState(selection.stateCode());
+		return state.isPresent()
+			? "Open " + state.get().stateCode() + " state guidance"
+			: "Read test-first reasoning";
+	}
+
+	private <T extends Enum<T>> void validateEnum(String value, Class<T> enumType, String fieldName) {
+		if (value == null || value.isBlank()) {
+			return;
+		}
+
+		try {
+			Enum.valueOf(enumType, value.trim().toUpperCase(Locale.ROOT));
+		}
+		catch (IllegalArgumentException exception) {
+			throw new IllegalArgumentException("Invalid " + fieldName + ": " + value, exception);
+		}
 	}
 
 	private Optional<StateGuidance> resolveState(String stateCode) {

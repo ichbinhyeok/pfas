@@ -26,6 +26,10 @@ public class InternalApiGuardFilter extends OncePerRequestFilter {
 	@Override
 	protected boolean shouldNotFilter(HttpServletRequest request) {
 		var path = request.getRequestURI();
+		var contextPath = request.getContextPath();
+		if (path != null && contextPath != null && !contextPath.isBlank() && path.startsWith(contextPath)) {
+			path = path.substring(contextPath.length());
+		}
 		if (path == null || !path.startsWith(INTERNAL_PREFIX)) {
 			return true;
 		}
@@ -42,7 +46,7 @@ public class InternalApiGuardFilter extends OncePerRequestFilter {
 		var expectedToken = properties.token();
 		var providedToken = request.getHeader(HEADER_NAME);
 
-		if (isAuthorized(expectedToken, providedToken) || isLoopbackRequest(request)) {
+		if (isAuthorized(expectedToken, providedToken)) {
 			filterChain.doFilter(request, response);
 			return;
 		}
@@ -54,21 +58,5 @@ public class InternalApiGuardFilter extends OncePerRequestFilter {
 		return expectedToken != null
 			&& !expectedToken.isBlank()
 			&& expectedToken.equals(providedToken);
-	}
-
-	private boolean isLoopbackRequest(HttpServletRequest request) {
-		var remoteAddress = request.getRemoteAddr();
-		if (remoteAddress == null || remoteAddress.isBlank()) {
-			return false;
-		}
-
-		var forwardedFor = request.getHeader("X-Forwarded-For");
-		if (forwardedFor != null && !forwardedFor.isBlank()) {
-			return false;
-		}
-
-		return "127.0.0.1".equals(remoteAddress)
-			|| "::1".equals(remoteAddress)
-			|| "0:0:0:0:0:0:0:1".equals(remoteAddress);
 	}
 }

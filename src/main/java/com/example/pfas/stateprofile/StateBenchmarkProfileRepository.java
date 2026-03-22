@@ -22,7 +22,7 @@ public class StateBenchmarkProfileRepository {
 
 	public StateBenchmarkProfileRepository(PfasDataProperties dataProperties) {
 		this.objectMapper = new ObjectMapper();
-		this.stateBenchmarkProfileFile = Path.of(dataProperties.root(), STATE_BENCHMARK_PROFILE_PATH).normalize();
+		this.stateBenchmarkProfileFile = dataProperties.rootPath().resolve(STATE_BENCHMARK_PROFILE_PATH).normalize();
 	}
 
 	public List<StateBenchmarkProfile> findAll() {

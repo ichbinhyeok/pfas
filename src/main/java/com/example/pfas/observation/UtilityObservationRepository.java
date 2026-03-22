@@ -20,7 +20,7 @@ public class UtilityObservationRepository {
 	private final Path csvPath;
 
 	public UtilityObservationRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), UTILITY_OBSERVATIONS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(UTILITY_OBSERVATIONS_PATH).normalize();
 	}
 
 	public List<UtilityObservation> findAll() {

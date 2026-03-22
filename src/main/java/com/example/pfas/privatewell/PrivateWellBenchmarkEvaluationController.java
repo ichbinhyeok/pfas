@@ -27,8 +27,13 @@ public class PrivateWellBenchmarkEvaluationController {
 		@RequestParam BigDecimal value,
 		@RequestParam(defaultValue = "ppt") String unit
 	) {
-		return service.evaluate(stateCode, analyteCode, value, unit)
-			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		try {
+			return service.evaluate(stateCode, analyteCode, value, unit)
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+		}
+		catch (InvalidPrivateWellMeasurementInputException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+		}
 	}
 
 	@GetMapping("/{stateCode}/batch")

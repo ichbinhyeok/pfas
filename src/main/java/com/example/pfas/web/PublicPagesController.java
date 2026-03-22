@@ -3,7 +3,6 @@ package com.example.pfas.web;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Locale;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,9 +19,13 @@ import com.example.pfas.checker.ActionCurrentFilterStatus;
 import com.example.pfas.checker.ActionCheckerService;
 import com.example.pfas.commercial.CommercialSurfaceService;
 import com.example.pfas.decision.PublicWaterDecisionService;
+import com.example.pfas.privatewell.InvalidPrivateWellBatchInputException;
+import com.example.pfas.privatewell.InvalidPrivateWellMeasurementInputException;
 import com.example.pfas.quality.RouteQualityGateService;
 import com.example.pfas.result.PrivateWellResultService;
 import com.example.pfas.result.PublicWaterResultService;
+import com.example.pfas.result.WaterDecisionResult;
+import com.example.pfas.site.SiteMetadataService;
 import com.example.pfas.source.SourceDocument;
 import com.example.pfas.source.SourceRegistryService;
 import com.example.pfas.state.StateGuidanceService;
@@ -43,6 +46,7 @@ public class PublicPagesController {
 	private final StateBenchmarkProfileService stateBenchmarkProfileService;
 	private final RouteQualityGateService routeQualityGateService;
 	private final CommercialSurfaceService commercialSurfaceService;
+	private final SiteMetadataService siteMetadataService;
 
 	public PublicPagesController(
 		PublicWaterSystemService publicWaterSystemService,
@@ -55,7 +59,8 @@ public class PublicPagesController {
 		GuidePageService guidePageService,
 		StateBenchmarkProfileService stateBenchmarkProfileService,
 		RouteQualityGateService routeQualityGateService,
-		CommercialSurfaceService commercialSurfaceService
+		CommercialSurfaceService commercialSurfaceService,
+		SiteMetadataService siteMetadataService
 	) {
 		this.publicWaterSystemService = publicWaterSystemService;
 		this.stateGuidanceService = stateGuidanceService;
@@ -68,6 +73,7 @@ public class PublicPagesController {
 		this.stateBenchmarkProfileService = stateBenchmarkProfileService;
 		this.routeQualityGateService = routeQualityGateService;
 		this.commercialSurfaceService = commercialSurfaceService;
+		this.siteMetadataService = siteMetadataService;
 	}
 
 	@GetMapping("/")
@@ -193,14 +199,26 @@ public class PublicPagesController {
 	) {
 		var guidance = stateGuidanceService.getByStateCode(stateCode.toUpperCase())
 			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown state_code: " + stateCode));
-		var result = batchInput != null && !batchInput.isBlank()
-			? privateWellResultService.getFromBatchMeasurement(guidance.stateCode(), batchInput, currentFilterStatus, wholeHouseConsidered)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode))
-			: analyteCode != null && value != null
-			? privateWellResultService.getFromMeasurement(guidance.stateCode(), analyteCode, value, unit, currentFilterStatus, wholeHouseConsidered)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode))
-			: privateWellResultService.get(guidance.stateCode(), benchmarkRelation, currentFilterStatus, wholeHouseConsidered)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode));
+		var result = resolvePrivateWellResult(
+			guidance.stateCode(),
+			benchmarkRelation,
+			currentFilterStatus,
+			batchInput,
+			analyteCode,
+			value,
+			unit,
+			wholeHouseConsidered
+		);
+		var routeUrl = buildPrivateWellRouteUrl(
+			guidance.stateCode(),
+			benchmarkRelation,
+			currentFilterStatus,
+			batchInput,
+			analyteCode,
+			value,
+			unit,
+			wholeHouseConsidered
+		);
 
 		model.addAttribute("guidance", guidance);
 		model.addAttribute("result", result);
@@ -224,10 +242,12 @@ public class PublicPagesController {
 			)
 		);
 		model.addAttribute("batchInput", batchInput);
-		model.addAttribute("encodedBatchInput", batchInput == null ? null : URLEncoder.encode(batchInput, StandardCharsets.UTF_8));
 		model.addAttribute("analyteCode", analyteCode);
 		model.addAttribute("value", value);
 		model.addAttribute("unit", unit);
+		model.addAttribute("routeId", routeUrl);
+		model.addAttribute("routeUrl", routeUrl);
+		model.addAttribute("canonicalUrl", siteMetadataService.siteBaseUrl() + routeUrl);
 		return "pages/private-well-result";
 	}
 
@@ -243,7 +263,16 @@ public class PublicPagesController {
 		String stateCode,
 		String pwsid
 	) {
-		validateCheckerInputs(waterSource, stateCode, pwsid);
+		validateCheckerInputs(
+			waterSource,
+			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
+			shoppingIntent,
+			stateCode,
+			pwsid
+		);
 
 		var selection = actionCheckerService.normalize(
 			waterSource,
@@ -263,22 +292,90 @@ public class PublicPagesController {
 		model.addAttribute("systems", publicWaterSystemService.getAll());
 	}
 
-	private void validateCheckerInputs(String waterSource, String stateCode, String pwsid) {
-		var normalizedWaterSource = waterSource == null ? "" : waterSource.trim().toUpperCase(Locale.ROOT);
+	private void validateCheckerInputs(
+		String waterSource,
+		String directData,
+		String indirectData,
+		String benchmarkRelation,
+		String currentFilterStatus,
+		String shoppingIntent,
+		String stateCode,
+		String pwsid
+	) {
+		try {
+			actionCheckerService.validateInputs(
+				waterSource,
+				directData,
+				indirectData,
+				benchmarkRelation,
+				currentFilterStatus,
+				shoppingIntent,
+				stateCode,
+				pwsid
+			);
+		}
+		catch (IllegalArgumentException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+		}
+	}
 
-		if ("PRIVATE_WELL".equals(normalizedWaterSource)
-			&& stateCode != null
-			&& !stateCode.isBlank()
-			&& !actionCheckerService.isKnownStateCode(stateCode)) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown stateCode: " + stateCode);
+	private WaterDecisionResult resolvePrivateWellResult(
+		String stateCode,
+		ActionBenchmarkRelation benchmarkRelation,
+		ActionCurrentFilterStatus currentFilterStatus,
+		String batchInput,
+		String analyteCode,
+		BigDecimal value,
+		String unit,
+		boolean wholeHouseConsidered
+	) {
+		try {
+			if (batchInput != null && !batchInput.isBlank()) {
+				return privateWellResultService.getFromBatchMeasurement(stateCode, batchInput, currentFilterStatus, wholeHouseConsidered)
+					.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode));
+			}
+
+			if (analyteCode != null && value != null) {
+				return privateWellResultService.getFromMeasurement(stateCode, analyteCode, value, unit, currentFilterStatus, wholeHouseConsidered)
+					.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode));
+			}
+		}
+		catch (InvalidPrivateWellBatchInputException | InvalidPrivateWellMeasurementInputException exception) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
 		}
 
-		if ((normalizedWaterSource.isBlank() || "PUBLIC_WATER".equals(normalizedWaterSource))
-			&& pwsid != null
-			&& !pwsid.isBlank()
-			&& !actionCheckerService.isKnownPwsid(pwsid)) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unknown pwsid: " + pwsid);
+		return privateWellResultService.get(stateCode, benchmarkRelation, currentFilterStatus, wholeHouseConsidered)
+			.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No private-well result available for state_code: " + stateCode));
+	}
+
+	private String buildPrivateWellRouteUrl(
+		String stateCode,
+		ActionBenchmarkRelation benchmarkRelation,
+		ActionCurrentFilterStatus currentFilterStatus,
+		String batchInput,
+		String analyteCode,
+		BigDecimal value,
+		String unit,
+		boolean wholeHouseConsidered
+	) {
+		var builder = new StringBuilder("/private-well-result/")
+			.append(stateCode);
+		var queryParts = new java.util.ArrayList<String>();
+		if (batchInput != null && !batchInput.isBlank()) {
+			queryParts.add("batchInput=" + URLEncoder.encode(batchInput, StandardCharsets.UTF_8));
 		}
+		else if (analyteCode != null && !analyteCode.isBlank() && value != null) {
+			queryParts.add("analyteCode=" + URLEncoder.encode(analyteCode, StandardCharsets.UTF_8));
+			queryParts.add("value=" + URLEncoder.encode(value.toPlainString(), StandardCharsets.UTF_8));
+			queryParts.add("unit=" + URLEncoder.encode(unit == null || unit.isBlank() ? "ppt" : unit, StandardCharsets.UTF_8));
+		}
+		else {
+			queryParts.add("benchmarkRelation=" + benchmarkRelation.name());
+		}
+		queryParts.add("currentFilterStatus=" + currentFilterStatus.name());
+		queryParts.add("wholeHouseConsidered=" + wholeHouseConsidered);
+		builder.append('?').append(String.join("&", queryParts));
+		return builder.toString();
 	}
 
 	private List<SourceDocument> resolveSources(List<String> sourceIds) {

@@ -143,14 +143,14 @@ public class PrivateWellResultService {
 			case ABOVE_REFERENCE, MIXED -> new NextAction(
 				"EVALUATE_CERTIFIED_POU_FILTER_AND_STATE_NEXT_STEPS",
 				"Open state next steps and evaluate certified point-of-use",
-				"The result is above the selected reference context, so the next step is state-guided interpretation plus a certified ingestion-focused treatment option rather than a generic shopping flow.",
+				"The well owner already has a meaningful result, so the next step is state-guided interpretation plus a certified ingestion-focused treatment option rather than a generic shopping flow.",
 				"high",
 				"Private-well above-reference results are action signals, not legal compliance findings."
 			);
 			case BELOW_REFERENCE -> new NextAction(
 				"CONTINUE_PERIODIC_TESTING",
 				"Keep the result in a monitoring posture and follow state guidance",
-				"The result is below the selected reference, so the next step is to keep the interpretation state-based and use official guidance for any follow-up testing or optional treatment.",
+				"The well owner has a below-reference result, so the next step is to keep the interpretation state-based and use official guidance for any follow-up testing or optional treatment.",
 				"medium",
 				"Private-well results remain owner-managed and reference-based."
 			);
@@ -185,7 +185,7 @@ public class PrivateWellResultService {
 				+ " comparison mode.";
 
 		return List.of(
-			"Private well results are interpreted against " + guidance.stateCode() + " state guidance, not as public-water compliance findings.",
+			"This route is for a private-well owner, so state guidance and lab context outrank any public-water logic or generic shopping flow.",
 			referenceLine,
 			comparabilityLine,
 			filterLine
@@ -198,7 +198,7 @@ public class PrivateWellResultService {
 			: "It does not turn " + profile.primaryReferenceLabel() + " into a direct legal compliance label for a private well.";
 		return List.of(
 			"This is not a legal compliance determination for a private well.",
-			"It does not replace state lab guidance, local health input, or sample-method review.",
+			"It does not replace state lab guidance, sample-method review, or the exact reporting notes from the lab.",
 			profileLimit,
 			"It does not prove a health outcome or define a universal retesting cadence beyond current " + guidance.stateCode() + " guidance."
 		);
@@ -300,9 +300,9 @@ public class PrivateWellResultService {
 
 	private String fitReason(FilterCatalogItem option) {
 		return switch (option.filterType()) {
-			case "carbon_block" -> "Certified under-sink carbon option with direct PFOA and PFOS claim support for an ingestion-focused private-well path.";
-			case "carbon_block_uv" -> "Certified under-sink option for households that want a premium under-sink point-of-use system with PFAS claim coverage.";
-			default -> "Certified point-of-use option with PFAS claim support for a private-well treatment path.";
+			case "carbon_block" -> "Useful when a private-well owner needs a narrower certified point-of-use move after the state route already justifies treatment.";
+			case "carbon_block_uv" -> "Useful for a household that still wants an under-sink certified point-of-use system with stronger hardware expectations and accepts the upkeep.";
+			default -> "Certified point-of-use option with PFAS claim support for a private-well path that already cleared the evidence step.";
 		};
 	}
 
@@ -320,7 +320,7 @@ public class PrivateWellResultService {
 	) {
 		return List.of(
 			"A future well result or state interpretation moves the case above the current reference context.",
-			"You need extra ingestion-focused margin and can maintain a certified point-of-use unit.",
+			"The household still wants extra ingestion-focused margin after the state route and lab context are understood.",
 			wholeHouseConsidered
 				? "Whole-house intent should be reviewed separately against purpose, cost, and maintenance in " + guidance.stateCode() + "."
 				: "Whole-house should only be reviewed if the household goal extends beyond drinking and cooking water."

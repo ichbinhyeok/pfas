@@ -32,6 +32,9 @@ public class PrivateWellBenchmarkEvaluatorService {
 		if (stateCode == null || analyteCode == null || analyteCode.isBlank() || inputValue == null || inputUnit == null || inputUnit.isBlank()) {
 			return Optional.empty();
 		}
+		if (inputValue.signum() < 0) {
+			throw new InvalidPrivateWellMeasurementInputException("value must be zero or greater.");
+		}
 
 		var profile = stateBenchmarkProfileService.getByStateCode(stateCode.toUpperCase(Locale.ROOT)).orElse(null);
 		if (profile == null) {
@@ -112,6 +115,10 @@ public class PrivateWellBenchmarkEvaluatorService {
 	}
 
 	private PrivateWellBenchmarkEvaluation evaluateAgainstProfile(StateBenchmarkProfile profile, String analyteCode, BigDecimal inputValue, String inputUnit) {
+		if (inputValue.signum() < 0) {
+			throw new InvalidPrivateWellMeasurementInputException("value must be zero or greater.");
+		}
+
 		var normalizedAnalyte = normalizeAnalyteCode(analyteCode);
 		var matchedLine = profile.benchmarks().stream()
 			.filter(line -> normalizedAnalyte.equals(normalizeAnalyteCode(line.contaminantCode())))

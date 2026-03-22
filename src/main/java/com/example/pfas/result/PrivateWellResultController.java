@@ -12,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.example.pfas.checker.ActionBenchmarkRelation;
 import com.example.pfas.checker.ActionCurrentFilterStatus;
+import com.example.pfas.privatewell.InvalidPrivateWellMeasurementInputException;
 
 @RestController
 @RequestMapping("/internal/results/private-well")
@@ -49,14 +50,19 @@ public class PrivateWellResultController {
 		}
 
 		if (analyteCode != null && value != null) {
-			return privateWellResultService.getFromMeasurement(
-				stateCode.toUpperCase(),
-				analyteCode,
-				value,
-				unit,
-				currentFilterStatus,
-				wholeHouseConsidered
-			).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+			try {
+				return privateWellResultService.getFromMeasurement(
+					stateCode.toUpperCase(),
+					analyteCode,
+					value,
+					unit,
+					currentFilterStatus,
+					wholeHouseConsidered
+				).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unknown stateCode: " + stateCode));
+			}
+			catch (InvalidPrivateWellMeasurementInputException exception) {
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, exception.getMessage(), exception);
+			}
 		}
 
 		return privateWellResultService.get(

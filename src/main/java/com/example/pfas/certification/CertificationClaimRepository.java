@@ -19,7 +19,7 @@ public class CertificationClaimRepository {
 	private final Path csvPath;
 
 	public CertificationClaimRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), CERTIFICATION_CLAIMS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(CERTIFICATION_CLAIMS_PATH).normalize();
 	}
 
 	public List<CertificationClaim> findAll() {

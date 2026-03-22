@@ -24,7 +24,7 @@ public class StateGuidanceRepository {
 
 	public StateGuidanceRepository(PfasDataProperties dataProperties) {
 		this.objectMapper = new ObjectMapper();
-		this.stateGuidanceDirectory = Path.of(dataProperties.root(), STATE_GUIDANCE_PATH).normalize();
+		this.stateGuidanceDirectory = dataProperties.rootPath().resolve(STATE_GUIDANCE_PATH).normalize();
 	}
 
 	public List<StateGuidance> findAll() {

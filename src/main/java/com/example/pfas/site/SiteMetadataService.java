@@ -20,9 +20,13 @@ public class SiteMetadataService {
 	public String siteBaseUrl() {
 		var raw = siteProperties.baseUrl();
 		if (raw == null || raw.isBlank()) {
-			return "https://example.com";
+			throw new IllegalStateException("pfas.site.base-url must be configured.");
 		}
-		return raw.endsWith("/") ? raw.substring(0, raw.length() - 1) : raw;
+		var normalized = raw.endsWith("/") ? raw.substring(0, raw.length() - 1) : raw;
+		if ("https://example.com".equalsIgnoreCase(normalized) || "http://example.com".equalsIgnoreCase(normalized)) {
+			throw new IllegalStateException("pfas.site.base-url must not use the example.com placeholder.");
+		}
+		return normalized;
 	}
 
 	public String editorialOwner() {

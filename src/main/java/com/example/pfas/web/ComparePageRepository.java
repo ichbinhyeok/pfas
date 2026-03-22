@@ -21,7 +21,7 @@ public class ComparePageRepository {
 
 	public ComparePageRepository(PfasDataProperties dataProperties) {
 		this.objectMapper = new ObjectMapper();
-		this.comparePagesFile = Path.of(dataProperties.root(), COMPARE_PAGES_PATH).normalize();
+		this.comparePagesFile = dataProperties.rootPath().resolve(COMPARE_PAGES_PATH).normalize();
 	}
 
 	public List<ComparePage> findAll() {

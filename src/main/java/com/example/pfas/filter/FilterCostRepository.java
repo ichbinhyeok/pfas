@@ -20,7 +20,7 @@ public class FilterCostRepository {
 	private final Path csvPath;
 
 	public FilterCostRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), FILTER_COSTS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(FILTER_COSTS_PATH).normalize();
 	}
 
 	public List<FilterCost> findAll() {

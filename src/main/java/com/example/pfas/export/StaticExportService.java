@@ -58,7 +58,6 @@ public class StaticExportService {
 
 		var pageGenerationManifest = derivedArtifactService.buildPageGenerationManifest();
 		pageGenerationManifest.models().stream()
-			.filter(StaticExportService::isIndexable)
 			.forEach(model ->
 			items.putIfAbsent(
 				model.renderPath(),
@@ -74,7 +73,6 @@ public class StaticExportService {
 		;
 
 		pageGenerationManifest.models().stream()
-			.filter(StaticExportService::isIndexable)
 			.filter(model -> "public_water".equals(model.routeType()))
 			.forEach(model -> items.putIfAbsent(
 				"/public-water-system/" + model.routeKey(),
@@ -95,7 +93,7 @@ public class StaticExportService {
 	public StaticExportReport export(String baseUrl) {
 		derivedArtifactService.sync();
 		var manifest = buildManifest();
-		var root = Path.of("build/static-export").normalize();
+		var root = dataProperties.rootPath().getParent().resolve("build/static-export").normalize();
 
 		writeManifest(manifest);
 
@@ -133,8 +131,7 @@ public class StaticExportService {
 	}
 
 	private void writeManifest(StaticExportManifestFile manifest) {
-		var manifestPath = Path.of(dataProperties.root()).normalize()
-			.resolve("derived/page_models/static_export_manifest.json");
+		var manifestPath = dataProperties.rootPath().resolve("derived/page_models/static_export_manifest.json");
 		try {
 			Files.createDirectories(manifestPath.getParent());
 			JSON_MAPPER.writerWithDefaultPrettyPrinter().writeValue(manifestPath.toFile(), manifest);
@@ -182,9 +179,5 @@ public class StaticExportService {
 			return path.substring(1);
 		}
 		return path.substring(1) + "/index.html";
-	}
-
-	private static boolean isIndexable(com.example.pfas.derived.PageGenerationManifestItem model) {
-		return model.indexable();
 	}
 }

@@ -20,7 +20,7 @@ public class FilterProductRepository {
 	private final Path csvPath;
 
 	public FilterProductRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), FILTER_PRODUCTS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(FILTER_PRODUCTS_PATH).normalize();
 	}
 
 	public List<FilterProduct> findAll() {

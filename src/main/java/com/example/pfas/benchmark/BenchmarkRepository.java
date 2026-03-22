@@ -20,7 +20,7 @@ public class BenchmarkRepository {
 	private final Path csvPath;
 
 	public BenchmarkRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), BENCHMARKS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(BENCHMARKS_PATH).normalize();
 	}
 
 	public List<BenchmarkRecord> findAll() {

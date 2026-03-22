@@ -190,7 +190,7 @@
                                 </div>
                                 <select class="select select-bordered h-12 w-full border-base-300 bg-base-100 shadow-none" name="currentFilterStatus">
                                     <option value="NONE" selected="selected">No current filter</option>
-                                    <option value="CERTIFIED_POU">Certified point-of-use</option>
+                                    <option value="CERTIFIED">Certified point-of-use</option>
                                     <option value="UNCERTIFIED">Uncertified or unclear</option>
                                 </select>
                             </label>
@@ -225,7 +225,7 @@
                                     </div>
                                     <select class="select select-bordered h-12 w-full border-base-300 bg-base-100 shadow-none" name="currentFilterStatus">
                                         <option value="NONE" selected="selected">No current filter</option>
-                                        <option value="CERTIFIED_POU">Certified point-of-use</option>
+                                        <option value="CERTIFIED">Certified point-of-use</option>
                                         <option value="UNCERTIFIED">Uncertified or unclear</option>
                                     </select>
                                 </label>

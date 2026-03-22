@@ -19,7 +19,7 @@ public class FilterCostComponentRepository {
 	private final Path csvPath;
 
 	public FilterCostComponentRepository(PfasDataProperties dataProperties) {
-		this.csvPath = Path.of(dataProperties.root(), FILTER_COST_COMPONENTS_PATH).normalize();
+		this.csvPath = dataProperties.rootPath().resolve(FILTER_COST_COMPONENTS_PATH).normalize();
 	}
 
 	public List<RecurringCostComponent> findAll() {

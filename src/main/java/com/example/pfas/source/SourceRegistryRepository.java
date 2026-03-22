@@ -22,7 +22,7 @@ public class SourceRegistryRepository {
 
 	public SourceRegistryRepository(PfasDataProperties dataProperties) {
 		this.objectMapper = new ObjectMapper();
-		this.sourceRegistryFile = Path.of(dataProperties.root(), SOURCE_REGISTRY_PATH).normalize();
+		this.sourceRegistryFile = dataProperties.rootPath().resolve(SOURCE_REGISTRY_PATH).normalize();
 	}
 
 	public List<SourceDocument> findAll() {
