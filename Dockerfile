@@ -26,7 +26,7 @@ COPY --from=tailwind /workspace/src/main/resources/static/css/tailwind.css /work
 RUN chmod +x gradlew \
     && ./gradlew --no-daemon bootJar -x buildTailwind
 
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
@@ -35,7 +35,6 @@ ENV JAVA_TOOL_OPTIONS="-XX:+UseSerialGC -Xms256m -Xmx384m -Xss512k"
 
 COPY --from=build /workspace/build/libs/*.jar /app/app.jar
 COPY --from=build /workspace/data /app/data
-COPY --from=build /workspace/src/main/jte /app/src/main/jte
 
 EXPOSE 8080
 

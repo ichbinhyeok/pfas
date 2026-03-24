@@ -2,9 +2,11 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '4.0.3'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'gg.jte.gradle' version '3.2.3'
 }
 
 def npmCommand = org.gradle.internal.os.OperatingSystem.current().isWindows() ? 'npm.cmd' : 'npm'
+def jteVersion = '3.2.3'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -28,8 +30,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
-	implementation 'gg.jte:jte-spring-boot-starter-4:3.2.3'
-	implementation 'gg.jte:jte:3.2.3'
+	implementation "gg.jte:jte-spring-boot-starter-4:${jteVersion}"
+	implementation "gg.jte:jte:${jteVersion}"
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -37,8 +39,22 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+jte {
+	precompile()
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.named('bootJar') {
+	dependsOn tasks.named('precompileJte')
+	into('BOOT-INF/classes') {
+		from(fileTree('jte-classes')) {
+			include '**/*.class'
+			include '**/*.bin'
+		}
+	}
 }
 
 tasks.register('buildTailwind', Exec) {

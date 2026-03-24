@@ -43,6 +43,27 @@ jobs:
       - name: Run tests
         run: ./gradlew test
 
+      - name: Build boot jar
+        run: ./gradlew --no-daemon bootJar
+
+      - name: Smoke test packaged jar
+        run: |
+          export GG_JTE_DEVELOPMENT_MODE=false
+          export GG_JTE_USE_PRECOMPILED_TEMPLATES=true
+          java -jar build/libs/*.jar --server.port=18080 > build/jar-smoke.log 2>&1 &
+          APP_PID=$!
+          trap 'kill $APP_PID || true' EXIT
+
+          for i in $(seq 1 30); do
+            if curl -fsS --max-time 10 http://127.0.0.1:18080/healthz > /dev/null; then
+              break
+            fi
+            sleep 2
+          done
+
+          curl -fsS http://127.0.0.1:18080/ > /dev/null
+          curl -fsS http://127.0.0.1:18080/checker > /dev/null
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
