@@ -18,9 +18,9 @@
             </div>
 
             <div class="terminal-pane px-5 py-5">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Recommended next page</span>
+                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Best next page for this situation</span>
                 <p class="mt-3 text-lg font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</p>
-                <p class="mt-2 text-sm leading-6 text-white/68">This is the narrowest next page supported by the current preview.</p>
+                <p class="mt-2 text-sm leading-6 text-white/68">This is the narrowest next page supported by your current answers.</p>
             </div>
 
             <div class="join join-vertical gap-3">
@@ -33,7 +33,7 @@
     <div class="space-y-3">
         <details class="collapse collapse-arrow border border-base-300/70 bg-base-100/94 shadow-[var(--shadow-soft)]">
             <summary class="collapse-title pr-12">
-                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">State in view</div>
+                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Your answers</div>
                 <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${waterSourceLabel(selection.waterSource())} / ${directDataLabel(selection.directData())}</div>
             </summary>
             <div class="collapse-content">
@@ -68,7 +68,7 @@
 
         <details class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
             <summary class="collapse-title pr-12">
-                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened</div>
+                <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Why this recommendation fits</div>
                 <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${recommendation.principles().size()} reasons are active</div>
             </summary>
             <div class="collapse-content">
@@ -81,8 +81,8 @@
         </details>
 
         <article class="surface-muted px-5 py-5 shadow-[var(--shadow-soft)]">
-            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">What this does not confirm</span>
-            <p class="mt-3 text-sm leading-7 text-base-content/68">This route does not declare the household safe or unsafe. It does not replace utility interpretation, state guidance, or accredited lab review.</p>
+            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Helpful reminder</span>
+            <p class="mt-3 text-sm leading-7 text-base-content/68">You can change your answers at any time and refresh the preview. This recommendation does not declare the household safe or unsafe or replace official interpretation.</p>
         </article>
 
         @if(recommendation.wholeHouseGuardrail())

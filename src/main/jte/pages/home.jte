@@ -30,37 +30,37 @@
             <div class="grid gap-px bg-white/8 xl:grid-cols-[minmax(0,1.18fr)_24rem]">
                 <div class="space-y-8 bg-white/[0.03] p-7 md:p-9">
                     <div class="space-y-5">
-                        <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">Quiet infrastructure for water decisions</span>
+                        <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">Start here</span>
                         <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.98]">
-                            PFAS in water: what should you do first?
-                            <span class="font-serif font-medium text-white/72">Start with the right record before you shop for a filter.</span>
+                            PFAS can feel unfamiliar.
+                            <span class="font-serif font-medium text-white/72">Start with the next step, not the jargon.</span>
                         </h1>
                         <p class="max-w-3xl text-lg leading-8 text-white/72">
-                            Use utility records, private-well testing paths, and certified filter comparisons to figure out
-                            whether the next move is reading a CCR, checking a PFAS notice, ordering a well test, or comparing
-                            point-of-use options without overspending.
+                            You do not need to know the acronyms first. This site helps you decide whether to read your
+                            water report, check a PFAS notice, order a private-well test, or compare certified point-of-use
+                            filters once the record is clear.
                         </p>
                     </div>
 
                     <div class="join join-vertical gap-3 sm:join-horizontal">
-                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/checker">Check your PFAS next step</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/methodology">Read methodology</a>
+                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/checker">Find my next step</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/methodology">See how it works</a>
                     </div>
                 </div>
 
                 <aside class="space-y-4 bg-white/[0.02] p-7 md:p-8">
-                    <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Operating stance</span>
-                    <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">Built like a control room, not a promo page.</h2>
+                    <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">What you get here</span>
+                    <h2 class="text-2xl font-semibold tracking-[-0.03em] text-white">A calmer way to figure out what to do next.</h2>
                     <div class="terminal-pane overflow-hidden">
                         <div class="terminal-stack">
                             <article class="px-4 py-4 text-sm leading-6 text-white/78">
-                                <strong class="font-semibold text-white">Evidence stack</strong><br>EPA, state guidance, utility documents, and captured listing records.
+                                <strong class="font-semibold text-white">Plain starting point</strong><br>Start with your water source and the record you have, even if PFAS terms are new to you.
                             </article>
                             <article class="px-4 py-4 text-sm leading-6 text-white/78">
-                                <strong class="font-semibold text-white">Reading rhythm</strong><br>Calm, benchmark-aware, and explicit about what the data does not settle.
+                                <strong class="font-semibold text-white">One next page</strong><br>The site narrows the next page before it opens shopping or comparison paths.
                             </article>
                             <article class="px-4 py-4 text-sm leading-6 text-white/78">
-                                <strong class="font-semibold text-white">Decision posture</strong><br>Verify first. Compare only after the household context is anchored.
+                                <strong class="font-semibold text-white">Official records in view</strong><br>EPA, state guidance, utility documents, and certification records stay visible behind the recommendation.
                             </article>
                         </div>
                     </div>
@@ -69,19 +69,19 @@
 
             <div class="terminal-grid border-x-0 border-b-0 rounded-none lg:grid-cols-3">
                 <article class="px-6 py-5">
-                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Interpretation bias</div>
-                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Direct evidence first</div>
-                    <div class="mt-3 text-sm leading-6 text-white/62">Utility records and well tests open before any shopping path.</div>
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">What makes this easier</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">No PFAS expertise required</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">You can start with simple facts like public water vs private well and whether you already have a report.</div>
                 </article>
                 <article class="px-6 py-5">
-                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Trust layer</div>
-                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Caveats stay visible</div>
-                    <div class="mt-3 text-sm leading-6 text-white/62">Limits remain in the main reading path instead of disappearing below the fold.</div>
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">How the site behaves</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">One step at a time</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">It points you to the narrowest next page instead of dropping you into a broad, confusing catalog.</div>
                 </article>
                 <article class="px-6 py-5">
-                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Commercial posture</div>
-                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Point-of-use before escalation</div>
-                    <div class="mt-3 text-sm leading-6 text-white/62">Certified point-of-use opens before whole-house and only with claim-level support.</div>
+                    <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/48">Guardrail</div>
+                    <div class="mt-3 text-xl font-semibold tracking-[-0.03em] text-white">Records before shopping</div>
+                    <div class="mt-3 text-sm leading-6 text-white/62">The site keeps reading, testing, and interpretation in front of product comparison.</div>
                 </article>
             </div>
         </div>
@@ -105,36 +105,36 @@
             <div class="space-y-3">
                 <span class="section-label">Action intake</span>
                 <h2 class="max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-base-content md:text-[3rem] md:leading-[1.02]">
-                    Check the next PFAS step for your household.
-                    <span class="font-serif font-medium text-secondary">Use the same intake flow that powers the full checker.</span>
+                    Get a clearer next step without learning the whole PFAS vocabulary first.
+                    <span class="font-serif font-medium text-secondary">Use the same calm intake flow that powers the full checker.</span>
                 </h2>
-                <p class="max-w-3xl text-base leading-8 text-base-content/68">This server-backed intake keeps the evidence order visible so you can decide whether to read a utility record, test a well, or compare PFAS filters next.</p>
+                <p class="max-w-3xl text-base leading-8 text-base-content/68">Start with the water source, add the record you already have, and the site will narrow the next page before opening compare or shopping lanes.</p>
             </div>
             <div class="surface-muted px-5 py-4">
-                <span class="text-sm font-medium leading-7 text-base-content/76"><strong class="font-semibold text-base-content">Homepage discipline</strong> No fear copy, no affiliate-first detour, and no fake certainty.</span>
+                <span class="text-sm font-medium leading-7 text-base-content/76"><strong class="font-semibold text-base-content">Quick reassurance</strong> You can start even if you only know a little. The checker is built to sort the next move before the topic feels overwhelming.</span>
             </div>
         </div>
 
         <div class="surface-panel md:hidden">
             <div class="grid gap-4 p-5">
                 <div class="space-y-2">
-                    <span class="section-label">Quick route</span>
+                    <span class="section-label">Recommended starting point</span>
                     <h3 class="text-2xl font-semibold tracking-[-0.04em] text-base-content">${checkerRecommendation.title()}</h3>
                     <p class="text-sm leading-7 text-base-content/68">${checkerRecommendation.summary()}</p>
                 </div>
                 <div class="ledger-grid">
                     <article class="px-4 py-4">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Current preview</div>
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Current recommendation</div>
                         <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.title()}</div>
                     </article>
                     <article class="px-4 py-4">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Recommended next page</div>
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Best next page</div>
                         <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.primaryLabel()}</div>
                     </article>
                 </div>
                 <div class="join join-vertical gap-3 sm:join-horizontal">
-                    <a class="btn btn-primary join-item h-11 rounded-full border-0 px-5 text-sm font-semibold" href="/checker">Check your PFAS next step</a>
-                    <a class="btn btn-outline join-item h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content" href="${checkerRecommendation.primaryHref()}">Review recommended page</a>
+                    <a class="btn btn-primary join-item h-11 rounded-full border-0 px-5 text-sm font-semibold" href="/checker">Find my next step</a>
+                    <a class="btn btn-outline join-item h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content" href="${checkerRecommendation.primaryHref()}">Open recommended page</a>
                 </div>
             </div>
         </div>
