@@ -26,7 +26,7 @@ COPY --from=tailwind /workspace/src/main/resources/static/css/tailwind.css /work
 RUN chmod +x gradlew \
     && ./gradlew --no-daemon bootJar -x buildTailwind
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
