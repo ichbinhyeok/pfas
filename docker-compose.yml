@@ -14,7 +14,6 @@ services:
       PFAS_SITE_METHODOLOGY_OWNER: ${PFAS_SITE_METHODOLOGY_OWNER:-gabi Water Evidence Team}
       PFAS_MERCHANT_CLICKS_ROOT: /var/pfas/merchant-clicks
       PFAS_ROUTE_CLICKS_ROOT: /var/pfas/route-clicks
-      GG_JTE_DEVELOPMENT_MODE: "false"
     volumes:
       - ./runtime/merchant-clicks:/var/pfas/merchant-clicks
       - ./runtime/route-clicks:/var/pfas/route-clicks
