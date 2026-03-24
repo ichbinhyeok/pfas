@@ -35,6 +35,7 @@ ENV JAVA_TOOL_OPTIONS="-XX:+UseSerialGC -Xms256m -Xmx384m -Xss512k"
 
 COPY --from=build /workspace/build/libs/*.jar /app/app.jar
 COPY --from=build /workspace/data /app/data
+COPY --from=build /workspace/src/main/jte /app/src/main/jte
 
 EXPOSE 8080
 
