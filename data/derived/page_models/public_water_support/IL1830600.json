@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.694472400+09:00",
+  "model_id" : "public_water_support:IL1830600",
+  "route_type" : "public_water_support",
+  "route_key" : "IL1830600",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/IL1830600",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "IL1830600",
+      "pwsName" : "Oakwood Water System",
+      "stateCode" : "IL",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "surface_water",
+      "utilityWebsiteUrl" : "https://www.myutility.us/prairiepathwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/oakwood/2024/oakwood-24ccr-533.pdf?sfvrsn=b8973c5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/illinois/water-quality-reports/oakwood/2023/oakwood-2023-pfas.pdf?sfvrsn=345e3b5b_4",
+      "serviceAreaNotes" : "Prairie Path Water surface-water system drawing from Salt Fork and Oakwood Reservoir with a separate 2023 PFAS report showing detectable PFOS PFOA and PFHxS values.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "prairie-path-water-home", "prairie-path-water-quality-reports", "oakwood-2024-water-quality-report", "oakwood-pfas-2023-report" ]
+    }
+  }
+}

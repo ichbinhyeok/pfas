@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:old-utility-report-next-step",
+  "route_type" : "guide",
+  "route_key" : "old-utility-report-next-step",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/old-utility-report-next-step",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 5,
+  "payload" : {
+    "guide" : {
+      "slug" : "old-utility-report-next-step",
+      "editorialRank" : 10,
+      "eyebrow" : "High-intent guide",
+      "title" : "An older utility PFAS report should reopen the route not close it",
+      "lede" : "An older CCR or PFAS report still helps with system identity, but it should usually trigger a freshness check before the household treats the route as settled.",
+      "queryIntent" : "Document freshness",
+      "nextActionTitle" : "Use the older report as a starting point, then look for a newer PFAS layer",
+      "nextActionSummary" : "If the report is older than the current PFAS cycle or the utility publishes newer notices, keep the route in evidence collection until the newer layer is checked.",
+      "whyThis" : [ "PFAS reporting often changes faster than a utility's broad annual summary.", "An older report can still be the right system record while no longer being the right PFAS posture.", "The engine should reward document freshness before it rewards shopping intent." ],
+      "whatThisDoesNotTellYou" : [ "It does not mean the older report is useless.", "It does not automatically prove the household needs treatment.", "It does not let geography replace current utility evidence." ],
+      "checklist" : [ "Confirm the exact system and report year.", "Look for a newer PFAS notice, utility PFAS page, or current annual report.", "Keep comparison secondary until the freshest direct layer is checked." ],
+      "evidenceHighlights" : [ "EPA consumer CCR guidance is useful, but households still need the freshest available utility layer.", "Lancaster, Aqua New Jersey, and Aqua Pennsylvania all show why a newer PFAS-specific page or notice can outrank an older annual report for routing.", "Freshness is a route input, not a minor detail." ],
+      "targetQueries" : [ "old utility pfas report what next", "how recent should pfas water report be", "older ccr pfas notice newer report" ],
+      "relatedPwsids" : [ "7360058", "NJ1103001", "PA1460073", "FL3354883", "FL3591121" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "lancaster-pfoa-notice-2025", "aqua-pfas-new-jersey", "aqua-pfas-pennsylvania", "sunshine-water-quality-reports" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/ccr-without-pfas-line",
+      "secondaryLabel" : "Read missing-line guide",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why an older report still matters but cannot end the route",
+        "summary" : "The report can still anchor the correct system even when it no longer answers the current PFAS question by itself.",
+        "paragraphs" : [ "Older utility material is still valuable because it can confirm the PWSID, source-water posture, and the exact system the household should keep following. That is often enough to block a bad ZIP-code shortcut.", "What it cannot do is guarantee that the PFAS posture is current. If the utility has issued newer PFAS pages, notices, or a more recent annual report, the route should reopen until those are checked." ],
+        "bullets" : [ "Use the old report to confirm the system.", "Do not let the old report freeze the PFAS posture.", "Freshness check before product certainty." ]
+      }, {
+        "title" : "How freshness changes the commercial sequence",
+        "summary" : "A stale document should slow the route down before it opens the compare lane wider.",
+        "paragraphs" : [ "If the household is shopping while the utility evidence is stale, the engine should stay in interpretation and document discovery. That is especially important for public-water routes where a newer PFAS notice can change whether the current question is still just interpretive or ready for a narrow certified point-of-use compare.", "This is one of the cleaner places to stop fear-based overspending: the right response to stale evidence is newer evidence, not bigger hardware." ],
+        "bullets" : [ "Stale report: reopen evidence collection.", "Fresh PFAS layer: reassess the route.", "Only then open the narrow compare path." ]
+      } ]
+    }
+  }
+}

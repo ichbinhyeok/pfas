@@ -1,0 +1,135 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.699189400+09:00",
+  "model_id" : "public_water:MI0000220",
+  "route_type" : "public_water",
+  "route_key" : "MI0000220",
+  "template_kind" : "public_water_result_page",
+  "render_path" : "/public-water/MI0000220",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "MI0000220",
+      "pwsName" : "Ann Arbor Water Treatment Plant",
+      "stateCode" : "MI",
+      "systemType" : "community",
+      "populationServed" : "118017",
+      "sourceWaterType" : "surface_water",
+      "utilityWebsiteUrl" : "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/water-quality-report/",
+      "ccrUrl" : "https://www.a2gov.org/media/gjbl30sb/2024-water-quality-report_final.pdf",
+      "pfasNoticeUrl" : "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/pfas-and-your-drinking-water-in-ann-arbor/",
+      "serviceAreaNotes" : "City of Ann Arbor surface-water system with official 2024 report and PFAS page showing grouped PFAS analytes below 2.0 ppt and Michigan PFAS MCL context for Supply Serial Number 0220.",
+      "lastVerifiedDate" : "2026-03-22",
+      "sourceIds" : [ "ann-arbor-water-report-page", "ann-arbor-2024-water-quality-report", "ann-arbor-pfas-page", "mi-community-water-supply-list-2025" ]
+    },
+    "result" : {
+      "result_id" : "public-water:MI0000220",
+      "schema_version" : "v1",
+      "generated_at" : "2026-03-24T14:57:20.699189400+09:00",
+      "next_action" : {
+        "code" : "KEEP_MONITORING_UTILITY_UPDATES",
+        "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
+        "summary" : "The current normalized utility observations are below the selected benchmark, so there is no immediate escalation from this data alone.",
+        "confidence" : "high",
+        "scope_note" : "Public water utility interpretation; not a household tap test result."
+      },
+      "why_this" : [ "This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Certified point-of-use is treated as the first escalation class only after the utility record is interpretable." ],
+      "what_this_does_not_tell_you" : [ "This is not a household tap test.", "Future utility updates can change the picture.", "Do not convert this into a blanket safe or unsafe claim." ],
+      "initial_cost" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "confidence" : "low",
+        "notes" : [ "No normalized upfront cost is available for the current option set." ]
+      },
+      "annual_cost_maintenance" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "maintenance_burden" : "unknown",
+        "cadence_notes" : [ ],
+        "notes" : [ "No normalized annual replacement cost is available for the current option set." ]
+      },
+      "certification_checklist" : [ {
+        "label" : "Claim-level listing for the specific PFAS you care about",
+        "required" : true,
+        "detail" : "Verify the listing record names the PFAS reduction claim directly instead of inferring from a product category.",
+        "source_id" : "nsf-dwtu-listings"
+      }, {
+        "label" : "Match the certification standard to the actual claim",
+        "required" : true,
+        "detail" : "Use NSF ANSI 53 or an equivalent claim-level listing only when the record explicitly carries the reduction claim.",
+        "source_id" : "epa-certified-pfas-filter-guidance"
+      }, {
+        "label" : "Check replacement cadence and cartridge capacity before buying",
+        "required" : true,
+        "detail" : "Cost and maintenance burden change materially if cadence is annual vs more frequent.",
+        "source_id" : "amway-espring-100186-cartridge"
+      } ],
+      "best_fit_options" : [ ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade." ],
+      "sources" : [ {
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "ann-arbor-2024-water-quality-report",
+        "organization" : "City of Ann Arbor",
+        "title" : "2024 Water Quality Report",
+        "url" : "https://www.a2gov.org/media/gjbl30sb/2024-water-quality-report_final.pdf",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "ann-arbor-pfas-page",
+        "organization" : "City of Ann Arbor",
+        "title" : "PFAS and Your Drinking Water in Ann Arbor",
+        "url" : "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/pfas-and-your-drinking-water-in-ann-arbor/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "ann-arbor-water-report-page",
+        "organization" : "City of Ann Arbor",
+        "title" : "Water Quality Report",
+        "url" : "https://www.a2gov.org/water-treatment-plant/water-quality-data-and-education/water-quality-report/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "mi-community-water-supply-list-2025",
+        "organization" : "Michigan Department of Environment, Great Lakes, and Energy",
+        "title" : "Michigan Community Water Supply List",
+        "url" : "https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Programs/DWEHD/Community-Water-Supply/Contact-Information-Maps/community-water-supply-list.pdf",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "mi-pfas-mcls",
+        "organization" : "Michigan PFAS Action Response Team",
+        "title" : "Maximum Contaminant Levels (MCLs)",
+        "url" : "https://www.michigan.gov/pfasresponse/drinking-water/mcl",
+        "trust_tier" : 2
+      } ],
+      "meta" : {
+        "water_source_type" : "public_water",
+        "benchmark_relation" : "not_detected",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR",
+        "manual_review_required" : false
+      }
+    },
+    "decision_input" : {
+      "input_id" : "public_water:MI0000220",
+      "route_type" : "public_water",
+      "route_key" : "MI0000220",
+      "water_source" : "PUBLIC_WATER",
+      "direct_data_status" : "UTILITY_DOCUMENT",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : null,
+      "pwsid" : "MI0000220",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/MI0000220",
+      "secondary_path" : "/public-water-system/MI0000220",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+    },
+    "supporting_path" : "/public-water-system/MI0000220"
+  }
+}

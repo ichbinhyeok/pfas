@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:pfas-notice-vs-ccr",
+  "route_type" : "guide",
+  "route_key" : "pfas-notice-vs-ccr",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/pfas-notice-vs-ccr",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 6,
+  "payload" : {
+    "guide" : {
+      "slug" : "pfas-notice-vs-ccr",
+      "editorialRank" : 6,
+      "eyebrow" : "High-intent guide",
+      "title" : "A PFAS notice and a CCR do different jobs even when they come from the same utility",
+      "lede" : "A PFAS notice is usually the more action-heavy layer. A CCR is still useful, but it often works as system identity and timing context rather than as the freshest PFAS read.",
+      "queryIntent" : "Utility notice interpretation",
+      "nextActionTitle" : "Read the PFAS notice first, then use the CCR for system context",
+      "nextActionSummary" : "When both documents exist, the PFAS notice usually answers the immediate PFAS question while the CCR confirms the system, source, and broader report timing.",
+      "whyThis" : [ "Utilities often publish PFAS notices on a different timetable than the annual CCR.", "A CCR can still anchor PWSID, source water, and report year even when the PFAS notice carries the sharper action signal.", "Treating both documents as interchangeable makes the route easier to misread." ],
+      "whatThisDoesNotTellYou" : [ "It does not mean every PFAS notice is newer than every CCR.", "It does not make the state label or city name more important than the exact system record.", "It does not justify product comparison before the document posture is clear." ],
+      "checklist" : [ "Match the household to the exact system and PWSID.", "Check whether a PFAS notice exists in addition to the CCR.", "Use the notice for PFAS posture and the CCR for system context." ],
+      "evidenceHighlights" : [ "EPA frames CCRs as consumer reporting tools, not household tap verdicts.", "Lancaster and several utility notice routes show why a PFAS notice can change the next action without replacing the system dossier.", "The strongest route reads both documents in sequence instead of forcing them into one role." ],
+      "targetQueries" : [ "pfas notice vs ccr", "pfas notice and consumer confidence report difference", "is a pfas notice different from a ccr" ],
+      "relatedPwsids" : [ "7360058", "PA1510001", "FL3354883", "FL3591121", "NJ1103001" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "lancaster-pfoa-notice-2025", "phila-2024-water-quality-report", "phila-pfas-management", "lusi-north-umcr5-2024-notice", "sanlando-umcr5-2024-notice" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/read-your-ccr",
+      "secondaryLabel" : "Read CCR routing guide",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why the PFAS notice usually carries the sharper signal",
+        "summary" : "The notice is often written because the utility needs to explain PFAS-specific monitoring or action context, while the CCR has a broader reporting job.",
+        "paragraphs" : [ "A PFAS notice is usually closer to the immediate PFAS question. It can highlight running annual averages, a specific quarter, or a newer action layer that would be too easy to miss if the household treated the CCR as the whole story.", "That does not make the CCR disposable. The CCR still tells the user which system they are actually on, what the source-water profile looks like, and whether the household is even reading the right utility record." ],
+        "bullets" : [ "PFAS notice: action-heavy PFAS layer.", "CCR: system identity and timing layer.", "Use both when both exist." ]
+      }, {
+        "title" : "How to keep the documents from collapsing into one another",
+        "summary" : "The route gets cleaner when each document keeps its job.",
+        "paragraphs" : [ "A disciplined read starts with the exact system and the newest PFAS-specific document. Then the CCR can confirm the system profile, report year, and broader source context. That sequence prevents a lighter annual report from muting a more important PFAS notice.", "It also prevents the opposite error: using a PFAS notice like it explains the whole water system when it may only answer one part of the story." ],
+        "bullets" : [ "Find the exact system first.", "Read the PFAS-specific notice second.", "Use the CCR to confirm the broader system frame." ]
+      } ]
+    }
+  }
+}

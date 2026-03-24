@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.701831800+09:00",
+  "model_id" : "public_water_support:NJ1103001",
+  "route_type" : "public_water_support",
+  "route_key" : "NJ1103001",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/NJ1103001",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "NJ1103001",
+      "pwsName" : "Hamilton System",
+      "stateCode" : "NJ",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "unknown",
+      "utilityWebsiteUrl" : "https://www.aquawater.com/about/states-we-serve/new-jersey.php",
+      "ccrUrl" : "https://prod.aquawater.com/WaterQualityReports/2024/NJ/NJ1103001.pdf",
+      "pfasNoticeUrl" : "https://www.aquawater.com/all-about-water-wastewater/water-quality/pfas-new-jersey",
+      "serviceAreaNotes" : "Aqua New Jersey Hamilton system with official 2024 report showing PFOS highest running annual average 10.9 ppt and PFOA highest running annual average 9.4 ppt in the 2024 reporting cycle.",
+      "lastVerifiedDate" : "2026-03-22",
+      "sourceIds" : [ "aqua-new-jersey-home", "aqua-water-quality-reports", "aqua-pfas-new-jersey", "aqua-hamilton-2024-water-quality-report" ]
+    }
+  }
+}

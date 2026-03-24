@@ -9,7 +9,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
+import java.util.Base64;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,12 +49,16 @@ import com.example.pfas.web.GuidePageService;
 	"pfas.site.base-url=https://pfas.example.test",
 	"pfas.merchant-clicks.root=./build/test-merchant-clicks",
 	"pfas.route-clicks.root=./build/test-route-clicks",
-	"pfas.internal-api.token=test-internal-token"
+	"pfas.internal-api.token=test-internal-token",
+	"pfas.internal-api.username=admin",
+	"pfas.internal-api.password=test-internal-password"
 })
 @AutoConfigureMockMvc
 class PfasApplicationTests {
 
 	private static final String INTERNAL_API_TOKEN = "test-internal-token";
+	private static final String INTERNAL_API_USERNAME = "admin";
+	private static final String INTERNAL_API_PASSWORD = "test-internal-password";
 
 	@Autowired
 	private SourceRegistryService sourceRegistryService;
@@ -1322,7 +1328,7 @@ class PfasApplicationTests {
 	void guideReferencesResolveToLiveSystemsAndProducts() {
 		var guides = guidePageService.getAll();
 
-		assertThat(guides).hasSize(21);
+		assertThat(guides).hasSize(23);
 		for (var guide : guides) {
 			if (guide.relatedPwsids() != null) {
 				for (var pwsid : guide.relatedPwsids()) {
@@ -1638,10 +1644,10 @@ class PfasApplicationTests {
 	void rendersHomePage() throws Exception {
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read the record.")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action intake")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in water: what should you do first?")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Check the next PFAS step for your household.")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("State-led private-well lanes")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open private-well compare")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Compare private-well options")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Massachusetts Department of Environmental Protection")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Washington State Department of Health")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Curated compare lanes")))
@@ -1649,9 +1655,13 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/nsf-53-vs-58-claim-examples")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/certified-pou-after-utility-context")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/pennsylvania-certified-pou-after-utility-context")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/florida-certified-pou-after-utility-context")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/nevada-certified-pou-after-utility-context")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Regional dossier corridors")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read New Jersey guide")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read California guide")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read Florida guide")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Read Nevada guide")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania dossier cluster")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Philadelphia Water Department")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Ann Arbor Water Treatment Plant")))
@@ -1667,7 +1677,7 @@ class PfasApplicationTests {
 	void rendersActionCheckerPage() throws Exception {
 		mockMvc.perform(get("/checker"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Action Checker")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS Next-Step Checker")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("direct evidence before purchase logic")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Current discipline")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Curated dossier routes")))
@@ -1759,7 +1769,32 @@ class PfasApplicationTests {
 	@Test
 	void hidesInternalEndpointsWithoutToken() throws Exception {
 		mockMvc.perform(get("/internal/readiness/report"))
-			.andExpect(status().isNotFound());
+			.andExpect(status().isUnauthorized())
+			.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.header().string("WWW-Authenticate", "Basic realm=\"PFAS Internal\""));
+	}
+
+	@Test
+	void allowsInternalEndpointsWithBasicAuth() throws Exception {
+		mockMvc.perform(basicInternalGet("/internal/readiness/report"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"ready_state_routes\":10")));
+	}
+
+	@Test
+	void protectsAdminConsoleWithBasicAuth() throws Exception {
+		mockMvc.perform(get("/admin"))
+			.andExpect(status().isUnauthorized())
+			.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.header().string("WWW-Authenticate", "Basic realm=\"PFAS Internal\""));
+	}
+
+	@Test
+	void rendersAdminConsoleWithBasicAuth() throws Exception {
+		mockMvc.perform(basicInternalGet("/admin"))
+			.andExpect(status().isOk())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Admin console")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"noindex, nofollow\">")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("href=\"#quality\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Sync derived artifacts")));
 	}
 
 	@Test
@@ -1810,7 +1845,7 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Best for")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Pennsylvania state MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public-water interpretation")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Open source context")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Review source context")))
 			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("Open result JSON"))));
 	}
 
@@ -2049,8 +2084,8 @@ class PfasApplicationTests {
 	void returnsDerivedRouteManifest() throws Exception {
 		mockMvc.perform(internalGet("/internal/derived/route-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":189")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":161")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"route_count\":193")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":165")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/CA1910036\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/CA3410020\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"primary_path\":\"/public-water/3049000\"")))
@@ -2135,7 +2170,7 @@ class PfasApplicationTests {
 	void returnsDerivedSearchIndexSeed() throws Exception {
 		mockMvc.perform(internalGet("/internal/derived/search-index"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":189")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_count\":193")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"guide:california-pfas-utility-records\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"compare:california-certified-pou-after-utility-context\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"document_id\":\"public_water:CA1910036\"")))
@@ -2279,7 +2314,7 @@ class PfasApplicationTests {
 	void returnsDerivedPageGenerationManifest() throws Exception {
 		mockMvc.perform(internalGet("/internal/derived/page-generation-manifest"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":189")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_count\":193")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/guide/california-pfas-utility-records.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/compare/california-certified-pou-after-utility-context.json\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"model_path\":\"derived/page_models/public_water/CA1910036.json\"")))
@@ -2460,6 +2495,7 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/robots.txt"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Disallow: /internal/")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Disallow: /admin")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Disallow: /checker")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Sitemap: https://pfas.example.test/sitemap.xml")));
 	}
@@ -2524,7 +2560,7 @@ class PfasApplicationTests {
 		mockMvc.perform(internalGet("/internal/quality/freshness-report"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_source_count\":0")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":161")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"indexable_route_count\":165")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"stale_indexable_route_count\":0")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"low_source_count_route_count\":28")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"unresolved_readiness_route_count\":0")))
@@ -2550,7 +2586,7 @@ class PfasApplicationTests {
 	void rendersGuidePage() throws Exception {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Public water vs private well is the first split, not a small detail")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in public water vs private wells: what changes first?")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-intent guide")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Routing split")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Use source type as the first decision boundary")))
@@ -2642,7 +2678,7 @@ class PfasApplicationTests {
 	void rendersComparePage() throws Exception {
 		mockMvc.perform(get("/compare/under-sink-certified-pfas-options"))
 			.andExpect(status().isOk())
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Best under-sink PFAS filters: certified options compared")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Structured comparison")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Merchant-routing lane")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision details")))
@@ -2690,6 +2726,48 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void acceptsSameOriginMerchantClicksOnPublicEndpoint() throws Exception {
+		clearMerchantClickTestData();
+
+		mockMvc.perform(post("/merchant-clicks")
+				.header("Origin", "https://pfas.example.test")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("""
+					{
+					  "productId": "aquasana-aq-6200",
+					  "merchant": "Aquasana",
+					  "ctaSlot": "guide_product_lane",
+					  "sourcePage": "/guides/public-water-vs-private-well",
+					  "routeType": "guide",
+					  "targetUrl": "https://example.test/product",
+					  "pagePath": "/guides/public-water-vs-private-well"
+					}
+					"""))
+			.andExpect(status().isAccepted())
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"accepted\":true")));
+	}
+
+	@Test
+	void hidesCrossSiteMerchantClicksOnPublicEndpoint() throws Exception {
+		mockMvc.perform(post("/merchant-clicks")
+				.header("Origin", "https://evil.example")
+				.header("Sec-Fetch-Site", "cross-site")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("""
+					{
+					  "productId": "aquasana-aq-6200",
+					  "merchant": "Aquasana",
+					  "ctaSlot": "guide_product_lane",
+					  "sourcePage": "/guides/public-water-vs-private-well",
+					  "routeType": "guide",
+					  "targetUrl": "https://example.test/product",
+					  "pagePath": "/guides/public-water-vs-private-well"
+					}
+					"""))
+			.andExpect(status().isNotFound());
+	}
+
+	@Test
 	void recordsRouteClicksAndReturnsReport() throws Exception {
 		clearRouteClickTestData();
 
@@ -2722,6 +2800,25 @@ class PfasApplicationTests {
 	}
 
 	@Test
+	void hidesCrossSiteRouteClicksOnPublicEndpoint() throws Exception {
+		mockMvc.perform(post("/route-clicks")
+				.header("Referer", "https://evil.example/hijack")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("""
+					{
+					  "clickId": "home:pa-corridor:guide",
+					  "sourcePage": "/",
+					  "targetPath": "/guides/pennsylvania-pfas-utility-records",
+					  "ctaSlot": "regional_corridor_guide",
+					  "routeFamily": "regional_corridor",
+					  "laneLabel": "pennsylvania_corridor",
+					  "regionCode": "PA"
+					}
+					"""))
+			.andExpect(status().isNotFound());
+	}
+
+	@Test
 	void rendersMethodologyPage() throws Exception {
 		mockMvc.perform(get("/methodology"))
 			.andExpect(status().isOk())
@@ -2745,6 +2842,13 @@ class PfasApplicationTests {
 	private MockHttpServletRequestBuilder internalPost(String uriTemplate, Object... uriVariables) {
 		return post(uriTemplate, uriVariables)
 			.header("X-PFAS-Internal-Token", INTERNAL_API_TOKEN);
+	}
+
+	private MockHttpServletRequestBuilder basicInternalGet(String uriTemplate, Object... uriVariables) {
+		var credentials = Base64.getEncoder()
+			.encodeToString((INTERNAL_API_USERNAME + ":" + INTERNAL_API_PASSWORD).getBytes(StandardCharsets.UTF_8));
+		return get(uriTemplate, uriVariables)
+			.header("Authorization", "Basic " + credentials);
 	}
 
 	private void clearMerchantClickTestData() throws IOException {

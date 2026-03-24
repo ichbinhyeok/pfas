@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:choose-certified-pfas-filter-after-evidence",
   "route_type" : "guide",
   "route_key" : "choose-certified-pfas-filter-after-evidence",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "choose-certified-pfas-filter-after-evidence",
+      "editorialRank" : 8,
       "eyebrow" : "Money-path guide",
-      "title" : "After you have direct evidence choose a certified PFAS filter by fit not hype",
-      "lede" : "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route.",
+      "title" : "How to choose a certified PFAS filter after testing or utility records",
+      "lede" : "Once the evidence layer is real, the next PFAS filter decision should match claim scope, installation class, and maintenance burden to the household route.",
       "queryIntent" : "Post-evidence product selection",
       "nextActionTitle" : "Open products only after the evidence state is locked",
       "nextActionSummary" : "The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-under-sink", "zerowater-23-cup-dispenser", "waterdrop-10ub-pro", "waterdrop-g3p600", "waterdrop-x10", "waterdrop-c1s" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-direct-connect-product", "waterdrop-x10-product", "zerowater-performance-certification" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel" : "Read certification logic",
       "lastVerifiedDate" : "2026-03-20",

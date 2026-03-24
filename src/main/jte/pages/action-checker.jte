@@ -16,7 +16,7 @@
 @param ActionCheckerRecommendation recommendation
 
 @template.layout.base(
-    pageTitle = "PFAS Action Checker",
+    pageTitle = "PFAS Next-Step Checker",
     pageDescription = "Server-backed PFAS action checker that routes households through direct evidence before any product decision.",
     pageCanonicalUrl = siteBaseUrl + "/checker",
     pageIndexable = false,
@@ -26,7 +26,7 @@
         <div class="terminal-panel overflow-hidden">
             <div class="grid gap-px bg-white/8 xl:grid-cols-[minmax(0,1.15fr)_24rem] xl:items-start">
                 <div class="space-y-6 bg-white/[0.03] p-7 md:p-9">
-                    <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">Action checker</span>
+                    <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">Next-step checker</span>
                     <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-white sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
                         Route the household with
                         <span class="font-serif font-medium text-white/72">direct evidence before purchase logic.</span>

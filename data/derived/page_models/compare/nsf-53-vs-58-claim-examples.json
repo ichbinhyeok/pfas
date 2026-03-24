@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "compare:nsf-53-vs-58-claim-examples",
   "route_type" : "compare",
   "route_key" : "nsf-53-vs-58-claim-examples",
@@ -13,9 +13,10 @@
   "payload" : {
     "compare_page" : {
       "slug" : "nsf-53-vs-58-claim-examples",
+      "editorialRank" : 6,
       "eyebrow" : "Compare page",
-      "title" : "NSF 53 vs 58 claim examples matter more than the badge shorthand",
-      "lede" : "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record.",
+      "title" : "NSF 53 vs 58 for PFAS: claim examples that matter",
+      "lede" : "Use real certification listing examples to see why NSF 53 and 58 only help when tied to the exact model and PFAS claim record.",
       "queryIntent" : "Certification logic comparison",
       "nextActionTitle" : "Read the exact model and claim before trusting the standard shorthand",
       "nextActionSummary" : "A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
@@ -29,7 +30,7 @@
       "relatedProductIds" : [ "espring-122941", "aquasana-aq-6200", "aquasana-aq-ro-3", "aquatru-under-sink", "zerowater-10-cup-pitcher", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "nsf-espring-listing-053", "aq-claryum-2-stage-performance-pdf", "aq-optimh2o-ro-performance-pdf", "aquatru-under-sink-performance-pdf", "zerowater-certified-devices-performance-pdf", "waterdrop-10ub-pro-product" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel" : "Read certification guide",
       "lastVerifiedDate" : "2026-03-20",

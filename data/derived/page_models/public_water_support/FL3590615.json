@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.665335200+09:00",
+  "model_id" : "public_water_support:FL3590615",
+  "route_type" : "public_water_support",
+  "route_key" : "FL3590615",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/FL3590615",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "FL3590615",
+      "pwsName" : "Jansen Water System",
+      "stateCode" : "FL",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2024/jansen-24ccr-204.pdf?sfvrsn=9db43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/jansen/2023/jansen-pfas-2023.pdf?sfvrsn=4163b5b_4",
+      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with a separate 2023 PFAS report showing low-level PFOS, PFOA, and PFHxS detections plus a 2024 CCR for system profile context.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "jansen-2024-water-quality-report", "jansen-pfas-2023-report" ]
+    }
+  }
+}

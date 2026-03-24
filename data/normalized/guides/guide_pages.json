@@ -6,8 +6,8 @@
       "slug": "public-water-vs-private-well",
       "editorialRank": 1,
       "eyebrow": "High-intent guide",
-      "title": "Public water vs private well is the first split, not a small detail",
-      "lede": "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
+      "title": "PFAS in public water vs private wells: what changes first?",
+      "lede": "Public water PFAS questions start with utility records and CCRs. Private well PFAS questions start with owner-driven testing and state guidance.",
       "nextActionTitle": "Split the household path before comparing filters",
       "nextActionSummary": "Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
       "whyThis": [
@@ -36,7 +36,7 @@
         "epa-pfas-private-wells"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/test-first-vs-filter-first",
       "secondaryLabel": "Read test-first logic",
       "lastVerifiedDate": "2026-03-20",
@@ -104,8 +104,8 @@
       "slug": "test-first-vs-filter-first",
       "editorialRank": 2,
       "eyebrow": "High-intent guide",
-      "title": "Test first vs filter first is mostly a question about evidence quality",
-      "lede": "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
+      "title": "Should you test for PFAS before buying a water filter?",
+      "lede": "For most PFAS questions, direct evidence should come before shopping. Public water means utility records first; private wells mean testing first.",
       "nextActionTitle": "Open the direct-evidence path before the shopping path",
       "nextActionSummary": "Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
       "whyThis": [
@@ -134,7 +134,7 @@
         "epa-certified-pfas-filter-guidance"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/pfas-filter-annual-cost",
       "secondaryLabel": "Review cost tradeoffs",
       "lastVerifiedDate": "2026-03-20",
@@ -204,8 +204,8 @@
       "slug": "read-your-ccr",
       "editorialRank": 3,
       "eyebrow": "High-intent guide",
-      "title": "How to read your CCR or utility report without turning it into a false household verdict",
-      "lede": "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
+      "title": "How to read a CCR for PFAS: what to check first",
+      "lede": "Use your CCR or utility report to find the system name, PWSID, report year, and any PFAS notes before comparing filters.",
       "nextActionTitle": "Use the CCR to find the next direct utility layer",
       "nextActionSummary": "Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
       "whyThis": [
@@ -236,9 +236,9 @@
         "lancaster-pfoa-notice-2025"
       ],
       "primaryHref": "/public-water-system/PA1510001",
-      "primaryLabel": "Open seeded utility context",
+      "primaryLabel": "Review seeded utility context",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
@@ -341,7 +341,7 @@
         "epa-ucmr-occurrence-data"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/read-your-ccr",
       "secondaryLabel": "Read the CCR guide",
       "lastVerifiedDate": "2026-03-20",
@@ -445,7 +445,7 @@
       "primaryHref": "/guides/how-to-read-a-pfas-utility-notice",
       "primaryLabel": "Read the utility notice guide",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
@@ -643,7 +643,7 @@
       "primaryHref": "/source-policy",
       "primaryLabel": "Open source policy",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
@@ -814,8 +814,8 @@
       "slug": "under-sink-vs-whole-house",
       "editorialRank": 11,
       "eyebrow": "High-intent guide",
-      "title": "Under-sink vs whole-house should start with purpose, not fear",
-      "lede": "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
+      "title": "Do you need an under-sink or whole-house PFAS filter?",
+      "lede": "Whole-house PFAS treatment is not the default move. Start by deciding whether a drinking-water point-of-use system already fits the household goal.",
       "nextActionTitle": "Keep point-of-use first unless the household goal clearly exceeds drinking and cooking water",
       "nextActionSummary": "Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
       "whyThis": [
@@ -845,7 +845,7 @@
         "amway-espring-122941-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/pfas-filter-annual-cost",
       "secondaryLabel": "Review annual cost",
       "lastVerifiedDate": "2026-03-20",
@@ -918,8 +918,8 @@
       "slug": "pfas-filter-annual-cost",
       "editorialRank": 10,
       "eyebrow": "High-intent guide",
-      "title": "PFAS filter annual cost matters because maintenance changes the real decision",
-      "lede": "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
+      "title": "PFAS filter cost per year: what maintenance really changes",
+      "lede": "Upfront price is only part of the PFAS filter decision. Cartridge cadence, replacement cost, and whether treatment is justified determine the real annual burden.",
       "nextActionTitle": "Read annual ownership before treating a product as a fit",
       "nextActionSummary": "Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
       "whyThis": [
@@ -949,7 +949,7 @@
         "amway-espring-100186-cartridge"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/public-water/PA1510001",
       "secondaryLabel": "Open seeded result",
       "lastVerifiedDate": "2026-03-20",
@@ -1027,8 +1027,8 @@
       "slug": "choose-certified-pfas-filter-after-evidence",
       "editorialRank": 8,
       "eyebrow": "Money-path guide",
-      "title": "After you have direct evidence choose a certified PFAS filter by fit not hype",
-      "lede": "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route.",
+      "title": "How to choose a certified PFAS filter after testing or utility records",
+      "lede": "Once the evidence layer is real, the next PFAS filter decision should match claim scope, installation class, and maintenance burden to the household route.",
       "nextActionTitle": "Open products only after the evidence state is locked",
       "nextActionSummary": "The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
       "whyThis": [
@@ -1059,7 +1059,7 @@
         "zerowater-performance-certification"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel": "Read certification logic",
       "lastVerifiedDate": "2026-03-20",
@@ -1169,7 +1169,7 @@
         "waterdrop-a2-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/carbon-vs-ro-for-pfas",
       "secondaryLabel": "Read carbon vs RO logic",
       "lastVerifiedDate": "2026-03-20",
@@ -1353,7 +1353,7 @@
         "epa-pfas-private-wells"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/test-first-vs-filter-first",
       "secondaryLabel": "Read evidence-first logic",
       "lastVerifiedDate": "2026-03-22",
@@ -1432,7 +1432,7 @@
         "epa-certified-pfas-filter-guidance"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
       "secondaryLabel": "Read post-evidence filter logic",
       "lastVerifiedDate": "2026-03-22",
@@ -1515,7 +1515,7 @@
         "sanlando-umcr5-2024-notice"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/read-your-ccr",
       "secondaryLabel": "Read CCR routing guide",
       "lastVerifiedDate": "2026-03-22",
@@ -1603,7 +1603,7 @@
         "sunshine-water-quality-reports"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/ccr-without-pfas-line",
       "secondaryLabel": "Read missing-line guide",
       "lastVerifiedDate": "2026-03-22",
@@ -1951,9 +1951,9 @@
         "calwater-2024-pfas-application"
       ],
       "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=CA3410020",
-      "primaryLabel": "Open California dossier route",
+      "primaryLabel": "Check California utility route",
       "secondaryHref": "/compare/california-certified-pou-after-utility-context",
-      "secondaryLabel": "Open California compare lane",
+      "secondaryLabel": "Compare California point-of-use options",
       "lastVerifiedDate": "2026-03-23",
       "sections": [
         {
@@ -1999,6 +1999,195 @@
         "aquatru-under-sink",
         "waterdrop-10ub-pro"
       ]
+    },
+    {
+      "slug": "florida-pfas-utility-records",
+      "editorialRank": 11,
+      "eyebrow": "Regional decision guide",
+      "title": "Florida PFAS utility records: read the exact system before buying",
+      "lede": "Florida now has multiple seeded utility dossiers, from notice-heavy Sunshine Water routes to quieter CCR-led systems. Use the exact utility record before comparing certified point-of-use filters.",
+      "nextActionTitle": "Open the exact Florida system route before the product lane",
+      "nextActionSummary": "A Florida household should match the exact utility dossier first, then decide whether the route is still interpretive or ready for a narrow certified point-of-use compare.",
+      "whyThis": [
+        "Florida now spans multiple seeded utility routes with different PFAS posture.",
+        "Some Florida systems behave like action-heavy notice routes while others stay closer to the annual-report layer.",
+        "A state page is only useful when it keeps those differences attached to the exact system."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not turn one Florida system into a statewide PFAS verdict.",
+        "It does not prove every Florida route needs treatment.",
+        "It does not justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the household to the exact Florida system and PWSID.",
+        "Check whether the strongest current signal is a PFAS notice or a CCR-led route.",
+        "Open certified point-of-use only after the utility posture is interpretable."
+      ],
+      "evidenceHighlights": [
+        "Sunshine Water routes now include both notice-heavy and quieter CCR-led systems.",
+        "Florida works as a corridor only when Jansen, Lake Tarpon, Weathersfield, and Lake Utility Services North stay attached to their exact records.",
+        "The commercial lane should remain downstream from the dossier, not from the state label."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "sunshine-water-home",
+        "sunshine-water-quality-reports",
+        "lusi-north-umcr5-2024-notice",
+        "sanlando-umcr5-2024-notice",
+        "jansen-2024-water-quality-report",
+        "jansen-pfas-2023-report",
+        "lake-tarpon-2024-water-quality-report",
+        "lake-tarpon-pfas-2023-report",
+        "weathersfield-2024-water-quality-report",
+        "weathersfield-pfas-2023-report"
+      ],
+      "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=FL3590615",
+      "primaryLabel": "Check Florida utility route",
+      "secondaryHref": "/compare/florida-certified-pou-after-utility-context",
+      "secondaryLabel": "Compare Florida point-of-use options",
+      "lastVerifiedDate": "2026-03-24",
+      "sections": [
+        {
+          "title": "Why Florida is only useful as a cluster of exact system dossiers",
+          "summary": "The state helps users navigate, but the evidence still lives inside one utility route at a time.",
+          "paragraphs": [
+            "Florida now gives the engine multiple seeded public-water routes with different posture. Lake Utility Services North and Sanlando behave more like PFAS-notice-led systems, while Jansen, Lake Tarpon, and Weathersfield behave more like CCR-led dossiers with direct utility context attached.",
+            "That is why the Florida page helps. It turns the state into a navigation layer without pretending the state itself is the evidence."
+          ],
+          "bullets": [
+            "Use Florida as the navigation layer.",
+            "Use the exact utility system as the evidence layer.",
+            "Do not turn the state label into a buying shortcut."
+          ]
+        },
+        {
+          "title": "What a disciplined Florida route looks like",
+          "summary": "The route should move from system identity and current PFAS posture into a narrow point-of-use lane only when the dossier supports it.",
+          "paragraphs": [
+            "A strong Florida route starts with the system name, PWSID, report timing, and whether the sharper signal is a notice or a CCR-backed system record. That is enough to stop the page from becoming statewide fear content or shallow local SEO.",
+            "Once the route is interpretable, the compare lane can open as a bounded point-of-use step. If the record is still thin or the household has not matched the exact system, the page should stay on the dossier."
+          ],
+          "bullets": [
+            "System match first.",
+            "Notice posture or CCR posture second.",
+            "Certified point-of-use only after interpretation."
+          ]
+        }
+      ],
+      "queryIntent": "Regional utility interpretation",
+      "targetQueries": [
+        "florida pfas utility records",
+        "florida pfas water report how to read",
+        "florida utility pfas notice"
+      ],
+      "relatedPwsids": [
+        "FL3354883",
+        "FL3591121",
+        "FL3590615",
+        "FL6521000",
+        "FL3591451"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
+    },
+    {
+      "slug": "nevada-pfas-utility-records",
+      "editorialRank": 12,
+      "eyebrow": "Regional decision guide",
+      "title": "Nevada PFAS utility records: compare exact systems, not the state label",
+      "lede": "Nevada now includes elevated Spring Creek records and quieter Great Basin Water dossiers. Use the exact system record before comparing certified point-of-use filters.",
+      "nextActionTitle": "Open the exact Nevada system route before the product lane",
+      "nextActionSummary": "A Nevada household should read the exact Spring Creek, Calvada, Cold Springs, or Spanish Springs dossier first, then decide whether the route is ready for a narrow certified point-of-use compare.",
+      "whyThis": [
+        "Nevada now spans multiple seeded utility routes with different PFAS posture.",
+        "Spring Creek routes and Great Basin Water routes should not collapse into one statewide answer.",
+        "A state page is only useful when it keeps those differences attached to the exact system."
+      ],
+      "whatThisDoesNotTellYou": [
+        "It does not turn one Nevada system into a statewide PFAS verdict.",
+        "It does not prove every Nevada route needs treatment.",
+        "It does not justify whole-house treatment."
+      ],
+      "checklist": [
+        "Match the household to the exact Nevada system and PWSID.",
+        "Check whether the current route is an elevated Spring Creek record or a lighter Great Basin Water dossier.",
+        "Open certified point-of-use only after the exact system record is interpretable."
+      ],
+      "evidenceHighlights": [
+        "Nevada now includes both elevated Spring Creek records and quieter Great Basin Water routes.",
+        "The state page helps only when Spring Creek, Calvada Meadows, Cold Springs, and Spanish Springs remain separate dossiers.",
+        "The commercial lane should stay downstream from the exact utility route."
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "great-basin-water-home",
+        "great-basin-water-quality-reports",
+        "spring-creek-mobile-home-2024-water-quality-report",
+        "spring-creek-housing-2024-water-quality-report",
+        "calvada-meadows-2024-water-quality-report",
+        "calvada-meadows-pfas-2023-report",
+        "cold-springs-2024-water-quality-report",
+        "cold-springs-pfas-2023-report",
+        "spanish-springs-2024-water-quality-report",
+        "spanish-springs-pfas-2023-report"
+      ],
+      "primaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NV0005027",
+      "primaryLabel": "Check Nevada utility route",
+      "secondaryHref": "/compare/nevada-certified-pou-after-utility-context",
+      "secondaryLabel": "Compare Nevada point-of-use options",
+      "lastVerifiedDate": "2026-03-24",
+      "sections": [
+        {
+          "title": "Why Nevada works only as a corridor of exact utility routes",
+          "summary": "The state helps users navigate, but the evidence still lives inside one system record at a time.",
+          "paragraphs": [
+            "Nevada now gives the engine multiple seeded public-water routes with very different posture. Spring Creek Mobile Home Park and Spring Creek Housing show elevated direct results, while Calvada Meadows, Cold Springs, and Spanish Springs behave like quieter Great Basin Water dossiers.",
+            "That is why the Nevada page helps. It turns the state into a navigation layer without letting the state label replace the exact system."
+          ],
+          "bullets": [
+            "Use Nevada as the navigation layer.",
+            "Use the exact system dossier as the evidence layer.",
+            "Do not let the state label become a buying shortcut."
+          ]
+        },
+        {
+          "title": "What a disciplined Nevada route looks like",
+          "summary": "The route should move from exact system posture into a narrow point-of-use lane only when the dossier supports it.",
+          "paragraphs": [
+            "A strong Nevada route starts with the system name, PWSID, report timing, and whether the household is reading an elevated Spring Creek record or a quieter Great Basin Water dossier. That is enough to keep the page from flattening multiple systems into one state-level answer.",
+            "Once the route is interpretable, the compare lane can open as a bounded point-of-use step. If the record is still thin or the exact system is still unclear, the page should stay on the dossier."
+          ],
+          "bullets": [
+            "Exact system first.",
+            "Current route posture second.",
+            "Certified point-of-use only after interpretation."
+          ]
+        }
+      ],
+      "queryIntent": "Regional utility interpretation",
+      "targetQueries": [
+        "nevada pfas utility records",
+        "nevada pfas water report how to read",
+        "nevada utility pfas notice"
+      ],
+      "relatedPwsids": [
+        "NV0005027",
+        "NV0000036",
+        "NV0000408",
+        "NV0000207",
+        "NV0001086"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ]
     }
   ]
 }
+

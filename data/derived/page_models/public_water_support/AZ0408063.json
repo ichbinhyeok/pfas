@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.655697+09:00",
+  "model_id" : "public_water_support:AZ0408063",
+  "route_type" : "public_water_support",
+  "route_key" : "AZ0408063",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/AZ0408063",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "AZ0408063",
+      "pwsName" : "Bermuda Water Company",
+      "stateCode" : "AZ",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/bermudawateraz",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2924/bermuda-water-24ccr-023.pdf?sfvrsn=13b43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/bermudawater/water-quality-reports/bermuda-water/2023/az-pfas.pdf?sfvrsn=9ade3a5b_4",
+      "serviceAreaNotes" : "Bermuda Water Company community groundwater system in the Lake Mohave Basin with a separate 2023 PFAS notice and 2024 CCR profile",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "bermuda-water-home", "bermuda-water-quality-reports", "bermuda-water-2024-water-quality-report", "bermuda-water-pfas-2023-report" ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:25.626333+09:00",
+  "generated_at" : "2026-03-24T14:57:20.708356400+09:00",
   "model_id" : "public_water:NV0005027",
   "route_type" : "public_water",
   "route_key" : "NV0005027",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:NV0005027",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T20:38:25.565842500+09:00",
+      "generated_at" : "2026-03-24T14:57:20.708356400+09:00",
       "next_action" : {
         "code" : "REVIEW_UTILITY_NOTICE_AND_CONSIDER_CERTIFIED_POU",
         "title" : "Review utility response and consider certified point-of-use filtration",
@@ -36,7 +36,7 @@
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 3 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "why_this" : [ "This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.", "Current normalized assessment counts: 3 above selected benchmark, 0 present below selected benchmark.", "Certified point-of-use is treated as the first escalation class only after the utility record is interpretable." ],
       "what_this_does_not_tell_you" : [ "Benchmark selection here is the registry-linked benchmark attached to each normalized observation, not a universal federal safety finding.", "This is a utility-level signal and does not replace a household tap test.", "Whole-house escalation is not the default recommendation from this endpoint." ],
       "initial_cost" : {
         "range_low_usd" : 24.99,
@@ -70,26 +70,26 @@
       "best_fit_options" : [ {
         "option_code" : "AQUATRU_CARAFE",
         "label" : "AquaTru Carafe",
-        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "fit_reason" : "Useful for a public-water household that already finished the utility-reading step and now wants an ingestion-focused certified point-of-use option.",
+        "not_for_everyone" : "Not for everyone if the household still lacks a settled utility reading, needs a whole-home objective, or cannot carry the upkeep burden.",
         "cost_profile" : "medium",
         "maintenance_burden" : "high"
       }, {
         "option_code" : "AQUASANA_AQ_CWM2",
         "label" : "Aquasana Clean Water Machine",
-        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "fit_reason" : "Useful for a public-water household that already finished the utility-reading step and now wants an ingestion-focused certified point-of-use option.",
+        "not_for_everyone" : "Not for everyone if the household still lacks a settled utility reading, needs a whole-home objective, or cannot carry the upkeep burden.",
         "cost_profile" : "low",
         "maintenance_burden" : "high"
       }, {
         "option_code" : "AQUASANA_AQ_6200",
         "label" : "Aquasana Claryum 2-Stage",
-        "fit_reason" : "Certified point-of-use option with direct PFOA/PFOS claim coverage in the normalized listing set.",
-        "not_for_everyone" : "Not for everyone if the upfront cost or annual cartridge cost is too high for the household.",
+        "fit_reason" : "Useful for a public-water household that already finished the utility-reading step and now wants an ingestion-focused certified point-of-use option.",
+        "not_for_everyone" : "Not for everyone if the household still lacks a settled utility reading, needs a whole-home objective, or cannot carry the upkeep burden.",
         "cost_profile" : "low",
         "maintenance_burden" : "high"
       } ],
-      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade." ],
       "sources" : [ {
         "source_id" : "epa-pfas-rule-overview",
         "organization" : "U.S. Environmental Protection Agency",

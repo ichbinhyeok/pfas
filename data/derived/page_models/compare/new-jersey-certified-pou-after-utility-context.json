@@ -1,0 +1,55 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "compare:new-jersey-certified-pou-after-utility-context",
+  "route_type" : "compare",
+  "route_key" : "new-jersey-certified-pou-after-utility-context",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/new-jersey-certified-pou-after-utility-context",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 10,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "new-jersey-certified-pou-after-utility-context",
+      "editorialRank" : 6,
+      "eyebrow" : "Regional compare page",
+      "title" : "New Jersey certified point-of-use after a utility PFAS record should stay system-led and proportional",
+      "lede" : "This compare page is for New Jersey households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Hamilton and Montague into one state-level buying answer.",
+      "queryIntent" : "Regional post-utility comparison",
+      "nextActionTitle" : "Keep the compare lane tied to the exact New Jersey utility dossier",
+      "nextActionSummary" : "Use New Jersey as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes" : [ "Claim-level PFAS support for an ingestion-focused route", "Installation class and maintenance burden", "Annualized ownership band", "Whether the product stays proportionate to a New Jersey utility dossier" ],
+      "whyThis" : [ "New Jersey now has two seeded utility dossiers with different route posture.", "Households searching within New Jersey still need a system-led compare lane rather than a statewide roundup.", "This page gives the project a narrower commercial lane than a generic best-filter page." ],
+      "whatThisDoesNotTellYou" : [ "This page does not replace the utility dossier.", "It does not turn one New Jersey record into a fit for another system.", "It does not justify whole-house treatment." ],
+      "evidenceHighlights" : [ "Hamilton and Montague give the compare lane both an action-heavy and a lighter utility dossier example.", "EPA filter guidance still keeps claim review tied to exact certified products.", "A New Jersey compare lane is strongest when it stays downstream from the system record." ],
+      "targetQueries" : [ "new jersey pfas filter after utility report", "new jersey pfas filter after water notice", "certified pfas filter new jersey utility" ],
+      "relatedGuideSlugs" : [ "new-jersey-pfas-utility-records", "read-your-ccr", "how-to-read-a-pfas-utility-notice", "choose-certified-pfas-filter-after-evidence" ],
+      "relatedPwsids" : [ "NJ1103001", "NJ1914002" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aqua-hamilton-2024-water-quality-report", "aqua-pfas-new-jersey", "montague-pfas-2023-report", "aq-claryum-direct-connect-product", "aq-claryum-2-stage-product", "aquatru-under-sink-product", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/guides/new-jersey-pfas-utility-records",
+      "primaryLabel" : "Read New Jersey utility guide",
+      "secondaryHref" : "/checker",
+      "secondaryLabel" : "Check your PFAS next step",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why New Jersey needs its own post-utility compare lane",
+        "summary" : "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending New Jersey is one PFAS document.",
+        "paragraphs" : [ "The New Jersey cluster now gives the project two distinct public-water entry points with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.", "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads." ],
+        "bullets" : [ "New Jersey is the navigation layer.", "The exact utility dossier is the evidence layer.", "Certified point-of-use is the commercial layer." ]
+      }, {
+        "title" : "What the shortlist should reward",
+        "summary" : "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+        "paragraphs" : [ "A New Jersey household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.", "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification." ],
+        "bullets" : [ "Claim fit first.", "Maintenance honesty second.", "Whole-house remains outside this lane." ]
+      }, {
+        "title" : "How this protects both trust and conversion quality",
+        "summary" : "It gives New Jersey users a buying step without rewriting the record they just read.",
+        "paragraphs" : [ "A statewide buying query often hides a better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.", "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path." ],
+        "bullets" : [ "It answers a commercial query without skipping interpretation.", "It improves click quality by narrowing the path.", "It keeps New Jersey from collapsing into location-spam commerce." ]
+      } ]
+    }
+  }
+}

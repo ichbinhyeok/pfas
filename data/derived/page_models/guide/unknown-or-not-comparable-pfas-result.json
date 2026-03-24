@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:unknown-or-not-comparable-pfas-result",
+  "route_type" : "guide",
+  "route_key" : "unknown-or-not-comparable-pfas-result",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/unknown-or-not-comparable-pfas-result",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "unknown-or-not-comparable-pfas-result",
+      "editorialRank" : 7,
+      "eyebrow" : "High-intent guide",
+      "title" : "Unknown or not comparable is a real PFAS result state, not a broken page",
+      "lede" : "When the route cannot yet compare the current number against a usable benchmark, the answer should stay in interpretation and evidence collection instead of pretending the next step is obvious.",
+      "queryIntent" : "Uncertainty handling",
+      "nextActionTitle" : "Keep uncertainty visible and recover the missing context",
+      "nextActionSummary" : "Unknown or not comparable means the household needs more context such as unit normalization, state benchmark posture, document freshness, or utility classification before hardware certainty opens.",
+      "whyThis" : [ "PFAS routes often fail because they hide uncertainty instead of naming it.", "Unknown and not comparable often point to missing units, weak benchmark fit, or stale source context.", "A disciplined route should reopen the evidence layer before it reopens the product layer." ],
+      "whatThisDoesNotTellYou" : [ "It does not prove a household problem is minor.", "It does not prove a household problem is severe.", "It does not justify shopping your way out of missing evidence." ],
+      "checklist" : [ "Check whether the route is public water or private well.", "Check whether the current number is actually comparable to the reference layer.", "Recover the missing context before comparing products." ],
+      "evidenceHighlights" : [ "EPA and state PFAS materials often separate screening context from direct compliance or reference context.", "The engine already treats unknown and not comparable as first-class result states.", "A closed product lane is part of the answer, not a failure of the page." ],
+      "targetQueries" : [ "pfas result unknown what does it mean", "pfas test not comparable", "ucmr pfas not comparable" ],
+      "relatedPwsids" : [ "FL3590615", "FL3591451", "PA1510001" ],
+      "relatedProductIds" : [ ],
+      "sourceIds" : [ "epa-ucmr5-main", "epa-ucmr-occurrence-data", "epa-pfas-private-wells" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/test-first-vs-filter-first",
+      "secondaryLabel" : "Read evidence-first logic",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why this state is healthy for the product",
+        "summary" : "A trustworthy route needs a real way to stop before it drifts into fake confidence.",
+        "paragraphs" : [ "PFAS decision pages often behave as if every route must end in a confident recommendation. That creates bad outcomes because many real household routes start from incomplete, stale, or mismatched evidence.", "The better posture is to show unknown or not comparable as a legitimate route state and explain exactly what is missing." ],
+        "bullets" : [ "Missing evidence is still evidence about the route.", "This state protects the household from overbuying.", "This state protects the product from pretending too much." ]
+      }, {
+        "title" : "What usually resolves an unknown route",
+        "summary" : "The fix is usually a better record, not a louder product page.",
+        "paragraphs" : [ "For public water, the route often needs the actual utility notice, report date, or better system context. For private wells, it often needs unit normalization, analyte matching, or the correct state benchmark profile.", "Once that missing layer is restored, the route can reopen interpretation and only then decide whether point-of-use comparison belongs on screen." ],
+        "bullets" : [ "Public water: utility record quality first.", "Private well: lab and state context first.", "Comparison stays closed until the route becomes comparable." ]
+      } ]
+    }
+  }
+}

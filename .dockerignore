@@ -1,0 +1,10 @@
+.git
+.github
+.gradle
+.vscode
+build
+jte-classes
+node_modules
+out
+bin
+*.iml

@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:new-jersey-pfas-utility-records",
+  "route_type" : "guide",
+  "route_key" : "new-jersey-pfas-utility-records",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/new-jersey-pfas-utility-records",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 5,
+  "payload" : {
+    "guide" : {
+      "slug" : "new-jersey-pfas-utility-records",
+      "editorialRank" : 9,
+      "eyebrow" : "Regional decision guide",
+      "title" : "New Jersey PFAS utility records should be read as system-specific routes not statewide shorthand",
+      "lede" : "New Jersey now has a seeded utility pair with very different posture. The useful move is to read Hamilton and Montague as separate system dossiers before turning New Jersey into a buying shortcut.",
+      "queryIntent" : "Regional utility interpretation",
+      "nextActionTitle" : "Open the exact New Jersey system dossier before comparing products",
+      "nextActionSummary" : "Hamilton and Montague create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis" : [ "New Jersey now has both an action-heavy utility example and a lighter non-detect dossier inside the seeded cluster.", "That makes the state useful for comparison only if the household still reads one exact system at a time.", "The product lane should stay downstream from the utility dossier rather than from the state label." ],
+      "whatThisDoesNotTellYou" : [ "It does not turn one New Jersey system into a statewide verdict.", "It does not prove every New Jersey route needs treatment.", "It does not justify whole-house treatment." ],
+      "checklist" : [ "Match the household to the exact New Jersey system and PWSID.", "Read whether the system record is a notice-driven route or a lighter annual-report route.", "Open certified point-of-use only after the dossier is interpretable." ],
+      "evidenceHighlights" : [ "Hamilton shows a stronger direct PFAS record with running annual averages that change the next action.", "Montague shows why a system-level non-detect dossier still needs to be read as one utility record, not as a state verdict.", "A regional New Jersey page is useful only when it preserves those differences." ],
+      "targetQueries" : [ "new jersey pfas utility records", "new jersey pfas water report how to read", "new jersey utility pfas notice" ],
+      "relatedPwsids" : [ "NJ1103001", "NJ1914002" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "aqua-hamilton-2024-water-quality-report", "aqua-pfas-new-jersey", "montague-2024-water-quality-report", "montague-pfas-2023-report" ],
+      "primaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NJ1103001",
+      "primaryLabel" : "Open New Jersey dossier route",
+      "secondaryHref" : "/compare/new-jersey-certified-pou-after-utility-context",
+      "secondaryLabel" : "Open New Jersey compare lane",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why New Jersey is useful only as a cluster of exact system routes",
+        "summary" : "The state helps users compare route posture, but the evidence still lives inside one utility record at a time.",
+        "paragraphs" : [ "Hamilton and Montague are both valid New Jersey public-water entry points, but they do not behave the same way. Hamilton gives the engine a stronger direct PFAS record with running annual averages. Montague behaves more like a lighter system dossier where the absence of detected values still needs to be kept in system context.", "That difference is why the New Jersey cluster helps. It shows users how to read two utility routes in one state without pretending the state itself is the evidence." ],
+        "bullets" : [ "Use New Jersey as the navigation layer.", "Use Hamilton or Montague as the evidence layer.", "Do not turn a state label into a treatment shortcut." ]
+      }, {
+        "title" : "How the New Jersey route should progress",
+        "summary" : "The route should move from exact utility dossier to interpretation, then into a narrow point-of-use compare only if the current record supports it.",
+        "paragraphs" : [ "A strong New Jersey read starts with the system name, PWSID, report timing, and whether the record behaves like a direct PFAS action route or a lighter annual utility dossier. That is enough to keep the page disciplined and away from statewide fear language.", "Once the system route is clear, the project can decide whether certified point-of-use belongs on screen at all. If the record is still thin, the correct answer is to stay with the dossier instead of using New Jersey as a buying cue." ],
+        "bullets" : [ "System result first.", "Utility source context second.", "Certified point-of-use only after interpretation." ]
+      } ]
+    }
+  }
+}

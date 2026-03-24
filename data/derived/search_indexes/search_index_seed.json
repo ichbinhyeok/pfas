@@ -1,8 +1,19 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:08.613630+09:00",
-  "document_count" : 59,
+  "generated_at" : "2026-03-24T14:57:20.252567300+09:00",
+  "document_count" : 193,
   "documents" : [ {
+    "document_id" : "guide:california-pfas-utility-records",
+    "route_type" : "guide",
+    "route_key" : "california-pfas-utility-records",
+    "url" : "/guides/california-pfas-utility-records",
+    "title" : "California PFAS utility records should be read as system dossiers, not statewide shorthand",
+    "summary" : "California now has a seeded utility pair with different PFAS posture. Sacramento and East Los Angeles are useful only if the reader keeps the interpretation attached to the exact system dossier instead of turning California into one buying shortcut. Sacramento and East Los Angeles create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+    "last_verified_date" : "2026-03-23",
+    "indexable" : true,
+    "source_count" : 7,
+    "keywords" : [ "california pfas utility records", "california pfas water report how to read", "california utility pfas notice", "california pfas utility records", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:carbon-vs-ro-for-pfas",
     "route_type" : "guide",
     "route_key" : "carbon-vs-ro-for-pfas",
@@ -14,12 +25,23 @@
     "source_count" : 3,
     "keywords" : [ "carbon vs reverse osmosis for pfas", "is ro better than carbon for pfas", "best filter type for pfas carbon or ro", "carbon vs ro for pfas", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:ccr-without-pfas-line",
+    "route_type" : "guide",
+    "route_key" : "ccr-without-pfas-line",
+    "url" : "/guides/ccr-without-pfas-line",
+    "title" : "No PFAS line in your CCR is not the end of the question",
+    "summary" : "A CCR without an obvious PFAS line can still be useful, but it should push the household toward the system record, report date, and newer utility PFAS materials instead of a false all-clear. If PFAS is not obvious in the annual report, check the report year, system identity, and whether a newer PFAS notice or utility page exists before treating the route as settled.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "no pfas in ccr what does it mean", "ccr does not mention pfas", "consumer confidence report no pfas line", "ccr without pfas line", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:choose-certified-pfas-filter-after-evidence",
     "route_type" : "guide",
     "route_key" : "choose-certified-pfas-filter-after-evidence",
     "url" : "/guides/choose-certified-pfas-filter-after-evidence",
-    "title" : "After you have direct evidence choose a certified PFAS filter by fit not hype",
-    "summary" : "Once the evidence layer is real the next filter decision is not about finding the loudest product page. It is about matching claim scope, installation class, and maintenance burden to the household route. The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
+    "title" : "How to choose a certified PFAS filter after testing or utility records",
+    "summary" : "Once the evidence layer is real, the next PFAS filter decision should match claim scope, installation class, and maintenance burden to the household route. The right product set depends on whether the route is low-evidence caution, moderate direct evidence, or a direct above-reference situation that clearly justifies point-of-use treatment.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 5,
@@ -36,6 +58,17 @@
     "source_count" : 5,
     "keywords" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas", "countertop vs pitcher vs under sink for pfas", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:florida-pfas-utility-records",
+    "route_type" : "guide",
+    "route_key" : "florida-pfas-utility-records",
+    "url" : "/guides/florida-pfas-utility-records",
+    "title" : "Florida PFAS utility records: read the exact system before buying",
+    "summary" : "Florida now has multiple seeded utility dossiers, from notice-heavy Sunshine Water routes to quieter CCR-led systems. Use the exact utility record before comparing certified point-of-use filters. A Florida household should match the exact utility dossier first, then decide whether the route is still interpretive or ready for a narrow certified point-of-use compare.",
+    "last_verified_date" : "2026-03-24",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "florida pfas utility records", "florida pfas water report how to read", "florida utility pfas notice", "florida pfas utility records", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:how-to-read-a-pfas-utility-notice",
     "route_type" : "guide",
     "route_key" : "how-to-read-a-pfas-utility-notice",
@@ -46,6 +79,28 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "pfas utility notice what does it mean", "how to read pfas notice from water utility", "ucmr pfas notice what should i do", "how to read a pfas utility notice", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:nevada-pfas-utility-records",
+    "route_type" : "guide",
+    "route_key" : "nevada-pfas-utility-records",
+    "url" : "/guides/nevada-pfas-utility-records",
+    "title" : "Nevada PFAS utility records: compare exact systems, not the state label",
+    "summary" : "Nevada now includes elevated Spring Creek records and quieter Great Basin Water dossiers. Use the exact system record before comparing certified point-of-use filters. A Nevada household should read the exact Spring Creek, Calvada, Cold Springs, or Spanish Springs dossier first, then decide whether the route is ready for a narrow certified point-of-use compare.",
+    "last_verified_date" : "2026-03-24",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "nevada pfas utility records", "nevada pfas water report how to read", "nevada utility pfas notice", "nevada pfas utility records", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:new-jersey-pfas-utility-records",
+    "route_type" : "guide",
+    "route_key" : "new-jersey-pfas-utility-records",
+    "url" : "/guides/new-jersey-pfas-utility-records",
+    "title" : "New Jersey PFAS utility records should be read as system-specific routes not statewide shorthand",
+    "summary" : "New Jersey now has a seeded utility pair with very different posture. The useful move is to read Hamilton and Montague as separate system dossiers before turning New Jersey into a buying shortcut. Hamilton and Montague create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "new jersey pfas utility records", "new jersey pfas water report how to read", "new jersey utility pfas notice", "new jersey pfas utility records", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:non-detect-vs-below-reference-pfas",
     "route_type" : "guide",
@@ -69,23 +124,67 @@
     "source_count" : 4,
     "keywords" : [ "nsf 53 vs 58 pfas", "nsf 53 58 pfas filter", "which certification for pfas filters", "nsf 53 vs 58 pfas", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:old-utility-report-next-step",
+    "route_type" : "guide",
+    "route_key" : "old-utility-report-next-step",
+    "url" : "/guides/old-utility-report-next-step",
+    "title" : "An older utility PFAS report should reopen the route not close it",
+    "summary" : "An older CCR or PFAS report still helps with system identity, but it should usually trigger a freshness check before the household treats the route as settled. If the report is older than the current PFAS cycle or the utility publishes newer notices, keep the route in evidence collection until the newer layer is checked.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "old utility pfas report what next", "how recent should pfas water report be", "older ccr pfas notice newer report", "old utility report next step", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:pennsylvania-pfas-utility-records",
+    "route_type" : "guide",
+    "route_key" : "pennsylvania-pfas-utility-records",
+    "url" : "/guides/pennsylvania-pfas-utility-records",
+    "title" : "Pennsylvania PFAS utility records should be read as system dossiers, not statewide proof",
+    "summary" : "Pennsylvania now has a stronger seeded utility cluster, but the useful move is still to read each system record on its own terms instead of turning one notice or one clean-looking report into a statewide verdict. Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main are different system records with different document posture. Read the dossier, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 7,
+    "keywords" : [ "pennsylvania pfas utility records", "pennsylvania pfas water report how to read", "pennsylvania utility pfas notice", "pennsylvania pfas utility records", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:pfas-filter-annual-cost",
     "route_type" : "guide",
     "route_key" : "pfas-filter-annual-cost",
     "url" : "/guides/pfas-filter-annual-cost",
-    "title" : "PFAS filter annual cost matters because maintenance changes the real decision",
-    "summary" : "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable. Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
+    "title" : "PFAS filter cost per year: what maintenance really changes",
+    "summary" : "Upfront price is only part of the PFAS filter decision. Cartridge cadence, replacement cost, and whether treatment is justified determine the real annual burden. Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "pfas filter annual cost", "pfas filter maintenance cost", "pfas filter replacement cost", "pfas filter annual cost", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:pfas-notice-vs-ccr",
+    "route_type" : "guide",
+    "route_key" : "pfas-notice-vs-ccr",
+    "url" : "/guides/pfas-notice-vs-ccr",
+    "title" : "A PFAS notice and a CCR do different jobs even when they come from the same utility",
+    "summary" : "A PFAS notice is usually the more action-heavy layer. A CCR is still useful, but it often works as system identity and timing context rather than as the freshest PFAS read. When both documents exist, the PFAS notice usually answers the immediate PFAS question while the CCR confirms the system, source, and broader report timing.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 6,
+    "keywords" : [ "pfas notice vs ccr", "pfas notice and consumer confidence report difference", "is a pfas notice different from a ccr", "pfas notice vs ccr", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:private-well-pfas-result-next-steps",
+    "route_type" : "guide",
+    "route_key" : "private-well-pfas-result-next-steps",
+    "url" : "/guides/private-well-pfas-result-next-steps",
+    "title" : "A private-well PFAS result needs state context before product certainty",
+    "summary" : "A number is useful only when the household knows which state reference posture applies, what the lab actually measured, and whether the route is comparable enough to justify treatment review. Private-well owners should move from number to state-guided interpretation, then to certified point-of-use only if the route actually justifies it.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "private well pfas result what next", "pfas well water test result next steps", "private well pfas filter after test", "private well pfas result next steps", "PFAS", "water", "decision guide" ]
+  }, {
     "document_id" : "guide:public-water-vs-private-well",
     "route_type" : "guide",
     "route_key" : "public-water-vs-private-well",
     "url" : "/guides/public-water-vs-private-well",
-    "title" : "Public water vs private well is the first split, not a small detail",
-    "summary" : "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance. Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
+    "title" : "PFAS in public water vs private wells: what changes first?",
+    "summary" : "Public water PFAS questions start with utility records and CCRs. Private well PFAS questions start with owner-driven testing and state guidance. Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 3,
@@ -95,8 +194,8 @@
     "route_type" : "guide",
     "route_key" : "read-your-ccr",
     "url" : "/guides/read-your-ccr",
-    "title" : "How to read your CCR or utility report without turning it into a false household verdict",
-    "summary" : "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists. Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
+    "title" : "How to read a CCR for PFAS: what to check first",
+    "summary" : "Use your CCR or utility report to find the system name, PWSID, report year, and any PFAS notes before comparing filters. Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 5,
@@ -106,8 +205,8 @@
     "route_type" : "guide",
     "route_key" : "test-first-vs-filter-first",
     "url" : "/guides/test-first-vs-filter-first",
-    "title" : "Test first vs filter first is mostly a question about evidence quality",
-    "summary" : "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists. Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
+    "title" : "Should you test for PFAS before buying a water filter?",
+    "summary" : "For most PFAS questions, direct evidence should come before shopping. Public water means utility records first; private wells mean testing first. Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 3,
@@ -117,12 +216,23 @@
     "route_type" : "guide",
     "route_key" : "under-sink-vs-whole-house",
     "url" : "/guides/under-sink-vs-whole-house",
-    "title" : "Under-sink vs whole-house should start with purpose, not fear",
-    "summary" : "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified. Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
+    "title" : "Do you need an under-sink or whole-house PFAS filter?",
+    "summary" : "Whole-house PFAS treatment is not the default move. Start by deciding whether a drinking-water point-of-use system already fits the household goal. Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "under sink vs whole house pfas filter", "whole house vs under sink pfas", "do i need whole house pfas filter", "under sink vs whole house", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "guide:unknown-or-not-comparable-pfas-result",
+    "route_type" : "guide",
+    "route_key" : "unknown-or-not-comparable-pfas-result",
+    "url" : "/guides/unknown-or-not-comparable-pfas-result",
+    "title" : "Unknown or not comparable is a real PFAS result state, not a broken page",
+    "summary" : "When the route cannot yet compare the current number against a usable benchmark, the answer should stay in interpretation and evidence collection instead of pretending the next step is obvious. Unknown or not comparable means the household needs more context such as unit normalization, state benchmark posture, document freshness, or utility classification before hardware certainty opens.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "pfas result unknown what does it mean", "pfas test not comparable", "ucmr pfas not comparable", "unknown or not comparable pfas result", "PFAS", "water", "decision guide" ]
   }, {
     "document_id" : "guide:what-ucmr5-can-and-cannot-tell-you",
     "route_type" : "guide",
@@ -135,49 +245,852 @@
     "source_count" : 3,
     "keywords" : [ "what is ucmr5 for pfas", "how to read ucmr5 pfas", "ucmr5 pfas what should i do", "what ucmr5 can and cannot tell you", "PFAS", "water", "decision guide" ]
   }, {
+    "document_id" : "guide:when-whole-house-is-not-justified",
+    "route_type" : "guide",
+    "route_key" : "when-whole-house-is-not-justified",
+    "url" : "/guides/when-whole-house-is-not-justified",
+    "title" : "Whole-house is usually not the first PFAS move",
+    "summary" : "Whole-house can be a real escalation case, but most household PFAS routes should clear the ingestion-focused point-of-use question before opening a whole-home install story. If the route is still mainly about drinking and cooking water, point-of-use usually stays the first serious class. Whole-house needs its own purpose, cost, and maintenance case.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "do i need whole house pfas filter", "when is whole house pfas filter worth it", "whole house pfas filter not necessary", "when whole house is not justified", "PFAS", "water", "decision guide" ]
+  }, {
+    "document_id" : "compare:california-certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "california-certified-pou-after-utility-context",
+    "url" : "/compare/california-certified-pou-after-utility-context",
+    "title" : "California certified point-of-use after a utility PFAS record should stay system-led and proportional",
+    "summary" : "This compare page is for California households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Sacramento and East Los Angeles into one state-level buying answer. Use California as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+    "last_verified_date" : "2026-03-23",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "california pfas filter after utility report", "california pfas filter after water notice", "certified pfas filter california utility", "california certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "certified-pou-after-utility-context",
+    "url" : "/compare/certified-pou-after-utility-context",
+    "title" : "Certified point-of-use after a utility PFAS record should stay narrow and claim-led",
+    "summary" : "This compare page is for households that already read the utility record and now need a disciplined point-of-use lane instead of a panic-buy roundup. If the utility path is already anchored, compare certified point-of-use by claim scope, upkeep, and installation burden rather than by fear or badge shorthand alone.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "pfas filter after utility notice", "best pfas filter after ccr", "certified pfas filter after utility report", "certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
     "document_id" : "compare:countertop-vs-pitcher-vs-under-sink-compare",
     "route_type" : "compare",
     "route_key" : "countertop-vs-pitcher-vs-under-sink-compare",
     "url" : "/compare/countertop-vs-pitcher-vs-under-sink-compare",
-    "title" : "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
-    "summary" : "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine. The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
+    "title" : "Countertop vs pitcher vs under-sink PFAS filters",
+    "summary" : "Compare PFAS filter form factors by workflow, maintenance burden, and installation friction instead of treating them like a prestige ladder. The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 8,
     "keywords" : [ "countertop vs pitcher vs under sink pfas filter", "best pfas filter form factor", "pitcher or under sink for pfas", "countertop vs pitcher vs under sink compare", "PFAS", "comparison", "certified options" ]
   }, {
+    "document_id" : "compare:florida-certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "florida-certified-pou-after-utility-context",
+    "url" : "/compare/florida-certified-pou-after-utility-context",
+    "title" : "Florida PFAS filters after a utility report: certified point-of-use options",
+    "summary" : "This compare page is for Florida households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening notice-heavy and CCR-led systems into one state answer. Use Florida as a navigation layer, but keep the shortlist anchored to the exact utility record, its timing, and the current system interpretation before comparing certified point-of-use hardware.",
+    "last_verified_date" : "2026-03-24",
+    "indexable" : true,
+    "source_count" : 13,
+    "keywords" : [ "florida pfas filter after utility report", "florida pfas filter after water notice", "certified pfas filter florida utility", "florida certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:nevada-certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "nevada-certified-pou-after-utility-context",
+    "url" : "/compare/nevada-certified-pou-after-utility-context",
+    "title" : "Nevada PFAS filters after a utility report: certified point-of-use options",
+    "summary" : "This compare page is for Nevada households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Spring Creek and Great Basin Water routes into one state answer. Use Nevada as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+    "last_verified_date" : "2026-03-24",
+    "indexable" : true,
+    "source_count" : 14,
+    "keywords" : [ "nevada pfas filter after utility report", "nevada pfas filter after water notice", "certified pfas filter nevada utility", "nevada certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "compare:new-jersey-certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "new-jersey-certified-pou-after-utility-context",
+    "url" : "/compare/new-jersey-certified-pou-after-utility-context",
+    "title" : "New Jersey certified point-of-use after a utility PFAS record should stay system-led and proportional",
+    "summary" : "This compare page is for New Jersey households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Hamilton and Montague into one state-level buying answer. Use New Jersey as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 10,
+    "keywords" : [ "new jersey pfas filter after utility report", "new jersey pfas filter after water notice", "certified pfas filter new jersey utility", "new jersey certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
     "document_id" : "compare:nsf-53-vs-58-claim-examples",
     "route_type" : "compare",
     "route_key" : "nsf-53-vs-58-claim-examples",
     "url" : "/compare/nsf-53-vs-58-claim-examples",
-    "title" : "NSF 53 vs 58 claim examples matter more than the badge shorthand",
-    "summary" : "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record. A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
+    "title" : "NSF 53 vs 58 for PFAS: claim examples that matter",
+    "summary" : "Use real certification listing examples to see why NSF 53 and 58 only help when tied to the exact model and PFAS claim record. A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 8,
     "keywords" : [ "nsf 53 vs 58 pfas", "pfas filter nsf 53 or 58", "nsf 53 58 claim examples pfas", "nsf 53 vs 58 claim examples", "PFAS", "comparison", "certified options" ]
   }, {
+    "document_id" : "compare:pennsylvania-certified-pou-after-utility-context",
+    "route_type" : "compare",
+    "route_key" : "pennsylvania-certified-pou-after-utility-context",
+    "url" : "/compare/pennsylvania-certified-pou-after-utility-context",
+    "title" : "Pennsylvania certified point-of-use after a utility PFAS record should stay system-led and narrow",
+    "summary" : "This compare page is for Pennsylvania households that already read a seeded utility dossier and now need a certified point-of-use shortlist without collapsing multiple systems into one statewide buying story. Use Pennsylvania as a navigation layer, but keep the shortlist anchored to the exact utility record, its timing, and the current system interpretation before comparing certified point-of-use hardware.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "pennsylvania pfas filter after utility report", "pennsylvania pfas filter after water notice", "certified pfas filter pennsylvania utility", "pennsylvania certified pou after utility context", "PFAS", "comparison", "certified options" ]
+  }, {
     "document_id" : "compare:pfas-filter-annual-cost-compare",
     "route_type" : "compare",
     "route_key" : "pfas-filter-annual-cost-compare",
     "url" : "/compare/pfas-filter-annual-cost-compare",
-    "title" : "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
-    "summary" : "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path. A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
+    "title" : "PFAS filter cost per year: pitcher vs under-sink vs RO",
+    "summary" : "Compare PFAS filter cost per year so a lower checkout price cannot hide a worse maintenance and ownership path. A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 8,
     "keywords" : [ "pfas filter annual cost comparison", "pfas filter maintenance cost compare", "pfas filter upkeep cost", "pfas filter annual cost compare", "PFAS", "comparison", "certified options" ]
   }, {
+    "document_id" : "compare:private-well-certified-pou-after-test",
+    "route_type" : "compare",
+    "route_key" : "private-well-certified-pou-after-test",
+    "url" : "/compare/private-well-certified-pou-after-test",
+    "title" : "Private-well certified point-of-use after a PFAS test should follow the state route not replace it",
+    "summary" : "This compare page is for private-well households that already have a test and now need a certified point-of-use shortlist that still respects state context and comparability limits. A private-well owner should move from test result to state context, then into a certified point-of-use shortlist that still keeps cost and upkeep visible.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 9,
+    "keywords" : [ "private well pfas filter comparison", "best pfas filter after well test", "certified pfas filter for private well", "private well certified pou after test", "PFAS", "comparison", "certified options" ]
+  }, {
     "document_id" : "compare:under-sink-certified-pfas-options",
     "route_type" : "compare",
     "route_key" : "under-sink-certified-pfas-options",
     "url" : "/compare/under-sink-certified-pfas-options",
-    "title" : "Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment",
-    "summary" : "This compare page narrows to under-sink certified point-of-use systems that can be defended after a utility dossier, state-guided test, or direct evidence path justifies treatment. Under-sink is often the most practical money path, but it still needs claim scope, annual burden, and installation tolerance to line up with the household route.",
+    "title" : "Best under-sink PFAS filters: certified options compared",
+    "summary" : "Compare certified under-sink PFAS filters by claim scope, maintenance burden, and installation fit after the household route already justifies treatment. Under-sink is often the most practical money path, but it still needs claim scope, annual burden, and installation tolerance to line up with the household route.",
     "last_verified_date" : "2026-03-20",
     "indexable" : true,
     "source_count" : 10,
     "keywords" : [ "best under sink pfas filter", "under sink certified pfas filter options", "under sink pfas filter comparison", "under sink certified pfas options", "PFAS", "comparison", "certified options" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-6200",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-6200",
+    "url" : "/filters/aquasana-aq-6200",
+    "title" : "Aquasana Claryum 2-Stage PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana Claryum 2-Stage are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquasana-aq-6200", "Aquasana", "Claryum 2-Stage", "Aquasana Claryum 2-Stage", "Carbon block", "Under Sink Aux Faucet", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-6300",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-6300",
+    "url" : "/filters/aquasana-aq-6300",
+    "title" : "Aquasana Claryum 3-Stage PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana Claryum 3-Stage are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquasana-aq-6300", "Aquasana", "Claryum 3-Stage", "Aquasana Claryum 3-Stage", "Carbon block", "Under Sink Aux Faucet", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-6300m",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-6300m",
+    "url" : "/filters/aquasana-aq-6300m",
+    "title" : "Aquasana Claryum 3-Stage Max Flow PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana Claryum 3-Stage Max Flow are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquasana-aq-6300m", "Aquasana", "Claryum 3-Stage Max Flow", "Aquasana Claryum 3-Stage Max Flow", "Carbon block", "Under Sink Aux Faucet", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-cwm2",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-cwm2",
+    "url" : "/filters/aquasana-aq-cwm2",
+    "title" : "Aquasana Clean Water Machine PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana Clean Water Machine are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquasana-aq-cwm2", "Aquasana", "Clean Water Machine", "Aquasana Clean Water Machine", "Carbon block", "Countertop", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-mf-1",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-mf-1",
+    "url" : "/filters/aquasana-aq-mf-1",
+    "title" : "Aquasana Claryum Direct Connect PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana Claryum Direct Connect are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquasana-aq-mf-1", "Aquasana", "Claryum Direct Connect", "Aquasana Claryum Direct Connect", "Carbon block", "Direct Connect", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-ro-3",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-ro-3",
+    "url" : "/filters/aquasana-aq-ro-3",
+    "title" : "Aquasana OptimH2O Reverse Osmosis + Claryum PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana OptimH2O Reverse Osmosis + Claryum are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "aquasana-aq-ro-3", "Aquasana", "OptimH2O Reverse Osmosis + Claryum", "Aquasana OptimH2O Reverse Osmosis + Claryum", "Reverse osmosis", "Under Sink Aux Faucet", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquasana-aq-sfro2",
+    "route_type" : "filter_product",
+    "route_key" : "aquasana-aq-sfro2",
+    "url" : "/filters/aquasana-aq-sfro2",
+    "title" : "Aquasana SmartFlow Reverse Osmosis PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Aquasana SmartFlow Reverse Osmosis are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "aquasana-aq-sfro2", "Aquasana", "SmartFlow Reverse Osmosis", "Aquasana SmartFlow Reverse Osmosis", "Reverse osmosis", "Under Sink Aux Faucet", "Aquasana", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquatru-carafe",
+    "route_type" : "filter_product",
+    "route_key" : "aquatru-carafe",
+    "url" : "/filters/aquatru-carafe",
+    "title" : "AquaTru Carafe PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for AquaTru Carafe are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "aquatru-carafe", "AquaTru", "Carafe", "AquaTru Carafe", "Reverse osmosis", "Countertop", "AquaTru", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquatru-classic",
+    "route_type" : "filter_product",
+    "route_key" : "aquatru-classic",
+    "url" : "/filters/aquatru-classic",
+    "title" : "AquaTru Classic PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for AquaTru Classic are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "aquatru-classic", "AquaTru", "Classic", "AquaTru Classic", "Reverse osmosis", "Countertop", "AquaTru", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquatru-model-1",
+    "route_type" : "filter_product",
+    "route_key" : "aquatru-model-1",
+    "url" : "/filters/aquatru-model-1",
+    "title" : "AquaTru Freestanding Model 1 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for AquaTru Freestanding Model 1 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "aquatru-model-1", "AquaTru", "Freestanding Model 1", "AquaTru Freestanding Model 1", "Reverse osmosis", "Freestanding Dispenser", "AquaTru", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:aquatru-under-sink",
+    "route_type" : "filter_product",
+    "route_key" : "aquatru-under-sink",
+    "url" : "/filters/aquatru-under-sink",
+    "title" : "AquaTru Under Sink PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for AquaTru Under Sink are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "aquatru-under-sink", "AquaTru", "Under Sink", "AquaTru Under Sink", "Reverse osmosis", "Under Sink Aux Faucet", "AquaTru", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:espring-122941",
+    "route_type" : "filter_product",
+    "route_key" : "espring-122941",
+    "url" : "/filters/espring-122941",
+    "title" : "Amway eSpring Under the Counter Unit with Aux Faucet PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Amway eSpring Under the Counter Unit with Aux Faucet are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "espring-122941", "Amway", "eSpring Under the Counter Unit with Aux Faucet", "Amway eSpring Under the Counter Unit with Aux Faucet", "Carbon Block Uv", "Under Sink Aux Faucet", "Amway", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-10ub-pro",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-10ub-pro",
+    "url" : "/filters/waterdrop-10ub-pro",
+    "title" : "Waterdrop 10UB PRO Under Sink Water Filter PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop 10UB PRO Under Sink Water Filter are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-10ub-pro", "Waterdrop", "10UB PRO Under Sink Water Filter", "Waterdrop 10UB PRO Under Sink Water Filter", "Carbon block", "Direct Connect", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-a1",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-a1",
+    "url" : "/filters/waterdrop-a1",
+    "title" : "Waterdrop RO Hot and Cold Water Dispenser A1 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop RO Hot and Cold Water Dispenser A1 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-a1", "Waterdrop", "RO Hot and Cold Water Dispenser A1", "Waterdrop RO Hot and Cold Water Dispenser A1", "Reverse osmosis", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-a2",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-a2",
+    "url" : "/filters/waterdrop-a2",
+    "title" : "Waterdrop Reverse Osmosis Hot and Cold Water Dispenser A2 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Reverse Osmosis Hot and Cold Water Dispenser A2 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-a2", "Waterdrop", "Reverse Osmosis Hot and Cold Water Dispenser A2", "Waterdrop Reverse Osmosis Hot and Cold Water Dispenser A2", "Reverse osmosis", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-c1h",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-c1h",
+    "url" : "/filters/waterdrop-c1h",
+    "title" : "Waterdrop C1H Instant Hot Water Reverse Osmosis System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop C1H Instant Hot Water Reverse Osmosis System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-c1h", "Waterdrop", "C1H Instant Hot Water Reverse Osmosis System", "Waterdrop C1H Instant Hot Water Reverse Osmosis System", "Reverse osmosis", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-c1s",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-c1s",
+    "url" : "/filters/waterdrop-c1s",
+    "title" : "Waterdrop CoreRO Countertop Water Filter System C1S PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop CoreRO Countertop Water Filter System C1S are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-c1s", "Waterdrop", "CoreRO Countertop Water Filter System C1S", "Waterdrop CoreRO Countertop Water Filter System C1S", "Reverse osmosis", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-ed01",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-ed01",
+    "url" : "/filters/waterdrop-ed01",
+    "title" : "Waterdrop Electric Water Filter ED01 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Electric Water Filter ED01 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-ed01", "Waterdrop", "Electric Water Filter ED01", "Waterdrop Electric Water Filter ED01", "Carbon fiber", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g2",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g2",
+    "url" : "/filters/waterdrop-g2",
+    "title" : "Waterdrop Tankless Reverse Osmosis System G2 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Tankless Reverse Osmosis System G2 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-g2", "Waterdrop", "Tankless Reverse Osmosis System G2", "Waterdrop Tankless Reverse Osmosis System G2", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g3p600",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g3p600",
+    "url" : "/filters/waterdrop-g3p600",
+    "title" : "Waterdrop G3P600 Remineralization Reverse Osmosis System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop G3P600 Remineralization Reverse Osmosis System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "waterdrop-g3p600", "Waterdrop", "G3P600 Remineralization Reverse Osmosis System", "Waterdrop G3P600 Remineralization Reverse Osmosis System", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g3p800",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g3p800",
+    "url" : "/filters/waterdrop-g3p800",
+    "title" : "Waterdrop Tankless Reverse Osmosis System G3P800 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Tankless Reverse Osmosis System G3P800 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "waterdrop-g3p800", "Waterdrop", "Tankless Reverse Osmosis System G3P800", "Waterdrop Tankless Reverse Osmosis System G3P800", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g5p500a",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g5p500a",
+    "url" : "/filters/waterdrop-g5p500a",
+    "title" : "Waterdrop G5P500A Alkaline Water Filter System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop G5P500A Alkaline Water Filter System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-g5p500a", "Waterdrop", "G5P500A Alkaline Water Filter System", "Waterdrop G5P500A Alkaline Water Filter System", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g5p700",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g5p700",
+    "url" : "/filters/waterdrop-g5p700",
+    "title" : "Waterdrop Tankless RO System G5P700 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Tankless RO System G5P700 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-g5p700", "Waterdrop", "Tankless RO System G5P700", "Waterdrop Tankless RO System G5P700", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g5p700a",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g5p700a",
+    "url" : "/filters/waterdrop-g5p700a",
+    "title" : "Waterdrop G5P700A Alkaline RO Filtration System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop G5P700A Alkaline RO Filtration System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-g5p700a", "Waterdrop", "G5P700A Alkaline RO Filtration System", "Waterdrop G5P700A Alkaline RO Filtration System", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-g5p700a-pro",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-g5p700a-pro",
+    "url" : "/filters/waterdrop-g5p700a-pro",
+    "title" : "Waterdrop G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-g5p700a-pro", "Waterdrop", "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Waterdrop G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-h9",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-h9",
+    "url" : "/filters/waterdrop-h9",
+    "title" : "Waterdrop Reverse Osmosis Water Filtration System H9 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Reverse Osmosis Water Filtration System H9 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-h9", "Waterdrop", "Reverse Osmosis Water Filtration System H9", "Waterdrop Reverse Osmosis Water Filtration System H9", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-k19-sfk",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-k19-sfk",
+    "url" : "/filters/waterdrop-k19-sfk",
+    "title" : "Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-k19-sfk", "Waterdrop", "Alkaline Countertop Reverse Osmosis System K19-SFK", "Waterdrop Alkaline Countertop Reverse Osmosis System K19-SFK", "Reverse osmosis", "Countertop", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x10",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x10",
+    "url" : "/filters/waterdrop-x10",
+    "title" : "Waterdrop Master X Series Reverse Osmosis System X10 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Master X Series Reverse Osmosis System X10 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x10", "Waterdrop", "Master X Series Reverse Osmosis System X10", "Waterdrop Master X Series Reverse Osmosis System X10", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x12",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x12",
+    "url" : "/filters/waterdrop-x12",
+    "title" : "Waterdrop X Series Undersink Reverse Osmosis System X12 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop X Series Undersink Reverse Osmosis System X12 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x12", "Waterdrop", "X Series Undersink Reverse Osmosis System X12", "Waterdrop X Series Undersink Reverse Osmosis System X12", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x12-pro",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x12-pro",
+    "url" : "/filters/waterdrop-x12-pro",
+    "title" : "Waterdrop X Series Reverse Osmosis System X12 Pro PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop X Series Reverse Osmosis System X12 Pro are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x12-pro", "Waterdrop", "X Series Reverse Osmosis System X12 Pro", "Waterdrop X Series Reverse Osmosis System X12 Pro", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x14",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x14",
+    "url" : "/filters/waterdrop-x14",
+    "title" : "Waterdrop Master X Series Reverse Osmosis System X14 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop Master X Series Reverse Osmosis System X14 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x14", "Waterdrop", "Master X Series Reverse Osmosis System X14", "Waterdrop Master X Series Reverse Osmosis System X14", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x16",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x16",
+    "url" : "/filters/waterdrop-x16",
+    "title" : "Waterdrop X Series Undersink Reverse Osmosis System X16 PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop X Series Undersink Reverse Osmosis System X16 are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x16", "Waterdrop", "X Series Undersink Reverse Osmosis System X16", "Waterdrop X Series Undersink Reverse Osmosis System X16", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x8-a",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x8-a",
+    "url" : "/filters/waterdrop-x8-a",
+    "title" : "Waterdrop X8 Alkaline RO System PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop X8 Alkaline RO System are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x8-a", "Waterdrop", "X8 Alkaline RO System", "Waterdrop X8 Alkaline RO System", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:waterdrop-x8-pro",
+    "route_type" : "filter_product",
+    "route_key" : "waterdrop-x8-pro",
+    "url" : "/filters/waterdrop-x8-pro",
+    "title" : "Waterdrop X Series Reverse Osmosis System X8 Pro PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for Waterdrop X Series Reverse Osmosis System X8 Pro are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 1,
+    "keywords" : [ "waterdrop-x8-pro", "Waterdrop", "X Series Reverse Osmosis System X8 Pro", "Waterdrop X Series Reverse Osmosis System X8 Pro", "Reverse osmosis", "Under Sink Aux Faucet", "Waterdrop", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-10-cup-pitcher",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-10-cup-pitcher",
+    "url" : "/filters/zerowater-10-cup-pitcher",
+    "title" : "ZeroWater 10 Cup Pitcher PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater 10 Cup Pitcher are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "zerowater-10-cup-pitcher", "ZeroWater", "10 Cup Pitcher", "ZeroWater 10 Cup Pitcher", "Ion Exchange", "Pitcher", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-23-cup-dispenser",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-23-cup-dispenser",
+    "url" : "/filters/zerowater-23-cup-dispenser",
+    "title" : "ZeroWater 23 Cup 5-Stage Water Filter Dispenser PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater 23 Cup 5-Stage Water Filter Dispenser are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "zerowater-23-cup-dispenser", "ZeroWater", "23 Cup 5-Stage Water Filter Dispenser", "ZeroWater 23 Cup 5-Stage Water Filter Dispenser", "Ion Exchange", "Dispenser", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-30-cup-dispenser-bundle",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-30-cup-dispenser-bundle",
+    "url" : "/filters/zerowater-30-cup-dispenser-bundle",
+    "title" : "ZeroWater 30 Cup Ready-Pour Dispenser + 2 Filters PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater 30 Cup Ready-Pour Dispenser + 2 Filters are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "zerowater-30-cup-dispenser-bundle", "ZeroWater", "30 Cup Ready-Pour Dispenser + 2 Filters", "ZeroWater 30 Cup Ready-Pour Dispenser + 2 Filters", "Ion Exchange", "Dispenser", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-5-gallon-cooler",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-5-gallon-cooler",
+    "url" : "/filters/zerowater-5-gallon-cooler",
+    "title" : "ZeroWater 5-Gallon Water Cooler Dispenser PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater 5-Gallon Water Cooler Dispenser are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "zerowater-5-gallon-cooler", "ZeroWater", "5-Gallon Water Cooler Dispenser", "ZeroWater 5-Gallon Water Cooler Dispenser", "Ion Exchange", "Cooler Dispenser", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-7-cup-pitcher",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-7-cup-pitcher",
+    "url" : "/filters/zerowater-7-cup-pitcher",
+    "title" : "ZeroWater 7 Cup Ready-Pour Pitcher PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater 7 Cup Ready-Pour Pitcher are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "zerowater-7-cup-pitcher", "ZeroWater", "7 Cup Ready-Pour Pitcher", "ZeroWater 7 Cup Ready-Pour Pitcher", "Ion Exchange", "Pitcher", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_product:zerowater-extremelife-faucet-mount",
+    "route_type" : "filter_product",
+    "route_key" : "zerowater-extremelife-faucet-mount",
+    "url" : "/filters/zerowater-extremelife-faucet-mount",
+    "title" : "ZeroWater ExtremeLife Faucet Mount Filter PFAS record",
+    "summary" : "Certification scope, upkeep, and seller path for ZeroWater ExtremeLife Faucet Mount Filter are kept on one page so the buying decision stays inspectable.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "zerowater-extremelife-faucet-mount", "ZeroWater", "ExtremeLife Faucet Mount Filter", "ZeroWater ExtremeLife Faucet Mount Filter", "Carbon fiber", "Faucet Mount", "ZeroWater", "PFAS filter", "certified PFAS filter" ]
+  }, {
+    "document_id" : "filter_brand:amway",
+    "route_type" : "filter_brand",
+    "route_key" : "amway",
+    "url" : "/filters/brands/amway",
+    "title" : "Amway PFAS certified filter records",
+    "summary" : "Certified Amway PFAS records normalized into one surface so upkeep, installation class, and exclusions stay visible.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Amway", "Amway PFAS certified filter records", "PFAS", "certified filter", "eSpring Under the Counter Unit with Aux Faucet", "Carbon Block Uv", "Under Sink Aux Faucet" ]
+  }, {
+    "document_id" : "filter_brand:aquasana",
+    "route_type" : "filter_brand",
+    "route_key" : "aquasana",
+    "url" : "/filters/brands/aquasana",
+    "title" : "Aquasana PFAS certified filter records",
+    "summary" : "Certified Aquasana PFAS records normalized into one surface so upkeep, installation class, and exclusions stay visible.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 22,
+    "keywords" : [ "Aquasana", "Aquasana PFAS certified filter records", "PFAS", "certified filter", "Claryum 2-Stage", "Carbon block", "Under Sink Aux Faucet", "Claryum 3-Stage", "Claryum 3-Stage Max Flow", "Claryum Direct Connect", "Direct Connect", "Clean Water Machine", "Countertop", "OptimH2O Reverse Osmosis + Claryum", "Reverse osmosis", "SmartFlow Reverse Osmosis" ]
+  }, {
+    "document_id" : "filter_brand:aquatru",
+    "route_type" : "filter_brand",
+    "route_key" : "aquatru",
+    "url" : "/filters/brands/aquatru",
+    "title" : "AquaTru PFAS certified filter records",
+    "summary" : "Certified AquaTru PFAS records normalized into one surface so upkeep, installation class, and exclusions stay visible.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "AquaTru", "AquaTru PFAS certified filter records", "PFAS", "certified filter", "Carafe", "Reverse osmosis", "Countertop", "Classic", "Freestanding Model 1", "Freestanding Dispenser", "Under Sink", "Under Sink Aux Faucet" ]
+  }, {
+    "document_id" : "filter_brand:waterdrop",
+    "route_type" : "filter_brand",
+    "route_key" : "waterdrop",
+    "url" : "/filters/brands/waterdrop",
+    "title" : "Waterdrop PFAS certified filter records",
+    "summary" : "Certified Waterdrop PFAS records normalized into one surface so upkeep, installation class, and exclusions stay visible.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 24,
+    "keywords" : [ "Waterdrop", "Waterdrop PFAS certified filter records", "PFAS", "certified filter", "10UB PRO Under Sink Water Filter", "Carbon block", "Direct Connect", "Alkaline Countertop Reverse Osmosis System K19-SFK", "Reverse osmosis", "Countertop", "C1H Instant Hot Water Reverse Osmosis System", "CoreRO Countertop Water Filter System C1S", "Electric Water Filter ED01", "Carbon fiber", "G3P600 Remineralization Reverse Osmosis System", "Under Sink Aux Faucet", "G5P500A Alkaline Water Filter System", "G5P700A Alkaline RO Filtration System", "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Master X Series Reverse Osmosis System X10", "Master X Series Reverse Osmosis System X14", "RO Hot and Cold Water Dispenser A1", "Reverse Osmosis Hot and Cold Water Dispenser A2", "Reverse Osmosis Water Filtration System H9", "Tankless RO System G5P700", "Tankless Reverse Osmosis System G2", "Tankless Reverse Osmosis System G3P800", "X Series Reverse Osmosis System X12 Pro", "X Series Reverse Osmosis System X8 Pro", "X Series Undersink Reverse Osmosis System X12", "X Series Undersink Reverse Osmosis System X16", "X8 Alkaline RO System" ]
+  }, {
+    "document_id" : "filter_brand:zerowater",
+    "route_type" : "filter_brand",
+    "route_key" : "zerowater",
+    "url" : "/filters/brands/zerowater",
+    "title" : "ZeroWater PFAS certified filter records",
+    "summary" : "Certified ZeroWater PFAS records normalized into one surface so upkeep, installation class, and exclusions stay visible.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "ZeroWater", "ZeroWater PFAS certified filter records", "PFAS", "certified filter", "10 Cup Pitcher", "Ion Exchange", "Pitcher", "23 Cup 5-Stage Water Filter Dispenser", "Dispenser", "30 Cup Ready-Pour Dispenser + 2 Filters", "5-Gallon Water Cooler Dispenser", "Cooler Dispenser", "7 Cup Ready-Pour Pitcher", "ExtremeLife Faucet Mount Filter", "Carbon fiber", "Faucet Mount" ]
+  }, {
+    "document_id" : "filter_installation:cooler-dispenser",
+    "route_type" : "filter_installation",
+    "route_key" : "cooler-dispenser",
+    "url" : "/filters/installations/cooler-dispenser",
+    "title" : "Cooler Dispenser PFAS filter options",
+    "summary" : "Normalized cooler dispenser PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Cooler Dispenser", "Cooler Dispenser PFAS filter options", "PFAS", "certified filter", "ZeroWater", "5-Gallon Water Cooler Dispenser", "Ion Exchange" ]
+  }, {
+    "document_id" : "filter_installation:countertop",
+    "route_type" : "filter_installation",
+    "route_key" : "countertop",
+    "url" : "/filters/installations/countertop",
+    "title" : "Countertop PFAS filter options",
+    "summary" : "Normalized countertop PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 16,
+    "keywords" : [ "Countertop", "Countertop PFAS filter options", "PFAS", "certified filter", "AquaTru", "Carafe", "Reverse osmosis", "Classic", "Aquasana", "Clean Water Machine", "Carbon block", "Waterdrop", "Alkaline Countertop Reverse Osmosis System K19-SFK", "C1H Instant Hot Water Reverse Osmosis System", "CoreRO Countertop Water Filter System C1S", "Electric Water Filter ED01", "Carbon fiber", "RO Hot and Cold Water Dispenser A1", "Reverse Osmosis Hot and Cold Water Dispenser A2" ]
+  }, {
+    "document_id" : "filter_installation:direct-connect",
+    "route_type" : "filter_installation",
+    "route_key" : "direct-connect",
+    "url" : "/filters/installations/direct-connect",
+    "title" : "Direct Connect PFAS filter options",
+    "summary" : "Normalized direct connect PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Direct Connect", "Direct Connect PFAS filter options", "PFAS", "certified filter", "Aquasana", "Claryum Direct Connect", "Carbon block", "Waterdrop", "10UB PRO Under Sink Water Filter" ]
+  }, {
+    "document_id" : "filter_installation:dispenser",
+    "route_type" : "filter_installation",
+    "route_key" : "dispenser",
+    "url" : "/filters/installations/dispenser",
+    "title" : "Dispenser PFAS filter options",
+    "summary" : "Normalized dispenser PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Dispenser", "Dispenser PFAS filter options", "PFAS", "certified filter", "ZeroWater", "23 Cup 5-Stage Water Filter Dispenser", "Ion Exchange", "30 Cup Ready-Pour Dispenser + 2 Filters" ]
+  }, {
+    "document_id" : "filter_installation:faucet-mount",
+    "route_type" : "filter_installation",
+    "route_key" : "faucet-mount",
+    "url" : "/filters/installations/faucet-mount",
+    "title" : "Faucet Mount PFAS filter options",
+    "summary" : "Normalized faucet mount PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "Faucet Mount", "Faucet Mount PFAS filter options", "PFAS", "certified filter", "ZeroWater", "ExtremeLife Faucet Mount Filter", "Carbon fiber" ]
+  }, {
+    "document_id" : "filter_installation:freestanding-dispenser",
+    "route_type" : "filter_installation",
+    "route_key" : "freestanding-dispenser",
+    "url" : "/filters/installations/freestanding-dispenser",
+    "title" : "Freestanding Dispenser PFAS filter options",
+    "summary" : "Normalized freestanding dispenser PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : false,
+    "source_count" : 2,
+    "keywords" : [ "Freestanding Dispenser", "Freestanding Dispenser PFAS filter options", "PFAS", "certified filter", "AquaTru", "Freestanding Model 1", "Reverse osmosis" ]
+  }, {
+    "document_id" : "filter_installation:pitcher",
+    "route_type" : "filter_installation",
+    "route_key" : "pitcher",
+    "url" : "/filters/installations/pitcher",
+    "title" : "Pitcher PFAS filter options",
+    "summary" : "Normalized pitcher PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Pitcher", "Pitcher PFAS filter options", "PFAS", "certified filter", "ZeroWater", "10 Cup Pitcher", "Ion Exchange", "7 Cup Ready-Pour Pitcher" ]
+  }, {
+    "document_id" : "filter_installation:under-sink-aux-faucet",
+    "route_type" : "filter_installation",
+    "route_key" : "under-sink-aux-faucet",
+    "url" : "/filters/installations/under-sink-aux-faucet",
+    "title" : "Under Sink Aux Faucet PFAS filter options",
+    "summary" : "Normalized under sink aux faucet PFAS options rendered together with upkeep, cost, and claim scope kept explicit.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 39,
+    "keywords" : [ "Under Sink Aux Faucet", "Under Sink Aux Faucet PFAS filter options", "PFAS", "certified filter", "Amway", "eSpring Under the Counter Unit with Aux Faucet", "Carbon Block Uv", "AquaTru", "Under Sink", "Reverse osmosis", "Aquasana", "Claryum 2-Stage", "Carbon block", "Claryum 3-Stage", "Claryum 3-Stage Max Flow", "OptimH2O Reverse Osmosis + Claryum", "SmartFlow Reverse Osmosis", "Waterdrop", "G3P600 Remineralization Reverse Osmosis System", "G5P500A Alkaline Water Filter System", "G5P700A Alkaline RO Filtration System", "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Master X Series Reverse Osmosis System X10", "Master X Series Reverse Osmosis System X14", "Reverse Osmosis Water Filtration System H9", "Tankless RO System G5P700", "Tankless Reverse Osmosis System G2", "Tankless Reverse Osmosis System G3P800", "X Series Reverse Osmosis System X12 Pro", "X Series Reverse Osmosis System X8 Pro", "X Series Undersink Reverse Osmosis System X12", "X Series Undersink Reverse Osmosis System X16", "X8 Alkaline RO System" ]
+  }, {
+    "document_id" : "filter_merchant:amway",
+    "route_type" : "filter_merchant",
+    "route_key" : "amway",
+    "url" : "/filters/merchants/amway",
+    "title" : "Amway PFAS listings in the normalized catalog",
+    "summary" : "Merchant-facing PFAS listings grouped into one surface so the click path stays attached to certification and upkeep instead of generic marketplace sorting.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Amway", "Amway PFAS listings in the normalized catalog", "PFAS", "certified filter", "eSpring Under the Counter Unit with Aux Faucet", "Carbon Block Uv", "Under Sink Aux Faucet" ]
+  }, {
+    "document_id" : "filter_merchant:aquasana",
+    "route_type" : "filter_merchant",
+    "route_key" : "aquasana",
+    "url" : "/filters/merchants/aquasana",
+    "title" : "Aquasana PFAS listings in the normalized catalog",
+    "summary" : "Merchant-facing PFAS listings grouped into one surface so the click path stays attached to certification and upkeep instead of generic marketplace sorting.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 22,
+    "keywords" : [ "Aquasana", "Aquasana PFAS listings in the normalized catalog", "PFAS", "certified filter", "Claryum 2-Stage", "Carbon block", "Under Sink Aux Faucet", "Claryum 3-Stage", "Claryum 3-Stage Max Flow", "Claryum Direct Connect", "Direct Connect", "Clean Water Machine", "Countertop", "OptimH2O Reverse Osmosis + Claryum", "Reverse osmosis", "SmartFlow Reverse Osmosis" ]
+  }, {
+    "document_id" : "filter_merchant:aquatru",
+    "route_type" : "filter_merchant",
+    "route_key" : "aquatru",
+    "url" : "/filters/merchants/aquatru",
+    "title" : "AquaTru PFAS listings in the normalized catalog",
+    "summary" : "Merchant-facing PFAS listings grouped into one surface so the click path stays attached to certification and upkeep instead of generic marketplace sorting.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 11,
+    "keywords" : [ "AquaTru", "AquaTru PFAS listings in the normalized catalog", "PFAS", "certified filter", "Carafe", "Reverse osmosis", "Countertop", "Classic", "Freestanding Model 1", "Freestanding Dispenser", "Under Sink", "Under Sink Aux Faucet" ]
+  }, {
+    "document_id" : "filter_merchant:waterdrop",
+    "route_type" : "filter_merchant",
+    "route_key" : "waterdrop",
+    "url" : "/filters/merchants/waterdrop",
+    "title" : "Waterdrop PFAS listings in the normalized catalog",
+    "summary" : "Merchant-facing PFAS listings grouped into one surface so the click path stays attached to certification and upkeep instead of generic marketplace sorting.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 24,
+    "keywords" : [ "Waterdrop", "Waterdrop PFAS listings in the normalized catalog", "PFAS", "certified filter", "10UB PRO Under Sink Water Filter", "Carbon block", "Direct Connect", "Alkaline Countertop Reverse Osmosis System K19-SFK", "Reverse osmosis", "Countertop", "C1H Instant Hot Water Reverse Osmosis System", "CoreRO Countertop Water Filter System C1S", "Electric Water Filter ED01", "Carbon fiber", "G3P600 Remineralization Reverse Osmosis System", "Under Sink Aux Faucet", "G5P500A Alkaline Water Filter System", "G5P700A Alkaline RO Filtration System", "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Master X Series Reverse Osmosis System X10", "Master X Series Reverse Osmosis System X14", "RO Hot and Cold Water Dispenser A1", "Reverse Osmosis Hot and Cold Water Dispenser A2", "Reverse Osmosis Water Filtration System H9", "Tankless RO System G5P700", "Tankless Reverse Osmosis System G2", "Tankless Reverse Osmosis System G3P800", "X Series Reverse Osmosis System X12 Pro", "X Series Reverse Osmosis System X8 Pro", "X Series Undersink Reverse Osmosis System X12", "X Series Undersink Reverse Osmosis System X16", "X8 Alkaline RO System" ]
+  }, {
+    "document_id" : "filter_merchant:zerowater",
+    "route_type" : "filter_merchant",
+    "route_key" : "zerowater",
+    "url" : "/filters/merchants/zerowater",
+    "title" : "ZeroWater PFAS listings in the normalized catalog",
+    "summary" : "Merchant-facing PFAS listings grouped into one surface so the click path stays attached to certification and upkeep instead of generic marketplace sorting.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 8,
+    "keywords" : [ "ZeroWater", "ZeroWater PFAS listings in the normalized catalog", "PFAS", "certified filter", "10 Cup Pitcher", "Ion Exchange", "Pitcher", "23 Cup 5-Stage Water Filter Dispenser", "Dispenser", "30 Cup Ready-Pour Dispenser + 2 Filters", "5-Gallon Water Cooler Dispenser", "Cooler Dispenser", "7 Cup Ready-Pour Pitcher", "ExtremeLife Faucet Mount Filter", "Carbon fiber", "Faucet Mount" ]
+  }, {
+    "document_id" : "filter_type:carbon-block",
+    "route_type" : "filter_type",
+    "route_key" : "carbon-block",
+    "url" : "/filters/types/carbon-block",
+    "title" : "Carbon block PFAS filter records",
+    "summary" : "Compare normalized carbon block PFAS records without flattening upkeep, cadence, or installation constraints.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 16,
+    "keywords" : [ "Carbon block", "Carbon block PFAS filter records", "PFAS", "certified filter", "Aquasana", "Claryum 2-Stage", "Under Sink Aux Faucet", "Claryum 3-Stage", "Claryum 3-Stage Max Flow", "Claryum Direct Connect", "Direct Connect", "Clean Water Machine", "Countertop", "Waterdrop", "10UB PRO Under Sink Water Filter" ]
+  }, {
+    "document_id" : "filter_type:carbon-block-uv",
+    "route_type" : "filter_type",
+    "route_key" : "carbon-block-uv",
+    "url" : "/filters/types/carbon-block-uv",
+    "title" : "Carbon Block Uv PFAS filter records",
+    "summary" : "Compare normalized carbon block uv PFAS records without flattening upkeep, cadence, or installation constraints.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Carbon Block Uv", "Carbon Block Uv PFAS filter records", "PFAS", "certified filter", "Amway", "eSpring Under the Counter Unit with Aux Faucet", "Under Sink Aux Faucet" ]
+  }, {
+    "document_id" : "filter_type:carbon-fiber",
+    "route_type" : "filter_type",
+    "route_key" : "carbon-fiber",
+    "url" : "/filters/types/carbon-fiber",
+    "title" : "Carbon fiber PFAS filter records",
+    "summary" : "Compare normalized carbon fiber PFAS records without flattening upkeep, cadence, or installation constraints.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Carbon fiber", "Carbon fiber PFAS filter records", "PFAS", "certified filter", "Waterdrop", "Electric Water Filter ED01", "Countertop", "ZeroWater", "ExtremeLife Faucet Mount Filter", "Faucet Mount" ]
+  }, {
+    "document_id" : "filter_type:ion-exchange",
+    "route_type" : "filter_type",
+    "route_key" : "ion-exchange",
+    "url" : "/filters/types/ion-exchange",
+    "title" : "Ion Exchange PFAS filter records",
+    "summary" : "Compare normalized ion exchange PFAS records without flattening upkeep, cadence, or installation constraints.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 7,
+    "keywords" : [ "Ion Exchange", "Ion Exchange PFAS filter records", "PFAS", "certified filter", "ZeroWater", "10 Cup Pitcher", "Pitcher", "23 Cup 5-Stage Water Filter Dispenser", "Dispenser", "30 Cup Ready-Pour Dispenser + 2 Filters", "5-Gallon Water Cooler Dispenser", "Cooler Dispenser", "7 Cup Ready-Pour Pitcher" ]
+  }, {
+    "document_id" : "filter_type:reverse-osmosis",
+    "route_type" : "filter_type",
+    "route_key" : "reverse-osmosis",
+    "url" : "/filters/types/reverse-osmosis",
+    "title" : "Reverse osmosis PFAS filter records",
+    "summary" : "Compare normalized reverse osmosis PFAS records without flattening upkeep, cadence, or installation constraints.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 40,
+    "keywords" : [ "Reverse osmosis", "Reverse osmosis PFAS filter records", "PFAS", "certified filter", "AquaTru", "Carafe", "Countertop", "Classic", "Freestanding Model 1", "Freestanding Dispenser", "Under Sink", "Under Sink Aux Faucet", "Aquasana", "OptimH2O Reverse Osmosis + Claryum", "SmartFlow Reverse Osmosis", "Waterdrop", "Alkaline Countertop Reverse Osmosis System K19-SFK", "C1H Instant Hot Water Reverse Osmosis System", "CoreRO Countertop Water Filter System C1S", "G3P600 Remineralization Reverse Osmosis System", "G5P500A Alkaline Water Filter System", "G5P700A Alkaline RO Filtration System", "G5P700A Pro Dual-Flow Alkaline Reverse Osmosis System", "Master X Series Reverse Osmosis System X10", "Master X Series Reverse Osmosis System X14", "RO Hot and Cold Water Dispenser A1", "Reverse Osmosis Hot and Cold Water Dispenser A2", "Reverse Osmosis Water Filtration System H9", "Tankless RO System G5P700", "Tankless Reverse Osmosis System G2", "Tankless Reverse Osmosis System G3P800", "X Series Reverse Osmosis System X12 Pro", "X Series Reverse Osmosis System X8 Pro", "X Series Undersink Reverse Osmosis System X12", "X Series Undersink Reverse Osmosis System X16", "X8 Alkaline RO System" ]
+  }, {
+    "document_id" : "public_water:3049000",
+    "route_type" : "public_water",
+    "route_key" : "3049000",
+    "url" : "/public-water/3049000",
+    "title" : "Cambridge Water Department PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Cambridge Water Department.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Cambridge Water Department", "MA", "3049000", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:3049000",
+    "route_type" : "public_water_support",
+    "route_key" : "3049000",
+    "url" : "/public-water-system/3049000",
+    "title" : "Cambridge Water Department PFAS source context",
+    "summary" : "Supporting source context and utility record file for Cambridge Water Department.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Cambridge Water Department", "MA", "3049000", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:7360058",
     "route_type" : "public_water",
@@ -190,6 +1103,17 @@
     "source_count" : 3,
     "keywords" : [ "City of Lancaster Water Department", "PA", "7360058", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:7360058",
+    "route_type" : "public_water_support",
+    "route_key" : "7360058",
+    "url" : "/public-water-system/7360058",
+    "title" : "City of Lancaster Water Department PFAS source context",
+    "summary" : "Supporting source context and utility record file for City of Lancaster Water Department.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "City of Lancaster Water Department", "PA", "7360058", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:AK2310730",
     "route_type" : "public_water",
     "route_key" : "AK2310730",
@@ -200,6 +1124,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Golden Heart Utilities", "AK", "AK2310730", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:AK2310730",
+    "route_type" : "public_water_support",
+    "route_key" : "AK2310730",
+    "url" : "/public-water-system/AK2310730",
+    "title" : "Golden Heart Utilities PFAS source context",
+    "summary" : "Supporting source context and utility record file for Golden Heart Utilities.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Golden Heart Utilities", "AK", "AK2310730", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:AK2310900",
     "route_type" : "public_water",
@@ -212,6 +1147,17 @@
     "source_count" : 4,
     "keywords" : [ "College Utilities Corporation", "AK", "AK2310900", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:AK2310900",
+    "route_type" : "public_water_support",
+    "route_key" : "AK2310900",
+    "url" : "/public-water-system/AK2310900",
+    "title" : "College Utilities Corporation PFAS source context",
+    "summary" : "Supporting source context and utility record file for College Utilities Corporation.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "College Utilities Corporation", "AK", "AK2310900", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:AZ0408063",
     "route_type" : "public_water",
     "route_key" : "AZ0408063",
@@ -222,6 +1168,61 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Bermuda Water Company", "AZ", "AZ0408063", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:AZ0408063",
+    "route_type" : "public_water_support",
+    "route_key" : "AZ0408063",
+    "url" : "/public-water-system/AZ0408063",
+    "title" : "Bermuda Water Company PFAS source context",
+    "summary" : "Supporting source context and utility record file for Bermuda Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Bermuda Water Company", "AZ", "AZ0408063", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:CA1910036",
+    "route_type" : "public_water",
+    "route_key" : "CA1910036",
+    "url" : "/public-water/CA1910036",
+    "title" : "Cal Water East Los Angeles PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Cal Water East Los Angeles.",
+    "last_verified_date" : "2026-03-23",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cal Water East Los Angeles", "CA", "CA1910036", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:CA1910036",
+    "route_type" : "public_water_support",
+    "route_key" : "CA1910036",
+    "url" : "/public-water-system/CA1910036",
+    "title" : "Cal Water East Los Angeles PFAS source context",
+    "summary" : "Supporting source context and utility record file for Cal Water East Los Angeles.",
+    "last_verified_date" : "2026-03-23",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cal Water East Los Angeles", "CA", "CA1910036", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:CA3410020",
+    "route_type" : "public_water",
+    "route_key" : "CA3410020",
+    "url" : "/public-water/CA3410020",
+    "title" : "City of Sacramento Main PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for City of Sacramento Main.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "City of Sacramento Main", "CA", "CA3410020", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:CA3410020",
+    "route_type" : "public_water_support",
+    "route_key" : "CA3410020",
+    "url" : "/public-water-system/CA3410020",
+    "title" : "City of Sacramento Main PFAS source context",
+    "summary" : "Supporting source context and utility record file for City of Sacramento Main.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "City of Sacramento Main", "CA", "CA3410020", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL3354647",
     "route_type" : "public_water",
@@ -234,6 +1235,17 @@
     "source_count" : 4,
     "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL3354647",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3354647",
+    "url" : "/public-water-system/FL3354647",
+    "title" : "Four Lakes Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Four Lakes Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Four Lakes Water System", "FL", "FL3354647", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL3354695",
     "route_type" : "public_water",
     "route_key" : "FL3354695",
@@ -244,6 +1256,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Lake Saunders Water System", "FL", "FL3354695", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL3354695",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3354695",
+    "url" : "/public-water-system/FL3354695",
+    "title" : "Lake Saunders Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Lake Saunders Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Lake Saunders Water System", "FL", "FL3354695", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL3354883",
     "route_type" : "public_water",
@@ -256,6 +1279,17 @@
     "source_count" : 3,
     "keywords" : [ "Lake Utility Services North", "FL", "FL3354883", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL3354883",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3354883",
+    "url" : "/public-water-system/FL3354883",
+    "title" : "Lake Utility Services North PFAS source context",
+    "summary" : "Supporting source context and utility record file for Lake Utility Services North.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Lake Utility Services North", "FL", "FL3354883", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL3480255",
     "route_type" : "public_water",
     "route_key" : "FL3480255",
@@ -266,6 +1300,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Crescent Heights Water System", "FL", "FL3480255", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL3480255",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3480255",
+    "url" : "/public-water-system/FL3480255",
+    "title" : "Crescent Heights Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Crescent Heights Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Crescent Heights Water System", "FL", "FL3480255", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL3590069",
     "route_type" : "public_water",
@@ -278,6 +1323,17 @@
     "source_count" : 4,
     "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL3590069",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3590069",
+    "url" : "/public-water-system/FL3590069",
+    "title" : "Bear Lake Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Bear Lake Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Bear Lake Water System", "FL", "FL3590069", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL3590615",
     "route_type" : "public_water",
     "route_key" : "FL3590615",
@@ -288,6 +1344,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Jansen Water System", "FL", "FL3590615", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL3590615",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3590615",
+    "url" : "/public-water-system/FL3590615",
+    "title" : "Jansen Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Jansen Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Jansen Water System", "FL", "FL3590615", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL3590762",
     "route_type" : "public_water",
@@ -300,6 +1367,17 @@
     "source_count" : 4,
     "keywords" : [ "Little Wekiva Water System", "FL", "FL3590762", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL3590762",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3590762",
+    "url" : "/public-water-system/FL3590762",
+    "title" : "Little Wekiva Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Little Wekiva Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Little Wekiva Water System", "FL", "FL3590762", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL3590912",
     "route_type" : "public_water",
     "route_key" : "FL3590912",
@@ -310,6 +1388,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Oakland Shores Water System", "FL", "FL3590912", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL3590912",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3590912",
+    "url" : "/public-water-system/FL3590912",
+    "title" : "Oakland Shores Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Oakland Shores Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Oakland Shores Water System", "FL", "FL3590912", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL3591121",
     "route_type" : "public_water",
@@ -322,6 +1411,17 @@
     "source_count" : 3,
     "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL3591121",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3591121",
+    "url" : "/public-water-system/FL3591121",
+    "title" : "Sanlando Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Sanlando Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Sanlando Water System", "FL", "FL3591121", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL3591451",
     "route_type" : "public_water",
     "route_key" : "FL3591451",
@@ -332,6 +1432,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Weathersfield Water System", "FL", "FL3591451", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL3591451",
+    "route_type" : "public_water_support",
+    "route_key" : "FL3591451",
+    "url" : "/public-water-system/FL3591451",
+    "title" : "Weathersfield Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Weathersfield Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Weathersfield Water System", "FL", "FL3591451", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL6424076",
     "route_type" : "public_water",
@@ -344,6 +1455,17 @@
     "source_count" : 4,
     "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL6424076",
+    "route_type" : "public_water_support",
+    "route_key" : "FL6424076",
+    "url" : "/public-water-system/FL6424076",
+    "title" : "Golden Hills Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Golden Hills Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Golden Hills Water System", "FL", "FL6424076", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL6514842",
     "route_type" : "public_water",
     "route_key" : "FL6514842",
@@ -354,6 +1476,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Labrador Water System", "FL", "FL6514842", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL6514842",
+    "route_type" : "public_water_support",
+    "route_key" : "FL6514842",
+    "url" : "/public-water-system/FL6514842",
+    "title" : "Labrador Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Labrador Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Labrador Water System", "FL", "FL6514842", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:FL6521000",
     "route_type" : "public_water",
@@ -366,6 +1499,17 @@
     "source_count" : 4,
     "keywords" : [ "Lake Tarpon Water System", "FL", "FL6521000", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:FL6521000",
+    "route_type" : "public_water_support",
+    "route_key" : "FL6521000",
+    "url" : "/public-water-system/FL6521000",
+    "title" : "Lake Tarpon Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Lake Tarpon Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Lake Tarpon Water System", "FL", "FL6521000", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:FL6535055",
     "route_type" : "public_water",
     "route_key" : "FL6535055",
@@ -376,6 +1520,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Cypress Lakes Water System", "FL", "FL6535055", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:FL6535055",
+    "route_type" : "public_water_support",
+    "route_key" : "FL6535055",
+    "url" : "/public-water-system/FL6535055",
+    "title" : "Cypress Lakes Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Cypress Lakes Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cypress Lakes Water System", "FL", "FL6535055", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:GA3110075",
     "route_type" : "public_water",
@@ -388,6 +1543,17 @@
     "source_count" : 3,
     "keywords" : [ "Alpine Terrace Water System", "GA", "GA3110075", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:GA3110075",
+    "route_type" : "public_water_support",
+    "route_key" : "GA3110075",
+    "url" : "/public-water-system/GA3110075",
+    "title" : "Alpine Terrace Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Alpine Terrace Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Alpine Terrace Water System", "GA", "GA3110075", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:IL0855050",
     "route_type" : "public_water",
     "route_key" : "IL0855050",
@@ -398,6 +1564,17 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "Galena Water System", "IL", "IL0855050", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:IL0855050",
+    "route_type" : "public_water_support",
+    "route_key" : "IL0855050",
+    "url" : "/public-water-system/IL0855050",
+    "title" : "Galena Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Galena Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Galena Water System", "IL", "IL0855050", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:IL0855150",
     "route_type" : "public_water",
@@ -410,6 +1587,17 @@
     "source_count" : 4,
     "keywords" : [ "Apple Canyon Water System", "IL", "IL0855150", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:IL0855150",
+    "route_type" : "public_water_support",
+    "route_key" : "IL0855150",
+    "url" : "/public-water-system/IL0855150",
+    "title" : "Apple Canyon Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Apple Canyon Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Apple Canyon Water System", "IL", "IL0855150", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:IL1830600",
     "route_type" : "public_water",
     "route_key" : "IL1830600",
@@ -420,6 +1608,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Oakwood Water System", "IL", "IL1830600", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:IL1830600",
+    "route_type" : "public_water_support",
+    "route_key" : "IL1830600",
+    "url" : "/public-water-system/IL1830600",
+    "title" : "Oakwood Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Oakwood Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Oakwood Water System", "IL", "IL1830600", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:IL1975200",
     "route_type" : "public_water",
@@ -432,6 +1631,17 @@
     "source_count" : 4,
     "keywords" : [ "Camelot Water System", "IL", "IL1975200", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:IL1975200",
+    "route_type" : "public_water_support",
+    "route_key" : "IL1975200",
+    "url" : "/public-water-system/IL1975200",
+    "title" : "Camelot Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Camelot Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Camelot Water System", "IL", "IL1975200", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:IL2015160",
     "route_type" : "public_water",
     "route_key" : "IL2015160",
@@ -442,6 +1652,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:IL2015160",
+    "route_type" : "public_water_support",
+    "route_key" : "IL2015160",
+    "url" : "/public-water-system/IL2015160",
+    "title" : "Coventry Creek Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Coventry Creek Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Coventry Creek Water System", "IL", "IL2015160", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:IN5245057",
     "route_type" : "public_water",
@@ -454,6 +1675,17 @@
     "source_count" : 3,
     "keywords" : [ "Community Utilities of Indiana Inc.", "IN", "IN5245057", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:IN5245057",
+    "route_type" : "public_water_support",
+    "route_key" : "IN5245057",
+    "url" : "/public-water-system/IN5245057",
+    "title" : "Community Utilities of Indiana Inc. PFAS source context",
+    "summary" : "Supporting source context and utility record file for Community Utilities of Indiana Inc..",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Community Utilities of Indiana Inc.", "IN", "IN5245057", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:MD0120011",
     "route_type" : "public_water",
     "route_key" : "MD0120011",
@@ -464,6 +1696,39 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Green Ridge Utilities Inc.", "MD", "MD0120011", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:MD0120011",
+    "route_type" : "public_water_support",
+    "route_key" : "MD0120011",
+    "url" : "/public-water-system/MD0120011",
+    "title" : "Green Ridge Utilities Inc. PFAS source context",
+    "summary" : "Supporting source context and utility record file for Green Ridge Utilities Inc..",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Green Ridge Utilities Inc.", "MD", "MD0120011", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:MI0000220",
+    "route_type" : "public_water",
+    "route_key" : "MI0000220",
+    "url" : "/public-water/MI0000220",
+    "title" : "Ann Arbor Water Treatment Plant PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Ann Arbor Water Treatment Plant.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Ann Arbor Water Treatment Plant", "MI", "MI0000220", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:MI0000220",
+    "route_type" : "public_water_support",
+    "route_key" : "MI0000220",
+    "url" : "/public-water-system/MI0000220",
+    "title" : "Ann Arbor Water Treatment Plant PFAS source context",
+    "summary" : "Supporting source context and utility record file for Ann Arbor Water Treatment Plant.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Ann Arbor Water Treatment Plant", "MI", "MI0000220", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:NC0234191",
     "route_type" : "public_water",
@@ -476,6 +1741,17 @@
     "source_count" : 4,
     "keywords" : [ "Abington Water System", "NC", "NC0234191", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:NC0234191",
+    "route_type" : "public_water_support",
+    "route_key" : "NC0234191",
+    "url" : "/public-water-system/NC0234191",
+    "title" : "Abington Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Abington Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Abington Water System", "NC", "NC0234191", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:NC0353101",
     "route_type" : "public_water",
     "route_key" : "NC0353101",
@@ -486,6 +1762,39 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "Carolina Trace Water System", "NC", "NC0353101", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:NC0353101",
+    "route_type" : "public_water_support",
+    "route_key" : "NC0353101",
+    "url" : "/public-water-system/NC0353101",
+    "title" : "Carolina Trace Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Carolina Trace Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Carolina Trace Water System", "NC", "NC0353101", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:NJ1103001",
+    "route_type" : "public_water",
+    "route_key" : "NJ1103001",
+    "url" : "/public-water/NJ1103001",
+    "title" : "Hamilton System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Hamilton System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Hamilton System", "NJ", "NJ1103001", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:NJ1103001",
+    "route_type" : "public_water_support",
+    "route_key" : "NJ1103001",
+    "url" : "/public-water-system/NJ1103001",
+    "title" : "Hamilton System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Hamilton System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Hamilton System", "NJ", "NJ1103001", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:NJ1914002",
     "route_type" : "public_water",
@@ -498,6 +1807,17 @@
     "source_count" : 4,
     "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:NJ1914002",
+    "route_type" : "public_water_support",
+    "route_key" : "NJ1914002",
+    "url" : "/public-water-system/NJ1914002",
+    "title" : "Montague Water Company PFAS source context",
+    "summary" : "Supporting source context and utility record file for Montague Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Montague Water Company", "NJ", "NJ1914002", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:NV0000036",
     "route_type" : "public_water",
     "route_key" : "NV0000036",
@@ -508,6 +1828,17 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "Spring Creek Housing Water System", "NV", "NV0000036", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:NV0000036",
+    "route_type" : "public_water_support",
+    "route_key" : "NV0000036",
+    "url" : "/public-water-system/NV0000036",
+    "title" : "Spring Creek Housing Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Spring Creek Housing Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Spring Creek Housing Water System", "NV", "NV0000036", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:NV0000207",
     "route_type" : "public_water",
@@ -520,6 +1851,17 @@
     "source_count" : 4,
     "keywords" : [ "Cold Springs Water Company", "NV", "NV0000207", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:NV0000207",
+    "route_type" : "public_water_support",
+    "route_key" : "NV0000207",
+    "url" : "/public-water-system/NV0000207",
+    "title" : "Cold Springs Water Company PFAS source context",
+    "summary" : "Supporting source context and utility record file for Cold Springs Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Cold Springs Water Company", "NV", "NV0000207", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:NV0000408",
     "route_type" : "public_water",
     "route_key" : "NV0000408",
@@ -530,6 +1872,17 @@
     "indexable" : true,
     "source_count" : 4,
     "keywords" : [ "Calvada Meadows Water System", "NV", "NV0000408", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:NV0000408",
+    "route_type" : "public_water_support",
+    "route_key" : "NV0000408",
+    "url" : "/public-water-system/NV0000408",
+    "title" : "Calvada Meadows Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Calvada Meadows Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Calvada Meadows Water System", "NV", "NV0000408", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "public_water:NV0001086",
     "route_type" : "public_water",
@@ -542,6 +1895,17 @@
     "source_count" : 4,
     "keywords" : [ "Spanish Springs Water Company", "NV", "NV0001086", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:NV0001086",
+    "route_type" : "public_water_support",
+    "route_key" : "NV0001086",
+    "url" : "/public-water-system/NV0001086",
+    "title" : "Spanish Springs Water Company PFAS source context",
+    "summary" : "Supporting source context and utility record file for Spanish Springs Water Company.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Spanish Springs Water Company", "NV", "NV0001086", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:NV0005027",
     "route_type" : "public_water",
     "route_key" : "NV0005027",
@@ -553,6 +1917,39 @@
     "source_count" : 3,
     "keywords" : [ "Spring Creek Mobile Home Park Water System", "NV", "NV0005027", "public water", "CCR", "PFAS" ]
   }, {
+    "document_id" : "public_water_support:NV0005027",
+    "route_type" : "public_water_support",
+    "route_key" : "NV0005027",
+    "url" : "/public-water-system/NV0005027",
+    "title" : "Spring Creek Mobile Home Park Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Spring Creek Mobile Home Park Water System.",
+    "last_verified_date" : "2026-03-20",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Spring Creek Mobile Home Park Water System", "NV", "NV0005027", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:PA1460073",
+    "route_type" : "public_water",
+    "route_key" : "PA1460073",
+    "url" : "/public-water/PA1460073",
+    "title" : "Aqua Pennsylvania Main System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Aqua Pennsylvania Main System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Aqua Pennsylvania Main System", "PA", "PA1460073", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:PA1460073",
+    "route_type" : "public_water_support",
+    "route_key" : "PA1460073",
+    "url" : "/public-water-system/PA1460073",
+    "title" : "Aqua Pennsylvania Main System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Aqua Pennsylvania Main System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Aqua Pennsylvania Main System", "PA", "PA1460073", "public water", "PFAS source context", "CCR" ]
+  }, {
     "document_id" : "public_water:PA1510001",
     "route_type" : "public_water",
     "route_key" : "PA1510001",
@@ -563,6 +1960,61 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "Philadelphia Water Department", "PA", "PA1510001", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:PA1510001",
+    "route_type" : "public_water_support",
+    "route_key" : "PA1510001",
+    "url" : "/public-water-system/PA1510001",
+    "title" : "Philadelphia Water Department PFAS source context",
+    "summary" : "Supporting source context and utility record file for Philadelphia Water Department.",
+    "last_verified_date" : "2026-03-19",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Philadelphia Water Department", "PA", "PA1510001", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:PA2450065",
+    "route_type" : "public_water",
+    "route_key" : "PA2450065",
+    "url" : "/public-water/PA2450065",
+    "title" : "Penn Estates Water System PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Penn Estates Water System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Penn Estates Water System", "PA", "PA2450065", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:PA2450065",
+    "route_type" : "public_water_support",
+    "route_key" : "PA2450065",
+    "url" : "/public-water-system/PA2450065",
+    "title" : "Penn Estates Water System PFAS source context",
+    "summary" : "Supporting source context and utility record file for Penn Estates Water System.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 3,
+    "keywords" : [ "Penn Estates Water System", "PA", "PA2450065", "public water", "PFAS source context", "CCR" ]
+  }, {
+    "document_id" : "public_water:WA5377050",
+    "route_type" : "public_water",
+    "route_key" : "WA5377050",
+    "url" : "/public-water/WA5377050",
+    "title" : "Seattle Public Utilities PFAS interpretation",
+    "summary" : "Utility observations, benchmark context, and certified point-of-use next steps for Seattle Public Utilities.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Seattle Public Utilities", "WA", "WA5377050", "public water", "CCR", "PFAS" ]
+  }, {
+    "document_id" : "public_water_support:WA5377050",
+    "route_type" : "public_water_support",
+    "route_key" : "WA5377050",
+    "url" : "/public-water-system/WA5377050",
+    "title" : "Seattle Public Utilities PFAS source context",
+    "summary" : "Supporting source context and utility record file for Seattle Public Utilities.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "Seattle Public Utilities", "WA", "WA5377050", "public water", "PFAS source context", "CCR" ]
   }, {
     "document_id" : "state_guidance:CA",
     "route_type" : "state_guidance",
@@ -619,6 +2071,17 @@
     "source_count" : 3,
     "keywords" : [ "MN", "private well", "PFAS", "state guidance", "lab lookup" ]
   }, {
+    "document_id" : "state_guidance:NJ",
+    "route_type" : "state_guidance",
+    "route_key" : "NJ",
+    "url" : "/private-well/NJ",
+    "title" : "NJ private-well PFAS guide",
+    "summary" : "State guidance, lab lookup, and reference context for private-well PFAS interpretation in NJ.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 5,
+    "keywords" : [ "NJ", "private well", "PFAS", "state guidance", "lab lookup" ]
+  }, {
     "document_id" : "state_guidance:NY",
     "route_type" : "state_guidance",
     "route_key" : "NY",
@@ -629,6 +2092,17 @@
     "indexable" : true,
     "source_count" : 3,
     "keywords" : [ "NY", "private well", "PFAS", "state guidance", "lab lookup" ]
+  }, {
+    "document_id" : "state_guidance:PA",
+    "route_type" : "state_guidance",
+    "route_key" : "PA",
+    "url" : "/private-well/PA",
+    "title" : "PA private-well PFAS guide",
+    "summary" : "State guidance, lab lookup, and reference context for private-well PFAS interpretation in PA.",
+    "last_verified_date" : "2026-03-22",
+    "indexable" : true,
+    "source_count" : 4,
+    "keywords" : [ "PA", "private well", "PFAS", "state guidance", "lab lookup" ]
   }, {
     "document_id" : "state_guidance:VT",
     "route_type" : "state_guidance",

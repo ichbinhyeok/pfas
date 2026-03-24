@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "compare:countertop-vs-pitcher-vs-under-sink-compare",
   "route_type" : "compare",
   "route_key" : "countertop-vs-pitcher-vs-under-sink-compare",
@@ -13,9 +13,10 @@
   "payload" : {
     "compare_page" : {
       "slug" : "countertop-vs-pitcher-vs-under-sink-compare",
+      "editorialRank" : 4,
       "eyebrow" : "Compare page",
-      "title" : "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
-      "lede" : "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine.",
+      "title" : "Countertop vs pitcher vs under-sink PFAS filters",
+      "lede" : "Compare PFAS filter form factors by workflow, maintenance burden, and installation friction instead of treating them like a prestige ladder.",
       "queryIntent" : "Form-factor comparison",
       "nextActionTitle" : "Choose a form factor that the household will actually maintain",
       "nextActionSummary" : "The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
@@ -29,7 +30,7 @@
       "relatedProductIds" : [ "zerowater-7-cup-pitcher", "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-model-1", "aquasana-aq-mf-1", "aquasana-aq-6200", "waterdrop-ed01", "waterdrop-c1s" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "zerowater-performance-certification", "aq-clean-water-machine-product", "aquatru-classic-product", "aquatru-model-1-product", "aq-claryum-direct-connect-product", "waterdrop-ed01-product", "waterdrop-c1s-product" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
       "secondaryLabel" : "Read form-factor guide",
       "lastVerifiedDate" : "2026-03-20",

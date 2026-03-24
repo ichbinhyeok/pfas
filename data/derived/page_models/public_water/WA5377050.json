@@ -1,0 +1,129 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.711380+09:00",
+  "model_id" : "public_water:WA5377050",
+  "route_type" : "public_water",
+  "route_key" : "WA5377050",
+  "template_kind" : "public_water_result_page",
+  "render_path" : "/public-water/WA5377050",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "WA5377050",
+      "pwsName" : "Seattle Public Utilities",
+      "stateCode" : "WA",
+      "systemType" : "community",
+      "populationServed" : "1400000",
+      "sourceWaterType" : "surface_water",
+      "utilityWebsiteUrl" : "https://www.seattle.gov/utilities",
+      "ccrUrl" : "https://www.seattle.gov/utilities/about/reports/water-quality",
+      "pfasNoticeUrl" : "https://www.seattle.gov/utilities/your-services/water/water-quality/quality-concerns/pfas",
+      "serviceAreaNotes" : "Seattle Public Utilities regional surface-water system with official PFAS reporting showing no 2023 Cedar or Tolt finished-water detections across the mapped analytes on the utility PFAS page.",
+      "lastVerifiedDate" : "2026-03-22",
+      "sourceIds" : [ "seattle-utilities-home", "seattle-water-quality-reports", "seattle-pfas-page", "seattle-water-system-plan-2019" ]
+    },
+    "result" : {
+      "result_id" : "public-water:WA5377050",
+      "schema_version" : "v1",
+      "generated_at" : "2026-03-24T14:57:20.710872+09:00",
+      "next_action" : {
+        "code" : "KEEP_MONITORING_UTILITY_UPDATES",
+        "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
+        "summary" : "The current normalized utility observations are below the selected benchmark, so there is no immediate escalation from this data alone.",
+        "confidence" : "high",
+        "scope_note" : "Public water utility interpretation; not a household tap test result."
+      },
+      "why_this" : [ "This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Certified point-of-use is treated as the first escalation class only after the utility record is interpretable." ],
+      "what_this_does_not_tell_you" : [ "This is not a household tap test.", "Future utility updates can change the picture.", "Do not convert this into a blanket safe or unsafe claim." ],
+      "initial_cost" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "confidence" : "low",
+        "notes" : [ "No normalized upfront cost is available for the current option set." ]
+      },
+      "annual_cost_maintenance" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "maintenance_burden" : "unknown",
+        "cadence_notes" : [ ],
+        "notes" : [ "No normalized annual replacement cost is available for the current option set." ]
+      },
+      "certification_checklist" : [ {
+        "label" : "Claim-level listing for the specific PFAS you care about",
+        "required" : true,
+        "detail" : "Verify the listing record names the PFAS reduction claim directly instead of inferring from a product category.",
+        "source_id" : "nsf-dwtu-listings"
+      }, {
+        "label" : "Match the certification standard to the actual claim",
+        "required" : true,
+        "detail" : "Use NSF ANSI 53 or an equivalent claim-level listing only when the record explicitly carries the reduction claim.",
+        "source_id" : "epa-certified-pfas-filter-guidance"
+      }, {
+        "label" : "Check replacement cadence and cartridge capacity before buying",
+        "required" : true,
+        "detail" : "Cost and maintenance burden change materially if cadence is annual vs more frequent.",
+        "source_id" : "amway-espring-100186-cartridge"
+      } ],
+      "best_fit_options" : [ ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade." ],
+      "sources" : [ {
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "seattle-pfas-page",
+        "organization" : "Seattle Public Utilities",
+        "title" : "PFAS",
+        "url" : "https://www.seattle.gov/utilities/your-services/water/water-quality/quality-concerns/pfas",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "seattle-utilities-home",
+        "organization" : "Seattle Public Utilities",
+        "title" : "Seattle Public Utilities",
+        "url" : "https://www.seattle.gov/utilities",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "seattle-water-quality-reports",
+        "organization" : "Seattle Public Utilities",
+        "title" : "Water Quality Annual Reports",
+        "url" : "https://www.seattle.gov/utilities/about/reports/water-quality",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "seattle-water-system-plan-2019",
+        "organization" : "Seattle Public Utilities",
+        "title" : "SPU Final 2019 Water System Plan Volume 1",
+        "url" : "https://www.seattle.gov/documents/Departments/SPU/Documents/SPUFinal2019_WSP_Volume1.pdf",
+        "trust_tier" : 2
+      } ],
+      "meta" : {
+        "water_source_type" : "public_water",
+        "benchmark_relation" : "not_detected",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR",
+        "manual_review_required" : false
+      }
+    },
+    "decision_input" : {
+      "input_id" : "public_water:WA5377050",
+      "route_type" : "public_water",
+      "route_key" : "WA5377050",
+      "water_source" : "PUBLIC_WATER",
+      "direct_data_status" : "UTILITY_DOCUMENT",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : null,
+      "pwsid" : "WA5377050",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/WA5377050",
+      "secondary_path" : "/public-water-system/WA5377050",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+    },
+    "supporting_path" : "/public-water-system/WA5377050"
+  }
+}

@@ -37,7 +37,6 @@
                         <span class="inline-flex rounded-full bg-white/10 px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/78">${page.eyebrow()}</span>
                         <h1 class="max-w-5xl text-4xl font-semibold tracking-[-0.055em] text-white sm:text-5xl lg:text-[4rem] lg:leading-[0.98]">
                             ${page.title()}
-                            <span class="font-serif font-medium text-white/72">without flattening the tradeoffs.</span>
                         </h1>
                         <p class="max-w-3xl text-lg leading-8 text-white/72">${page.lede()}</p>
                     </div>
@@ -46,7 +45,7 @@
                     <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="${page.primaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:primary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.primaryHref()}" data-route-click-cta-slot="compare_primary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.primaryLabel()}</a>
                     <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${page.secondaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:secondary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.secondaryHref()}" data-route-click-cta-slot="compare_secondary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.secondaryLabel()}</a>
                     @if(!relatedProducts.isEmpty())
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#compare-product-lane">Open compare lane</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#compare-product-lane">Review compared products</a>
                     @endif
                 </div>
                 </div>

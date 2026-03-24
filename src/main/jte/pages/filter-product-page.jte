@@ -44,9 +44,9 @@
                             data-unlock-state="${commercialState.code()}"
                             data-next-action-code="OPEN_FILTER_PRODUCT"
                             data-target-url="${surface.product().listingUrl()}"
-                        >Open ${surface.merchantLabel()} record</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${surface.brandPath()}">Open brand lane</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${surface.merchantPath()}">Open merchant lane</a>
+                        >Review ${surface.merchantLabel()} record</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${surface.brandPath()}">Review brand records</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${surface.merchantPath()}">Review merchant records</a>
                     </div>
                 </div>
 

@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.692464500+09:00",
+  "model_id" : "public_water_support:GA3110075",
+  "route_type" : "public_water_support",
+  "route_key" : "GA3110075",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/GA3110075",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "GA3110075",
+      "pwsName" : "Alpine Terrace Water System",
+      "stateCode" : "GA",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.mywater.us/georgia",
+      "ccrUrl" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/alpineterrace-24ccr-742dbad5fe5853362838a44ff0000903d3d.pdf?sfvrsn=a19e3d5b_4",
+      "pfasNoticeUrl" : "https://www.mywater.us/docs/mywateruslibraries/water-quality-reports/ga-pfas-2023-alpine-terace-742.pdf?sfvrsn=f39a3d5b_4",
+      "serviceAreaNotes" : "Utilities Inc. of Georgia community groundwater system using a single rock aquifer well with a 2023 PFAS report showing non-detects across mapped analytes",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "georgia-water-home", "alpine-terrace-2024-water-quality-report", "alpine-terrace-pfas-2023-report" ]
+    }
+  }
+}

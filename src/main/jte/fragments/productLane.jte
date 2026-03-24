@@ -82,7 +82,7 @@
                                     data-unlock-state="${unlockState}"
                                     data-next-action-code="${nextActionCode}"
                                     data-target-url="${product.listingUrl()}"
-                                >Open ${PresentationText.merchantLabel(product)} record</a>
+                                >Review ${PresentationText.merchantLabel(product)} record</a>
 
                                 <details class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
                                     <summary class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Decision details</summary>
@@ -152,7 +152,7 @@
                                             data-unlock-state="${unlockState}"
                                             data-next-action-code="${nextActionCode}"
                                             data-target-url="${product.listingUrl()}"
-                                        >Open ${PresentationText.merchantLabel(product)} record</a>
+                                        >Review ${PresentationText.merchantLabel(product)} record</a>
                                     </div>
                                 </article>
                             @endfor

@@ -32,7 +32,7 @@ public class SiteMetadataService {
 	public String editorialOwner() {
 		var raw = siteProperties.editorialOwner();
 		if (raw == null || raw.isBlank()) {
-			return "PFAS Decision Engine operator (not publicly named)";
+			return "gabi Editorial Team";
 		}
 		return raw;
 	}
@@ -40,7 +40,7 @@ public class SiteMetadataService {
 	public String methodologyOwner() {
 		var raw = siteProperties.methodologyOwner();
 		if (raw == null || raw.isBlank()) {
-			return "PFAS Decision Engine methodology owner (not publicly named)";
+			return "gabi Water Evidence Team";
 		}
 		return raw;
 	}

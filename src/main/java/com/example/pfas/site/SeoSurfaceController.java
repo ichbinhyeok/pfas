@@ -28,6 +28,7 @@ public class SeoSurfaceController {
 			"User-agent: *",
 			"Allow: /",
 			"Disallow: /internal/",
+			"Disallow: /admin",
 			"Disallow: /checker",
 			"Disallow: /private-well-result/",
 			"Sitemap: " + siteMetadataService.absoluteUrl("/sitemap.xml")

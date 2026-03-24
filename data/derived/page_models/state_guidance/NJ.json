@@ -1,0 +1,82 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.711380+09:00",
+  "model_id" : "state_guidance:NJ",
+  "route_type" : "state_guidance",
+  "route_key" : "NJ",
+  "template_kind" : "private_well_state_page",
+  "render_path" : "/private-well/NJ",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 5,
+  "payload" : {
+    "guidance" : {
+      "schema_version" : "v1",
+      "state_code" : "NJ",
+      "agency_name" : "New Jersey Department of Health / New Jersey Department of Environmental Protection",
+      "agency_url" : "https://www.nj.gov/health/ceohs/environmental-occupational/private-well-outreach/",
+      "private_well_guidance_url" : "https://www.nj.gov/health/ceohs/environmental-occupational/private-well-outreach/",
+      "pfas_guidance_url" : "https://www.nj.gov/health/ceohs/documents/pfas_well_water.pdf",
+      "certified_lab_lookup_url" : "https://njems.nj.gov/DataMiner/DM_REPORT.aspx?RN=Laboratories+Certified+for+PWTA+Sample+Collection&TOT=1",
+      "sampling_guidance_url" : "https://www.nj.gov/health/ceohs/documents/pw_faq.pdf",
+      "repeat_testing_guidance" : "New Jersey private well owners should use PWTA timing, local conditions, and NJDOH or NJDEP guidance rather than a single Sharp v1 retest cadence. The route should keep certified-lab collection and follow-up context visible.",
+      "benchmark_notes" : "New Jersey has state PFAS drinking-water standards and PWTA-related private well context, but private wells remain owner-managed. Outputs should stay reference-based and should not be framed as household compliance findings.",
+      "last_verified_date" : "2026-03-22",
+      "source_ids" : [ "nj-private-well-outreach", "nj-pfas-private-well-factsheet", "nj-private-wells-factsheet", "nj-pwta-certified-labs", "nj-pfas-mcl-transition-letter" ]
+    },
+    "profile" : {
+      "state_code" : "NJ",
+      "profile_kind" : "state_mcls_with_private_well_transition_notes",
+      "primary_reference_label" : "New Jersey PFAS drinking-water standards used with PWTA private-well context",
+      "comparability_mode" : "state_action_level_numeric_with_transition_notes",
+      "summary" : "New Jersey already regulates PFOA, PFOS, and PFNA in drinking water and requires PFAS testing under the Private Well Testing Act. For Sharp v1, New Jersey gives unusually direct private-well reference context for covered analytes, but the route should still keep the current state-to-federal transition and certified-lab workflow visible.",
+      "benchmarks" : [ {
+        "contaminant_code" : "PFOA",
+        "label" : "New Jersey MCL for PFOA",
+        "benchmark_display" : "14 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "direct_for_pfoa",
+        "note" : "New Jersey currently enforces a 14 ppt state MCL for PFOA while state-federal transition work continues."
+      }, {
+        "contaminant_code" : "PFOS",
+        "label" : "New Jersey MCL for PFOS",
+        "benchmark_display" : "13 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "direct_for_pfos",
+        "note" : "New Jersey currently enforces a 13 ppt state MCL for PFOS."
+      }, {
+        "contaminant_code" : "PFNA",
+        "label" : "New Jersey MCL for PFNA",
+        "benchmark_display" : "13 ppt",
+        "unit" : "ppt",
+        "benchmark_type" : "state_mcl",
+        "applicability" : "direct_for_pfna",
+        "note" : "New Jersey currently enforces a 13 ppt state MCL for PFNA and includes PFNA in PWTA-required PFAS testing."
+      } ],
+      "private_well_use_note" : "Use New Jersey's PFOA, PFOS, and PFNA standards as reference context for covered analytes and keep PWTA-certified sampling and local follow-up in view. The route should not present a private well as if it were a regulated community system.",
+      "last_verified_date" : "2026-03-22",
+      "source_ids" : [ "nj-pfas-mcl-transition-letter", "nj-pfas-private-well-factsheet", "nj-private-wells-factsheet" ]
+    },
+    "entry_decision_input" : {
+      "input_id" : "state_guidance:NJ",
+      "route_type" : "state_guidance",
+      "route_key" : "NJ",
+      "water_source" : "PRIVATE_WELL",
+      "direct_data_status" : "NONE",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : "NJ",
+      "pwsid" : null,
+      "recommended_route_code" : "PRIVATE_WELL_TEST_FIRST",
+      "primary_path" : "/private-well/NJ",
+      "secondary_path" : "/guides/test-first-vs-filter-first",
+      "summary" : "No direct well test is available yet, so the engine should route the household to a state-guided lab and sampling workflow before any product comparison."
+    },
+    "sample_result_path" : "/private-well-result/NJ?benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&wholeHouseConsidered=false"
+  }
+}

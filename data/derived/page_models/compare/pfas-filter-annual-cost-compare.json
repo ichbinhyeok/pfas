@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "compare:pfas-filter-annual-cost-compare",
   "route_type" : "compare",
   "route_key" : "pfas-filter-annual-cost-compare",
@@ -13,9 +13,10 @@
   "payload" : {
     "compare_page" : {
       "slug" : "pfas-filter-annual-cost-compare",
+      "editorialRank" : 5,
       "eyebrow" : "Compare page",
-      "title" : "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
-      "lede" : "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path.",
+      "title" : "PFAS filter cost per year: pitcher vs under-sink vs RO",
+      "lede" : "Compare PFAS filter cost per year so a lower checkout price cannot hide a worse maintenance and ownership path.",
       "queryIntent" : "Cost comparison",
       "nextActionTitle" : "Compare yearly ownership before you compare headline price",
       "nextActionSummary" : "A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
@@ -29,7 +30,7 @@
       "relatedProductIds" : [ "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-under-sink", "espring-122941", "waterdrop-g3p600", "waterdrop-c1s" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "aq-claryum-direct-connect-product", "aq-claryum-direct-connect-replacement", "amway-espring-100186-cartridge", "aquatru-classic-product", "aquatru-under-sink-product", "waterdrop-g3p600-product", "waterdrop-c1s-product" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",
       "secondaryLabel" : "Read cost guide",
       "lastVerifiedDate" : "2026-03-20",

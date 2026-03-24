@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.654186400+09:00",
+  "model_id" : "public_water_support:AK2310730",
+  "route_type" : "public_water_support",
+  "route_key" : "AK2310730",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/AK2310730",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "AK2310730",
+      "pwsName" : "Golden Heart Utilities",
+      "stateCode" : "AK",
+      "systemType" : "community",
+      "populationServed" : "32324",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/akwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/akwater/water-quality-reports/golden-heart-utilities/2025/ghu-ccr-2025.pdf",
+      "serviceAreaNotes" : "Fairbanks-area community groundwater system with 2024 PFAS values reported in the 2025 utility water quality report",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "alaska-water-home", "alaska-water-quality-reports", "alaska-dww-golden-heart-system-detail", "golden-heart-2025-water-quality-report" ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.668881400+09:00",
+  "model_id" : "public_water_support:FL3591121",
+  "route_type" : "public_water_support",
+  "route_key" : "FL3591121",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/FL3591121",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "FL3591121",
+      "pwsName" : "Sanlando Water System",
+      "stateCode" : "FL",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "unknown",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/regulatory/sanlando-umcr5-public-notification-%28p-1-2%29.pdf?sfvrsn=e12b385b_0",
+      "serviceAreaNotes" : "Sunshine Water Services community system in Altamonte Springs currently represented by a 2024 UCMR5 PFAS notice showing low-level PFOA, PFOS, and PFHxS detections from 2024 sampling.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "sanlando-umcr5-2024-notice" ]
+    }
+  }
+}

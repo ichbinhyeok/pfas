@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:non-detect-vs-below-reference-pfas",
   "route_type" : "guide",
   "route_key" : "non-detect-vs-below-reference-pfas",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "non-detect-vs-below-reference-pfas",
+      "editorialRank" : 14,
       "eyebrow" : "Decision-intent guide",
       "title" : "Non-detect and below reference are not the same PFAS answer",
       "lede" : "A non-detect result and a below-reference detection both feel reassuring, but they mean different things for confidence, monitoring, and product urgency.",

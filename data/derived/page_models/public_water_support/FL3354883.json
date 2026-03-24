@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.663322900+09:00",
+  "model_id" : "public_water_support:FL3354883",
+  "route_type" : "public_water_support",
+  "route_key" : "FL3354883",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/FL3354883",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "FL3354883",
+      "pwsName" : "Lake Utility Services North",
+      "stateCode" : "FL",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "unknown",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/sunshinewater/water-safety/water-quality-reports",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/general/lus-n-umcr5-public-notification-8-2024.pdf?sfvrsn=b1de3a5b_0",
+      "serviceAreaNotes" : "Sunshine Water Services community system in Altamonte Springs currently represented by a 2024 UCMR5 PFAS notice showing elevated PFOA and PFOS averages while broader report discovery continues from the official report index.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "lusi-north-umcr5-2024-notice" ]
+    }
+  }
+}

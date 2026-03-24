@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:ccr-without-pfas-line",
+  "route_type" : "guide",
+  "route_key" : "ccr-without-pfas-line",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/ccr-without-pfas-line",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "ccr-without-pfas-line",
+      "editorialRank" : 5,
+      "eyebrow" : "High-intent guide",
+      "title" : "No PFAS line in your CCR is not the end of the question",
+      "lede" : "A CCR without an obvious PFAS line can still be useful, but it should push the household toward the system record, report date, and newer utility PFAS materials instead of a false all-clear.",
+      "queryIntent" : "CCR interpretation gap",
+      "nextActionTitle" : "Use the CCR to find the next direct utility layer",
+      "nextActionSummary" : "If PFAS is not obvious in the annual report, check the report year, system identity, and whether a newer PFAS notice or utility page exists before treating the route as settled.",
+      "whyThis" : [ "A CCR is time-bound and can lag newer PFAS notices or utility updates.", "A missing PFAS line is not the same thing as a household tap result.", "The useful move is to continue reading the utility record, not to jump straight into a buying flow." ],
+      "whatThisDoesNotTellYou" : [ "It does not prove the water is safe.", "It does not replace a newer PFAS utility page or notice.", "It does not justify whole-house or product urgency on its own." ],
+      "checklist" : [ "Confirm the report year and the exact system.", "Look for a newer PFAS-specific utility page or notice.", "Only then decide whether interpretation or optional point-of-use comparison should open." ],
+      "evidenceHighlights" : [ "EPA CCR guidance makes the report a routing document, not a household verdict.", "Utility-specific notices can outrank an older annual report.", "The route stays public-water-first until direct utility context is exhausted." ],
+      "targetQueries" : [ "no pfas in ccr what does it mean", "ccr does not mention pfas", "consumer confidence report no pfas line" ],
+      "relatedPwsids" : [ "PA1510001", "FL3590615", "FL3354695", "GA3110075" ],
+      "relatedProductIds" : [ ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "lancaster-pfoa-notice-2025", "epa-ucmr5-main" ],
+      "primaryHref" : "/guides/read-your-ccr",
+      "primaryLabel" : "Read the CCR guide",
+      "secondaryHref" : "/guides/how-to-read-a-pfas-utility-notice",
+      "secondaryLabel" : "Read the notice guide",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "A missing PFAS line is still a routing clue",
+        "summary" : "The useful question is not whether the CCR feels reassuring. It is whether the report gives you the exact system, timing, and next place to look.",
+        "paragraphs" : [ "A public-water household should treat the CCR as the start of the direct evidence stack. If the PFAS detail is missing or thin, that usually means the route should move to newer utility material rather than to generalized guessing.", "That is why this state should stay interpretive. The absence of a visible PFAS line is not a product trigger and not a household all-clear." ],
+        "bullets" : [ "Use the report year to judge freshness.", "Use the system name and PWSID to find newer utility records.", "Do not convert a thin CCR into a final household answer." ]
+      }, {
+        "title" : "What to do next instead of overreacting",
+        "summary" : "Keep the route disciplined: utility page, notice, then optional comparison only if the record supports it.",
+        "paragraphs" : [ "If a newer PFAS page or notice exists, it should outrank the annual report for current decision-making. If no newer direct material is visible, the household can stay in a review-first posture rather than turning uncertainty into a shopping cue.", "This is where many weak PFAS pages fail. They use ambiguity to sell hardware. The better move is to make the direct record more complete first." ],
+        "bullets" : [ "Uncertainty should stay visible.", "Comparison opens only after the utility route is interpretable.", "Whole-house remains a separate escalation case." ]
+      } ]
+    }
+  }
+}

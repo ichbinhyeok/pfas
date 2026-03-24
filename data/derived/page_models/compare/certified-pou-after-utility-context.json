@@ -1,0 +1,55 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "compare:certified-pou-after-utility-context",
+  "route_type" : "compare",
+  "route_key" : "certified-pou-after-utility-context",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/certified-pou-after-utility-context",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 8,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "certified-pou-after-utility-context",
+      "editorialRank" : 2,
+      "eyebrow" : "Compare page",
+      "title" : "Certified point-of-use after a utility PFAS record should stay narrow and claim-led",
+      "lede" : "This compare page is for households that already read the utility record and now need a disciplined point-of-use lane instead of a panic-buy roundup.",
+      "queryIntent" : "Post-utility treatment comparison",
+      "nextActionTitle" : "Compare certified point-of-use only after the utility route is interpretable",
+      "nextActionSummary" : "If the utility path is already anchored, compare certified point-of-use by claim scope, upkeep, and installation burden rather than by fear or badge shorthand alone.",
+      "comparisonAxes" : [ "Claim-level PFAS support", "Installation class and maintenance burden", "Annualized ownership band", "Whether the product stays proportionate to an ingestion-focused public-water route" ],
+      "whyThis" : [ "A utility notice or CCR reading often narrows the right treatment class without settling the exact model.", "Public-water households need a compare page that opens after evidence, not before it.", "This lane blocks whole-house overreach by keeping the compare set anchored to point-of-use." ],
+      "whatThisDoesNotTellYou" : [ "This page does not replace the utility record.", "It does not prove every certified model fits every public-water route.", "It does not justify whole-house treatment." ],
+      "evidenceHighlights" : [ "EPA filter guidance keeps certified filter review tied to exact claims.", "Utility records are the first evidence layer for public-water households.", "A narrower compare lane improves both conversion quality and route discipline." ],
+      "targetQueries" : [ "pfas filter after utility notice", "best pfas filter after ccr", "certified pfas filter after utility report" ],
+      "relatedGuideSlugs" : [ "read-your-ccr", "how-to-read-a-pfas-utility-notice", "ccr-without-pfas-line", "choose-certified-pfas-filter-after-evidence" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "FL3590615", "FL3354695", "GA3110075" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-6300", "aquatru-under-sink", "espring-122941", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-direct-connect-product", "aq-claryum-2-stage-product", "aquatru-under-sink-product", "nsf-espring-listing-053", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/choose-certified-pfas-filter-after-evidence",
+      "secondaryLabel" : "Read post-evidence guide",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why this compare page exists after the utility read",
+        "summary" : "A public-water household often needs one more step after interpretation: a tighter compare set, not a wider search.",
+        "paragraphs" : [ "Once the utility route is interpretable, the question usually becomes which certified point-of-use class stays proportionate to the current objective. That is a better question than which product page feels most serious.", "This compare page exists to keep that second step narrow. It treats the utility record as the opener and the model compare as the follow-through." ],
+        "bullets" : [ "Utility first.", "Point-of-use second.", "Whole-house remains a separate review." ]
+      }, {
+        "title" : "What a public-water compare should reward",
+        "summary" : "Claim fit and upkeep quality should decide the shortlist more than prestige or loud marketing.",
+        "paragraphs" : [ "A stronger public-water compare page should make it easy to eliminate the wrong ownership burden early. Some households need simpler direct-connect or under-sink carbon options. Others will tolerate RO ownership. The route should make that distinction visible.", "That means certification, annual cost, and installation class stay on the same screen as the click path." ],
+        "bullets" : [ "Claim scope matters.", "Maintenance burden matters.", "The right model is often the narrowest defendable fit." ]
+      }, {
+        "title" : "Why this lane helps search and trust",
+        "summary" : "Search users often want a filter answer when they really need a post-record compare lane.",
+        "paragraphs" : [ "That mismatch is what weak sites exploit. This page turns the same query into a calmer decision step by assuming the utility record already happened and by refusing to widen the scope beyond point-of-use.", "It is commercial, but it stays bounded by the same evidence posture as the rest of the engine." ],
+        "bullets" : [ "It answers a buying query without skipping interpretation.", "It narrows the commercial lane.", "It improves merchant click quality by keeping the route explicit." ]
+      } ]
+    }
+  }
+}

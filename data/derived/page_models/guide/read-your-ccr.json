@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:read-your-ccr",
   "route_type" : "guide",
   "route_key" : "read-your-ccr",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "read-your-ccr",
+      "editorialRank" : 3,
       "eyebrow" : "High-intent guide",
-      "title" : "How to read your CCR or utility report without turning it into a false household verdict",
-      "lede" : "A CCR is a routing tool, not a magic answer. The engine should use it to establish source, system, timing, and whether a newer PFAS notice or direct utility page exists.",
+      "title" : "How to read a CCR for PFAS: what to check first",
+      "lede" : "Use your CCR or utility report to find the system name, PWSID, report year, and any PFAS notes before comparing filters.",
       "queryIntent" : "Utility interpretation",
       "nextActionTitle" : "Use the CCR to find the next direct utility layer",
       "nextActionSummary" : "Read PWSID, report year, system source, and any PFAS or treatment notes before opening product comparison.",
@@ -28,9 +29,9 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-10ub-pro", "aquatru-under-sink" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "phila-2024-water-quality-report", "phila-pfas-management", "lancaster-2024-water-quality-report", "lancaster-pfoa-notice-2025" ],
       "primaryHref" : "/public-water-system/PA1510001",
-      "primaryLabel" : "Open seeded utility context",
+      "primaryLabel" : "Review seeded utility context",
       "secondaryHref" : "/checker",
-      "secondaryLabel" : "Open Action Checker",
+      "secondaryLabel" : "Check your PFAS next step",
       "lastVerifiedDate" : "2026-03-20",
       "sections" : [ {
         "title" : "Treat the CCR as a routing document, not a verdict",

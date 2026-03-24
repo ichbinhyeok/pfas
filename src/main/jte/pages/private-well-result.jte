@@ -63,8 +63,8 @@
                     </div>
 
                     <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.privateWellGuidanceUrl()}">Read official guidance</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${guidance.certifiedLabLookupUrl()}">Review certified lab lookup</a>
                         <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/guides/nsf-53-vs-58-pfas">Read certification basics</a>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                     <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Prepare the lab intake first.</h3>
                     <p class="mt-3 text-sm leading-7 text-base-content/68">Sampling context, benchmark relation, and current filter posture stay attached so the lab handoff is already structured before any referral exists.</p>
                     <div class="mt-4 flex flex-wrap items-center gap-3">
-                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Review certified lab lookup</a>
                         <button
                             type="button"
                             class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"
@@ -193,8 +193,8 @@
                     <h3 class="mt-3 text-xl font-semibold tracking-[-0.03em] text-base-content">Keep the agency route visible before hardware.</h3>
                     <p class="mt-3 text-sm leading-7 text-base-content/68">Retest cadence, reference posture, and official next steps stay visible here even when treatment is under evaluation.</p>
                     <div class="mt-4 flex flex-wrap items-center gap-3">
-                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
-                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/private-well/${guidance.stateCode()}">Open state guide</a>
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.privateWellGuidanceUrl()}">Read official guidance</a>
+                        <a class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/private-well/${guidance.stateCode()}">Read state guide</a>
                         <button
                             type="button"
                             class="btn btn-outline h-10 rounded-full border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200"

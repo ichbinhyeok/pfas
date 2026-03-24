@@ -31,7 +31,7 @@
 			body: payload,
 			keepalive: true
 		}).catch(function () {
-			// Static export or simple hosts may not expose the endpoint.
+			// Static exports or simple hosts may not expose the tracking endpoint.
 		});
 	}
 

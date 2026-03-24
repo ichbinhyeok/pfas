@@ -1,0 +1,55 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "compare:nevada-certified-pou-after-utility-context",
+  "route_type" : "compare",
+  "route_key" : "nevada-certified-pou-after-utility-context",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/nevada-certified-pou-after-utility-context",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-24",
+  "source_count" : 14,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "nevada-certified-pou-after-utility-context",
+      "editorialRank" : 9,
+      "eyebrow" : "Regional compare page",
+      "title" : "Nevada PFAS filters after a utility report: certified point-of-use options",
+      "lede" : "This compare page is for Nevada households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Spring Creek and Great Basin Water routes into one state answer.",
+      "queryIntent" : "Regional post-utility comparison",
+      "nextActionTitle" : "Keep the compare lane tied to the exact Nevada utility dossier",
+      "nextActionSummary" : "Use Nevada as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes" : [ "Claim-level PFAS support for an ingestion-focused route", "Installation class and maintenance burden", "Annualized ownership band", "Whether the product stays proportionate to a Nevada utility dossier" ],
+      "whyThis" : [ "Nevada now has multiple seeded utility dossiers with different PFAS posture.", "Households searching within Nevada still need a system-led compare lane rather than a statewide roundup.", "This page gives the project a narrower commercial lane than a generic best-filter page." ],
+      "whatThisDoesNotTellYou" : [ "This page does not replace the utility dossier.", "It does not turn one Nevada record into a fit for another system.", "It does not justify whole-house treatment." ],
+      "evidenceHighlights" : [ "Nevada now includes elevated Spring Creek records and quieter Great Basin Water dossiers.", "EPA filter guidance still keeps claim review tied to exact certified products.", "A Nevada compare lane is strongest when it stays downstream from the system record." ],
+      "targetQueries" : [ "nevada pfas filter after utility report", "nevada pfas filter after water notice", "certified pfas filter nevada utility" ],
+      "relatedGuideSlugs" : [ "nevada-pfas-utility-records", "read-your-ccr", "how-to-read-a-pfas-utility-notice", "choose-certified-pfas-filter-after-evidence" ],
+      "relatedPwsids" : [ "NV0005027", "NV0000036", "NV0000408", "NV0000207", "NV0001086" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "great-basin-water-home", "great-basin-water-quality-reports", "spring-creek-mobile-home-2024-water-quality-report", "spring-creek-housing-2024-water-quality-report", "calvada-meadows-2024-water-quality-report", "cold-springs-pfas-2023-report", "spanish-springs-pfas-2023-report", "aq-claryum-direct-connect-product", "aq-claryum-2-stage-product", "aquatru-under-sink-product", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/guides/nevada-pfas-utility-records",
+      "primaryLabel" : "Read Nevada utility guide",
+      "secondaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NV0005027",
+      "secondaryLabel" : "Check Nevada utility route",
+      "lastVerifiedDate" : "2026-03-24",
+      "sections" : [ {
+        "title" : "Why Nevada needs its own post-utility compare lane",
+        "summary" : "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending Nevada is one PFAS document.",
+        "paragraphs" : [ "The Nevada cluster now includes multiple public-water dossiers with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.", "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads." ],
+        "bullets" : [ "Nevada is the navigation layer.", "The exact utility dossier is the evidence layer.", "Certified point-of-use is the commercial layer." ]
+      }, {
+        "title" : "What the shortlist should reward",
+        "summary" : "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+        "paragraphs" : [ "A Nevada household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.", "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification." ],
+        "bullets" : [ "Claim fit first.", "Maintenance honesty second.", "Whole-house remains outside this lane." ]
+      }, {
+        "title" : "How this protects both trust and conversion quality",
+        "summary" : "It gives Nevada users a buying step without rewriting the record they just read.",
+        "paragraphs" : [ "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.", "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path." ],
+        "bullets" : [ "It answers a commercial query without skipping interpretation.", "It improves click quality by narrowing the path.", "It keeps Nevada from collapsing into location-spam commerce." ]
+      } ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.706350+09:00",
+  "model_id" : "public_water_support:NV0000207",
+  "route_type" : "public_water_support",
+  "route_key" : "NV0000207",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/NV0000207",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "NV0000207",
+      "pwsName" : "Cold Springs Water Company",
+      "stateCode" : "NV",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/greatbasinwater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2024/cold-springs-24ccr-444.pdf?sfvrsn=d0b93f5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/nevada/water-quality-reports/cold-springs/2023/cold-springs-pfas23-444.pdf?sfvrsn=6add3a5b_4",
+      "serviceAreaNotes" : "Great Basin Water community groundwater system with separate 2023 PFAS reporting showing detectable PFOA and PFHxS with non-detect values for PFOS and PFNA",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "great-basin-water-home", "great-basin-water-quality-reports", "cold-springs-2024-water-quality-report", "cold-springs-pfas-2023-report" ]
+    }
+  }
+}

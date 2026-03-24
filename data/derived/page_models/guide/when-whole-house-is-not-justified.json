@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:when-whole-house-is-not-justified",
+  "route_type" : "guide",
+  "route_key" : "when-whole-house-is-not-justified",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/when-whole-house-is-not-justified",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "when-whole-house-is-not-justified",
+      "editorialRank" : 16,
+      "eyebrow" : "High-intent guide",
+      "title" : "Whole-house is usually not the first PFAS move",
+      "lede" : "Whole-house can be a real escalation case, but most household PFAS routes should clear the ingestion-focused point-of-use question before opening a whole-home install story.",
+      "queryIntent" : "Whole-house guardrails",
+      "nextActionTitle" : "Prove the whole-home objective before opening whole-house",
+      "nextActionSummary" : "If the route is still mainly about drinking and cooking water, point-of-use usually stays the first serious class. Whole-house needs its own purpose, cost, and maintenance case.",
+      "whyThis" : [ "Whole-house systems are expensive, maintenance-heavy, and easy to oversell.", "Many PFAS routes are really ingestion-focused and do not need whole-home hardware first.", "The stronger the product cost, the stronger the justification burden should be." ],
+      "whatThisDoesNotTellYou" : [ "It does not say whole-house is never justified.", "It does not say point-of-use is always enough for every household objective.", "It does not turn fear into a whole-home requirement." ],
+      "checklist" : [ "Clarify whether the household goal is ingestion-only or whole-home.", "Review certified point-of-use first.", "Only then compare purpose, cost, and maintenance for whole-house." ],
+      "evidenceHighlights" : [ "EPA filter guidance supports a certification-first point-of-use review.", "The route engine already treats whole-house as a separate escalation case.", "A stronger hardware class should not open just because anxiety is high." ],
+      "targetQueries" : [ "do i need whole house pfas filter", "when is whole house pfas filter worth it", "whole house pfas filter not necessary" ],
+      "relatedPwsids" : [ "FL3590615", "PA1510001", "GA3110075" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-pfas-private-wells", "epa-ccr-consumer-info" ],
+      "primaryHref" : "/guides/under-sink-vs-whole-house",
+      "primaryLabel" : "Read escalation guardrails",
+      "secondaryHref" : "/compare/under-sink-certified-pfas-options",
+      "secondaryLabel" : "Open under-sink compare lane",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why whole-house has a higher proof burden",
+        "summary" : "A larger install should not be treated as a more serious version of the same answer.",
+        "paragraphs" : [ "Whole-house changes the financial and maintenance posture of the household. It should therefore answer a more specific objective than 'PFAS feels scary.' If the route still centers drinking and cooking water, point-of-use usually remains the tighter first answer.", "That is why the engine treats whole-house as an escalation review instead of a premium default." ],
+        "bullets" : [ "Higher upfront cost.", "Higher maintenance commitment.", "Needs a whole-home purpose, not just a bigger product." ]
+      }, {
+        "title" : "What should happen before whole-house opens",
+        "summary" : "Interpret first, compare point-of-use next, then review whole-house only if the household objective still demands it.",
+        "paragraphs" : [ "The route should already know whether the user is on public water or a private well, whether the evidence is direct enough to support treatment, and whether point-of-use remains proportionate. Only after those gates are cleared should whole-house be reviewed at all.", "This is one of the clearest anti-fear guardrails in the product." ],
+        "bullets" : [ "No direct evidence: keep whole-house closed.", "Ingestion-focused route: point-of-use first.", "Whole-home objective: open a separate escalation review." ]
+      } ]
+    }
+  }
+}

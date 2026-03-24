@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:private-well-pfas-result-next-steps",
+  "route_type" : "guide",
+  "route_key" : "private-well-pfas-result-next-steps",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/private-well-pfas-result-next-steps",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 3,
+  "payload" : {
+    "guide" : {
+      "slug" : "private-well-pfas-result-next-steps",
+      "editorialRank" : 4,
+      "eyebrow" : "High-intent guide",
+      "title" : "A private-well PFAS result needs state context before product certainty",
+      "lede" : "A number is useful only when the household knows which state reference posture applies, what the lab actually measured, and whether the route is comparable enough to justify treatment review.",
+      "queryIntent" : "Private-well result interpretation",
+      "nextActionTitle" : "Interpret the result in the state route before comparing filters",
+      "nextActionSummary" : "Private-well owners should move from number to state-guided interpretation, then to certified point-of-use only if the route actually justifies it.",
+      "whyThis" : [ "Private wells are owner-managed and reference-based, not public-water compliance cases.", "A lab result without state context can still be ambiguous.", "Product certainty should not outrun benchmark clarity." ],
+      "whatThisDoesNotTellYou" : [ "It does not turn a private-well result into a legal compliance verdict.", "It does not prove a universal retesting cadence.", "It does not automatically justify whole-house treatment." ],
+      "checklist" : [ "Match the result to the correct state route.", "Check analyte, unit, and comparability notes.", "Only then review certified point-of-use options." ],
+      "evidenceHighlights" : [ "EPA private-well guidance keeps testing and interpretation owner-driven.", "State guidance changes what counts as a useful next step.", "Point-of-use should stay ahead of whole-house for ingestion-focused private-well decisions." ],
+      "targetQueries" : [ "private well pfas result what next", "pfas well water test result next steps", "private well pfas filter after test" ],
+      "relatedPwsids" : [ ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-private-wells", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/choose-certified-pfas-filter-after-evidence",
+      "secondaryLabel" : "Read post-evidence filter logic",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why the number alone is not enough",
+        "summary" : "A private-well result is still a route input, not the whole decision.",
+        "paragraphs" : [ "Well owners often feel that a lab number should instantly resolve the situation. In practice, the route still needs state posture, matched analyte logic, and sample context before treatment certainty becomes trustworthy.", "That is why the engine treats private-well interpretation as a state-backed route rather than a single field in a spreadsheet." ],
+        "bullets" : [ "State context changes the meaning of the number.", "Comparability matters as much as the raw value.", "The buying step stays downstream from interpretation." ]
+      }, {
+        "title" : "What a disciplined next step looks like",
+        "summary" : "Move from number to route, then from route to hardware.",
+        "paragraphs" : [ "If the result sits above the current reference layer, certified point-of-use can open as the first product class. If the result is below the current reference layer, monitoring and state follow-up may be a more proportionate answer. If the result is not comparable, the right answer is to recover the missing context.", "This protects the household from using a private-well result as an excuse for a generic prestige purchase." ],
+        "bullets" : [ "Above-reference: state next steps plus certified point-of-use review.", "Below-reference: monitoring posture with optional treatment.", "Not comparable: recover the missing state or lab context first." ]
+      } ]
+    }
+  }
+}

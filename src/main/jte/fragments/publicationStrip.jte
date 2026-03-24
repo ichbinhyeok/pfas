@@ -21,7 +21,7 @@
                 <div class="bg-base-100 px-6 py-6">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Methodology owner</div>
                     <div class="mt-3 text-base font-semibold tracking-[-0.02em] text-base-content">${methodologyOwner}</div>
-                    <div class="mt-2 text-sm leading-6 text-base-content/58"><a class="font-medium text-primary transition duration-150 ease-out hover:text-primary/84" href="/methodology">Open methodology</a> for source handling and route logic.</div>
+                    <div class="mt-2 text-sm leading-6 text-base-content/58"><a class="font-medium text-primary transition duration-150 ease-out hover:text-primary/84" href="/methodology">Read methodology</a> for source handling and route logic.</div>
                 </div>
                 <div class="bg-base-100 px-6 py-6">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Last verified</div>
@@ -49,7 +49,7 @@
                 <div class="rounded-[0.95rem] border border-base-300/70 bg-base-100 px-4 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Methodology owner</div>
                     <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${methodologyOwner}</div>
-                    <div class="mt-2 text-sm leading-6 text-base-content/58"><a class="inline-flex min-h-11 items-center font-medium text-primary transition duration-150 ease-out hover:text-primary/84" href="/methodology">Open methodology</a> for source handling and route logic.</div>
+                    <div class="mt-2 text-sm leading-6 text-base-content/58"><a class="inline-flex min-h-11 items-center font-medium text-primary transition duration-150 ease-out hover:text-primary/84" href="/methodology">Read methodology</a> for source handling and route logic.</div>
                 </div>
                 <div class="rounded-[0.95rem] border border-base-300/70 bg-base-100 px-4 py-4">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Scope</div>

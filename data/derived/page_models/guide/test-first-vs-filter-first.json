@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:test-first-vs-filter-first",
   "route_type" : "guide",
   "route_key" : "test-first-vs-filter-first",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "test-first-vs-filter-first",
+      "editorialRank" : 2,
       "eyebrow" : "High-intent guide",
-      "title" : "Test first vs filter first is mostly a question about evidence quality",
-      "lede" : "Buying first feels faster, but the project should usually force direct evidence ahead of shopping unless an official utility context already exists.",
+      "title" : "Should you test for PFAS before buying a water filter?",
+      "lede" : "For most PFAS questions, direct evidence should come before shopping. Public water means utility records first; private wells mean testing first.",
       "queryIntent" : "Decision timing",
       "nextActionTitle" : "Open the direct-evidence path before the shopping path",
       "nextActionSummary" : "Shopping intent should not outrank missing direct data. Public water means utility first. Private well means test first.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "aquatru-under-sink", "aquatru-model-1", "aquasana-aq-cwm2", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",
       "secondaryLabel" : "Review cost tradeoffs",
       "lastVerifiedDate" : "2026-03-20",

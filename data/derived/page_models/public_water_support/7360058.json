@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.653187600+09:00",
+  "model_id" : "public_water_support:7360058",
+  "route_type" : "public_water_support",
+  "route_key" : "7360058",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/7360058",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-19",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "7360058",
+      "pwsName" : "City of Lancaster Water Department",
+      "stateCode" : "PA",
+      "systemType" : "community",
+      "populationServed" : "65000",
+      "sourceWaterType" : "surface_water",
+      "utilityWebsiteUrl" : "https://water.cityoflancasterpa.gov/",
+      "ccrUrl" : "https://water.cityoflancasterpa.gov/wp-content/uploads/2024-Water-Quality-Report.pdf",
+      "pfasNoticeUrl" : "https://water.cityoflancasterpa.gov/wp-content/uploads/PFOA-Notice-Aug-2025-ES.pdf",
+      "serviceAreaNotes" : "City of Lancaster system with Conestoga and Susquehanna finished water treatment context",
+      "lastVerifiedDate" : "2026-03-19",
+      "sourceIds" : [ "lancaster-water-home", "lancaster-2024-water-quality-report", "lancaster-pfoa-notice-2025" ]
+    }
+  }
+}

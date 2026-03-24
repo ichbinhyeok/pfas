@@ -6,8 +6,8 @@
       "slug": "under-sink-certified-pfas-options",
       "editorialRank": 1,
       "eyebrow": "Compare page",
-      "title": "Under-sink certified PFAS options are strongest when the route already supports point-of-use treatment",
-      "lede": "This compare page narrows to under-sink certified point-of-use systems that can be defended after a utility dossier, state-guided test, or direct evidence path justifies treatment.",
+      "title": "Best under-sink PFAS filters: certified options compared",
+      "lede": "Compare certified under-sink PFAS filters by claim scope, maintenance burden, and installation fit after the household route already justifies treatment.",
       "queryIntent": "Commercial comparison",
       "nextActionTitle": "Compare under-sink systems only after the route has already justified treatment",
       "nextActionSummary": "Under-sink is often the most practical money path, but it still needs claim scope, annual burden, and installation tolerance to line up with the household route.",
@@ -73,7 +73,7 @@
         "waterdrop-g3p600-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
       "secondaryLabel": "Read post-evidence guide",
       "lastVerifiedDate": "2026-03-20",
@@ -123,8 +123,8 @@
       "slug": "countertop-vs-pitcher-vs-under-sink-compare",
       "editorialRank": 4,
       "eyebrow": "Compare page",
-      "title": "Countertop vs pitcher vs under-sink for PFAS is mostly a workflow and maintenance decision",
-      "lede": "This compare page focuses on form factor rather than brand prestige, using certified or defensible point-of-use products already linked to the engine.",
+      "title": "Countertop vs pitcher vs under-sink PFAS filters",
+      "lede": "Compare PFAS filter form factors by workflow, maintenance burden, and installation friction instead of treating them like a prestige ladder.",
       "queryIntent": "Form-factor comparison",
       "nextActionTitle": "Choose a form factor that the household will actually maintain",
       "nextActionSummary": "The most expensive product class is not automatically the right one. The compare should reward proportionality, maintenance behavior, and real household workflow.",
@@ -189,7 +189,7 @@
         "waterdrop-c1s-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
       "secondaryLabel": "Read form-factor guide",
       "lastVerifiedDate": "2026-03-20",
@@ -239,8 +239,8 @@
       "slug": "pfas-filter-annual-cost-compare",
       "editorialRank": 5,
       "eyebrow": "Compare page",
-      "title": "PFAS filter annual cost compare shows why upkeep changes the real purchase decision",
-      "lede": "This compare page brings annualized maintenance into the foreground so a lower checkout price cannot hide a worse ownership path.",
+      "title": "PFAS filter cost per year: pitcher vs under-sink vs RO",
+      "lede": "Compare PFAS filter cost per year so a lower checkout price cannot hide a worse maintenance and ownership path.",
       "queryIntent": "Cost comparison",
       "nextActionTitle": "Compare yearly ownership before you compare headline price",
       "nextActionSummary": "A money page gets stronger when it exposes upkeep early. The useful compare is cost over time, not price at checkout alone.",
@@ -305,7 +305,7 @@
         "waterdrop-c1s-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/pfas-filter-annual-cost",
       "secondaryLabel": "Read cost guide",
       "lastVerifiedDate": "2026-03-20",
@@ -418,7 +418,7 @@
         "waterdrop-10ub-pro-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
       "secondaryLabel": "Read post-evidence guide",
       "lastVerifiedDate": "2026-03-22",
@@ -534,7 +534,7 @@
       "primaryHref": "/guides/pennsylvania-pfas-utility-records",
       "primaryLabel": "Read Pennsylvania utility guide",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-22",
       "sections": [
         {
@@ -639,7 +639,7 @@
         "waterdrop-10ub-pro-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/private-well-pfas-result-next-steps",
       "secondaryLabel": "Read private-well next steps",
       "lastVerifiedDate": "2026-03-22",
@@ -751,7 +751,7 @@
       "primaryHref": "/guides/new-jersey-pfas-utility-records",
       "primaryLabel": "Read New Jersey utility guide",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-22",
       "sections": [
         {
@@ -799,8 +799,8 @@
       "slug": "nsf-53-vs-58-claim-examples",
       "editorialRank": 6,
       "eyebrow": "Compare page",
-      "title": "NSF 53 vs 58 claim examples matter more than the badge shorthand",
-      "lede": "This compare page uses real listing examples to show why standard shorthand is only useful when tied to the exact model and claim record.",
+      "title": "NSF 53 vs 58 for PFAS: claim examples that matter",
+      "lede": "Use real certification listing examples to see why NSF 53 and 58 only help when tied to the exact model and PFAS claim record.",
       "queryIntent": "Certification logic comparison",
       "nextActionTitle": "Read the exact model and claim before trusting the standard shorthand",
       "nextActionSummary": "A useful certification compare shows actual products and the claim context they carry. It does not turn 53 or 58 into a stand-alone verdict.",
@@ -860,7 +860,7 @@
         "waterdrop-10ub-pro-product"
       ],
       "primaryHref": "/checker",
-      "primaryLabel": "Open Action Checker",
+      "primaryLabel": "Check your PFAS next step",
       "secondaryHref": "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel": "Read certification guide",
       "lastVerifiedDate": "2026-03-20",
@@ -973,7 +973,7 @@
       "primaryHref": "/guides/california-pfas-utility-records",
       "primaryLabel": "Read California utility guide",
       "secondaryHref": "/checker",
-      "secondaryLabel": "Open Action Checker",
+      "secondaryLabel": "Check your PFAS next step",
       "lastVerifiedDate": "2026-03-23",
       "sections": [
         {
@@ -1016,6 +1016,241 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "florida-certified-pou-after-utility-context",
+      "editorialRank": 8,
+      "eyebrow": "Regional compare page",
+      "title": "Florida PFAS filters after a utility report: certified point-of-use options",
+      "lede": "This compare page is for Florida households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening notice-heavy and CCR-led systems into one state answer.",
+      "queryIntent": "Regional post-utility comparison",
+      "nextActionTitle": "Keep the compare lane tied to the exact Florida utility dossier",
+      "nextActionSummary": "Use Florida as a navigation layer, but keep the shortlist anchored to the exact utility record, its timing, and the current system interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes": [
+        "Claim-level PFAS support for an ingestion-focused route",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to a Florida utility dossier"
+      ],
+      "whyThis": [
+        "Florida now has multiple seeded utility dossiers with different PFAS posture.",
+        "Households searching within Florida still need a system-led compare lane rather than a statewide roundup.",
+        "This page gives the project a narrower commercial lane than a generic best-filter page."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility dossier.",
+        "It does not turn one Florida record into a fit for another system.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "Florida now includes both notice-heavy Sunshine Water routes and quieter CCR-led utility dossiers.",
+        "EPA filter guidance still keeps claim review tied to exact certified products.",
+        "A Florida compare lane is strongest when it stays downstream from the system record."
+      ],
+      "targetQueries": [
+        "florida pfas filter after utility report",
+        "florida pfas filter after water notice",
+        "certified pfas filter florida utility"
+      ],
+      "relatedGuideSlugs": [
+        "florida-pfas-utility-records",
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "FL3354883",
+        "FL3591121",
+        "FL3590615",
+        "FL6521000",
+        "FL3591451"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquasana-aq-6300",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "sunshine-water-home",
+        "sunshine-water-quality-reports",
+        "lusi-north-umcr5-2024-notice",
+        "sanlando-umcr5-2024-notice",
+        "jansen-2024-water-quality-report",
+        "lake-tarpon-2024-water-quality-report",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/guides/florida-pfas-utility-records",
+      "primaryLabel": "Read Florida utility guide",
+      "secondaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=FL3590615",
+      "secondaryLabel": "Check Florida utility route",
+      "lastVerifiedDate": "2026-03-24",
+      "sections": [
+        {
+          "title": "Why Florida needs its own post-utility compare lane",
+          "summary": "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending Florida is one PFAS document.",
+          "paragraphs": [
+            "The Florida cluster now includes multiple public-water dossiers with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.",
+            "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads."
+          ],
+          "bullets": [
+            "Florida is the navigation layer.",
+            "The exact utility dossier is the evidence layer.",
+            "Certified point-of-use is the commercial layer."
+          ]
+        },
+        {
+          "title": "What the shortlist should reward",
+          "summary": "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+          "paragraphs": [
+            "A Florida household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.",
+            "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification."
+          ],
+          "bullets": [
+            "Claim fit first.",
+            "Maintenance honesty second.",
+            "Whole-house remains outside this lane."
+          ]
+        },
+        {
+          "title": "How this protects both trust and conversion quality",
+          "summary": "It gives Florida users a buying step without rewriting the record they just read.",
+          "paragraphs": [
+            "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.",
+            "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path."
+          ],
+          "bullets": [
+            "It answers a commercial query without skipping interpretation.",
+            "It improves click quality by narrowing the path.",
+            "It keeps Florida from collapsing into location-spam commerce."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nevada-certified-pou-after-utility-context",
+      "editorialRank": 9,
+      "eyebrow": "Regional compare page",
+      "title": "Nevada PFAS filters after a utility report: certified point-of-use options",
+      "lede": "This compare page is for Nevada households that already read a seeded utility dossier and now need a certified point-of-use shortlist without flattening Spring Creek and Great Basin Water routes into one state answer.",
+      "queryIntent": "Regional post-utility comparison",
+      "nextActionTitle": "Keep the compare lane tied to the exact Nevada utility dossier",
+      "nextActionSummary": "Use Nevada as a navigation layer, but keep the shortlist anchored to the exact system record, its timing, and the current utility interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes": [
+        "Claim-level PFAS support for an ingestion-focused route",
+        "Installation class and maintenance burden",
+        "Annualized ownership band",
+        "Whether the product stays proportionate to a Nevada utility dossier"
+      ],
+      "whyThis": [
+        "Nevada now has multiple seeded utility dossiers with different PFAS posture.",
+        "Households searching within Nevada still need a system-led compare lane rather than a statewide roundup.",
+        "This page gives the project a narrower commercial lane than a generic best-filter page."
+      ],
+      "whatThisDoesNotTellYou": [
+        "This page does not replace the utility dossier.",
+        "It does not turn one Nevada record into a fit for another system.",
+        "It does not justify whole-house treatment."
+      ],
+      "evidenceHighlights": [
+        "Nevada now includes elevated Spring Creek records and quieter Great Basin Water dossiers.",
+        "EPA filter guidance still keeps claim review tied to exact certified products.",
+        "A Nevada compare lane is strongest when it stays downstream from the system record."
+      ],
+      "targetQueries": [
+        "nevada pfas filter after utility report",
+        "nevada pfas filter after water notice",
+        "certified pfas filter nevada utility"
+      ],
+      "relatedGuideSlugs": [
+        "nevada-pfas-utility-records",
+        "read-your-ccr",
+        "how-to-read-a-pfas-utility-notice",
+        "choose-certified-pfas-filter-after-evidence"
+      ],
+      "relatedPwsids": [
+        "NV0005027",
+        "NV0000036",
+        "NV0000408",
+        "NV0000207",
+        "NV0001086"
+      ],
+      "relatedProductIds": [
+        "aquasana-aq-mf-1",
+        "aquasana-aq-6200",
+        "aquatru-under-sink",
+        "waterdrop-10ub-pro"
+      ],
+      "sourceIds": [
+        "epa-ccr-consumer-info",
+        "epa-certified-pfas-filter-guidance",
+        "nsf-dwtu-listings",
+        "great-basin-water-home",
+        "great-basin-water-quality-reports",
+        "spring-creek-mobile-home-2024-water-quality-report",
+        "spring-creek-housing-2024-water-quality-report",
+        "calvada-meadows-2024-water-quality-report",
+        "cold-springs-pfas-2023-report",
+        "spanish-springs-pfas-2023-report",
+        "aq-claryum-direct-connect-product",
+        "aq-claryum-2-stage-product",
+        "aquatru-under-sink-product",
+        "waterdrop-10ub-pro-product"
+      ],
+      "primaryHref": "/guides/nevada-pfas-utility-records",
+      "primaryLabel": "Read Nevada utility guide",
+      "secondaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NV0005027",
+      "secondaryLabel": "Check Nevada utility route",
+      "lastVerifiedDate": "2026-03-24",
+      "sections": [
+        {
+          "title": "Why Nevada needs its own post-utility compare lane",
+          "summary": "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending Nevada is one PFAS document.",
+          "paragraphs": [
+            "The Nevada cluster now includes multiple public-water dossiers with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.",
+            "This page exists to stop the state label from becoming lazy commercial shorthand. The system record still leads."
+          ],
+          "bullets": [
+            "Nevada is the navigation layer.",
+            "The exact utility dossier is the evidence layer.",
+            "Certified point-of-use is the commercial layer."
+          ]
+        },
+        {
+          "title": "What the shortlist should reward",
+          "summary": "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+          "paragraphs": [
+            "A Nevada household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.",
+            "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and louder hardware should still need separate justification."
+          ],
+          "bullets": [
+            "Claim fit first.",
+            "Maintenance honesty second.",
+            "Whole-house remains outside this lane."
+          ]
+        },
+        {
+          "title": "How this protects both trust and conversion quality",
+          "summary": "It gives Nevada users a buying step without rewriting the record they just read.",
+          "paragraphs": [
+            "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.",
+            "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path."
+          ],
+          "bullets": [
+            "It answers a commercial query without skipping interpretation.",
+            "It improves click quality by narrowing the path.",
+            "It keeps Nevada from collapsing into location-spam commerce."
+          ]
+        }
+      ]
     }
   ]
 }
+

@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:pennsylvania-pfas-utility-records",
+  "route_type" : "guide",
+  "route_key" : "pennsylvania-pfas-utility-records",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/pennsylvania-pfas-utility-records",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 7,
+  "payload" : {
+    "guide" : {
+      "slug" : "pennsylvania-pfas-utility-records",
+      "editorialRank" : 8,
+      "eyebrow" : "Regional decision guide",
+      "title" : "Pennsylvania PFAS utility records should be read as system dossiers, not statewide proof",
+      "lede" : "Pennsylvania now has a stronger seeded utility cluster, but the useful move is still to read each system record on its own terms instead of turning one notice or one clean-looking report into a statewide verdict.",
+      "queryIntent" : "Regional utility interpretation",
+      "nextActionTitle" : "Open the exact Pennsylvania system dossier before treating the route as settled",
+      "nextActionSummary" : "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main are different system records with different document posture. Read the dossier, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis" : [ "Pennsylvania households can now enter the engine through multiple seeded utility dossiers instead of a single metro example.", "A state cluster is useful only if the user keeps the interpretation at the system level.", "The right product posture depends on the exact utility record, not on Pennsylvania as a label." ],
+      "whatThisDoesNotTellYou" : [ "It does not convert one Pennsylvania record into a statewide household verdict.", "It does not prove every Pennsylvania utility route needs treatment.", "It does not justify whole-house treatment." ],
+      "checklist" : [ "Match the household to the exact system and PWSID.", "Read the annual report or notice type before inferring the route.", "Open certified point-of-use only after the system record is interpretable." ],
+      "evidenceHighlights" : [ "Philadelphia and Lancaster show why a large-system CCR or notice can create a different route than a smaller Pennsylvania utility record.", "Penn Estates and Aqua Pennsylvania Main add smaller and regional dossier examples that keep the cluster from collapsing into one city narrative.", "A regional cluster gets stronger when every entry still behaves like a system dossier." ],
+      "targetQueries" : [ "pennsylvania pfas utility records", "pennsylvania pfas water report how to read", "pennsylvania utility pfas notice" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "PA2450065", "PA1460073" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "phila-2024-water-quality-report", "phila-pfas-management", "lancaster-2024-water-quality-report", "lancaster-pfoa-notice-2025", "penn-estates-2024-water-quality-report", "aqua-pa-main-system-2024-water-quality-report" ],
+      "primaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=PA1510001",
+      "primaryLabel" : "Open Pennsylvania dossier route",
+      "secondaryHref" : "/compare/certified-pou-after-utility-context",
+      "secondaryLabel" : "Open post-utility compare lane",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why Pennsylvania should be read as a cluster of dossiers not a single story",
+        "summary" : "The state becomes more useful when the user can compare multiple seeded systems, but less useful when one system gets treated as proof for the rest.",
+        "paragraphs" : [ "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main are all legitimate entry points into the public-water lane, but they do not carry the same kind of PFAS context. Some behave like bigger public records with newer PFAS context layered on top. Others behave like smaller utility dossiers where the annual report itself does more of the work.", "That difference is exactly why the engine should keep the cluster. It lets the user stay in Pennsylvania while still reading one system at a time." ],
+        "bullets" : [ "Use Pennsylvania as a navigation layer.", "Use the exact system dossier as the evidence layer.", "Do not turn one record into a statewide shortcut." ]
+      }, {
+        "title" : "What a disciplined Pennsylvania route looks like",
+        "summary" : "The route should move from exact system record to benchmark-aware interpretation, then into a narrow point-of-use lane only if the dossier justifies it.",
+        "paragraphs" : [ "A strong Pennsylvania route starts with the system identifier, report timing, and whether the utility has a newer PFAS page or notice. That is enough to keep the page from becoming location spam or statewide fear content.", "Once the record is interpretable, certified point-of-use can open as a bounded next step. If the record is still thin or ambiguous, the correct answer is to stay with the dossier and keep the product lane constrained." ],
+        "bullets" : [ "System result first.", "Source context second.", "Certified point-of-use only after interpretation." ]
+      } ]
+    }
+  }
+}

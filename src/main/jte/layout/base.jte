@@ -64,7 +64,7 @@
                     </summary>
                     <ul class="menu dropdown-content z-[60] mt-3 w-64 rounded-[1.1rem] border border-base-300/80 bg-base-100 p-2 text-sm font-semibold text-base-content shadow-[var(--shadow-panel)]">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/checker">Action Checker</a></li>
+                        <li><a href="/checker">Next-Step Checker</a></li>
                         <li><a href="/guides/public-water-vs-private-well">Guides</a></li>
                         <li><a href="/methodology">Methodology</a></li>
                         <li><a href="/source-policy">Source Policy</a></li>
@@ -75,7 +75,7 @@
                 <nav aria-label="Primary" class="rounded-full border border-base-300/80 bg-white/82 px-1.5 py-1 shadow-[var(--shadow-soft)]">
                     <ul class="menu menu-horizontal gap-1 p-0 text-[0.78rem] font-medium text-base-content/72">
                         <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/">Home</a></li>
-                        <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/checker">Action Checker</a></li>
+                        <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/checker">Next-Step Checker</a></li>
                         <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/guides/public-water-vs-private-well">Guides</a></li>
                         <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/methodology">Methodology</a></li>
                         <li><a class="px-4 py-2 transition duration-150 ease-out hover:bg-base-200 hover:text-base-content" href="/source-policy">Source Policy</a></li>
@@ -103,7 +103,7 @@
                         <div class="flex flex-col gap-1 text-sm font-medium text-white/66 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2">
                             <a class="inline-flex min-h-11 items-center transition duration-150 ease-out hover:-translate-y-px hover:text-white" href="/methodology">Methodology</a>
                             <a class="inline-flex min-h-11 items-center transition duration-150 ease-out hover:-translate-y-px hover:text-white" href="/source-policy">Source policy</a>
-                            <a class="inline-flex min-h-11 items-center transition duration-150 ease-out hover:-translate-y-px hover:text-white" href="/checker">Action Checker</a>
+                            <a class="inline-flex min-h-11 items-center transition duration-150 ease-out hover:-translate-y-px hover:text-white" href="/checker">Next-Step Checker</a>
                         </div>
                     </div>
                 </div>

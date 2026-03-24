@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:california-pfas-utility-records",
+  "route_type" : "guide",
+  "route_key" : "california-pfas-utility-records",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/california-pfas-utility-records",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-23",
+  "source_count" : 7,
+  "payload" : {
+    "guide" : {
+      "slug" : "california-pfas-utility-records",
+      "editorialRank" : 10,
+      "eyebrow" : "Regional decision guide",
+      "title" : "California PFAS utility records should be read as system dossiers, not statewide shorthand",
+      "lede" : "California now has a seeded utility pair with different PFAS posture. Sacramento and East Los Angeles are useful only if the reader keeps the interpretation attached to the exact system dossier instead of turning California into one buying shortcut.",
+      "queryIntent" : "Regional utility interpretation",
+      "nextActionTitle" : "Open the exact California system dossier before comparing products",
+      "nextActionSummary" : "Sacramento and East Los Angeles create different route posture even inside one state. Read the utility record first, then decide whether the route stays interpretive or opens a certified point-of-use lane.",
+      "whyThis" : [ "California now has both a direct detectable dossier and a treated-water non-detect dossier inside the seeded cluster.", "That makes the state useful for comparison only if the household still reads one exact system at a time.", "The product lane should stay downstream from the utility dossier rather than from the California label." ],
+      "whatThisDoesNotTellYou" : [ "It does not turn one California system into a statewide verdict.", "It does not prove every California route needs treatment.", "It does not justify whole-house treatment." ],
+      "checklist" : [ "Match the household to the exact California system and PWSID.", "Read whether the record is a direct detectable CCR route or a treated-water non-detect route with treatment context.", "Open certified point-of-use only after the dossier is interpretable." ],
+      "evidenceHighlights" : [ "Sacramento gives the cluster a direct PFHxS result in the 2024 CCR.", "East Los Angeles shows a lighter treated-water route with PFAS treatment context still attached to the utility record.", "A regional California page is useful only when it preserves those differences." ],
+      "targetQueries" : [ "california pfas utility records", "california pfas water report how to read", "california utility pfas notice" ],
+      "relatedPwsids" : [ "CA3410020", "CA1910036" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "sacramento-2024-water-quality-report", "sacramento-pfas-faq", "ca-pfas-general-order-exhibit-a", "east-la-2024-water-quality-report", "east-la-system-detail", "calwater-2024-pfas-application" ],
+      "primaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=CA3410020",
+      "primaryLabel" : "Check California utility route",
+      "secondaryHref" : "/compare/california-certified-pou-after-utility-context",
+      "secondaryLabel" : "Compare California point-of-use options",
+      "lastVerifiedDate" : "2026-03-23",
+      "sections" : [ {
+        "title" : "Why California is useful only as a cluster of exact system routes",
+        "summary" : "The state helps users compare route posture, but the evidence still lives inside one utility record at a time.",
+        "paragraphs" : [ "Sacramento and East Los Angeles are both valid California public-water entry points, but they do not behave the same way. Sacramento gives the engine a direct detectable PFHxS result in the 2024 CCR. East Los Angeles behaves more like a treated-water non-detect dossier with additional PFAS treatment context attached to the utility record.", "That difference is why the California cluster helps. It shows users how to read two utility routes in one state without pretending the state itself is the evidence." ],
+        "bullets" : [ "Use California as the navigation layer.", "Use Sacramento or East Los Angeles as the evidence layer.", "Do not turn a state label into a treatment shortcut." ]
+      }, {
+        "title" : "What a disciplined California route looks like",
+        "summary" : "The route should move from exact system record to benchmark-aware interpretation, then into a narrow point-of-use lane only if the dossier justifies it.",
+        "paragraphs" : [ "A strong California route starts with the system identifier, report timing, and whether the utility attached extra PFAS context beyond the CCR. That is enough to keep the page from becoming statewide fear content or lazy local SEO.", "Once the record is interpretable, certified point-of-use can open as a bounded next step. If the record is still thin or the water is already represented as treated-water non-detect, the correct answer is to stay with the dossier and keep the product lane constrained." ],
+        "bullets" : [ "System result first.", "Source context second.", "Certified point-of-use only after interpretation." ]
+      } ]
+    }
+  }
+}

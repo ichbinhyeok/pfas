@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:nevada-pfas-utility-records",
+  "route_type" : "guide",
+  "route_key" : "nevada-pfas-utility-records",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/nevada-pfas-utility-records",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-24",
+  "source_count" : 11,
+  "payload" : {
+    "guide" : {
+      "slug" : "nevada-pfas-utility-records",
+      "editorialRank" : 12,
+      "eyebrow" : "Regional decision guide",
+      "title" : "Nevada PFAS utility records: compare exact systems, not the state label",
+      "lede" : "Nevada now includes elevated Spring Creek records and quieter Great Basin Water dossiers. Use the exact system record before comparing certified point-of-use filters.",
+      "queryIntent" : "Regional utility interpretation",
+      "nextActionTitle" : "Open the exact Nevada system route before the product lane",
+      "nextActionSummary" : "A Nevada household should read the exact Spring Creek, Calvada, Cold Springs, or Spanish Springs dossier first, then decide whether the route is ready for a narrow certified point-of-use compare.",
+      "whyThis" : [ "Nevada now spans multiple seeded utility routes with different PFAS posture.", "Spring Creek routes and Great Basin Water routes should not collapse into one statewide answer.", "A state page is only useful when it keeps those differences attached to the exact system." ],
+      "whatThisDoesNotTellYou" : [ "It does not turn one Nevada system into a statewide PFAS verdict.", "It does not prove every Nevada route needs treatment.", "It does not justify whole-house treatment." ],
+      "checklist" : [ "Match the household to the exact Nevada system and PWSID.", "Check whether the current route is an elevated Spring Creek record or a lighter Great Basin Water dossier.", "Open certified point-of-use only after the exact system record is interpretable." ],
+      "evidenceHighlights" : [ "Nevada now includes both elevated Spring Creek records and quieter Great Basin Water routes.", "The state page helps only when Spring Creek, Calvada Meadows, Cold Springs, and Spanish Springs remain separate dossiers.", "The commercial lane should stay downstream from the exact utility route." ],
+      "targetQueries" : [ "nevada pfas utility records", "nevada pfas water report how to read", "nevada utility pfas notice" ],
+      "relatedPwsids" : [ "NV0005027", "NV0000036", "NV0000408", "NV0000207", "NV0001086" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "great-basin-water-home", "great-basin-water-quality-reports", "spring-creek-mobile-home-2024-water-quality-report", "spring-creek-housing-2024-water-quality-report", "calvada-meadows-2024-water-quality-report", "calvada-meadows-pfas-2023-report", "cold-springs-2024-water-quality-report", "cold-springs-pfas-2023-report", "spanish-springs-2024-water-quality-report", "spanish-springs-pfas-2023-report" ],
+      "primaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NV0005027",
+      "primaryLabel" : "Check Nevada utility route",
+      "secondaryHref" : "/compare/nevada-certified-pou-after-utility-context",
+      "secondaryLabel" : "Compare Nevada point-of-use options",
+      "lastVerifiedDate" : "2026-03-24",
+      "sections" : [ {
+        "title" : "Why Nevada works only as a corridor of exact utility routes",
+        "summary" : "The state helps users navigate, but the evidence still lives inside one system record at a time.",
+        "paragraphs" : [ "Nevada now gives the engine multiple seeded public-water routes with very different posture. Spring Creek Mobile Home Park and Spring Creek Housing show elevated direct results, while Calvada Meadows, Cold Springs, and Spanish Springs behave like quieter Great Basin Water dossiers.", "That is why the Nevada page helps. It turns the state into a navigation layer without letting the state label replace the exact system." ],
+        "bullets" : [ "Use Nevada as the navigation layer.", "Use the exact system dossier as the evidence layer.", "Do not let the state label become a buying shortcut." ]
+      }, {
+        "title" : "What a disciplined Nevada route looks like",
+        "summary" : "The route should move from exact system posture into a narrow point-of-use lane only when the dossier supports it.",
+        "paragraphs" : [ "A strong Nevada route starts with the system name, PWSID, report timing, and whether the household is reading an elevated Spring Creek record or a quieter Great Basin Water dossier. That is enough to keep the page from flattening multiple systems into one state-level answer.", "Once the route is interpretable, the compare lane can open as a bounded point-of-use step. If the record is still thin or the exact system is still unclear, the page should stay on the dossier." ],
+        "bullets" : [ "Exact system first.", "Current route posture second.", "Certified point-of-use only after interpretation." ]
+      } ]
+    }
+  }
+}

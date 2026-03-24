@@ -1,0 +1,55 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "compare:private-well-certified-pou-after-test",
+  "route_type" : "compare",
+  "route_key" : "private-well-certified-pou-after-test",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/private-well-certified-pou-after-test",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 9,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "private-well-certified-pou-after-test",
+      "editorialRank" : 3,
+      "eyebrow" : "Compare page",
+      "title" : "Private-well certified point-of-use after a PFAS test should follow the state route not replace it",
+      "lede" : "This compare page is for private-well households that already have a test and now need a certified point-of-use shortlist that still respects state context and comparability limits.",
+      "queryIntent" : "Private-well treatment comparison",
+      "nextActionTitle" : "Compare certified point-of-use only after the well result is interpretable",
+      "nextActionSummary" : "A private-well owner should move from test result to state context, then into a certified point-of-use shortlist that still keeps cost and upkeep visible.",
+      "comparisonAxes" : [ "Claim-level PFAS support", "Installation burden for owner-managed treatment", "Annualized maintenance and cartridge cadence", "Whether the product stays proportionate to an ingestion-focused private-well route" ],
+      "whyThis" : [ "Private-well users often reach a buying phase after testing but before they have a disciplined shortlist.", "The project needs a compare lane that assumes the test already happened and still keeps state context visible.", "A tighter private-well compare page blocks generic prestige shopping." ],
+      "whatThisDoesNotTellYou" : [ "This page does not replace the test result or state guide.", "It does not prove a model fits a route that is still unknown or not comparable.", "It does not justify whole-house by default." ],
+      "evidenceHighlights" : [ "EPA private-well guidance keeps the route owner-managed and evidence-first.", "EPA filter guidance supports certification-first product review after the evidence step.", "A private-well compare lane should open only after the state route is interpretable." ],
+      "targetQueries" : [ "private well pfas filter comparison", "best pfas filter after well test", "certified pfas filter for private well" ],
+      "relatedGuideSlugs" : [ "private-well-pfas-result-next-steps", "test-first-vs-filter-first", "choose-certified-pfas-filter-after-evidence", "unknown-or-not-comparable-pfas-result" ],
+      "relatedPwsids" : [ ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "espring-122941", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-private-wells", "epa-pfas-private-wells", "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "aq-claryum-direct-connect-product", "aq-claryum-2-stage-product", "aquatru-under-sink-product", "nsf-espring-listing-053", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/checker",
+      "primaryLabel" : "Check your PFAS next step",
+      "secondaryHref" : "/guides/private-well-pfas-result-next-steps",
+      "secondaryLabel" : "Read private-well next steps",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why this compare page starts after the test",
+        "summary" : "A private-well owner should not need to re-decide whether testing mattered before comparing the shortlist.",
+        "paragraphs" : [ "Once the test exists, the better question is which certified point-of-use route stays proportionate to the current result and maintenance tolerance. This page exists for that exact moment.", "It does not replace the state route. It assumes the state route already narrowed the household into a treatment conversation." ],
+        "bullets" : [ "Testing came first.", "State context stays attached.", "Comparison opens only after interpretability." ]
+      }, {
+        "title" : "What private-well owners need from the shortlist",
+        "summary" : "Owner-managed routes reward simplicity and upkeep honesty more than badge theater.",
+        "paragraphs" : [ "Some households need a lower-burden certified option they can actually maintain. Others are willing to accept more hardware and upkeep. The page should make those tradeoffs visible instead of implying that the most engineered-looking system always wins.", "That is why annualized cost, replacement cadence, and installation tolerance sit beside the claim support." ],
+        "bullets" : [ "Owner-managed upkeep matters.", "Annual cost matters.", "A point-of-use lane should stay narrower than a whole-home pitch." ]
+      }, {
+        "title" : "How this compare page protects the route",
+        "summary" : "It gives the user a buying step without letting the buying step rewrite the evidence.",
+        "paragraphs" : [ "Unknown or not comparable routes should still stay out of this lane. Above-reference or clearly interpretable routes can enter it. That makes the page more useful than a generic private-well roundup because it only opens when the route has already earned the comparison.", "This is the exact kind of compare page that supports trust instead of spending it." ],
+        "bullets" : [ "Unknown route: stay out.", "Interpretable route: open the shortlist.", "Whole-house still requires a separate objective." ]
+      } ]
+    }
+  }
+}

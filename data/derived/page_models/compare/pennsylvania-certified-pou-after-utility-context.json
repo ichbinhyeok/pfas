@@ -1,0 +1,55 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "compare:pennsylvania-certified-pou-after-utility-context",
+  "route_type" : "compare",
+  "route_key" : "pennsylvania-certified-pou-after-utility-context",
+  "template_kind" : "compare_page",
+  "render_path" : "/compare/pennsylvania-certified-pou-after-utility-context",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-22",
+  "source_count" : 11,
+  "payload" : {
+    "compare_page" : {
+      "slug" : "pennsylvania-certified-pou-after-utility-context",
+      "editorialRank" : 4,
+      "eyebrow" : "Regional compare page",
+      "title" : "Pennsylvania certified point-of-use after a utility PFAS record should stay system-led and narrow",
+      "lede" : "This compare page is for Pennsylvania households that already read a seeded utility dossier and now need a certified point-of-use shortlist without collapsing multiple systems into one statewide buying story.",
+      "queryIntent" : "Regional post-utility comparison",
+      "nextActionTitle" : "Keep the compare lane tied to the exact Pennsylvania system dossier",
+      "nextActionSummary" : "Use Pennsylvania as a navigation layer, but keep the shortlist anchored to the exact utility record, its timing, and the current system interpretation before comparing certified point-of-use hardware.",
+      "comparisonAxes" : [ "Claim-level PFAS support for an ingestion-focused route", "Installation class and maintenance burden", "Annualized ownership band", "Whether the product stays proportionate to a Pennsylvania utility dossier" ],
+      "whyThis" : [ "Pennsylvania now has a usable cluster of public-water dossiers rather than a single flagship example.", "Households searching within Pennsylvania still need a system-led compare lane, not a statewide roundup.", "This page gives the project a commercial surface that stays narrower than a generic best-filter page." ],
+      "whatThisDoesNotTellYou" : [ "This page does not replace the utility dossier.", "It does not turn one Pennsylvania record into a fit for another system.", "It does not justify whole-house treatment." ],
+      "evidenceHighlights" : [ "Philadelphia, Lancaster, Penn Estates, and Aqua Pennsylvania Main give the compare lane multiple seeded utility entry points.", "EPA filter guidance still keeps claim review tied to exact certified products.", "A Pennsylvania compare lane is strongest when it behaves like a downstream route, not a state roundup." ],
+      "targetQueries" : [ "pennsylvania pfas filter after utility report", "pennsylvania pfas filter after water notice", "certified pfas filter pennsylvania utility" ],
+      "relatedGuideSlugs" : [ "pennsylvania-pfas-utility-records", "read-your-ccr", "how-to-read-a-pfas-utility-notice", "choose-certified-pfas-filter-after-evidence" ],
+      "relatedPwsids" : [ "PA1510001", "7360058", "PA2450065", "PA1460073" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-6300", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "epa-certified-pfas-filter-guidance", "nsf-dwtu-listings", "phila-pfas-management", "lancaster-pfoa-notice-2025", "penn-estates-2024-water-quality-report", "aqua-pa-main-system-2024-water-quality-report", "aq-claryum-direct-connect-product", "aq-claryum-2-stage-product", "aquatru-under-sink-product", "waterdrop-10ub-pro-product" ],
+      "primaryHref" : "/guides/pennsylvania-pfas-utility-records",
+      "primaryLabel" : "Read Pennsylvania utility guide",
+      "secondaryHref" : "/checker",
+      "secondaryLabel" : "Check your PFAS next step",
+      "lastVerifiedDate" : "2026-03-22",
+      "sections" : [ {
+        "title" : "Why Pennsylvania needs its own post-utility compare lane",
+        "summary" : "A regional compare lane is useful only if it stays downstream from the exact system record instead of pretending Pennsylvania is one PFAS document.",
+        "paragraphs" : [ "The Pennsylvania cluster now includes multiple public-water dossiers with different route posture. That makes a regional compare page useful because it can answer the buying query without erasing the fact that the household still belongs to one exact system.", "This page exists to keep the state label from turning into lazy commercial shorthand. The system record still leads." ],
+        "bullets" : [ "Pennsylvania is the navigation layer.", "The exact utility dossier is the evidence layer.", "Certified point-of-use is the commercial layer." ]
+      }, {
+        "title" : "What the shortlist should reward",
+        "summary" : "The strongest shortlist keeps maintenance and claim fit visible while blocking whole-house drift.",
+        "paragraphs" : [ "A Pennsylvania household coming out of a utility dossier usually needs a tighter point-of-use decision, not a broader prestige ladder. That means the page should reward claim scope, installation realism, and annual ownership burden before anything else.", "Products that stay proportionate to an ingestion-focused public-water route should remain on top. Bigger and noisier hardware should still need separate justification." ],
+        "bullets" : [ "Claim fit first.", "Maintenance honesty second.", "Whole-house remains outside this lane." ]
+      }, {
+        "title" : "How this protects both trust and conversion quality",
+        "summary" : "It gives Pennsylvania users a buying step without rewriting the record they just read.",
+        "paragraphs" : [ "A statewide buying query often hides a much better intent: 'I already saw a utility record and now need a narrower next step.' This page is built for that exact moment.", "By holding the system dossier and the point-of-use shortlist in the same frame, the page supports cleaner clicks and a more defensible commercial path." ],
+        "bullets" : [ "It answers a commercial query without skipping interpretation.", "It improves click quality by narrowing the path.", "It keeps Pennsylvania from collapsing into location-spam commerce." ]
+      } ]
+    }
+  }
+}

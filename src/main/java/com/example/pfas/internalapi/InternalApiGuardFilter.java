@@ -1,6 +1,8 @@
 package com.example.pfas.internalapi;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -15,7 +17,11 @@ import org.springframework.web.filter.OncePerRequestFilter;
 public class InternalApiGuardFilter extends OncePerRequestFilter {
 
 	private static final String INTERNAL_PREFIX = "/internal/";
+	private static final String ADMIN_PATH = "/admin";
 	private static final String HEADER_NAME = "X-PFAS-Internal-Token";
+	private static final String AUTHORIZATION_HEADER = "Authorization";
+	private static final String BASIC_PREFIX = "Basic ";
+	private static final String BASIC_REALM = "Basic realm=\"PFAS Internal\"";
 
 	private final InternalApiProperties properties;
 
@@ -30,7 +36,7 @@ public class InternalApiGuardFilter extends OncePerRequestFilter {
 		if (path != null && contextPath != null && !contextPath.isBlank() && path.startsWith(contextPath)) {
 			path = path.substring(contextPath.length());
 		}
-		if (path == null || !path.startsWith(INTERNAL_PREFIX)) {
+		if (!isProtectedPath(path)) {
 			return true;
 		}
 
@@ -45,18 +51,66 @@ public class InternalApiGuardFilter extends OncePerRequestFilter {
 	) throws ServletException, IOException {
 		var expectedToken = properties.token();
 		var providedToken = request.getHeader(HEADER_NAME);
+		var providedAuthorization = request.getHeader(AUTHORIZATION_HEADER);
 
-		if (isAuthorized(expectedToken, providedToken)) {
+		if (isAuthorized(expectedToken, providedToken, providedAuthorization)) {
 			filterChain.doFilter(request, response);
+			return;
+		}
+
+		if (basicAuthConfigured()) {
+			response.setHeader("WWW-Authenticate", BASIC_REALM);
+			response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
 			return;
 		}
 
 		response.sendError(HttpServletResponse.SC_NOT_FOUND);
 	}
 
-	private boolean isAuthorized(String expectedToken, String providedToken) {
+	private boolean isAuthorized(String expectedToken, String providedToken, String providedAuthorization) {
+		return isTokenAuthorized(expectedToken, providedToken) || isBasicAuthorized(providedAuthorization);
+	}
+
+	private boolean isTokenAuthorized(String expectedToken, String providedToken) {
 		return expectedToken != null
 			&& !expectedToken.isBlank()
 			&& expectedToken.equals(providedToken);
+	}
+
+	private boolean isBasicAuthorized(String providedAuthorization) {
+		if (!basicAuthConfigured() || providedAuthorization == null || !providedAuthorization.startsWith(BASIC_PREFIX)) {
+			return false;
+		}
+
+		try {
+			var encoded = providedAuthorization.substring(BASIC_PREFIX.length()).trim();
+			var decoded = new String(Base64.getDecoder().decode(encoded), StandardCharsets.UTF_8);
+			var separator = decoded.indexOf(':');
+			if (separator < 0) {
+				return false;
+			}
+			var username = decoded.substring(0, separator);
+			var password = decoded.substring(separator + 1);
+			return properties.username().equals(username) && properties.password().equals(password);
+		}
+		catch (IllegalArgumentException exception) {
+			return false;
+		}
+	}
+
+	private boolean basicAuthConfigured() {
+		return properties.username() != null
+			&& !properties.username().isBlank()
+			&& properties.password() != null
+			&& !properties.password().isBlank();
+	}
+
+	private boolean isProtectedPath(String path) {
+		if (path == null || path.isBlank()) {
+			return false;
+		}
+		return path.startsWith(INTERNAL_PREFIX)
+			|| ADMIN_PATH.equals(path)
+			|| path.startsWith(ADMIN_PATH + "/");
 	}
 }

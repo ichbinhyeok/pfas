@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:pfas-filter-annual-cost",
   "route_type" : "guide",
   "route_key" : "pfas-filter-annual-cost",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "pfas-filter-annual-cost",
+      "editorialRank" : 10,
       "eyebrow" : "High-intent guide",
-      "title" : "PFAS filter annual cost matters because maintenance changes the real decision",
-      "lede" : "Upfront price is the wrong shortcut. Cartridge cadence, replacement cost, and whether the path is even justified determine whether a product is reasonable.",
+      "title" : "PFAS filter cost per year: what maintenance really changes",
+      "lede" : "Upfront price is only part of the PFAS filter decision. Cartridge cadence, replacement cost, and whether treatment is justified determine the real annual burden.",
       "queryIntent" : "Ownership cost comparison",
       "nextActionTitle" : "Read annual ownership before treating a product as a fit",
       "nextActionSummary" : "Annual cost and maintenance burden should sit beside the interpretation result, not far downstream in a shopping flow.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-under-sink", "waterdrop-g3p600", "waterdrop-c1s", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "aq-claryum-direct-connect-product", "aq-claryum-direct-connect-replacement", "amway-espring-100186-cartridge" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/public-water/PA1510001",
       "secondaryLabel" : "Open seeded result",
       "lastVerifiedDate" : "2026-03-20",

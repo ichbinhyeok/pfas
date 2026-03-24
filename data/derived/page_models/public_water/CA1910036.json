@@ -1,0 +1,129 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.655697+09:00",
+  "model_id" : "public_water:CA1910036",
+  "route_type" : "public_water",
+  "route_key" : "CA1910036",
+  "template_kind" : "public_water_result_page",
+  "render_path" : "/public-water/CA1910036",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-23",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "CA1910036",
+      "pwsName" : "Cal Water East Los Angeles",
+      "stateCode" : "CA",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "purchased_surface_water",
+      "utilityWebsiteUrl" : "https://www.calwater.com/ccrs/ela-ela-2024/",
+      "ccrUrl" : "https://www.calwater.com/docs/ccr/2024/ela-ela-2024.pdf",
+      "pfasNoticeUrl" : "https://www.calwater.com/rates/other-regulatory/2024-pfas-application/",
+      "serviceAreaNotes" : "Cal Water East Los Angeles district system with a 2024 CCR showing treated-water PFHxS PFOA and PFOS averages as non-detect while the utility continues PFAS treatment planning for wells in the district",
+      "lastVerifiedDate" : "2026-03-23",
+      "sourceIds" : [ "east-la-2024-water-quality-page", "east-la-2024-water-quality-report", "east-la-system-detail", "calwater-2024-pfas-application" ]
+    },
+    "result" : {
+      "result_id" : "public-water:CA1910036",
+      "schema_version" : "v1",
+      "generated_at" : "2026-03-24T14:57:20.655697+09:00",
+      "next_action" : {
+        "code" : "KEEP_MONITORING_UTILITY_UPDATES",
+        "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
+        "summary" : "The current normalized utility observations are below the selected benchmark, so there is no immediate escalation from this data alone.",
+        "confidence" : "high",
+        "scope_note" : "Public water utility interpretation; not a household tap test result."
+      },
+      "why_this" : [ "This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Certified point-of-use is treated as the first escalation class only after the utility record is interpretable." ],
+      "what_this_does_not_tell_you" : [ "This is not a household tap test.", "Future utility updates can change the picture.", "Do not convert this into a blanket safe or unsafe claim." ],
+      "initial_cost" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "confidence" : "low",
+        "notes" : [ "No normalized upfront cost is available for the current option set." ]
+      },
+      "annual_cost_maintenance" : {
+        "range_low_usd" : 0,
+        "range_high_usd" : 0,
+        "maintenance_burden" : "unknown",
+        "cadence_notes" : [ ],
+        "notes" : [ "No normalized annual replacement cost is available for the current option set." ]
+      },
+      "certification_checklist" : [ {
+        "label" : "Claim-level listing for the specific PFAS you care about",
+        "required" : true,
+        "detail" : "Verify the listing record names the PFAS reduction claim directly instead of inferring from a product category.",
+        "source_id" : "nsf-dwtu-listings"
+      }, {
+        "label" : "Match the certification standard to the actual claim",
+        "required" : true,
+        "detail" : "Use NSF ANSI 53 or an equivalent claim-level listing only when the record explicitly carries the reduction claim.",
+        "source_id" : "epa-certified-pfas-filter-guidance"
+      }, {
+        "label" : "Check replacement cadence and cartridge capacity before buying",
+        "required" : true,
+        "detail" : "Cost and maintenance burden change materially if cadence is annual vs more frequent.",
+        "source_id" : "amway-espring-100186-cartridge"
+      } ],
+      "best_fit_options" : [ ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade." ],
+      "sources" : [ {
+        "source_id" : "epa-pfas-rule-overview",
+        "organization" : "U.S. Environmental Protection Agency",
+        "title" : "Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url" : "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "trust_tier" : 1
+      }, {
+        "source_id" : "calwater-2024-pfas-application",
+        "organization" : "California Water Service",
+        "title" : "2024 PFAS Application",
+        "url" : "https://www.calwater.com/rates/other-regulatory/2024-pfas-application/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "east-la-2024-water-quality-page",
+        "organization" : "California Water Service",
+        "title" : "East Los Angeles 2024 Water Quality Report",
+        "url" : "https://www.calwater.com/ccrs/ela-ela-2024/",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "east-la-2024-water-quality-report",
+        "organization" : "California Water Service",
+        "title" : "East Los Angeles District 2024 Water Quality Report",
+        "url" : "https://www.calwater.com/docs/ccr/2024/ela-ela-2024.pdf",
+        "trust_tier" : 2
+      }, {
+        "source_id" : "east-la-system-detail",
+        "organization" : "California State Water Resources Control Board",
+        "title" : "Water System Details: California Water Service Co. - ELA",
+        "url" : "https://sdwis.waterboards.ca.gov/PDWW/JSP/WaterSystemDetail.jsp?counter=0&tinwsys_is_number=2592&tinwsys_st_code=CA",
+        "trust_tier" : 2
+      } ],
+      "meta" : {
+        "water_source_type" : "public_water",
+        "benchmark_relation" : "not_detected",
+        "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR",
+        "manual_review_required" : false
+      }
+    },
+    "decision_input" : {
+      "input_id" : "public_water:CA1910036",
+      "route_type" : "public_water",
+      "route_key" : "CA1910036",
+      "water_source" : "PUBLIC_WATER",
+      "direct_data_status" : "UTILITY_DOCUMENT",
+      "indirect_data_status" : "NONE",
+      "benchmark_relation" : "UNKNOWN",
+      "current_filter_status" : "NONE",
+      "whole_house_considered" : false,
+      "state_code" : null,
+      "pwsid" : "CA1910036",
+      "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
+      "primary_path" : "/public-water/CA1910036",
+      "secondary_path" : "/public-water-system/CA1910036",
+      "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
+    },
+    "supporting_path" : "/public-water-system/CA1910036"
+  }
+}

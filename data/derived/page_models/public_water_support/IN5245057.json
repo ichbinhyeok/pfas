@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.696124400+09:00",
+  "model_id" : "public_water_support:IN5245057",
+  "route_type" : "public_water_support",
+  "route_key" : "IN5245057",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/IN5245057",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 3,
+  "payload" : {
+    "system" : {
+      "pwsid" : "IN5245057",
+      "pwsName" : "Community Utilities of Indiana Inc.",
+      "stateCode" : "IN",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "purchased_surface_water",
+      "utilityWebsiteUrl" : "https://www.myutility.us/indiana",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/indiana/water-quality-reports/iws/2024/iws-24ccr-201.pdf?sfvrsn=41b53d5b_6",
+      "serviceAreaNotes" : "Community Utilities of Indiana purchased-surface-water system using Indiana American Water's Lake Michigan supply with an integrated 2024 CCR PFAS table showing non-detect across the mapped analytes.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "indiana-water-home", "indiana-water-quality-reports", "iws-2024-water-quality-report" ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:under-sink-vs-whole-house",
   "route_type" : "guide",
   "route_key" : "under-sink-vs-whole-house",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "under-sink-vs-whole-house",
+      "editorialRank" : 11,
       "eyebrow" : "High-intent guide",
-      "title" : "Under-sink vs whole-house should start with purpose, not fear",
-      "lede" : "Whole-house is an escalation path, not a default upgrade. For PFAS, the engine should keep ingestion-focused point-of-use visible until a broader whole-home objective is actually justified.",
+      "title" : "Do you need an under-sink or whole-house PFAS filter?",
+      "lede" : "Whole-house PFAS treatment is not the default move. Start by deciding whether a drinking-water point-of-use system already fits the household goal.",
       "queryIntent" : "Treatment scope comparison",
       "nextActionTitle" : "Keep point-of-use first unless the household goal clearly exceeds drinking and cooking water",
       "nextActionSummary" : "Whole-house should open only after purpose, maintenance, and cost have been compared against certified point-of-use options.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquasana-aq-ro-3", "aquatru-under-sink", "waterdrop-g3p600", "waterdrop-x10", "waterdrop-10ub-pro", "waterdrop-g5p700" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "epa-water-filter-fact-sheet-2024-04", "aq-claryum-direct-connect-install-pdf", "amway-espring-122941-product" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/pfas-filter-annual-cost",
       "secondaryLabel" : "Review annual cost",
       "lastVerifiedDate" : "2026-03-20",

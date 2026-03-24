@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:carbon-vs-ro-for-pfas",
   "route_type" : "guide",
   "route_key" : "carbon-vs-ro-for-pfas",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "carbon-vs-ro-for-pfas",
+      "editorialRank" : 13,
       "eyebrow" : "Decision-intent guide",
       "title" : "Carbon vs reverse osmosis for PFAS is a fit question, not a badge question",
       "lede" : "Carbon and reverse osmosis can both reduce PFAS when the specific product has the right claim set. The real decision is fit, maintenance, and evidence state, not technology pride.",

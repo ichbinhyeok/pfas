@@ -1,0 +1,102 @@
+name: Build And Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  IMAGE_NAME: shinhyeok22/pfas
+  DEPLOY_DIR: ~/apps/pfas
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Copy compose file to OCI
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.OCI_HOST }}
+          username: ${{ secrets.OCI_USERNAME }}
+          key: ${{ secrets.OCI_KEY }}
+          source: docker-compose.yml
+          target: ${{ env.DEPLOY_DIR }}
+
+      - name: Deploy on OCI
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.OCI_HOST }}
+          username: ${{ secrets.OCI_USERNAME }}
+          key: ${{ secrets.OCI_KEY }}
+          script_stop: true
+          script: |
+            mkdir -p ${{ env.DEPLOY_DIR }}/runtime/merchant-clicks
+            mkdir -p ${{ env.DEPLOY_DIR }}/runtime/route-clicks
+
+            cat > ${{ env.DEPLOY_DIR }}/.env <<'EOF'
+            PFAS_SITE_BASE_URL=https://waternextstep.com
+            PFAS_INTERNAL_API_USERNAME=admin
+            PFAS_INTERNAL_API_PASSWORD=${{ secrets.PFAS_INTERNAL_API_PASSWORD }}
+            PFAS_SITE_EDITORIAL_OWNER=gabi Editorial Team
+            PFAS_SITE_METHODOLOGY_OWNER=gabi Water Evidence Team
+            EOF
+
+            echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+            cd ${{ env.DEPLOY_DIR }}
+            docker compose pull
+            docker compose up -d
+            docker image prune -f
+            curl -I --max-time 20 http://127.0.0.1:8092/

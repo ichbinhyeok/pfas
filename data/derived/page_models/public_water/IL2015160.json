@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:24.033404700+09:00",
+  "generated_at" : "2026-03-24T14:57:20.694472400+09:00",
   "model_id" : "public_water:IL2015160",
   "route_type" : "public_water",
   "route_key" : "IL2015160",
@@ -28,7 +28,7 @@
     "result" : {
       "result_id" : "public-water:IL2015160",
       "schema_version" : "v1",
-      "generated_at" : "2026-03-20T20:38:24.030136800+09:00",
+      "generated_at" : "2026-03-24T14:57:20.694472400+09:00",
       "next_action" : {
         "code" : "KEEP_MONITORING_UTILITY_UPDATES",
         "title" : "Keep monitoring utility updates; no immediate escalation from current normalized data",
@@ -36,7 +36,7 @@
         "confidence" : "high",
         "scope_note" : "Public water utility interpretation; not a household tap test result."
       },
-      "why_this" : [ "Public water utility observations are treated as direct official data for this system.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Point-of-use is treated as the first escalation class when a user wants extra ingestion-focused margin." ],
+      "why_this" : [ "This route is for a household on public water, so direct utility observations outrank ZIP hints, fear copy, and generic product pages.", "Current normalized assessment counts: 0 above selected benchmark, 0 present below selected benchmark.", "Certified point-of-use is treated as the first escalation class only after the utility record is interpretable." ],
       "what_this_does_not_tell_you" : [ "This is not a household tap test.", "Future utility updates can change the picture.", "Do not convert this into a blanket safe or unsafe claim." ],
       "initial_cost" : {
         "range_low_usd" : 0,
@@ -68,7 +68,7 @@
         "source_id" : "amway-espring-100186-cartridge"
       } ],
       "best_fit_options" : [ ],
-      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "You need extra ingestion-focused margin and are willing to maintain a certified point-of-use unit.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review." ],
+      "when_to_escalate" : [ "A current utility notice or updated direct result moves one or more contaminants above the selected benchmark.", "The household still wants extra ingestion-focused margin after the utility route is understood and the maintenance burden feels proportionate.", "Your household goal expands beyond drinking and cooking water, which requires a separate whole-house justification review rather than a default upgrade." ],
       "sources" : [ {
         "source_id" : "epa-pfas-rule-overview",
         "organization" : "U.S. Environmental Protection Agency",
@@ -102,7 +102,7 @@
       } ],
       "meta" : {
         "water_source_type" : "public_water",
-        "benchmark_relation" : "unknown",
+        "benchmark_relation" : "not_detected",
         "decision_rule_id" : "PUBLIC_WATER_DIRECT_DATA_BELOW_REFERENCE_MONITOR",
         "manual_review_required" : false
       }
@@ -121,7 +121,7 @@
       "pwsid" : "IL2015160",
       "recommended_route_code" : "PUBLIC_WATER_INTERPRET_DIRECT_DATA",
       "primary_path" : "/public-water/IL2015160",
-      "secondary_path" : "/internal/results/public-water/IL2015160",
+      "secondary_path" : "/public-water-system/IL2015160",
       "summary" : "A direct utility document exists, so the engine should explain benchmark context and optional next steps before any certified filter comparison."
     },
     "supporting_path" : "/public-water-system/IL2015160"

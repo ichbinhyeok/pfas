@@ -1,0 +1,29 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.670893400+09:00",
+  "model_id" : "public_water_support:FL6424076",
+  "route_type" : "public_water_support",
+  "route_key" : "FL6424076",
+  "template_kind" : "public_water_support_page",
+  "render_path" : "/public-water-system/FL6424076",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-20",
+  "source_count" : 4,
+  "payload" : {
+    "system" : {
+      "pwsid" : "FL6424076",
+      "pwsName" : "Golden Hills Water System",
+      "stateCode" : "FL",
+      "systemType" : "community",
+      "populationServed" : "",
+      "sourceWaterType" : "groundwater",
+      "utilityWebsiteUrl" : "https://www.myutility.us/sunshinewater",
+      "ccrUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2024/goldenhills-24ccr-136090.pdf?sfvrsn=c5b43f5b_4",
+      "pfasNoticeUrl" : "https://www.myutility.us/docs/default-source/florida/water-quality-reports/golden-hills/2023/golden-hills-pfas-2023362559e5853362838a44ff0000903d3d.pdf?sfvrsn=4c163b5b_2",
+      "serviceAreaNotes" : "Sunshine Water Services community groundwater system with separate 2023 PFAS reporting showing detectable PFOA, PFOS, and PFHxS values and a 2024 CCR for source-water context.",
+      "lastVerifiedDate" : "2026-03-20",
+      "sourceIds" : [ "sunshine-water-home", "sunshine-water-quality-reports", "golden-hills-2024-water-quality-report", "golden-hills-pfas-2023-report" ]
+    }
+  }
+}

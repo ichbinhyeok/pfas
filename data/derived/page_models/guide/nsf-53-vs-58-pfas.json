@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:nsf-53-vs-58-pfas",
   "route_type" : "guide",
   "route_key" : "nsf-53-vs-58-pfas",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "nsf-53-vs-58-pfas",
+      "editorialRank" : 9,
       "eyebrow" : "High-intent guide",
       "title" : "NSF 53 vs 58 is not enough by itself for PFAS decisions",
       "lede" : "The standard code matters, but the project should still check the exact claim, model, replacement cadence, and cost before treating a product as a fit.",
@@ -30,7 +31,7 @@
       "primaryHref" : "/source-policy",
       "primaryLabel" : "Open source policy",
       "secondaryHref" : "/checker",
-      "secondaryLabel" : "Open Action Checker",
+      "secondaryLabel" : "Check your PFAS next step",
       "lastVerifiedDate" : "2026-03-20",
       "sections" : [ {
         "title" : "Badge shorthand is weaker than record-level verification",

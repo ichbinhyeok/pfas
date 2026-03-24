@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:how-to-read-a-pfas-utility-notice",
   "route_type" : "guide",
   "route_key" : "how-to-read-a-pfas-utility-notice",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "how-to-read-a-pfas-utility-notice",
+      "editorialRank" : 6,
       "eyebrow" : "Decision-intent guide",
       "title" : "A PFAS utility notice is an action document, not a generic scare document",
       "lede" : "If a utility sends a PFAS notice, read the exact system and contaminant context first, then decide whether certified point-of-use treatment is justified.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "waterdrop-g3p600", "aquatru-classic", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-ucmr5-main", "epa-ucmr-occurrence-data" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/read-your-ccr",
       "secondaryLabel" : "Read the CCR guide",
       "lastVerifiedDate" : "2026-03-20",

@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:countertop-vs-pitcher-vs-under-sink-for-pfas",
   "route_type" : "guide",
   "route_key" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "countertop-vs-pitcher-vs-under-sink-for-pfas",
+      "editorialRank" : 12,
       "eyebrow" : "Money-path guide",
       "title" : "Countertop vs pitcher vs under-sink for PFAS starts with fit not prestige",
       "lede" : "The product class should reflect evidence strength, maintenance tolerance, and daily workflow. The most expensive form factor is not automatically the most rational one.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "zerowater-10-cup-pitcher", "zerowater-23-cup-dispenser", "aquasana-aq-cwm2", "aquatru-classic", "aquatru-model-1", "aquasana-aq-mf-1", "aquasana-aq-6200", "waterdrop-c1s", "waterdrop-10ub-pro" ],
       "sourceIds" : [ "epa-certified-pfas-filter-guidance", "zerowater-performance-certification", "aquatru-classic-product", "aq-clean-water-machine-product", "waterdrop-a2-product" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/carbon-vs-ro-for-pfas",
       "secondaryLabel" : "Read carbon vs RO logic",
       "lastVerifiedDate" : "2026-03-20",

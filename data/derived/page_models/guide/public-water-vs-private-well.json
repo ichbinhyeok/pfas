@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:public-water-vs-private-well",
   "route_type" : "guide",
   "route_key" : "public-water-vs-private-well",
@@ -13,9 +13,10 @@
   "payload" : {
     "guide" : {
       "slug" : "public-water-vs-private-well",
+      "editorialRank" : 1,
       "eyebrow" : "High-intent guide",
-      "title" : "Public water vs private well is the first split, not a small detail",
-      "lede" : "These are different evidence systems. Public water begins with utility records. Private wells begin with owner-driven testing and state guidance.",
+      "title" : "PFAS in public water vs private wells: what changes first?",
+      "lede" : "Public water PFAS questions start with utility records and CCRs. Private well PFAS questions start with owner-driven testing and state guidance.",
       "queryIntent" : "Routing split",
       "nextActionTitle" : "Split the household path before comparing filters",
       "nextActionSummary" : "Do not answer a private-well question with a CCR workflow, and do not answer a public-water question with generic well-testing advice.",
@@ -28,7 +29,7 @@
       "relatedProductIds" : [ "aquasana-aq-mf-1", "zerowater-23-cup-dispenser", "aquatru-model-1", "aquasana-aq-6200" ],
       "sourceIds" : [ "epa-ccr-consumer-info", "epa-private-wells", "epa-pfas-private-wells" ],
       "primaryHref" : "/checker",
-      "primaryLabel" : "Open Action Checker",
+      "primaryLabel" : "Check your PFAS next step",
       "secondaryHref" : "/guides/test-first-vs-filter-first",
       "secondaryLabel" : "Read test-first logic",
       "lastVerifiedDate" : "2026-03-20",

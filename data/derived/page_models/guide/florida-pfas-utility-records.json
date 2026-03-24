@@ -1,0 +1,49 @@
+{
+  "schema_version" : "v1",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
+  "model_id" : "guide:florida-pfas-utility-records",
+  "route_type" : "guide",
+  "route_key" : "florida-pfas-utility-records",
+  "template_kind" : "guide_page",
+  "render_path" : "/guides/florida-pfas-utility-records",
+  "generation_mode" : "static_file_seed",
+  "indexable" : true,
+  "last_verified_date" : "2026-03-24",
+  "source_count" : 11,
+  "payload" : {
+    "guide" : {
+      "slug" : "florida-pfas-utility-records",
+      "editorialRank" : 11,
+      "eyebrow" : "Regional decision guide",
+      "title" : "Florida PFAS utility records: read the exact system before buying",
+      "lede" : "Florida now has multiple seeded utility dossiers, from notice-heavy Sunshine Water routes to quieter CCR-led systems. Use the exact utility record before comparing certified point-of-use filters.",
+      "queryIntent" : "Regional utility interpretation",
+      "nextActionTitle" : "Open the exact Florida system route before the product lane",
+      "nextActionSummary" : "A Florida household should match the exact utility dossier first, then decide whether the route is still interpretive or ready for a narrow certified point-of-use compare.",
+      "whyThis" : [ "Florida now spans multiple seeded utility routes with different PFAS posture.", "Some Florida systems behave like action-heavy notice routes while others stay closer to the annual-report layer.", "A state page is only useful when it keeps those differences attached to the exact system." ],
+      "whatThisDoesNotTellYou" : [ "It does not turn one Florida system into a statewide PFAS verdict.", "It does not prove every Florida route needs treatment.", "It does not justify whole-house treatment." ],
+      "checklist" : [ "Match the household to the exact Florida system and PWSID.", "Check whether the strongest current signal is a PFAS notice or a CCR-led route.", "Open certified point-of-use only after the utility posture is interpretable." ],
+      "evidenceHighlights" : [ "Sunshine Water routes now include both notice-heavy and quieter CCR-led systems.", "Florida works as a corridor only when Jansen, Lake Tarpon, Weathersfield, and Lake Utility Services North stay attached to their exact records.", "The commercial lane should remain downstream from the dossier, not from the state label." ],
+      "targetQueries" : [ "florida pfas utility records", "florida pfas water report how to read", "florida utility pfas notice" ],
+      "relatedPwsids" : [ "FL3354883", "FL3591121", "FL3590615", "FL6521000", "FL3591451" ],
+      "relatedProductIds" : [ "aquasana-aq-mf-1", "aquasana-aq-6200", "aquatru-under-sink", "waterdrop-10ub-pro" ],
+      "sourceIds" : [ "epa-ccr-consumer-info", "sunshine-water-home", "sunshine-water-quality-reports", "lusi-north-umcr5-2024-notice", "sanlando-umcr5-2024-notice", "jansen-2024-water-quality-report", "jansen-pfas-2023-report", "lake-tarpon-2024-water-quality-report", "lake-tarpon-pfas-2023-report", "weathersfield-2024-water-quality-report", "weathersfield-pfas-2023-report" ],
+      "primaryHref" : "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=FL3590615",
+      "primaryLabel" : "Check Florida utility route",
+      "secondaryHref" : "/compare/florida-certified-pou-after-utility-context",
+      "secondaryLabel" : "Compare Florida point-of-use options",
+      "lastVerifiedDate" : "2026-03-24",
+      "sections" : [ {
+        "title" : "Why Florida is only useful as a cluster of exact system dossiers",
+        "summary" : "The state helps users navigate, but the evidence still lives inside one utility route at a time.",
+        "paragraphs" : [ "Florida now gives the engine multiple seeded public-water routes with different posture. Lake Utility Services North and Sanlando behave more like PFAS-notice-led systems, while Jansen, Lake Tarpon, and Weathersfield behave more like CCR-led dossiers with direct utility context attached.", "That is why the Florida page helps. It turns the state into a navigation layer without pretending the state itself is the evidence." ],
+        "bullets" : [ "Use Florida as the navigation layer.", "Use the exact utility system as the evidence layer.", "Do not turn the state label into a buying shortcut." ]
+      }, {
+        "title" : "What a disciplined Florida route looks like",
+        "summary" : "The route should move from system identity and current PFAS posture into a narrow point-of-use lane only when the dossier supports it.",
+        "paragraphs" : [ "A strong Florida route starts with the system name, PWSID, report timing, and whether the sharper signal is a notice or a CCR-backed system record. That is enough to stop the page from becoming statewide fear content or shallow local SEO.", "Once the route is interpretable, the compare lane can open as a bounded point-of-use step. If the record is still thin or the household has not matched the exact system, the page should stay on the dossier." ],
+        "bullets" : [ "System match first.", "Notice posture or CCR posture second.", "Certified point-of-use only after interpretation." ]
+      } ]
+    }
+  }
+}

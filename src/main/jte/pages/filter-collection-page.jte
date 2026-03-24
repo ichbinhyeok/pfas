@@ -30,7 +30,7 @@
 
                     <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
                         <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="#collection-product-lane">Review collection lane</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/compare/under-sink-certified-pfas-options">Open compare hub</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/compare/under-sink-certified-pfas-options">Compare under-sink options</a>
                     </div>
                 </div>
 

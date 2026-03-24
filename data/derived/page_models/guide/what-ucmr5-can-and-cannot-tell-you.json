@@ -1,6 +1,6 @@
 {
   "schema_version" : "v1",
-  "generated_at" : "2026-03-20T20:38:19.807957400+09:00",
+  "generated_at" : "2026-03-24T14:57:20.640668300+09:00",
   "model_id" : "guide:what-ucmr5-can-and-cannot-tell-you",
   "route_type" : "guide",
   "route_key" : "what-ucmr5-can-and-cannot-tell-you",
@@ -13,6 +13,7 @@
   "payload" : {
     "guide" : {
       "slug" : "what-ucmr5-can-and-cannot-tell-you",
+      "editorialRank" : 15,
       "eyebrow" : "Decision-intent guide",
       "title" : "UCMR5 is useful PFAS evidence, but it is not a full household answer",
       "lede" : "UCMR5 can be one of the fastest ways to understand a public-water PFAS signal, but it is easy to overread if you treat it like a final compliance verdict or a direct household test.",
@@ -30,7 +31,7 @@
       "primaryHref" : "/guides/how-to-read-a-pfas-utility-notice",
       "primaryLabel" : "Read the utility notice guide",
       "secondaryHref" : "/checker",
-      "secondaryLabel" : "Open Action Checker",
+      "secondaryLabel" : "Check your PFAS next step",
       "lastVerifiedDate" : "2026-03-20",
       "sections" : [ {
         "title" : "Why UCMR5 is worth reading carefully",

@@ -33,8 +33,8 @@
                 </div>
 
                 <div class="join join-vertical gap-3 sm:join-horizontal">
-                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="${guidance.privateWellGuidanceUrl()}">Open official guidance</a>
-                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Open certified lab lookup</a>
+                    <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="${guidance.privateWellGuidanceUrl()}">Read official guidance</a>
+                    <a class="btn btn-outline join-item h-12 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="${guidance.certifiedLabLookupUrl()}">Review certified lab lookup</a>
                 </div>
             </div>
 
@@ -199,7 +199,7 @@
                                 <span class="text-sm leading-6 text-base-content/68">Whole-house has already been considered and rejected as the default move.</span>
                             </label>
                             <div class="col-span-full pt-1">
-                                <button class="btn btn-primary h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" type="submit">Run state comparison</button>
+                                <button class="btn btn-primary h-12 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" type="submit">Check private-well next step</button>
                             </div>
                         </form>
                     </div>
