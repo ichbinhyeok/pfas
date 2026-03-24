@@ -1,21 +1,30 @@
+FROM node:20-bookworm-slim AS tailwind
+
+WORKDIR /workspace
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY src/main/jte src/main/jte
+COPY src/main/tailwind src/main/tailwind
+COPY src/main/resources/static/css src/main/resources/static/css
+
+RUN npm run build:tailwind
+
 FROM gradle:8-jdk17 AS build
 
 WORKDIR /workspace
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends nodejs npm \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY gradle gradle
 COPY gradlew gradlew
 COPY gradlew.bat gradlew.bat
-COPY build.gradle settings.gradle package.json package-lock.json ./
+COPY build.gradle settings.gradle ./
 COPY src src
 COPY data data
+COPY --from=tailwind /workspace/src/main/resources/static/css/tailwind.css /workspace/src/main/resources/static/css/tailwind.css
 
 RUN chmod +x gradlew \
-    && npm install --include=optional \
-    && ./gradlew --no-daemon bootJar
+    && ./gradlew --no-daemon bootJar -x buildTailwind
 
 FROM eclipse-temurin:17-jre
 
