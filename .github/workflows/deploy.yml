@@ -112,7 +112,7 @@ jobs:
             docker compose up -d
             docker image prune -f
             for i in $(seq 1 30); do
-              if curl -fsS --max-time 10 http://127.0.0.1:8092/ > /dev/null; then
+              if curl -fsS --max-time 10 http://127.0.0.1:8092/healthz > /dev/null; then
                 exit 0
               fi
               sleep 2

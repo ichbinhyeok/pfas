@@ -3,6 +3,7 @@ package com.example.pfas.site;
 import java.util.Comparator;
 
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,7 @@ public class SeoSurfaceController {
 			"Allow: /",
 			"Disallow: /internal/",
 			"Disallow: /admin",
+			"Disallow: /healthz",
 			"Disallow: /checker",
 			"Disallow: /private-well-result/",
 			"Sitemap: " + siteMetadataService.absoluteUrl("/sitemap.xml")
@@ -56,6 +58,13 @@ public class SeoSurfaceController {
 		}
 		builder.append("</urlset>");
 		return builder.toString();
+	}
+
+	@GetMapping(value = "/healthz", produces = MediaType.TEXT_PLAIN_VALUE)
+	public ResponseEntity<String> healthz() {
+		return ResponseEntity.ok()
+			.header("Cache-Control", "no-store")
+			.body("ok");
 	}
 
 	private String escapeXml(String value) {
