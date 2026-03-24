@@ -14,7 +14,7 @@ COPY src src
 COPY data data
 
 RUN chmod +x gradlew \
-    && npm ci \
+    && npm install --include=optional \
     && ./gradlew --no-daemon bootJar
 
 FROM eclipse-temurin:17-jre
