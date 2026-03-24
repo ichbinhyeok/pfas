@@ -13,15 +13,14 @@
         <div class="space-y-5 p-6">
             <div class="space-y-3 border-b border-white/10 pb-5">
                 <span class="badge border-0 bg-white/10 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/80">${recommendation.tag()}</span>
-                <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/55">${recommendation.routeCode()}</p>
                 <h2 class="text-[2rem] font-semibold tracking-[-0.045em] text-white">${recommendation.title()}</h2>
                 <p class="text-base leading-7 text-white/72">${recommendation.summary()}</p>
             </div>
 
             <div class="terminal-pane px-5 py-5">
-                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Next action now</span>
+                <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/58">Recommended next page</span>
                 <p class="mt-3 text-lg font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</p>
-                <p class="mt-2 text-sm leading-6 text-white/68">The engine opens this path first. It is the least aggressive action supported by the current state.</p>
+                <p class="mt-2 text-sm leading-6 text-white/68">This is the narrowest next page supported by the current preview.</p>
             </div>
 
             <div class="join join-vertical gap-3">
@@ -70,7 +69,7 @@
         <details class="collapse collapse-arrow border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
             <summary class="collapse-title pr-12">
                 <div class="text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened</div>
-                <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${recommendation.principles().size()} routing principles are active</div>
+                <div class="mt-1 text-[0.72rem] font-medium tracking-[-0.01em] text-base-content/48">${recommendation.principles().size()} reasons are active</div>
             </summary>
             <div class="collapse-content">
                 <ul class="space-y-3 text-sm leading-6 text-base-content/72">

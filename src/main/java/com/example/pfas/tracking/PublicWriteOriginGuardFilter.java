@@ -3,6 +3,7 @@ package com.example.pfas.tracking;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.LinkedHashSet;
 import java.util.Locale;
 import java.util.Set;
 
@@ -58,24 +59,53 @@ public class PublicWriteOriginGuardFilter extends OncePerRequestFilter {
 			return true;
 		}
 
-		var expectedOrigin = normalizedOrigin(siteProperties.baseUrl());
-		if (expectedOrigin == null) {
+		var allowedOrigins = allowedOrigins(request);
+		if (allowedOrigins.isEmpty()) {
 			return false;
 		}
 
 		var originHeader = request.getHeader("Origin");
 		if (originHeader != null) {
 			var origin = normalizedOrigin(originHeader);
-			return origin == null || !expectedOrigin.equals(origin);
+			return origin == null || !allowedOrigins.contains(origin);
 		}
 
 		var refererHeader = request.getHeader("Referer");
 		if (refererHeader != null) {
 			var refererOrigin = normalizedOrigin(refererHeader);
-			return refererOrigin == null || !expectedOrigin.equals(refererOrigin);
+			return refererOrigin == null || !allowedOrigins.contains(refererOrigin);
 		}
 
 		return false;
+	}
+
+	private Set<String> allowedOrigins(HttpServletRequest request) {
+		var origins = new LinkedHashSet<String>();
+		addOrigin(origins, normalizedOrigin(siteProperties.baseUrl()));
+		addOrigin(origins, requestOrigin(request));
+		return origins;
+	}
+
+	private void addOrigin(Set<String> origins, String origin) {
+		if (origin != null && !origin.isBlank()) {
+			origins.add(origin);
+		}
+	}
+
+	private String requestOrigin(HttpServletRequest request) {
+		var scheme = request.getScheme();
+		var serverName = request.getServerName();
+		if (scheme == null || scheme.isBlank() || serverName == null || serverName.isBlank()) {
+			return null;
+		}
+
+		var normalizedScheme = scheme.toLowerCase(Locale.ROOT);
+		var normalizedHost = serverName.toLowerCase(Locale.ROOT);
+		var port = request.getServerPort();
+		var includePort = port > 0 && !isDefaultPort(normalizedScheme, port);
+		return includePort
+			? normalizedScheme + "://" + normalizedHost + ":" + port
+			: normalizedScheme + "://" + normalizedHost;
 	}
 
 	private String normalizedPath(HttpServletRequest request) {

@@ -124,11 +124,11 @@
                 </div>
                 <div class="ledger-grid">
                     <article class="px-4 py-4">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Current route</div>
-                        <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.routeCode()}</div>
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Current preview</div>
+                        <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.title()}</div>
                     </article>
                     <article class="px-4 py-4">
-                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Next action</div>
+                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Recommended next page</div>
                         <div class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${checkerRecommendation.primaryLabel()}</div>
                     </article>
                 </div>

@@ -23,25 +23,25 @@
 @param ActionCheckerRecommendation recommendation
 
 <div class="shell grid gap-8 xl:grid-cols-[minmax(0,1.08fr)_24rem]" id="checker-panel">
-    <form class="order-2 surface-panel-strong overflow-hidden xl:order-1" method="get" action="/checker" hx-get="/checker/panel" hx-trigger="change from:input, change from:select" hx-target="#checker-panel" hx-swap="outerHTML">
+    <form class="order-2 surface-panel-strong overflow-hidden xl:order-1" method="get" action="/checker" hx-get="/checker/panel" hx-trigger="change from:input[name='waterSource'], change from:input[name='directData']" hx-target="#checker-panel" hx-swap="outerHTML">
         <section class="terminal-panel rounded-none border-0 shadow-none">
             <div class="grid gap-6 p-6 md:p-8 lg:grid-cols-[minmax(0,1fr)_21rem] lg:items-start">
                 <div class="space-y-4">
                     <span class="inline-flex rounded-full bg-white/10 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/74">Case intake</span>
-                    <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-[2.85rem] md:leading-[1.02]">Anchor the household first. <span class="font-serif font-medium text-white/76">Then let the engine open the next responsible move.</span></h2>
-                    <p class="max-w-3xl text-base leading-8 text-white/68">Set the strongest evidence you actually have. The checker keeps uncertainty visible and suppresses premature shopping.</p>
+                    <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-[2.85rem] md:leading-[1.02]">Describe the case once. <span class="font-serif font-medium text-white/76">Then open the narrowest next page that matches the evidence.</span></h2>
+                    <p class="max-w-3xl text-base leading-8 text-white/68">Pick the water source, the record you actually have, and any current filter context. Preview the recommendation here, or jump straight to the recommended page.</p>
                 </div>
 
                 <div class="space-y-3">
                     <div class="terminal-pane px-5 py-5">
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/56">Current route</span>
-                        <span class="mt-3 block text-base font-semibold tracking-[-0.02em] text-white">${recommendation.routeCode()}</span>
-                        <span class="mt-1 block text-sm leading-6 text-white/62">${recommendation.tag()}</span>
+                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/56">Current preview</span>
+                        <span class="mt-3 block text-base font-semibold tracking-[-0.02em] text-white">${recommendation.title()}</span>
+                        <span class="mt-1 block text-sm leading-6 text-white/62">${recommendation.summary()}</span>
                     </div>
                     <div class="rounded-[1rem] border border-primary/28 bg-primary/16 px-5 py-5 shadow-[0_1px_2px_rgba(15,24,32,0.06),0_16px_30px_rgba(15,24,32,0.12)]">
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/74">Next action now</span>
+                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/74">Recommended next page</span>
                         <span class="mt-3 block text-base font-semibold tracking-[-0.02em] text-white">${recommendation.primaryLabel()}</span>
-                        <span class="mt-1 block text-sm leading-6 text-white/68">This is the first path opened from the current state.</span>
+                        <span class="mt-1 block text-sm leading-6 text-white/68">Open this when you want the next page, not just a preview.</span>
                     </div>
                 </div>
             </div>
@@ -70,8 +70,8 @@
             <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">1. Household source</span>
-                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Choose the evidence system.</h3>
-                    <p class="text-sm leading-7 text-base-content/62">Public-water and private-well cases should not share assumptions.</p>
+                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Choose your water source.</h3>
+                    <p class="text-sm leading-7 text-base-content/62">Public-water and private-well routes use different records and different guardrails.</p>
                 </div>
                 <div class="grid gap-4 md:grid-cols-2">
                     <label class="group cursor-pointer">
@@ -94,8 +94,8 @@
             <section class="grid gap-5 bg-base-200/46 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">2. Direct evidence</span>
-                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Choose the strongest direct record.</h3>
-                    <p class="text-sm leading-7 text-base-content/62">This step determines whether the engine interprets or keeps collecting evidence.</p>
+                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Which direct record do you have?</h3>
+                    <p class="text-sm leading-7 text-base-content/62">This is the step that decides whether the site interprets a record or sends you to collect one first.</p>
                 </div>
                 <div class="space-y-4">
                     @if(selection.waterSource() == ActionWaterSource.PUBLIC_WATER)
@@ -141,7 +141,7 @@
                         </div>
                     @endif
                     <div class="surface-muted px-5 py-4 text-sm leading-7 text-base-content/72">
-                        <strong class="font-semibold text-base-content">Routing effect</strong> Missing direct evidence collapses benchmark certainty and blocks premature shopping.
+                        <strong class="font-semibold text-base-content">Why this matters</strong> If you do not have a direct record yet, the site will keep you in evidence-gathering mode and hold back product pages.
                     </div>
                 </div>
             </section>
@@ -149,8 +149,8 @@
             <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">3. Interpretation posture</span>
-                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Describe the current case, not your fear level.</h3>
-                    <p class="text-sm leading-7 text-base-content/62">These fields keep the route honest once a case is already moving.</p>
+                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">What does the record say right now?</h3>
+                    <p class="text-sm leading-7 text-base-content/62">Use these fields to describe the actual record, not the worst-case scenario you are worried about.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="grid gap-4 md:grid-cols-3">
@@ -190,7 +190,7 @@
                         </label>
                     </div>
                     <div class="surface-muted px-5 py-4 text-sm leading-7 text-base-content/68">
-                        <strong class="font-semibold text-base-content">Model limit</strong> Without direct evidence, benchmark relation stays unresolved even if concern or shopping intent is high.
+                        <strong class="font-semibold text-base-content">Important</strong> Without a direct record, benchmark relation stays unresolved even if concern or shopping intent is high.
                     </div>
                 </div>
             </section>
@@ -198,37 +198,37 @@
             <section class="grid gap-5 bg-base-200/46 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
                     <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">4. Decision context</span>
-                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Show the engine where this case lives.</h3>
-                    <p class="text-sm leading-7 text-base-content/62">Context narrows the route without overriding the evidence hierarchy.</p>
+                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Add the household context.</h3>
+                    <p class="text-sm leading-7 text-base-content/62">These choices narrow the route, but they do not override the record itself.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="grid gap-4 md:grid-cols-3">
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="NONE" checked="${selection.shoppingIntent() == ActionShoppingIntent.NONE}">
                             <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
-                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Hold</span>
-                                <p class="mt-2 text-sm leading-6 text-base-content/64">Stay in evidence and interpretation mode.</p>
+                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Interpret only</span>
+                                <p class="mt-2 text-sm leading-6 text-base-content/64">Stay with the record and the explanation.</p>
                             </div>
                         </label>
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="FILTER_NOW" checked="${selection.shoppingIntent() == ActionShoppingIntent.FILTER_NOW}">
                             <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
-                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Filter now</span>
-                                <p class="mt-2 text-sm leading-6 text-base-content/64">Open hardware only when the route allows it.</p>
+                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Shop filters</span>
+                                <p class="mt-2 text-sm leading-6 text-base-content/64">Open product pages only if the route supports that step.</p>
                             </div>
                         </label>
                         <label class="group cursor-pointer">
                             <input class="peer sr-only" type="radio" name="shoppingIntent" value="COMPARE_OPTIONS" checked="${selection.shoppingIntent() == ActionShoppingIntent.COMPARE_OPTIONS}">
                             <div class="rounded-[1rem] border border-base-300/70 bg-base-200/38 px-5 py-5 transition duration-150 ease-out group-hover:-translate-y-px peer-checked:border-primary peer-checked:bg-base-100 peer-checked:shadow-[var(--shadow-soft)]">
-                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Compare</span>
-                                <p class="mt-2 text-sm leading-6 text-base-content/64">Open constrained point-of-use comparison after interpretation.</p>
+                                <span class="text-base font-semibold tracking-[-0.02em] text-base-content">Compare options</span>
+                                <p class="mt-2 text-sm leading-6 text-base-content/64">Open a compare lane after the record has been interpreted.</p>
                             </div>
                         </label>
                     </div>
 
                     <div class="grid gap-4 md:grid-cols-[minmax(0,1fr)_18rem]">
                         @if(selection.waterSource() == ActionWaterSource.PRIVATE_WELL)
-                            <label class="block rounded-[1rem] border border-primary/12 bg-primary/5 px-4 py-4">
+                            <div class="block rounded-[1rem] border border-primary/12 bg-primary/5 px-4 py-4">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary">Private-well state</span>
                                 <select class="form-select select mt-3 w-full rounded-[0.95rem] border-base-300 bg-base-100 text-sm font-medium text-base-content" name="stateCode">
                                     @for(var state : states)
@@ -261,16 +261,22 @@
                                         </div>
                                     </div>
                                 @endif
-                            </label>
+                            </div>
                             <article class="rounded-[1rem] border border-base-300/70 bg-base-200/44 px-4 py-4">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Utility dossiers</span>
                                 <div class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">Inactive in this case</div>
                                 <p class="mt-2 text-sm leading-6 text-base-content/62">System records matter only on public water.</p>
                             </article>
                         @else
-                            <label class="block rounded-[1rem] border border-primary/12 bg-primary/5 px-4 py-4">
+                            <div class="block rounded-[1rem] border border-primary/12 bg-primary/5 px-4 py-4" data-system-search-panel="true">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-primary">Public-water system</span>
+                                <label class="mt-4 block rounded-[0.95rem] border border-base-300/70 bg-base-100 px-4 py-4">
+                                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Search utilities</span>
+                                    <input class="input input-bordered mt-3 h-12 w-full border-base-300 bg-base-100 shadow-none" type="search" placeholder="Type a utility name, city, state, or PWSID" autocomplete="off" data-system-search="true">
+                                    <span class="mt-2 block text-xs leading-6 text-base-content/56" data-system-search-status>Utility options available</span>
+                                </label>
                                 <select class="form-select select mt-3 w-full rounded-[0.95rem] border-base-300 bg-base-100 text-sm font-medium text-base-content" name="pwsid">
+                                    <option value="" selected="${selection.pwsid() == null}" data-system-placeholder="true">Select a utility if you already know it</option>
                                     @for(var system : systems)
                                         <option value="${system.pwsid()}" selected="${system.pwsid().equals(selection.pwsid())}">${system.pwsName()} (${system.stateCode()})</option>
                                     @endfor
@@ -326,7 +332,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </label>
+                            </div>
                             <article class="rounded-[1rem] border border-base-300/70 bg-base-200/44 px-4 py-4">
                                 <span class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">State lab guide</span>
                                 <div class="mt-3 text-sm font-semibold tracking-[-0.02em] text-base-content">Inactive in this case</div>
@@ -339,27 +345,35 @@
 
             <section class="grid gap-5 bg-base-100 px-6 py-8 md:px-8 lg:grid-cols-[13rem_minmax(0,1fr)]">
                 <div class="space-y-2">
-                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">5. Guardrails</span>
-                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Keep escalation explicit.</h3>
-                    <p class="text-sm leading-7 text-base-content/62">Whole-house interest can be recorded, but it never becomes the default route.</p>
+                    <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">5. Review</span>
+                    <h3 class="text-xl font-semibold tracking-[-0.03em] text-base-content">Review and open the next page.</h3>
+                    <p class="text-sm leading-7 text-base-content/62">Whole-house interest can be recorded, but it never becomes the default recommendation.</p>
                 </div>
                 <div class="space-y-4">
                     <label class="flex cursor-pointer items-start gap-4 rounded-[1rem] border border-accent/20 bg-[rgba(120,104,90,0.08)] px-5 py-5">
                         <input class="checkbox checkbox-primary mt-1 border-base-300 bg-base-100" type="checkbox" name="wholeHouseConsidered" value="true" checked="${selection.wholeHouseConsidered()}">
                         <span class="space-y-2">
-                            <span class="block text-sm font-semibold tracking-[-0.02em] text-base-content">Whole-house is being considered</span>
+                            <span class="block text-sm font-semibold tracking-[-0.02em] text-base-content">Whole-house is on the list</span>
                             <span class="block text-sm leading-7 text-base-content/68">The engine treats this as a guarded escalation and compares it against narrower point-of-use routes first.</span>
                         </span>
                     </label>
 
+                    <div class="surface-muted px-5 py-5 shadow-[var(--shadow-soft)]">
+                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Current preview</span>
+                        <p class="mt-3 text-base font-semibold tracking-[-0.02em] text-base-content">${recommendation.title()}</p>
+                        <p class="mt-2 text-sm leading-7 text-base-content/68">${recommendation.summary()}</p>
+                        <p class="mt-3 text-xs leading-6 text-base-content/56">Preview recommendation refreshes this page. Open recommended page uses the current form values and takes you straight to the next page.</p>
+                    </div>
+
                     <div class="flex flex-wrap items-center justify-between gap-4 rounded-[1rem] border border-base-300/70 bg-base-200/52 px-5 py-5">
                         <div class="space-y-1">
-                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Submission posture</span>
-                            <p class="text-sm leading-7 text-base-content/66">Run the full route when the case description feels honest. Reset if you want to clear the posture.</p>
+                            <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Next step</span>
+                            <p class="text-sm leading-7 text-base-content/66">Preview the reasoning here, or jump straight to the recommended page when you are ready.</p>
                         </div>
-                        <div class="join join-vertical gap-3 sm:join-horizontal">
-                            <button class="btn btn-primary join-item h-11 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" type="submit">Run full route</button>
-                            <a class="btn btn-outline join-item h-11 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/checker">Reset</a>
+                        <div class="flex flex-wrap gap-3">
+                            <button class="btn btn-primary h-11 rounded-full border-0 px-6 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" type="submit" formaction="/checker/route">Open recommended page</button>
+                            <button class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" type="submit" formaction="/checker">Preview recommendation</button>
+                            <a class="btn btn-outline h-11 rounded-full border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none hover:-translate-y-px hover:bg-base-200" href="/checker">Reset</a>
                         </div>
                     </div>
                 </div>

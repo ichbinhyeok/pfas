@@ -154,6 +154,44 @@ public class PublicPagesController {
 		return "fragments/checkerPanel";
 	}
 
+	@GetMapping("/checker/route")
+	public String checkerRoute(
+		@RequestParam(required = false) String waterSource,
+		@RequestParam(required = false) String directData,
+		@RequestParam(required = false) String indirectData,
+		@RequestParam(required = false) String benchmarkRelation,
+		@RequestParam(required = false) String currentFilterStatus,
+		@RequestParam(required = false) String shoppingIntent,
+		@RequestParam(required = false) Boolean wholeHouseConsidered,
+		@RequestParam(required = false) String stateCode,
+		@RequestParam(required = false) String pwsid
+	) {
+		validateCheckerInputs(
+			waterSource,
+			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
+			shoppingIntent,
+			stateCode,
+			pwsid
+		);
+
+		var selection = actionCheckerService.normalize(
+			waterSource,
+			directData,
+			indirectData,
+			benchmarkRelation,
+			currentFilterStatus,
+			shoppingIntent,
+			wholeHouseConsidered,
+			stateCode,
+			pwsid
+		);
+
+		return "redirect:" + actionCheckerService.evaluate(selection).primaryHref();
+	}
+
 	@GetMapping("/public-water/{pwsid}")
 	public String publicWaterResult(@PathVariable String pwsid, Model model) {
 		var system = publicWaterSystemService.getByPwsid(pwsid)

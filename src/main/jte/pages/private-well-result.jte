@@ -334,7 +334,7 @@
                             </div>
                         </div>
                         <div class="collapse collapse-arrow rounded-none border-0 bg-base-100">
-                            <input type="checkbox">
+                            <input type="checkbox" aria-label="Toggle why this route opened">
                             <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Why this route opened (${result.whyThis().size()})</div>
                             <div class="collapse-content">
                                 <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">
@@ -373,7 +373,7 @@
                             </div>
                             @if(result.bestFitOptions().size() > 2)
                                 <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
-                                    <input type="checkbox">
+                                    <input type="checkbox" aria-label="Toggle more route-fit patterns">
                                     <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More route-fit patterns (${result.bestFitOptions().size() - 2})</div>
                                     <div class="collapse-content">
                                         <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
@@ -471,7 +471,7 @@
                         </div>
                         @if(result.sources().size() > 2)
                             <div class="collapse collapse-arrow rounded-[1rem] border border-base-300/70 bg-base-200/34">
-                                <input type="checkbox">
+                                <input type="checkbox" aria-label="Toggle more sources">
                                 <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">More sources (${result.sources().size() - 2})</div>
                                 <div class="collapse-content">
                                     <div class="overflow-hidden rounded-[1rem] border border-base-300/70 bg-base-100 pt-2">
@@ -530,7 +530,7 @@
                             </p>
                         </section>
                         <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
-                            <input type="checkbox">
+                            <input type="checkbox" aria-label="Toggle certification checklist">
                             <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Certification checklist</div>
                             <div class="collapse-content">
                                 <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">
@@ -541,7 +541,7 @@
                             </div>
                         </div>
                         <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
-                            <input type="checkbox">
+                            <input type="checkbox" aria-label="Toggle when to escalate">
                             <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">When to escalate</div>
                             <div class="collapse-content">
                                 <ul class="space-y-3 pt-2 text-sm leading-7 text-base-content/72">

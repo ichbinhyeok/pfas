@@ -331,7 +331,7 @@
                     </div>
                     @if(!relatedSystems.isEmpty())
                         <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
-                            <input type="checkbox">
+                            <input type="checkbox" aria-label="Toggle live utility examples">
                             <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Live utility examples (${relatedSystems.size()})</div>
                             <div class="collapse-content">
                                 <div class="space-y-3 pt-2">
@@ -347,7 +347,7 @@
                         </div>
                     @endif
                     <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
-                        <input type="checkbox">
+                        <input type="checkbox" aria-label="Toggle primary source ledger">
                         <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">Primary source ledger (${compareSources.size()})</div>
                         <div class="collapse-content">
                             <div class="space-y-3 pt-2">
@@ -382,7 +382,7 @@
                         </div>
                     @endif
                     <div class="collapse collapse-arrow rounded-none border-0 border-t border-base-300/70 bg-base-100">
-                        <input type="checkbox">
+                        <input type="checkbox" aria-label="Toggle all guides">
                         <div class="collapse-title pr-12 text-sm font-semibold tracking-[-0.02em] text-base-content">All guides</div>
                         <div class="collapse-content">
                             <div class="space-y-3 pt-2">

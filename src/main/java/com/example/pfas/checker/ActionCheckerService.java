@@ -272,12 +272,8 @@ public class ActionCheckerService {
 	private ActionCheckerRecommendation publicWaterInterpretDirectData(ActionCheckerSelection selection) {
 		var system = resolveSystem(selection.pwsid());
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
-		var interpretationHref = system
-			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/guides/read-your-ccr");
-		var secondaryHref = system
-			.map(item -> "/public-water-system/" + item.pwsid())
-			.orElse("/guides/read-your-ccr");
+		var interpretationHref = publicWaterInterpretationHref(selection);
+		var secondaryHref = publicWaterSupportHref(selection);
 		var secondaryLabel = system.isPresent() ? "Open source context" : "Read how to use a CCR first";
 
 		return new ActionCheckerRecommendation(
@@ -302,9 +298,29 @@ public class ActionCheckerService {
 	private ActionCheckerRecommendation publicWaterCertifiedPouEvaluation(ActionCheckerSelection selection) {
 		var system = resolveSystem(selection.pwsid());
 		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
-		var interpretationHref = system
-			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/guides/read-your-ccr");
+		var interpretationHref = publicWaterInterpretationHref(selection);
+		var compareHref = publicWaterCompareHref(selection);
+		var compareLabel = publicWaterCompareLabel(selection);
+
+		if (selection.shoppingIntent() == ActionShoppingIntent.COMPARE_OPTIONS) {
+			return new ActionCheckerRecommendation(
+				ActionCheckerRouteCode.PUBLIC_WATER_CERTIFIED_POU_EVALUATION,
+				"Compare certified point-of-use",
+				"Compare certified point-of-use after you read the utility record",
+				"The record already supports a treatment discussion, so the next page can be a certified point-of-use compare lane that still keeps the utility interpretation close at hand.",
+				List.of(
+					"Direct utility notices outrank generalized PFAS content.",
+					"Certified point-of-use remains the first treatment class for ingestion-focused margin.",
+					"Whole-house still needs a separate purpose, cost, and maintenance review."
+				),
+				compareHref,
+				compareLabel,
+				interpretationHref,
+				system.isPresent() ? "Open " + systemName + " interpretation" : "Read how to use a CCR first",
+				false,
+				"Whole-house should only open after a separate whole-home purpose and cost review."
+			);
+		}
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_CERTIFIED_POU_EVALUATION,
@@ -327,9 +343,10 @@ public class ActionCheckerService {
 
 	private ActionCheckerRecommendation publicWaterOptionalPouCompare(ActionCheckerSelection selection) {
 		var system = resolveSystem(selection.pwsid());
-		var interpretationHref = system
-			.map(item -> "/public-water/" + item.pwsid())
-			.orElse("/guides/read-your-ccr");
+		var systemName = system.map(PublicWaterSystem::pwsName).orElse("the selected utility");
+		var interpretationHref = publicWaterInterpretationHref(selection);
+		var compareHref = publicWaterCompareHref(selection);
+		var compareLabel = publicWaterCompareLabel(selection);
 
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PUBLIC_WATER_OPTIONAL_POU_COMPARE,
@@ -341,10 +358,10 @@ public class ActionCheckerService {
 				"Cost and cartridge cadence should appear beside the interpretation, not in isolation.",
 				"Whole-house remains a separate escalation path, not the baseline."
 			),
+			compareHref,
+			compareLabel,
 			interpretationHref,
-			system.isPresent() ? "Open interpreted result" : "Read how to use a CCR first",
-			"/guides/nsf-53-vs-58-pfas",
-			"Read certification basics",
+			system.isPresent() ? "Open " + systemName + " interpretation" : "Read how to use a CCR first",
 			false,
 			"Whole-house should only appear after a separate whole-home rationale is established."
 		);
@@ -402,6 +419,26 @@ public class ActionCheckerService {
 
 	private ActionCheckerRecommendation privateWellCertifiedPouAndStateNextSteps(ActionCheckerSelection selection) {
 		var stateHref = privateWellResultHref(selection);
+		if (selection.shoppingIntent() == ActionShoppingIntent.COMPARE_OPTIONS) {
+			return new ActionCheckerRecommendation(
+				ActionCheckerRouteCode.PRIVATE_WELL_CERTIFIED_POU_AND_STATE_NEXT_STEPS,
+				"Compare certified point-of-use",
+				"Compare certified point-of-use after you read the state interpretation",
+				"A private-well test is above the selected reference, so the next page can be a certified point-of-use compare lane while keeping the state-specific interpretation available as the fallback reference.",
+				List.of(
+					"Private-well readings above the selected reference are action signals, not legal compliance labels.",
+					"State-specific interpretation should stay available beside any compare lane.",
+					"Whole-house still needs a separate purpose, cost, and maintenance review."
+				),
+				"/compare/private-well-certified-pou-after-test",
+				"Compare private-well certified point-of-use options",
+				stateHref,
+				"Open private-well interpretation",
+				false,
+				"Whole-house should open only after purpose, cost, and maintenance are separately justified."
+			);
+		}
+
 		return new ActionCheckerRecommendation(
 			ActionCheckerRouteCode.PRIVATE_WELL_CERTIFIED_POU_AND_STATE_NEXT_STEPS,
 			"State next steps + certified point-of-use",
@@ -632,6 +669,52 @@ public class ActionCheckerService {
 		}
 
 		return publicWaterSystemService.getByPwsid(pwsid);
+	}
+
+	private String publicWaterInterpretationHref(ActionCheckerSelection selection) {
+		return resolveSystem(selection.pwsid())
+			.map(item -> "/public-water/" + item.pwsid())
+			.orElse("/guides/read-your-ccr");
+	}
+
+	private String publicWaterSupportHref(ActionCheckerSelection selection) {
+		return resolveSystem(selection.pwsid())
+			.map(item -> "/public-water-system/" + item.pwsid())
+			.orElse("/guides/read-your-ccr");
+	}
+
+	private String publicWaterCompareHref(ActionCheckerSelection selection) {
+		var stateCode = resolveSystem(selection.pwsid())
+			.map(PublicWaterSystem::stateCode)
+			.orElse(null);
+
+		if (stateCode == null) {
+			return "/compare/certified-pou-after-utility-context";
+		}
+
+		return switch (stateCode) {
+			case "PA" -> "/compare/pennsylvania-certified-pou-after-utility-context";
+			case "NJ" -> "/compare/new-jersey-certified-pou-after-utility-context";
+			case "CA" -> "/compare/california-certified-pou-after-utility-context";
+			case "FL" -> "/compare/florida-certified-pou-after-utility-context";
+			case "NV" -> "/compare/nevada-certified-pou-after-utility-context";
+			default -> "/compare/certified-pou-after-utility-context";
+		};
+	}
+
+	private String publicWaterCompareLabel(ActionCheckerSelection selection) {
+		var stateCode = resolveSystem(selection.pwsid())
+			.map(PublicWaterSystem::stateCode)
+			.orElse(null);
+
+		return switch (stateCode == null ? "" : stateCode) {
+			case "PA" -> "Compare Pennsylvania certified point-of-use options";
+			case "NJ" -> "Compare New Jersey certified point-of-use options";
+			case "CA" -> "Compare California certified point-of-use options";
+			case "FL" -> "Compare Florida certified point-of-use options";
+			case "NV" -> "Compare Nevada certified point-of-use options";
+			default -> "Compare certified point-of-use options";
+		};
 	}
 
 	private String noDirectEvidencePrinciple(ActionCheckerSelection selection) {
