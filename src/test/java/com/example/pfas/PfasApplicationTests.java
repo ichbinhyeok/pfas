@@ -1685,6 +1685,8 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS can feel unfamiliar.")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("https://www.googletagmanager.com/gtag/js?id=G-NJ5BCKCCEY")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("gtag('config', 'G-NJ5BCKCCEY');")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Get a clearer next step without learning the whole PFAS vocabulary first.")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("State-led private-well lanes")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Compare private-well options")))
