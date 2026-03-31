@@ -2712,6 +2712,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/certified-pou-after-utility-context")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("application/ld+json")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"@type\":\"Article\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"@type\":\"Product\""))))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"@type\":\"Offer\""))))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Primary source ledger")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("aria-label=\"Toggle primary source ledger\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("aria-label=\"Toggle live utility examples\"")))
@@ -2805,7 +2807,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Maintenance")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("application/ld+json")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"@type\":\"ItemList\"")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("\"positiveNotes\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"@type\":\"Product\""))))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("\"@type\":\"Offer\""))))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-merchant-track=\"true\"")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-type=\"compare\"")));
 	}
