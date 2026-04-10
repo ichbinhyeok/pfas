@@ -90,6 +90,7 @@ public class PublicPagesController {
 		model.addAttribute("states", stateGuidanceService.getAll());
 		model.addAttribute("featuredStates", featuredStates());
 		model.addAttribute("guides", guidePageService.getAll());
+		model.addAttribute("searchPriorityGuides", guidePageService.getSearchPriorityGuides());
 		model.addAttribute("compares", comparePageService.getAll());
 		model.addAttribute("checkerSelection", checkerSelection);
 		model.addAttribute("checkerRecommendation", actionCheckerService.evaluate(checkerSelection));

@@ -86,6 +86,7 @@ public class GuidePagesController {
 
 		model.addAttribute("page", page);
 		model.addAttribute("allGuides", guidePageService.getAll());
+		model.addAttribute("searchPriorityGuides", guidePageService.getSearchPriorityGuides());
 		model.addAttribute("guideSources", guideSources);
 		model.addAttribute("relatedSystemExamples", relatedSystems);
 		model.addAttribute("relatedProducts", relatedProducts);

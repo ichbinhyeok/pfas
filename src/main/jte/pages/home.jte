@@ -14,6 +14,7 @@
 @param java.util.List<PublicWaterSystem> featuredSystems
 @param java.util.List<PublicWaterSystem> featuredPennsylvaniaSystems
 @param java.util.List<GuidePage> guides
+@param java.util.List<GuidePage> searchPriorityGuides
 @param java.util.List<ComparePage> compares
 @param ActionCheckerSelection checkerSelection
 @param ActionCheckerRecommendation checkerRecommendation
@@ -242,6 +243,40 @@
         @endif
     </div>
 </section>
+
+@if (!searchPriorityGuides.isEmpty())
+    <section class="pt-8 md:pt-10">
+        <div class="shell">
+            <div class="surface-muted px-5 py-5 md:px-6">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/48">Decision-intent cluster</span>
+                        <h2 class="max-w-4xl text-2xl font-semibold tracking-[-0.04em] text-base-content md:text-[2.4rem] md:leading-[1.04]">These narrow guides answer the next filter question before the site opens a bigger product lane.</h2>
+                        <p class="max-w-3xl text-sm leading-7 text-base-content/72">Use these when the household already knows the question. They are meant to settle timing, certification, scope, and ownership burden without sending the reader back into a generic checker loop.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid gap-4 xl:grid-cols-2">
+                    @for (var guide : searchPriorityGuides)
+                        <article class="rounded-[1.15rem] border border-base-300/70 bg-base-100/96 px-5 py-5 shadow-[var(--shadow-soft)]">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${guide.eyebrow()}</span>
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/56">${guide.lastVerifiedDate()}</span>
+                            </div>
+                            <h3 class="mt-4 text-[1.35rem] font-semibold tracking-[-0.03em] text-base-content">${guide.title()}</h3>
+                            <p class="mt-3 text-sm leading-7 text-base-content/68">${guide.nextActionSummary()}</p>
+                            <div class="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/48">Next move</div>
+                            <p class="mt-2 text-sm font-semibold tracking-[-0.02em] text-base-content">${guide.primaryLabel()}</p>
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <a class="btn btn-primary h-11 rounded-full border-0 px-5 text-sm font-semibold shadow-none hover:-translate-y-px hover:bg-primary/92" href="/guides/${guide.slug()}">Read guide</a>
+                            </div>
+                        </article>
+                    @endfor
+                </div>
+            </div>
+        </div>
+    </section>
+@endif
 
 <section class="pt-14 md:pt-20">
     <div class="shell">

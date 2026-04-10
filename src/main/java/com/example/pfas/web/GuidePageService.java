@@ -9,6 +9,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class GuidePageService {
 
+	private static final List<String> SEARCH_PRIORITY_GUIDE_SLUGS = List.of(
+		"test-first-vs-filter-first",
+		"nsf-53-vs-58-pfas",
+		"pfas-filter-annual-cost",
+		"under-sink-vs-whole-house"
+	);
+
 	private static final Comparator<GuidePage> PAGE_ORDER = Comparator
 		.comparing(GuidePage::editorialRank, Comparator.nullsLast(Comparator.naturalOrder()))
 		.thenComparing(GuidePage::slug);
@@ -40,5 +47,16 @@ public class GuidePageService {
 		return getAll().stream()
 			.filter(page -> page.slug().equals(slug))
 			.findFirst();
+	}
+
+	public List<GuidePage> getSearchPriorityGuides() {
+		return getBySlugsInOrder(SEARCH_PRIORITY_GUIDE_SLUGS);
+	}
+
+	public List<GuidePage> getBySlugsInOrder(List<String> slugs) {
+		return slugs.stream()
+			.map(this::getBySlug)
+			.flatMap(Optional::stream)
+			.toList();
 	}
 }

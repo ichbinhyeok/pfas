@@ -11,6 +11,7 @@
 @param String siteMethodologyOwner
 @param GuidePage page
 @param List<GuidePage> allGuides
+@param List<GuidePage> searchPriorityGuides
 @param List<SourceDocument> guideSources
 @param List<GuideSystemExample> relatedSystemExamples
 @param List<FilterCatalogItem> relatedProducts
@@ -132,6 +133,27 @@
                     routeSummary = commercialState.summary(),
                     routeUrl = "/guides/" + page.slug()
                 )
+
+                @if(!searchPriorityGuides.isEmpty())
+                    <section class="surface-panel px-6 py-5">
+                        <div class="space-y-2">
+                            <span class="section-label">Priority decision guides</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Keep the next filter question narrow.</h2>
+                            <p class="text-sm leading-7 text-base-content/68">These guides settle the follow-up questions that tend to create premature shopping: whether evidence should come first, which claim language matters, how annual cost changes fit, and whether whole-house is actually justified.</p>
+                        </div>
+                        <div class="mt-5 grid gap-4 lg:grid-cols-2">
+                            @for(var guide : searchPriorityGuides)
+                                @if(!guide.slug().equals(page.slug()))
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${guide.eyebrow()}</div>
+                                        <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${guide.title()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/68">${guide.nextActionSummary()}</div>
+                                    </a>
+                                @endif
+                            @endfor
+                        </div>
+                    </section>
+                @endif
 
                 @if(!relatedProducts.isEmpty())
                     <section class="surface-panel px-6 py-5">
