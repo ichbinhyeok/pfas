@@ -21,6 +21,8 @@
 @param boolean pageIndexable
 @param String pageStructuredDataJson
 
+!{ var hasDirectProductCta = "#compare-product-lane".equals(page.primaryHref()) || "#compare-product-lane".equals(page.secondaryHref()); }
+
 @template.layout.base(
     pageTitle = page.title(),
     pageDescription = page.lede(),
@@ -44,7 +46,7 @@
                     <div class="join join-vertical gap-3 sm:join-horizontal sm:flex-wrap">
                     <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="${page.primaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:primary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.primaryHref()}" data-route-click-cta-slot="compare_primary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.primaryLabel()}</a>
                     <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="${page.secondaryHref()}" data-route-click-track="true" data-route-click-id="compare:${page.slug()}:secondary" data-route-click-source-page="/compare/${page.slug()}" data-route-click-target-path="${page.secondaryHref()}" data-route-click-cta-slot="compare_secondary" data-route-click-family="compare_handoff" data-route-click-lane="${page.slug()}" data-route-click-region="">${page.secondaryLabel()}</a>
-                    @if(!relatedProducts.isEmpty())
+                    @if(!relatedProducts.isEmpty() && !hasDirectProductCta)
                         <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="#compare-product-lane">Review compared products</a>
                     @endif
                 </div>
@@ -126,6 +128,10 @@
                     routeSummary = commercialState.summary(),
                     routeUrl = "/compare/" + page.slug()
                 )
+
+                <section class="surface-muted px-5 py-4">
+                    <p class="text-sm leading-7 text-base-content/74"><strong class="font-semibold text-base-content">Use the checker only if the route is still unclear.</strong> If the household already belongs in this compare lane, stay here and move straight into the compared products or the guide that narrows the tradeoff.</p>
+                </section>
 
                 <section class="decision-shelf">
                     <div class="grid gap-px bg-base-300/70 lg:grid-cols-[minmax(0,1.04fr)_minmax(0,0.96fr)]">

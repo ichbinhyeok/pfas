@@ -72,10 +72,10 @@
         "waterdrop-10ub-pro-product",
         "waterdrop-g3p600-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
-      "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
-      "secondaryLabel": "Read post-evidence guide",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review compared systems",
+      "secondaryHref": "/guides/under-sink-vs-whole-house",
+      "secondaryLabel": "Read under-sink vs whole-house",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
@@ -188,8 +188,8 @@
         "waterdrop-ed01-product",
         "waterdrop-c1s-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review form-factor comparison",
       "secondaryHref": "/guides/countertop-vs-pitcher-vs-under-sink-for-pfas",
       "secondaryLabel": "Read form-factor guide",
       "lastVerifiedDate": "2026-03-20",
@@ -304,8 +304,8 @@
         "waterdrop-g3p600-product",
         "waterdrop-c1s-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review cost comparison",
       "secondaryHref": "/guides/pfas-filter-annual-cost",
       "secondaryLabel": "Read cost guide",
       "lastVerifiedDate": "2026-03-20",
@@ -417,8 +417,8 @@
         "nsf-espring-listing-053",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review certified POU options",
       "secondaryHref": "/guides/choose-certified-pfas-filter-after-evidence",
       "secondaryLabel": "Read post-evidence guide",
       "lastVerifiedDate": "2026-03-22",
@@ -531,10 +531,10 @@
         "aquatru-under-sink-product",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/guides/pennsylvania-pfas-utility-records",
-      "primaryLabel": "Read Pennsylvania utility guide",
-      "secondaryHref": "/checker",
-      "secondaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review Pennsylvania options",
+      "secondaryHref": "/guides/pennsylvania-pfas-utility-records",
+      "secondaryLabel": "Read Pennsylvania utility guide",
       "lastVerifiedDate": "2026-03-22",
       "sections": [
         {
@@ -638,8 +638,8 @@
         "nsf-espring-listing-053",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review private-well options",
       "secondaryHref": "/guides/private-well-pfas-result-next-steps",
       "secondaryLabel": "Read private-well next steps",
       "lastVerifiedDate": "2026-03-22",
@@ -748,10 +748,10 @@
         "aquatru-under-sink-product",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/guides/new-jersey-pfas-utility-records",
-      "primaryLabel": "Read New Jersey utility guide",
-      "secondaryHref": "/checker",
-      "secondaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review New Jersey options",
+      "secondaryHref": "/guides/new-jersey-pfas-utility-records",
+      "secondaryLabel": "Read New Jersey utility guide",
       "lastVerifiedDate": "2026-03-22",
       "sections": [
         {
@@ -859,8 +859,8 @@
         "zerowater-certified-devices-performance-pdf",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review claim examples",
       "secondaryHref": "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel": "Read certification guide",
       "lastVerifiedDate": "2026-03-20",
@@ -970,10 +970,10 @@
         "aquatru-under-sink-product",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/guides/california-pfas-utility-records",
-      "primaryLabel": "Read California utility guide",
-      "secondaryHref": "/checker",
-      "secondaryLabel": "Check your PFAS next step",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review California options",
+      "secondaryHref": "/guides/california-pfas-utility-records",
+      "secondaryLabel": "Read California utility guide",
       "lastVerifiedDate": "2026-03-23",
       "sections": [
         {
@@ -1087,10 +1087,10 @@
         "aquatru-under-sink-product",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/guides/florida-pfas-utility-records",
-      "primaryLabel": "Read Florida utility guide",
-      "secondaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=FL3590615",
-      "secondaryLabel": "Check Florida utility route",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review Florida options",
+      "secondaryHref": "/guides/florida-pfas-utility-records",
+      "secondaryLabel": "Read Florida utility guide",
       "lastVerifiedDate": "2026-03-24",
       "sections": [
         {
@@ -1204,10 +1204,10 @@
         "aquatru-under-sink-product",
         "waterdrop-10ub-pro-product"
       ],
-      "primaryHref": "/guides/nevada-pfas-utility-records",
-      "primaryLabel": "Read Nevada utility guide",
-      "secondaryHref": "/checker?waterSource=PUBLIC_WATER&directData=UTILITY_DOCUMENT&indirectData=NONE&benchmarkRelation=UNKNOWN&currentFilterStatus=NONE&shoppingIntent=NONE&wholeHouseConsidered=false&pwsid=NV0005027",
-      "secondaryLabel": "Check Nevada utility route",
+      "primaryHref": "#compare-product-lane",
+      "primaryLabel": "Review Nevada options",
+      "secondaryHref": "/guides/nevada-pfas-utility-records",
+      "secondaryLabel": "Read Nevada utility guide",
       "lastVerifiedDate": "2026-03-24",
       "sections": [
         {
