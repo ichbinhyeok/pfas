@@ -224,6 +224,9 @@ Google is indexing and testing the site, but the wrong page family is still doin
   - `/guides/pfas-filter-annual-cost`
   - `/guides/under-sink-vs-whole-house`
 - Tightened the ledes and next-action copy on the three product-decision guides so each page presents a more distinct first-screen thesis.
+- Reordered global navigation and home hero CTAs so `Guides` define the product first and `/checker` stays available as a human routing tool instead of the primary brand signal.
+- Added guide-defined route modules to `/public-water/*` and `/public-water-system/*` so search traffic landing on result or support pages gets pushed back into the guide layer that explains evidence order and product scope.
+- Rewired the four core guides toward direct guide or compare destinations so they behave more like action pages and less like abstract explainer pages.
 
 ### Next Review Date
 

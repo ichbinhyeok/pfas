@@ -12,6 +12,7 @@
 @param GuidePage page
 @param List<GuidePage> allGuides
 @param List<GuidePage> searchPriorityGuides
+@param boolean priorityGuide
 @param List<SourceDocument> guideSources
 @param List<GuideSystemExample> relatedSystemExamples
 @param List<FilterCatalogItem> relatedProducts
@@ -121,6 +122,28 @@
                         <p class="text-sm leading-7 text-base-content/68">${page.nextActionSummary()}</p>
                     </div>
                 </section>
+
+                @if(priorityGuide)
+                    <section class="surface-panel px-6 py-5">
+                        <div class="space-y-2">
+                            <span class="section-label">Action routes</span>
+                            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Use this page to choose a next move now.</h2>
+                            <p class="text-sm leading-7 text-base-content/68">These four guides are meant to end in a concrete action. They should settle evidence order, claim logic, ownership burden, and treatment scope before the user drifts back into generic PFAS browsing.</p>
+                        </div>
+                        <div class="mt-5 grid gap-4 md:grid-cols-2">
+                            <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${page.primaryHref()}">
+                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Primary route</div>
+                                <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${page.primaryLabel()}</div>
+                                <div class="mt-2 text-sm leading-6 text-base-content/68">Take the narrowest defensible next action this guide can support right now.</div>
+                            </a>
+                            <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="${page.secondaryHref()}">
+                                <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Secondary route</div>
+                                <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${page.secondaryLabel()}</div>
+                                <div class="mt-2 text-sm leading-6 text-base-content/68">Use the follow-up route only if the primary move still leaves the household with an open product or evidence question.</div>
+                            </a>
+                        </div>
+                    </section>
+                @endif
 
                 @template.fragments.commercialState(
                     eyebrow = "Guide handoff state",

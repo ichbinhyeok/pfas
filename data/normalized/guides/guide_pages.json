@@ -133,10 +133,10 @@
         "epa-pfas-private-wells",
         "epa-certified-pfas-filter-guidance"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
-      "secondaryHref": "/guides/pfas-filter-annual-cost",
-      "secondaryLabel": "Review cost tradeoffs",
+      "primaryHref": "/guides/read-your-ccr",
+      "primaryLabel": "Public water: read your CCR",
+      "secondaryHref": "/guides/private-well-pfas-result-next-steps",
+      "secondaryLabel": "Private well: test before treatment",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
@@ -640,8 +640,8 @@
         "nsf-dwtu-listings",
         "nsf-espring-listing-053"
       ],
-      "primaryHref": "/source-policy",
-      "primaryLabel": "Open source policy",
+      "primaryHref": "/compare/nsf-53-vs-58-claim-examples",
+      "primaryLabel": "Compare claim examples",
       "secondaryHref": "/guides/pfas-filter-annual-cost",
       "secondaryLabel": "Review annual ownership",
       "lastVerifiedDate": "2026-03-20",
@@ -844,8 +844,8 @@
         "aq-claryum-direct-connect-install-pdf",
         "amway-espring-122941-product"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "/compare/under-sink-certified-pfas-options",
+      "primaryLabel": "Compare under-sink options",
       "secondaryHref": "/guides/nsf-53-vs-58-pfas",
       "secondaryLabel": "Check claim and model logic",
       "lastVerifiedDate": "2026-03-20",
@@ -948,8 +948,8 @@
         "aq-claryum-direct-connect-replacement",
         "amway-espring-100186-cartridge"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
+      "primaryHref": "/compare/pfas-filter-annual-cost-compare",
+      "primaryLabel": "Compare annual cost bands",
       "secondaryHref": "/guides/under-sink-vs-whole-house",
       "secondaryLabel": "Compare under-sink vs whole-house",
       "lastVerifiedDate": "2026-03-20",

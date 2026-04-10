@@ -3,6 +3,7 @@
 @import com.example.pfas.decision.PublicWaterDecisionContext
 @import com.example.pfas.decision.BenchmarkComparisonStatus
 @import com.example.pfas.commercial.CommercialSurfaceState
+@import com.example.pfas.web.GuidePage
 @import static com.example.pfas.web.PresentationText.benchmarkRelationLabel
 @import static com.example.pfas.web.PresentationText.comparisonStatusLabel
 @import static com.example.pfas.web.PresentationText.confidenceLabel
@@ -14,6 +15,7 @@
 @param PublicWaterSystem system
 @param PublicWaterDecisionContext decision
 @param WaterDecisionResult result
+@param java.util.List<GuidePage> brandGuides
 @param CommercialSurfaceState commercialState
 @param boolean pageIndexable
 
@@ -120,6 +122,25 @@
             routeSummary = commercialState.summary(),
             routeUrl = "/public-water/" + system.pwsid()
         )
+
+        @if(!brandGuides.isEmpty())
+            <section class="surface-panel px-6 py-5">
+                <div class="space-y-2">
+                    <span class="section-label">Guide-defined route</span>
+                    <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">This dossier can win search demand, but the guide layer should define the brand.</h2>
+                    <p class="text-sm leading-7 text-base-content/68">Use these guides to interpret what this result means, what kind of follow-up is justified, and when the product layer should stay narrow. The dossier is downstream from the guide layer, not the other way around.</p>
+                </div>
+                <div class="mt-5 grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+                    @for(var guide : brandGuides)
+                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${guide.eyebrow()}</div>
+                            <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${guide.title()}</div>
+                            <div class="mt-2 text-sm leading-6 text-base-content/68">${guide.nextActionSummary()}</div>
+                        </a>
+                    @endfor
+                </div>
+            </section>
+        @endif
     </div>
 </section>
 

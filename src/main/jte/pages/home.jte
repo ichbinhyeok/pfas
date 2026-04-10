@@ -44,8 +44,8 @@
                     </div>
 
                     <div class="join join-vertical gap-3 sm:join-horizontal">
-                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/checker">Find my next step</a>
-                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/methodology">See how it works</a>
+                        <a class="btn btn-primary join-item h-12 rounded-full border-0 px-6 text-sm font-semibold hover:bg-primary/92" href="/guides/public-water-vs-private-well">Start with guides</a>
+                        <a class="btn btn-outline join-item h-12 rounded-full border-white/14 bg-white/6 px-6 text-sm font-semibold text-white shadow-none hover:bg-white/10" href="/checker">Use checker</a>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@
                     </article>
                 </div>
                 <div class="join join-vertical gap-3 sm:join-horizontal">
-                    <a class="btn btn-primary join-item h-11 rounded-full border-0 px-5 text-sm font-semibold" href="/checker">Find my next step</a>
+                    <a class="btn btn-primary join-item h-11 rounded-full border-0 px-5 text-sm font-semibold" href="/checker">Use checker</a>
                     <a class="btn btn-outline join-item h-11 rounded-full border-base-300 bg-base-100 px-5 text-sm font-semibold text-base-content" href="${checkerRecommendation.primaryHref()}">Open recommended page</a>
                 </div>
             </div>

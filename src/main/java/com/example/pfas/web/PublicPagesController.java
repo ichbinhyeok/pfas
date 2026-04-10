@@ -205,6 +205,7 @@ public class PublicPagesController {
 		model.addAttribute("system", system);
 		model.addAttribute("decision", decision);
 		model.addAttribute("result", result);
+		model.addAttribute("brandGuides", guidePageService.getPublicWaterBrandGuides());
 		model.addAttribute("commercialState", commercialSurfaceService.forPublicWater(decision, result));
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water", system.pwsid()));
 		return "pages/public-water-result";
@@ -217,6 +218,7 @@ public class PublicPagesController {
 
 		model.addAttribute("system", system);
 		model.addAttribute("sources", resolveSources(system.sourceIds()));
+		model.addAttribute("brandGuides", guidePageService.getPublicWaterBrandGuides());
 		model.addAttribute("pageIndexable", routeQualityGateService.isIndexable("public_water_support", system.pwsid()));
 		return "pages/public-water-system";
 	}

@@ -1,6 +1,7 @@
 @import java.util.List
 @import com.example.pfas.source.SourceDocument
 @import com.example.pfas.water.PublicWaterSystem
+@import com.example.pfas.web.GuidePage
 @import static com.example.pfas.web.PresentationText.sourceWaterTypeLabel
 @import static com.example.pfas.web.PresentationText.systemTypeLabel
 @param String siteBaseUrl
@@ -8,6 +9,7 @@
 @param String siteMethodologyOwner
 @param PublicWaterSystem system
 @param List<SourceDocument> sources
+@param List<GuidePage> brandGuides
 @param boolean pageIndexable
 
 !{ var hasPopulationServed = system.populationServed() != null && !system.populationServed().isBlank(); }
@@ -112,6 +114,27 @@
                         </div>
                     </div>
                 </section>
+
+                @if(!brandGuides.isEmpty())
+                    <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
+                        <div class="card-body gap-5">
+                            <div class="space-y-2">
+                                <span class="badge badge-outline border-base-300 bg-base-100 px-3 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-base-content/58">Guide-first route</span>
+                                <h2 class="text-2xl font-semibold tracking-[-0.03em] text-base-content">Use a guide to define the next step before treating this utility page like a verdict.</h2>
+                                <p class="text-sm leading-7 text-base-content/68">Support pages can surface in search, but they should still hand the user back into the guide layer that explains evidence order, notice reading, and product scope.</p>
+                            </div>
+                            <div class="grid gap-4 lg:grid-cols-2">
+                                @for(var guide : brandGuides.subList(0, Math.min(4, brandGuides.size())))
+                                    <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/${guide.slug()}">
+                                        <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">${guide.eyebrow()}</div>
+                                        <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">${guide.title()}</div>
+                                        <div class="mt-2 text-sm leading-6 text-base-content/68">${guide.nextActionSummary()}</div>
+                                    </a>
+                                @endfor
+                            </div>
+                        </div>
+                    </section>
+                @endif
 
                 <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
                     <div class="card-body gap-5">

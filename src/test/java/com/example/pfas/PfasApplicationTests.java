@@ -1711,7 +1711,8 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Aqua Pennsylvania Main System")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("/public-water/PA1510001")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Current dossiers")))
-			.andExpect(content().string(org.hamcrest.Matchers.containsString("Find my next step")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Start with guides")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Use checker")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<link rel=\"canonical\" href=\"https://pfas.example.test/\">")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("<meta name=\"robots\" content=\"index, follow\">")));
 	}

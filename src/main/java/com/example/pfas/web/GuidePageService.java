@@ -15,6 +15,14 @@ public class GuidePageService {
 		"pfas-filter-annual-cost",
 		"under-sink-vs-whole-house"
 	);
+	private static final List<String> PUBLIC_WATER_BRAND_GUIDE_SLUGS = List.of(
+		"read-your-ccr",
+		"how-to-read-a-pfas-utility-notice",
+		"test-first-vs-filter-first",
+		"nsf-53-vs-58-pfas",
+		"pfas-filter-annual-cost",
+		"under-sink-vs-whole-house"
+	);
 
 	private static final Comparator<GuidePage> PAGE_ORDER = Comparator
 		.comparing(GuidePage::editorialRank, Comparator.nullsLast(Comparator.naturalOrder()))
@@ -51,6 +59,14 @@ public class GuidePageService {
 
 	public List<GuidePage> getSearchPriorityGuides() {
 		return getBySlugsInOrder(SEARCH_PRIORITY_GUIDE_SLUGS);
+	}
+
+	public List<GuidePage> getPublicWaterBrandGuides() {
+		return getBySlugsInOrder(PUBLIC_WATER_BRAND_GUIDE_SLUGS);
+	}
+
+	public boolean isSearchPriorityGuide(String slug) {
+		return SEARCH_PRIORITY_GUIDE_SLUGS.contains(slug);
 	}
 
 	public List<GuidePage> getBySlugsInOrder(List<String> slugs) {
