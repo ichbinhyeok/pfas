@@ -134,6 +134,36 @@
                     </section>
                 </div>
 
+                <section class="surface-panel px-6 py-5">
+                    <div class="space-y-2">
+                        <span class="section-label">Guide-defined next lanes</span>
+                        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-base-content">Keep private-well intent inside the action stack before shopping broadens.</h2>
+                        <p class="text-sm leading-7 text-base-content/68">This state page should hand off into a small number of high-intent guides that settle evidence order, certification logic, and ownership burden before a household drifts into generic PFAS browsing.</p>
+                    </div>
+                    <div class="mt-5 grid gap-4 lg:grid-cols-2">
+                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/test-first-vs-filter-first">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Evidence order</div>
+                            <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">Should you test before buying a PFAS filter?</div>
+                            <div class="mt-2 text-sm leading-6 text-base-content/68">Start with test-first logic so the private-well route stays evidence-led before any product shortlist opens.</div>
+                        </a>
+                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/compare/private-well-certified-pou-after-test">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Private-well compare</div>
+                            <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">Compare certified point-of-use after a well test</div>
+                            <div class="mt-2 text-sm leading-6 text-base-content/68">Open the compare lane only after the state route and test result are already interpretable.</div>
+                        </a>
+                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/nsf-53-vs-58-pfas">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Certification logic</div>
+                            <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">Read NSF 53 vs 58 with the PFAS claim in view</div>
+                            <div class="mt-2 text-sm leading-6 text-base-content/68">Use the certification guide to keep badge shorthand from replacing exact model and claim review.</div>
+                        </a>
+                        <a class="block rounded-[1rem] border border-base-300/70 bg-base-100 px-5 py-5 transition duration-150 ease-out hover:-translate-y-px hover:border-base-300" href="/guides/pfas-filter-annual-cost">
+                            <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-base-content/52">Ownership burden</div>
+                            <div class="mt-3 text-lg font-semibold tracking-[-0.02em] text-base-content">Review annual cost before the treatment class grows</div>
+                            <div class="mt-2 text-sm leading-6 text-base-content/68">Keep recurring cost visible before a private-well household overbuys the wrong treatment class.</div>
+                        </a>
+                    </div>
+                </section>
+
                 @if (profile != null)
                     <section class="card border border-base-300/70 bg-base-100/92 shadow-[var(--shadow-soft)]">
                         <div class="card-body gap-5">

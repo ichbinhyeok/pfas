@@ -1800,6 +1800,11 @@ class PfasApplicationTests {
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan Department of Environment, Great Lakes, and Energy")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Test first, then interpret against state guidance.")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("State reference context")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("Guide-defined next lanes")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/guides/test-first-vs-filter-first")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/guides/nsf-53-vs-58-pfas")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/guides/pfas-filter-annual-cost")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("/compare/private-well-certified-pou-after-test")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Michigan MCL for PFOA")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Private-well state guide")));
 	}
@@ -2700,6 +2705,9 @@ class PfasApplicationTests {
 		mockMvc.perform(get("/guides/public-water-vs-private-well"))
 			.andExpect(status().isOk())
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("PFAS in public water vs private wells: what changes first?")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-click-target-path=\"/guides/test-first-vs-filter-first\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.containsString("data-route-click-target-path=\"/guides/read-your-ccr\"")))
+			.andExpect(content().string(org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("Check your PFAS next step"))))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Decision-intent guide")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Routing split")))
 			.andExpect(content().string(org.hamcrest.Matchers.containsString("Use source type as the first decision boundary")))

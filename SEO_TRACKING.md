@@ -137,6 +137,100 @@ Copy this block for each review.
 
 ## Baseline
 
+## 2026-04-12
+
+- GSC data through: `2026-04-09`
+- 28d clicks: `0`
+- 28d impressions: `77`
+- 28d CTR: `0`
+- 28d average position: `11.35`
+- Comparison window:
+  - Current: `2026-04-01` to `2026-04-09`
+  - Previous: `2026-03-23` to `2026-03-31`
+- 7-10 day delta:
+  - Impressions: `35 -> 42` (`+20.0%`)
+  - Clicks: `0 -> 0`
+  - Average position: `6.23 -> 15.62`
+
+### Top Pages By Impressions
+
+- `https://waternextstep.com/public-water/PA1510001` - `49` impressions, avg position `5.43`
+- `https://waternextstep.com/public-water/NV0005027` - `12` impressions, avg position `7.33`
+- `https://waternextstep.com/public-water-system/7360058` - `5` impressions, avg position `64.2`
+- `https://waternextstep.com/private-well/MI` - `4` impressions, avg position `7.00`
+- `https://waternextstep.com/guides/public-water-vs-private-well` - `3` impressions, avg position `35.33`
+- `https://waternextstep.com/guides/read-your-ccr` - `2` impressions, avg position `27.00`
+- `https://waternextstep.com/compare/private-well-certified-pou-after-test` - `1` impression, avg position `7.00`
+
+### Core Guides Indexed
+
+- `/guides/public-water-vs-private-well`
+- `/guides/read-your-ccr`
+- `/guides/how-to-read-a-pfas-utility-notice`
+
+### Core Guides Not Indexed
+
+- `/guides/test-first-vs-filter-first` - `URL is unknown to Google`
+- `/guides/nsf-53-vs-58-pfas` - `URL is unknown to Google`
+- `/guides/pfas-filter-annual-cost` - `URL is unknown to Google`
+- `/guides/under-sink-vs-whole-house` - `URL is unknown to Google`
+
+### Result Pages Indexed
+
+- `/public-water/PA1510001`
+- `/public-water/NV0005027`
+- `/public-water/FL3590762`
+- `/private-well/MI`
+
+### Support Or Context Status
+
+- `/public-water-system/7360058` - indexed
+- `/compare/private-well-certified-pou-after-test` - indexed
+- `/compare/nsf-53-vs-58-claim-examples` - `URL is unknown to Google`
+- `/compare/pfas-filter-annual-cost-compare` - `URL is unknown to Google`
+- `/compare/under-sink-certified-pfas-options` - `URL is unknown to Google`
+- `/methodology` - `URL is unknown to Google`
+- `/source-policy` - `URL is unknown to Google`
+- `/checker` - blocked in `robots.txt` and intentionally non-index
+
+### Sitemap Status
+
+- Submitted sitemap: `https://waternextstep.com/sitemap.xml`
+- Last submitted: `2026-04-11`
+- Last downloaded by Google: `2026-04-11`
+- GSC sitemap report still says `168 submitted / 0 indexed`
+- Live sitemap includes the unknown core guide and compare URLs with `lastmod` values from `2026-03-20`
+- Page-level inspection still contradicts the sitemap aggregate report, so page-level inspection remains the better signal
+
+### Decision
+
+`Surgical Fix`
+
+### Reason
+
+The site is getting tested, but Google is still learning the wrong front door.
+
+- Impressions are rising, but almost all visibility still sits on result and support pages.
+- The core search wedge is still under-indexed while lower-value route pages already have visibility.
+- The main problem today is discovery, not CTR. The unknown guide and compare URLs return `200 OK`, exist in the live sitemap, and still are not in Google's candidate set.
+- `/checker` is correctly non-index, but one indexed guide hub still pointed its strongest CTA at `/checker`, which weakens the guide-first signal.
+
+### Today Action
+
+- Remove the checker-first CTA from `/guides/public-water-vs-private-well` and point the primary handoff into the core guide stack.
+- Add a dedicated core-guide handoff block to indexable `/private-well/*` pages so private-well state pages feed the high-intent guide and compare stack directly.
+- Do not expand page count today.
+- Do not spend time on title/meta CTR tuning today.
+
+### Execution Log
+
+- Switched `/guides/public-water-vs-private-well` from a checker-first primary CTA to a guide-first primary CTA.
+- Added a `Guide-defined next lanes` section to `private-well` state pages that links directly into `test-first-vs-filter-first`, `nsf-53-vs-58-pfas`, `pfas-filter-annual-cost`, and `private-well-certified-pou-after-test`.
+
+### Next Review Date
+
+`2026-04-16`
+
 ## 2026-04-10
 
 - GSC data through: `2026-04-07`

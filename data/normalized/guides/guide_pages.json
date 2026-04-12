@@ -35,10 +35,10 @@
         "epa-private-wells",
         "epa-pfas-private-wells"
       ],
-      "primaryHref": "/checker",
-      "primaryLabel": "Check your PFAS next step",
-      "secondaryHref": "/guides/test-first-vs-filter-first",
-      "secondaryLabel": "Read test-first logic",
+      "primaryHref": "/guides/test-first-vs-filter-first",
+      "primaryLabel": "Read test-first logic",
+      "secondaryHref": "/guides/read-your-ccr",
+      "secondaryLabel": "Public water: read your CCR",
       "lastVerifiedDate": "2026-03-20",
       "sections": [
         {
