@@ -30,6 +30,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="640x640" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ5BCKCCEY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
